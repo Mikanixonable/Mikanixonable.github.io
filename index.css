@@ -1,1 +1,94 @@
-CSS mikan
+/* resetCSS */
+html, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section { 
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/*resetCSS*/
+
+body{
+    background-color: #EFEFEF;
+}
+
+.main{
+    font-family: sans-serif;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 850px){
+    .main{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+.header{
+    text-align: center;
+}
+.headerimg{
+    width: 800px;
+}
+@media screen and (max-width: 850px){
+    .headerimg{
+        width: 100%;
+    }
+}
+
+hr{
+    border: 1px #555555 solid;
+    width: 800px;
+}
+@media screen and (max-width: 850px){
+    hr{
+        width: 100%;
+    }
+}
+
+a:link{
+    text-decoration: none;
+    color: #0088cc;
+}
+a:hover{
+    text-decoration: underline;
+    color: #0088cc;
+}
+a:visited{
+    text-decoration: none;
+    color: #7619c2;
+}
+a:active{
+    text-decoration: underline;
+    color: #333194;
+}
+
+ul.links{
+    padding-left: 30px;
+    list-style-type: none;
+}
+@media screen and (max-width: 850px){
+    ul.links{
+        padding-left: 20px;
+        list-style-type: none;
+    }
+}
