@@ -31,7 +31,7 @@ body{
 
 .main{
     font-family: sans-serif;
-    width: 800px;
+    width: 97%;
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -44,10 +44,10 @@ body{
 }
 
 .header{
-    text-align: center;
+    margin: 0 auto;
 }
 .headerimg{
-    width: 800px;
+    width: 45%;
 }
 @media screen and (max-width: 850px){
     .headerimg{
@@ -56,14 +56,9 @@ body{
 }
 
 hr{
+    width: 100%;
     border: 1px #555555 solid;
-    width: 800px;
-}
-@media screen and (max-width: 850px){
-    hr{
-        width: 100%;
     }
-}
 
 a:link{
     text-decoration: none;
