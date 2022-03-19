@@ -11,51 +11,6 @@
   list-style-image: none;
   list-style-position: outside;
 }
-.index-container2 {
-  top: 250px;
-  flex: 0 0 auto;
-  left: 0px;
-  width: 100%;
-  height: 76px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-}
-.index-history {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-}
-.index-text03 {
-  text-decoration: underline;
-}
-.index-container3 {
-  top: 322px;
-  left: 0px;
-  width: 724px;
-  height: 281px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: flex-start;
-}
-.index-introduction {
-  font-size: 20px;
-  font-family: Arial;
-}
-.index-text10 {
-  text-decoration: underline;
-}
-.index-text12 {
-  text-decoration: underline;
-}
-.index-text14 {
-  text-decoration: underline;
-}
-.index-text16 {
-  text-decoration: underline;
-}
 .index-head-container {
   top: 0px;
   left: 0px;
@@ -66,7 +21,7 @@
   align-self: flex-start;
   align-items: flex-start;
 }
-.index-link05 {
+.index-link {
   display: contents;
 }
 .index-twitter {
@@ -77,7 +32,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link06 {
+.index-link01 {
   display: contents;
 }
 .index-youtube {
@@ -89,19 +44,19 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link07 {
+.index-link02 {
   display: contents;
 }
 .index-unicodepod {
   top: 0px;
-  left: 120px;
+  left: 200px;
   width: 40px;
   z-index: 100;
   position: absolute;
   object-fit: cover;
   text-decoration: none;
 }
-.index-link08 {
+.index-link03 {
   display: contents;
 }
 .index-spotify {
@@ -123,7 +78,7 @@
   align-self: flex-start;
   letter-spacing: 40px;
 }
-.index-link09 {
+.index-link04 {
   display: contents;
 }
 .index-tumblr {
@@ -134,13 +89,26 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link10 {
+.index-link05 {
   display: contents;
 }
 .index-image {
   top: 0px;
-  left: 80px;
+  left: 120px;
   width: 40px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link06 {
+  display: contents;
+}
+.index-kakuyomu {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 80px;
+  margin: auto;
   position: absolute;
   object-fit: cover;
   text-decoration: none;
@@ -158,7 +126,7 @@
   position: absolute;
   object-fit: cover;
 }
-.index-text19 {
+.index-text {
   left: 0px;
   color: #ffffff;
   bottom: var(--dl-space-space-threeunits);
@@ -168,7 +136,7 @@
   align-self: flex-end;
   letter-spacing: 5px;
 }
-.index-link11 {
+.index-link07 {
   display: contents;
 }
 .index-instagram {
@@ -179,7 +147,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link12 {
+.index-link08 {
   display: contents;
 }
 .index-git-hub {
@@ -191,7 +159,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link13 {
+.index-link09 {
   display: contents;
 }
 .index-niconico {
@@ -203,7 +171,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link14 {
+.index-link10 {
   display: contents;
 }
 .index-v-rchat {
@@ -214,7 +182,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link15 {
+.index-link11 {
   display: contents;
 }
 .index-pixiv {
@@ -227,22 +195,52 @@
   object-fit: cover;
   text-decoration: none;
 }
+.index-container2 {
+  top: 250px;
+  flex: 0 0 auto;
+  left: 0px;
+  width: 100%;
+  height: 76px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.index-history {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.index-text05 {
+  text-decoration: underline;
+}
+.index-container3 {
+  top: 322px;
+  left: 0px;
+  width: 724px;
+  height: 150px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: flex-start;
+}
+.index-introduction {
+  font-size: 20px;
+  font-family: Arial;
+}
+.index-text12 {
+  text-decoration: underline;
+}
+.index-text14 {
+  text-decoration: underline;
+}
+.index-text16 {
+  text-decoration: underline;
+}
+.index-text18 {
+  text-decoration: underline;
+}
 @media(max-width: 991px) {
-  .index-container2 {
-    top: 170px;
-  }
-  .index-history {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-  }
-  .index-container3 {
-    top: 245px;
-    left: 0px;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-  }
   .index-head-container {
     width: 100%;
     height: 172px;
@@ -268,7 +266,7 @@
   .index-image1 {
     right: 280px;
   }
-  .index-text19 {
+  .index-text {
     left: 0px;
     bottom: 0px;
     margin: auto;
@@ -283,6 +281,22 @@
     right: 300px;
     width: 80px;
     bottom: 0px;
+  }
+  .index-container2 {
+    top: 170px;
+  }
+  .index-history {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+  }
+  .index-container3 {
+    top: 245px;
+    left: 0px;
+    height: 180px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media(max-width: 767px) {
@@ -347,22 +361,6 @@
   }
 }
 @media(max-width: 479px) {
-  .index-container2 {
-    top: 158px;
-    left: 0px;
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    justify-content: flex-start;
-  }
-  .index-history {
-    font-size: 10px;
-  }
-  .index-container3 {
-    top: 214px;
-    left: 0px;
-    width: 100%;
-  }
   .index-head-container {
     width: 100%;
     height: 160px;
@@ -413,6 +411,14 @@
     width: 24px;
     position: absolute;
   }
+  .index-kakuyomu {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 36px;
+    margin: auto;
+    position: absolute;
+  }
   .index-header {
     width: 100%;
     height: 100%;
@@ -424,28 +430,28 @@
     width: 36px;
     position: absolute;
   }
-  .index-text19 {
+  .index-text {
     font-size: 15px;
     align-self: center;
   }
   .index-instagram {
-    top: 108px;
-    left: 48px;
+    top: 36px;
+    left: 334px;
     width: 24px;
+    z-index: 100;
     position: absolute;
   }
   .index-git-hub {
-    top: 108px;
-    left: 0px;
+    top: 72px;
+    left: 334px;
     width: 24px;
     z-index: 100;
+    position: absolute;
   }
   .index-niconico {
-    top: 108px;
-    left: 96px;
-    right: 0px;
+    left: 334px;
     width: 24px;
-    bottom: 0px;
+    bottom: 4px;
   }
   .index-v-rchat {
     top: 96px;
@@ -458,5 +464,21 @@
     bottom: 0px;
     margin: auto;
     position: absolute;
+  }
+  .index-container2 {
+    top: 158px;
+    left: 0px;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    justify-content: flex-start;
+  }
+  .index-history {
+    font-size: 10px;
+  }
+  .index-container3 {
+    top: 214px;
+    left: 0px;
+    width: 100%;
   }
 }
