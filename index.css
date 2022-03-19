@@ -429,20 +429,23 @@
     align-self: center;
   }
   .index-instagram {
-    top: 0px;
-    right: 84px;
+    top: 108px;
+    left: 48px;
     width: 24px;
+    position: absolute;
   }
   .index-git-hub {
-    top: 72px;
-    right: 96px;
+    top: 108px;
+    left: 0px;
     width: 24px;
     z-index: 100;
   }
   .index-niconico {
-    top: 132px;
-    right: 120px;
+    top: 108px;
+    left: 96px;
+    right: 0px;
     width: 24px;
+    bottom: 0px;
   }
   .index-v-rchat {
     top: 96px;
