@@ -103,12 +103,10 @@
 .index-link06 {
   display: contents;
 }
-.index-kakuyomu {
+.index-image1 {
   top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 80px;
-  margin: auto;
+  left: 300px;
+  width: 48px;
   position: absolute;
   object-fit: cover;
   text-decoration: none;
@@ -119,7 +117,7 @@
   align-self: stretch;
   object-fit: cover;
 }
-.index-image1 {
+.index-image2 {
   top: 0px;
   right: 0px;
   width: 80px;
@@ -258,12 +256,18 @@
     position: absolute;
     align-self: center;
   }
+  .index-image1 {
+    top: 0px;
+    left: 300px;
+    width: 48px;
+    position: absolute;
+  }
   .index-header {
     width: 990px;
     position: static;
     align-self: stretch;
   }
-  .index-image1 {
+  .index-image2 {
     right: 280px;
   }
   .index-text {
@@ -329,11 +333,17 @@
     left: 84px;
     width: 36px;
   }
+  .index-image1 {
+    top: 0px;
+    left: 300px;
+    width: 48px;
+    position: absolute;
+  }
   .index-header {
     bottom: 0px;
     position: 0px;
   }
-  .index-image1 {
+  .index-image2 {
     right: 200px;
   }
   .index-instagram {
@@ -411,20 +421,16 @@
     width: 24px;
     position: absolute;
   }
-  .index-kakuyomu {
-    top: 0px;
-    left: 0px;
-    right: 0px;
+  .index-image1 {
+    left: 200px;
     width: 36px;
-    margin: auto;
-    position: absolute;
   }
   .index-header {
     width: 100%;
     height: 100%;
     align-self: center;
   }
-  .index-image1 {
+  .index-image2 {
     top: 0px;
     right: 144px;
     width: 36px;
