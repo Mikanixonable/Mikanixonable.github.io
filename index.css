@@ -60,7 +60,7 @@
   display: contents;
 }
 .index-spotify {
-  right: 300px;
+  right: 280px;
   width: 40px;
   bottom: 0px;
   z-index: 100;
@@ -92,7 +92,7 @@
 .index-link05 {
   display: contents;
 }
-.index-image {
+.index-botseikatu {
   top: 0px;
   left: 120px;
   width: 40px;
@@ -103,10 +103,32 @@
 .index-link06 {
   display: contents;
 }
-.index-image1 {
+.index-kakuyomu {
   top: 0px;
   left: 300px;
-  width: 48px;
+  width: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link07 {
+  display: contents;
+}
+.index-instagram {
+  top: 0px;
+  right: 240px;
+  width: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link08 {
+  display: contents;
+}
+.index-git-hub {
+  right: 120px;
+  width: 40px;
+  bottom: 120px;
   position: absolute;
   object-fit: cover;
   text-decoration: none;
@@ -117,12 +139,38 @@
   align-self: stretch;
   object-fit: cover;
 }
-.index-image2 {
+.index-link09 {
+  display: contents;
+}
+.index-image {
   top: 0px;
   right: 0px;
   width: 80px;
   position: absolute;
   object-fit: cover;
+  text-decoration: none;
+}
+.index-link10 {
+  display: contents;
+}
+.index-niconico {
+  right: 120px;
+  width: 80px;
+  bottom: 0px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link11 {
+  display: contents;
+}
+.index-soundcloud {
+  top: 0px;
+  right: 400px;
+  width: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
 }
 .index-text {
   left: 0px;
@@ -134,42 +182,7 @@
   align-self: flex-end;
   letter-spacing: 5px;
 }
-.index-link07 {
-  display: contents;
-}
-.index-instagram {
-  top: 0px;
-  right: 120px;
-  width: 40px;
-  position: absolute;
-  object-fit: cover;
-  text-decoration: none;
-}
-.index-link08 {
-  display: contents;
-}
-.index-git-hub {
-  right: 120px;
-  width: 40px;
-  bottom: 40px;
-  position: absolute;
-  align-self: flex-start;
-  object-fit: cover;
-  text-decoration: none;
-}
-.index-link09 {
-  display: contents;
-}
-.index-niconico {
-  right: 80px;
-  width: 40px;
-  bottom: 0px;
-  z-index: 100;
-  position: absolute;
-  object-fit: cover;
-  text-decoration: none;
-}
-.index-link10 {
+.index-link12 {
   display: contents;
 }
 .index-v-rchat {
@@ -177,19 +190,6 @@
   width: 40px;
   bottom: 80px;
   position: absolute;
-  object-fit: cover;
-  text-decoration: none;
-}
-.index-link11 {
-  display: contents;
-}
-.index-pixiv {
-  right: 400px;
-  width: var(--dl-size-size-large);
-  bottom: 0px;
-  z-index: 100;
-  position: absolute;
-  align-self: flex-end;
   object-fit: cover;
   text-decoration: none;
 }
@@ -256,18 +256,21 @@
     position: absolute;
     align-self: center;
   }
-  .index-image1 {
+  .index-kakuyomu {
     top: 0px;
     left: 300px;
     width: 48px;
     position: absolute;
+  }
+  .index-instagram {
+    width: 40px;
   }
   .index-header {
     width: 990px;
     position: static;
     align-self: stretch;
   }
-  .index-image2 {
+  .index-soundcloud {
     right: 280px;
   }
   .index-text {
@@ -280,11 +283,6 @@
     right: 80px;
     bottom: 80px;
     position: absolute;
-  }
-  .index-pixiv {
-    right: 300px;
-    width: 80px;
-    bottom: 0px;
   }
   .index-container2 {
     top: 170px;
@@ -312,8 +310,9 @@
   }
   .index-youtube {
     top: 0px;
-    right: 280px;
-    width: 36px;
+    right: 120px;
+    width: 40px;
+    bottom: 0px;
   }
   .index-unicodepod {
     top: 0px;
@@ -321,59 +320,58 @@
     width: 36px;
   }
   .index-spotify {
+    top: 80px;
     left: 569px;
     width: 36px;
-    bottom: 54px;
+    bottom: 0px;
   }
   .index-tumblr {
     top: 0px;
     bottom: 0px;
   }
-  .index-image {
+  .index-botseikatu {
     left: 84px;
     width: 36px;
   }
-  .index-image1 {
+  .index-kakuyomu {
     top: 0px;
     left: 300px;
     width: 48px;
     position: absolute;
   }
+  .index-instagram {
+    width: 40px;
+  }
+  .index-git-hub {
+    top: 40px;
+    bottom: 0px;
+  }
   .index-header {
     bottom: 0px;
     position: 0px;
   }
-  .index-image2 {
-    right: 200px;
-  }
-  .index-instagram {
-    top: 0px;
-    left: 566px;
-  }
-  .index-git-hub {
-    top: 40px;
-    left: 606px;
-    width: 40px;
-  }
   .index-niconico {
-    left: 606px;
+    top: 0px;
+    right: 80px;
     width: 40px;
-    bottom: 12px;
+    bottom: 0px;
+  }
+  .index-soundcloud {
+    right: 160px;
   }
   .index-v-rchat {
     top: 80px;
     width: 40px;
     bottom: 0px;
   }
-  .index-pixiv {
-    top: 80px;
-    right: 0px;
-  }
 }
 @media(max-width: 479px) {
   .index-head-container {
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 160px;
+    position: absolute;
   }
   .index-twitter {
     top: 0px;
@@ -382,9 +380,8 @@
     position: absolute;
   }
   .index-youtube {
-    top: 36px;
-    left: 0p;
-    right: 180px;
+    top: 0px;
+    right: 48px;
     width: 24px;
     bottom: 0px;
   }
@@ -395,11 +392,9 @@
     width: 36px;
   }
   .index-spotify {
-    top: 0px;
-    left: 144px;
-    right: 0px;
+    top: 36px;
+    left: 84px;
     width: 24px;
-    bottom: 0px;
   }
   .index-title {
     top: 56px;
@@ -415,24 +410,49 @@
     width: 48px;
     position: absolute;
   }
-  .index-image {
+  .index-botseikatu {
     top: 0px;
     left: 48px;
     width: 24px;
     position: absolute;
   }
-  .index-image1 {
-    left: 200px;
-    width: 36px;
+  .index-kakuyomu {
+    top: 0px;
+    left: 108px;
+    width: 48px;
+  }
+  .index-instagram {
+    top: 0px;
+    right: 108px;
+    width: 24px;
+    position: absolute;
+  }
+  .index-git-hub {
+    top: 48px;
+    right: 48px;
+    width: 24px;
+    position: absolute;
   }
   .index-header {
     width: 100%;
     height: 100%;
     align-self: center;
   }
-  .index-image2 {
-    top: 0px;
-    right: 144px;
+  .index-image {
+    right: 0px;
+    width: 48px;
+    bottom: 0px;
+    position: absolute;
+  }
+  .index-niconico {
+    top: 72px;
+    right: 48px;
+    width: 36px;
+    position: absolute;
+  }
+  .index-soundcloud {
+    top: 24px;
+    right: 72px;
     width: 36px;
     position: absolute;
   }
@@ -440,35 +460,10 @@
     font-size: 15px;
     align-self: center;
   }
-  .index-instagram {
-    top: 36px;
-    left: 334px;
-    width: 24px;
-    z-index: 100;
-    position: absolute;
-  }
-  .index-git-hub {
-    top: 72px;
-    left: 334px;
-    width: 24px;
-    z-index: 100;
-    position: absolute;
-  }
-  .index-niconico {
-    left: 334px;
-    width: 24px;
-    bottom: 4px;
-  }
   .index-v-rchat {
-    top: 96px;
-    right: 144px;
+    top: 48px;
+    right: 12px;
     width: 36px;
-    bottom: 0px;
-  }
-  .index-pixiv {
-    width: 48px;
-    bottom: 0px;
-    margin: auto;
     position: absolute;
   }
   .index-container2 {
