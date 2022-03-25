@@ -22,5 +22,7 @@ Warabimochiという名前の曲です
 おさかなーぴょんぴょんぴょん
 ながらがーわもがみがわー
 いちたすいちはーもがみがわー
+
 作詞　nymwa　https://twitter.com/nymwa/status/1015247904561197059
+
 作曲　mikanixonable　https://twitter.com/Mikanixonable/status/1015259995305172992
