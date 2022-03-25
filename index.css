@@ -71,7 +71,7 @@
 .index-title {
   top: 85px;
   left: 0px;
-  color: #ffffff;
+  color: var(--dl-color-gray-white);
   z-index: 100;
   position: absolute;
   font-size: 70px;
@@ -133,16 +133,49 @@
   object-fit: cover;
   text-decoration: none;
 }
+.index-link09 {
+  display: contents;
+}
+.index-mstdn {
+  top: 0px;
+  left: 460px;
+  width: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link10 {
+  display: contents;
+}
+.index-discord {
+  top: 0px;
+  left: 380px;
+  width: 40px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+.index-link11 {
+  display: contents;
+}
+.index-tik-tok {
+  right: 0px;
+  width: 40px;
+  bottom: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
 .index-header {
   width: 100%;
   height: 100%;
   align-self: stretch;
   object-fit: cover;
 }
-.index-link09 {
+.index-link12 {
   display: contents;
 }
-.index-image {
+.index-pixiv {
   top: 0px;
   right: 0px;
   width: 80px;
@@ -150,7 +183,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link10 {
+.index-link13 {
   display: contents;
 }
 .index-niconico {
@@ -161,7 +194,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link11 {
+.index-link14 {
   display: contents;
 }
 .index-soundcloud {
@@ -174,7 +207,7 @@
 }
 .index-text {
   left: 0px;
-  color: #ffffff;
+  color: var(--dl-color-gray-white);
   bottom: var(--dl-space-space-threeunits);
   z-index: 100;
   position: absolute;
@@ -182,7 +215,7 @@
   align-self: flex-end;
   letter-spacing: 5px;
 }
-.index-link12 {
+.index-link15 {
   display: contents;
 }
 .index-v-rchat {
@@ -193,38 +226,37 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-container2 {
+.index-container1 {
   top: 250px;
   flex: 0 0 auto;
   left: 0px;
   width: 100%;
-  height: 76px;
+  height: auto;
   display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.index-history {
-  top: 0px;
-  left: 0px;
-  position: absolute;
+.index-links {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  background-color: var(--dl-color-primary-1);
 }
-.index-text05 {
+.index-text02 {
   text-decoration: underline;
 }
-.index-container3 {
-  top: 322px;
-  left: 0px;
-  width: 724px;
-  height: 150px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: flex-start;
+.index-text04 {
+  text-decoration: underline;
 }
-.index-introduction {
-  font-size: 20px;
-  font-family: Arial;
+.index-text06 {
+  text-decoration: underline;
+}
+.index-text08 {
+  text-decoration: underline;
+}
+.index-text10 {
+  text-decoration: underline;
 }
 .index-text12 {
   text-decoration: underline;
@@ -235,7 +267,49 @@
 .index-text16 {
   text-decoration: underline;
 }
-.index-text18 {
+.index-history {
+  top: 1px;
+  left: 0px;
+  align-self: stretch;
+  padding-top: 0px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: 0px;
+  background-color: var(--dl-color-primary-2);
+}
+.index-text20 {
+  text-decoration: underline;
+}
+.index-text25 {
+  text-decoration: underline;
+}
+.index-text26 {
+  padding: var(--dl-space-space-unit);
+  align-self: stretch;
+  background-color: var(--dl-color-gray-900);
+}
+.index-text27 {
+  padding: var(--dl-space-space-halfunit);
+}
+.index-text29 {
+  text-decoration: underline;
+}
+.index-text31 {
+  text-decoration: underline;
+}
+.index-text33 {
+  text-decoration: underline;
+}
+.index-text35 {
+  text-decoration: underline;
+}
+.index-text37 {
+  text-decoration: underline;
+}
+.index-text43 {
+  text-decoration: underline;
+}
+.index-text45 {
   text-decoration: underline;
 }
 @media(max-width: 991px) {
@@ -265,6 +339,13 @@
   .index-instagram {
     width: 40px;
   }
+  .index-mstdn {
+    width: 40px;
+  }
+  .index-tik-tok {
+    right: 80px;
+    bottom: 0px;
+  }
   .index-header {
     width: 990px;
     position: static;
@@ -284,21 +365,8 @@
     bottom: 80px;
     position: absolute;
   }
-  .index-container2 {
+  .index-container1 {
     top: 170px;
-  }
-  .index-history {
-    top: 0px;
-    left: 0px;
-    position: absolute;
-  }
-  .index-container3 {
-    top: 245px;
-    left: 0px;
-    height: 180px;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 @media(max-width: 767px) {
@@ -325,6 +393,9 @@
     width: 36px;
     bottom: 0px;
   }
+  .index-title {
+    color: var(--dl-color-gray-white);
+  }
   .index-tumblr {
     top: 0px;
     bottom: 0px;
@@ -346,6 +417,14 @@
     top: 40px;
     bottom: 0px;
   }
+  .index-mstdn {
+    left: 430px;
+    width: 40px;
+  }
+  .index-tik-tok {
+    top: 120px;
+    bottom: 0px;
+  }
   .index-header {
     bottom: 0px;
     position: 0px;
@@ -358,6 +437,9 @@
   }
   .index-soundcloud {
     right: 160px;
+  }
+  .index-text {
+    color: var(--dl-color-gray-white);
   }
   .index-v-rchat {
     top: 80px;
@@ -433,12 +515,29 @@
     width: 24px;
     position: absolute;
   }
+  .index-mstdn {
+    top: 0px;
+    left: 156px;
+    width: 24px;
+    position: absolute;
+  }
+  .index-discord {
+    top: 24px;
+    left: 156px;
+    width: 24px;
+  }
+  .index-tik-tok {
+    top: 84px;
+    right: 0px;
+    width: 24px;
+    bottom: 0px;
+  }
   .index-header {
     width: 100%;
     height: 100%;
     align-self: center;
   }
-  .index-image {
+  .index-pixiv {
     right: 0px;
     width: 48px;
     bottom: 0px;
@@ -459,6 +558,7 @@
   .index-text {
     font-size: 15px;
     align-self: center;
+    padding-bottom: var(--dl-space-space-twounits);
   }
   .index-v-rchat {
     top: 48px;
@@ -466,20 +566,34 @@
     width: 36px;
     position: absolute;
   }
-  .index-container2 {
-    top: 158px;
+  .index-container1 {
+    top: 160px;
     left: 0px;
-    width: 100%;
-    height: 45px;
+    height: 729px;
     position: absolute;
-    justify-content: flex-start;
+  }
+  .index-links {
+    color: var(--dl-color-gray-white);
+    width: auto;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+    background-color: #68969c;
   }
   .index-history {
+    margin: 0px;
     font-size: 10px;
+    align-self: stretch;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #d2ccad;
   }
-  .index-container3 {
-    top: 214px;
-    left: 0px;
-    width: 100%;
+  .index-text26 {
+    padding: var(--dl-space-space-halfunit);
+    text-align: justify;
+    background-color: var(--dl-color-gray-900);
+  }
+  .index-text27 {
+    padding: var(--dl-space-space-halfunit);
   }
 }
