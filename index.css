@@ -215,17 +215,6 @@
   align-self: flex-end;
   letter-spacing: 5px;
 }
-.index-link15 {
-  display: contents;
-}
-.index-v-rchat {
-  right: 80px;
-  width: 40px;
-  bottom: 80px;
-  position: absolute;
-  object-fit: cover;
-  text-decoration: none;
-}
 .index-links {
   left: 0px;
   color: var(--dl-color-gray-white);
@@ -257,6 +246,17 @@
 .index-text16 {
   text-decoration: underline;
 }
+.index-link23 {
+  display: contents;
+}
+.index-v-rchat {
+  right: 80px;
+  width: 40px;
+  bottom: 80px;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
 .index-container1 {
   top: 250px;
   flex: 0 0 auto;
@@ -269,49 +269,52 @@
   align-items: flex-start;
   flex-direction: column;
 }
+.index-text17 {
+  color: var(--dl-color-gray-white);
+  align-self: stretch;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: var(--dl-color-primary-1);
+}
 .index-history {
   top: 1px;
   left: 0px;
   align-self: stretch;
-  padding-top: 0px;
-  padding-left: var(--dl-space-space-unit);
-  padding-right: var(--dl-space-space-unit);
-  padding-bottom: 0px;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-primary-2);
 }
-.index-text20 {
-  text-decoration: underline;
-}
-.index-text25 {
+.index-text21 {
   text-decoration: underline;
 }
 .index-text26 {
-  padding: var(--dl-space-space-unit);
-  align-self: stretch;
-  background-color: var(--dl-color-gray-900);
+  text-decoration: underline;
 }
 .index-text27 {
-  padding: var(--dl-space-space-halfunit);
-}
-.index-text29 {
-  text-decoration: underline;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
 }
 .index-text31 {
-  text-decoration: underline;
-}
-.index-text33 {
   text-decoration: underline;
 }
 .index-text35 {
   text-decoration: underline;
 }
-.index-text37 {
+.index-text39 {
   text-decoration: underline;
 }
 .index-text43 {
   text-decoration: underline;
 }
-.index-text45 {
+.index-text47 {
+  text-decoration: underline;
+}
+.index-text65 {
+  text-decoration: underline;
+}
+.index-text67 {
   text-decoration: underline;
 }
 @media(max-width: 991px) {
@@ -327,9 +330,10 @@
     right: 380px;
   }
   .index-title {
-    top: 46px;
+    top: 80px;
     left: 0px;
     position: absolute;
+    font-size: 50px;
     align-self: center;
   }
   .index-kakuyomu {
@@ -361,6 +365,14 @@
     bottom: 20px;
     margin: auto;
     position: absolute;
+  }
+  .index-links {
+    left: 0px;
+    width: 600px;
+    bottom: 0px;
+    position: absolute;
+    font-size: 12px;
+    background-color: transparent;
   }
   .index-v-rchat {
     right: 80px;
@@ -396,6 +408,7 @@
     bottom: 0px;
   }
   .index-title {
+    top: 60px;
     color: var(--dl-color-gray-white);
   }
   .index-tumblr {
@@ -442,7 +455,10 @@
   }
   .index-text {
     color: var(--dl-color-gray-white);
-    bottom: 20px;
+    bottom: 30px;
+  }
+  .index-links {
+    font-size: 15px;
   }
   .index-v-rchat {
     top: 80px;
@@ -564,24 +580,30 @@
     align-self: center;
     padding-bottom: var(--dl-space-space-twounits);
   }
+  .index-links {
+    color: var(--dl-color-gray-white);
+    width: 350px;
+    font-size: 13px;
+    align-self: flex-start;
+    text-align: left;
+  }
   .index-v-rchat {
     top: 48px;
     right: 12px;
     width: 36px;
     position: absolute;
   }
-  .index-links {
-    color: var(--dl-color-gray-white);
-    width: 300px;
-    font-size: 10px;
-    align-self: flex-start;
-    text-align: left;
-  }
   .index-container1 {
     top: 160px;
     left: 0px;
     height: 729px;
     position: absolute;
+  }
+  .index-text17 {
+    font-size: 12px;
+    text-align: justify;
+    padding-top: var(--dl-space-space-halfunit);
+    background-color: var(--dl-color-primary-1);
   }
   .index-history {
     margin: 0px;
@@ -591,12 +613,10 @@
     padding-bottom: 0px;
     background-color: #d2ccad;
   }
-  .index-text26 {
-    padding: var(--dl-space-space-halfunit);
-    text-align: justify;
-    background-color: var(--dl-color-gray-900);
-  }
   .index-text27 {
-    padding: var(--dl-space-space-halfunit);
+    padding-top: var(--dl-space-space-unit);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: var(--dl-space-space-unit);
   }
 }
