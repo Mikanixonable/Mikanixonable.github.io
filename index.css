@@ -226,22 +226,12 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-container1 {
-  top: 250px;
-  flex: 0 0 auto;
-  left: 0px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  position: absolute;
-  align-self: center;
-  align-items: flex-start;
-  flex-direction: column;
-}
 .index-links {
+  left: 0px;
   color: var(--dl-color-gray-white);
+  bottom: 0px;
+  position: absolute;
   align-self: stretch;
-  background-color: var(--dl-color-primary-1);
 }
 .index-text02 {
   text-decoration: underline;
@@ -266,6 +256,18 @@
 }
 .index-text16 {
   text-decoration: underline;
+}
+.index-container1 {
+  top: 250px;
+  flex: 0 0 auto;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .index-history {
   top: 1px;
@@ -356,7 +358,7 @@
   }
   .index-text {
     left: 0px;
-    bottom: 0px;
+    bottom: 20px;
     margin: auto;
     position: absolute;
   }
@@ -397,7 +399,7 @@
     color: var(--dl-color-gray-white);
   }
   .index-tumblr {
-    top: 0px;
+    top: 80px;
     bottom: 0px;
   }
   .index-botseikatu {
@@ -440,6 +442,7 @@
   }
   .index-text {
     color: var(--dl-color-gray-white);
+    bottom: 20px;
   }
   .index-v-rchat {
     top: 80px;
@@ -487,7 +490,7 @@
     text-transform: uppercase;
   }
   .index-tumblr {
-    top: 0px;
+    top: 108px;
     right: 0px;
     width: 48px;
     position: absolute;
@@ -556,6 +559,7 @@
     position: absolute;
   }
   .index-text {
+    bottom: 10px;
     font-size: 15px;
     align-self: center;
     padding-bottom: var(--dl-space-space-twounits);
@@ -566,19 +570,18 @@
     width: 36px;
     position: absolute;
   }
+  .index-links {
+    color: var(--dl-color-gray-white);
+    width: 300px;
+    font-size: 10px;
+    align-self: flex-start;
+    text-align: left;
+  }
   .index-container1 {
     top: 160px;
     left: 0px;
     height: 729px;
     position: absolute;
-  }
-  .index-links {
-    color: var(--dl-color-gray-white);
-    width: auto;
-    font-size: 15px;
-    align-self: flex-start;
-    text-align: left;
-    background-color: #68969c;
   }
   .index-history {
     margin: 0px;
