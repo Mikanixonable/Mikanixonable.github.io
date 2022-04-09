@@ -281,28 +281,6 @@
 }
 .index-container3 {
   flex: 0 0 auto;
-  width: 33%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  justify-content: center;
-  text-decoration: none;
-  background-image: url("public/playground_assets/138-500w.png");
-  background-position: center;
-}
-.index-text17 {
-  color: #ffffff;
-  font-size: 45px;
-  background-color: #71405b;
-}
-.index-link25 {
-  display: contents;
-}
-.index-container4 {
-  flex: 0 0 auto;
   width: 34%;
   height: 100%;
   display: flex;
@@ -314,15 +292,15 @@
   background-image: url("public/playground_assets/456-600w.png");
   background-position: left;
 }
-.index-text18 {
+.index-text17 {
   color: #ffffff;
   font-size: 45px;
   background-color: #6e91a4;
 }
-.index-link26 {
+.index-link25 {
   display: contents;
 }
-.index-container5 {
+.index-container4 {
   flex: 0 0 auto;
   width: 33%;
   height: 100%;
@@ -335,10 +313,32 @@
   background-image: url("public/playground_assets/ensguzhu4aac70a-500w.jpg");
   background-position: center;
 }
-.index-text19 {
+.index-text18 {
   color: #ffffff;
   font-size: 45px;
   background-color: #878260;
+}
+.index-link26 {
+  display: contents;
+}
+.index-container5 {
+  flex: 0 0 auto;
+  width: 33%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url("public/playground_assets/138-500w.png");
+  background-position: center;
+}
+.index-text19 {
+  color: #ffffff;
+  font-size: 45px;
+  background-color: #71405b;
 }
 .index-text20 {
   color: var(--dl-color-gray-white);
@@ -642,20 +642,20 @@
   .index-container1 {
     top: 160px;
     left: 0px;
-    height: 729px;
+    height: auto;
     position: absolute;
   }
   .index-container2 {
     height: 80px;
   }
   .index-text17 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .index-text18 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .index-text19 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .index-text20 {
     font-size: 12px;
