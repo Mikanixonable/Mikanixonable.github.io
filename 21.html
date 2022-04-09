@@ -1,0 +1,694 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>インターネット目録(仮)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4b5e9781-ed21-4040-a7f6-6faabadac038" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🌍</span></div><h1 class="page-title">インターネット目録(仮)</h1></header><div class="page-body"><p id="1ae0e2e8-a103-4c1e-befa-ebf1a9ca50d7" class="">インターネットには面白いコンテンツが無数にあるが、それらはたいていPVを得ることに特化したサイトたちの中に埋もれてしまう。豊かなインターネット体験を得るためには、インターネットユーザー自身がそれぞれ自分がよかったと思うものをまとめて共有し、検索以外のアクセスを確保するしかない、という機運で有用・面白い・変なサイトをまとめたものです。あなたの上に豊かなインターネットがありますように。</p><p id="6285f7f3-2314-4910-bcc8-0f6922c60927" class="">
+</p><p id="87ae2214-6cbc-446b-b2b6-519fb1da59b1" class=""><a href="https://wiby.me/">https://wiby.me/</a>　英語圏の古い個人サイトに特化した検索</p><p id="a15c2061-6e08-4881-be2c-9d7b5f0b3252" class=""><a href="https://millionshort.com/">https://millionshort.com/</a>　人気サイト除外検索</p><p id="21421f1d-bff2-44a8-af9a-7a16ed44a875" class=""><a href="https://calil.jp/local/">https://calil.jp/local/</a>　図書館横断検索</p><p id="341d5db0-dbc6-47a4-8073-55ebe06bf5bb" class=""><a href="https://www.kosho.or.jp/">https://www.kosho.or.jp/</a>　日本の古本屋　日本中の古本屋のネット出品の検索</p><p id="c698def9-d8df-4584-b21d-da4735fdf613" class=""><a href="http://offliberty.io/#about">http://offliberty.io/#about</a>　短時間接続検索</p><p id="13c5b0f4-8702-47a3-84f2-3722a2a049c3" class=""><a href="https://fukuyuki.github.io/mtm.html">https://fukuyuki.github.io/mtm.html</a>　まとも検索　公的機関に絞った検索</p><p id="4181be62-c353-4f34-b4ab-53fd5faadae0" class=""><a href="http://pasokatu.com/nsearch#gsc.tab=0">http://pasokatu.com/nsearch#gsc.tab=0</a>　ノイズレスサーチ</p><p id="a8d1ba6f-eb5b-4c0c-9375-31a2c6937c35" class="">
+</p><p id="61736a5c-7314-4fa6-af0d-accecf8123dc" class=""><a href="https://www.bbc.co.uk/programmes/b006qykl">https://www.bbc.co.uk/programmes/b006qykl</a>　BBCポッドキャスト</p><p id="f497990e-dad7-4368-8f93-63c97db1e1a5" class=""><a href="https://www.flickr.com/photos/nasa2explore/">https://www.flickr.com/photos/nasa2explore/</a>　宇宙の写真</p><p id="e182b38f-7809-4d82-9ca2-8983771ec54e" class="">
+</p><p id="c9244815-f4c3-44de-9476-ce92f0f7e815" class=""><a href="https://www.posemaniacs.com/tools/thirtyseconds">https://www.posemaniacs.com/tools/thirtyseconds</a>　人体ドローイングの味方</p><p id="98b6a454-60e0-4743-8dcd-1792af458e58" class=""><a href="http://mrob.com/pub/comp/xmorphia/ogl/index.html">http://mrob.com/pub/comp/xmorphia/ogl/index.html</a>　反応拡散系いじり</p><p id="cb5f3ede-45c1-40f6-8b44-2195fb93fce4" class=""><a href="https://azisava.sakura.ne.jp/mandelbrot/definition.html">https://azisava.sakura.ne.jp/mandelbrot/definition.html</a>　マンデルブロ集合の計算過程を視覚化(「数列の軌道の視覚化」の項にある)</p><p id="2a1ae51f-f8f8-46e4-9467-99ccab63b215" class=""><a href="https://smison.github.io/yukari/">https://smison.github.io/yukari/</a>　縁ちゃんやる気出す</p><p id="676809da-f8f3-4511-b46d-71aac388d0e6" class=""><a href="https://inaniwa3.github.io/matsuken-swipe/">https://inaniwa3.github.io/matsuken-swipe/</a>　マツケンスワイプ</p><p id="cd259091-9e5c-4f3a-96ee-ade3ce26dfe0" class="">
+</p><p id="bf553597-2cb9-4e97-a871-018c49528fa1" class=""><a href="https://foldr.moe/harp/">https://foldr.moe/harp/</a>　WEBジャズコード楽器</p><p id="2fac4a3f-ac39-4d4d-b492-536353580897" class="">
+</p><p id="b8c8b123-f5d4-4a47-97d7-5e371a958813" class=""><a href="http://slither.io/">http://slither.io/</a>　ミミズを育てるゲーム</p><p id="115df62b-65a1-4620-8cbd-1514dc20322c" class=""><a href="https://shapez.io/">https://shapez.io/</a>　生産ラインを作るゲーム</p><p id="8269971a-d1ea-40df-a890-3590f786b978" class=""><a href="https://orteil.dashnet.org/cookieclicker/">https://orteil.dashnet.org/cookieclicker/</a>　クッキーを増やすゲーム</p><p id="a498a79f-2f93-4878-9e72-51235b66a838" class=""><a href="https://dan-ball.jp/javagame/dust2/">https://dan-ball.jp/javagame/dust2/</a>　粉遊び2</p><p id="465dff99-48c9-4e60-a816-3923ab3ea5af" class=""><a href="http://typingx0.net/sushida/">http://typingx0.net/sushida/</a>　寿司打ち</p><p id="c7a07457-c8de-4c43-90b8-3e4ecdcf4d88" class=""><a href="https://play2048.co/">https://play2048.co/</a>　2048</p><p id="c37934ff-76b1-4a93-999e-af4ed21cfe7d" class="">
+</p><p id="303cb330-cfc5-4d4f-8ae2-17b1f77fcc12" class=""><a href="https://books.google.com/ngrams">https://books.google.com/ngrams</a>　単語の使用率の変化がわかる</p><p id="fd6390e1-1103-4a8a-8ca8-48aeea38d313" class=""><a href="https://skyandtelescope.org/wp-content/plugins/observing-tools/saturn_moons/saturn.html">https://skyandtelescope.org/wp-content/plugins/observing-tools/saturn_moons/saturn.html</a>　土星の衛星の現在位置</p><p id="9c87adb2-a02c-4998-93c6-3cdc1705bffc" class=""><a href="https://skyandtelescope.org/wp-content/plugins/observing-tools/jupiter_moons/jupiter.html">https://skyandtelescope.org/wp-content/plugins/observing-tools/jupiter_moons/jupiter.html</a>　木製の衛星の現在位置</p><p id="1c15e369-a8ce-495d-b117-2a5c54918275" class=""><a href="https://www.wappalyzer.com/">https://www.wappalyzer.com/</a>　URLを入れると使われているWEB技術がわかる</p><p id="d6c1650f-29d1-4a69-9941-f0b9b0a079c6" class="">
+</p><p id="250b1cad-18a0-4335-bb80-c9e807f83416" class=""><a href="https://play.teleporthq.io/">https://play.teleporthq.io/</a>　静的サイトのhtml/cssを直感的操作で制作できる</p><p id="ca36c9b0-014e-4758-8408-ea6b1a93136d" class=""><a href="https://biorender.com/">https://biorender.com/</a>　バイオ論文用図作成</p><p id="3da656ff-ebed-4879-a05e-392aab3a4406" class=""><a href="https://polyhaven.com/">https://polyhaven.com/</a>　フリーの全球テクスチャ（VRchatのskybox用などに便利）</p><p id="a6d4822a-f150-4297-8f74-dcbd1a2827d0" class="">
+</p><p id="163fb1a8-8ecd-4bb6-84af-962ebd7b07c4" class=""><a href="https://chemical.space/">https://chemical.space/</a>　構造式をいじれる</p><p id="98037774-adbc-41b8-b608-3a6d038c9a4d" class=""><a href="https://yqnn.github.io/svg-path-editor/">https://yqnn.github.io/svg-path-editor/</a>　SVGをいじれる</p><p id="ce977cb5-c4dc-4150-8086-4f871f42e708" class=""><a href="https://canvas.apps.chrome/">https://canvas.apps.chrome/</a>　キャンバス</p><p id="732ecd76-f073-42d1-bdcd-ca63528d1d91" class=""><a href="https://flag-designer.appspot.com/#d=6&amp;c1=2&amp;c2=0&amp;c3=0&amp;o=0&amp;c4=5&amp;s=0&amp;c5=3">https://flag-designer.appspot.com/#d=6&amp;c1=2&amp;c2=0&amp;c3=0&amp;o=0&amp;c4=5&amp;s=0&amp;c5=3</a>　旗メーカー</p><p id="87272949-7763-4b75-842b-5d008bfa2de1" class=""><a href="https://dict.naver.com/linedict/zhendict/dict.html#/cnen/home">https://dict.naver.com/linedict/zhendict/dict.html#/cnen/home</a>　中国の漢字を手書き入力</p><p id="124f93a2-bcb0-4360-95ea-bcd2befd9d94" class=""><a href="http://detexify.kirelabs.org/classify.html">http://detexify.kirelabs.org/classify.html</a>　手書きユニコード検索</p><p id="ec283d55-8659-4f78-9f98-308a48529df3" class=""><a href="http://shapecatcher.com/">http://shapecatcher.com/</a>　手書きユニコード検索</p><p id="f8404eba-8fcb-4a9c-9c30-e67f0c23a32b" class=""><a href="http://www.ai-kuzushiji.net/">http://www.ai-kuzushiji.net/</a>　手書き崩し字検索</p><p id="17acca6d-7b21-4ad1-9527-d72aa542bb74" class=""><a href="https://honkoku.org/">https://honkoku.org/</a>　みんなで翻刻</p><p id="82111400-d142-4f6e-b0f9-93be601a2ef5" class=""><a href="https://ekimeihyo.net/o/ipa.html">https://ekimeihyo.net/o/ipa.html</a>　IPAキーボード</p><p id="5af3363a-f5c6-4829-8e35-e19292626c7e" class=""><a href="https://www.lexilogos.com/keyboard/burmese.htm">https://www.lexilogos.com/keyboard/burmese.htm</a>　多言語キーボード</p><p id="462b199e-0262-48a8-9a53-8c65f9c68cf5" class=""><a href="https://www.shapoco.net/plainstyle/">https://www.shapoco.net/plainstyle/</a>　上付き文字などの入力</p><p id="54e7fd78-123d-43ab-93a4-c3a936864500" class="">
+</p><p id="8e8af092-372f-433a-8046-3be1533b651b" class=""><a href="https://wiki.led.e501.net/sim/">https://wiki.led.e501.net/sim/</a>　発車標シミュレーター</p><p id="aa4a9e91-cfc1-4b4a-9c36-ee4ceacd4694" class=""><a href="https://aidn.jp/ygif/">https://aidn.jp/ygif/</a>　ゆれるGIFジェネレータ</p><p id="d8700c50-fc17-41a3-95ae-a183218901c0" class=""><a href="https://affinelayer.com/pixsrv/index.html">https://affinelayer.com/pixsrv/index.html</a>　手書きからねこ生成</p><p id="887e0b95-fb63-4455-ab50-bc3b31bce293" class=""><a href="https://waifulabs.com/generate">https://waifulabs.com/generate</a>　二次絵生成</p><p id="2c831e17-131c-449d-a909-0d17e093abf1" class=""><a href="https://thisanimedoesnotexist.ai/">https://thisanimedoesnotexist.ai/</a>　アニメ絵生成</p><p id="197f55cf-6cc8-46ca-9db0-1a645a2fac17" class=""><a href="https://www.artbreeder.com/browse">https://www.artbreeder.com/browse</a>　人物絵生成</p><p id="53784137-989c-4bd6-9c2d-5d3fc85f38d6" class=""><a href="https://stickfigure-recorder.web.app/">https://stickfigure-recorder.web.app/</a>　動画から棒人間生成</p><p id="d9d6ae69-2ef6-443b-9143-1ea4b6850ff4" class=""><a href="https://thispersondoesnotexist.com/">https://thispersondoesnotexist.com/</a>　顔生成</p><p id="b6b40ea5-1d8d-4037-8e57-c382d68587c9" class=""><a href="https://thiscatdoesnotexist.com/">https://thiscatdoesnotexist.com/</a>　ねこ生成</p><p id="f7b81dd0-af26-4102-a75a-e2628cbaa3fb" class=""><a href="https://www.whichfaceisreal.com/index.php">https://www.whichfaceisreal.com/index.php</a>　本物の人かAI生成か</p><p id="faee09e2-2f34-46d6-aaad-628123eb2671" class=""><a href="https://coolors.co/725752-878e88-96c0b7-d4dfc7-fef6c9">https://coolors.co/725752-878e88-96c0b7-d4dfc7-fef6c9</a>　いい感じの配色を作る</p><p id="975b53cb-bb83-48df-bda7-cbaca784c62a" class="">
+</p><p id="dd8af455-098d-49d8-a8c1-7a666e7f49ff" class=""><a href="https://watabou.itch.io/medieval-fantasy-city-generator">https://watabou.itch.io/medieval-fantasy-city-generator</a>　ファンタジー架空都市図生成</p><p id="9aa29ec6-6adb-4cf2-afa0-090549e1d837" class=""><a href="https://azgaar.github.io/Fantasy-Map-Generator/">https://azgaar.github.io/Fantasy-Map-Generator/</a>　ファンタジー地図生成</p><p id="497c69d9-ab71-4d9b-9be5-30c53b4c3cc8" class="">
+</p><p id="30698cd4-7e6b-4942-bf73-1c626a69cb53" class=""><a href="https://mitani.cs.tsukuba.ac.jp/ja/software/railway_route_search/index.html#SRSLLSLLRSRR,0">https://mitani.cs.tsukuba.ac.jp/ja/software/railway_route_search/index.html#SRSLLSLLRSRR,0</a>　プラレール路線設計支援ツール</p><p id="3249d200-6b4c-4e1c-8e68-88b7e963edb6" class="">
+</p><p id="978a898c-83e0-49e0-9df8-b6aeed28e004" class=""><a href="https://qaz.wtf/u/convert.cgi?text=This+is+pretty+fun">https://qaz.wtf/u/convert.cgi?text=This+is+pretty+fun</a>　文章を装飾</p><p id="a9834f40-1ee5-46f3-b206-a8b79da8e7cf" class=""><a href="https://yaytext.com/">https://yaytext.com/</a>　文章を装飾</p><p id="404889a1-95b1-4809-a8a7-16ed68540f1a" class=""><a href="https://tsukimoji.com/">https://tsukimoji.com/</a>　月文字ジェネレータ</p><p id="ab22e9c8-375d-49f5-94fe-9a1a789d38c7" class=""><a href="https://jp.piliapp.com/cool-text/zalgo-text/">https://jp.piliapp.com/cool-text/zalgo-text/</a>　ザルゴジェネレータ</p><p id="a467b1b1-7dad-4136-9289-b584d381c74e" class=""><a href="https://racing-lagoon.info/nomu/translate.php">https://racing-lagoon.info/nomu/translate.php</a>　ノムリッシュ翻訳</p><p id="c39f0870-8864-483f-a54c-0b2f003e654e" class=""><a href="https://coderun.9leap.net/codes/61055/">https://coderun.9leap.net/codes/61055/</a>　80年代流行歌風歌詞自動生成システム</p><p id="826dbce7-9c69-49bb-9af1-6ee7bb514a16" class=""><a href="http://chattera.net/nickname/unicodeana.php?key=%E5%8D%88%CC%96%CC%86%CC%B7%CC%BA%CD%88%CD%9D%CD%9B%E5%89%8D%CC%8A%CC%96%CC%AB%CC%A7%CC%A23%CC%98%CC%A6%E6%99%82%CC%97%CD%A1%E3%81%AE%CC%98%CC%9B%CC%99%CC%B6%CC%A4%CC%99%CC%8C%CC%89%CD%A2%E3%81%84%E3%82%99%CC%8A%CC%88%CC%B7%CD%83%CD%83%CC%85%E3%81%B0%CC%8A%CC%AC%CC%AC%CC%A9%CD%88%CD%A1%E3%82%89%E3%82%99%CC%9C%CC%A9%CC%B9%E3%81%8E%CC%AB%CC%BA%CC%95%CC%93%CD%A3%CD%A1%E3%81%92%CC%A7%CC%A9%CC%9B%CC%9E%CC%BD%E3%82%93%E3%82%99%CC%BC%CC%97%CC%82%CC%84%CC%A4%CC%A8">http://chattera.net/nickname/unicodeana.php?key=午̷̖̺͈̆͛͝前̧̢̖̫̊3̘̦時̗͡の̶̛̘̙̤̙̌̉͢い̷゙̊̈̓̓̅ば̬̬̩͈̊͡ら゙̜̩̹ぎ̫̺̓ͣ̕͡げ̧̛̩̞̽ん゙̨̼̗̤̂̄</a>　ユニコード解析</p><p id="baa09087-d60a-4551-8fcb-69e43fd39e21" class=""><a href="https://tools.m-bsys.com/development_tooles/char_corruption.php">https://tools.m-bsys.com/development_tooles/char_corruption.php</a>　文字化け作成</p><p id="2bae9a20-0135-40b8-9e40-98389e0398ee" class=""><a href="https://web.archive.org/web/20190519152459/https://liamscode.net/projects/punycode.php">https://web.archive.org/web/20190519152459/https://liamscode.net/projects/punycode.php</a>　punycode文字崩し用</p><p id="8f5f9d38-9eed-4de1-9271-ee62eed6f73f" class=""><a href="https://punycode.jp/">https://punycode.jp/</a>　<a href="http://xn--28j8b.xn--28j8b/">http://ねこ.ねこ/</a>みたいなリンクを作る</p><p id="094ba601-0b13-48db-95fb-fe14b8f7d56b" class=""><a href="https://747.github.io/vsselector/">https://747.github.io/vsselector/</a>　異体字セレクタセレクタ</p><p id="ddb13b07-f6f5-4183-a4c6-0064de97e9e9" class=""><a href="https://apps.hayu.io/random">https://apps.hayu.io/random</a>　ランダム文字列ジェネレータ</p><p id="1c1dca06-7269-4336-b0ae-285f8edbd4b8" class=""><a href="https://hedalu244.github.io/ids_renderer/?s=">https://hedalu244.github.io/ids_renderer/?s=</a>　漢字構成記述文字</p><p id="d06cde28-f60c-4ca2-b1d9-11f3253931b9" class=""><a href="https://ja.fonts2u.com/new-fonts.html">https://ja.fonts2u.com/new-fonts.html</a>　フリーフォント</p><p id="93dd3b90-7b17-4502-a354-a7120df2ccdf" class="">
+</p><p id="c2c9ba38-4464-4042-a182-d74ece9e4257" class=""><a href="https://www.peko-step.com/tool/tfcolor.html">https://www.peko-step.com/tool/tfcolor.html</a>　カラーコード変換</p><p id="f3d26f2f-6e09-4e46-ba61-097b16b32382" class=""><a href="https://jigen.net/">https://jigen.net/</a>　マイナーな漢字を調べて楽しむ</p><p id="57ff80d3-7058-4d09-93b1-1c3bf421e96d" class=""><a href="https://glyphwiki.org/wiki/GlyphWiki:%e3%83%a1%e3%82%a4%e3%83%b3%e3%83%9a%e3%83%bc%e3%82%b8">https://glyphwiki.org/wiki/GlyphWiki:メインページ</a>　マイナーな字形を調べて楽しむ</p><p id="73d01620-0602-4d3e-8a9d-2a21eb30f3eb" class=""><a href="https://dic.nicovideo.jp/t/a/%E7%86%9F%E8%AA%9E%E3%81%AB%E8%A6%8B%E3%81%88%E3%82%8B%E6%BC%A2%E5%AD%97%E3%81%AE%E4%B8%80%E8%A6%A7?from=a_autolink_4943323">https://dic.nicovideo.jp/t/a/熟語に見える漢字の一覧?from=a_autolink_4943323</a>　熟語に見える漢字の一覧</p><p id="2eece4b7-952e-447d-83be-d37f253656c0" class=""><a href="https://www.wordunscrambler.net/">https://www.wordunscrambler.net/</a>　アナグラム検索</p><p id="c621ce52-2426-4f5b-b911-b07ee17e4a13" class=""><a href="https://mojiportal.nabunken.go.jp/">https://mojiportal.nabunken.go.jp/</a>　崩し字データベース検索</p><p id="6c85df64-74e4-4fb6-8699-997cd8d55553" class=""><a href="https://mojizo.nabunken.go.jp/">https://mojizo.nabunken.go.jp/</a>　画像から崩し字を検索</p><p id="81231fb7-f95d-453d-be0e-e456d23d3a88" class=""><a href="http://anime.udp.jp/face-search-v1/">http://anime.udp.jp/face-search-v1/</a>　顔からキャラクターを検索</p><p id="83e534b7-acf4-4859-abc7-71d87ea87391" class=""><a href="https://www.musipedia.org/">https://www.musipedia.org/</a>　メロディー検索</p><p id="b36d226a-b894-4bc4-8807-7c5de10733ac" class="">
+</p><p id="991e48e2-a69a-4c6b-9109-d7ad6dd5a15a" class="">
+</p><p id="113e4477-ef0f-448e-b2be-ddc7ea8a0a0d" class=""><a href="https://furigana.info/">https://furigana.info/</a>　ふりがな文庫</p><p id="4165bfc0-2ded-482d-97c5-9c71f9a2bd2a" class="">
+</p><p id="c509692b-de39-4aba-89db-90333e142d2e" class=""><a href="https://webqr.com/">https://webqr.com/</a>　QRコードを読むやつ</p><p id="269c12f6-2b74-4b65-a33a-b75cccd80aa4" class=""><a href="https://scratch.mit.edu/">https://scratch.mit.edu/</a>　ビジュアルプログラミングを作成から公開までできる</p><p id="13c05343-8e41-4966-be99-d115157be169" class=""><a href="https://www.mycompiler.io/">https://www.mycompiler.io/</a>　プログラミング言語別簡易実行環境</p><p id="5f257e96-8110-4041-bc20-2eb813423db4" class="">
+</p><p id="a0b43a93-70e9-476a-8eaa-855580e71d76" class="">
+</p><p id="0702cf5a-0206-42fc-8df5-d21750768d39" class=""><a href="http://tomatoes.michikusa.jp/tool.html#14">http://tomatoes.michikusa.jp/tool.html#14</a>　個人製作ツール</p><p id="e3603d40-7494-4b87-a451-c7fd136cec8b" class=""><a href="http://kaz.in.coocan.jp/takarakuji/archive.html">http://kaz.in.coocan.jp/takarakuji/archive.html</a>　宝くじシミュレータ</p><p id="685c188a-d298-492c-86c7-ada3c737c38c" class=""><a href="https://tango-gacha.com/">https://tango-gacha.com/</a>　ランダム単語ガチャ</p><p id="b27e31f5-dc8d-4026-9981-3c3eef7f852b" class="">
+</p><p id="fd533e2a-d73d-4cec-9de4-4843ba49ad2e" class=""><a href="https://web.archive.org/web/20180306032237/http://www.modalina.jp/modapedia/">https://web.archive.org/web/20180306032237/http://www.modalina.jp/modapedia/</a>　服の用語</p><p id="9ce1658e-a46a-412e-b300-9f7d9fc6f2c2" class="">
+</p><p id="63a44d16-df50-400c-ad6b-3d38b86b4fb6" class=""><a href="https://www.jma.go.jp/jma/kishou/know/expert/">https://www.jma.go.jp/jma/kishou/know/expert/</a>　気象学</p><p id="9d0d7ce9-ed73-4e2f-a7fa-48b15144413d" class=""><a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/">https://www.gebco.net/data_and_products/gridded_bathymetry_data/</a>　標高データ</p><p id="0c5544f4-6179-43ae-b6e6-d096c9d72b84" class=""><a href="https://windmillart.net/?p=jsplacement">https://windmillart.net/?p=jsplacement</a>　JSplacement SFテクスチャー生成ソフト</p><p id="a7380517-9816-4e52-b59e-bd54cc2d2bce" class="">
+</p><p id="78e249a0-a271-4cd7-8a94-727a2755cf38" class="">
+</p><p id="9d7f55cd-702b-416a-b167-4dcd1b70005f" class=""><a href="https://pinboard.in/?lang=en">https://pinboard.in/?lang=en</a></p><p id="09e5bda9-f483-494d-b629-8eff0c6da841" class="">
+</p><p id="25bf4b22-644a-454c-ad1a-41675f9c7355" class="">
+</p><figure id="eeaa0033-5021-45f1-8a30-f79d081f2041" class="image"><a href="https://mikanixonable.github.io/92.png"><img style="width:432px" src="https://mikanixonable.github.io/92.png"/></a><figcaption>No.92</figcaption></figure><p id="c2ceb71d-8e68-4015-bde1-ef44c5801cef" class="">
+</p></div></article></body></html>
