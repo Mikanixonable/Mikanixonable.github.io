@@ -3,22 +3,17 @@
   display: flex;
   overflow: auto;
   min-height: 100vh;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   list-style-type: disc;
   background-color: #d8d8d8;
   list-style-image: none;
   list-style-position: outside;
 }
 .index-head-container {
-  top: 0px;
-  left: 0px;
   width: 100%;
   height: 250px;
   display: flex;
-  position: absolute;
-  align-self: flex-start;
+  position: relative;
   align-items: flex-start;
 }
 .index-link {
@@ -220,7 +215,6 @@
   color: var(--dl-color-gray-white);
   bottom: 0px;
   position: absolute;
-  align-self: stretch;
 }
 .index-text02 {
   text-decoration: underline;
@@ -258,14 +252,10 @@
   text-decoration: none;
 }
 .index-container1 {
-  top: 250px;
   flex: 0 0 auto;
-  left: 0px;
   width: 100%;
   height: auto;
   display: flex;
-  position: absolute;
-  align-self: center;
   align-items: flex-start;
   flex-direction: column;
 }
@@ -362,6 +352,23 @@
 }
 .index-text29 {
   text-decoration: underline;
+}
+.index-container6 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.index-button {
+  color: transparent;
+  border-color: #42c1ba;
+  border-width: 5px;
+  background-color: var(--dl-color-gray-500);
+}
+.index-text30 {
+  color: var(--dl-color-gray-white);
 }
 @media(max-width: 991px) {
   .index-head-container {
