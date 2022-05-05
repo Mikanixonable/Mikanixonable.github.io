@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://shiorimanabe.github.io/threetest/index01.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=1100">
+<title>three.js</title>
+<meta name="robots" content="noindex,follow">
+<style>@charset "utf-8";a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,caption,cite,code,dd,del,dfn,dialog,div,dl,dt,em,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,s,samp,section,small,span,strike,sub,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,ul,var,video{border:0;font-size:inherit;font-family:inherit;font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align:baseline;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;max-height:999999px}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;text-decoration:none!important;color:#000;-webkit-transition:.5s;transition:.5s}body{font-size:16px;-webkit-text-size-adjust:100%;line-height:1;background:#fff;color:#000;font-family:Verdana,"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック","Helvetica Neue",Helvetica,Arial,sans-serif;word-wrap:break-word;overflow-x:hidden}	</style>
+<script src="./three.js_files/jquery.min.js.download"></script>
+</head>
+
+<body>
+
+<canvas id="canvas" width="1800" height="1800" style="width: 900px; height: 900px;"></canvas>
+
+<script src="three.min.js"></script>
+<script>
+$(function(){
+	//基本設定
+	var width = 900;
+	var height = 900;
+
+	var renderer = new THREE.WebGLRenderer({
+		canvas: document.querySelector("#canvas"),
+        alpha: true
+	});
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(width, height);
+	var scene = new THREE.Scene();
+
+	// カメラ設定
+	var camera = new THREE.PerspectiveCamera(3,width / height,1,10000);
+	camera.position.set(0, 0, 1000);
+
+    // ライト設定
+    ambientLight = new THREE.AmbientLight(0xffffff);
+	hemisphereLight = new THREE.HemisphereLight(0xffffff,0x4169e1, 0.5);
+	scene.add(hemisphereLight);
+	scene.add(ambientLight);
+
+	// 箱
+	var geometry = new THREE.BoxGeometry(10, 10, 10);
+	var material = new THREE.MeshStandardMaterial({color: 0x555555});
+	var box = new THREE.Mesh(geometry, material);
+	scene.add(box);
+
+	// 実行
+  tick();
+
+   function tick() {
+     requestAnimationFrame(tick);
+
+     // 箱を回転させる
+     box.rotation.x += 0.01;
+     box.rotation.y += 0.003;
+
+     // レンダリング
+     renderer.render(scene, camera);
+    };
+
+
+	});
+</script>
+
+
+
+<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div></body><umsdataelement id="UMSSendDataEventElement"></umsdataelement><div id="TAG_ID4TOOLBAR_UMS_GUID" style="display: none;">B73E24BE-3EB4-6AEB-DE0B-D93A32A17308</div><div id="tmtoolbar_ums_injected" style="display: none;">init_ums</div></html>
