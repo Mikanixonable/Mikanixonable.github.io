@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://shiorimanabe.github.io/threetest/index01.html -->
+<html>
+<meta name="PE">
+<title>PE</title>
+</head>
+<body>
+
+<canvas id="canvas" width="1800" height="1800" style="width: 900px; height: 900px;"></canvas>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+<script src="https://unpkg.com/three@0.137.4/build/three.min.js"></script>
+<script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
+<script>
+$(function(){
+	//基本設定
+	var width = 900;
+	var height = 900;
+
+	var renderer = new THREE.WebGLRenderer({
+		canvas: document.querySelector("#canvas"),
+        alpha: true
+	});
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(width, height);
+	var scene = new THREE.Scene();
+
+	// カメラ設定
+	var camera = new THREE.PerspectiveCamera(3,width / height,1,10000);
+	camera.position.set(0, 0, 1000);
+const controls = new THREE.OrbitControls(camera, document.body);
+
+
+    // ライト設定
+    ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+
+    light1 = new THREE.DirectionalLight(0xffffdd, 0.7);
+    light1.position.set(100, 20, 0)
+    light2 = new THREE.DirectionalLight(0xaaaaff, 0.1);
+    light2.position.set(-100, -20, 0)
+
+    scene.add(light1);
+    scene.add(light2);
+    scene.add(ambientLight);
+
+
+  // 箱
+	var geometry = new THREE.SphereGeometry(30, 100, 100);
+
+  var loader = new THREE.TextureLoader();
+  var texture = loader.load('https://mikanixonable.github.io/PE2.png');
+  // マテリアルにテクスチャーを設定
+  var material = new THREE.MeshStandardMaterial({
+    map: texture
+  });
+	var box = new THREE.Mesh(geometry, material);
+	scene.add(box);
+
+
+
+	// 実行
+  tick();
+
+   function tick() {
+     requestAnimationFrame(tick);
+
+     // 箱を回転させる
+     box.rotation.x += 0.000;
+     box.rotation.y += 0.000;
+
+
+     // レンダリング
+     renderer.render(scene, camera);
+    };
+
+
+	});
+</script>
+
+
+
+<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div></body><umsdataelement id="UMSSendDataEventElement"></umsdataelement><div id="TAG_ID4TOOLBAR_UMS_GUID" style="display: none;">B73E24BE-3EB4-6AEB-DE0B-D93A32A17308</div><div id="tmtoolbar_ums_injected" style="display: none;">init_ums</div></html>
