@@ -13,7 +13,8 @@ font-size:;
 </style>
 <body>
 <div id="fontdisp">
-	<input type="button" value="Impact Factor" onclick="repeater()" style="font-family:impact;">
+	<input type="button" id="a" value="インパクトファクター" onclick="repeater()" style="font-family:impact;">
+
 
 	“In the spring, cherry blossoms, in the summer the cuckoo.
 	In autumn the moon, and in winter the snow, clear, cold.”
@@ -28,15 +29,21 @@ font-size:;
 </div>
 
 <script>
+'use strict'
 var notr = true;
 var obj1=document.getElementById("fontdisp");
+
+
 function repeater(){
 if(notr){
 notr=false;
+ document.getElementById('a').value = "IMPACT FACTOR";
 obj1.style.fontFamily = "impact";
-obj1.style.fontSize = "20px";
+obj1.style.fontSize = "25px";
+
 }
 else{
+	 document.getElementById('a').value = "インパクトファクター";
 obj1.style.fontFamily = "メイリオ";
 obj1.style.fontSize = "16px";
 notr=true;
