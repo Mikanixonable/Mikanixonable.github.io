@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>#24 ロビー</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="750b0dfa-6bbb-4932-bc84-3ff6402d9475" class="page sans"><header><img class="page-cover-image" src="https://mikanixonable.github.io/404.png" style="object-position:center 75.02%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🌐</span></div><h1 class="page-title">#24 ロビー</h1></header><div class="page-body"><p id="7e1a9796-bfed-4aa7-a5eb-555fac09803a" class="">
+</p><p id="58e5c51b-dc7d-4426-88fc-6c9dc85fabc8" class="">このサイトについて</p><p id="c66eddde-212c-4b0b-ab35-9fb63fc1158e" class="">2018-07-02　開設</p><p id="4b2059ac-e22c-4454-af4d-196e1257a462" class="">2019-05-19　FC2からGitHubに移設</p><p id="65f45668-9a36-4270-9879-cfe387920a19" class="">2019-05-30<a href="https://twitter.com/QmanEnobikto">キューマン</a>さんにリフォームしてもらう</p><p id="bf4821bb-3c5e-4c69-9797-6facfdfa3024" class="">2022-03-18　Teleporthqを使ったリフォーム</p><p id="86d9eed1-13bd-4587-bbd6-d2cda5b1aa32" class="">このサイトを作るのに使ったもの：github pages, teleporthq, notion, atom, blender, clip studio paint</p><p id="4a85c884-b3fa-4a0b-be4c-3a5cd40ff10d" class="">方針：</p><figure id="632839ce-1e76-4bbe-ad39-1e5f59561dad"><div class="source"><a href="https://twitter.com/Mikanixonable/status/1512758806841016322?s=20&amp;t=J6Lj1Lkqqq0fGCi9ZEHzUg">https://twitter.com/Mikanixonable/status/1512758806841016322?s=20&amp;t=J6Lj1Lkqqq0fGCi9ZEHzUg</a></div></figure><div id="12e48e8e-bab6-4898-a7c5-5606b3cf3fe4" class="column-list"><div id="23d48edd-8a52-4eac-bb4f-68441dde13d5" style="width:62.5%" class="column"><h2 id="e8dbe0a8-84ec-47ef-982d-2da166794661" class="block-color-blue"><strong><a href="https://mikanixonable.github.io/9">サイトマップ</a></strong></h2><p id="1bd9d1b4-a7d9-4e0a-a070-a1a1fa8a7533" class="">
+</p><h3 id="4f755f8a-2206-48c9-bbf5-0e605b42b5c3" class="">簡略サイトマップ</h3><figure id="d08a4018-c532-474f-8c1d-11a3b62987b1" class="image"><a href="https://mikanixonable.github.io/assets/6.png"><img style="width:2414px" src="https://mikanixonable.github.io/assets/6.png"/></a></figure><p id="a69bfd92-6079-4740-890e-772190eefddd" class="block-color-blue"><a href="https://mikanixonable.github.io">https://mikanixonable.github.io/</a>　ホーム</p><p id="0b478137-da46-4eac-89bd-b8461cfa6c2a" class="">
+</p><figure id="15265440-3b4f-4be0-8afc-625b6a5bfdb2" class="image"><a href="https://mikanixonable.github.io/assets/7.png"><img style="width:2446px" src="https://mikanixonable.github.io/assets/7.png"/></a></figure><p id="d1fb6afd-9376-4afb-92ae-80cece8ce2aa" class="block-color-blue"><strong><a href="https://mikanixonable.github.io/7">https://mikanixonable.github.io/7</a></strong><strong>　イラスト</strong></p><p id="780d1639-8a5c-4c2d-b15d-d9e2dbe1e29d" class="">
+</p><p id="0d7f14be-e830-40a1-b65b-1d70fa8f1986" class="block-color-blue"><a href="https://mikanixonable.github.io/8">https://mikanixonable.github.io/8</a>　写真</p><p id="19e8bb21-11d9-434b-a8e6-c19fde171ba9" class="block-color-blue"><a href="https://mikanixonable.github.io/2">https://mikanixonable.github.io/2</a>　わらびもち</p><p id="fe9e2b02-4ba0-4cb1-8959-871e898e9504" class="block-color-blue"><a href="https://mikanixonable.github.io/21">https://mikanixonable.github.io/21</a>　インターネット目録</p><p id="b598bf3a-52d4-4e57-921a-e3c55ad99194" class="block-color-blue"><a href="https://mikanixonable.github.io/22">https://mikanixonable.github.io/22</a>　VRchatで作ったもの</p><p id="95cd8a6a-0d6c-4753-9156-b20670fc4606" class="block-color-blue"><a href="https://mikanixonable.github.io/23">https://mikanixonable.github.io/23</a>　架空惑星ギャラリー</p><p id="23877a9c-9db2-47a0-bde9-ad344326009f" class="block-color-blue"><strong><a href="https://mikanixonable.github.io/27">https://mikanixonable.github.io/27</a></strong><strong>　3D作品　33, 34, 35, 36のthreejs作品を展示（負荷大）</strong></p><p id="6e8e2023-a97a-4f69-8f54-1da6074553d1" class="block-color-blue"><a href="https://mikanixonable.github.io/34">https://mikanixonable.github.io/34</a>　架空惑星threejs表示</p><p id="9c3b06e5-c82e-49b2-a912-bfd7d66a8d19" class="block-color-blue"><strong><a href="https://mikanixonable.github.io/35">https://mikanixonable.github.io/35</a></strong><strong>　架空惑星マウス視点操作</strong></p></div><div id="7b043b3b-3d10-4651-8335-8982857b3fa4" style="width:37.5%" class="column"><p id="c500b059-4ea2-4210-850a-e977dde60b58" class="">お気に入りCity Popのプレイリスト</p><figure id="3d45682e-3152-48af-8ddb-61639543ae5f"><div class="source"><a href="https://open.spotify.com/embed/playlist/3ajuLlCh5RlEY6Tb6YaiI7?utm_source=generator">https://open.spotify.com/embed/playlist/3ajuLlCh5RlEY6Tb6YaiI7?utm_source=generator</a></div></figure><figure id="420e45fb-7e0c-4763-a1f7-33ef3809df5f" class="image"><a href="https://mikanixonable.github.io/74.png"><img style="width:240px" src="https://mikanixonable.github.io/74.png"/></a><figcaption>No.74「ねこかわとの邂逅」</figcaption></figure></div></div><p id="08f50cc1-2ac5-4e6f-9bbc-140f9d067ab5" class="">
+</p><hr id="f00468a0-cb07-4c13-bcae-9c08901b85e5"/><h3 id="0b4f1a3d-3cc2-49bf-af87-f9a19b1d97e6" class="">最近更新した：</h3><figure id="d8b2d716-f637-4c4c-b80f-f725b1d424c8" class="image"><a href="https://mikanixonable.github.io/assets/1.png"><img style="width:480px" src="https://mikanixonable.github.io/assets/1.png"/></a></figure><p id="4f6cf263-7d5c-4039-8207-b123c136a06c" class="block-color-blue"><a href="https://mikanixonable.github.io/40">https://mikanixonable.github.io/40</a>　インパクトファクター<div class="indented"><p id="5783d904-9a23-4778-9f34-ff7ada8fcd69" class="">ボタンを押すとフォントがimpactになるだけ</p></div></p><figure id="a980d6db-3430-4af8-86b0-7d0fabd768ae" class="image"><a href="https://mikanixonable.github.io/assets/2.png"><img style="width:432px" src="https://mikanixonable.github.io/assets/2.png"/></a></figure><p id="676a8cc0-f2af-4070-a39b-e1f98c9c0c21" class="block-color-blue"><a href="https://mikanixonable.github.io/41">https://mikanixonable.github.io/41</a>　犯行予告風世界人権宣言<div class="indented"><p id="44ada4ef-4aa1-42e6-9e3d-79f03fbba958" class="">物騒</p></div></p><p id="43ca2ba0-e2d4-479c-ba5a-fb93ce607331" class="">
+</p><figure id="de435838-4a9c-445f-a196-97a2c9bff404" class="image"><a href="https://mikanixonable.github.io/assets/3.png"><img style="width:384px" src="https://mikanixonable.github.io/assets/3.png"/></a></figure><p id="e27a6945-2ee9-41c6-b553-e7a180772ebc" class="block-color-blue"><strong><a href="https://mikanixonable.github.io/36">https://mikanixonable.github.io/36</a></strong><strong>　sci-fi BOX</strong></p><figure id="70b3cc9a-b6e5-492e-8e5e-d27dd3d75533" class="image"><a href="https://mikanixonable.github.io/assets/4.png"><img style="width:384px" src="https://mikanixonable.github.io/assets/4.png"/></a></figure><p id="ee99e888-bda5-44a0-b99c-4f4849523734" class="block-color-blue"><a href="https://mikanixonable.github.io/33">https://mikanixonable.github.io/33</a>　LEGOの森</p><figure id="b1a50d15-6a6e-4989-85d9-d8e1b180b8f8" class="image"><a href="https://mikanixonable.github.io/assets/5.png"><img style="width:336px" src="https://mikanixonable.github.io/assets/5.png"/></a></figure><p id="64232f41-749c-4866-beb6-71d3871923da" class="block-color-blue"><a href="https://mikanixonable.github.io/37">https://mikanixonable.github.io/37</a>　矢印</p><p id="f89e1973-5e35-450f-87f0-561cd8fe1e0e" class="">
+</p><figure id="ebc8567a-5a31-4628-a7b6-69d75c75eb0a"><a href="https://mikanixonable.hatenablog.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Mikanixonableのブログ</div><div class="bookmark-description">Blenderをダウンロードしてきてインストールする。 https://builder.blender.org/download/ 起動する Delで立方体を消し、Shift+A→メッシュ→UV球でUV球を作成する セグメントを72くらいに増やし、UVを生成にチェック シェーディングをスムーズにしてつるつるにする 右のメニューから赤い丸いマークをクリック、新規マテリアルを作る 一つ右の ...</div></div><div class="bookmark-href"><img src="https://mikanixonable.hatenablog.com/icon/favicon" class="icon bookmark-icon"/>https://mikanixonable.hatenablog.com/</div></div><img src="https://cdn.blog.st-hatena.com/images/theme/og-image-1500.png" class="bookmark-image"/></a></figure><p id="da1c8382-5948-4934-99bd-2d4d05f46778" class="">
+</p><hr id="100e0c27-442f-44ea-8a9f-fe856dd8a318"/><figure id="41e2b283-8153-40f5-a95b-637cc10a91fc" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mrow><mi mathvariant="normal">N</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">o</mi></mrow><mo>→</mo><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">f</mi></mrow><mspace width="1em"/><mi mathvariant="normal">N</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">o</mi></mrow></mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">f</mi></mrow></mfrac><mo>→</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">{\frac{\rm{Neko}\rightarrow \rm{Mof}\quad Neko}{\rm Mof}}\rightarrow E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">Mof</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathrm">Neko</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord"><span class="mord mathrm" style="margin-right:0.07778em;">Mof</span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathrm">Neko</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></span></div></figure><hr id="6ad741c1-2090-4fcd-a154-060033ce75bc"/><p id="1646634e-75fe-46ab-b767-889dd81cd609" class="">
+</p><p id="d5d849c3-2263-44c3-8b7f-62ceab0793ae" class="">つくりたいサブページ：</p><p id="a9f2c91f-a0f3-4574-9e9d-3aaf5259fa4a" class="">文法　人工言語の文法</p><p id="c2e19814-93d9-4054-8cd3-68dc9ad38716" class="">高校数学マップ　工事中</p><p id="16a1699d-fafc-40ee-aa0d-c1834dbcc189" class="">地学入門　工事中</p><p id="a2e1024f-b589-4c4b-a735-99df65c30034" class="">作ったゲーム　工事中</p><h3 id="8d402f4c-c325-471b-b921-9e9731dc5dfe" class="block-color-gray_background">サイト外コンテンツ</h3><p id="dd0039b5-3915-4d11-85ba-372b47b911b6" class=""><strong><a href="http://zpdic.ziphil.com/dictionary/91">辞書</a></strong>　自作人工言語の辞書です　文法は未完成です</p><p id="e510e026-9834-44b6-b68e-53c7cf91c2c8" class=""><strong><a href="https://github.com/Mikanixonable/dictionary/blob/master/Nessa.xdc">最新版辞書</a></strong>　GitHub上にある作業用のファイルです</p><div id="c7bcb83f-0dfd-45bc-b2c9-36e06c46f046" class="column-list"><div id="1fe98c99-dce8-4318-b127-1f511ea23d51" style="width:62.5%" class="column"><h3 id="c7d1a925-07fa-46cf-ad80-f9910a2f65ce" class="block-color-gray_background">FFの方の個人サイト（漏れあるかもしれません）</h3><p id="b4d576be-2d54-4942-a79e-c317e8e456e2" class="block-color-blue"><a href="https://qmainconts.dev/">https://qmainconts.dev/</a></p><p id="e93828a7-a0c3-43e7-af5c-354dd01a3be2" class="block-color-blue"><a href="https://nbrkdrnfnht.zatunen.com/">https://nbrkdrnfnht.zatunen.com/</a></p><p id="cb3957f2-d8f6-4b0e-a5d8-a7063641ad90" class="block-color-blue"><a href="https://www.haxibami.net/">https://www.haxibami.net/</a>　相互リンク</p><p id="4555c7bd-c84f-41e6-a461-a209e5c741e8" class="block-color-blue"><a href="https://gfngfn.github.io/ja/">https://gfngfn.github.io/ja/</a></p><p id="434b41e4-ceb5-46db-82fc-f7ba54d3418a" class="block-color-blue"><a href="https://www.sapporo-posse.com/">https://www.sapporo-posse.com/</a>　凝ったサイト</p><p id="cc4bd92e-6b0f-403c-88fa-69d599cf793a" class="block-color-blue"><a href="http://www2s.biglobe.ne.jp/~masamich/index.html">http://www2s.biglobe.ne.jp/~masamich/index.html</a>　天文コンテンツなど</p><p id="b7090390-9128-45b3-b1f4-4fd213f37d77" class="block-color-blue"><a href="https://kuina.ch/">https://kuina.ch/</a>　多彩なコンテンツ</p><p id="70c4c596-9150-49ec-b38b-b0a6cab6472c" class="block-color-blue"><a href="http://ziphil.com/">http://ziphil.com/</a>　シャレイア語など<div class="indented"><p id="1562e1be-3fdc-4e38-8c8b-20eee71e9d3f" class=""><a href="https://ziphil.com/other/other/11.html">https://ziphil.com/other/other/11.html</a>　もふもふくん</p></div></p><p id="ea5ae65b-67a8-43f0-86ed-27e3dd6cf961" class="block-color-blue"><a href="https://foldr.moe/">https://foldr.moe/</a><div class="indented"><p id="44c03047-8364-45f9-ac31-4c2b56d79249" class=""><a href="https://foldr.moe/harp/">https://foldr.moe/harp/</a></p></div></p><p id="659b36fa-4e06-4fb3-ab13-4e6eb5362618" class="block-color-blue"><a href="http://nymwa.net/">http://nymwa.net/</a></p><p id="70146ede-97b4-42d6-a462-d18f7fa48adb" class="block-color-blue"><a href="https://neriko.net/">https://neriko.net/</a>　お題箱を作った人</p><p id="706df159-d2c5-4000-b8aa-a991b7fb0470" class="block-color-blue"><a href="https://kitakami7kouren.jimdofree.com/">https://kitakami7kouren.jimdofree.com/</a>　良質な架空惑星創作</p><p id="b3f03c72-075c-4e93-ade2-63cdbbe972f7" class="block-color-blue"><a href="https://hundredburger.com/">https://hundredburger.com/</a></p><p id="04514c8a-01ea-4643-9f09-86bf190c4880" class="block-color-blue"><a href="https://yuchiki.github.io/">https://yuchiki.github.io/</a></p><p id="69263406-8528-4bca-b395-fcd952b06dc7" class="block-color-blue"><a href="https://kepeken.github.io/">https://kepeken.github.io/</a></p><p id="97034f93-6e37-4b7f-a3cf-56562d938518" class="block-color-blue"><a href="https://reirisono.github.io/">https://reirisono.github.io/</a></p><p id="e2b739eb-4856-4f29-a817-3d84c8027974" class="block-color-blue"><a href="https://haar-you.github.io/">https://haar-you.github.io/</a></p><p id="372bbd54-db5e-4afb-b64f-84b002771784" class="block-color-blue"><a href="https://sozysozbot.github.io/">https://sozysozbot.github.io/</a>　いろんなツール</p><p id="94e1d8cb-aa8a-4830-9d6c-75e06f476b3e" class="block-color-blue"><a href="https://skytomo221.github.io/">https://skytomo221.github.io/</a></p><p id="e8e34549-a9b0-42cb-8472-3c8ef9cf301b" class="block-color-blue"><a href="http://kanto.me/xeno/">http://kanto.me/xeno/</a></p><p id="e7c05ebb-995b-4896-9649-6e9efda9d9d6" class="block-color-blue"><a href="https://sno2wman.net/">https://sno2wman.net/</a></p><p id="241653e1-583e-4611-a48d-ce43abe336c2" class="block-color-blue"><a href="https://ransewhale.net/">https://ransewhale.net/</a></p><p id="6985cca1-1491-49b6-9431-a47929af8fa4" class="block-color-blue"><a href="https://www.fabon.info/">https://www.fabon.info/</a></p><p id="8e3d20b4-e2bd-4475-9e98-d5252c9598de" class="block-color-blue"><a href="https://www.machinery-tomoko.com/">https://www.machinery-tomoko.com/</a></p><p id="fa3ccffa-93c9-4154-a1a2-6d5c35275ba3" class="block-color-blue"><a href="http://souzoumap.starfree.jp/">http://souzoumap.starfree.jp/</a>　架空地図作者</p><p id="e5457a6d-1842-4774-b6b6-1a74586d0090" class="block-color-blue"><a href="https://www.alz.jp/221b/index.html">https://www.alz.jp/221b/index.html</a>　翻訳家</p><p id="9805aa94-b410-4ecc-8f80-2a0df3e09e9b" class="block-color-blue"><a href="http://pref-karafuto.net/Index.html">http://pref-karafuto.net/Index.html</a>　架空地図作者</p><p id="cbf69348-4172-43cb-b91f-15fb43d784f9" class="block-color-blue"><a href="https://sites.google.com/site/syxobo/">https://sites.google.com/site/syxobo/</a></p><p id="a88f19bb-9e09-4cd2-9ede-24035f5ed673" class="block-color-blue"><a href="https://sites.google.com/site/faraspalt/">https://sites.google.com/site/faraspalt/</a></p><p id="a61e4beb-55af-4998-bccf-31f5fd5834f3" class="block-color-blue"><a href="https://sites.google.com/site/moyacilang/">https://sites.google.com/site/moyacilang/</a></p><p id="8b2357aa-4a0d-4c4b-be5e-4609198f7283" class="block-color-blue"><a href="https://sites.google.com/site/faraspalt/?authuser=0">https://sites.google.com/site/faraspalt/</a>　人工言語創作</p><p id="72f10ee9-fd0d-4798-839b-83986b2be7a3" class="block-color-blue"><a href="https://tomohironakano.com/tomohiro-nakano">https://tomohironakano.com/tomohiro-nakano</a>　ハイファンタジー創作</p><p id="5cdd878c-d9ff-446e-aaab-494cce67cdfd" class="">
+</p><p id="abac08f4-cb61-4dc5-9a98-2973399ccdaf" class="">
+</p><p id="9b0f05d5-48a2-43a7-8bcf-40672a464503" class="">
+</p><p id="0938d9b2-40bb-49ef-80e2-0a87bcaec651" class="">
+</p><p id="0b0675cd-cfad-4e43-a8cc-3e36e0f131b2" class="">好きなサイト</p><p id="fb1e43b4-6dd3-4281-be1c-f700eb31287f" class=""><a href="http://www2.odn.ne.jp/add10/">http://www2.odn.ne.jp/add10/</a></p><p id="5762cac2-45ec-4e6e-8aae-c5f58fa2a582" class=""><a href="http://zenpo-huchui.com/#header">http://zenpo-huchui.com/#header</a></p><figure id="9cc82085-695b-4346-8d65-0b2dfa3a9da5" class="image"><a href="https://atelier.kasu.me/lnkbn"><img style="width:200px" src="https://atelier.kasu.me/lnkbn"/></a></figure><p id="45f2175d-d1e5-49ab-ae7f-6a88669c479f" class=""><a href="http://gdwall.image.coocan.jp/">http://gdwall.image.coocan.jp/</a></p></div><div id="787d8895-2b3d-41cd-8baa-1cbd73325584" style="width:37.50000000000001%" class="column"><figure id="035c84d5-e777-4b27-8af8-6729ba0a66d8" class="image"><a href="https://mikanixonable.github.io/283.png"><img src="https://mikanixonable.github.io/283.png"/></a><figcaption>No.283</figcaption></figure></div></div><h3 id="f1259954-b990-4ff6-a460-214f4b63e8e9" class="block-color-gray_background">FFの方のコンテンツ</h3><p id="e496c093-7f3e-4ed0-939d-bc47ce76870d" class=""><a href="https://sp.nicovideo.jp/user/70899764/video?cp_in=uservideo_user">https://sp.nicovideo.jp/user/70899764/video?cp_in=uservideo_user</a>　ピコピコした曲</p><p id="361d8724-8f22-4b29-b4a4-9504572f9e2e" class="">
+</p><p id="ad63b90f-851b-42e8-af00-5365832e6eab" class="">
+</p><p id="8150ef8f-f008-4f92-8f53-b490ed0d6ea4" class="">
+</p><p id="92a35dcd-70e2-4dff-a12d-4164639f68c8" class="">
+</p><p id="e46d2839-c1f5-4a10-b3e1-bb7bd1182bc0" class="">
+</p><p id="f33a7d7b-0ae9-4d3e-8885-b3aa77ad771e" class="">
+</p><figure id="69eaabdb-d8f6-468c-b747-03216b41bafa" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mrow><mi mathvariant="normal">N</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">o</mi></mrow><mo>→</mo><mrow><mrow><mi mathvariant="normal">K</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi></mrow><mspace width="1em"/><mi mathvariant="normal">N</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">k</mi><mi mathvariant="normal">o</mi></mrow></mrow><mrow><mi mathvariant="normal">K</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">w</mi><mi mathvariant="normal">a</mi></mrow></mfrac><mo>→</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">{\frac{\rm{Neko}\rightarrow \rm{Kawa}\quad Neko}{\rm Kawa}}\rightarrow E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Kawa</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathrm">Neko</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">Kawa</span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathrm">Neko</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span></span></div></figure><p id="b4d072e8-26f6-4461-be23-03acefb8f362" class="">
+</p><p id="82b080a7-3c4f-410d-bb3a-41cb714e0241" class="block-color-orange"><a href="https://mikanixonable.github.io/"><strong>ホームに戻る</strong></a></p><p id="f9df75d4-e984-418f-86f4-21df5d5c0fbc" class="">
+</p></div></article></body></html>
