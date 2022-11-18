@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/mikanixonable
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mikanixonable.github.io
+  * I am mikanixonable (https://keybase.io/mikanixonable) on keybase.
+  * I have a public key ASAL1SOxycWDFwpoKGG6wnMqd-7I7ixmn-Ie3TT_wMedigo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200bd523b1c9c583170a682861bac2732a77eec8ee2c669fe21edd34ffc0c79d8a0a",
+      "host": "keybase.io",
+      "kid": "01200bd523b1c9c583170a682861bac2732a77eec8ee2c669fe21edd34ffc0c79d8a0a",
+      "uid": "6ee9d8c399393dfa4d37ff55a537c219",
+      "username": "mikanixonable"
+    },
+    "merkle_root": {
+      "ctime": 1668783056,
+      "hash": "93757a55ef8cd524719d7c2b84997e2c0b843da9d4627afcca54bea09609aaf30903cba4f6652cdb298172ece080befca3d11bb0afceca0316fd67c8e54ff9c8",
+      "hash_meta": "5e211f3cf9c819fca5b7eabb031014df984edb52525e4522e4f902f8cb12f623",
+      "seqno": 23575775
+    },
+    "service": {
+      "entropy": "v70H21ujWQpZWcw7DI5glKw3",
+      "hostname": "mikanixonable.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1668783113,
+  "expire_in": 504576000,
+  "prev": "f8cbcc7416a88b87a7a3b279bd4e89a0e0a332289b9552d340c313945c46337a",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgC9UjscnFgxcKaChhusJzKnfuyO4sZp/iHt00/8DHnYoKp3BheWxvYWTESpcCBsQg+MvMdBaoi4eno7J5vU6JoOCjMiiblVLTQMMTlFxGM3rEIOY2poeGrRp08+5sQke6VVfHSy5e736Qo4VG55qK+gOiAgHCo3NpZ8RA59VD6dTbN0T0S9DRuR5QS3rF5pq2LHELvTyezYYpl4rqL9nd5WCGw+Por5Oi/5RdyTVmvASQK4HeyDGJP5IqDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMS067Sa6SzM33OfEar2FAvVs11ZOUhY44gd/2WOJ0Fbo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mikanixonable
+
+==================================================================
