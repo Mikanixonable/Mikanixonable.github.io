@@ -2,7 +2,7 @@
   --dl-color-gray-500: #595959;
   --dl-color-gray-700: #999999;
   --dl-color-gray-900: #c5c5c5ff;
-  --dl-color-primary-1: #5c4d54ff;
+  --dl-color-primary-1: #1d232fff;
   --dl-color-primary-2: #d2ccadff;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
@@ -24,6 +24,7 @@
   --dl-color-success-500: #32A94C;
   --dl-color-success-700: #4CC366;
   --dl-size-size-xxlarge: 288px;
+  --dl-color-primary-text: #eaeaeaff;
   --dl-size-size-maxwidth: 1400px;
   --dl-color-primary-abc91: #babc91ff;
   --dl-radius-radius-round: 50%;

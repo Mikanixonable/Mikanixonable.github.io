@@ -1,0 +1,2739 @@
+.page3-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.page3-n1 {
+  width: 40%;
+  height: 600px;
+  margin: var(--dl-space-space-twounits);
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: var(--dl-color-primary-700);
+  border-width: var(--dl-size-size-small);
+  justify-content: center;
+  background-color: var(--dl-color-gray-900);
+}
+.page3-image {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-text {
+  left: 0px;
+  color: var(--dl-color-gray-700);
+  right: 0px;
+  bottom: -50px;
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+  font-family: Merriweather;
+}
+.page3-menu {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.page3-n101 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link {
+  display: contents;
+}
+.page3-container01 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/-8.png');
+}
+.page3-text01 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link01 {
+  display: contents;
+}
+.page3-container02 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/20.png');
+}
+.page3-text03 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link02 {
+  display: contents;
+}
+.page3-container03 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/100.png');
+}
+.page3-text05 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-container04 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-n102 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link03 {
+  display: contents;
+}
+.page3-container05 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/227.png');
+}
+.page3-text07 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link04 {
+  display: contents;
+}
+.page3-container06 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/300.png');
+}
+.page3-text09 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link05 {
+  display: contents;
+}
+.page3-container07 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/436.png');
+}
+.page3-text11 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-n103 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-container08 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-link06 {
+  display: contents;
+}
+.page3-container09 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/500.png');
+}
+.page3-text13 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link07 {
+  display: contents;
+}
+.page3-container10 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text14 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link08 {
+  display: contents;
+}
+.page3-container11 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text16 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-n104 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link09 {
+  display: contents;
+}
+.page3-container12 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/237.png');
+  background-position: center;
+}
+.page3-text18 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 25px;
+  font-family: Inter;
+}
+.page3-text20 {
+  color: #ffffff;
+}
+.page3-container13 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-link10 {
+  display: contents;
+}
+.page3-container14 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text21 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link11 {
+  display: contents;
+}
+.page3-container15 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text23 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link12 {
+  display: contents;
+}
+.page3-container16 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text25 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-n105 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link13 {
+  display: contents;
+}
+.page3-container17 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/271.png');
+  background-position: bottom left;
+}
+.page3-text27 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link14 {
+  display: contents;
+}
+.page3-container18 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/339.png');
+  background-position: bottom left;
+}
+.page3-text28 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-container19 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-container20 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-n106 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image01 {
+  width: 450px;
+  margin: var(--dl-space-space-threeunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n107 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image02 {
+  width: 450px;
+  margin: var(--dl-space-space-threeunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n108 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image03 {
+  width: 300px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image04 {
+  width: 300px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n109 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image05 {
+  width: 300px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image06 {
+  width: 300px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n110 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image07 {
+  width: 350px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n111 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image08 {
+  width: 350px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n112 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image09 {
+  width: 350px;
+  margin: var(--dl-space-space-sixunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n113 {
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image10 {
+  width: 550px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n114 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-sixunits);
+  justify-content: center;
+}
+.page3-image11 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image12 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-container21 {
+  flex: 0 0 auto;
+  width: 250px;
+  height: auto;
+  margin: var(--dl-space-space-twounits);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page3-image13 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image14 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container22 {
+  flex: 0 0 auto;
+  width: 250px;
+  height: auto;
+  margin: var(--dl-space-space-twounits);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.page3-image15 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image16 {
+  width: 250px;
+  margin: var(--dl-space-space-twounits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n1 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image17 {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image18 {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image19 {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n2 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image20 {
+  width: 200px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image21 {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-n3 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image22 {
+  width: 250px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image23 {
+  width: 200px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-a {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #505773;
+}
+.page3-image24 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-image25 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-image26 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-image27 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-image28 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-image29 {
+  width: 500px;
+  align-self: center;
+  margin-top: var(--dl-space-space-fourunits);
+  object-fit: cover;
+  margin-left: var(--dl-space-space-threeunits);
+  margin-right: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-fourunits);
+}
+.page3-container23 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: center;
+}
+.page3-image30 {
+  width: 250px;
+  margin: var(--dl-space-space-oneandhalfunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image31 {
+  width: 250px;
+  margin: var(--dl-space-space-oneandhalfunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image32 {
+  width: 250px;
+  margin: var(--dl-space-space-oneandhalfunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container24 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image33 {
+  width: 450px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container25 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image34 {
+  width: 350px;
+  margin: var(--dl-space-space-sixunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container26 {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-image35 {
+  width: 250px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container27 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #94979e;
+}
+.page3-image36 {
+  width: 350px;
+  margin: var(--dl-space-space-halfunit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image37 {
+  width: 350px;
+  margin: var(--dl-space-space-halfunit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image38 {
+  width: 350px;
+  margin: var(--dl-space-space-halfunit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container28 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #94979e;
+}
+.page3-image39 {
+  width: 250px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image40 {
+  width: 250px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container29 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #94979e;
+}
+.page3-image41 {
+  width: 250px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-image42 {
+  width: 250px;
+  margin: var(--dl-space-space-unit);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container30 {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-image43 {
+  width: 300px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container31 {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-image44 {
+  width: 300px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container32 {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-image45 {
+  width: 550px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-container33 {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-image46 {
+  width: 550px;
+  margin: var(--dl-space-space-fourunits);
+  align-self: center;
+  object-fit: cover;
+}
+.page3-menu1 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-n115 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link15 {
+  display: contents;
+}
+.page3-container34 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/-8.png');
+}
+.page3-text29 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link16 {
+  display: contents;
+}
+.page3-container35 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/20.png');
+}
+.page3-text31 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link17 {
+  display: contents;
+}
+.page3-container36 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/100.png');
+}
+.page3-text33 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-container37 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-n116 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link18 {
+  display: contents;
+}
+.page3-container38 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/227.png');
+}
+.page3-text35 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link19 {
+  display: contents;
+}
+.page3-container39 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/300.png');
+}
+.page3-text37 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-link20 {
+  display: contents;
+}
+.page3-container40 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/436.png');
+}
+.page3-text39 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  align-self: center;
+  font-family: Inter;
+}
+.page3-n117 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-container41 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-link21 {
+  display: contents;
+}
+.page3-container42 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/500.png');
+}
+.page3-text41 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link22 {
+  display: contents;
+}
+.page3-container43 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text42 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link23 {
+  display: contents;
+}
+.page3-container44 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text44 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-n118 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link24 {
+  display: contents;
+}
+.page3-container45 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/237.png');
+  background-position: center;
+}
+.page3-text46 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 25px;
+  font-family: Inter;
+}
+.page3-text48 {
+  color: #ffffff;
+}
+.page3-container46 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-link25 {
+  display: contents;
+}
+.page3-container47 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text49 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link26 {
+  display: contents;
+}
+.page3-container48 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text51 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-link27 {
+  display: contents;
+}
+.page3-container49 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-gray-700);
+}
+.page3-text53 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-n119 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.page3-link28 {
+  display: contents;
+}
+.page3-container50 {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  text-decoration: none;
+  background-image: url('https://mikanixonable.github.io/271.png');
+  background-position: bottom left;
+}
+.page3-text55 {
+  top: 0px;
+  left: 0px;
+  color: var(--dl-color-gray-white);
+  position: absolute;
+  font-size: 30px;
+  font-family: Inter;
+}
+.page3-container51 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-container52 {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page3-container53 {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-black);
+}
+.page3-link29 {
+  display: contents;
+}
+.page3-image47 {
+  left: 0px;
+  right: 0px;
+  width: 100px;
+  bottom: 0px;
+  margin: auto;
+  position: absolute;
+  object-fit: cover;
+  text-decoration: none;
+}
+@media(max-width: 991px) {
+  .page3-n113 {
+    height: 800px;
+  }
+  .page3-image10 {
+    width: 400px;
+  }
+  .page3-image11 {
+    width: 300px;
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-image12 {
+    width: 300px;
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-image17 {
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-image18 {
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-image19 {
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-n2 {
+    background-color: var(--dl-color-gray-900);
+  }
+  .page3-n3 {
+    background-color: var(--dl-color-gray-900);
+  }
+  .page3-a {
+    height: auto;
+  }
+  .page3-image24 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image25 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image26 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image27 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image28 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image29 {
+    width: 400px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-container23 {
+    height: 450px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .page3-image30 {
+    width: 280px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image31 {
+    width: 280px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image32 {
+    width: 280px;
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-container24 {
+    height: auto;
+    background-color: #3e4360;
+  }
+  .page3-image33 {
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-container25 {
+    height: auto;
+    background-color: #3e4360;
+  }
+  .page3-image34 {
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-container26 {
+    height: auto;
+    background-color: #3e4360;
+  }
+  .page3-image35 {
+    margin: var(--dl-space-space-unit);
+  }
+  .page3-image36 {
+    width: 300px;
+  }
+  .page3-image37 {
+    width: 300px;
+  }
+  .page3-image38 {
+    width: 300px;
+  }
+}
+@media(max-width: 767px) {
+  .page3-n1 {
+    width: auto;
+  }
+  .page3-container01 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text01 {
+    color: #ffffff;
+  }
+  .page3-container02 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text03 {
+    color: #ffffff;
+  }
+  .page3-container03 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text05 {
+    color: #ffffff;
+  }
+  .page3-container04 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container05 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text07 {
+    color: #ffffff;
+  }
+  .page3-container06 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text09 {
+    color: #ffffff;
+  }
+  .page3-container07 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text11 {
+    color: #ffffff;
+  }
+  .page3-container08 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container09 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text13 {
+    color: #ffffff;
+  }
+  .page3-container10 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text14 {
+    color: #ffffff;
+  }
+  .page3-container11 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text16 {
+    color: #ffffff;
+  }
+  .page3-container12 {
+    width: 120px;
+  }
+  .page3-text18 {
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+  }
+  .page3-container13 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container14 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text21 {
+    color: #ffffff;
+  }
+  .page3-container15 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text23 {
+    color: #ffffff;
+  }
+  .page3-container16 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text25 {
+    color: #ffffff;
+  }
+  .page3-container17 {
+    width: 120px;
+  }
+  .page3-text27 {
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+  }
+  .page3-container18 {
+    width: 120px;
+  }
+  .page3-text28 {
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+  }
+  .page3-container19 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container20 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-image17 {
+    width: 200px;
+  }
+  .page3-image18 {
+    width: 200px;
+  }
+  .page3-image19 {
+    width: 200px;
+  }
+  .page3-image30 {
+    width: 200px;
+  }
+  .page3-image31 {
+    width: 200px;
+  }
+  .page3-image32 {
+    width: 200px;
+  }
+  .page3-image36 {
+    width: 220px;
+  }
+  .page3-image37 {
+    width: 220px;
+  }
+  .page3-image38 {
+    width: 220px;
+  }
+  .page3-container34 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text29 {
+    color: #ffffff;
+  }
+  .page3-container35 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text31 {
+    color: #ffffff;
+  }
+  .page3-container36 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text33 {
+    color: #ffffff;
+  }
+  .page3-container37 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container38 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text35 {
+    color: #ffffff;
+  }
+  .page3-container39 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text37 {
+    color: #ffffff;
+  }
+  .page3-container40 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text39 {
+    color: #ffffff;
+  }
+  .page3-container41 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container42 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text41 {
+    color: #ffffff;
+  }
+  .page3-container43 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text42 {
+    color: #ffffff;
+  }
+  .page3-container44 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text44 {
+    color: #ffffff;
+  }
+  .page3-container45 {
+    width: 120px;
+  }
+  .page3-text46 {
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+  }
+  .page3-container46 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container47 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text49 {
+    color: #ffffff;
+  }
+  .page3-container48 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text51 {
+    color: #ffffff;
+  }
+  .page3-container49 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-text53 {
+    color: #ffffff;
+  }
+  .page3-container50 {
+    width: 120px;
+  }
+  .page3-text55 {
+    color: #ffffff;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+  }
+  .page3-container51 {
+    width: 120px;
+    height: 50px;
+  }
+  .page3-container52 {
+    width: 120px;
+    height: 50px;
+  }
+}
+@media(max-width: 479px) {
+  .page3-n1 {
+    height: 300px;
+  }
+  .page3-image {
+    width: 200px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-text {
+    left: 0px;
+    color: var(--dl-color-gray-700);
+    right: 0px;
+    bottom: -22px;
+    position: absolute;
+    font-size: 20px;
+    align-self: flex-end;
+    text-align: center;
+    font-family: Merriweather;
+  }
+  .page3-menu {
+    position: relative;
+  }
+  .page3-n101 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container01 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/-8.png');
+  }
+  .page3-text01 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container02 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/20.png');
+  }
+  .page3-text03 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container03 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/100.png');
+  }
+  .page3-text05 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container04 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-n102 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container05 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/227.png');
+  }
+  .page3-text07 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container06 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/300.png');
+  }
+  .page3-text09 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container07 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/436.png');
+  }
+  .page3-text11 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n103 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container08 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container09 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/500.png');
+  }
+  .page3-text13 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container10 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text14 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container11 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text16 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n104 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container12 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-500);
+  }
+  .page3-text18 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    width: auto;
+    position: absolute;
+    font-size: 10px;
+    text-align: left;
+  }
+  .page3-container13 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container14 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text21 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container15 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text23 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container16 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text25 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n105 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container17 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-500);
+    background-image: url('https://mikanixonable.github.io/271.png');
+  }
+  .page3-text27 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    width: 80px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container18 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-500);
+    background-image: url('https://mikanixonable.github.io/271.png');
+  }
+  .page3-text28 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    width: 80px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container19 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container20 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-n106 {
+    height: auto;
+  }
+  .page3-image01 {
+    width: 250px;
+    margin: var(--dl-space-space-fourunits);
+  }
+  .page3-n107 {
+    height: auto;
+  }
+  .page3-image02 {
+    width: 250px;
+    margin: var(--dl-space-space-fourunits);
+  }
+  .page3-n108 {
+    height: auto;
+  }
+  .page3-image03 {
+    width: 120px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image04 {
+    width: 120px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n109 {
+    height: auto;
+  }
+  .page3-image05 {
+    width: 120px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image06 {
+    width: 120px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n110 {
+    height: 300px;
+  }
+  .page3-image07 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n111 {
+    height: 300px;
+  }
+  .page3-image08 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n112 {
+    height: 300px;
+  }
+  .page3-image09 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n113 {
+    height: 600px;
+  }
+  .page3-image10 {
+    width: 300px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n114 {
+    height: 500px;
+  }
+  .page3-image11 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image12 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n {
+    height: 450px;
+  }
+  .page3-container21 {
+    width: auto;
+    margin: 0px;
+  }
+  .page3-image13 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image14 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container22 {
+    width: auto;
+    margin: 0px;
+  }
+  .page3-image15 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image16 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image17 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image18 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image19 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-n2 {
+    height: auto;
+  }
+  .page3-image20 {
+    width: 150px;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-threeunits);
+  }
+  .page3-image21 {
+    width: 150px;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-threeunits);
+  }
+  .page3-n3 {
+    height: auto;
+  }
+  .page3-image22 {
+    width: 150px;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-threeunits);
+  }
+  .page3-image23 {
+    width: 150px;
+    margin-top: var(--dl-space-space-twounits);
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: var(--dl-space-space-threeunits);
+  }
+  .page3-a {
+    height: auto;
+  }
+  .page3-image24 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-image25 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-image26 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-image27 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-image28 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-image29 {
+    width: 250px;
+    margin: var(--dl-space-space-threeunits);
+  }
+  .page3-container23 {
+    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+  .page3-image30 {
+    width: 180px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image31 {
+    width: 180px;
+  }
+  .page3-image32 {
+    width: 180px;
+  }
+  .page3-container24 {
+    height: auto;
+  }
+  .page3-image33 {
+    width: 250px;
+    margin: var(--dl-space-space-twounits);
+  }
+  .page3-container25 {
+    height: 300px;
+  }
+  .page3-image34 {
+    width: 250px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container26 {
+    height: 300px;
+  }
+  .page3-image35 {
+    width: 130px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container27 {
+    height: 200px;
+  }
+  .page3-image36 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image37 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image38 {
+    width: 100px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container28 {
+    height: 300px;
+  }
+  .page3-image39 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image40 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container29 {
+    height: 300px;
+  }
+  .page3-image41 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-image42 {
+    width: 150px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container30 {
+    height: 500px;
+  }
+  .page3-image43 {
+    width: 250px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container31 {
+    height: 300px;
+  }
+  .page3-image44 {
+    width: 250px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container32 {
+    height: 400px;
+  }
+  .page3-image45 {
+    width: 300px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-container33 {
+    height: 400px;
+  }
+  .page3-image46 {
+    width: 300px;
+    margin: var(--dl-space-space-halfunit);
+  }
+  .page3-menu1 {
+    position: relative;
+  }
+  .page3-n115 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container34 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/-8.png');
+  }
+  .page3-text29 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container35 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/20.png');
+  }
+  .page3-text31 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container36 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/100.png');
+  }
+  .page3-text33 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container37 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-n116 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container38 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/227.png');
+  }
+  .page3-text35 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container39 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/300.png');
+  }
+  .page3-text37 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container40 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/436.png');
+  }
+  .page3-text39 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n117 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container41 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container42 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-size: cover;
+    background-image: url('https://mikanixonable.github.io/500.png');
+  }
+  .page3-text41 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .page3-container43 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text42 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container44 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text44 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n118 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container45 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-500);
+  }
+  .page3-text46 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    width: auto;
+    position: absolute;
+    font-size: 10px;
+    text-align: left;
+  }
+  .page3-container46 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container47 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text49 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container48 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text51 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container49 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-700);
+  }
+  .page3-text53 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    right: 0px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-n119 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .page3-container50 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background-color: var(--dl-color-gray-500);
+    background-image: url('https://mikanixonable.github.io/271.png');
+  }
+  .page3-text55 {
+    top: 0px;
+    left: 0px;
+    color: #ffffff;
+    width: 80px;
+    position: absolute;
+    font-size: 15px;
+    text-align: left;
+  }
+  .page3-container51 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container52 {
+    width: 60px;
+    height: 30px;
+    position: relative;
+  }
+  .page3-container53 {
+    height: auto;
+  }
+}
