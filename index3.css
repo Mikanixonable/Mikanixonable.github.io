@@ -1,4 +1,4 @@
-.index-container {
+.index3-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -8,7 +8,7 @@
   list-style-image: none;
   list-style-position: outside;
 }
-.index-head-container {
+.index3-head-container {
   width: 100%;
   height: 500px;
   display: flex;
@@ -19,7 +19,7 @@
   background-repeat: repeat;
   background-position: left;
 }
-.index-title-con {
+.index3-title-con {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -30,20 +30,20 @@
   flex-direction: row;
   justify-content: flex-start;
 }
-.index-title {
+.index3-title {
   color: var(--dl-color-gray-white);
   z-index: 100;
   font-size: 70px;
   align-self: center;
   letter-spacing: 40px;
 }
-.index-subtitle {
+.index3-subtitle {
   color: var(--dl-color-gray-white);
   z-index: 100;
   font-size: 20px;
   letter-spacing: 5px;
 }
-.index-under-con {
+.index3-under-con {
   flex: 0 0 auto;
   left: 0px;
   width: 100%;
@@ -54,66 +54,66 @@
   align-items: flex-start;
   flex-direction: row;
 }
-.index-link {
+.index3-link {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link01 {
+.index3-link01 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link02 {
+.index3-link02 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link03 {
+.index3-link03 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link04 {
+.index3-link04 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link05 {
+.index3-link05 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link06 {
+.index3-link06 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link07 {
+.index3-link07 {
   color: var(--dl-color-gray-white);
   padding: var(--dl-space-space-halfunit);
   border-width: 0px;
   text-decoration: none;
   background-color: transparent;
 }
-.index-link08 {
+.index3-link08 {
   display: contents;
 }
-.index-twitter {
+.index3-twitter {
   top: 0px;
   left: 0px;
   width: 80px;
@@ -121,10 +121,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link09 {
+.index3-link09 {
   display: contents;
 }
-.index-twitter1 {
+.index3-twitter1 {
   top: 0px;
   left: 100px;
   width: 4px;
@@ -132,10 +132,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link10 {
+.index3-link10 {
   display: contents;
 }
-.index-youtube {
+.index3-youtube {
   top: 0px;
   right: 200px;
   width: 40px;
@@ -144,10 +144,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link11 {
+.index3-link11 {
   display: contents;
 }
-.index-unicodepod {
+.index3-unicodepod {
   top: 0px;
   left: 200px;
   width: 40px;
@@ -156,10 +156,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link12 {
+.index3-link12 {
   display: contents;
 }
-.index-spotify {
+.index3-spotify {
   right: 280px;
   width: 40px;
   bottom: 0px;
@@ -168,10 +168,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link13 {
+.index3-link13 {
   display: contents;
 }
-.index-keybase {
+.index3-keybase {
   right: 320px;
   width: 40px;
   bottom: 40px;
@@ -180,10 +180,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link14 {
+.index3-link14 {
   display: contents;
 }
-.index-tumblr {
+.index3-tumblr {
   right: 0px;
   width: 80px;
   bottom: 0px;
@@ -191,10 +191,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link15 {
+.index3-link15 {
   display: contents;
 }
-.index-botseikatu {
+.index3-botseikatu {
   top: 0px;
   left: 120px;
   width: 40px;
@@ -202,10 +202,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link16 {
+.index3-link16 {
   display: contents;
 }
-.index-kakuyomu {
+.index3-kakuyomu {
   top: 0px;
   left: 300px;
   width: 80px;
@@ -213,10 +213,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link17 {
+.index3-link17 {
   display: contents;
 }
-.index-instagram {
+.index3-instagram {
   top: 0px;
   right: 240px;
   width: 80px;
@@ -224,10 +224,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link18 {
+.index3-link18 {
   display: contents;
 }
-.index-git-hub {
+.index3-git-hub {
   right: 120px;
   width: 40px;
   bottom: 120px;
@@ -235,10 +235,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link19 {
+.index3-link19 {
   display: contents;
 }
-.index-mstdn {
+.index3-mstdn {
   top: 0px;
   left: 420px;
   width: 40px;
@@ -246,10 +246,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link20 {
+.index3-link20 {
   display: contents;
 }
-.index-misskey {
+.index3-misskey {
   right: 160px;
   width: 80px;
   bottom: 120px;
@@ -257,10 +257,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link21 {
+.index3-link21 {
   display: contents;
 }
-.index-discord {
+.index3-discord {
   top: 0px;
   left: 380px;
   width: 40px;
@@ -268,10 +268,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link22 {
+.index3-link22 {
   display: contents;
 }
-.index-tik-tok {
+.index3-tik-tok {
   right: 0px;
   width: 40px;
   bottom: 80px;
@@ -279,10 +279,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link23 {
+.index3-link23 {
   display: contents;
 }
-.index-pixiv {
+.index3-pixiv {
   top: 0px;
   right: 0px;
   width: 80px;
@@ -290,10 +290,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link24 {
+.index3-link24 {
   display: contents;
 }
-.index-niconico {
+.index3-niconico {
   right: 120px;
   width: 80px;
   bottom: 0px;
@@ -301,10 +301,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link25 {
+.index3-link25 {
   display: contents;
 }
-.index-soundcloud {
+.index3-soundcloud {
   top: 0px;
   right: 400px;
   width: 80px;
@@ -312,10 +312,10 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-link26 {
+.index3-link26 {
   display: contents;
 }
-.index-v-rchat {
+.index3-v-rchat {
   right: 80px;
   width: 40px;
   bottom: 80px;
@@ -323,7 +323,7 @@
   object-fit: cover;
   text-decoration: none;
 }
-.index-buttoncon {
+.index3-buttoncon {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -336,7 +336,7 @@
   padding-bottom: var(--dl-space-space-unit);
   justify-content: flex-start;
 }
-.index-button {
+.index3-button {
   color: var(--dl-color-gray-500);
   margin: var(--dl-space-space-halfunit);
   padding: 5px;
@@ -344,21 +344,10 @@
   border-radius: 20px;
   background-color: #ffffff;
 }
-.index-text01 {
+.index3-text01 {
   color: var(--dl-color-gray-500);
 }
-.index-button01 {
-  color: var(--dl-color-gray-500);
-  margin: var(--dl-space-space-halfunit);
-  padding: 5px;
-  border-width: 0px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-.index-text02 {
-  color: var(--dl-color-gray-500);
-}
-.index-button02 {
+.index3-button01 {
   color: var(--dl-color-gray-500);
   margin: var(--dl-space-space-halfunit);
   padding: 5px;
@@ -366,21 +355,10 @@
   border-radius: 20px;
   background-color: #ffffff;
 }
-.index-text04 {
+.index3-text02 {
   color: var(--dl-color-gray-500);
 }
-.index-button03 {
-  color: var(--dl-color-gray-500);
-  margin: var(--dl-space-space-halfunit);
-  padding: 5px;
-  border-width: 0px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-.index-text05 {
-  color: var(--dl-color-gray-500);
-}
-.index-button04 {
+.index3-button02 {
   color: var(--dl-color-gray-500);
   margin: var(--dl-space-space-halfunit);
   padding: 5px;
@@ -388,21 +366,10 @@
   border-radius: 20px;
   background-color: #ffffff;
 }
-.index-text06 {
+.index3-text04 {
   color: var(--dl-color-gray-500);
 }
-.index-button05 {
-  color: var(--dl-color-gray-500);
-  margin: var(--dl-space-space-halfunit);
-  padding: 5px;
-  border-width: 0px;
-  border-radius: 20px;
-  background-color: #ffffff;
-}
-.index-text07 {
-  color: var(--dl-color-gray-500);
-}
-.index-button06 {
+.index3-button03 {
   color: var(--dl-color-gray-500);
   margin: var(--dl-space-space-halfunit);
   padding: 5px;
@@ -410,10 +377,10 @@
   border-radius: 20px;
   background-color: #ffffff;
 }
-.index-text08 {
+.index3-text05 {
   color: var(--dl-color-gray-500);
 }
-.index-button07 {
+.index3-button04 {
   color: var(--dl-color-gray-500);
   margin: var(--dl-space-space-halfunit);
   padding: 5px;
@@ -421,15 +388,48 @@
   border-radius: 20px;
   background-color: #ffffff;
 }
-.index-text10 {
+.index3-text06 {
   color: var(--dl-color-gray-500);
 }
-.index-intro {
+.index3-button05 {
+  color: var(--dl-color-gray-500);
+  margin: var(--dl-space-space-halfunit);
+  padding: 5px;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.index3-text07 {
+  color: var(--dl-color-gray-500);
+}
+.index3-button06 {
+  color: var(--dl-color-gray-500);
+  margin: var(--dl-space-space-halfunit);
+  padding: 5px;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.index3-text08 {
+  color: var(--dl-color-gray-500);
+}
+.index3-button07 {
+  color: var(--dl-color-gray-500);
+  margin: var(--dl-space-space-halfunit);
+  padding: 5px;
+  border-width: 0px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+.index3-text10 {
+  color: var(--dl-color-gray-500);
+}
+.index3-intro {
   color: var(--dl-color-gray-black);
   align-self: stretch;
   background-color: var(--dl-color-gray-white);
 }
-.index-history {
+.index3-history {
   top: 1px;
   left: 0px;
   color: var(--dl-color-gray-black);
@@ -440,10 +440,40 @@
   padding-bottom: var(--dl-space-space-halfunit);
   background-color: var(--dl-color-gray-900);
 }
-.index-text14 {
+.index3-text14 {
   text-decoration: underline;
 }
-.index-container01 {
+.index3-container01 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.index3-container02 {
+  flex: 0 0 auto;
+  width: 33%;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.index3-container03 {
+  flex: 0 0 auto;
+  width: 34%;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.index3-container04 {
+  flex: 0 0 auto;
+  width: 33%;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.index3-container05 {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -456,11 +486,11 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: var(--dl-color-primary-21);
 }
-.index-text20 {
+.index3-text20 {
   color: var(--dl-color-gray-white);
   align-self: flex-start;
 }
-.index-ycon {
+.index3-ycon {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -468,10 +498,10 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.index-link28 {
+.index3-link28 {
   display: contents;
 }
-.index-gallery-card {
+.index3-gallery-card {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -483,7 +513,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container02 {
+.index3-container06 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -494,7 +524,7 @@
   background-size: cover;
   background-image: url('https://mikanixonable.github.io/logo.png');
 }
-.index-text21 {
+.index3-text21 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -502,14 +532,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text23 {
+.index3-text23 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link29 {
+.index3-link29 {
   display: contents;
 }
-.index-gallery-card1 {
+.index3-gallery-card1 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -521,7 +551,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container03 {
+.index3-container07 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -532,7 +562,7 @@
   background-size: cover;
   background-image: url('https://mikanixonable.github.io/logo.png');
 }
-.index-text24 {
+.index3-text24 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -540,14 +570,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text26 {
+.index3-text26 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link30 {
+.index3-link30 {
   display: contents;
 }
-.index-gallery-card2 {
+.index3-gallery-card2 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -559,7 +589,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container04 {
+.index3-container08 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -570,7 +600,7 @@
   background-size: cover;
   background-image: url('https://mikanixonable.github.io/456.png');
 }
-.index-text27 {
+.index3-text27 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -578,14 +608,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text28 {
+.index3-text28 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link31 {
+.index3-link31 {
   display: contents;
 }
-.index-gallery-card3 {
+.index3-gallery-card3 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -597,7 +627,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container05 {
+.index3-container09 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -608,7 +638,7 @@
   background-size: cover;
   background-image: url('https://mikanixonable.github.io/242.png');
 }
-.index-text29 {
+.index3-text29 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -616,14 +646,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text31 {
+.index3-text31 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link32 {
+.index3-link32 {
   display: contents;
 }
-.index-gallery-card4 {
+.index3-gallery-card4 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -635,7 +665,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container06 {
+.index3-container10 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -647,7 +677,7 @@
   background-image: url('https://mikanixonable.github.io/Photo/1.png');
   background-position: center;
 }
-.index-text32 {
+.index3-text32 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -655,14 +685,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text35 {
+.index3-text35 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link33 {
+.index3-link33 {
   display: contents;
 }
-.index-gallery-card5 {
+.index3-gallery-card5 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -674,7 +704,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container07 {
+.index3-container11 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -686,7 +716,7 @@
   background-image: url('https://mikanixonable.github.io/VRchat%E3%81%A6%E3%82%99%E4%BD%9C%E3%81%A3%209a0ad/Untitled.png');
   background-position: center;
 }
-.index-text36 {
+.index3-text36 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -694,14 +724,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text38 {
+.index3-text38 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link34 {
+.index3-link34 {
   display: contents;
 }
-.index-gallery-card6 {
+.index3-gallery-card6 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -713,7 +743,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container08 {
+.index3-container12 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -725,7 +755,7 @@
   background-image: url('https://mikanixonable.github.io/assets/3.png');
   background-position: center;
 }
-.index-text40 {
+.index3-text40 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -733,14 +763,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text42 {
+.index3-text42 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link35 {
+.index3-link35 {
   display: contents;
 }
-.index-gallery-card7 {
+.index3-gallery-card7 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -752,7 +782,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container09 {
+.index3-container13 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -764,7 +794,7 @@
   background-image: url('https://mikanixonable.github.io/assets/2.png');
   background-position: center;
 }
-.index-text44 {
+.index3-text44 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -772,14 +802,14 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text46 {
+.index3-text46 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-link36 {
+.index3-link36 {
   display: contents;
 }
-.index-gallery-card8 {
+.index3-gallery-card8 {
   height: 300px;
   margin: var(--dl-space-space-unit);
   display: flex;
@@ -791,7 +821,7 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-container10 {
+.index3-container14 {
   flex: 0 0 auto;
   width: 200px;
   height: 200px;
@@ -803,7 +833,7 @@
   background-image: url('https://mikanixonable.github.io/logo.png');
   background-position: center;
 }
-.index-text48 {
+.index3-text48 {
   color: var(--dl-color-primary-text);
   height: auto;
   align-self: center;
@@ -811,11 +841,11 @@
   font-weight: 600;
   margin-bottom: var(--dl-space-space-halfunit);
 }
-.index-text49 {
+.index3-text49 {
   color: var(--dl-color-primary-text);
   align-self: flex-start;
 }
-.index-container11 {
+.index3-container15 {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -830,39 +860,39 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: var(--dl-color-primary-21);
 }
-.index-text51 {
+.index3-text51 {
   color: var(--dl-color-gray-white);
 }
-.index-text53 {
+.index3-text53 {
   color: var(--dl-color-gray-white);
 }
-.index-container12 {
+.index3-container16 {
   flex: 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: row;
 }
-.index-image {
+.index3-image {
   height: 400px;
   margin: var(--dl-space-space-halfunit);
   object-fit: cover;
 }
-.index-image1 {
+.index3-image1 {
   height: 400px;
   margin: var(--dl-space-space-halfunit);
   object-fit: cover;
 }
-.index-image2 {
+.index3-image2 {
   height: 400px;
   margin: var(--dl-space-space-halfunit);
   object-fit: cover;
 }
-.index-link37 {
+.index3-link37 {
   border-width: 0px;
   text-decoration: none;
 }
-.index-container13 {
+.index3-container17 {
   flex: 0 0 auto;
   display: flex;
   margin-top: var(--dl-space-space-unit);
@@ -875,21 +905,21 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: var(--dl-color-primary-21);
 }
-.index-text57 {
+.index3-text57 {
   color: var(--dl-color-gray-white);
 }
-.index-container14 {
+.index3-container18 {
   flex: 0 0 auto;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-.index-image3 {
+.index3-image3 {
   width: 400px;
   align-self: flex-start;
   object-fit: cover;
 }
-.index-container15 {
+.index3-container19 {
   flex: 0 0 auto;
   display: flex;
   margin-top: var(--dl-space-space-unit);
@@ -902,10 +932,10 @@
   padding-bottom: var(--dl-space-space-unit);
   background-color: var(--dl-color-primary-21);
 }
-.index-text60 {
+.index3-text60 {
   color: var(--dl-color-gray-white);
 }
-.index-container16 {
+.index3-container20 {
   flex: 0 0 auto;
   width: 100%;
   height: 100px;
@@ -913,7 +943,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.index-button08 {
+.index3-button08 {
   color: transparent;
   margin: var(--dl-space-space-unit);
   font-size: 20px;
@@ -921,10 +951,10 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-text61 {
+.index3-text61 {
   color: var(--dl-color-primary-text);
 }
-.index-button09 {
+.index3-button09 {
   color: transparent;
   margin: var(--dl-space-space-unit);
   font-size: 20px;
@@ -932,10 +962,10 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-text62 {
+.index3-text62 {
   color: var(--dl-color-primary-text);
 }
-.index-button10 {
+.index3-button10 {
   color: transparent;
   margin: var(--dl-space-space-unit);
   font-size: 20px;
@@ -943,10 +973,10 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-text63 {
+.index3-text63 {
   color: var(--dl-color-primary-text);
 }
-.index-button11 {
+.index3-button11 {
   color: transparent;
   margin: var(--dl-space-space-unit);
   font-size: 20px;
@@ -954,244 +984,245 @@
   text-decoration: none;
   background-color: var(--dl-color-primary-1);
 }
-.index-text64 {
+.index3-text64 {
   color: var(--dl-color-primary-text);
 }
 @media(max-width: 991px) {
-  .index-container {
+  .index3-container {
     background-color: var(--dl-color-gray-white);
   }
-  .index-head-container {
+  .index3-head-container {
     width: 100%;
     height: 250px;
     background-image: url('https://mikanixonable.github.io/500.png');
   }
-  .index-title-con {
+  .index3-title-con {
     align-self: center;
     margin-top: var(--dl-space-space-threeunits);
   }
-  .index-title {
+  .index3-title {
     font-size: 50px;
     align-self: center;
   }
-  .index-youtube {
+  .index3-youtube {
     right: 200px;
     bottom: 0px;
   }
-  .index-spotify {
+  .index3-spotify {
     right: 380px;
   }
-  .index-keybase {
+  .index3-keybase {
     right: 380px;
   }
-  .index-kakuyomu {
+  .index3-kakuyomu {
     top: 0px;
     left: 300px;
     width: 48px;
     position: absolute;
   }
-  .index-instagram {
+  .index3-instagram {
     width: 40px;
   }
-  .index-mstdn {
+  .index3-mstdn {
     width: 40px;
   }
-  .index-misskey {
+  .index3-misskey {
     width: 40px;
   }
-  .index-tik-tok {
+  .index3-tik-tok {
     right: 80px;
     bottom: 0px;
   }
-  .index-soundcloud {
+  .index3-soundcloud {
     right: 280px;
   }
-  .index-v-rchat {
+  .index3-v-rchat {
     right: 80px;
     bottom: 80px;
     position: absolute;
   }
 }
 @media(max-width: 767px) {
-  .index-container {
+  .index3-container {
     background-color: var(--dl-color-gray-white);
   }
-  .index-head-container {
+  .index3-head-container {
     width: 100%;
     background-image: url('https://mikanixonable.github.io/500.png');
   }
-  .index-title {
+  .index3-title {
     top: 100px;
     color: var(--dl-color-gray-white);
     font-size: 40px;
     letter-spacing: 20px;
     background-color: transparent;
   }
-  .index-subtitle {
+  .index3-subtitle {
     color: var(--dl-color-gray-white);
     bottom: 30px;
     background-color: transparent;
   }
-  .index-twitter {
+  .index3-twitter {
     width: 48px;
   }
-  .index-twitter1 {
+  .index3-twitter1 {
     left: 60px;
     width: 4px;
   }
-  .index-youtube {
+  .index3-youtube {
     top: 0px;
     right: 120px;
     width: 40px;
     bottom: 0px;
   }
-  .index-unicodepod {
+  .index3-unicodepod {
     top: 0px;
     left: 120px;
     width: 36px;
   }
-  .index-spotify {
+  .index3-spotify {
     right: 80px;
     width: 36px;
     bottom: 0px;
   }
-  .index-keybase {
+  .index3-keybase {
     right: 115px;
     width: 36px;
     bottom: 0px;
   }
-  .index-tumblr {
+  .index3-tumblr {
     top: 80px;
     bottom: 0px;
   }
-  .index-botseikatu {
+  .index3-botseikatu {
     left: 84px;
     width: 36px;
   }
-  .index-kakuyomu {
+  .index3-kakuyomu {
     top: 0px;
     left: 300px;
     width: 48px;
     position: absolute;
   }
-  .index-instagram {
+  .index3-instagram {
     width: 40px;
   }
-  .index-git-hub {
+  .index3-git-hub {
     top: 40px;
     bottom: 0px;
   }
-  .index-mstdn {
+  .index3-mstdn {
     top: 40px;
     left: 348px;
     width: 40px;
   }
-  .index-misskey {
+  .index3-misskey {
     top: 40px;
     right: 80px;
     width: 40px;
     bottom: 0px;
   }
-  .index-discord {
+  .index3-discord {
     left: 348px;
   }
-  .index-tik-tok {
+  .index3-tik-tok {
     top: 120px;
     bottom: 0px;
   }
-  .index-niconico {
+  .index3-niconico {
     top: 0px;
     right: 80px;
     width: 40px;
     bottom: 0px;
   }
-  .index-soundcloud {
+  .index3-soundcloud {
     right: 160px;
   }
-  .index-v-rchat {
+  .index3-v-rchat {
     top: 80px;
     width: 40px;
     bottom: 0px;
   }
-  .index-gallery-card {
+  .index3-gallery-card {
     height: 200px;
     flex-direction: column;
   }
-  .index-container02 {
+  .index3-container06 {
     height: 70%;
   }
-  .index-gallery-card1 {
+  .index3-gallery-card1 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container03 {
+  .index3-container07 {
     height: 70%;
   }
-  .index-gallery-card2 {
+  .index3-gallery-card2 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container04 {
+  .index3-container08 {
     height: 70%;
   }
-  .index-gallery-card3 {
+  .index3-gallery-card3 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container05 {
+  .index3-container09 {
     height: 70%;
   }
-  .index-gallery-card4 {
+  .index3-gallery-card4 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container06 {
+  .index3-container10 {
     height: 70%;
   }
-  .index-gallery-card5 {
+  .index3-gallery-card5 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container07 {
+  .index3-container11 {
     height: 70%;
   }
-  .index-gallery-card6 {
+  .index3-gallery-card6 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container08 {
+  .index3-container12 {
     height: 70%;
   }
-  .index-gallery-card7 {
+  .index3-gallery-card7 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container09 {
+  .index3-container13 {
     height: 70%;
   }
-  .index-gallery-card8 {
+  .index3-gallery-card8 {
     height: 200px;
     flex-direction: column;
   }
-  .index-container10 {
+  .index3-container14 {
     height: 70%;
   }
 }
 @media(max-width: 479px) {
-  .index-container {
+  .index3-container {
+    flex-direction: column;
     background-color: transparent;
   }
-  .index-head-container {
+  .index3-head-container {
     width: 100%;
     height: 250px;
     background-image: url('https://mikanixonable.github.io/500.png');
   }
-  .index-title-con {
+  .index3-title-con {
     flex-wrap: wrap;
     align-self: flex-end;
     margin-bottom: var(--dl-space-space-threeunits);
   }
-  .index-title {
+  .index3-title {
     top: 0px;
     left: 0px;
     color: var(--dl-color-gray-white);
@@ -1203,7 +1234,7 @@
     letter-spacing: 20px;
     text-transform: uppercase;
   }
-  .index-subtitle {
+  .index3-subtitle {
     color: var(--dl-color-gray-white);
     bottom: 10px;
     margin: 0px;
@@ -1211,156 +1242,156 @@
     font-size: 15px;
     align-self: flex-start;
   }
-  .index-link {
+  .index3-link {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link01 {
+  .index3-link01 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link02 {
+  .index3-link02 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link03 {
+  .index3-link03 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link04 {
+  .index3-link04 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link05 {
+  .index3-link05 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link06 {
+  .index3-link06 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-link07 {
+  .index3-link07 {
     padding: 2px;
     font-size: 12px;
   }
-  .index-twitter {
+  .index3-twitter {
     top: 0px;
     left: 0px;
     width: 48px;
     position: absolute;
   }
-  .index-twitter1 {
+  .index3-twitter1 {
     top: 80px;
     left: 0px;
     width: 4px;
     position: absolute;
   }
-  .index-youtube {
+  .index3-youtube {
     top: 0px;
     right: 48px;
     width: 24px;
     bottom: 0px;
   }
-  .index-unicodepod {
+  .index3-unicodepod {
     top: 0px;
     left: 72px;
     right: 0px;
     width: 36px;
   }
-  .index-spotify {
+  .index3-spotify {
     top: 36px;
     left: 84px;
     width: 24px;
   }
-  .index-keybase {
+  .index3-keybase {
     top: 48px;
     left: 48px;
     width: 24px;
   }
-  .index-tumblr {
+  .index3-tumblr {
     top: 108px;
     right: 0px;
     width: 48px;
     position: absolute;
   }
-  .index-botseikatu {
+  .index3-botseikatu {
     top: 0px;
     left: 48px;
     width: 24px;
     position: absolute;
   }
-  .index-kakuyomu {
+  .index3-kakuyomu {
     top: 0px;
     left: 108px;
     width: 48px;
   }
-  .index-instagram {
+  .index3-instagram {
     top: 0px;
     right: 108px;
     width: 24px;
     position: absolute;
   }
-  .index-git-hub {
+  .index3-git-hub {
     top: 48px;
     right: 48px;
     width: 24px;
     position: absolute;
   }
-  .index-mstdn {
+  .index3-mstdn {
     top: 0px;
     left: 156px;
     width: 24px;
     position: absolute;
   }
-  .index-misskey {
+  .index3-misskey {
     top: 0px;
     left: 156px;
     width: 24px;
     position: absolute;
   }
-  .index-discord {
+  .index3-discord {
     top: 24px;
     left: 156px;
     width: 24px;
   }
-  .index-tik-tok {
+  .index3-tik-tok {
     top: 84px;
     right: 0px;
     width: 24px;
     bottom: 0px;
   }
-  .index-pixiv {
+  .index3-pixiv {
     right: 0px;
     width: 48px;
     bottom: 0px;
     position: absolute;
   }
-  .index-niconico {
+  .index3-niconico {
     top: 72px;
     right: 48px;
     width: 36px;
     position: absolute;
   }
-  .index-soundcloud {
+  .index3-soundcloud {
     top: 24px;
     right: 72px;
     width: 36px;
     position: absolute;
   }
-  .index-v-rchat {
+  .index3-v-rchat {
     top: 48px;
     right: 12px;
     width: 36px;
     position: absolute;
   }
-  .index-buttoncon {
+  .index3-buttoncon {
     height: auto;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
   }
-  .index-intro {
+  .index3-intro {
     color: var(--dl-color-gray-black);
     font-size: 10px;
     align-self: stretch;
@@ -1370,31 +1401,28 @@
     padding-bottom: 0px;
     background-color: var(--dl-color-gray-900);
   }
-  .index-history {
+  .index3-history {
     font-size: 10px;
     align-self: stretch;
     padding-top: 0px;
     padding-bottom: 0px;
     background-color: var(--dl-color-gray-900);
   }
-  .index-container01 {
-    width: 95%;
-    margin: var(--dl-space-space-unit);
-    padding: var(--dl-space-space-unit);
+  .index3-container05 {
+    width: 100%;
     position: relative;
-    align-self: center;
     background-color: var(--dl-color-primary-21);
   }
-  .index-text20 {
+  .index3-text20 {
     align-self: flex-start;
   }
-  .index-ycon {
+  .index3-ycon {
     width: auto;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
   }
-  .index-gallery-card {
+  .index3-gallery-card {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1403,20 +1431,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container02 {
+  .index3-container06 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text21 {
-    font-size: 1rem;
-  }
-  .index-text23 {
-    font-size: 12px;
-  }
-  .index-gallery-card1 {
+  .index3-gallery-card1 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1425,20 +1447,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container03 {
+  .index3-container07 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text24 {
-    font-size: 1rem;
-  }
-  .index-text26 {
-    font-size: 12px;
-  }
-  .index-gallery-card2 {
+  .index3-gallery-card2 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1447,20 +1463,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container04 {
+  .index3-container08 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text27 {
-    font-size: 1rem;
-  }
-  .index-text28 {
-    font-size: 12px;
-  }
-  .index-gallery-card3 {
+  .index3-gallery-card3 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1469,20 +1479,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container05 {
+  .index3-container09 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text29 {
-    font-size: 1rem;
-  }
-  .index-text31 {
-    font-size: 12px;
-  }
-  .index-gallery-card4 {
+  .index3-gallery-card4 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1491,20 +1495,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container06 {
+  .index3-container10 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text32 {
-    font-size: 1rem;
-  }
-  .index-text35 {
-    font-size: 12px;
-  }
-  .index-gallery-card5 {
+  .index3-gallery-card5 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1513,20 +1511,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container07 {
+  .index3-container11 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text36 {
-    font-size: 1rem;
-  }
-  .index-text38 {
-    font-size: 12px;
-  }
-  .index-gallery-card6 {
+  .index3-gallery-card6 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1535,20 +1527,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container08 {
+  .index3-container12 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text40 {
-    font-size: 1rem;
-  }
-  .index-text42 {
-    font-size: 12px;
-  }
-  .index-gallery-card7 {
+  .index3-gallery-card7 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1557,20 +1543,14 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container09 {
+  .index3-container13 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text44 {
-    font-size: 1rem;
-  }
-  .index-text46 {
-    font-size: 12px;
-  }
-  .index-gallery-card8 {
+  .index3-gallery-card8 {
     width: 150px;
     padding: var(--dl-space-space-halfunit);
     position: relative;
@@ -1579,29 +1559,23 @@
     margin-right: var(--dl-space-space-halfunit);
     margin-bottom: var(--dl-space-space-halfunit);
   }
-  .index-container10 {
+  .index3-container14 {
     width: 120px;
     height: 50%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
   }
-  .index-text48 {
-    font-size: 1rem;
+  .index3-container15 {
+    width: auto;
+    align-self: flex-start;
   }
-  .index-text49 {
-    font-size: 12px;
-  }
-  .index-container11 {
-    width: 95%;
-    align-self: center;
-  }
-  .index-container12 {
+  .index3-container16 {
     position: relative;
     align-self: center;
     flex-direction: column;
   }
-  .index-link37 {
+  .index3-link37 {
     color: #ffffff;
     width: auto;
     height: auto;
@@ -1613,37 +1587,37 @@
     border-radius: 0px;
     background-color: #5FC0C2;
   }
-  .index-text54 {
+  .index3-text54 {
     text-align: center;
   }
-  .index-container13 {
-    width: 95%;
+  .index3-container17 {
+    width: auto;
     flex-wrap: wrap;
-    align-self: center;
+    align-self: flex-start;
   }
-  .index-container14 {
+  .index3-container18 {
     padding: var(--dl-space-space-unit);
     position: relative;
   }
-  .index-image3 {
+  .index3-image3 {
     width: var(--dl-size-size-xlarge);
     height: auto;
   }
-  .index-text59 {
+  .index3-text59 {
     color: var(--dl-color-primary-text);
     width: 100%;
   }
-  .index-container15 {
-    width: 95%;
+  .index3-container19 {
+    width: auto;
     height: auto;
-    align-self: center;
+    align-self: flex-start;
     flex-direction: column;
   }
-  .index-text60 {
+  .index3-text60 {
     width: auto;
     align-self: flex-start;
   }
-  .index-container16 {
+  .index3-container20 {
     height: auto;
     align-self: flex-start;
     flex-direction: column;
