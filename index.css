@@ -172,9 +172,9 @@
   display: contents;
 }
 .index-keybase {
+  top: 0px;
   right: 320px;
   width: 40px;
-  bottom: 40px;
   z-index: 100;
   position: absolute;
   object-fit: cover;
@@ -982,7 +982,7 @@
     right: 380px;
   }
   .index-keybase {
-    right: 380px;
+    right: 360px;
   }
   .index-kakuyomu {
     top: 0px;
@@ -1056,8 +1056,8 @@
     bottom: 0px;
   }
   .index-keybase {
-    right: 115px;
-    width: 36px;
+    right: 280px;
+    width: 40px;
     bottom: 0px;
   }
   .index-tumblr {
@@ -1273,8 +1273,8 @@
     width: 24px;
   }
   .index-keybase {
-    top: 48px;
-    left: 48px;
+    top: 36px;
+    right: 108px;
     width: 24px;
   }
   .index-tumblr {
