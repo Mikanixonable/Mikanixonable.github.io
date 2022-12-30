@@ -9,14 +9,14 @@
 <script>
 
 
-let x = 210;
+let x = 280;
 let y = 220;
 let xs = 0;
-let ys = 0;
+let ys = 2;
 let r = 1/(Math.sqrt((200-x)**2+(200-y)**2));
 let xa = (Math.sqrt(r**2-(200 - y)**2))/(r**2);
 let ya = (Math.sqrt(r**2-(200 - x)**2))/(r**2);
-
+let m=500
 let diameter = 8;
 
 
@@ -24,23 +24,27 @@ function setup() {
   createCanvas(400, 400);
   noStroke();
   fill(0,0,0);
+
 }
 
 
 function draw() {
   background(0);
-r = 1/(Math.sqrt((200-x)**2+(200-y)**2));
-xa = (Math.sqrt(r**2-(200 - y)**2))/(r**2);
-ya = (Math.sqrt(r**2-(200 - x)**2))/(r**2);
+r = Math.sqrt((200-x)**2+(200-y)**2);
+xa = (Math.sqrt(r**2-(200 - y)**2))/(r**3);
+ya = (Math.sqrt(r**2-(200 - x)**2))/(r**3);
 
+if(x>200){xa=-xa};
+if(y>200){ya=-ya};
 
-
-xs=xs+xa;
-ys=ys+ya;
+xs=xs+xa*m;
+ys=ys+ya*m;
 x=x+xs;
 y=y+ys;
   fill(200,200,200);
   ellipse(x, y, diameter, diameter);
+      ellipse(200, 200, diameter, diameter);
+
 }
 
 
