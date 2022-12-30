@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+</head>
+
+<body>
+
+<script>
+
+
+let x = 210;
+let y = 220;
+let xs = 0;
+let ys = 0;
+let r = 1/(Math.sqrt((200-x)**2+(200-y)**2));
+let xa = (Math.sqrt(r**2-(200 - y)**2))/(r**2);
+let ya = (Math.sqrt(r**2-(200 - x)**2))/(r**2);
+
+let diameter = 8;
+
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  fill(0,0,0);
+}
+
+
+function draw() {
+  background(0);
+r = 1/(Math.sqrt((200-x)**2+(200-y)**2));
+xa = (Math.sqrt(r**2-(200 - y)**2))/(r**2);
+ya = (Math.sqrt(r**2-(200 - x)**2))/(r**2);
+
+
+
+xs=xs+xa;
+ys=ys+ya;
+x=x+xs;
+y=y+ys;
+  fill(200,200,200);
+  ellipse(x, y, diameter, diameter);
+}
+
+
+</script>
+
+
+</body>
+</html>

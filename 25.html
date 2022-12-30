@@ -5,19 +5,52 @@
 </head>
 
 <body>
-<script>
-  function setup() {
-    createCanvas(400, 400)
-    fill(255,255,230);
-    noStroke();
-  }
 
-  function draw() {
-    background(200,230,220);
-    ellipse(200, 200, 80, 80);
-    circle(20,20,100);
-    rect(20,20,12,200);
-  }
+  <script>
+
+
+let x = 20;
+let y = 20;
+let diameter = 8;
+
+
+let ys = 0;
+let xs=0;
+
+function setup() {
+  createCanvas(400, 400);
+  noStroke();
+  fill(0,0,0);
+}
+
+
+function draw() {
+  background(0);
+a=1/((200-y)**2+(200-x)**2);
+
+
+y = y + Math.sqrt(a**2-(200-x)**2);
+x = x + Math.sqrt(a**2-(200-y)**2);
+
+if(y>400){ys = -ys;
+y=400
+};
+if(y<0){ys = -ys;
+y=0
+};
+
+if(x>400){xs = -xs;
+x = 400
+};
+if(x<0){xs = -xs;
+x = 0
+};
+
+
+  fill(200,200,200);
+  ellipse(x, y, diameter, diameter);
+}
+
 </script>
 
 
