@@ -7,15 +7,13 @@
 <body>
 
   <script>
-
-
-let x = 20;
-let y = 20;
-let diameter = 8;
-
-
-let ys = 0;
-let xs=0;
+    let x = 200;
+    let y = 100;
+    let diameter = 8;
+    let ys = 0;
+    let xs=0;
+    let ya = 0.1;
+    let xa=0.2;
 
 function setup() {
   createCanvas(400, 400);
@@ -26,26 +24,19 @@ function setup() {
 
 function draw() {
   background(0);
-a=1/((200-y)**2+(200-x)**2);
 
+  ys = ys + ya;
+  y = y + ys;
 
-y = y + Math.sqrt(a**2-(200-x)**2);
-x = x + Math.sqrt(a**2-(200-y)**2);
+  xs = xs + xa;
+  x = x + xs;
 
-if(y>400){ys = -ys;
+if(y>400){ys=-ys;
 y=400
 };
-if(y<0){ys = -ys;
-y=0
+if(x>400){xs=-xs;
+x=400
 };
-
-if(x>400){xs = -xs;
-x = 400
-};
-if(x<0){xs = -xs;
-x = 0
-};
-
 
   fill(200,200,200);
   ellipse(x, y, diameter, diameter);
