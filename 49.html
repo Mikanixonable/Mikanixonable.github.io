@@ -8,19 +8,19 @@
 <script>
 let x =[];
 let xs = [];
-let n = 70;
+let n = 3;
 let diameter = 1;
 let sizex = window.innerWidth;
-let sizey = 	window.innerHeight;
+let sizey = window.innerHeight;
 let sun =[sizex/2,sizey/2]
 for (let i = 0; i < n; i++) {
   x.push(Math.random()*sizex);
   x.push(Math.random()*sizey);
 
-  s=(0.5-Math.random())/8;
+  s=0.5-Math.random();
   if(s**2<0.05){s=s*3};
   xs.push(s);
-  s=(0.5-Math.random())/8;
+  s=0.5-Math.random();
   if(s**2<0.05){s=s*3};
   xs.push(s);
 };
@@ -44,8 +44,8 @@ for(i=0;i<n;i++){
 
 r[i] = Math.sqrt((sun[0]-x[i*2])**2+(sun[1]-x[i*2+1])**2)
 
-xa[i*2] = (Math.sqrt(r[i]**2-(sun[1] - x[i*2+1])**2))/(r[i]**3)*10;
-xa[i*2+1] = (Math.sqrt(r[i]**2-(sun[0] - x[i*2])**2))/(r[i]**3)*10;
+xa[i*2] = (Math.sqrt(r[i]**2-(sun[1] - x[i*2+1])**2))/(r[i]**3)*100;
+xa[i*2+1] = (Math.sqrt(r[i]**2-(sun[0] - x[i*2])**2))/(r[i]**3)*100;
 if(x[i*2]>sun[0]){xa[i*2]=-xa[i*2]};
 if(x[i*2+1]>sun[1]){xa[i*2+1]=-xa[i*2+1]};
 
