@@ -7,21 +7,14 @@
 <body>
 
   <script>
-    function clickBtn1() {
-      let xa = document.getElementById("text1").value;
-      document.getElementById("span1").textContent = xa;
-    }
+    let x = 200;
+    let y = 100;
+    let diameter = 8;
+    let ys = 0;
+    let xs=0;
+    let ya = 0.1;
+    let xa=0.2;
 
-let x = 200;
-let y = 100;
-let diameter = 8;
-
-
-let ys = 0;
-let xs=0;
-
-let ya = 0.1;
-var xa=0.2;
 function setup() {
   createCanvas(400, 400);
   noStroke();
@@ -35,8 +28,8 @@ function draw() {
   ys = ys + ya;
   y = y + ys;
 
-  xs=xs+xa;
-  x=x+xs;
+  xs = xs + xa;
+  x = x + xs;
 
 if(y>400){ys=-ys;
 y=400
@@ -45,7 +38,6 @@ if(x>400){xs=-xs;
 x=400
 };
 
-  ys = ys * 1;
   fill(200,200,200);
   ellipse(x, y, diameter, diameter);
 }
