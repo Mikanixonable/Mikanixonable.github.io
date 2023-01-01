@@ -8,7 +8,6 @@
 <script>
 let n = 3;
 let j = 40 ;
-let w = 1 ;
 
 let col = [40,40,80];
 let cols =[250,250,100];
@@ -21,20 +20,26 @@ let sizex = window.innerWidth;
 let sizey = window.innerHeight;
 
 function ga(x1,y1,x2,y2){
-
 gravr=sqrt((x2-x1)**2+(y2-y1)**2)
 gravax=(Math.sqrt(gravr**2-(y2-y1)**2))/(gravr**3)
 gravay=(Math.sqrt(gravr**2-(x2-x1)**2))/(gravr**3)
 if(x2-x1<0){gravax=-gravax};
 if(y2-y1<0){gravay=-gravay};
 return [gravax*j,gravay*j] ;
-
 };
 
-for(let i = 0; i < 2*n; i++) {
-  x.push(Math.random()*200+200);
-  xs.push((0.5-Math.random())*w);
+
+for(let i = 0; i < n; i++) {
+  x.push(Math.random()*sizex);
+  x.push(Math.random()*sizey);
+
   xa.push(0);
+};
+for(let i = 0; i < n; i++) {
+
+  xs.push((0.5-Math.random()));
+  xs.push((0.5-Math.random()));
+
 };
 
 
@@ -42,7 +47,7 @@ function setup() {
   createCanvas(sizex, sizey);
   noStroke();
   background(col);
-}
+};
 
 function draw() {
 fill(col[0],col[1],col[2],2);
