@@ -9,7 +9,10 @@
 let n = 3;
 let j = 40 ;
 let w = 1 ;
+
 let col = [40,40,80];
+let cols =[250,250,100];
+
 let x = [];
 let xs = [];
 let xa = [];
@@ -24,8 +27,7 @@ gravax=(Math.sqrt(gravr**2-(y2-y1)**2))/(gravr**3)
 gravay=(Math.sqrt(gravr**2-(x2-x1)**2))/(gravr**3)
 if(x2-x1<0){gravax=-gravax};
 if(y2-y1<0){gravay=-gravay};
-gravArr =[gravax*j,gravay*j]
-return gravArr ;
+return [gravax*j,gravay*j] ;
 
 };
 
@@ -60,13 +62,11 @@ for(i=0;i<n;i++){
 
 for(i=0;i<2*n;i++){xs[i]=xs[i]+xa[i]};
 for(i=0;i<2*n;i++){x[i]=x[i]+xs[i]};
-fill(255,255,255);
 
-for(i=0;i<n;i++){ellipse(x[2*i], x[2*i+1], 1, 1);};
+fill(cols);
+for(i=0;i<n;i++){ellipse(x[2*i], x[2*i+1], 2, 2);};
 }
 
 </script>
-
-
 </body>
 </html>
