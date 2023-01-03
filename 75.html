@@ -10,29 +10,11 @@
   </head>
   <body>
 
-    <canvas id="canvas" width="640" height="480"></canvas>
+    <canvas id="canvas" width="300" height="150" ></canvas>
     <script>
+      var canvas = document.getElementById("canvas");
 
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    10
-    11
-    window.onload = function() {
-      const canvas001 = document.getElementById("canvas001");
-      if (canvas001.getContext) {
-        const context001 = canvas001.getContext("2d");//2次元描画
-        context001.beginPath();
-        context001.moveTo(10, 100);
-        context001.quadraticCurveTo(50, 50, 100, 100);
-        context001.quadraticCurveTo(150, 150, 200, 100);
-        context001.stroke();
-      }
-    };
+
     </script>
   </body>
 </html>
