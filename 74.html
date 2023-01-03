@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="file" onChange="imgPreView(event)">
+    <div id="preview"></div>
+<script>
+
+function imgPreView(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  var preview = document.getElementById("preview");
+  var previewImage = document.getElementById("previewImage");
+
+  if(previewImage != null) {
+    preview.removeChild(previewImage);
+  }
+  reader.onload = function(event) {
+    var img = document.createElement("img");
+    img.setAttribute("src", reader.result);
+    img.setAttribute("id", "previewImage");
+    preview.appendChild(img);
+  };
+
+  reader.readAsDataURL(file);
+}
+
+
+</script>
+  </body>
+</html>
