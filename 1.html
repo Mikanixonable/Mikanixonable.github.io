@@ -1,58 +1,15 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
+<html>
+<head>
+	<title>neu</title>
+</head>
+<body>
+	<div id="box"></div>
 
-    <style>
-      table,
-      td {
-        border: 1px solid #333;
-      }
-      thead,
-      tfoot {
-        background-color: #333;
-        color: #fff;
-      }
-    </style>
-
-
-    <meta charset="utf-8">
-    <title>site map</title>
-  </head>
-
-
-  <body>
-
-
-
-<script>
-document.write(document.title);
-
-let parser = new DOMParser();
-let doc = parser.parseFromString(html, '2.html');
-document.write(doc.title);
-
-
-
-</script>
-
-    <table>
-        <thead>
-            <tr>
-                <th colspan="2">.html</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="https://mikanixonable.github.io/1">1</a></td>
-                <td>with two columns</td>
-            </tr>
-            <tr>
-                <td>The table body</td>
-                <td>with two columns</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-  </body>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("#box").load("32.html");
+		});
+	</script>
+</body>
 </html>
