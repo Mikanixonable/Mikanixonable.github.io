@@ -1,62 +1,15 @@
-<!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+	<title>test</title>
 </head>
-
 <body>
-<script>
-let x =[];
-let xs = [];
-let n = 70;
-let diameter = 1;
-let size = 800;
+	<div id="box"></div>
 
-for (let i = 0; i < n*2; i++) {
-  x.push(Math.random()*size);
-  s=(0.5-Math.random())/8;
-  if(s**2<0.05){s=s*3};
-  xs.push(s);
-};
-
-let xa = new Array(2*n)
-let r = new Array(n)
-
-
-function setup() {
-  createCanvas(size, size);
-  noStroke();
-    background(70,100,200);
-}
-
-function draw() {
-fill(70,100,200,2);
-rect(0, 0, width, height);
-
-
-for(i=0;i<n;i++){
-
-r[i] = Math.sqrt((size/2-x[i*2])**2+(size/2-x[i*2+1])**2)
-
-xa[i*2] = (Math.sqrt(r[i]**2-(size/2 - x[i*2+1])**2))/(r[i]**3)*10;
-xa[i*2+1] = (Math.sqrt(r[i]**2-(size/2 - x[i*2])**2))/(r[i]**3)*10;
-if(x[i*2]>size/2){xa[i*2]=-xa[i*2]};
-if(x[i*2+1]>size/2){xa[i*2+1]=-xa[i*2+1]};
-
-};
-
-
-for(i=0;i<2*n;i++){xs[i]=xs[i]+xa[i]};
-for(i=0;i<2*n;i++){x[i]=x[i]+xs[i]};
-fill(255,255,255);
-
-for(i=0;i<n;i++){ellipse(x[2*i], x[2*i+1], diameter, diameter);};
-
-ellipse(size/2, size/2, 6, 6);
-}
-
-</script>
-
-
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			$("#box").load("32.html");
+		});
+	</script>
 </body>
 </html>
