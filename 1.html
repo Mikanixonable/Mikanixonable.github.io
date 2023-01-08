@@ -13,44 +13,36 @@
   </style>
 </head>
 <body>
-
-
-  <table>
-
-    <tr>
-        <td>1.html</td>
-        <td><a href="https://mikanixonable.github.io/1" id="1"></a></td>
-    </tr>
-
-    <tr>
-        <td>2.html</td>
-        <td><a href="https://mikanixonable.github.io/2" id="2"></a></td>
-
-    </tr>
-
-    <tr>
-        <td>3.html</td>
-        <td><a href="3.html" id="3"></a></td>
-
-    </tr>
-
-    <tr>
-        <td>4.html</td>
-        <td><a href="4.html" id="4"></a></td>
-    </tr>
-
-    <tr>
-        <td>5.html</td>
-        <td><a href="5.html" id="5"></a></td>
-    </tr>
-
-  </table>
-
-
 <div id="box"></div>
-
-
 <script>
+
+var table = document.createElement('table');
+
+for (var i = 1; i < 100; i++) {
+  var tr = document.createElement('tr');
+
+    var td1 = document.createElement('td');
+    td1.textContent = i + '.html';
+    tr.appendChild(td1);
+
+    var td2 = document.createElement('td');
+      var a = document.createElement("a");
+      a.href=i+".html";
+      a.id=i;
+      td2.appendChild(a);
+
+
+    tr.appendChild(td2);
+
+
+  table.appendChild(tr);
+  }
+
+document.getElementById('box').appendChild(table);
+
+
+
+
 function url(url,id){
   var box=document.getElementById(id);
 
@@ -60,15 +52,25 @@ function url(url,id){
     })
     .then(body => {
       var m = body.match(/<title>(.*)<\/title>/);
-      box.innerHTML=m[1];
-    });
+      if(!m){
+        box.innerHTML="無題"
+
+      }
+      else{
+       box.innerHTML=m[1];
+      };
+    })
+    .catch((reason) => {
+      box.innerHTML="-"
+    })
+
   };
 
-url("1.html","1")
-url("2.html","2")
-url("3.html","3")
-url("4.html","4")
-url("5.html","5")
+for (let step = 0; step < 100; step++) {
+  url(step+".html",step)
+  }
+
+
 
 </script>
 
