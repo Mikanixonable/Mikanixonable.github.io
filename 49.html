@@ -1,68 +1,139 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
-</head>
+<html lang="ja">
+  <head>
+    <title>サンプル</title>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 
-<body>
-<script>
-let x =[];
-let xs = [];
-let n = 3;
-let diameter = 1;
-let sizex = window.innerWidth;
-let sizey = window.innerHeight;
-let sun =[sizex/2,sizey/2]
-for (let i = 0; i < n; i++) {
-  x.push(Math.random()*sizex);
-  x.push(Math.random()*sizey);
+    <style>
+    div#paging
+    {
+      text-align: center;
+      /* スクロールに対してページングボックスの位置を固定 */
+      position: fixed;
+      /* 位置を指定 */
+      bottom: 0;
+      right:45%;
+    }
 
-  s=0.5-Math.random();
-  if(s**2<0.05){s=s*3};
-  xs.push(s);
-  s=0.5-Math.random();
-  if(s**2<0.05){s=s*3};
-  xs.push(s);
-};
+    div#pagingbox{
+      background: #FFF;
+    }
 
-let xa = new Array(2*n)
-let r = new Array(n)
+    th{
+      /* ヘッダ背景塗りつぶし */
+      background: #eee;
+    }
+   th,td {
+     /* 枠線を1本線指定 */
+      border: solid 1px;
+      width:auto;
+   }
 
+   table{
+     /* 枠線を1本線指定 */
+      border: solid 1px;
+      border-collapse:  collapse;
+      white-space: nowrap;
+    }
 
-function setup() {
-  createCanvas(sizex, sizey);
-  noStroke();
-    background(70,100,200);
-}
+    footer{
+      position: fixed;
+      width: 100%;
+      background-color: #C0C0C0;
+      padding: 15px 0;
+      bottom: 0; /*下に固定*/
+    }
+    </style>
 
-function draw() {
-fill(70,100,200,2);
-rect(0, 0, sizex, sizey);
-
-
-for(i=0;i<n;i++){
-
-r[i] = Math.sqrt((sun[0]-x[i*2])**2+(sun[1]-x[i*2+1])**2)
-
-xa[i*2] = (Math.sqrt(r[i]**2-(sun[1] - x[i*2+1])**2))/(r[i]**3)*100;
-xa[i*2+1] = (Math.sqrt(r[i]**2-(sun[0] - x[i*2])**2))/(r[i]**3)*100;
-if(x[i*2]>sun[0]){xa[i*2]=-xa[i*2]};
-if(x[i*2+1]>sun[1]){xa[i*2+1]=-xa[i*2+1]};
-
-};
+  </head>
 
 
-for(i=0;i<2*n;i++){xs[i]=xs[i]+xa[i]};
-for(i=0;i<2*n;i++){x[i]=x[i]+xs[i]};
-fill(255,255,255);
-
-for(i=0;i<n;i++){ellipse(x[2*i], x[2*i+1], diameter, diameter);};
-
-ellipse(sun[0], sun[1], 6, 6);
-}
-
-</script>
 
 
-</body>
+  <body>
+    <!--テーブル生成位置-->
+    <div id ='maintable'></div>
+
+
+
+    <!--ページングボタン配置-->
+    <footer>
+      <div id="paging">
+        <table>
+          <tr>
+            <tb><button id="prevbtn" type="button"><</button></tb>
+              <tb>
+                <span id="currentpage">currentpage</span>
+                  /
+                <span id="lastpage">lastpage</span>
+              </tb>
+            <tb><button id="nextbtn" type="button">></button></tb>
+          </tr>
+        </table>
+      </div>
+    </footer>
+
+
+    <script>
+      // table要素を生成
+      var table = document.createElement('table');
+      // tr部分のループ
+      for (var i = 0; i < 700; i++) {
+        // tr要素を生成
+        var tr = document.createElement('tr');
+        // th・td部分のループ
+        for (var j = 0; j < 50; j++) {
+            // 1行目のtr要素の時
+            if(i === 0) {
+              // th要素を生成
+              var th = document.createElement('th');
+              // th要素内にテキストを追加
+              th.textContent = i + '-' + j;
+              // th要素をtr要素の子要素に追加
+              tr.appendChild(th);
+            } else {
+              // td要素を生成
+              var td = document.createElement('td');
+              // td要素内にテキストを追加
+              td.textContent = i + '-' + j;
+              // td要素をtr要素の子要素に追加
+              tr.appendChild(td);
+            }
+        }
+        // tr要素をtable要素の子要素に追加
+        table.appendChild(tr);
+        }
+      // 生成したtable要素を追加する
+      document.getElementById('maintable').appendChild(table);
+    </script>
+
+
+    <script>// ページング機能
+    jQuery(function($) {
+      var page = 0;
+      var displayrows = 30;// １ページ当たり表示する行の数
+
+      function draw() {// ページの表示
+        $('#lastpage').html(Math.ceil(($('tr').size()-1)/displayrows));
+        $('#currentpage').html(page + 1);
+        $('tr').hide();
+        $('tr:first,tr:gt(' + page * displayrows + '):lt(' + displayrows + ')').show();// 変数を使用する場合は' +  + 'を忘れずに
+      }
+      $('#prevbtn').click(function() {// １ページ後進
+        if (page > 0) {
+          page--;
+          draw();
+        }
+      });
+      $('#nextbtn').click(function() {// １ページ前進
+        if (page < ($('tr').size() - 1) /displayrows - 1) {
+          page++;
+          draw();
+        }
+      });
+      draw();//初回表示
+    });
+    </script>
+  </body>
 </html>
