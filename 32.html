@@ -1,10 +1,63 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>#32</title>
-  </head>
-  <body>
-hogehoge
+<head>
+	<title>サイトマップ</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td {
+      padding: 5px;
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
 
-  </body>
+var table = document.createElement('table');
+
+for (var i = 1; i < 100; i++) {
+  var tr = document.createElement('tr');
+
+    var td1 = document.createElement('td');
+    td1.textContent = i + '.html';
+    tr.appendChild(td1);
+
+    var td2 = document.createElement('td');
+    td2.id=i
+    tr.appendChild(td2);
+
+
+  table.appendChild(tr);
+  }
+
+document.getElementById('box').appendChild(table);
+
+
+
+
+function url(url,id){
+  var box=document.getElementById(id);
+
+  fetch(url)
+    .then(response => {
+      return response.text();
+    })
+    .then(body => {
+      var m = body.match(/<title>(.*)<\/title>/);
+      box.innerHTML=m[1];
+    });
+  };
+
+for (let step = 0; step < 100; step++) {
+  url(step+".html",step)
+  }
+
+
+
+</script>
+
+</body>
 </html>
