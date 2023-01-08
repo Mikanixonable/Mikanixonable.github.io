@@ -1,15 +1,29 @@
 <html>
 <head>
-	<title>neu</title>
+	<title>サイトマップ</title>
 </head>
 <body>
-	<div id="box"></div>
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script>
-		$(function(){
-			$("#box").load("32.html");
-		});
-	</script>
+<div class="box">
+</div>
+  <script>
+  function url(url){
+
+    fetch(url)
+      .then(response => {
+        return response.text();
+      })
+      .then(body => {
+        var m = body.match(/<title>(.*)<\/title>/);
+        document.write(m[1]);
+      });
+
+  };
+
+  url("32.html")
+
+  </script>
+
+
 </body>
 </html>
