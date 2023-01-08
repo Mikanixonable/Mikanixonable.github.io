@@ -1,12 +1,13 @@
 <html>
 <head>
 	<title>サイトマップ</title>
+  <meta content="サイトマップです">
   <style>
     table {
       border-collapse: collapse;
       text-align: center;
     }
-    td {
+    th,td {
       padding: 5px;
       border: 1px solid #999;
     }
@@ -17,6 +18,18 @@
 <script>
 n=300
 var table = document.createElement('table');
+
+var tr = document.createElement('tr');
+  var th1 = document.createElement('th');
+  var th2 = document.createElement('th');
+  var th3 = document.createElement('th');
+  th1.textContent = "ファイル名";
+  th2.textContent = "リンク";
+  th3.textContent = "説明";
+  tr.appendChild(th1);
+  tr.appendChild(th2);
+  tr.appendChild(th3);
+table.appendChild(tr);
 
 for (var i = 1; i < n+1; i++) {
   var tr = document.createElement('tr');
@@ -55,7 +68,7 @@ function url(url,id,id2){
     })
     .then(body => {
       var title = body.match(/<title>(.*)<\/title>/);
-      var content = body.match(/content=\"(.*)\>/);
+      var content = body.match(/content=\"(.*)\">/);
 
       if(!title){
         box.innerHTML="無題"
@@ -74,7 +87,7 @@ function url(url,id,id2){
 
     .catch((reason) => {
       box.innerHTML="-"
-      box2.innerHTML="-"
+      box2.innerHTML=""
     })
 
   };
