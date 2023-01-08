@@ -15,10 +15,10 @@
 <body>
 <div id="box"></div>
 <script>
-
+n=300
 var table = document.createElement('table');
 
-for (var i = 1; i < 100; i++) {
+for (var i = 1; i < n+1; i++) {
   var tr = document.createElement('tr');
 
     var td1 = document.createElement('td');
@@ -30,9 +30,12 @@ for (var i = 1; i < 100; i++) {
       a.href=i+".html";
       a.id=i;
       td2.appendChild(a);
-
-
     tr.appendChild(td2);
+
+    var td3 = document.createElement('td');
+    td3.id="a"+i;
+
+    tr.appendChild(td3);
 
 
   table.appendChild(tr);
@@ -43,34 +46,42 @@ document.getElementById('box').appendChild(table);
 
 
 
-function url(url,id){
-  var box=document.getElementById(id);
-
+function url(url,id,id2){
+  var box = document.getElementById(id);
+  var box2 = document.getElementById(id2);
   fetch(url)
     .then(response => {
       return response.text();
     })
     .then(body => {
-      var m = body.match(/<title>(.*)<\/title>/);
-      if(!m){
-        box.innerHTML="無題"
+      var title = body.match(/<title>(.*)<\/title>/);
+      var content = body.match(/content=\"(.*)\>/);
 
-      }
-      else{
-       box.innerHTML=m[1];
-      };
-    })
+      if(!title){
+        box.innerHTML="無題"
+        }
+        else{
+         box.innerHTML=title[1];
+        };
+
+      if(!content){
+        box2.innerHTML=""
+        }
+        else{
+         box2.innerHTML=content[1];
+        };
+        })
+
     .catch((reason) => {
       box.innerHTML="-"
+      box2.innerHTML="-"
     })
 
   };
 
-for (let step = 0; step < 100; step++) {
-  url(step+".html",step)
-  }
-
-
+for (let step = 0; step < n+1; step++) {
+  url(step+".html",step,"a" + step)
+};
 
 </script>
 
