@@ -1,139 +1,77 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <title>サンプル</title>
-    <meta charset="utf-8">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
+		<title>創作文字ehtaplenのキーボード</title>
 
-    <style>
-    div#paging
-    {
-      text-align: center;
-      /* スクロールに対してページングボックスの位置を固定 */
-      position: fixed;
-      /* 位置を指定 */
-      bottom: 0;
-      right:45%;
-    }
+<style media="screen">
 
-    div#pagingbox{
-      background: #FFF;
-    }
+@font-face {
+font-family: 'ehtaplen';
+  src: url('ehtaplen.woff') format('woff');
+}
+body{
+  font-family: "ehtaplen";
 
-    th{
-      /* ヘッダ背景塗りつぶし */
-      background: #eee;
-    }
-   th,td {
-     /* 枠線を1本線指定 */
-      border: solid 1px;
-      width:auto;
-   }
+		display: flex;
+		background: #AAA;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 8%
+	}
 
-   table{
-     /* 枠線を1本線指定 */
-      border: solid 1px;
-      border-collapse:  collapse;
-      white-space: nowrap;
-    }
+	.display {
+	height: 200px;
+	width: 80%;
+	background: #FFF;
+	font-size: 40px;
+	text-align: center;
 
-    footer{
-      position: fixed;
-      width: 100%;
-      background-color: #C0C0C0;
-      padding: 15px 0;
-      bottom: 0; /*下に固定*/
-    }
-    </style>
+	}
 
-  </head>
+	.display p {
+	padding: 35px;
+	}
 
 
+	.input1{
+	border: 0px
+
+	}
+	.input1::placeholder {
+	  text-align: center;
+	}
+
+</style>
+
+</head>
+<body>
 
 
-  <body>
-    <!--テーブル生成位置-->
-    <div id ='maintable'></div>
+	<div class="display">
+<p id="out"></p>
+	</div>
+
+	<form name="form1" class="form1">
+	<input type="text" id="input1" value="" placeholder="enter" class="input1">
+	</form>
 
 
+<script>
+const i = document.forms.form1.input1;
+i.addEventListener('input',()=>{
+  let display  = document.getElementById('out');
+	var str = i.value
+str = str.replace(/ya/g, '󰘅')
+str = str.replace(/ye/g, '󰘆')
+str = str.replace(/a/g, '󰘀')
+str = str.replace(/e/g, '󰘁')
+str = str.replace(/i/g, '󰘂')
+str = str.replace(/o/g, '󰘃')
+str = str.replace(/u/g, '󰘃')
 
-    <!--ページングボタン配置-->
-    <footer>
-      <div id="paging">
-        <table>
-          <tr>
-            <tb><button id="prevbtn" type="button"><</button></tb>
-              <tb>
-                <span id="currentpage">currentpage</span>
-                  /
-                <span id="lastpage">lastpage</span>
-              </tb>
-            <tb><button id="nextbtn" type="button">></button></tb>
-          </tr>
-        </table>
-      </div>
-    </footer>
-
-
-    <script>
-      // table要素を生成
-      var table = document.createElement('table');
-      // tr部分のループ
-      for (var i = 0; i < 700; i++) {
-        // tr要素を生成
-        var tr = document.createElement('tr');
-        // th・td部分のループ
-        for (var j = 0; j < 50; j++) {
-            // 1行目のtr要素の時
-            if(i === 0) {
-              // th要素を生成
-              var th = document.createElement('th');
-              // th要素内にテキストを追加
-              th.textContent = i + '-' + j;
-              // th要素をtr要素の子要素に追加
-              tr.appendChild(th);
-            } else {
-              // td要素を生成
-              var td = document.createElement('td');
-              // td要素内にテキストを追加
-              td.textContent = i + '-' + j;
-              // td要素をtr要素の子要素に追加
-              tr.appendChild(td);
-            }
-        }
-        // tr要素をtable要素の子要素に追加
-        table.appendChild(tr);
-        }
-      // 生成したtable要素を追加する
-      document.getElementById('maintable').appendChild(table);
-    </script>
-
-
-    <script>// ページング機能
-    jQuery(function($) {
-      var page = 0;
-      var displayrows = 30;// １ページ当たり表示する行の数
-
-      function draw() {// ページの表示
-        $('#lastpage').html(Math.ceil(($('tr').size()-1)/displayrows));
-        $('#currentpage').html(page + 1);
-        $('tr').hide();
-        $('tr:first,tr:gt(' + page * displayrows + '):lt(' + displayrows + ')').show();// 変数を使用する場合は' +  + 'を忘れずに
-      }
-      $('#prevbtn').click(function() {// １ページ後進
-        if (page > 0) {
-          page--;
-          draw();
-        }
-      });
-      $('#nextbtn').click(function() {// １ページ前進
-        if (page < ($('tr').size() - 1) /displayrows - 1) {
-          page++;
-          draw();
-        }
-      });
-      draw();//初回表示
-    });
-    </script>
-  </body>
+	display.textContent = str });
+</script>
+	</body>
 </html>

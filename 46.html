@@ -1,24 +1,78 @@
-<html>
-<head>
-	<title>test</title>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+	<head>
+		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
+		<title>創作文字ehtaplenのキーボード</title>
+
+<style media="screen">
+
+@font-face {
+font-family: 'ehtaplen';
+  src: url('ehtaplen.woff') format('woff');
+}
+body{
+  font-family: "ehtaplen";
+
+		display: flex;
+		background: #AAA;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 8%
+	}
+
+	.display {
+	color: #4AA;
+	height: 200px;
+	width: 80%;
+	background: #FFF;
+	font-size: 40px;
+	text-align: center;
+
+	}
+
+	.display p {
+	padding: 35px;
+	}
+
+
+	.input1{
+	border: 0px
+
+	}
+	.input1::placeholder {
+	  text-align: center;
+	}
+
+</style>
+
 </head>
 <body>
-	<div id="box"></div>
 
-  <script>
-  	var xhr = new XMLHttpRequest(),
-  		method = "GET",
-  		url = "32.html";//読み込まれるHTMLを指定
-  	var box=document.getElementById("box");//読み込みたい位置を指定
 
-  	xhr.open(method, url, true);
-  	xhr.onreadystatechange = function () {
-  		if(xhr.readyState === 4 && xhr.status === 200) {
-  			var restxt=xhr.responseText;//String型で取得
-  			box.innerHTML=restxt;//完了
-  		}
-  	};
-  	xhr.send();
-  </script>
-</body>
+	<div class="display">
+<p id="out"></p>
+	</div>
+
+	<form name="form1" class="form1">
+	<input type="text" id="input1" value="" placeholder="enter" class="input1">
+	</form>
+
+
+<script>
+const i = document.forms.form1.input1;
+i.addEventListener('input',()=>{
+  let display  = document.getElementById('out');
+	var str = i.value
+str = str.replace(/ya/g, '󰘅')
+str = str.replace(/ye/g, '󰘆')
+str = str.replace(/a/g, '󰘀')
+str = str.replace(/e/g, '󰘁')
+str = str.replace(/i/g, '󰘂')
+str = str.replace(/o/g, '󰘃')
+str = str.replace(/u/g, '󰘃')
+
+	display.textContent = str });
+</script>
+	</body>
 </html>
