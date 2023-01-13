@@ -68,7 +68,7 @@ function url(url,id,id2){
     })
     .then(body => {
       var title = body.match(/<title>(.*)<\/title>/);
-      var content = body.match(/content=\"(.*)\">/);
+      var content = body.match(/content=\"(.*)\"/);
 
       if(!title){
         box.innerHTML=url
