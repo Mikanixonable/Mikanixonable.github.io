@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 	<head>
-		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
-		<title>創作文字ehtaplenのキーボード</title>
+		<meta charset="utf-8" content="異世界明朝比較ページ">
+		<title>異世界明朝比較ページ</title>
 
 <style media="screen">
 
 @font-face {
-font-family: 'ehtaplen';
-  src: url('IsekaiMincho2.woff') format('woff');
+font-family: 'imincho';
+  src: url('IsekaiMincho.woff') format('woff');
 }
 @font-face {
 font-family: 'mincho';
   src: url('SourceHanSerif-Bold.woff') format('woff');
 }
 body{
-  font-family: "ehtaplen","mincho","sans-serif";
+  font-family: "imincho","mincho","sans-serif";
 
 		display: flex;
 		background: #AAA;
@@ -26,11 +26,11 @@ body{
 	}
 
 	.display {
-	color: #7CA;
+	color: #267;
 	height: 400px;
 	width: 80%;
 	background: #FFF;
-	font-size: 120px;
+	font-size: 40px;
 	text-align: center;
 
 	}
@@ -48,6 +48,12 @@ body{
 	  text-align: center;
 	}
 
+	.out1{
+		font-family: "imincho","mincho","sans-serif";
+	}
+	.out2{
+		font-family: "mincho","sans-serif";
+	}
 </style>
 
 </head>
@@ -55,7 +61,8 @@ body{
 
 
 	<div class="display">
-<p id="out"></p>
+<p id="out1" class="out1"></p>
+<p id="out2" class="out2"></p>
 	</div>
 
 	<form name="form1" class="form1">
@@ -66,35 +73,15 @@ body{
 <script>
 const i = document.forms.form1.input1;
 i.addEventListener('input',()=>{
-  let display  = document.getElementById('out');
 	var str = i.value
 
-str = str.replace(/ya/g,"\u{f0605}")
-str = str.replace(/ye/g,"\u{f0606}")
-str = str.replace(/yo/g,"\u{f0607}")
-str = str.replace(/yu/g,"\u{f0608}")
+  let display1  = document.getElementById('out1');
+	let display2  = document.getElementById('out2');
 
-str = str.replace(/pa/g,"\u{f0609}")
-str = str.replace(/pe/g,"\u{f060A}")
-str = str.replace(/pi/g,"\u{f060B}")
-str = str.replace(/po/g,"\u{f060C}")
-str = str.replace(/pu/g,"\u{f060D}")
+	display1.textContent = str
+	display2.textContent = str
+});
 
-str = str.replace(/ta/g,"\u{f060E}")
-str = str.replace(/te/g,"\u{f060F}")
-str = str.replace(/ti/g,"\u{f0610}")
-str = str.replace(/to/g,"\u{f0611}")
-str = str.replace(/tu/g,"\u{f0612}")
-
-str = str.replace(/a/g,"\u{f0600}")
-str = str.replace(/e/g,"\u{f0601}")
-str = str.replace(/i/g,"\u{f0602}")
-str = str.replace(/o/g,"\u{f0603}")
-str = str.replace(/u/g,"\u{f0604}")
-
-
-
-	display.textContent = str });
 </script>
 	</body>
 </html>
