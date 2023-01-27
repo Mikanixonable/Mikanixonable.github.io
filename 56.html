@@ -8,7 +8,11 @@
 
 @font-face {
 font-family: 'imincho';
-  src: url('IsekaiMincho.woff') format('woff');
+  src: url('IgyouMincho.woff') format('woff');
+}
+@font-face {
+font-family: 'imincho2';
+  src: url('IgyouMincho2.woff') format('woff');
 }
 @font-face {
 font-family: 'mincho';
@@ -27,7 +31,7 @@ body{
 
 	.display {
 	color: #267;
-	height: 400px;
+	height: 500px;
 	width: 80%;
 	background: #FFF;
 	font-size: 40px;
@@ -36,7 +40,7 @@ body{
 	}
 
 	.display p {
-	padding: 35px;
+	padding: 2px;
 	}
 
 
@@ -48,11 +52,14 @@ body{
 	  text-align: center;
 	}
 
-	.out1{
-		font-family: "imincho","mincho","sans-serif";
-	}
 	.out2{
+		font-family: "imincho2","mincho","sans-serif";
+	}
+	.out1{
 		font-family: "mincho","sans-serif";
+	}
+	.out3{
+		font-family: "imincho","sans-serif";
 	}
 </style>
 
@@ -63,10 +70,11 @@ body{
 	<div class="display">
 <p id="out1" class="out1"></p>
 <p id="out2" class="out2"></p>
+<p id="out3" class="out3"></p>
 	</div>
 
 	<form name="form1" class="form1">
-	<input type="text" id="input1" value="" placeholder="enter" class="input1">
+	<input type="text" id="input1" value="愛のあるユニークで豊かな書体" placeholder="enter" class="input1">
 	</form>
 
 
@@ -77,9 +85,11 @@ i.addEventListener('input',()=>{
 
   let display1  = document.getElementById('out1');
 	let display2  = document.getElementById('out2');
+	let display3  = document.getElementById('out3');
 
 	display1.textContent = str
 	display2.textContent = str
+	display3.textContent = str
 });
 
 </script>
