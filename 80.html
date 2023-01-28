@@ -26,11 +26,18 @@ body{
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
 
   </head>
 <body>
+
+  <p>
+  <textarea cols=60 rows=4 id="eingabe">function x(t) {return Math.cos(t); };
+function y(t) {return Math.sin(t); };</textarea><br />
+  <input type="button" value="plot" onClick="plot()">
+  <input type="button" value="clear all" onClick="clearAll()">
+</p>
+
 <div class="graph-wrap">
   <!-- グラフの出力先(JSXGraph用) -->
   <div id="jxgbox" class="graph"></div>
@@ -39,46 +46,29 @@ body{
 
 <script type="text/javascript">
 
-let board = JXG.JSXGraph.initBoard('jxgbox', {
-boundingbox: [ -0.2, 1.2, 1.2, -0.4],  // 領域の座標[左、上、右、下]
-axis: true,  // 軸を表示する
-showNavigation: false,  // ナビゲーションボタンを表示しない
-showCopyright: false    // コピーライト文字列を表示しない
-});
-
-
-//軸ラベル
-const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
-board.create('text', [1.05, 0.08, 'x'],
-{ fontSize: 16, cssStyle: text_css });
-board.create('text', [0.05, 1.05, 'y'],
-{ fontSize: 16, cssStyle: text_css });
-
-
-//スライダー
-let slider = board.create('slider', [[0.2, -0.2], [0.8, -0.2], [0, 1/2, 1] ], {name: 'p'});
-slider.on('drag', function(e) {
-console.log('p=' + this.Value());
-});
-
-
-//グラフ1
-function f(x) {
-const p = slider.Value();
-return Math.sin(10*x*p);
+let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-5,5,5,-5]});
+var a = board.create('slider', [[0,-1],[3,-1],[-4*Math.PI,0,0]], {style:6, name:'a'});
+var b = board.create('slider', [[0,-2],[3,-2],[0,1,4*Math.PI]], {style:6, name:'b'});
+function plot(){
+  eval(document.getElementById("eingabe").value);
+  graph = board.create('curve', [
+            x,y,
+            function(){return a.Value();},
+            function(){return b.Value();}
+            ],
+            {strokeColor:'red', strokeWidth:2}
+          );
+  board.update();
 }
 
+function clearAll() {
+  JXG.JSXGraph.freeBoard(board);
+  board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox: [-5, 5, 5, -5]});
+  a = board.create('slider', [[0,-1],[3,-1],[-4*Math.PI,0,0]], {style:6, name:'a'});
+  b = board.create('slider', [[0,-2],[3,-2],[0,1,4*Math.PI]], {style:6, name:'b'});
+}
 
-function g(t) {
-return Math.cos(t);
-};
-function h(t) {
-return Math.sin(t);
-};
-
-graph = board.create('functiongraph', [f, 0, 1]);
-graph = board.create('curve', [x,y,g,h],{strokeColor:'red', strokeWidth:2});
-
+plot();
 </script>
 
 
