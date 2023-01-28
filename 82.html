@@ -14,8 +14,8 @@
   }
 
   .graph-wrap {
-  width: 30em;
-  height: 30em;
+  width: 40em;
+  height: 40em;
   background-color: #EEE;
   }
 
@@ -35,7 +35,7 @@
 
 <script type="text/javascript">
 
-let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-5,5,5,-5]});
+let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-2,2,2,-2]});
 
 n=30;
 
@@ -59,7 +59,7 @@ return y;
 
 graph = board.create('curve',
   [fx,fy,0,Math.PI*2],
-  {strokeColor:'black', strokeWidth:2}
+  {strokeColor:'black', strokeWidth:1}
 );
 
 board.update();
