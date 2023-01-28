@@ -35,20 +35,30 @@
 
 <script type="text/javascript">
 
-let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-5,5,5,-5]});
-n=3
+let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-2,2,2,-2]});
+
+n=30;
+
 function plot(){
 
-function x(t) {
-return Math.cos(t)
+function fx(t) {
+var x = 0;
+for (let step = 1; step < n+1; step++) {
+x+=Math.cos(t*step**2)/step**2
+}
+return x;
 }
 
-function y(t) {
-return Math.sin(t)
+function fy(t) {
+var y = 0;
+for (let step = 1; step < n+1; step++) {
+y+=Math.sin(t*step**2)/step**2
+}
+return y;
 }
 
 graph = board.create('curve',
-  [x,y,0,Math.PI*2],
+  [fx,fy,0,Math.PI*2],
   {strokeColor:'black', strokeWidth:2}
 );
 
