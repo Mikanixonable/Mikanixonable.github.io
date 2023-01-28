@@ -39,20 +39,20 @@ body{
 
 <script type="text/javascript">
 
-  let board = JXG.JSXGraph.initBoard('plot', {
-  boundingbox: [ -0.2, 1.2, 1.2, -0.4],  // 領域の座標[左、上、右、下]
-  axis: true,  // 軸を表示する
-  showNavigation: false,  // ナビゲーションボタンを表示しない
-  showCopyright: false    // コピーライト文字列を表示しない
-  });
+let board = JXG.JSXGraph.initBoard('plot', {
+boundingbox: [ -0.2, 1.2, 1.2, -0.4],  // 領域の座標[左、上、右、下]
+axis: true,  // 軸を表示する
+showNavigation: false,  // ナビゲーションボタンを表示しない
+showCopyright: false    // コピーライト文字列を表示しない
+});
 
-  //軸ラベル
+
+//軸ラベル
 const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
 board.create('text', [1.05, 0.08, 'x'],
 { fontSize: 16, cssStyle: text_css });
 board.create('text', [0.05, 1.05, 'y'],
 { fontSize: 16, cssStyle: text_css });
-
 
 
 //スライダー
@@ -61,14 +61,34 @@ slider.on('drag', function(e) {
 console.log('p=' + this.Value());
 });
 
-//グラフ2
-function parameterized(x) {
+
+//グラフ1
+function f(x) {
 const p = slider.Value();
-return x**p / (x**p + (1 - x)**p);
+return Math.sin(10*x*p);
+}
+function g(x) {
+const p = slider.Value();
+return Math.sin(1*x*p);
 }
 
-graph = board.create('functiongraph', [parameterized, 0, 1]);
 
+a = board.create('slider', [[0,-1],[3,-1],[-4*Math.PI,0,0]], {style:6, name:'a'});
+b = board.create('slider', [[0,-2],[3,-2],[0,1,4*Math.PI]], {style:6, name:'b'});
+function plot(){
+
+  graph = board.create('curve', [
+            x,y,
+            function(){return a.Value();},
+            function(){return b.Value();}
+            ],
+            {strokeColor:'red', strokeWidth:2}
+          );
+  board.update();
+}
+
+graph = board.create('functiongraph', [f, 0, 1]);
+graph = board.create('functiongraph', [plot, 0, 1]);
 
 </script>
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>フラクタル</title>
+
+<style media="screen">
+body{
+		display: flex;
+		background: #456;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+	}
+
+  .graph-wrap {
+    width: 30em;
+    height: 30em;
+    background-color: #EEE;
+  }
+
+  .graph {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
+
+  </head>
+<body>
+
+  <p>
+  <textarea cols=60 rows=4 id="eingabe">function x(t) {return Math.cos(t); };
+function y(t) {return Math.sin(t); };</textarea><br />
+  <input type="button" value="plot" onClick="plot()">
+  <input type="button" value="clear all" onClick="clearAll()">
+</p>
+
+<div class="graph-wrap">
+  <!-- グラフの出力先(JSXGraph用) -->
+  <div id="jxgbox" class="graph"></div>
+
+</div>
+
+<script type="text/javascript">
+
+let board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox:[-5,5,5,-5]});
+var a = board.create('slider', [[0,-1],[3,-1],[-4*Math.PI,0,0]], {style:6, name:'a'});
+var b = board.create('slider', [[0,-2],[3,-2],[0,1,4*Math.PI]], {style:6, name:'b'});
+function plot(){
+  eval(document.getElementById("eingabe").value);
+  graph = board.create('curve', [
+            x,y,
+            function(){return a.Value();},
+            function(){return b.Value();}
+            ],
+            {strokeColor:'red', strokeWidth:2}
+          );
+  board.update();
+}
+
+function clearAll() {
+  JXG.JSXGraph.freeBoard(board);
+  board = JXG.JSXGraph.initBoard('jxgbox', {axis:true, boundingbox: [-5, 5, 5, -5]});
+  a = board.create('slider', [[0,-1],[3,-1],[-4*Math.PI,0,0]], {style:6, name:'a'});
+  b = board.create('slider', [[0,-2],[3,-2],[0,1,4*Math.PI]], {style:6, name:'b'});
+}
+
+plot();
+</script>
+
+
+</body>
+</html>
