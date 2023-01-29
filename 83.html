@@ -1,36 +1,13 @@
-<html>
-<header>
-
-<style media="screen">
-</style>
-
-</header>
-<body>
-  <p>
-		<input id="slider" type="range" min="0" max="100" value="50" step="5" class="slider">
-		<span id="sliderValue"></span>
-    <script>
-      let slider = null;
-      let sliderValue = null;
-
-      // スライダー値を取得して表示
-      const setValue = ()=> {
-      const value = slider.value;
-      sliderValue.textContent = value;
-      }
-      // 起動時の処理
-      window.addEventListener("load", ()=>{
-      // スライダー、スライダー値DOM
-      slider = document.getElementById("slider");
-      sliderValue = document.getElementById("sliderValue");
-      // スライドさせたときの処理
-      slider.addEventListener("input", setValue);
-      // スライダー初期値を表示
-      setValue();
-      });
-    </script>
-	</p>
-</body>
-
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>#83 数学小部屋</title>
+  </head>
+  <body>
+    <h1>#83 数学小部屋</h1>
+    <p><a href="80.html">#80 フラクタル1</a> リーマン関数のフラクタルがあります</p>
+    <p><a href="81.html">#81 フラクタル2</a> リーマン関数のフラクタルがあります</p>
+    <p><a href="82.html">#82 フラクタル3</a> 調整バー付き</p>
+  </body>
 </html>
