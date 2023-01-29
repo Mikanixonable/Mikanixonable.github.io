@@ -60,7 +60,7 @@
 
 
 <script type="text/javascript">
-
+const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
 
 
 let board = JXG.JSXGraph.initBoard('jxgbox', {
@@ -70,17 +70,47 @@ showNavigation: false,  // ナビゲーションボタンを表示しない
 showCopyright: false    // コピーライト文字列を表示しない
 });
 
+
+
+
+
+
+
 //軸
 var l1 = board.create('axis', [[0.0, 0.0], [1.0, 0]],{
 strokeColor: '#DDD',
 highlight: false,
-color: '#DDD',
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
+  },
+},
 });
 
 var l2 = board.create('axis', [[0.0, 0.0], [0, 1]],{
 strokeColor: '#DDD',
 highlight: false,
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
+
+  },
+},
 });
+
+//軸の名前
+
+board.create('text', [1.9, 0.08, 'x'],
+{ fontSize: 16,
+  cssStyle: text_css,
+strokeColor: '#DDD',
+});
+board.create('text', [0.05, 1.9, 'y'],
+{ fontSize: 16, cssStyle: text_css, strokeColor: '#DDD',});
+
+
 
 //スライダー
 let slider1 = board.create('slider', [[0.1, 1.8], [1.6, 1.8], [1, 10, 50] ], {
@@ -90,7 +120,10 @@ let slider1 = board.create('slider', [[0.1, 1.8], [1.6, 1.8], [1, 10, 50] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 0,
-  fillColor: '#567'
+  fillColor: '#567',
+  ticks: {
+    strokeColor: '#DDD',
+  },
 });
 slider1.on('drag', function(e) {
 console.log('n=' + this.Value());
@@ -105,7 +138,10 @@ let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 1,
-  fillColor: '#567'
+  fillColor: '#567',
+  ticks: {
+    strokeColor: '#DDD',
+  },
 });
 slider2.on('drag', function(e) {
 console.log('m=' + this.Value());
@@ -120,7 +156,10 @@ let slider3 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 2,
-  fillColor: '#567'
+  fillColor: '#567',
+  ticks: {
+    strokeColor: '#DDD',
+  },
 });
 slider3.on('drag', function(e) {
 console.log('m=' + this.Value());
@@ -163,11 +202,7 @@ function plot(){
   board.update();
 }
 
-const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
-board.create('text', [1.9, 0.08, 'x'],
-{ fontSize: 16, cssStyle: text_css});
-board.create('text', [0.05, 1.9, 'y'],
-{ fontSize: 16, cssStyle: text_css });
+
 
 
 
