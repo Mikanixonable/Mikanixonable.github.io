@@ -20,9 +20,13 @@
   color: #DDD;
   }
 
+  .formula{
+    font-size: 1.5em;
+  }
+
   .graph-wrap {
-  width: 50em;
-  height: 50em;
+  width: 60em;
+  height: 60em;
   }
 
   .graph {
@@ -42,7 +46,7 @@
 </head>
 
 <body>
-  <p style="color: #DDD">$\displaystyle
+  <p class='formula'>$\displaystyle
     x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi t (k+l)^m)}}{(k+l)^m}
     \qquad
     y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t (k+l)^m)}}{(k+l)^m}
@@ -201,11 +205,6 @@ function plot(){
 
   board.update();
 }
-
-
-
-
-
 
 
 plot();
