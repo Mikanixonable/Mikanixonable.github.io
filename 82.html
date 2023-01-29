@@ -47,7 +47,7 @@
     \qquad
     y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t (k+l)^m)}}{(k+l)^m}
   $</p>
-
+<p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
   <div class="graph-wrap">
     <div id="jxgbox" class="graph"></div>
   </div>
@@ -97,7 +97,7 @@ console.log('n=' + this.Value());
 n = slider1.Value();
 });
 
-let slider2 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 2, 11] ], {
+let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
   name: 'm',
   snapWidth: 0.1,
   baseline: { strokeColor: '#DDD'},
@@ -112,7 +112,7 @@ console.log('m=' + this.Value());
 m = slider2.Value();
 });
 
-let slider3 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 0, 3] ], {
+let slider3 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
   name: 'l',
   snapWidth: 1,
   baseline: { strokeColor: '#DDD'},
