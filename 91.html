@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        display: flex;
+        background: #c3cfe2;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        color: #DDD;
+      }
+      canvas{
+        background: #89A;
+      }
+    </style>
+  </head>
+  <body>
+  <canvas id="drawable" width="800" height="800"></canvas>
+  </body>
+  <script>
+      function drawMandelbrotSet(imageData) {
+          var minReal = -2.0;
+          var maxReal = +1.0;
+          var minImag = -1.5;
+          var maxImag = +1.5;
+
+          for(var y = 0; y < imageData.height; y++) {
+              for(var x = 0; x < imageData.width; x++) {
+                  var zReal = 0.0;
+                  var zImag = 0.0;
+                  var cReal = (maxReal - minReal) / imageData.width * x + minReal;
+                  var cImag = (maxImag - minImag) / imageData.height * y + minImag;
+                  setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag);
+              }
+          }
+      }
+
+      function drawJuliaSet(imageData) {
+          var minReal = -1.5;
+          var maxReal = +1.5;
+          var minImag = -1.5;
+          var maxImag = +1.5;
+
+          for(var y = 0; y < imageData.height; y++) {
+              for(var x = 0; x < imageData.width; x++) {
+                  var zReal = (maxReal - minReal) / imageData.width * x + minReal;
+                  var zImag = (maxImag - minImag) / imageData.height * y + minImag;
+                  var cReal = 0.3;
+                  var cImag = 0.5;
+                  setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag);
+              }
+          }
+      }
+
+      function setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag) {
+          for(var i = 0; i < 100; i++) {
+              if(zReal * zReal + zImag * zImag >= 4) {
+                  imageData.data[(y * imageData.width + x) * 4 + 0] = i * 10 % 256;
+                  imageData.data[(y * imageData.width + x) * 4 + 1] = i * 20 % 256;
+                  imageData.data[(y * imageData.width + x) * 4 + 2] = i * 30 % 256;
+                  imageData.data[(y * imageData.width + x) * 4 + 3] = 0xFF;
+                  return;
+              }
+
+              var real = zReal * zReal - zImag * zImag + cReal;
+              var imag = 2 * zReal * zImag + cImag;
+              zReal = real;
+              zImag = imag;
+          }
+
+          imageData.data[(y * imageData.width + x) * 4 + 0] = 0x00;
+          imageData.data[(y * imageData.width + x) * 4 + 1] = 0x00;
+          imageData.data[(y * imageData.width + x) * 4 + 2] = 0x00;
+          imageData.data[(y * imageData.width + x) * 4 + 3] = 0xFF;
+      }
+
+      var canvas = document.getElementById("drawable");
+      var context = canvas.getContext("2d");
+      var imageData = context.getImageData(0, 0, canvas.width, canvas.height)
+
+      // マンデルブロー集合を描く.
+      drawMandelbrotSet(imageData);
+
+      // ジュリア集合を描く.
+      // drawJuliaSet(imageData);
+
+      context.putImageData(imageData, 0, 0);
+  </script>
+</html>

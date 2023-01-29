@@ -48,9 +48,9 @@
 <body>
   <!--式-->
   <p class='formula'>$\displaystyle
-    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi (k+l)^m t)}}{(k+l)^m}
+    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi (k+m)^l t)}}{(k+m)^l}
     \qquad
-    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi (k+l)^m t )}}{(k+l)^m}
+    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi (k+m)^l t )}}{(k+m)^l}\times(1-2key)^k \quad (key=0,1)
   $</p>
 
 <p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
@@ -130,14 +130,32 @@ let slider1 = board.create('slider', [[0.1, 1.8], [1.6, 1.8], [1, 10, 50] ], {
   precision: 0,
   fillColor: '#567',
   withTicks: false,
+  size: 10,
 });
 slider1.on('drag', function(e) {
 console.log('n=' + this.Value());
 n = slider1.Value();
 });
 
-let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
+let slider2 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
   name: 'm',
+  snapWidth: 0.25,
+  baseline: { strokeColor: '#DDD'},
+  highline: { strokeColor: '#DDD'},
+  strokeColor: '#DDD',
+  label: {fontSize: 15, strokeColor: '#DDD'},
+  precision: 2,
+  fillColor: '#567',
+  withTicks: false,
+  size: 10,
+});
+slider2.on('drag', function(e) {
+console.log('m=' + this.Value());
+m = slider2.Value();
+});
+
+let slider3 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
+  name: 'l',
   snapWidth: 0.1,
   baseline: { strokeColor: '#DDD'},
   highline: { strokeColor: '#DDD'},
@@ -146,40 +164,40 @@ let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
   precision: 1,
   fillColor: '#567',
   withTicks: false,
+  size: 10,
 });
-slider2.on('drag', function(e) {
+slider3.on('drag', function(e) {
 console.log('m=' + this.Value());
-m = slider2.Value();
+l = slider3.Value();
 });
 
-let slider3 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
-  name: 'l',
+let slider4 = board.create('slider', [[1.4, 1.2], [1.6, 1.2], [0, 0, 1] ], {
+  name: 'key',
   snapWidth: 1,
   baseline: { strokeColor: '#DDD'},
   highline: { strokeColor: '#DDD'},
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
-  precision: 2,
+  precision: 1,
   fillColor: '#567',
   withTicks: false,
+  size: 10,
 });
-slider3.on('drag', function(e) {
+slider4.on('drag', function(e) {
 console.log('m=' + this.Value());
-l = slider3.Value();
-
+key = slider4.Value();
 });
-
-
 
 //グラフ
 var n = 10;
-var m = 2;
-var l = 0;
+var m = 0;
+var l = 2;
+var key = 0;
 function plot(){
   function fx(t) {
     var x = 0;
     for (let k = 1; k < n+1; k++) {
-      x+=Math.cos(t*(k+l)**m)/(k+l)**m
+      x+=(Math.cos(t*(k+m)**l)/(k+m)**l)*(1-2*key)**k
     }
     return x;
   }
@@ -187,7 +205,7 @@ function plot(){
   function fy(t) {
     var y = 0;
     for (let k = 1; k < n+1; k++) {
-      y+=Math.sin((t)*(k+l)**m)/(k+l)**m
+      y+=(Math.sin((t)*(k+m)**l)/(k+m)**l)
     }
     return y;
   }
