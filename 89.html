@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>GRAYCODE JavaScript</title>
+	<script>
+		window.addEventListener('load', function(){
+
+			// フルスクリーン表示
+			document.getElementById('button1').addEventListener('click', function(){
+				document.body.requestFullscreen();
+			});
+
+			// フルスクリーン解除
+			document.getElementById('button2').addEventListener('click', function(){
+				document.exitFullscreen();
+			});
+		});
+	</script>
+</head>
+<body>
+<h1>JavaScriptレシピ</h1>
+<button id="button1">フルスクリーン表示</button>
+<button id="button2">解除</button>
+</body>
+</html>
