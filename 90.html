@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta property="og:url" content="Mikanixonable.github.io">
-  <meta property="og:title" content="リーマン関数フラクタル3">
-  <meta property="og:description" content="JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き">
+  <meta property="og:title" content="リーマン関数フラクタル1">
+  <meta property="og:description" content="かなりきれい">
   <meta property="og:type" content="article">
   <meta property="og:image" content="ogp/85.png">
   <title>フラクタル</title>
@@ -20,13 +20,9 @@
   color: #DDD;
   }
 
-  .formula{
-    font-size: 1.5em;
-  }
-
   .graph-wrap {
-  width: 60em;
-  height: 60em;
+  width: 50em;
+  height: 50em;
   }
 
   .graph {
@@ -46,21 +42,17 @@
 </head>
 
 <body>
-  <!--式-->
-  <p class='formula'>$\displaystyle
-    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi (k+l)^m t)}}{(k+l)^m}
+  <p style="color: #DDD">$\displaystyle
+    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi t (k+l)^m)}}{(k+l)^m}
     \qquad
-    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi (k+l)^m t )}}{(k+l)^m}
+    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t (k+l)^m)}}{(k+l)^m}
   $</p>
-
 <p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
-
-<!--グラフ-->
   <div class="graph-wrap">
     <div id="jxgbox" class="graph"></div>
   </div>
 
-<!--リンク-->
+
 
 
 </body>
@@ -128,8 +120,7 @@ let slider1 = board.create('slider', [[0.1, 1.8], [1.6, 1.8], [1, 10, 50] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 0,
-  fillColor: '#567',
-  withTicks: false,
+  fillColor: '#567'
 });
 slider1.on('drag', function(e) {
 console.log('n=' + this.Value());
@@ -144,8 +135,7 @@ let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 1,
-  fillColor: '#567',
-  withTicks: false,
+  fillColor: '#567'
 });
 slider2.on('drag', function(e) {
 console.log('m=' + this.Value());
@@ -160,8 +150,7 @@ let slider3 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 2,
-  fillColor: '#567',
-  withTicks: false,
+  fillColor: '#567'
 });
 slider3.on('drag', function(e) {
 console.log('m=' + this.Value());
@@ -203,6 +192,11 @@ function plot(){
 
   board.update();
 }
+
+
+
+
+
 
 
 plot();
