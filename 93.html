@@ -4,7 +4,7 @@
   <style>
     body{
       display: flex;
-      background: #456;
+      background: #304050;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -12,7 +12,7 @@
       color: #DDD;
     }
     .scr{
-      width: 30em;
+      width: 45em;
     }
   </style>
 </head>
@@ -29,8 +29,8 @@ var scr = document.getElementById("scr");
 var scr2d = scr.getContext("2d");
 
 // 描画範囲
-var width = 80;
-var height = 80;
+var width = 2000;
+var height = 2000;
   let canvas = document.querySelector('#scr');
   canvas.width = width;
   canvas.height = height;
@@ -51,7 +51,7 @@ var stepX = X / width;
 var stepY = Y / height;
 
 // 最大計算回数
-var N = 200;
+var N = 80;
 
 // 色設定
 var color = new Object();
@@ -61,11 +61,14 @@ var color = new Object();
   color.inG = parseInt(inc.substring(3,5), 16);
   color.inB = parseInt(inc.substring(5,7), 16);
   //背景色
-  const outc = '#000000'
-  const h = 4;
-  color.outR = 'parseInt(outc.substring(1,3), 16)+n*h';
-  color.outG = 'parseInt(outc.substring(3,5), 16)+n*h';
-  color.outB = 'parseInt(outc.substring(5,7), 16)+n*h';
+  const outc = '#405060'
+  const h = 1/30;
+  const outR = parseInt(outc.substring(1,3), 16);
+  const outG = parseInt(outc.substring(3,5), 16);
+  const outB = parseInt(outc.substring(5,7), 16);
+  color.outR = '250-Math.floor((250-outR)*Math.exp(-n*h))';
+  color.outG = '250-Math.floor((250-outG)*Math.exp(-n*h))';
+  color.outB = '250-Math.floor((250-outB)*Math.exp(-n*h))';
 
 // Canvas要素から描画用ImageDataを取得
 imageData = scr2d.createImageData(width, height);

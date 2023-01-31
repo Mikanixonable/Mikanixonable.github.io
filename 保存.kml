@@ -2350,5 +2350,141 @@
 			<coordinates>12.80147784709788,47.32390985796762,772.2311513640849</coordinates>
 		</Point>
 	</Placemark>
+	<Placemark id="0ACFB8AA0D273BF1C078">
+		<name>露店</name>
+		<LookAt>
+			<longitude>23.73831761653105</longitude>
+			<latitude>38.03355726233929</latitude>
+			<altitude>98.67675390595859</altitude>
+			<heading>18.4929963137294</heading>
+			<tilt>44.56834190398106</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>248.1063506666033</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>23.73870343757918,38.03329513837803,99.64418950456451</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="056198BAFD273BF25DEA">
+		<name>鋭い半島</name>
+		<LookAt>
+			<longitude>23.54078205438819</longitude>
+			<latitude>37.9488640191742</latitude>
+			<altitude>1.608780432625208</altitude>
+			<heading>-11.48312628949551</heading>
+			<tilt>41.54840510401222</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>15187.69418906188</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>23.57514514634947,37.94657249127923,6.272228242510676</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F01DF1FB8273BF32C7F">
+		<name>浸食の先端</name>
+		<LookAt>
+			<longitude>23.57560336583718</longitude>
+			<latitude>38.36774465997325</latitude>
+			<altitude>103.8453865435178</altitude>
+			<heading>135.5446587398035</heading>
+			<tilt>56.03876475471567</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>20728.99019389646</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>23.53486868316202,38.36868538364634,224.8977133760049</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0FAADF808C273BF4FA8A">
+		<name>斜面の道</name>
+		<LookAt>
+			<longitude>21.37432484838091</longitude>
+			<latitude>39.02132344634858</latitude>
+			<altitude>314.9457448821377</altitude>
+			<heading>-85.73252769828837</heading>
+			<tilt>58.88782573947703</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>10959.54677018803</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>21.36969486575224,39.02188775094343,577.4077710378176</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0CFD4936D3273BF5F21D">
+		<name>蛇行</name>
+		<LookAt>
+			<longitude>21.36782159004627</longitude>
+			<latitude>39.19449249499633</latitude>
+			<altitude>510.4058795833324</altitude>
+			<heading>42.90205460902205</heading>
+			<tilt>47.84249417376677</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>11661.31775276154</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>21.35491356653453,39.19099367750232,327.5231164287725</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C3F204F72273BF729AE">
+		<name>直線ダム</name>
+		<LookAt>
+			<longitude>21.30757979359683</longitude>
+			<latitude>38.61820998873586</latitude>
+			<altitude>25.54162758554149</altitude>
+			<heading>-10.59348590398281</heading>
+			<tilt>48.96547543817702</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>45611.30235741846</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>21.33459543064794,38.67614903938758,50.63051019361443</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0BDD476351273BF7E6DD">
+		<name>崖錐</name>
+		<LookAt>
+			<longitude>20.98161036077736</longitude>
+			<latitude>38.75720681905258</latitude>
+			<altitude>937.1356398495225</altitude>
+			<heading>68.44072642208766</heading>
+			<tilt>37.99621509136811</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>1578.332585854805</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>20.98175315533078,38.75798616985964,967.8161397349368</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F33CF422B273BF8C88A">
+		<name>コーカサスオオカブト半島</name>
+		<LookAt>
+			<longitude>23.39576828113618</longitude>
+			<latitude>40.1077857574551</latitude>
+			<altitude>58.34998800094206</altitude>
+			<heading>352.5006827203364</heading>
+			<tilt>0</tilt>
+			<gx:fovy>30.00001751862293</gx:fovy>
+			<range>266292.7658129856</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_06B9F7EBD3273BEB08D1</styleUrl>
+		<Point>
+			<coordinates>23.68562233319443,40.23527975885093,126.3105970154832</coordinates>
+		</Point>
+	</Placemark>
 </Document>
 </kml>
