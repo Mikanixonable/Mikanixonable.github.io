@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PyScriptテスト">
 
-  </body>
+<title>PyScriptテスト　マンデルブロ集合</title>
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+<py-env>
+- matplotlib
+- numpy
+</py-env>
+<style media="screen">
+body{
+  background-color: #567
+}
+.plt{
+  background-color: #567
+}
+</style>
+</head>
+<body>
+
+<div id="plt" class="plt"></div>
+
+
+<py-script output="plt">
+import matplotlib.pyplot as plt
+import numpy as np
+
+M = 100
+
+def mandel(c):
+    k = 0
+    z = 0
+    while k < M and abs(z) < 2:
+        z = z ** 2 - c
+        k += 1
+    return k
+
+vmandel = np.vectorize(mandel)
+
+x, y = np.meshgrid(np.linspace(-1, 2.2, 640), np.linspace(-1.2, 1.2, 480))
+z = vmandel(x + y * 1j)
+
+plt.pcolormesh(x, y, z, cmap='RdGy', vmin=0, vmax=M)
+plt.axis('scaled')
+plt
+</py-script>
+
+</body>
 </html>
