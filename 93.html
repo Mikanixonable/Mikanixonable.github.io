@@ -11,12 +11,15 @@
       padding: 1em;
       color: #DDD;
     }
+    .scr{
+      width: 30em;
+    }
   </style>
 </head>
 
 <body>
 
-<canvas id="scr"></canvas>
+<canvas id="scr" class="scr"></canvas>
 
 </body>
 
@@ -26,15 +29,15 @@ var scr = document.getElementById("scr");
 var scr2d = scr.getContext("2d");
 
 // 描画範囲
-var width = 800;
-var height = 800;
+var width = 80;
+var height = 80;
   let canvas = document.querySelector('#scr');
   canvas.width = width;
   canvas.height = height;
 
 
-let p1=[-2,(-1.4142-2)/2]; //左下座標
-let p2=[1.414,(1.4142+2)/2]; //右上座標
+let p1=[-2,-1.5]; //左下座標
+let p2=[1,1.5]; //右上座標
 
 // 計算開始左下座標
 var x = p1[0];
@@ -69,31 +72,27 @@ imageData = scr2d.createImageData(width, height);
 
 // マンデルブロ集合を描画
 	var i, j, k;
-	var n;
-
-	var tr, ti, vr, vi, pr, pi;
+//複素数t,v,p
+	var tr, ti, pr, pi;
 	var index;
 
 	for (i = 0;i < height;i++) {
 		for (j = 0;j < width;j++) {
-
-			n = 0;
-
-			vr = 0;
-			vi = 0;
-
-			// 複素平面上ピクセル位置の実部／虚部の値を算出
+			var n = 0;
+			var vr = 0;
+			var vi = 0;
+			// ピクセル位置の実部／虚部の値を算出
 			pr = x + (stepX * j);
 			pi = y + (stepY * i);
 
 			// ピクセル位置における発散回数を計算
-			do  {
+			do{
 				tr = (vr * vr) - (vi * vi) + pr;
 				ti = (vr * vi * 2.0) + pi;
 
 				vr = tr;
 				vi = ti;
-			} while ((((vr * vr) + (vi * vi)) < 4 && (++n < N)));
+			}while ((((vr**2) + (vi**2)) < 4 && (++n < N)));
 
 			// ImageDataのオフセット算出
 			index = (j * 4) + (i * width * 4);
