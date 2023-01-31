@@ -1,93 +1,134 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style media="screen">
-      body{
-        display: flex;
-        background: #c3cfe2;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        color: #DDD;
-      }
-      canvas{
-        background: #89A;
-      }
-    </style>
-  </head>
-  <body>
-  <canvas id="drawable" width="800" height="800"></canvas>
-  </body>
-  <script>
-      function drawMandelbrotSet(imageData) {
-          var minReal = -2.0;
-          var maxReal = +1.0;
-          var minImag = -1.5;
-          var maxImag = +1.5;
+<html>
+<head>
+  <title>マンデルブロ集合</title>
+  <style>
+    body{
+      display: flex;
+      background: #456;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      color: #DDD;
+    }
+  </style>
+</head>
 
-          for(var y = 0; y < imageData.height; y++) {
-              for(var x = 0; x < imageData.width; x++) {
-                  var zReal = 0.0;
-                  var zImag = 0.0;
-                  var cReal = (maxReal - minReal) / imageData.width * x + minReal;
-                  var cImag = (maxImag - minImag) / imageData.height * y + minImag;
-                  setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag);
-              }
-          }
-      }
+<body>
 
-      function drawJuliaSet(imageData) {
-          var minReal = -1.5;
-          var maxReal = +1.5;
-          var minImag = -1.5;
-          var maxImag = +1.5;
+<canvas id="scr"></canvas>
 
-          for(var y = 0; y < imageData.height; y++) {
-              for(var x = 0; x < imageData.width; x++) {
-                  var zReal = (maxReal - minReal) / imageData.width * x + minReal;
-                  var zImag = (maxImag - minImag) / imageData.height * y + minImag;
-                  var cReal = 0.3;
-                  var cImag = 0.5;
-                  setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag);
-              }
-          }
-      }
+</body>
 
-      function setPixelColor(imageData, x, y, zReal, zImag, cReal, cImag) {
-          for(var i = 0; i < 100; i++) {
-              if(zReal * zReal + zImag * zImag >= 4) {
-                  imageData.data[(y * imageData.width + x) * 4 + 0] = i * 10 % 256;
-                  imageData.data[(y * imageData.width + x) * 4 + 1] = i * 20 % 256;
-                  imageData.data[(y * imageData.width + x) * 4 + 2] = i * 30 % 256;
-                  imageData.data[(y * imageData.width + x) * 4 + 3] = 0xFF;
-                  return;
-              }
 
-              var real = zReal * zReal - zImag * zImag + cReal;
-              var imag = 2 * zReal * zImag + cImag;
-              zReal = real;
-              zImag = imag;
-          }
+<script>
+var scr = document.getElementById("scr");
+var scr2d = scr.getContext("2d");
 
-          imageData.data[(y * imageData.width + x) * 4 + 0] = 0x00;
-          imageData.data[(y * imageData.width + x) * 4 + 1] = 0x00;
-          imageData.data[(y * imageData.width + x) * 4 + 2] = 0x00;
-          imageData.data[(y * imageData.width + x) * 4 + 3] = 0xFF;
-      }
+// 描画範囲
+var width = 800;
+var height = 800;
+  let canvas = document.querySelector('#scr');
+  canvas.width = width;
+  canvas.height = height;
 
-      var canvas = document.getElementById("drawable");
-      var context = canvas.getContext("2d");
-      var imageData = context.getImageData(0, 0, canvas.width, canvas.height)
 
-      // マンデルブロー集合を描く.
-      drawMandelbrotSet(imageData);
+let p1=[-2,(-1.4142-2)/2]; //左下座標
+let p2=[1.414,(1.4142+2)/2]; //右上座標
 
-      // ジュリア集合を描く.
-      // drawJuliaSet(imageData);
+// 計算開始左下座標
+var x = p1[0];
+var y = p1[1];
+// 複素平面計算範囲幅
+var X = p2[0]-p1[0];
+var Y = p2[1]-p1[1];
 
-      context.putImageData(imageData, 0, 0);
-  </script>
+// CANVAS1ピクセル幅
+var stepX = X / width;
+var stepY = Y / height;
+
+// 最大計算回数
+var N = 200;
+
+// 色設定
+var color = new Object();
+  //描画色
+  const inc = '#ffffff'
+  color.inR = parseInt(inc.substring(1,3), 16);
+  color.inG = parseInt(inc.substring(3,5), 16);
+  color.inB = parseInt(inc.substring(5,7), 16);
+  //背景色
+  const outc = '#000000'
+  const h = 4;
+  color.outR = 'parseInt(outc.substring(1,3), 16)+n*h';
+  color.outG = 'parseInt(outc.substring(3,5), 16)+n*h';
+  color.outB = 'parseInt(outc.substring(5,7), 16)+n*h';
+
+// Canvas要素から描画用ImageDataを取得
+imageData = scr2d.createImageData(width, height);
+
+// マンデルブロ集合を描画
+	var i, j, k;
+	var n;
+
+	var tr, ti, vr, vi, pr, pi;
+	var index;
+
+	for (i = 0;i < height;i++) {
+		for (j = 0;j < width;j++) {
+
+			n = 0;
+
+			vr = 0;
+			vi = 0;
+
+			// 複素平面上ピクセル位置の実部／虚部の値を算出
+			pr = x + (stepX * j);
+			pi = y + (stepY * i);
+
+			// ピクセル位置における発散回数を計算
+			do  {
+				tr = (vr * vr) - (vi * vi) + pr;
+				ti = (vr * vi * 2.0) + pi;
+
+				vr = tr;
+				vi = ti;
+			} while ((((vr * vr) + (vi * vi)) < 4 && (++n < N)));
+
+			// ImageDataのオフセット算出
+			index = (j * 4) + (i * width * 4);
+
+			// 発散回数に応じてピクセルの色を設定
+			if (n == N) {
+				imageData.data[index] = eval(color.inR);
+				imageData.data[index + 1] = eval(color.inG);
+				imageData.data[index + 2] = eval(color.inB);
+			} else {
+				imageData.data[index] = eval(color.outR);
+				imageData.data[index + 1] = eval(color.outG);
+				imageData.data[index + 2] = eval(color.outB);
+			}
+
+			// ImageData内の色情報を0-255に収める
+			// for (k = 0;k < 3;k++) {
+			// 	if (imageData.data[index + k] < 0) {
+			// 		imageData.data[index + k] = 0;
+			// 	}
+			// 	if (imageData.data[index + k] > 255) {
+			// 		imageData.data[index + k] = 255;
+			// 	}
+			// }
+
+			//不透明度を255に設定
+			imageData.data[index + 3] = 255;
+		}
+	}
+	//scr2dの画像データをCanvas要素に転送
+	scr2d.putImageData(imageData, 0, 0);
+
+document.getElementById("link_place").innerHTML = scr.toDataURL();
+
+
+</script>
+
 </html>
