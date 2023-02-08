@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>jsontest</title>
+<script>
+  const url = "meta.json";    // JSONファイル名
+
+  // 起動時の処理
+  window.addEventListener("load", ()=>{
+    // JSON表示用
+    let result = document.getElementById("div1");
+    fetch(url)
+    .then( response => response.json())
+    .then( data => {
+
+
+      //本題
+      let html = data._1.ctime
+      result.innerHTML = html;
+
+    });
+  });
+</script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

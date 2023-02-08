@@ -16,7 +16,7 @@
 <script>
 let url = new URL(window.location.href);
 let params = url.searchParams;
-
+var h = 530;
 
 var param = params.get("n");
 if(!param){
@@ -39,7 +39,7 @@ class="button"
 style="width:15em;height:3em;"
 value="シャッフル"
 onclick="
-	var k = Math.floor(Math.random() * 527)+1;
+	var k = Math.floor(Math.random() * h)+1;
 	window.history.replaceState(null, null, '?n='+k);
 	window.location.reload();
 	">
