@@ -2,39 +2,86 @@
 <head>
 	<title>#1 サイトマップ</title>
   <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
-  <style>
-	body{
-		background-color: #789;
-		color: #333;
-		margin: 4em;
-	}
+<style media="screen">
+  @font-face {
+  font-family: 'mincho';
+    src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'gothic';
+    src: url('fonts/SourceHanSans-Light.woff') format('woff');
+  }
+
+
+  @font-face {
+  font-family: 'imincho';
+    src: url('fonts/IgyouMincho.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'imincho2';
+    src: url('fonts/IgyouMincho2.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'imincho3';
+    src: url('fonts/IgyouMincho3.woff') format('woff');
+  }
+
+  @font-face {
+  font-family: 'igothicl';
+    src: url('fonts/IgyouGothic-Light.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'igothic2';
+    src: url('fonts/IgyouGothic2.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'igothic3';
+    src: url('fonts/IgyouGothic3.woff') format('woff');
+  }
+
+  @font-face {
+  font-family: 'ifude';
+    src: url('fonts/IgyouFude.woff') format('woff');
+  }
+</style>
+
+<style>
+
+  body{
+  background-color: #789;
+  color: #333;
+  margin: 4em;
+  font-family: 'igothic2',"gothic";
+  }
 
   table {
-		background-color: #eee;
-    border-collapse: collapse;
-    text-align: center;
+  background-color: #eee;
+  border-collapse: collapse;
+  text-align: center;
   }
 
   th,td {
-    padding: 5px;
-    border: 1px solid #999;
+  padding: 5px;
+  border: 1px solid #999;
   }
-	h1{
-		color: #eee
-	}
-	a{
-		color: #eee;
-		text-decoration: none;
-	}
+  h1{
+  color: #eee
+  }
+  a{
+  color: #eee;
+  text-decoration: none;
+  background-color: #789;
+  }
 
 
 
 
-  </style>
+</style>
+
 </head>
 <body>
 	<h1>#1 サイトマップ</h1>
-<a href="1.html">トップへ戻る</a>
+<a href="index.html">トップへ戻る</a>
 
 
 <div id="div1"></div>
@@ -113,7 +160,10 @@ function tit_exp(url,id,id2){
 
       if(!title){
         box.innerHTML=url
+				box.style.backgroundColor="#789";
+				box.style.display = "block";
         }
+
         else{
          box.innerHTML=title[1];
 				 box.style.backgroundColor="#789";
@@ -149,7 +199,7 @@ function tit_exp(url,id,id2){
       return c3
       }
 
-    let color1 = "#f47";
+    let color1 = "#f45";
     let color2 = "#789";
     // 起動時の処理
     window.addEventListener("load", ()=>{
