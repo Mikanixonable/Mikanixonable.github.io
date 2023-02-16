@@ -4,34 +4,38 @@
   <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
   <style>
 	body{
-		background-color: #DDD;
+		background-color: #789;
 		color: #333;
-
+		margin: 4em;
 	}
-    table {
-      border-collapse: collapse;
-      text-align: center;
-    }
-    th,td {
-      padding: 5px;
-      border: 1px solid #999;
-    }
-    /* .th1{
-      background-color: #456;
-    } */
-    /* .b2{
-      background-color: #456;
-    } */
+
+  table {
+		background-color: #eee;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  th,td {
+    padding: 5px;
+    border: 1px solid #999;
+  }
+	h1{
+		color: #eee
+	}
+	a{
+		color: #eee;
+		text-decoration: none;
+	}
+
+
+
 
   </style>
 </head>
 <body>
-<!-- <table>
-  <tr>
-    <th class="th2">hjk</th>
-  </tr> -->
+	<h1>#1 サイトマップ</h1>
+<a href="1.html">トップへ戻る</a>
 
-</table>
 
 <div id="div1"></div>
 <div id="box"></div>
@@ -49,7 +53,7 @@ var tr = document.createElement('tr');
     th1.textContent = "ファイル名";
     th2.textContent = "リンク";
     th3.textContent = "説明";
-    th4.textContent = "更新日時";
+    th4.textContent = "ファイル更新日";
     // th1.setAttribute("class","th1")
   tr.appendChild(th1);
   tr.appendChild(th2);
@@ -64,15 +68,14 @@ for (var i = 1; i < n+1; i++) {
     //ファイル名
     var td1 = document.createElement('td');
     td1.textContent = i + '.html';
-    // td1.setAttribute("class","th1")
-    // td1.style.backgroundColor = "#45A";
     tr.appendChild(td1);
 
     //リンク
     var td2 = document.createElement('td');
       var a = document.createElement("a");
       a.href=i+".html";
-      a.id=i;
+      a.id="_"+i;
+
       td2.appendChild(a);
     tr.appendChild(td2);
 
@@ -113,6 +116,8 @@ function tit_exp(url,id,id2){
         }
         else{
          box.innerHTML=title[1];
+				 box.style.backgroundColor="#789";
+				 box.style.display = "block";
         };
 
       if(!content){
@@ -133,7 +138,7 @@ function tit_exp(url,id,id2){
 
 
 
-
+//日付を取得し表に色をつける
   function timem(url){
       //色1、色2、係数(0to1)を入力すると、グラデーション上の色を出力
     function gradc(c1,c2,k){
@@ -143,8 +148,9 @@ function tit_exp(url,id,id2){
       let c3 = "#"+Math.floor(c[0]).toString(16)+Math.floor(c[1]).toString(16)+Math.floor(c[2]).toString(16);
       return c3
       }
-    let color1 = "#f00";
-    let color2 = "#456";
+
+    let color1 = "#f47";
+    let color2 = "#789";
     // 起動時の処理
     window.addEventListener("load", ()=>{
 
@@ -160,7 +166,7 @@ function tit_exp(url,id,id2){
           //本題
           let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
           lapse = lapse/1000000
-          let grad = 1-Math.exp(-lapse);
+          let grad = 1-Math.exp(-lapse*(1/2));
 
           result.style.backgroundColor = gradc(color1,color2,grad);
           result.style.color = "#ddd"
@@ -177,7 +183,7 @@ function tit_exp(url,id,id2){
   timem("meta.json")
 
 for (let step = 0; step < n+1; step++) {
-  tit_exp(step+".html",step,"a" + step)
+  tit_exp(step+".html","_"+step,"a" + step)
 };
 
 </script>
