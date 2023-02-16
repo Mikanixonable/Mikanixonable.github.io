@@ -1,27 +1,186 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-<title>jsontest</title>
-<script>
-  const url = "meta.json";    // JSONファイル名
+	<title>#1 サイトマップ</title>
+  <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
+  <style>
+	body{
+		background-color: #DDD;
+		color: #333;
 
-  // 起動時の処理
-  window.addEventListener("load", ()=>{
-    // JSON表示用
-    let result = document.getElementById("div1");
-    fetch(url)
-    .then( response => response.json())
-    .then( data => {
+	}
+    table {
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th,td {
+      padding: 5px;
+      border: 1px solid #999;
+    }
+    /* .th1{
+      background-color: #456;
+    } */
+    /* .b2{
+      background-color: #456;
+    } */
 
-      //本題
-      let html = data._1.ctime
-      result.innerHTML = html;
-
-    });
-  });
-</script>
+  </style>
 </head>
 <body>
+<!-- <table>
+  <tr>
+    <th class="th2">hjk</th>
+  </tr> -->
+
+</table>
+
 <div id="div1"></div>
+<div id="box"></div>
+<script>
+
+n=1005
+var table = document.createElement('table');
+
+//表の一行目のラベルを手動でつける
+var tr = document.createElement('tr');
+  var th1 = document.createElement('th');
+  var th2 = document.createElement('th');
+  var th3 = document.createElement('th');
+  var th4 = document.createElement('th');
+    th1.textContent = "ファイル名";
+    th2.textContent = "リンク";
+    th3.textContent = "説明";
+    th4.textContent = "更新日時";
+    // th1.setAttribute("class","th1")
+  tr.appendChild(th1);
+  tr.appendChild(th2);
+  tr.appendChild(th3);
+  tr.appendChild(th4);
+table.appendChild(tr);
+
+//表の二行目以降を自動的に生成する
+for (var i = 1; i < n+1; i++) {
+  var tr = document.createElement('tr');
+
+    //ファイル名
+    var td1 = document.createElement('td');
+    td1.textContent = i + '.html';
+    // td1.setAttribute("class","th1")
+    // td1.style.backgroundColor = "#45A";
+    tr.appendChild(td1);
+
+    //リンク
+    var td2 = document.createElement('td');
+      var a = document.createElement("a");
+      a.href=i+".html";
+      a.id=i;
+      td2.appendChild(a);
+    tr.appendChild(td2);
+
+    //説明
+    var td3 = document.createElement('td');
+    td3.id="a"+i;
+    tr.appendChild(td3);
+
+    //更新日時
+    var td4 = document.createElement('td');
+    td4.id="_"+i+"html";
+    // td4.class="b"+i
+    td4.setAttribute("class","b"+i)
+
+    tr.appendChild(td4);
+
+  table.appendChild(tr);
+  }
+
+document.getElementById('box').appendChild(table);
+
+
+
+//タイトル欄にタイトルを入れる、説明欄に説明を入れる
+function tit_exp(url,id,id2){
+  var box = document.getElementById(id);
+  var box2 = document.getElementById(id2);
+  fetch(url)
+    .then(response => {
+      return response.text();
+    })
+    .then(body => {
+      var title = body.match(/<title>(.*)<\/title>/);
+      var content = body.match(/content=\"(.*)\"/);
+
+      if(!title){
+        box.innerHTML=url
+        }
+        else{
+         box.innerHTML=title[1];
+        };
+
+      if(!content){
+        box2.innerHTML=""
+        }
+        else{
+         box2.innerHTML=content[1];
+        };
+        })
+
+    .catch((reason) => {
+      box.innerHTML="-"
+      box2.innerHTML=""
+    })
+
+  };
+
+
+
+
+
+  function timem(url){
+      //色1、色2、係数(0to1)を入力すると、グラデーション上の色を出力
+    function gradc(c1,c2,k){
+      let a = [parseInt(c1.charAt(1),16),parseInt(c1.charAt(2),16),parseInt(c1.charAt(3),16)];
+      let b = [parseInt(c2.charAt(1),16),parseInt(c2.charAt(2),16),parseInt(c2.charAt(3),16)];
+      let c = [a[0]*(1-k)+b[0]*k,a[1]*(1-k)+b[1]*k,a[2]*(1-k)+b[2]*k];
+      let c3 = "#"+Math.floor(c[0]).toString(16)+Math.floor(c[1]).toString(16)+Math.floor(c[2]).toString(16);
+      return c3
+      }
+    let color1 = "#f00";
+    let color2 = "#456";
+    // 起動時の処理
+    window.addEventListener("load", ()=>{
+
+      fetch(url)
+      .then( response => response.json())
+      .then( data => {
+
+        for(let file of data){
+
+
+          var result = document.getElementById(file.name);
+
+          //本題
+          let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
+          lapse = lapse/1000000
+          let grad = 1-Math.exp(-lapse);
+
+          result.style.backgroundColor = gradc(color1,color2,grad);
+          result.style.color = "#ddd"
+          result.textContent = file.mdate;
+    }
+
+
+
+      });
+    });
+
+  };
+
+  timem("meta.json")
+
+for (let step = 0; step < n+1; step++) {
+  tit_exp(step+".html",step,"a" + step)
+};
+
+</script>
+
 </body>
 </html>
