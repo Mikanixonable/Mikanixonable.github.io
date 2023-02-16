@@ -1,46 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<title>jsontest</title>
-<script>
-function timec(){
-  let url = "meta.json";    // JSONファイル名
-  let color1 = "#fa0";
-  let color2 = "#456";
-
-  function gradc(c1,c2,k){
-    let a = [parseInt(c1.charAt(1),16),parseInt(c1.charAt(2),16),parseInt(c1.charAt(3),16)];
-    let b = [parseInt(c2.charAt(1),16),parseInt(c2.charAt(2),16),parseInt(c2.charAt(3),16)];
-    let c = [a[0]*(1-k)+b[0]*k,a[1]*(1-k)+b[1]*k,a[2]*(1-k)+b[2]*k];
-    let c3 = "#"+Math.floor(c[0]).toString(16)+Math.floor(c[1]).toString(16)+Math.floor(c[2]).toString(16);
-    return c3
-  }
-  let requestURL = 'meta.json';
-
-  // 起動時の処理
-  window.addEventListener("load", ()=>{
-    // JSON表示用
-    let result = document.getElementById("div1");
-    fetch(url)
-    .then( response => response.json())
-    .then( data => {
-
-      //本題
-      let lapse = Math.floor(Date.now()/1000)-data._1.mtime //経過秒数
-      lapse = lapse/100000
-      let grad = 1-Math.exp(-lapse);
-
-      result.style.color = gradc(color1,color2,grad);
-      result.innerHTML = data._1.mdate;
-    });
-  });
-};
-
-timec()
-
-</script>
-</head>
-<body>
-<div id="div1"></div>
-</body>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #oi{
+        background-color: #456;
+      }
+    </style>
+  </head>
+  <body>
+<p id="oi">fghjgf</p>
+  </body>
 </html>
