@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta property="og:url" content="Mikanixonable.github.io">
-  <meta property="og:title" content="リーマン関数フラクタル3">
-  <meta property="og:description" content="JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き">
+  <meta property="og:url" content="調整バー付き">
+  <meta property="og:title" content="調整バー付き">
+  <meta property="og:description" content="かなりきれい">
   <meta property="og:type" content="article">
   <meta property="og:image" content="ogp/85.png">
-  <title>フラクタル</title>
+  <title>リーマン関数フラクタル3</title>
 
 <style media="screen">
   body{
@@ -20,13 +20,9 @@
   color: #DDD;
   }
 
-  .formula{
-    font-size: 1.5em;
-  }
-
   .graph-wrap {
-  width: 60em;
-  height: 60em;
+  width: 50em;
+  height: 50em;
   }
 
   .graph {
@@ -46,21 +42,17 @@
 </head>
 
 <body>
-  <!--式-->
-  <p class='formula'>$\displaystyle
-    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi (k+m)^l t)}}{(k+m)^l}
+  <p style="color: #DDD">$\displaystyle
+    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi t (k+l)^m)}}{(k+l)^m}
     \qquad
-    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi (k+m)^l t )}}{(k+m)^l}\times(1-2key)^k \quad (key=0,1)
+    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t (k+l)^m)}}{(k+l)^m}
   $</p>
-
 <p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
-
-<!--グラフ-->
   <div class="graph-wrap">
     <div id="jxgbox" class="graph"></div>
   </div>
 
-<!--リンク-->
+
 
 
 </body>
@@ -128,76 +120,55 @@ let slider1 = board.create('slider', [[0.1, 1.8], [1.6, 1.8], [1, 10, 50] ], {
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 0,
-  fillColor: '#567',
-  withTicks: false,
-  size: 10,
+  fillColor: '#567'
 });
 slider1.on('drag', function(e) {
 console.log('n=' + this.Value());
 n = slider1.Value();
 });
 
-let slider2 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
+let slider2 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
   name: 'm',
-  snapWidth: 0.25,
-  baseline: { strokeColor: '#DDD'},
-  highline: { strokeColor: '#DDD'},
-  strokeColor: '#DDD',
-  label: {fontSize: 15, strokeColor: '#DDD'},
-  precision: 2,
-  fillColor: '#567',
-  withTicks: false,
-  size: 10,
-});
-slider2.on('drag', function(e) {
-console.log('m=' + this.Value());
-m = slider2.Value();
-});
-
-let slider3 = board.create('slider', [[0.1, 1.4], [1.6, 1.4], [0, 2, 11] ], {
-  name: 'l',
   snapWidth: 0.1,
   baseline: { strokeColor: '#DDD'},
   highline: { strokeColor: '#DDD'},
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
   precision: 1,
-  fillColor: '#567',
-  withTicks: false,
-  size: 10,
+  fillColor: '#567'
 });
-slider3.on('drag', function(e) {
+slider2.on('drag', function(e) {
 console.log('m=' + this.Value());
-l = slider3.Value();
+m = slider2.Value();
 });
 
-let slider4 = board.create('slider', [[1.4, 1.2], [1.6, 1.2], [0, 0, 1] ], {
-  name: 'key',
+let slider3 = board.create('slider', [[0.1, 1.6], [1.6, 1.6], [0, 0, 3] ], {
+  name: 'l',
   snapWidth: 1,
   baseline: { strokeColor: '#DDD'},
   highline: { strokeColor: '#DDD'},
   strokeColor: '#DDD',
   label: {fontSize: 15, strokeColor: '#DDD'},
-  precision: 1,
-  fillColor: '#567',
-  withTicks: false,
-  size: 10,
+  precision: 2,
+  fillColor: '#567'
 });
-slider4.on('drag', function(e) {
+slider3.on('drag', function(e) {
 console.log('m=' + this.Value());
-key = slider4.Value();
+l = slider3.Value();
+
 });
+
+
 
 //グラフ
 var n = 10;
-var m = 0;
-var l = 2;
-var key = 0;
+var m = 2;
+var l = 0;
 function plot(){
   function fx(t) {
     var x = 0;
     for (let k = 1; k < n+1; k++) {
-      x+=(Math.cos(t*(k+m)**l)/(k+m)**l)*(1-2*key)**k
+      x+=Math.cos(t*(k+l)**m)/(k+l)**m
     }
     return x;
   }
@@ -205,7 +176,7 @@ function plot(){
   function fy(t) {
     var y = 0;
     for (let k = 1; k < n+1; k++) {
-      y+=(Math.sin((t)*(k+m)**l)/(k+m)**l)
+      y+=Math.sin((t)*(k+l)**m)/(k+l)**m
     }
     return y;
   }
@@ -221,6 +192,11 @@ function plot(){
 
   board.update();
 }
+
+
+
+
+
 
 
 plot();
