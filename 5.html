@@ -1,0 +1,193 @@
+<html>
+<head>
+	<title>#5 サイトマップ</title>
+  <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
+  <style media="screen">
+    @font-face {
+    font-family: 'mincho';
+      src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'gothic';
+      src: url('fonts/SourceHanSans-Light.woff') format('woff');
+    }
+
+
+    @font-face {
+    font-family: 'imincho';
+      src: url('fonts/IgyouMincho.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'imincho2';
+      src: url('fonts/IgyouMincho2.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'imincho3';
+      src: url('fonts/IgyouMincho3.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'igothicl';
+      src: url('fonts/IgyouGothic-Light.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'igothic2';
+      src: url('fonts/IgyouGothic2.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'igothic3';
+      src: url('fonts/IgyouGothic3.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'ifude';
+      src: url('fonts/IgyouFude.woff') format('woff');
+    }
+  </style>
+  <style>
+	body{
+		background-color: #456;
+		color: #eee;
+		margin: 4em;
+    /* font-family: "gothic" */
+    
+	}
+
+    table {
+            background-color: #eee;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    th,td {
+        padding: 0.5em;
+        border: 0px solid #999;
+        background-color: #223;
+    }
+
+    h1{
+        color: #eee
+    }
+
+    a{
+        color: #eee;
+        text-decoration: none;
+        display: block;
+    }
+
+    
+</style>
+</head>
+
+<body>
+  <h1>#1 サイトマップ</h1>
+  <p>青いほど最近更新されたページです。カーソルをリンクに重ねると説明が出ます。カーソルを数字に重ねると更新日が出ます。</p>
+  <a href="index.html">トップへ戻る</a>
+  <div id="box"></div>
+  
+</body>
+
+<script>
+
+n=50
+var table = document.createElement('table');
+
+for (var i = 0; i < n; i++) {
+  var tr = document.createElement('tr');
+  for (var k = 0; k < 10; k++) {
+    var td = document.createElement('td');
+    if(i===0&&k===0){
+        td.id="td_indexhtml"
+    }else{
+        td.id="td_"+String(10*i+k)+"html"
+    }
+
+    var a = document.createElement("a");
+    var p = document.createElement("p");
+    if(i===0&&k===0){
+        a.href="index.html";
+        a.id="_indexhtml";
+        p.textContent = "index"
+        p.id="p_indexhtml"
+    }else{
+        a.href=String(10*i+k)+".html";
+        a.id="_"+String(10*i+k)+"html";
+     
+        p.textContent=String(10*i+k);
+        p.id="p_"+String(10*i+k)+"html"
+    }
+    a.style.backgroundColor="#0002"
+    
+    td.appendChild(a);
+    td.appendChild(p);
+    tr.appendChild(td);
+  };
+  table.appendChild(tr);
+  }
+document.getElementById('box').appendChild(table);
+
+
+function titleInsert(url){
+    // 起動時の処理
+    window.addEventListener("load", ()=>{
+
+      fetch(url)
+      .then( response => response.json())
+      .then( data => {
+
+        for(let file of data){
+
+          //本題
+          var resul = document.getElementById(file.name);
+          resul.innerHTML = file.title;
+          resul.title = file.content;
+          var resul2 = document.getElementById("p"+file.name);
+          resul2.title = file.mdate;
+        }
+      });
+    });
+};
+
+titleInsert("meta.json")
+
+//日付を取得し表に色をつける
+function coloring(url){
+    //色1、色2、係数(0to1)を入力すると、グラデーション上の色を出力
+    function gradColor(c1,c2,k){
+      let a = [parseInt(c1.charAt(1),16),parseInt(c1.charAt(2),16),parseInt(c1.charAt(3),16)];
+      let b = [parseInt(c2.charAt(1),16),parseInt(c2.charAt(2),16),parseInt(c2.charAt(3),16)];
+      let c = [a[0]*(1-k)+b[0]*k,a[1]*(1-k)+b[1]*k,a[2]*(1-k)+b[2]*k];
+      let c3 = "#"+Math.floor(c[0]).toString(16)+Math.floor(c[1]).toString(16)+Math.floor(c[2]).toString(16);
+      return c3
+    }
+
+    let color1 = "#3bb";
+    let color2 = "#623";
+    // 起動時の処理
+    window.addEventListener("load", ()=>{
+
+      fetch(url)
+      .then( response => response.json())
+      .then( data => {
+
+        for(let file of data){
+
+          //本題
+          let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
+          lapse = lapse/1000000
+          let grad = 1-Math.exp(-lapse*(1/2));
+
+          var result = document.getElementById("td"+file.name);
+          result.style.backgroundColor = gradColor(color1,color2,grad);
+
+        }
+      });
+    });
+  };
+
+
+
+  coloring("meta.json")
+
+</script>
+</html>
