@@ -4,10 +4,15 @@ import json
 import glob
 import math
 import bs4
-from html.parser import HTMLParser
 import codecs
 import random
 import math
+import time
+import numpy as np
+
+backgroundColor="#eee"
+color1 = "#3bb"
+color2 = "#623"
 
 def colorMixer(c1,c2,k):
     a = [int(c1[1],16),int(c1[2],16),int(c1[3],16)];
@@ -25,6 +30,11 @@ graphs={
     "nodes" : [],
     "edges" : []
 }
+
+size = []
+for file in files:
+    soup = bs4.BeautifulSoup(open(file, mode= "r",encoding="utf-8"), 'html.parser')
+    size.append(len(str(soup)))
 
 
 for i in range(len(files)):
@@ -62,18 +72,28 @@ for i in range(len(files)):
     }
     dates.append(date_dic)
 
-    #グラフ描画用、頂点
+
+    lapse = int(time.time())-mtime #経過秒数
+    lapse = lapse/1000000
+    grad = 1-math.exp(-lapse*(1/2));
+    dotcolor = colorMixer(color1,color2,grad)
+
+
+    #グラフ描画用、頂点####################################
     node_dic = {
     "id":"_"+str(files[i]).replace(".",""),
     "label":"<"+str(files[i].replace(".html",""))+">"+title,
-    "x":random.uniform(1,10),
-    "y":random.uniform(1,10),
-    "size":random.uniform(0.5,4),
+    "x":random.gauss(0,1),
+    "y":random.gauss(0,1),
+    "size":(len(str(soup))/max(size))**(0.5)*70+2,
     "url":str(files[i]),
-    "color":"#222"
-
+    "color":dotcolor
     }
     graphs["nodes"].append(node_dic)
+
+
+
+
 
 
     #グラフ描画用、辺
@@ -101,7 +121,10 @@ for i in range(len(files)):
     if coe > 20:
         coe = 20
 
-    edge_color = colorMixer("#000","#bbb",coe/20)
+    edge_color = colorMixer(dotcolor,backgroundColor,coe/20*0.98)
+    print(edge_color)
+
+    # +hex(math.floor((1-coe/20)*15+1))[2:]
 
     for k in hrefs:
         edge_dic = {
@@ -109,7 +132,7 @@ for i in range(len(files)):
         "source":"_"+str(files[i]).replace(".",""),
         "target":"_"+str(k).replace(".",""),
         "label":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
-        "size": 5,
+        "size": (len(str(soup))/max(size))*10,
         "color": edge_color,
         "type": 'arrow',
         }
