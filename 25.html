@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        body {
+            background-color: #aaa;
+            margin: 2em;
+        }
+
+        #container {
+            background-color: #eee;
+            max-width: 100%;
+            height: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+<div id="container"></div>
+<div id="container2"></div>
+</body>
+
+
+<script src="js/sigma.js"></script>
+<script src="js/sigmamin.js"></script>
+<script>
+    sigma.parsers.json('meta2.json', {
+        container: 'container',
+        settings: {
+        defaultNodeColor: '#567',
+        minNodeSize: 8,
+        maxNodeSize: 10,
+        maxEdgeSize: 3,
+        doubleClickEnabled: false,
+        arrowSizeRatio: 5,
+    }
+  });
+</script>
+</html>
