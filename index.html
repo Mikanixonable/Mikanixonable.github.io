@@ -54,25 +54,26 @@
         margin: 4em;
         color: #eee;
         font-size: 1.1em;
-        font-family: 'igothic2',"gothic";
+        
       }
       article{
         color: #222;
         background-color: #ddd;
       }
       h1{
-        font-size: 3em
+        font-size: 3em;
+        font-family: 'igothic2',"gothic";
       }
 
     </style>
   </head>
   <body id="body">
-    <h1>月面植物園</h1>
+    <h1 id="h1">月面植物園</h1>
     <Table border="0" bgcolor="#000000" cellpadding="5" Cellspacing="0" style="border:thick ridge silver;width:340;height:20;"><Tr><Td>
-    <font face="ＭＳ ゴシック" size="3" color="#ffffff">
+    <font size="3" color="#ffffff">
     <marquee width="320" scrollamount="2" truespeed>みかぶるのホームページへようこそ</marquee>
     </font></Td></Tr></Table>
-<input type="button" value="狂気" onclick="repeater()">
+<input type="button" value="狂う" onclick="repeater()">
 <article class="">
 
 
@@ -97,10 +98,9 @@
 <p>このページのフォントは自作フォントの
   <a href="4.html">異形シリーズ</a>
   を使用しています。</p>
-<h3></h3>
-<p></p>
-<h3></h3>
-<p></p>
+
+  <img src="https://ghchart.rshah.org/mikanixonable" alt="" style="width:100%;">
+
 
 <h2>このサイトの歴史</h2>
 <p>
@@ -126,13 +126,15 @@
   <script type="text/javascript">
   var notr = true;
   var obj1=document.getElementById("body");
+  var obj2=document.getElementById("h1");
   function repeater(){
   if(notr){
-  notr=false;
-  obj1.style.fontFamily = "imincho","mincho";
-  }
-  else{
-  obj1.style.fontFamily = "igothic2","gothic";
+    notr=false;
+    obj1.style.fontFamily = "imincho","mincho";
+    obj2.style.fontFamily = "imincho","mincho";
+  }else{
+    obj1.style.fontFamily = "sans-serif";
+    obj2.style.fontFamily = "igothic2","mincho";
 
 
   notr=true;

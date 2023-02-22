@@ -19,13 +19,17 @@
 
 
 <body>
+    <img src="https://ghchart.rshah.org/mikanixonable" alt="">
 <div id="container"></div>
-<div id="container2"></div>
 </body>
-
 
 <script src="js/sigma.js"></script>
 <script src="js/sigmamin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+<!-- Sigma plugins -->
+<script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/worker.js"></script>
+  
 <script>
     sigma.parsers.json('meta2.json', {
         container: 'container',
@@ -35,9 +39,16 @@
         // maxNodeSize: 10,
         minEdgeSize: 1,
         maxEdgeSize: 3,
+        minArrowSize: 10,
         doubleClickEnabled: false,
         arrowSizeRatio: 5,
     }
   });
+
+s.graph.read(graph);
+s.refresh();
+// launch force-atlas for 5sec
+s.startForceAtlas2();
+window.setTimeout(function() {s.killForceAtlas2()}, 10000);
 </script>
 </html>
