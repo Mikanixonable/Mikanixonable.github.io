@@ -77,7 +77,6 @@
 
     
 </style>
-<script src="js/meta.js"></script>
 </head>
 
 <body>
@@ -91,7 +90,7 @@
 
 <script>
 
-n=50
+n=100
 var table = document.createElement('table');
 
 for (var i = 0; i < n; i++) {
@@ -144,13 +143,13 @@ function titleInsert(url){
           resul.innerHTML = file.title;
           resul.title = file.content;
           var resul2 = document.getElementById("p"+file.name);
-          resul2.title = file.mdate;
+          resul2.title = file.cdate;
         }
       });
     });
 };
 
-titleInsert("meta.json")
+titleInsert("json/meta.json")
 
 //日付を取得し表に色をつける
 function coloring(url){
@@ -175,7 +174,7 @@ function coloring(url){
         for(let file of data){
 
           //本題
-          let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
+          let lapse = Math.floor(Date.now()/1000)-file.ctime //経過秒数
           lapse = lapse/1000000
           let grad = 1-Math.exp(-lapse*(1/2));
 
@@ -187,7 +186,7 @@ function coloring(url){
     });
   };
 
-coloring("meta.json");
+coloring("json/meta.json");
 // coloring2(JSON.parse(meta));
 // document.getElementById('div1').textContent = ert;
 
