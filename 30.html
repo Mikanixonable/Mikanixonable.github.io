@@ -27,7 +27,7 @@
 fetch('meta2.json')
   .then(response => response.text())
   .then(data => {
-    const obj1 = data;
+    const jsonString = data;
     var s = new sigma(
   {
     renderer: {
@@ -43,10 +43,28 @@ fetch('meta2.json')
 // Generate a random graph:
 var nbNode = 50;
 var nbEdge = 200;
-var graph = JSON.stringify(obj1);
+var graph = {
+  nodes: [],
+  edges: []
+};
+for (i = 0; i < nbNode; i++)
+  graph.nodes.push({ 
+    id:  i,
+    label: 'Node ' + i,
+    x: Math.random(),
+    y: Math.random(),
+    size: 1,
+    color: '#EE651D'
+  });
 
-
-
+for (i = 0; i < nbEdge; i++)
+  graph.edges.push({ 
+    id: i, 
+    source: '' + (Math.random() * nbNode | 0), 
+    target: '' + (Math.random() * nbNode | 0),
+    color: '#202020',
+    type: 'curvedArrow'
+  });
 
 
 // load the graph
