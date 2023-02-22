@@ -1,0 +1,26 @@
+[
+    {
+        "name": "佐藤",
+        "school_year": 1,
+        "test": {
+            "japanese": 30,
+            "english": 60
+        }
+    },
+    {
+        "name": "鈴木",
+        "school_year": 2,
+        "test": {
+            "japanese": 40,
+            "english": 70
+        }
+    },
+    {
+        "name": "田中",
+        "school_year": 3,
+        "test": {
+            "japanese": 50,
+            "english": 80
+        }
+    }
+]

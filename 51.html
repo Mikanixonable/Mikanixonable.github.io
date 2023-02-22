@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form>
+    
+    <textarea id="file_area"  name="txt" rows="5" cols="20"></textarea>
+</form>
+
+</body>
+<script>
+
+window.addEventListener('DOMContentLoaded', function(){
+fetch('meta2.json') // (1) リクエスト送信
+.then(response => response.text()) // (2) レスポンスデータを取得
+.then(data => { // (3)レスポンスデータを処理
+
+    const file_area = document.getElementById('file_area');
+    file_area.innerHTML = data;
+});
+});
+
+</script>
+</html>
