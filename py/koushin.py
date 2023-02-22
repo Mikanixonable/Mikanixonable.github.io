@@ -9,6 +9,7 @@ import random
 import math
 import time
 import numpy as np
+import os
 
 backgroundColor="#eee"
 color1 = "#3bb"
@@ -22,7 +23,8 @@ def colorMixer(c1,c2,k):
     return c3
 
 #htmlファイル名全取得
-files = glob.glob("*.html")
+parentPath = os.path.abspath(os.path.join(os.getcwd(), ".."))
+files = glob.glob(os.path.join(parentPath, "*.html"))
 
 #ファイルの情報の取得、リスト化
 dates=[]
@@ -35,7 +37,6 @@ size = []
 for file in files:
     soup = bs4.BeautifulSoup(open(file, mode= "r",encoding="utf-8"), 'html.parser')
     size.append(len(str(soup)))
-
 
 for i in range(len(files)):
     path = files[i]
@@ -62,7 +63,7 @@ for i in range(len(files)):
     
 
     date_dic = {
-    "name":"_"+str(files[i]).replace(".",""),
+    "name":"_"+os.path.basename(str(files[i].replace(".",""))),
     "title":title,
     "content":content,
     "ctime":str(ctime),
@@ -81,12 +82,12 @@ for i in range(len(files)):
 
     #グラフ描画用、頂点####################################
     node_dic = {
-    "id":"_"+str(files[i]).replace(".",""),
-    "label":"<"+str(files[i].replace(".html",""))+">"+title,
+    "id":"_"+os.path.basename(str(files[i].replace(".",""))),
+    "label":"<"+os.path.basename(str(files[i].replace(".html","")))+">"+title,
     "x":random.gauss(0,1),
     "y":random.gauss(0,1),
     "size":(len(str(soup))/max(size))**(0.5)*70+2,
-    "url":str(files[i]),
+    "url":os.path.basename(str(files[i])),
     "color":dotcolor
     }
     graphs["nodes"].append(node_dic)
@@ -134,16 +135,18 @@ for i in range(len(files)):
         "label":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
         "size": (len(str(soup))/max(size))*10,
         "color": edge_color,
-        "type": 'arrow',
+        "type": 'curvedArrow',
         }
         graphs["edges"].append(edge_dic)
         
 
+metaPath = os.path.join(parentPath,"json/meta.json")
+meta2Path = os.path.join(parentPath,"json/meta2.json")
 
-json1 = codecs.open('./meta.json', "w", "utf-8")
+json1 = codecs.open(metaPath, "w", "utf-8")
 json.dump(dates, json1, indent = 2, ensure_ascii=False)
 json1.close()
 
-json2 = codecs.open('./meta2.json', "w", "utf-8")
+json2 = codecs.open(meta2Path, "w", "utf-8")
 json.dump(graphs, json2, indent = 2, ensure_ascii=False)
 json2.close()
