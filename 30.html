@@ -24,10 +24,11 @@
   </body>
   <script>
 
-// JSONファイルを読み込む
-// JSONファイルを読み込む
-
-var s = new sigma(
+fetch('meta2.json')
+  .then(response => response.text())
+  .then(data => {
+    const obj1 = data;
+    var s = new sigma(
   {
     renderer: {
       container: document.getElementById('sigma-container'),
@@ -42,28 +43,10 @@ var s = new sigma(
 // Generate a random graph:
 var nbNode = 50;
 var nbEdge = 200;
-var graph = {
-  nodes: [],
-  edges: []
-};
-for (i = 0; i < nbNode; i++)
-  graph.nodes.push({ 
-    id:  i,
-    label: 'Node ' + i,
-    x: Math.random(),
-    y: Math.random(),
-    size: 1,
-    color: '#EE651D'
-  });
+var graph = JSON.stringify(obj1);
 
-for (i = 0; i < nbEdge; i++)
-  graph.edges.push({ 
-    id: i, 
-    source: '' + (Math.random() * nbNode | 0), 
-    target: '' + (Math.random() * nbNode | 0),
-    color: '#202020',
-    type: 'curvedArrow'
-  });
+
+
 
 
 // load the graph
@@ -73,5 +56,14 @@ s.refresh();
 // launch force-atlas for 5sec
 s.startForceAtlas2();
 window.setTimeout(function() {s.killForceAtlas2()}, 10000);
+
+
+  })
+  .catch(error => {
+    console.error('読み込みエラー:', error);
+  });
+
+
+
   </script>
 </html>
