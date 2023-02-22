@@ -77,9 +77,11 @@
 
     
 </style>
+<script src="js/meta.js"></script>
 </head>
 
 <body>
+  <div id="div1"></div>
   <h1>#5 サイトマップ</h1>
   <p>青いほど最近更新されたページです。カーソルをリンクに重ねると説明が出ます。カーソルを数字に重ねると更新日が出ます。</p>
   <a href="index.html">トップへ戻る</a>
@@ -185,9 +187,9 @@ function coloring(url){
     });
   };
 
-
-
-  coloring("meta.json")
+coloring("meta.json");
+// coloring2(JSON.parse(meta));
+// document.getElementById('div1').textContent = ert;
 
 </script>
 </html>

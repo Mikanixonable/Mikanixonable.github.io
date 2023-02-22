@@ -1,42 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Sigma.js Example</title>
-  <script src="js/sigma.js"></script>
-  <script src="js/sigmamin.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
-  <!-- Sigma plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/worker.js"></script>
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-  <div id="sigma-container"></div>
-  <script>
-    fetch('meta2.json')
-      .then(response => response.json())
-      .then(data => {
-        // Sigma.jsを初期化する
-        const s = new sigma({
-          renderer: {
-            container: document.getElementById('sigma-container'),
-            type: 'canvas'
-          },
-          settings: {
-            minArrowSize: 6,
-            maxArrowSize: 8,
-            defaultEdgeColor: '#999',
-            defaultNodeColor: '#999'
-          }
-        });
-        // グラフを描画する
-        s.graph.read(data);
-        s.refresh();
-      })
-      .catch(error => {
-        console.error('読み込みエラー:', error);
-      });
-  </script>
+  
 </body>
 </html>

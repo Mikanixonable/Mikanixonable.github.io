@@ -1,4 +1,7 @@
-[
+const ert = {
+"rt":"rty"
+}
+var meta=[
   {
     "name": "_1html",
     "title": "#1 サイトマップ",
@@ -226,12 +229,12 @@
   },
   {
     "name": "_26html",
-    "title": "None",
+    "title": "Arrow Size",
     "content": null,
     "ctime": "1676956554",
-    "mtime": "1677045449",
+    "mtime": "1676973458",
     "cdate": "2023-02-21",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-21"
   },
   {
     "name": "_27html",
@@ -274,7 +277,7 @@
     "title": "SigmaJS example",
     "content": "",
     "ctime": "1676973088",
-    "mtime": "1677045537",
+    "mtime": "1677029851",
     "cdate": "2023-02-21",
     "mdate": "2023-02-22"
   },
@@ -289,10 +292,10 @@
   },
   {
     "name": "_32html",
-    "title": "文章表示機",
+    "title": "Document",
     "content": null,
     "ctime": "1677018985",
-    "mtime": "1677045407",
+    "mtime": "1677019422",
     "cdate": "2023-02-22",
     "mdate": "2023-02-22"
   },
@@ -481,25 +484,25 @@
     "title": "#5 サイトマップ",
     "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
     "ctime": "1676847520",
-    "mtime": "1677043235",
+    "mtime": "1676887911",
     "cdate": "2023-02-20",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-20"
   },
   {
     "name": "_50html",
-    "title": "三体問題　紫背景　サイズ可変",
+    "title": "untitled",
     "content": "",
     "ctime": "1672646821",
-    "mtime": "1677045279",
+    "mtime": "1675854265",
     "cdate": "2023-01-02",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-08"
   },
   {
     "name": "_51html",
-    "title": "Document",
+    "title": "Sigma.js Example",
     "content": null,
     "ctime": "1676978386",
-    "mtime": "1677045524",
+    "mtime": "1677029907",
     "cdate": "2023-02-21",
     "mdate": "2023-02-22"
   },
