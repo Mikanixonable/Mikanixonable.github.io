@@ -23,6 +23,7 @@ def colorMixer(c1,c2,k):
 
 #htmlファイル名全取得
 files = glob.glob("*.html")
+print(files)
 
 #ファイルの情報の取得、リスト化
 dates=[]
@@ -83,11 +84,15 @@ for i in range(len(files)):
     node_dic = {
     "id":"_"+str(files[i]).replace(".",""),
     "label":"<"+str(files[i].replace(".html",""))+">"+title,
-    "x":random.gauss(0,1),
-    "y":random.gauss(0,1),
-    "size":(len(str(soup))/max(size))**(0.5)*3+2,
-    "url":str(files[i]),
-    "color":dotcolor
+    "x": random.gauss(0,1),
+    "y": random.gauss(0,1),
+    "size": (len(str(soup))/max(size))**(0.5)*3+2,
+    "url": "1.html",
+    
+    "type": "image",
+    "image": "./e.svg",
+    "color": "BLUE"
+
     }
     graphs["nodes"].append(node_dic)
 
@@ -125,10 +130,17 @@ for i in range(len(files)):
         "id":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
         "source":"_"+str(files[i]).replace(".",""),
         "target":"_"+str(k).replace(".",""),
-        "label":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
-        "size": (len(str(soup))/max(size))*10,
+        # "label":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
+        "label":"r",
+        
+
+        # "size": (len(str(soup))/max(size))*30,
+        "size": 5,
+
         "color": edge_color,
-        "type": 'curvedArrow',
+
+        # "type": 'curvedArrow',
+        "type": 'arrow',
         }
         graphs["edges"].append(edge_dic)
         print(k+"_"+files[i])
