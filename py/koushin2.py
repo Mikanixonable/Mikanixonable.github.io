@@ -133,14 +133,18 @@ for i in range(len(files)):
         graphs["edges"].append(edge_dic)
         print(k+"_"+files[i])
         
-graphs2 = "graph = "+ str(graphs)
+
 
 json1 = codecs.open('./json/meta.json', "w", "utf-8")
 json.dump(dates, json1, indent = 2, ensure_ascii=False)
 json1.close()
 
+#jsonで出力する古いプログラム
 # json2 = codecs.open('./json/meta2.js', "w", "utf-8")
 # json.dump(graphs2, json2, indent = 2, ensure_ascii=False)
 # json2.close()
+
+#js形式
+graphs2 = "graph = "+ str(graphs)
 with codecs.open('./js/meta2.js',"w","utf-8") as o:
     print(graphs2, file = o)
