@@ -85,7 +85,7 @@ for i in range(len(files)):
     "label":"<"+str(files[i].replace(".html",""))+">"+title,
     "x":random.gauss(0,1),
     "y":random.gauss(0,1),
-    "size":(len(str(soup))/max(size))**(0.5)*70+2,
+    "size":(len(str(soup))/max(size))**(0.5)*3+2,
     "url":str(files[i]),
     "color":dotcolor
     }
