@@ -85,14 +85,15 @@ for i in range(len(files)):
     #グラフ描画用、頂点####################################
     node_dic = {
     "id":"_"+str(files[i]).replace(".",""),
-    "label":"<"+str(files[i].replace(".html",""))+">"+title,
+    # "label":"<"+str(files[i].replace(".html",""))+">"+title,
+    "label":str(files[i].replace(".html","")),
     "x": random.gauss(0,1),
     "y": random.gauss(0,1),
     "size": (len(str(soup))/max(size))**(0.5)*3+2,
     "url": "1.html",
     
     "type": "image",
-    "image": "./e.svg",
+    "image": "e.svg",
     "color": "BLUE"
 
     }
