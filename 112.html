@@ -1,547 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8"/>
+<title>d3.js sample</title>
+  <!-- styles -->
+
+  <style>
+  .svg_area {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: dashed 5px #000;
+  }
+
+  /*** Force layout ***/
+  .node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+  }
+
+  .link {
+  stroke: #999;
+  stroke-opacity: .6;
+  }
+</style>
+<script type="text/javascript" src="libs/d3.v3.min.js"></script>
 </head>
+
+
 <body>
-    
+  <div class="svg_area" id="svg_area"></div>
 </body>
+
+
 <script>
-    chart = {
-  // config
-  const SCREEN_WIDTH = width;
-  const SCREEN_HEIGHT = height;
-  const RESOLUTION = window.devicePixelRatio;
-  const NODE_RADIUS = 15;
-  const NODE_BORDER_WIDTH = 2;
-  const NODE_BORDER_COLOR = 0xffffff;
-  const NODE_BORDER_RADIUS = NODE_RADIUS + NODE_BORDER_WIDTH;
-  const NODE_HIT_WIDTH = 5;
-  const NODE_HIT_RADIUS = NODE_RADIUS + NODE_HIT_WIDTH;
-  const NODE_HOVER_BORDER_COLOR = 0x000000;
-  const ICON_FONT_FAMILY = 'Material Icons';
-  const ICON_FONT_SIZE = NODE_RADIUS / Math.SQRT2 * 2;
-  const ICON_COLOR = 0xffffff;
-  const ICON_TEXT = nodeData => typeof nodeData.id === 'number' || typeof nodeData.id === 'string' && (!isNaN(parseInt(nodeData.id[0], 10)) || nodeData.id[0] === '(') ? 'star' : 'person';
-  const LABEL_FONT_FAMILY = 'HelveticaRegular';
-  const LABEL_FONT_SIZE = 12;
-  const LABEL_COLOR = 0x333333;
-  const LABEL_TEXT = nodeData => `${nodeData.id}`;
-  const LABEL_PADDING = 4;
-  const LABEL_BACKGROUND_COLOR = 0xffffff;
-  const LABEL_BACKGROUND_ALPHA = 0.5;
-  const LABEL_HOVER_BACKGROUND_COLOR = 0xeeeeee;
-  const LABEL_HOVER_BACKGROUND_ALPHA = 1;
-  const LINK_SIZE = linkData => Math.log((linkData.value || 1) + 1);
-  const LINK_COLOR = 0xcccccc;
-  const LINK_HOVER_COLOR = 0x999999;
-  
-  const TEXTURE_COLOR = 0xffffff;
-  
-  const CIRCLE = 'CIRCLE';
-  const CIRCLE_BORDER = 'CIRCLE_BORDER';
-  const ICON = 'ICON';
-  const LABEL = 'LABEL';
-  const LABEL_BACKGROUND = 'LABEL_BACKGROUND';
-  const LINE = 'LINE';
+  /**
+ * Initialize SVG display
+ */
+function init(svg_id, width, height, data_path)
+{
+    // 色は既定のがある。
+    var color = d3.scale.category20();
 
-  // compute static layout
-  yield html`<div style="height: ${SCREEN_HEIGHT}px; font-size: 0.85rem">Computing layout...</div>`;
-  const { positions, layoutTime } = await runLayout(graph, config.layout);
-  const { nodes, links } = graph;
-  nodes.forEach(nodeData => {
-    const position = positions[nodeData.id];
-    nodeData.x = position.x;
-    nodeData.y = position.y;
-  });
-  
-  // normalize node positions
-  yield html`<div style="height: ${SCREEN_HEIGHT}px; font-size: 0.85rem">Rendering...</div>`;
-  const minNodeX = Math.min(...nodes.map(nodeData => nodeData.x));
-  const maxNodeX = Math.max(...nodes.map(nodeData => nodeData.x));
-  const minNodeY = Math.min(...nodes.map(nodeData => nodeData.y));
-  const maxNodeY = Math.max(...nodes.map(nodeData => nodeData.y));
-  const graphWidth = Math.abs(maxNodeX - minNodeX);
-  const graphHeight = Math.abs(maxNodeY - minNodeY);
-  const WORLD_WIDTH = Math.max(SCREEN_WIDTH * 2, graphWidth * 1.1);
-  const WORLD_HEIGHT = Math.max(SCREEN_HEIGHT * 2, graphHeight * 1.1);
-  nodes.forEach(nodeData => {
-    nodeData.x = nodeData.x - minNodeX - graphWidth / 2 + WORLD_WIDTH / 2;
-    nodeData.y = nodeData.y - minNodeY - graphHeight / 2 + WORLD_HEIGHT / 2;
-  });
+    var force = d3.layout.force()
+                  .charge(-500)      // node同士の力の基準？
+                  .linkDistance(100)  // node同士の距離の基準
+                  .size([width, height]);
 
-  // create PIXI application
-  console.log(SCREEN_WIDTH, SCREEN_HEIGHT, WORLD_WIDTH, WORLD_HEIGHT, RESOLUTION);
-  const app = new PIXI.Application({
-    width: SCREEN_WIDTH,
-    height: SCREEN_HEIGHT,
-    resolution: RESOLUTION,
-    transparent: true,
-    antialias: true,
-    autoDensity: true,
-    autoStart: false // disable automatic rendering by ticker, render manually instead, only when needed
-  });
-  app.view.style.width = `${SCREEN_WIDTH}px`;
-  
-  // preload fonts
-  await new Promise(resolve => {
-    app.loader.add(LABEL_FONT_FAMILY, 'https://gist.githubusercontent.com/zakjan/b61c0a26d297edf0c09a066712680f37/raw/8cdda3c21ba3668c3dd022efac6d7f740c9f1e18/HelveticaRegular.fnt').load(resolve);
-  });
-  await new FontFaceObserver(ICON_FONT_FAMILY).load();
-  
-  // manual rendering
-  // app.renderer.on('postrender', () => { console.log('render'); });
-  let renderRequestId = undefined;
-  const requestRender = () => {
-    if (renderRequestId) {
-      return;
-    }
-    renderRequestId = window.requestAnimationFrame(() => {
-      app.render();
-      renderRequestId = undefined;
+    var svg = d3.select('#' + svg_id).append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+    d3.json(data_path, function(error, graph) {
+
+        // JSON read error 時
+        if (graph == null) {
+            alert(error);
+            return;
+        }
+
+        force.nodes(graph.nodes)
+             .links(graph.links);
+
+        // Tick start
+        force.start();
+
+        var link = svg.selectAll('.link')
+                      .data(graph.links).enter()
+                      .append('line')
+                      .attr('class', 'link')
+                      .style('stroke-width', 1);
+
+        var node = svg.selectAll('.node')
+                      .data(graph.nodes).enter()
+                      .append('circle')
+                      .attr('class', 'node')
+                      .attr('r', 5)
+                      .style('fill', function(d) { return color(d.group); })
+                      .call(force.drag);
+
+        force.on('tick', function() {
+            link.attr('x1', function(d) { return d.source.x; })
+                .attr('y1', function(d) { return d.source.y; })
+                .attr('x2', function(d) { return d.target.x; })
+                .attr('y2', function(d) { return d.target.y; });
+
+            node.attr('cx', function(d) { return d.x; })
+                .attr('cy', function(d) { return d.y; });
+        });
     });
-  }
-  
-  // create PIXI viewport
-  const viewport = new Viewport({
-    screenWidth: SCREEN_WIDTH,
-    screenHeight: SCREEN_HEIGHT,
-    worldWidth: WORLD_WIDTH,
-    worldHeight: WORLD_HEIGHT,
-    interaction: app.renderer.plugins.interaction
-  });
-  const zoomIn = () => {
-    viewport.zoom(-WORLD_WIDTH / 10, true);
-  };
-  const zoomOut = () => {
-    viewport.zoom(WORLD_WIDTH / 10, true);
-  };
-  const resetViewport = () => {
-    viewport.center = new PIXI.Point(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
-    viewport.fitWorld(true);
-  };
-  app.stage.addChild(viewport);
-  viewport.drag().pinch().wheel().decelerate().clampZoom({ minWidth: SCREEN_WIDTH, minHeight: SCREEN_HEIGHT });
-  
-  // create layers: links, front links, nodes, labels, front nodes, front labels
-  const linksLayer = new PIXI.Container();
-  viewport.addChild(linksLayer);
-  const frontLinksLayer = new PIXI.Container();
-  viewport.addChild(frontLinksLayer);
-  const nodesLayer = new PIXI.Container();
-  viewport.addChild(nodesLayer);
-  const labelsLayer = new PIXI.Container();
-  viewport.addChild(labelsLayer);
-  const frontNodesLayer = new PIXI.Container();
-  viewport.addChild(frontNodesLayer);
-  const frontLabelsLayer = new PIXI.Container();
-  viewport.addChild(frontLabelsLayer);
-  
-  // create textures: circle, circle border, icons
-  const circleGraphics = new PIXI.Graphics();
-  circleGraphics.beginFill(TEXTURE_COLOR);
-  circleGraphics.drawCircle(NODE_RADIUS, NODE_RADIUS, NODE_RADIUS);
-  const circleTexture = app.renderer.generateTexture(circleGraphics, PIXI.settings.SCALE_MODE, RESOLUTION);
-  
-  const circleBorderGraphics = new PIXI.Graphics();
-  circleBorderGraphics.lineStyle(NODE_BORDER_WIDTH, TEXTURE_COLOR);
-  circleBorderGraphics.drawCircle(NODE_BORDER_RADIUS, NODE_BORDER_RADIUS, NODE_RADIUS);
-  const circleBorderTexture = app.renderer.generateTexture(circleBorderGraphics, PIXI.settings.SCALE_MODE, RESOLUTION);
-  
-  const iconTextures = new Map(uniq(nodes.map(nodeData => ICON_TEXT(nodeData))).map(icon => {
-    const iconText = new PIXI.Text(icon, {
-      fontFamily: ICON_FONT_FAMILY,
-      fontSize: ICON_FONT_SIZE,
-      fill: TEXTURE_COLOR
-    });
-    const iconTexture = app.renderer.generateTexture(iconText, PIXI.settings.SCALE_MODE, RESOLUTION);
-    return [icon, iconTexture];
-  }));
-
-  // state
-  let nodeDataToNodeGfx = new WeakMap();
-  let nodeGfxToNodeData = new WeakMap();
-  let nodeDataToLabelGfx = new WeakMap();
-  let labelGfxToNodeData = new WeakMap();
-  let linkDataToLinkGfx = new WeakMap();
-  let linkGfxToLinkData = new WeakMap();
-  let hoveredNodeData = undefined;
-  let clickedNodeData = undefined;
-  let hoveredLinkData = undefined;
-  
-  const updatePositions = () => {
-    nodes.forEach(nodeData => {
-      const nodeGfx = nodeDataToNodeGfx.get(nodeData);
-      const labelGfx = nodeDataToLabelGfx.get(nodeData);
-      
-      nodeGfx.x = nodeData.x;
-      nodeGfx.y = nodeData.y;
-      labelGfx.x = nodeData.x;
-      labelGfx.y = nodeData.y;
-    });
-    
-    links.forEach(linkData => {
-      const sourceNodeData = nodes.find(nodeData => nodeData.id === linkData.source);
-      const targetNodeData = nodes.find(nodeData => nodeData.id === linkData.target);
-      
-      const linkGfx = linkDataToLinkGfx.get(linkData);
-      const line = linkGfx.getChildByName(LINE);
-      
-      const lineLength = Math.max(Math.sqrt((targetNodeData.x - sourceNodeData.x) ** 2 + (targetNodeData.y - sourceNodeData.y) ** 2) - NODE_BORDER_RADIUS * 2, 0);
-      
-      linkGfx.x = sourceNodeData.x;
-      linkGfx.y = sourceNodeData.y;
-      linkGfx.rotation = Math.atan2(targetNodeData.y - sourceNodeData.y, targetNodeData.x - sourceNodeData.x);
-      line.width = lineLength;
-    });
-    
-    requestRender();
-  };
-  
-  const round = value => Math.round(value * 1000) / 1000;
-  const updateVisibility = () => {
-    // culling
-    const cull = new PIXI.Cull();
-    cull.addAll(nodesLayer.children);
-    cull.addAll(labelsLayer.children);
-    cull.addAll(linksLayer.children);
-    cull.cull(app.renderer.screen);
-    // console.log(
-    //   [...cull._targetList].filter(x => x.visible === true).length,
-    //   [...cull._targetList].filter(x => x.visible === false).length
-    // );
-    
-    // levels of detail
-    const zoom = viewport.scale.x;
-    const zoomSteps = [0.1, 0.2, 0.4, Infinity];
-    const zoomStep = zoomSteps.findIndex(zoomStep => zoom <= zoomStep);
-    
-    nodes.forEach(nodeData => {
-      const nodeGfx = nodeDataToNodeGfx.get(nodeData);
-      const circleBorder = nodeGfx.getChildByName(CIRCLE_BORDER);
-      const icon = nodeGfx.getChildByName(ICON);
-      const labelGfx = nodeDataToLabelGfx.get(nodeData);
-      const label = labelGfx.getChildByName(LABEL);
-      const labelBackground = labelGfx.getChildByName(LABEL_BACKGROUND);
-      
-      circleBorder.visible = zoomStep >= 1;
-      icon.visible = zoomStep >= 2;
-      label.visible = zoomStep >= 3;
-      labelBackground.visible = zoomStep >= 3;
-    });
-    
-    links.forEach(linkData => {
-      const linkGfx = linkDataToLinkGfx.get(linkData);
-      const line = linkGfx.getChildByName(LINE);
-      
-      line.visible = zoomStep >= 1;
-    });
-  };
-  
-  // event handlers
-  const hoverNode = nodeData => {
-    if (clickedNodeData) {
-      return;
-    }
-    if (hoveredNodeData === nodeData) {
-      return;
-    }
-    
-    hoveredNodeData = nodeData;
-    
-    const nodeGfx = nodeDataToNodeGfx.get(nodeData);
-    const labelGfx = nodeDataToLabelGfx.get(nodeData);
-
-    // move to front layer
-    nodesLayer.removeChild(nodeGfx);
-    frontNodesLayer.addChild(nodeGfx);
-    labelsLayer.removeChild(labelGfx);
-    frontLabelsLayer.addChild(labelGfx);
-    
-    // add hover effect
-    const circleBorder = nodeGfx.getChildByName(CIRCLE_BORDER);
-    circleBorder.tint = NODE_HOVER_BORDER_COLOR;
-
-    const labelBackground = labelGfx.getChildByName(LABEL_BACKGROUND);
-    labelBackground.tint = LABEL_HOVER_BACKGROUND_COLOR;
-    labelBackground.alpha = LABEL_HOVER_BACKGROUND_ALPHA;
-    
-    requestRender();
-  };
-  const unhoverNode = nodeData => {
-    if (clickedNodeData) {
-      return;
-    }
-    if (hoveredNodeData !== nodeData) {
-      return;
-    }
-    
-    hoveredNodeData = undefined;
-    
-    const nodeGfx = nodeDataToNodeGfx.get(nodeData);
-    const labelGfx = nodeDataToLabelGfx.get(nodeData);
-    
-    // move back from front layer
-    frontNodesLayer.removeChild(nodeGfx);
-    nodesLayer.addChildAt(nodeGfx, nodes.indexOf(nodeData));
-    frontLabelsLayer.removeChild(labelGfx);
-    labelsLayer.addChildAt(labelGfx, nodes.indexOf(nodeData));
-
-    // clear hover effect
-    const circleBorder = nodeGfx.getChildByName(CIRCLE_BORDER);
-    circleBorder.tint = NODE_BORDER_COLOR;
-    
-    const labelBackground = labelGfx.getChildByName(LABEL_BACKGROUND);
-    labelBackground.tint = LABEL_BACKGROUND_COLOR;
-    labelBackground.alpha = LABEL_BACKGROUND_ALPHA;
-    
-    requestRender();
-  };
-  const hoverLink = linkData => {
-    if (hoveredLinkData === linkData) {
-      return;
-    }
-    
-    hoveredLinkData = linkData;
-    
-    const linkGfx = linkDataToLinkGfx.get(linkData);
-
-    // move to front layer
-    linksLayer.removeChild(linkGfx);
-    frontLinksLayer.addChild(linkGfx);
-    
-    // add hover effect
-    const line = linkGfx.getChildByName(LINE);
-    line.tint = LINK_HOVER_COLOR;
-    
-    requestRender();
-  };
-  const unhoverLink = linkData => {
-    if (hoveredLinkData !== linkData) {
-      return;
-    }
-    
-    hoveredLinkData = undefined;
-    
-    const linkGfx = linkDataToLinkGfx.get(linkData);
-    
-    // move back from front layer
-    frontLinksLayer.removeChild(linkGfx);
-    linksLayer.addChildAt(linkGfx, links.indexOf(linkData));
-
-    // clear hover effect
-    const line = linkGfx.getChildByName(LINE);
-    line.tint = LINK_COLOR;
-    
-    requestRender();
-  };
-  const moveNode = (nodeData, point) => {
-    const nodeGfx = nodeDataToNodeGfx.get(nodeData);
-    
-    nodeData.x = point.x;
-    nodeData.y = point.y;
-    
-    updatePositions();
-  };
-  const appMouseMove = event => {
-    if (!clickedNodeData) {
-      return;
-    }
-    
-    moveNode(clickedNodeData, viewport.toWorld(event.data.global));
-  };
-  const clickNode = nodeData => {
-    clickedNodeData = nodeData;
-    
-    // enable node dragging
-    app.renderer.plugins.interaction.on('mousemove', appMouseMove);
-    // disable viewport dragging
-    viewport.pause = true;
-  };
-  const unclickNode = () => {
-    clickedNodeData = undefined;
-    
-    // disable node dragging
-    app.renderer.plugins.interaction.off('mousemove', appMouseMove);
-    // enable viewport dragging
-    viewport.pause = false;
-  };
-  
-  // create node graphics
-  const nodeDataGfxPairs = nodes.map(nodeData => {
-    const nodeGfx = new PIXI.Container();
-    nodeGfx.x = nodeData.x;
-    nodeGfx.y = nodeData.y;
-    nodeGfx.interactive = true;
-    nodeGfx.buttonMode = true;
-    nodeGfx.hitArea = new PIXI.Circle(0, 0, NODE_HIT_RADIUS);
-    nodeGfx.on('mouseover', event => hoverNode(nodeGfxToNodeData.get(event.currentTarget)));
-    nodeGfx.on('mouseout', event => unhoverNode(nodeGfxToNodeData.get(event.currentTarget)));
-    nodeGfx.on('mousedown', event => clickNode(nodeGfxToNodeData.get(event.currentTarget)));
-    nodeGfx.on('mouseup', () => unclickNode());
-    nodeGfx.on('mouseupoutside', () => unclickNode());
-    
-    const circle = new PIXI.Sprite(circleTexture);
-    circle.name = CIRCLE;
-    circle.x = -circle.width / 2;
-    circle.y = -circle.height / 2;
-    circle.tint = colorToNumber(color(nodeData));
-    nodeGfx.addChild(circle);
-
-    const circleBorder = new PIXI.Sprite(circleBorderTexture);
-    circleBorder.name = CIRCLE_BORDER;
-    circleBorder.x = -circleBorder.width / 2;
-    circleBorder.y = -circleBorder.height / 2;
-    circleBorder.tint = NODE_BORDER_COLOR;
-    nodeGfx.addChild(circleBorder);
-
-    const icon = new PIXI.Sprite(iconTextures.get(ICON_TEXT(nodeData)));
-    icon.name = ICON;
-    icon.x = -icon.width / 2;
-    icon.y = -icon.height / 2;
-    icon.tint = ICON_COLOR;
-    nodeGfx.addChild(icon);
-    
-    const labelGfx = new PIXI.Container();
-    labelGfx.x = nodeData.x;
-    labelGfx.y = nodeData.y;
-    labelGfx.interactive = true;
-    labelGfx.buttonMode = true;
-    labelGfx.on('mouseover', event => hoverNode(labelGfxToNodeData.get(event.currentTarget)));
-    labelGfx.on('mouseout', event => unhoverNode(labelGfxToNodeData.get(event.currentTarget)));
-    labelGfx.on('mousedown', event => clickNode(labelGfxToNodeData.get(event.currentTarget)));
-    labelGfx.on('mouseup', () => unclickNode());
-    labelGfx.on('mouseupoutside', () => unclickNode());
-    
-    const label = new PIXI.BitmapText(LABEL_TEXT(nodeData), {
-      font: {
-        name: LABEL_FONT_FAMILY,
-        size: LABEL_FONT_SIZE
-      },
-      align: 'center',
-      tint: LABEL_COLOR
-    });
-    label.name = LABEL;
-    label.x = -label.width / 2;
-    label.y = NODE_HIT_RADIUS + LABEL_PADDING;
-    const labelBackground = new PIXI.Sprite(PIXI.Texture.WHITE);
-    labelBackground.name = LABEL_BACKGROUND;
-    labelBackground.x = -(label.width + LABEL_PADDING * 2) / 2;
-    labelBackground.y = NODE_HIT_RADIUS;
-    labelBackground.width = label.width + LABEL_PADDING * 2;
-    labelBackground.height = label.height + LABEL_PADDING * 2;
-    labelBackground.tint = LABEL_BACKGROUND_COLOR;
-    labelBackground.alpha = LABEL_BACKGROUND_ALPHA;
-    labelGfx.addChild(labelBackground);
-    labelGfx.addChild(label);
-    
-    nodesLayer.addChild(nodeGfx);
-    labelsLayer.addChild(labelGfx);
-
-    return [nodeData, nodeGfx, labelGfx];
-  });
-  
-  // create link graphics
-  const linkDataGfxPairs = links.map(linkData => {
-    const sourceNodeData = nodes.find(nodeData => nodeData.id === linkData.source);
-    const targetNodeData = nodes.find(nodeData => nodeData.id === linkData.target);
-    
-    const lineLength = Math.max(Math.sqrt((targetNodeData.x - sourceNodeData.x) ** 2 + (targetNodeData.y - sourceNodeData.y) ** 2) - NODE_BORDER_RADIUS * 2, 0);
-    const lineSize = LINK_SIZE(linkData);
-    
-    const linkGfx = new PIXI.Container();
-    linkGfx.x = sourceNodeData.x;
-    linkGfx.y = sourceNodeData.y;
-    linkGfx.pivot.set(0, lineSize / 2);
-    linkGfx.rotation = Math.atan2(targetNodeData.y - sourceNodeData.y, targetNodeData.x - sourceNodeData.x);
-    linkGfx.interactive = true;
-    linkGfx.buttonMode = true;
-    linkGfx.on('mouseover', event => hoverLink(linkGfxToLinkData.get(event.currentTarget)));
-    linkGfx.on('mouseout', event => unhoverLink(linkGfxToLinkData.get(event.currentTarget)));
-    
-    const line = new PIXI.Sprite(PIXI.Texture.WHITE);
-    line.name = LINE;
-    line.x = NODE_BORDER_RADIUS;
-    line.y = -lineSize / 2;
-    line.width = lineLength;
-    line.height = lineSize;
-    line.tint = LINK_COLOR;
-    linkGfx.addChild(line);
-    
-    linksLayer.addChild(linkGfx);
-    
-    return [linkData, linkGfx];
-  });
-  
-  // create lookup tables
-  nodeDataToNodeGfx = new WeakMap(nodeDataGfxPairs.map(([nodeData, nodeGfx, labelGfx]) => [nodeData, nodeGfx]));
-  nodeGfxToNodeData = new WeakMap(nodeDataGfxPairs.map(([nodeData, nodeGfx, labelGfx]) => [nodeGfx, nodeData]));
-  nodeDataToLabelGfx = new WeakMap(nodeDataGfxPairs.map(([nodeData, nodeGfx, labelGfx]) => [nodeData, labelGfx]));
-  labelGfxToNodeData = new WeakMap(nodeDataGfxPairs.map(([nodeData, nodeGfx, labelGfx]) => [labelGfx, nodeData]));
-  linkDataToLinkGfx = new WeakMap(linkDataGfxPairs.map(([linkData, linkGfx]) => [linkData, linkGfx]));
-  linkGfxToLinkData = new WeakMap(linkDataGfxPairs.map(([linkData, linkGfx]) => [linkGfx, linkData]));
-
-  // initial draw
-  resetViewport();
-  updatePositions();
-  
-  viewport.on('frame-end', () => {
-    if (viewport.dirty) {
-      updateVisibility();
-      requestRender();
-      viewport.dirty = false;
-    }
-  });
-
-  // destroy PIXI application on Observable cell invalidation
-  invalidation.then(() => {
-    if (renderRequestId) {
-      window.cancelAnimationFrame(renderRequestId);
-      renderRequestId = undefined;
-    }
-    
-    app.destroy(true, true);
-  });
-
-  // prevent body scrolling
-  app.view.addEventListener('wheel', event => { event.preventDefault(); });
- 
-  // create container
-  const container = html`<div style="position: relative"></div>`;
-  const toolbar = html`<div style="position: absolute; top: 0; left: 0; margin: 5px"></div>`;
-  container.appendChild(toolbar);
-  const zoomInButton = html`<button>+</button>`;
-  zoomInButton.addEventListener('click', () => zoomIn());
-  toolbar.appendChild(zoomInButton);
-  const zoomOutButton = html`<button>−</button>`;
-  zoomOutButton.addEventListener('click', () => zoomOut());
-  toolbar.appendChild(zoomOutButton);
-  const resetButton = html`<button>Reset</button>`;
-  resetButton.addEventListener('click', () => resetViewport());
-  toolbar.appendChild(resetButton);
-  const infoText = html`<div style="margin-top: 10px; font-size: 0.85rem; text-shadow: 1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white">
-    <strong>Layout stats:</strong><br>
-    Layout: ${config.layout}<br>
-    Time: ${formatInt(layoutTime)} ms<br>
-    Readability score: <span id="readability-score">Computing...</span><br>
-  </div>`;
-  const readabilityScoreText = infoText.querySelector('#readability-score');
-  toolbar.appendChild(infoText);
-  if (config.showFpsMeter) {
-    const fpsMeterContainer = html`<div style="position: absolute; top: 0; right: 0; margin: 5px"></div>`;
-    fpsMeterContainer.appendChild(fpsMeter());
-    container.appendChild(fpsMeterContainer);
-  }
-  container.appendChild(app.view);
-  
-  yield container;
-  
-  readabilityScoreText.innerHtml = 'Computing...';
-  const layoutReadability = await getLayoutReadability(graph);
-  readabilityScoreText.innerText = formatFloat(layoutReadability);
 }
+
+/**
+ * Main
+ */
+var svg_id    = 'svg_area';
+var element   = document.getElementById(svg_id);
+var data_path = 'data/data.json';
+
+init(svg_id, element.clientWidth, element.clientHeight, data_path);
+
 </script>
 </html>

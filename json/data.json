@@ -1,0 +1,26 @@
+{
+    "nodes":[
+        {"name": "蓮", "group": 1},
+        {"name": "大翔", "group": 1},
+        {"name": "陽向", "group": 1},
+        {"name": "陽太", "group": 1},
+        {"name": "悠真", "group": 1},
+        {"name": "陽菜", "group": 2},
+        {"name": "凛", "group": 2},
+        {"name": "結菜", "group": 2},
+        {"name": "葵", "group": 2},
+        {"name": "結愛", "group": 2}
+    ],
+    "links":[
+        {"source": 0, "target": 5},
+        {"source": 1, "target": 7},
+        {"source": 2, "target": 8},
+        {"source": 3, "target": 7},
+        {"source": 4, "target": 9},
+        {"source": 5, "target": 2},
+        {"source": 6, "target": 4},
+        {"source": 7, "target": 1},
+        {"source": 8, "target": 4},
+        {"source": 9, "target": 0}
+    ]
+}
