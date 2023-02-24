@@ -5,20 +5,12 @@
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 </head>
 <body>
-  <div id="div"></div>
 <style type="text/css">
-  body{
-    background-color: #43656d;
-    margin: 0em;
-  }
-
 
 </style>
-<!-- <script src="js/meta2.js"></script> -->
 <script type="text/javascript">
-  var pE = document.getElementById("div")
-    var width = pE.clientWidth;
-    var height = document.documentElement.clientHeight*0.99;
+    var width = 800;
+    var height = 800;
     // nodeの定義。ここを増やすと楽しい。
     var nodes = [
         {id:0, label:"nodeA"},
@@ -30,7 +22,7 @@
 
     ];
 
-    // // node同士の紐付け設定。実用の際は、ここをどう作るかが難しいのかも。
+    // node同士の紐付け設定。実用の際は、ここをどう作るかが難しいのかも。
     var links = [
         {source:0, target:1},
         {source:0, target:2},
@@ -47,10 +39,10 @@
         .nodes(nodes)
         .links(links)
         .size([width, height])
-        .distance(500) // node同士の距離
-        .friction(0.1) // 摩擦力(加速度)的なものらしい。
-        .charge(-10000) // 寄っていこうとする力。推進力(反発力)というらしい。
-        .gravity(0.9) // 画面の中央に引っ張る力。引力。
+        .distance(140) // node同士の距離
+        .friction(0.9) // 摩擦力(加速度)的なものらしい。
+        .charge(-100) // 寄っていこうとする力。推進力(反発力)というらしい。
+        .gravity(0.1) // 画面の中央に引っ張る力。引力。
         .start();
 
     // svg領域の作成
@@ -64,8 +56,8 @@
         .enter()
         .append("line")
         .style({stroke: "#ccc",
-        "stroke-width": 2
-        });
+        "stroke-width": 1
+    });
 
     // nodesの描画(今回はsvgの円描画機能を利用)
     var node = svg.selectAll("circle")
@@ -74,10 +66,10 @@
         .append("circle")
         .attr({
             // せっかくなので半径をランダムに
-            r: function() {return Math.random()*10 + 10;}
+            r: function() {return Math.random() * (40 - 10) + 10;}
         })
         .style({
-            fill: "#597"
+            fill: "orange"
         })
         .call(force.drag);
 
@@ -89,7 +81,7 @@
         .attr({
             "text-anchor":"middle",
             "fill":"white",
-            "font-size": "1em"
+            "font-size": "9px"
         })
         .text(function(data) { return data.label; });
 
