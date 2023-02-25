@@ -1,233 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <title>d3test</title>
+  <script src="js/d3v3.js" charset="utf-8"></script>
+  <style type="text/css">
+    body{
+      background-color: #43656d;
+      margin: 0em;
+    }
+  
+  
+  </style>
 </head>
+
 <body>
-    <div></div>
+  <div id="div"></div>
 </body>
-    
 
-<script>
+<script src="js/meta2.js"></script>
+<script type="text/javascript">
+  var pE = document.getElementById("div")
+    var width = pE.clientWidth;
+    var height = document.documentElement.clientHeight*0.99;
+    // nodeの定義。ここを増やすと楽しい。
+    // var nodes = [
+    //     {id:0, label:"nodeA"},
+    //     {id:1, label:"nodeB"},
+    //     {id:2, label:"nodeC"},
+    //     {id:3, label:"nodeD"},
+    //     {id:4, label:"nodeE"},
+    //     {id:5, label:"nodeF"},
 
-    // Copyright 2021 Observable, Inc.
-// Released under the ISC license.
-// https://observablehq.com/@d3/density-contours
-function DensityContours(data, {
-  x = ([x]) => x, // given d in data, returns the (quantitative) x-value
-  y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-  xLabel, // a label for the x-axis
-  yLabel, // a label for the y-axis
-  bandwidth = 30, // the bandwidth for contouring (in pixels)
-  thresholds = 30, // requested number of contours
-  fill = "none", // the fill color (either a constant or a function of the density)
-  stroke = typeof fill === "function" ? null : "currentcolor", // stroke color (either a constant or a function of the density)
-  strokeWidth = (d, i) => i % 5 ? 0.25 : 1, // stroke width as a function of the density
-  marginTop = 20, // top margin, in pixels
-  marginRight = 30, // right margin, in pixels
-  marginBottom = 30, // bottom margin, in pixels
-  marginLeft = 40, // left margin, in pixels
-  width = 640, // outer width, in pixels
-  height = 400, // outer height, in pixels
-  xDomain, // [xmin, xmax]
-  xRange = [marginLeft, width - marginRight], // [left, right]
-  yDomain, // [ymin, ymax]
-  yRange = [height - marginBottom, marginTop] // [bottom, top]
-} = {}) {
-  // Compute values.
-  const X = d3.map(data, x);
-  const Y = d3.map(data, y);
-  const I = d3.range(data.length);
+    // ];
 
-  const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    // // node同士の紐付け設定。実用の際は、ここをどう作るかが難しいのかも。
+    // var links = [
+    //     {source:0, target:1},
+    //     {source:0, target:2},
+    //     {source:1, target:3},
+    //     {source:1, target:3},
+    //     {source:2, target:1},
+    //     {source:2, target:3},
+    //     {source:3, target:4},
+    //     {source:4, target:5},
+    //     {source:5, target:3}
+    // ];
+    // forceLayout自体の設定はここ。ここをいじると楽しい。
+    var force = d3.layout.force()
+        .nodes(nodes)
+        .links(links)
+        .size([width, height])
+        .distance(600) // node同士の距離
+        .friction(0.1) // 摩擦力(加速度)的なものらしい。
+        .charge(-6000) // 寄っていこうとする力。推進力(反発力)というらしい。
+        .gravity(0.9) // 画面の中央に引っ張る力。引力。
+        .start();
 
-  if (xDomain === undefined) xDomain = d3.extent(X);
-  if (yDomain === undefined) yDomain = d3.extent(Y);
+    // svg領域の作成
+    var svg = d3.select("body")
+        .append("svg")
+        .attr({width:width, height:height});
 
-  const xScale = d3.scaleLinear()
-    .domain(xDomain).nice()
-    .rangeRound(xRange);
+    // link線の描画(svgのline描画機能を利用)
+    var link = svg.selectAll("line")
+        .data(links)
+        .enter()
+        .append("line")
+        .style({stroke: "#ccc",
+        "stroke-width": 2
+        });
 
-  const yScale = d3.scaleLinear()
-    .domain(yDomain).nice()
-    .rangeRound(yRange);
-  
-  const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
+    // nodesの描画(今回はsvgの円描画機能を利用)
+    var node = svg.selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr({
+            // せっかくなので半径をランダムに
+            r: function() {return Math.random()*10 + 10;}
+        })
+        .style({
+            fill: "#597"
+        })
+        .call(force.drag);
 
-  const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
-  
-  const contours = d3.contourDensity()
-    .x(i => xScale(X[i]))
-    .y(i => yScale(Y[i]))
-    .size([width, height])
-    .bandwidth(bandwidth)
-    .thresholds(thresholds)
-  (I);
-  
-  svg.append("g")
-    .attr("transform", `translate(0,${height - marginBottom})`)
-    .call(xAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.select(".tick:last-of-type text").clone()
-        .attr("y", -3)
-        .attr("dy", null)
-        .attr("font-weight", "bold")
-        .text(xLabel));
-  
-  svg.append("g")
-    .attr("transform", `translate(${marginLeft},0)`)
-    .call(yAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.select(".tick:last-of-type text").clone()
-        .attr("x", 3)
-        .attr("text-anchor", "start")
-        .attr("font-weight", "bold")
-        .text(yLabel));
-  
-  svg.append("g")
-      .attr("stroke-linejoin", "round")
-      .attr("fill", typeof fill === "function" ? null : fill)
-      .attr("stroke", typeof stroke === "function" ? null : stroke)
-      .attr("stroke-width", typeof strokeWidth === "function" ? null : strokeWidth)
-    .selectAll("path")
-    .data(contours)
-    .join("path")
-      .attr("fill", typeof fill === "function" ? d => fill(d.value) : null)
-      .attr("stroke", typeof stroke === "function" ? d => stroke(d.value) : null)
-      .attr("stroke-width", typeof strokeWidth === "function" ? (d, i) => strokeWidth(d.value, i) : null)
-      .attr("d", d3.geoPath());
-  
-  svg.append("g")
-      .attr("stroke", "white")
-    .selectAll("circle")
-    .data(I)
-    .join("circle")
-      .attr("cx", i => xScale(X[i]))
-      .attr("cy", i => yScale(Y[i]))
-      .attr("r", 2);
-  
-  return svg.node();
-}
+    // nodeのラベル周りの設定
+    var label = svg.selectAll('text')
+        .data(nodes)
+        .enter()
+        .append('text')
+        .attr({
+            "text-anchor":"middle",
+            "fill":"white",
+            "font-size": "1em"
+        })
+        .text(function(data) { return data.label; });
 
-
-
-    // Copyright 2021 Observable, Inc.
-// Released under the ISC license.
-// https://observablehq.com/@d3/density-contours
-function DensityContours1(data, {
-  x = ([x]) => x, // given d in data, returns the (quantitative) x-value
-  y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-  xLabel, // a label for the x-axis
-  yLabel, // a label for the y-axis
-  bandwidth = 30, // the bandwidth for contouring (in pixels)
-  thresholds = 30, // requested number of contours
-  fill = "none", // the fill color (either a constant or a function of the density)
-  stroke = typeof fill === "function" ? null : "currentcolor", // stroke color (either a constant or a function of the density)
-  strokeWidth = (d, i) => i % 5 ? 0.25 : 1, // stroke width as a function of the density
-  marginTop = 20, // top margin, in pixels
-  marginRight = 30, // right margin, in pixels
-  marginBottom = 30, // bottom margin, in pixels
-  marginLeft = 40, // left margin, in pixels
-  width = 640, // outer width, in pixels
-  height = 400, // outer height, in pixels
-  xDomain, // [xmin, xmax]
-  xRange = [marginLeft, width - marginRight], // [left, right]
-  yDomain, // [ymin, ymax]
-  yRange = [height - marginBottom, marginTop] // [bottom, top]
-} = {}) {
-  // Compute values.
-  const X = d3.map(data, x);
-  const Y = d3.map(data, y);
-  const I = d3.range(data.length);
-
-  const svg = d3.create("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
-
-  if (xDomain === undefined) xDomain = d3.extent(X);
-  if (yDomain === undefined) yDomain = d3.extent(Y);
-
-  const xScale = d3.scaleLinear()
-    .domain(xDomain).nice()
-    .rangeRound(xRange);
-
-  const yScale = d3.scaleLinear()
-    .domain(yDomain).nice()
-    .rangeRound(yRange);
-  
-  const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
-
-  const yAxis = d3.axisLeft(yScale).tickSizeOuter(0);
-  
-  const contours = d3.contourDensity()
-    .x(i => xScale(X[i]))
-    .y(i => yScale(Y[i]))
-    .size([width, height])
-    .bandwidth(bandwidth)
-    .thresholds(thresholds)
-  (I);
-  
-  svg.append("g")
-    .attr("transform", `translate(0,${height - marginBottom})`)
-    .call(xAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.select(".tick:last-of-type text").clone()
-        .attr("y", -3)
-        .attr("dy", null)
-        .attr("font-weight", "bold")
-        .text(xLabel));
-  
-  svg.append("g")
-    .attr("transform", `translate(${marginLeft},0)`)
-    .call(yAxis)
-    .call(g => g.select(".domain").remove())
-    .call(g => g.select(".tick:last-of-type text").clone()
-        .attr("x", 3)
-        .attr("text-anchor", "start")
-        .attr("font-weight", "bold")
-        .text(yLabel));
-  
-  svg.append("g")
-      .attr("stroke-linejoin", "round")
-      .attr("fill", typeof fill === "function" ? null : fill)
-      .attr("stroke", typeof stroke === "function" ? null : stroke)
-      .attr("stroke-width", typeof strokeWidth === "function" ? null : strokeWidth)
-    .selectAll("path")
-    .data(contours)
-    .join("path")
-      .attr("fill", typeof fill === "function" ? d => fill(d.value) : null)
-      .attr("stroke", typeof stroke === "function" ? d => stroke(d.value) : null)
-      .attr("stroke-width", typeof strokeWidth === "function" ? (d, i) => strokeWidth(d.value, i) : null)
-      .attr("d", d3.geoPath());
-  
-  svg.append("g")
-      .attr("stroke", "white")
-    .selectAll("circle")
-    .data(I)
-    .join("circle")
-      .attr("cx", i => xScale(X[i]))
-      .attr("cy", i => yScale(Y[i]))
-      .attr("r", 2);
-  
-  return svg.node();
-}
-
-
-
-
-
-
-
-
-
-
+    // tickイベント(力学計算が起こるたびに呼ばれるらしいので、座標追従などはここで)
+    force.on("tick", function() {
+        link.attr({
+            x1: function(data) { return data.source.x;},
+            y1: function(data) { return data.source.y;},
+            x2: function(data) { return data.target.x;},
+            y2: function(data) { return data.target.y;}
+        });
+        node.attr({
+            cx: function(data) { return data.x;},
+            cy: function(data) { return data.y;}
+        });
+        // labelも追随するように
+        label.attr({
+            x: function(data) { return data.x;},
+            y: function(data) { return data.y;}
+        });
+    });
 
 </script>
+
+
 </html>
