@@ -5,37 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3-dispatch@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
+<script>
+
+const simulation = d3.forceSimulation(nodes);
+
+</script>
 </head>
 <body>
-    
+    <svg></svg>
 </body>
 <script>
 
-import React, { useState } from "react";
-import DeckGL, { OrthographicView } from "deck.gl";
-
-import renderLayers from "./Layers";
-
-const view = new OrthographicView({ fov: 50 });
-
-export default () => {
-  const [viewport] = useState({
-    positon: [0, 0, 0],
-    width: window.innerWidth,
-    height: window.innerHeight,
-    target: [0, 0],
-    zoom: 1
-  });
-
-  return (
-    <DeckGL
-      views={view}
-      initialViewState={viewport}
-      controller={true}
-      layers={renderLayers()}
-    />
-  );
-};
-
+    
 </script>
 </html>
