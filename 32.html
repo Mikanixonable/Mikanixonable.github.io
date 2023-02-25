@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章表示機</title>
+    <title>json/txt表示機</title>
 </head>
 <body>
     <!-- HTML -->
@@ -14,7 +14,7 @@
 <script>
 // JavaScript
 var request = new XMLHttpRequest();
-request.open("GET", "meta.json", true);
+request.open("GET", "json/meta.json", true);
 request.onload = function() {
   if (request.status === 200) {
     var jsonText = request.responseText;
