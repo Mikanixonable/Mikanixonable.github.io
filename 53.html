@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marquee要素　銀河鉄道の夜</title>
+    <title>Document</title>
     <style>
         body{
-            font-size: 0.3em;
-            background-color: rgb(6, 24, 41);
-            color: #e3b10f;
-            display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* padding: 1em; */
-        /* margin: 100em,10em,10em; */
+            margin: 0em;
+            color: rgb(249, 235, 108);
+            background-color: rgb(1, 11, 22);
+            font-size: 0.4em;
         }
-        marquee{
-            width: 150%;
-        }
-        /* 星空の背景のスタイル */
-.stars {
+        .stars {
   position: relative;
   width: 100%; /* 星空の横幅 */
   height: 100vh; /* 星空の縦幅 */
-  background-image: linear-gradient(0deg, #002042, #051530, #010112); /* 星空の背景色 */
+  background-image: linear-gradient(-18deg, #010c34, #000610, #01010b); /* 星空の背景色 */
   overflow: hidden; /* 星が枠外にはみ出すのを防ぐ */
 }
 
@@ -57,20 +48,37 @@
   }
 }
     </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+      // 星を表示するための親要素を取得
+      const stars = document.querySelector(".stars");
+    
+      // 星を生成する関数
+      const createStar = () => {
+        const starEl = document.createElement("span");
+        starEl.className = "star";
+        const minSize = 1; // 星の最小サイズを指定
+        const maxSize = 2; // 星の最大サイズを指定
+        const size = Math.random() * (maxSize - minSize) + minSize;
+        starEl.style.width = `${size}px`;
+        starEl.style.height = `${size}px`;
+        starEl.style.left = `${Math.random() * 100}%`;
+        starEl.style.top = `${Math.random() * 100}%`;
+        starEl.style.animationDelay = `${Math.random() * 40}s`;
+        stars.appendChild(starEl);
+      };
+    
+      // for文で星を生成する関数を指定した回数呼び出す
+      for (let i = 0; i <= 500; i++) {
+        createStar();
+      }
+    });
+    
+    </script>
 </head>
-<body>
-    <div class="stars">
-
-
-<marquee style="transform: rotate(-30deg);" scrollamount="2px">
-    銀河鉄道の夜
-    宮沢賢治
-    
-    
-    +目次
-    
-    一、午后の授業
-    
+<body class="stars">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<marquee style="transform: rotate(15deg);" scrollamount="1em">
     「ではみなさんは、そういうふうに川だと云われたり、乳の流れたあとだと云われたりしていたこのぼんやりと白いものがほんとうは何かご承知ですか。」先生は、黒板に吊した大きな黒い星座の図の、上から下へ白くけぶった銀河帯のようなところを指しながら、みんなに問をかけました。
     　カムパネルラが手をあげました。それから四五人手をあげました。ジョバンニも手をあげようとして、急いでそのままやめました。たしかにあれがみんな星だと、いつか雑誌で読んだのでしたが、このごろはジョバンニはまるで毎日教室でもねむく、本を読むひまも読む本もないので、なんだかどんなこともよくわからないという気持ちがするのでした。
     　ところが先生は早くもそれを見附けたのでした。
@@ -550,60 +558,8 @@
     　ジョバンニはもういろいろなことで胸がいっぱいでなんにも云えずに博士の前をはなれて早くお母さんに牛乳を持って行ってお父さんの帰ることを知らせようと思うともう一目散に河原を街の方へ走りました。
     
     
-    
-    
-    底本：「新編　銀河鉄道の夜」新潮文庫、新潮社
-    　　　1989（平成元）年6月15日発行
-    　　　1994（平成6）年6月5日13刷
-    底本の親本：「新修宮沢賢治全集　第十二巻」筑摩書房
-    　　　1980（昭和55）年1月
-    入力：中村隆生、野口英司
-    校正：野口英司
-    1997年10月28日公開
-    2010年11月1日修正
-    青空文庫作成ファイル：
-    このファイルは、インターネットの図書館、青空文庫（http://www.aozora.gr.jp/）で作られました。入力、校正、制作にあたったのは、ボランティアの皆さんです。
-    
-    
-    
-    ●表記について
-    このファイルは W3C 勧告 XHTML1.1 にそった形式で作成されています。
-    この作品には、JIS X 0213にない、以下の文字が用いられています。（数字は、底本中の出現「ページ-行」数。）これらの文字は本文内では「※［＃…］」の形で示しました。
-    
-    小書き平仮名ん	  	168-12
-    
-    ●図書カード
-    
 </marquee>
-</div>
+
+    
 </body>
-
-
-<script>
-    window.addEventListener("DOMContentLoaded", () => {
-  // 星を表示するための親要素を取得
-  const stars = document.querySelector(".stars");
-
-  // 星を生成する関数
-  const createStar = () => {
-    const starEl = document.createElement("span");
-    starEl.className = "star";
-    const minSize = 1; // 星の最小サイズを指定
-    const maxSize = 2; // 星の最大サイズを指定
-    const size = Math.random() * (maxSize - minSize) + minSize;
-    starEl.style.width = `${size}px`;
-    starEl.style.height = `${size}px`;
-    starEl.style.left = `${Math.random() * 100}%`;
-    starEl.style.top = `${Math.random() * 100}%`;
-    starEl.style.animationDelay = `${Math.random() * 10}s`;
-    stars.appendChild(starEl);
-  };
-
-  // for文で星を生成する関数を指定した回数呼び出す
-  for (let i = 0; i <= 500; i++) {
-    createStar();
-  }
-});
-
-</script>
 </html>
