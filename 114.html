@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D3テスト</title>
-<script src="js/d3.js"></script>
+<meta charset="utf-8">
+<title>D3.js サンプル</title>
+<link rel="stylesheet" href="css/main.css">
 <style>
-    body{
-        background-color: #456;
-    }
-    #div1{
-        background-color: #476;
-    }
+    svg { border: 1px solid black; }
 </style>
+<script src="js/d3v3.js" charset="utf-8"></script>
 </head>
 <body>
-    
-<div id="div1">
-    <svg id="svg"></svg>
-</div>
-
-</body>
+<h1>D3.jsサンプル</h1>
+<div id="myGraph"></div>
 <script>
-
-var width = 300;
-var height = 300;
-
-var svg = d3.select("#svg")
-//  図形の作成
-var zukei = svg
-    .append("circle")         // D3.js が提供している circle を図形とする
-    .attr("cx", 100)          // circle の属性を指定
-    .attr("cy", 50)
-    .attr("r", 30)
-    .attr("fill", "blue");
-
+    var list = {
+    nodes : [   // ノードリスト
+        { name : "mz-700" },
+        { name : "PC-6001" },
+        { name : "FM-7" }
+    ],
+    links : [   // ノードとノードを結ぶ線の関係。配列要素の順番をID・参照番号として利用している
+        { source : 0, target : 1 },
+        { source : 0, target : 2 },
+        { source : 1, target : 2 }
+    ]
+};
+var svgWidth = 320; // SVG領域の横幅
+var svgHeight = 240;    // SVG領域の縦幅
+var svg = d3.select("#myGraph").append("svg")
+    .attr("width", svgWidth).attr("height", svgHeight)
+// Force Layoutを設定
+var force = d3.layout.force()
+    .nodes(list.nodes)  // ノードを指定
+    .links(list.links)  // ノードとノードを結ぶリンク線を指定
+    .size([svgWidth, svgHeight])
+    .linkDistance(160)
+    .start();
+// ノードとノードを結ぶ線を描画
+var link = svg.selectAll("line")
+    .data(list.links)
+    .enter()
+    .append("line")
+    .style("stroke", "red")
+    .style("stroke-width", 5);
+// ノードを示す円（●）を描画
+var node = svg.selectAll("circle")  // 円を生成
+    .data(list.nodes)
+    .enter()
+    .append("circle")   // circleを追加
+    .attr("r", 10)  // 半径は10
+// 再描画時に線を描画
+force.on("tick", function() {
+    link
+    .attr("x1", function(d) { return d.source.x; }) // ソースとターゲットの要素座標を指定していく
+    .attr("y1", function(d) { return d.source.y; })
+    .attr("x2", function(d) { return d.target.x; })
+    .attr("y2", function(d) { return d.target.y; });
+    node
+    .attr("cx", function(d) { return d.x; })    // ノードの座標を指定していく
+    .attr("cy", function(d) { return d.y; });
+});
 </script>
+</body>
 </html>

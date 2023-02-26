@@ -145,7 +145,6 @@ for i in range(len(files)):
 
         # "type": 'curvedArrow',
         # "type": 'arrow',
-        "type": 'suit'
         }
         links.append(edge_dic)
         
@@ -163,6 +162,6 @@ json1.close()
 #js形式
 graphs2 = "var nodes = "+ str(nodes)
 graphs3 = "var links = "+ str(links)
-with codecs.open('./js/meta4.js',"w","utf-8") as o:
+with codecs.open('./js/meta2.js',"w","utf-8") as o:
     print(graphs2, file = o)
     print(graphs3, file = o)
