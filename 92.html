@@ -7,26 +7,25 @@
   <meta property="og:description" content="かなりきれい">
   <meta property="og:type" content="article">
   <meta property="og:image" content="ogp/85.png">
-  <title>フラクタル</title>
+  <title>リーマン関数フラクタル1</title>
 
 <style media="screen">
   body{
   display: flex;
-  background: #FFF;
+  background: #456;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1em;
-  color: #DDD;
   }
 
   .graph-wrap {
-  width: 150em;
-  height: 150em;
+  width: 50em;
+  height: 50em;
   }
 
   .graph {
-  background-color: #FFF;
+  background-color: #567;
   width: 100%;
   height: 100%;
   }
@@ -35,75 +34,94 @@
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
+
+
 <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script><script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </head>
 
 <body>
+  <p style="color: #DDD">$\displaystyle
+    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi t k^2)}}{k^2}
+    \qquad
+    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t k^2)}}{k^2}
+  $</p>
+
   <div class="graph-wrap">
     <div id="jxgbox" class="graph"></div>
   </div>
-
-
-  <a href="83.html">数学小部屋に戻る</a>
-
 </body>
 
-
-
 <script type="text/javascript">
-const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
+
 
 
 let board = JXG.JSXGraph.initBoard('jxgbox', {
-boundingbox: [ -2, 2, 2, -2],  // 領域の座標[左、上、右、下]
+boundingbox: [ -200, 200, 200, -200],  // 領域の座標[左、上、右、下]
 
 showNavigation: false,  // ナビゲーションボタンを表示しない
 showCopyright: false    // コピーライト文字列を表示しない
 });
 
+//軸
+var l1 = board.create('axis', [[0.0, 0.0], [1.0, 0]],{
+strokeColor: '#DDD',
+highlight: false,
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
+  },
+},
+});
 
+var l2 = board.create('axis', [[0.0, 0.0], [0, 1]],{
+strokeColor: '#DDD',
+highlight: false,
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
 
-
-
-
-
-
-
-
-
-
-
-
+  },
+},
+});
+//軸の名前
+const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
+board.create('text', [1.9, 0.08, 'x'],
+{ fontSize: 16, cssStyle: text_css,strokeColor: '#DDD',});
+board.create('text', [0.05, 1.9, 'y'],
+{ fontSize: 16, cssStyle: text_css,strokeColor: '#DDD',});
 
 //グラフ
-var n = 100;
-var m = 2;
-var l = 0;
+n=100;
+let p = 100
+let s = 3;
+let tu = 12;
 function plot(){
   function fx(t) {
     var x = 0;
-    for (let k = 1; k < n+1; k++) {
-      x+=Math.cos(t*(k+l)**m)/(k+l)**m
+    for (let step = 1; step < n+1; step++) {
+      x+=Math.cos((t*p*step)**(1/s))
     }
     return x;
   }
 
   function fy(t) {
     var y = 0;
-    for (let k = 1; k < n+1; k++) {
-      y+=Math.sin((t)*(k+l)**m)/(k+l)**m
+    for (let step = 1; step < n+1; step++) {
+      y+=Math.sin((t*p*step)**(1/s))
     }
     return y;
   }
 
   graph = board.create('curve',
-    [fx,fy,0,Math.PI*2],
+    [fx,fy,0,tu],
     {
-      strokeColor:'#222',
+      strokeColor:'#DDD',
       dash: 0,
       highlight: false,
-      strokeWidth:2}
+      strokeWidth:1}
   );
 
   board.update();
