@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>売地</title>
+    <title>Voronoi Particles</title>
 </head>
 <body>
-    
+    <div id="observablehq-4cc6f921"></div>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/@mbostock/voronoi-particles.js?v=3";
+    new Runtime().module(define, Inspector.into("#observablehq-4cc6f921"));
+    </script> 
 </body>
 </html>
