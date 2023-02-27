@@ -12,7 +12,7 @@
       color: #DDD;
     }
     .scr{
-      width: 45em;
+      width: 55em;
     }
 	.slider{
 		-webkit-appearance: none;
@@ -24,56 +24,26 @@
 </head>
 
 <body>
-<p>
-<label for="slider1">Cr</label>
-<input id="slider1" type="range" min="0" max="2" value="1" step="0.01" class="slider"></input>
-<span id="sliderValue1"></span>
-</p>
-
-<p>
-<label for="slider2">Ci</label>
-<input id="slider2" type="range" min="0" max="2" value="1" step="0.01" class="slider"></input>
-<span id="sliderValue2"></span>
-</p>
 
 <canvas id="scr" class="scr"></canvas>
-
+<a href="83.html">数学小部屋に戻る</a>
 </body>
 
 
 
 
 <script>
-let setValue = ()=> {
-	let value1 = Number.parseFloat(slider1.value).toFixed(2);
-	sliderValue1.textContent = value1;
 
-	let value2 = Number.parseFloat(slider2.value).toFixed(2);
-	sliderValue2.textContent = value2;
-}
-window.addEventListener("load", setValue);
-slider1.addEventListener("input", setValue);
-slider2.addEventListener("input", setValue);
-
-
-let setValue2 = () =>{
-	julia(slider1.value,slider2.value);
-};
-slider1.addEventListener("change", setValue2);
-slider2.addEventListener("change", setValue2);
 
 
 var theta = Math.random()*2*Math.PI;
-
-
 var Br = (2*Math.cos(theta)-Math.cos(2*theta))/4+Math.random()*0.1;
 var Bi = (2*Math.sin(theta)-Math.sin(2*theta))/4+Math.random()*0.1;
 var N = 30;
 
-// 最大計算回数
 
-var widthPx = 500;
-var heightPx = 500;
+
+
 
 // 色設定
 var color = new Object();
@@ -90,6 +60,8 @@ var color = new Object();
   let outB = parseInt(outc.substring(5,7), 16);
 
 
+var widthPx = 1000;
+var heightPx = 1000;
 var scr2d = document.getElementById("scr").getContext("2d");
 let canvas = document.querySelector('#scr');
 canvas.width = widthPx;
@@ -106,7 +78,6 @@ let p2=[2,2]; //右上座標
 
 
 function julia(Cr,Ci){
-
 	imageData = scr2d.createImageData(widthPx, heightPx);
 	scr2d.clearRect(0, 0, widthPx, heightPx);
 //(A_n+1) = (A_n)^2 + B
@@ -147,10 +118,6 @@ for (var j = 0; j < widthPx; j++) {
 }};
 //scr2dの画像データをCanvas要素に転送
 scr2d.putImageData(imageData, 0, 0);
-var yy = 49
-console.log(imageData.data[yy])
-console.log(imageData.data[yy+1])
-console.log(imageData.data[yy+2])
 }
 julia(Br,Bi)
 
