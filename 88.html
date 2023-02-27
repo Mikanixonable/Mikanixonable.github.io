@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>マンデルブロ集合</title>
+  <title>ジュリア集合</title>
   <style>
     body{
       display: flex;
@@ -14,10 +14,27 @@
     .scr{
       width: 45em;
     }
+	.slider{
+		-webkit-appearance: none;
+		border-radius: 1em;
+		background-color: #456;
+		accent-color: #678;
+	}
   </style>
 </head>
 
 <body>
+<p>
+<label for="slider1">Cr</label>
+<input id="slider1" type="range" min="0" max="2" value="1" step="0.01" class="slider"></input>
+<span id="sliderValue1"></span>
+</p>
+
+<p>
+<label for="slider2">Ci</label>
+<input id="slider2" type="range" min="0" max="2" value="1" step="0.01" class="slider"></input>
+<span id="sliderValue2"></span>
+</p>
 
 <canvas id="scr" class="scr"></canvas>
 
@@ -25,33 +42,34 @@
 
 
 <script>
+
+const setValue = ()=> {
+	let value1 = Number.parseFloat(slider1.value).toFixed(2);
+	sliderValue1.textContent = value1;
+
+	let value2 = Number.parseFloat(slider2.value).toFixed(2);
+	sliderValue2.textContent = value2;
+}
+window.addEventListener("load", setValue);
+slider1.addEventListener("input", setValue);
+slider2.addEventListener("input", setValue);
+
+
+const setValue2 = () =>{
+	julia(slider1.value,slider2.value);
+}
+slider1.addEventListener("change", setValue2);
+slider2.addEventListener("change", setValue2);
+
+
 var scr = document.getElementById("scr");
 var scr2d = scr.getContext("2d");
-
-// 描画範囲
-var width = 1000;
-var height = 1000;
-  let canvas = document.querySelector('#scr');
-  canvas.width = width;
-  canvas.height = height;
-
-
-let p1=[-2,-1.5]; //左下座標
-let p2=[1,1.5]; //右上座標
-
-// 計算開始左下座標
-var x = p1[0];
-var y = p1[1];
-// 複素平面計算範囲幅
-var X = p2[0]-p1[0];
-var Y = p2[1]-p1[1];
-
-// CANVAS1ピクセル幅
-var stepX = X / width;
-var stepY = Y / height;
-
+var cr = 0.4;
+var ci = 0.2;
 // 最大計算回数
-var N = 80;
+var N = 30;
+var width = 500;
+var height = 500;
 
 // 色設定
 var color = new Object();
@@ -70,28 +88,48 @@ var color = new Object();
   color.outG = '250-Math.floor((250-outG)*Math.exp(-n*h))';
   color.outB = '250-Math.floor((250-outB)*Math.exp(-n*h))';
 
+function julia(cr,ci){
+// 描画範囲
+
+  let canvas = document.querySelector('#scr');
+  canvas.width = width;
+  canvas.height = height;
+//複素平面描画範囲
+
 // Canvas要素から描画用ImageDataを取得
 imageData = scr2d.createImageData(width, height);
 
-// マンデルブロ集合を描画
-	var i, j, k;
-//複素数t,v,p
-	var tr, ti, pr, pi;
-	var index;
+// ジュリア集合を描画
 
-	for (i = 0;i < height;i++) {
-		for (j = 0;j < width;j++) {
+let p1=[-2,-2]; //左下座標
+let p2=[2,2]; //右上座標
+// 計算開始左下座標
+var x = p1[0];
+var y = p1[1];
+// 複素平面計算範囲幅
+var X = p2[0]-p1[0];
+var Y = p2[1]-p1[1];
+// CANVASピクセル幅
+var stepX = X / width;
+var stepY = Y / height;
+
+	//(V_n+1) = (V_n)^2 + C
+	//V_0 = 0, C ~ 座標 => mandelbrot
+	//V_0 ~ 座標, C = const => julia
+
+	for (i = 0; i < height; i++) {
+		for (j = 0; j < width; j++) {
 			var n = 0;
 			var vr = 0;
 			var vi = 0;
 			// ピクセル位置の実部／虚部の値を算出
-			pr = x + (stepX * j);
-			pi = y + (stepY * i);
+			vr = x + (stepX * j);
+			vi = y + (stepY * i);
 
 			// ピクセル位置における発散回数を計算
 			do{
-				tr = (vr * vr) - (vi * vi) + pr;
-				ti = (vr * vi * 2.0) + pi;
+				tr = (vr * vr) - (vi * vi) + cr;
+				ti = (vr * vi * 2.0) + ci;
 
 				vr = tr;
 				vi = ti;
@@ -129,7 +167,8 @@ imageData = scr2d.createImageData(width, height);
 	scr2d.putImageData(imageData, 0, 0);
 
 document.getElementById("link_place").innerHTML = scr.toDataURL();
-
+}
+julia(cr,ci)
 
 </script>
 
