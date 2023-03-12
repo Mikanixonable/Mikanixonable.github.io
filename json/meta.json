@@ -135,6 +135,15 @@
     "mdate": "2023-02-22"
   },
   {
+    "name": "_120html",
+    "title": "Document",
+    "content": null,
+    "ctime": "1678035052",
+    "mtime": "1678589845",
+    "cdate": "2023-03-06",
+    "mdate": "2023-03-12"
+  },
+  {
     "name": "_126html",
     "title": "右と下に落ちるボール",
     "content": "JS習作",
@@ -454,9 +463,9 @@
     "title": "異形フォントシリーズ一覧",
     "content": "異形シリーズのフォントのデモンストレーション",
     "ctime": "1676383514",
-    "mtime": "1677046464",
+    "mtime": "1678035034",
     "cdate": "2023-02-14",
-    "mdate": "2023-02-22"
+    "mdate": "2023-03-06"
   },
   {
     "name": "_40html",
@@ -703,37 +712,37 @@
   },
   {
     "name": "_80html",
-    "title": "リーマン関数フラクタル1",
+    "title": "Weierstrass-Riemann function",
     "content": null,
     "ctime": "1677046214",
-    "mtime": "1677046464",
+    "mtime": "1677519222",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_81html",
-    "title": "リーマン関数フラクタル2",
+    "title": "Weierstrass-Riemann function variables 1",
     "content": null,
     "ctime": "1677046214",
-    "mtime": "1677046464",
+    "mtime": "1677519229",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_82html",
-    "title": "リーマン関数フラクタル3",
+    "title": "Weierstrass-Riemann function variables 2",
     "content": "JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き",
     "ctime": "1677046214",
-    "mtime": "1677413847",
+    "mtime": "1677519214",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-26"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_83html",
     "title": "#83 数学小部屋",
     "content": null,
     "ctime": "1677046214",
-    "mtime": "1677512504",
+    "mtime": "1677519692",
     "cdate": "2023-02-22",
     "mdate": "2023-02-28"
   },
@@ -742,43 +751,43 @@
     "title": "グラフ",
     "content": "JSXGraph.jsによるスライダーでいじれるグラフ",
     "ctime": "1677046214",
-    "mtime": "1677046461",
+    "mtime": "1677519252",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_85html",
     "title": "崩れたリーマン関数フラクタル",
     "content": null,
     "ctime": "1677046214",
-    "mtime": "1677046464",
+    "mtime": "1677519261",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_86html",
     "title": "フラクタル",
     "content": null,
     "ctime": "1677046214",
-    "mtime": "1677046464",
+    "mtime": "1677519268",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-22"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_87html",
     "title": "マンデルブロ集合",
     "content": "",
     "ctime": "1677046214",
-    "mtime": "1677495711",
+    "mtime": "1677519702",
     "cdate": "2023-02-22",
-    "mdate": "2023-02-27"
+    "mdate": "2023-02-28"
   },
   {
     "name": "_88html",
     "title": "ジュリア集合",
     "content": "",
     "ctime": "1677488089",
-    "mtime": "1677512455",
+    "mtime": "1677519372",
     "cdate": "2023-02-27",
     "mdate": "2023-02-28"
   },
@@ -787,7 +796,7 @@
     "title": "ジュリア集合",
     "content": "",
     "ctime": "1677498856",
-    "mtime": "1677512455",
+    "mtime": "1677519382",
     "cdate": "2023-02-27",
     "mdate": "2023-02-28"
   },
@@ -817,6 +826,15 @@
     "mtime": "1677509714",
     "cdate": "2023-02-27",
     "mdate": "2023-02-27"
+  },
+  {
+    "name": "_92html",
+    "title": "リーマン関数フラクタル1",
+    "content": null,
+    "ctime": "1677516427",
+    "mtime": "1677519696",
+    "cdate": "2023-02-28",
+    "mdate": "2023-02-28"
   },
   {
     "name": "_indexhtml",
