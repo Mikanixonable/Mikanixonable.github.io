@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+	<head>
+		<meta charset="utf-8" content="異形明朝比較ページ">
+		<title>異形明朝比較ページ</title>
+
+<style media="screen">
+
+@font-face {
+font-family: 'mincho';
+  src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
+}
+@font-face {
+font-family: 'gothic';
+  src: url('fonts/SourceHanSans-Light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'imincho';
+  src: url('fonts/IgyouMincho.woff') format('woff');
+}
+@font-face {
+font-family: 'imincho2';
+  src: url('fonts/IgyouMincho2.woff') format('woff');
+}
+@font-face {
+font-family: 'imincho3';
+  src: url('fonts/IgyouMincho3.woff') format('woff');
+}
+
+@font-face {
+font-family: 'igothicl';
+  src: url('fonts/IgyouGothic-Light.woff') format('woff');
+}
+@font-face {
+font-family: 'igothic2';
+  src: url('fonts/IgyouGothic2.woff') format('woff');
+}
+@font-face {
+font-family: 'igothic3';
+  src: url('fonts/IgyouGothic3.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ifude';
+  src: url('fonts/IgyouFude.woff') format('woff');
+}
+
+
+body{
+  font-family: "imincho","mincho","sans-serif";
+
+		display: flex;
+		background: #AAA;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 8%
+	}
+
+	.display {
+	color: #267;
+	height: 500px;
+	width: 80%;
+	background: #FFF;
+	font-size: 40px;
+	text-align: center;
+
+	}
+
+	.display p {
+	padding: 2px;
+	}
+
+
+	.input1{
+	border: 0px
+
+	}
+	.input1::placeholder {
+	  text-align: center;
+	}
+
+	.out2{
+		font-family: "imincho2","mincho","sans-serif";
+	}
+	.out1{
+		font-family: "mincho","sans-serif";
+	}
+	.out3{
+		font-family: "imincho","sans-serif";
+	}
+</style>
+
+</head>
+<body>
+
+
+	<div class="display">
+<p id="out1" class="out1"></p>
+<p id="out2" class="out2"></p>
+<p id="out3" class="out3"></p>
+	</div>
+
+	<form name="form1" class="form1">
+	<input type="text" id="input1" value="愛のあるユニークで豊かな書体" placeholder="enter" class="input1">
+	</form>
+
+
+<script>
+const i = document.forms.form1.input1;
+i.addEventListener('input',()=>{
+	var str = i.value
+
+  let display1  = document.getElementById('out1');
+	let display2  = document.getElementById('out2');
+	let display3  = document.getElementById('out3');
+
+	display1.textContent = str
+	display2.textContent = str
+	display3.textContent = str
+});
+
+</script>
+	</body>
+</html>

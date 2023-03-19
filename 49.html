@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ja" dir="ltr">
 	<head>
 		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
 		<title>創作文字ehtaplenのキーボード</title>
@@ -8,10 +8,10 @@
 
 @font-face {
 font-family: 'ehtaplen';
-  src: url('ehtaplen.woff') format('woff');
+  src: url('fonts/ehtaplen.woff') format('woff');
 }
 body{
-  font-family: "ehtaplen";
+  font-family: "ehtaplen","Arial","sans-serif";
 
 		display: flex;
 		background: #AAA;
@@ -22,10 +22,11 @@ body{
 	}
 
 	.display {
-	height: 200px;
+	color: #7CA;
+	height: 400px;
 	width: 80%;
 	background: #FFF;
-	font-size: 40px;
+	font-size: 120px;
 	text-align: center;
 
 	}
@@ -63,13 +64,31 @@ const i = document.forms.form1.input1;
 i.addEventListener('input',()=>{
   let display  = document.getElementById('out');
 	var str = i.value
-str = str.replace(/ya/g, '󰘅')
-str = str.replace(/ye/g, '󰘆')
-str = str.replace(/a/g, '󰘀')
-str = str.replace(/e/g, '󰘁')
-str = str.replace(/i/g, '󰘂')
-str = str.replace(/o/g, '󰘃')
-str = str.replace(/u/g, '󰘃')
+
+str = str.replace(/ya/g,"\u{f0605}")
+str = str.replace(/ye/g,"\u{f0606}")
+str = str.replace(/yo/g,"\u{f0607}")
+str = str.replace(/yu/g,"\u{f0608}")
+
+str = str.replace(/pa/g,"\u{f0609}")
+str = str.replace(/pe/g,"\u{f060A}")
+str = str.replace(/pi/g,"\u{f060B}")
+str = str.replace(/po/g,"\u{f060C}")
+str = str.replace(/pu/g,"\u{f060D}")
+
+str = str.replace(/ta/g,"\u{f060E}")
+str = str.replace(/te/g,"\u{f060F}")
+str = str.replace(/ti/g,"\u{f0610}")
+str = str.replace(/to/g,"\u{f0611}")
+str = str.replace(/tu/g,"\u{f0612}")
+
+str = str.replace(/a/g,"\u{f0600}")
+str = str.replace(/e/g,"\u{f0601}")
+str = str.replace(/i/g,"\u{f0602}")
+str = str.replace(/o/g,"\u{f0603}")
+str = str.replace(/u/g,"\u{f0604}")
+
+
 
 	display.textContent = str });
 </script>

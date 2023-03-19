@@ -1,87 +1,73 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
-		<title>創作文字ehtaplenのキーボード</title>
-
-<style media="screen">
-
-@font-face {
-font-family: 'ehtaplen';
-  src: url('Untitled1.woff') format('woff');
-}
-body{
-  font-family: "ehtaplen","Arial","sans-serif";
-
-		display: flex;
-		background: #AAA;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 8%
-	}
-
-	.display {
-	color: #7CA;
-	height: 400px;
-	width: 80%;
-	background: #FFF;
-	font-size: 120px;
-	text-align: center;
-
-	}
-
-	.display p {
-	padding: 35px;
-	}
-
-
-	.input1{
-	border: 0px
-
-	}
-	.input1::placeholder {
-	  text-align: center;
-	}
-
-</style>
-
+<html>
+<head>
+  <title>二体問題</title>
+  <meta content="退屈">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
 </head>
+
 <body>
-
-
-	<div class="display">
-<p id="out"></p>
-	</div>
-
-	<form name="form1" class="form1">
-	<input type="text" id="input1" value="" placeholder="enter" class="input1">
-	</form>
-
-
 <script>
-const i = document.forms.form1.input1;
-i.addEventListener('input',()=>{
-  let display  = document.getElementById('out');
-	var str = i.value
+let n = 2;
 
-str = str.replace(/ya/g,"\u{f0605}")
-str = str.replace(/ye/g,"\u{f0606}")
-str = str.replace(/yo/g,"\u{f0607}")
-str = str.replace(/yu/g,"\u{f0608}")
+let x = [];
+let xs = [];
+let xa = [];
 
-str = str.replace(/a/g,"\u{f0600}")
-str = str.replace(/e/g,"\u{f0601}")
-str = str.replace(/i/g,"\u{f0602}")
-str = str.replace(/o/g,"\u{f0603}")
-str = str.replace(/u/g,"\u{f0604}")
+let sizex = window.innerWidth;
+let sizey = window.innerHeight;
 
-str = str.replace(/n/g,"\u{f0609}")
-str = str.replace(/s/g,"\u{f060A}")
+function ga(x1,y1,x2,y2){
+
+gravr=sqrt((x2-x1)**2+(y2-y1)**2)
+gravax=(Math.sqrt(gravr**2-(y2-y1)**2))/(gravr**3)
+gravay=(Math.sqrt(gravr**2-(x2-x1)**2))/(gravr**3)
+if(x2-x1<0){gravax=-gravax};
+if(y2-y1<0){gravay=-gravay};
+gravArr =[gravax*300,gravay*300]
+return gravArr ;
+
+};
+
+for(let i = 0; i < 2*n; i++) {
 
 
+  xa.push(0);
+};
 
-	display.textContent = str });
+x=[200,200,280,280];
+xs=[1,0,-1,0];
+function setup() {
+
+  createCanvas(sizex, sizey);
+  noStroke();
+  background(70,100,200);
+}
+
+function draw() {
+fill(70,100,200,2);
+rect(0, 0, sizex, sizey);
+
+for(i=0;i<n;i++){
+  xa[i]=ga()[(-1)**i];
+};
+
+xa[0]=ga(x[0],x[1],x[2],x[3])[0];
+xa[1]=ga(x[0],x[1],x[2],x[3])[1];
+xa[2]=ga(x[2],x[3],x[0],x[1])[0];
+xa[3]=ga(x[2],x[3],x[0],x[1])[1];
+
+
+for(i=0;i<2*n;i++){xs[i]=xs[i]+xa[i]};
+for(i=0;i<2*n;i++){x[i]=x[i]+xs[i]};
+fill(255,255,255);
+
+for(i=0;i<n;i++){ellipse(x[2*i], x[2*i+1], 1, 1);};
+
+}
+
 </script>
-	</body>
+
+
+</body>
 </html>
