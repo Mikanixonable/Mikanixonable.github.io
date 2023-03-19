@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="index.css">
+    <title>レゴで作った森の3Dモデル</title>
+    <!-- three.jsを読み込む -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.91.0/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
+		<script src="https://unpkg.com/three@0.91.0/examples/js/loaders/FBXLoader.js"></script>
+    <!-- index.jsを読み込む -->
+
+    <script>
+		window.addEventListener('DOMContentLoaded', init);
+		function init() {
+			//基本設定
+			var width = 700;
+			var height = 700;
+
+			var renderer = new THREE.WebGLRenderer({
+				canvas: document.querySelector("#canvas"),
+		        alpha: true
+			});
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(width, height);
+			var scene = new THREE.Scene();
+			 scene.background = new THREE.Color( 0x999999 ); // 背景色
+
+			  // カメラを作成
+		    camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+		    camera.position.set(0, 290, -1000);
+
+		    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+		    // Load GLTF or GLB
+		    const loader = new THREE.GLTFLoader();
+		    const url = '2.glb';
+
+		    // window size
+		    const w_height = window.innerHeight;
+
+		    let model = null;
+		    loader.load(
+		        url,
+		        function (gltf) {
+		            model = gltf.scene;
+		            // model.name = "model_with_cloth";
+		            model.scale.set(100, 100, 100);
+		            model.position.set(0, 0, 0);
+								model.rotation.set(0, -3.2, 0)
+		            scene.add(gltf.scene);
+
+		            // model["test"] = 100;
+		        },
+		        function (error) {
+		            console.log('An error happened');
+		            console.log(error);
+		        }
+		    );
+		    renderer.gammaOutput = true;
+		    renderer.gammaFactor = 2.2;
+
+
+		    // 平行光源
+		    const light = new THREE.DirectionalLight(0xFFFFFF);
+		    light.intensity = 1; // 光の強さ
+		    light.position.set(0, 30, 0);
+		    // シーンに追加
+		    scene.add(light);
+
+
+		    //環境光源(アンビエントライト)：すべてを均等に照らす、影のない、全体を明るくするライト
+		    const ambient = new THREE.AmbientLight(0xf8f8ff, 0.1);
+		    scene.add(ambient); //シーンにアンビエントライトを追加
+
+		    // 初回実行
+		    tick();
+
+		    function tick() {
+		        controls.update();
+
+		        if (model != null) {
+		            console.log(model);
+		        }
+		        renderer.render(scene, camera);
+		        requestAnimationFrame(tick);
+		    }
+		}
+
+		</script>
+</head>
+<body>
+<div id="main_canvas">
+    <canvas id="canvas" width="100%" height="100%"></canvas>
+</div>
+</body>
+</html>

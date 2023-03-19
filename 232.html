@@ -1,0 +1,193 @@
+<html>
+<head>
+	<title>#1 サイトマップ</title>
+  <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
+  <style>
+	body{
+		background-color: #789;
+		color: #333;
+		margin: 4em;
+	}
+
+  table {
+		background-color: #eee;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  th,td {
+    padding: 5px;
+    border: 1px solid #999;
+  }
+	h1{
+		color: #eee
+	}
+	a{
+		color: #eee;
+		text-decoration: none;
+	}
+  .koushin{
+    color: #eee;
+  }
+
+
+
+
+</style>
+</head>
+
+<body>
+  <h1>#1 サイトマップ</h1>
+  <a href="index.html">トップへ戻る</a>
+  <div id="box"></div>
+</body>
+
+<script>
+
+n=1005
+var table = document.createElement('table');
+
+//表の一行目のラベルを手動でつける
+var tr = document.createElement('tr');
+  var th1 = document.createElement('th');
+  var th2 = document.createElement('th');
+  var th3 = document.createElement('th');
+  var th4 = document.createElement('th');
+    th1.textContent = "ファイル名";
+    th2.textContent = "リンク";
+    th3.textContent = "説明";
+    th4.textContent = "ファイル更新日";
+    // th1.setAttribute("class","th1")
+  tr.appendChild(th1);
+  tr.appendChild(th2);
+  tr.appendChild(th3);
+  tr.appendChild(th4);
+table.appendChild(tr);
+
+//表の二行目以降を自動的に生成する
+for (var i = 1; i < n+1; i++) {
+  var tr = document.createElement('tr');
+
+    //ファイル名
+    var td1 = document.createElement('td');
+    td1.textContent = i + '.html';
+    td1.id="_"+i+"html1";
+    tr.appendChild(td1);
+
+    //リンク
+    var td2 = document.createElement('td');
+      var a = document.createElement("a");
+      a.href=i+".html";
+      a.id="_"+i+"html2";
+      td2.appendChild(a);
+    tr.appendChild(td2);
+
+    //説明
+    var td3 = document.createElement('td');
+    td3.id="_"+i+"html3";
+    tr.appendChild(td3);
+
+    //更新日時
+    var td4 = document.createElement('td');
+    td4.id="_"+i+"html4";
+    td4.setAttribute("class","koushin")
+
+    tr.appendChild(td4);
+
+  table.appendChild(tr);
+  }
+
+document.getElementById('box').appendChild(table);
+
+
+
+//リンク欄にページタイトルを入れる、説明欄に説明を入れる
+function tit_exp(url,id_link,id_exp){
+  var box = document.getElementById(id_link);
+  var box2 = document.getElementById(id_exp);
+  fetch(url)
+    .then(response => {
+      return response.text();
+    })
+    .then(body => {
+      var title = body.match(/<title>(.*)<\/title>/);
+      var content = body.match(/content=\"(.*)\"/);
+
+      if(!title){
+        box.innerHTML=url
+        }
+        else{
+         box.innerHTML=title[1];
+				 box.style.backgroundColor="#789";
+				 box.style.display = "block";
+        };
+
+      if(!content){
+        box2.innerHTML=""
+        }
+        else{
+         box2.innerHTML=content[1];
+        };
+        })
+
+    .catch((reason) => {
+      box.innerHTML="-"
+      box2.innerHTML=""
+    })
+
+  };
+
+
+
+
+//日付を取得し表に色をつける
+  function timem(url){
+    //色1、色2、係数(0to1)を入力すると、グラデーション上の色を出力
+    function gradc(c1,c2,k){
+      let a = [parseInt(c1.charAt(1),16),parseInt(c1.charAt(2),16),parseInt(c1.charAt(3),16)];
+      let b = [parseInt(c2.charAt(1),16),parseInt(c2.charAt(2),16),parseInt(c2.charAt(3),16)];
+      let c = [a[0]*(1-k)+b[0]*k,a[1]*(1-k)+b[1]*k,a[2]*(1-k)+b[2]*k];
+      let c3 = "#"+Math.floor(c[0]).toString(16)+Math.floor(c[1]).toString(16)+Math.floor(c[2]).toString(16);
+      return c3
+    }
+
+    let color1 = "#f45";
+    let color2 = "#789";
+    // 起動時の処理
+    window.addEventListener("load", ()=>{
+
+      fetch(url)
+      .then( response => response.json())
+      .then( data => {
+
+        for(let file of data){
+
+          //本題
+          let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
+          lapse = lapse/1000000
+          let grad = 1-Math.exp(-lapse*(1/2));
+
+          var result = document.getElementById(file.name+4);
+          result.style.backgroundColor = gradc(color1,color2,grad);
+          // result.style.color = "#ddd"
+          result.textContent = file.mdate;
+
+          var result2 = document.getElementById(file.name+2);
+          result2.style.backgroundColor = gradc(color1,color2,grad);
+        }
+      });
+    });
+  };
+
+
+
+  timem("meta.json")
+
+for (let step = 0; step < n+1; step++) {
+  tit_exp(step+".html","_"+step+"html2","_"+step+"html3")
+};
+
+</script>
+
+
+</html>

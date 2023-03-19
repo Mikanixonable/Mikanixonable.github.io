@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Mikanixonable.github.io",
+			"path": "."
+		},
+		{
+			"name": "tools",
+			"path": "../tools"
+		}
+	],
+	"settings": {}
+}
