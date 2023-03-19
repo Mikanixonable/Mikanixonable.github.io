@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta property="og:url" content="Mikanixonable.github.io">
+<meta property="og:title" content="リーマン関数フラクタル2">
+<meta property="og:description" content="かなりきれい">
+<meta property="og:type" content="article">
+<meta property="og:image" content="ogp/86.png">
+<title>Weierstrass-Riemann function variables 1</title>
+<style media="screen">
+  body{
+  display: flex;
+  background: #456;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  color: #eee;
+  }
+
+  .graph-wrap {
+  width: 50em;
+  height: 50em;
+  }
+
+  .graph {
+  background-color: #567;
+  width: 100%;
+  height: 100%;
+  }
+
+
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
+
+
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script><script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+
+<body>
+  <h3>Weierstrass-Riemann function variables 1</h3>
+  <p style="color: #DDD">$\displaystyle
+    x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi t (k+1)^2)}}{(k+1)^2}
+    \qquad
+    y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi t (k+1)^2)}}{(k+1)^2}
+  $</p>
+
+  <div class="graph-wrap">
+    <div id="jxgbox" class="graph"></div>
+  </div>
+  <a href="83.html">数学小部屋に戻る</a>
+</body>
+
+<script type="text/javascript">
+
+
+
+let board = JXG.JSXGraph.initBoard('jxgbox', {
+boundingbox: [-0.75,0.75,0.75,-0.75],  // 領域の座標[左、上、右、下]
+
+showNavigation: false,  // ナビゲーションボタンを表示しない
+showCopyright: false    // コピーライト文字列を表示しない
+});
+
+//軸
+var l1 = board.create('axis', [[0.0, 0.0], [1.0, 0]],{
+strokeColor: '#DDD',
+highlight: false,
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
+  },
+},
+});
+
+var l2 = board.create('axis', [[0.0, 0.0], [0, 1]],{
+strokeColor: '#DDD',
+highlight: false,
+ticks: {
+  label: {
+    strokeColor: '#DDD',
+    autoPosition: true,
+
+  },
+},
+});
+
+
+//軸の名前
+const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
+board.create('text', [0.7, 0.02, 'x'],
+{ fontSize: 16, cssStyle: text_css,strokeColor: '#DDD',});
+board.create('text', [0.05, 0.7, 'y'],
+{ fontSize: 16, cssStyle: text_css,strokeColor: '#DDD', });
+
+
+
+
+//グラフ
+n=40;
+function plot(){
+  function fx(t) {
+    var x = 0;
+    for (let step = 1; step < n+1; step++) {
+      x+=Math.cos(t*(step+1)**2)/(step+1)**2
+    }
+    return x;
+  }
+
+  function fy(t) {
+    var y = 0;
+    for (let step = 1; step < n+1; step++) {
+      y+=Math.sin((t)*(step+1)**2)/(step+1)**2
+    }
+    return y;
+  }
+
+  graph = board.create('curve',
+    [fx,fy,0,Math.PI*2],
+    {
+      strokeColor:'#DDD',
+      dash: 0,
+      highlight: false,
+      strokeWidth:1}
+  );
+
+  board.update();
+}
+
+
+
+
+
+
+plot();
+
+</script>
+</html>

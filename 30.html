@@ -1,126 +1,76 @@
-<!DOCTYPE html>
-<html lang="jp">
+<html>
   <head>
-    <title>Page6 - 人造日本人</title>
-    <meta
-      name="description"
-      content="This is a Mikanixonable's official web page. It contains introduction, links of their accounts on social platforms, and their works in a various formats."
-    />
-    <meta property="og:title" content="Page6 - 人造日本人" />
-    <meta
-      property="og:description"
-      content="Takoyaki li pona mute. mi wile musi e takoyaki."
-    />
-    <meta
-      property="og:image"
-      content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/f6818c1f-b267-4d75-a136-271f5128f9c9/1b268fd3-c00e-4d14-a971-39a32064e0cb?org_if_sml=1"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+    <title>SigmaJS example</title>
+   <!-- Sigma core -->
+   
+<script src="js/sigma.js"></script>
+<script src="js/sigmamin.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+   <!-- Sigma plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/worker.js"></script>
+  <style>
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+        html { height:400px;}
+        body {height: 100%; margin:0;}
+        #sigma-container { width:100%; height:100%; background-color:#E1E1E1}
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }
-    </style>
-    <link
-      rel="shortcut icon"
-      href="public/playground_assets/logo.png"
-      type="icon/png"
-      sizes="32x32"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+  </style>
+</head>
   <body>
-    <div>
-      <link href="./page6.css" rel="stylesheet" />
-
-      <div class="page6-container">
-        <div class="page6-container01">
-          <div class="page6-container02">
-            <div class="page6-container03"></div>
-          </div>
-          <div class="page6-container04"></div>
-        </div>
-        <div class="page6-container05"></div>
-        <div class="page6-container06">
-          <div class="page6-container07"></div>
-        </div>
-        <div class="page6-container08"></div>
-        <div class="page6-container09"></div>
-        <div class="page6-container10">
-          <div class="page6-container11">
-            <div class="page6-container12"></div>
-          </div>
-          <div class="page6-container13">
-            <div class="page6-container14"></div>
-          </div>
-          <div class="page6-container15">
-            <div class="page6-container16"></div>
-          </div>
-          <div class="page6-container17">
-            <div class="page6-container18"></div>
-          </div>
-          <div class="page6-container19">
-            <div class="page6-container20"></div>
-          </div>
-          <div class="page6-container21">
-            <div class="page6-container22"></div>
-          </div>
-          <div class="page6-container23">
-            <div class="page6-container24"></div>
-          </div>
-        </div>
-        <div class="page6-container25">
-          <div class="page6-container26">
-            <div class="page6-container27"></div>
-          </div>
-          <div class="page6-container28">
-            <div class="page6-container29"></div>
-          </div>
-          <div class="page6-container30">
-            <div class="page6-container31"></div>
-          </div>
-          <div class="page6-container32">
-            <div class="page6-container33"></div>
-          </div>
-          <div class="page6-container34">
-            <div class="page6-container35"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="container"></div>
+    <div id='sigma-container'></div>
+    <div id="json-container"></div>
   </body>
+  <script>
+
+var s = new sigma(
+  {
+    renderer: {
+      container: document.getElementById('sigma-container'),
+      type: 'canvas'
+    },
+    settings: {
+      minArrowSize: 10
+    }
+  }
+);
+
+// Generate a random graph:
+var nbNode = 50;
+var nbEdge = 200;
+var graph = {
+  nodes: [],
+  edges: []
+};
+for (i = 0; i < nbNode; i++)
+  graph.nodes.push({ 
+    id:  i,
+    label: 'Node ' + i,
+    x: Math.random(),
+    y: Math.random(),
+    size: 1,
+    color: '#EE651D'
+  });
+
+for (i = 0; i < nbEdge; i++)
+  graph.edges.push({ 
+    id: i, 
+    source: '' + (Math.random() * nbNode | 0), 
+    target: '' + (Math.random() * nbNode | 0),
+    color: '#202020',
+    type: 'curvedArrow'
+  });
+
+
+// load the graph
+s.graph.read(graph);
+// draw the graph
+s.refresh();
+// launch force-atlas for 5sec
+s.startForceAtlas2();
+window.setTimeout(function() {s.killForceAtlas2()}, 10000);
+
+
+  </script>
 </html>

@@ -1,63 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>サイトマップ</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      text-align: center;
-    }
-    td {
-      padding: 5px;
-      border: 1px solid #999;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json/txt表示機</title>
 </head>
 <body>
-<div id="box"></div>
-<script>
-
-var table = document.createElement('table');
-
-for (var i = 1; i < 100; i++) {
-  var tr = document.createElement('tr');
-
-    var td1 = document.createElement('td');
-    td1.textContent = i + '.html';
-    tr.appendChild(td1);
-
-    var td2 = document.createElement('td');
-    td2.id=i
-    tr.appendChild(td2);
-
-
-  table.appendChild(tr);
-  }
-
-document.getElementById('box').appendChild(table);
-
-
-
-
-function url(url,id){
-  var box=document.getElementById(id);
-
-  fetch(url)
-    .then(response => {
-      return response.text();
-    })
-    .then(body => {
-      var m = body.match(/<title>(.*)<\/title>/);
-      box.innerHTML=m[1];
-    });
-  };
-
-for (let step = 0; step < 100; step++) {
-  url(step+".html",step)
-  }
-
-
-
-</script>
+    <!-- HTML -->
+<div id="json-container"></div>
 
 </body>
+<script>
+// JavaScript
+var request = new XMLHttpRequest();
+request.open("GET", "json/meta.json", true);
+request.onload = function() {
+  if (request.status === 200) {
+    var jsonText = request.responseText;
+    var container = document.getElementById("json-container");
+    var textNode = document.createTextNode(jsonText);
+    container.appendChild(textNode);
+  }
+};
+request.send();
+
+</script>
 </html>
