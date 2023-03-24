@@ -1,51 +1,99 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>右と下に落ちるボール</title>
-  <meta name="" content="JS習作">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+<html lang="ja" dir="ltr">
+	<head>
+		<title>CuneiformHanB KhmerHanB MeltHan</title>
+
+<style media="screen">
+
+@font-face {
+font-family: 'j';
+  src: url('fonts/DatsuaNyuou.ttf');
+}
+@font-face {
+font-family: 'jb';
+  src: url('fonts/KhmerHanB.ttf');
+}
+@font-face {
+font-family: 'jc';
+  src: url('fonts/MeltHan.ttf');
+}
+
+
+body{
+	color: #eee;
+
+	display: flex;
+	background: #AAA;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8%
+	}
+
+	.display {
+		color: #222;
+	height: 8em;
+	width: 100%;
+	background: #FFF;
+	font-size: 4em;
+	text-align: center;
+	}
+
+	.display p {
+	padding: 2px;
+	}
+
+	.input1{
+	border: 0px
+
+	}
+
+	.out1{
+		font-family: "j";
+	}
+	.out2{
+		font-family: "jb";
+	}
+	.out3{
+		font-family: "jc";
+	}
+</style>
+
 </head>
-
 <body>
-
-  <script>
-    let x = 200;
-    let y = 100;
-    let diameter = 8;
-    let ys = 0;
-    let xs=0;
-    let ya = 0.1;
-    let xa=0.2;
-
-function setup() {
-  createCanvas(400, 400);
-  noStroke();
-  fill(0,0,0);
-}
+	<p>脱亜入欧　プレビュー</p>
+	
 
 
-function draw() {
-  background(0);
+	<div class="display">
+<p id="out1" class="out1"></p>
+<!-- <p id="out2" class="out2"></p>
+<p id="out3" class="out3"></p> -->
+	</div>
 
-  ys = ys + ya;
-  y = y + ys;
+<form name="form1" class="form1">
+<input type="text" id="input1" value=" " placeholder="enter" class="input1">
+<br><br><br>
+<a href="https://mikanixonable.booth.pm/items/4596372">配布</a>
 
-  xs = xs + xa;
-  x = x + xs;
 
-if(y>400){ys=-ys;
-y=400
-};
-if(x>400){xs=-xs;
-x=400
-};
 
-  fill(200,200,200);
-  ellipse(x, y, diameter, diameter);
-}
+<script>
+
+
+const i = document.forms.form1.input1;
+i.addEventListener('input',()=>{
+	var str = i.value
+
+	let display1  = document.getElementById('out1');
+	let display2  = document.getElementById('out2');
+	let display3  = document.getElementById('out3');
+
+	display1.textContent = str
+	display2.textContent = str
+	display3.textContent = str
+});
 
 </script>
-
-
-</body>
+	</body>
 </html>
