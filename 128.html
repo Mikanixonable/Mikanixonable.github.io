@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
 	<head>
-		<meta charset="utf-8" content="異形明朝比較ページ">
-		<title>異形明朝比較ページ</title>
+
+		<title></title>
 
 <style media="screen">
 
 @font-face {
 font-family: 'cu';
-  src: url('fonts/CuneiformHanB.ttf');
+  src: url('fonts/CuneiformHan.ttf');
 }
 
 
@@ -49,7 +49,7 @@ text-align: center;
 
 </head>
 <body>
-
+<p>CuneiformHan</p>
 
 	<div class="display">
 <p id="out1" class="out1"></p>
@@ -59,29 +59,22 @@ text-align: center;
 
 <form name="form1" class="form1">
 <input type="text" id="input1" value=" " placeholder="enter" class="input1">
+<br>
+<a href="https://mikanixonable.booth.pm/items/4624667">配布(booth)</a>
 
-<!-- </form>
-<div>
-	<textarea class="required maxlength" data-maxlength="100" name="inquiry" id="inquiry" rows="5" cols="50"></textarea>
-  </div>
-  <button name="send">送信</button>
-</form> -->
-
-
+</body>
 <script>
 const i = document.forms.form1.input1;
 i.addEventListener('input',()=>{
 	var str = i.value
 
 	let display1  = document.getElementById('out1');
-	let display2  = document.getElementById('out2');
-	let display3  = document.getElementById('out3');
+
 
 	display1.textContent = str
-	display2.textContent = str
-	display3.textContent = str
+
 });
 
 </script>
-	</body>
+
 </html>
