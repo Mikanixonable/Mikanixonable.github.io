@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>人工言語辞書試作json読込</title>
 </head>
+<style>
+	@font-face {
+		font-family: "ehtaplen";
+		src: url("fonts/ehtaplen.ttf");
+	}
+
+	body {
+		display: flex;
+		background: #456;
+		color: #DDD;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 1em;
+	}
+
+	#result {}
+
+	#preview {
+		font-family: "ehtaplen";
+		font-size: 4em;
+	}
+</style>
+
+
 <body>
-	
+
+	<form id="form1">
+		<div id="preview"></div>
+		<div id="result"></div>
+
+		<input type="text" name="input1" value="">
+	</form>
+
+
+
 </body>
+
+
+<script>
+	function jsonFetch() {
+		fetch("json/nessa.json")
+			.then(response => response.json())
+			.then(data => {
+				let word = data.words.find((v) => v.entry.form == input.value);
+				result.innerText = word.translations[0].forms;
+			})
+			.catch(error => console.error(error));
+	}
+
+	const input = document.forms.form1.input1;
+	const result = document.getElementById("result");
+
+	input.addEventListener('input', () => {
+		let inputDiv = document.getElementById('preview');
+		let str = input.value
+		str = henkan(str)
+		inputDiv.textContent = str
+
+		jsonFetch()
+	})
+	
+	function henkan(str) {
+		str = str.replace(/ya/g, "\u{f0605}")
+		str = str.replace(/ye/g, "\u{f0606}")
+		str = str.replace(/yo/g, "\u{f0607}")
+		str = str.replace(/yu/g, "\u{f0608}")
+
+		str = str.replace(/pa/g, "\u{f0609}")
+		str = str.replace(/pe/g, "\u{f060A}")
+		str = str.replace(/pi/g, "\u{f060B}")
+		str = str.replace(/po/g, "\u{f060C}")
+		str = str.replace(/pu/g, "\u{f060D}")
+
+		str = str.replace(/ta/g, "\u{f060E}")
+		str = str.replace(/te/g, "\u{f060F}")
+		str = str.replace(/ti/g, "\u{f0610}")
+		str = str.replace(/to/g, "\u{f0611}")
+		str = str.replace(/tu/g, "\u{f0612}")
+
+		str = str.replace(/a/g, "\u{f0600}")
+		str = str.replace(/e/g, "\u{f0601}")
+		str = str.replace(/i/g, "\u{f0602}")
+		str = str.replace(/o/g, "\u{f0603}")
+		str = str.replace(/u/g, "\u{f0604}")
+
+		return str
+	}
+
+
+
+
+</script>
+
 </html>
