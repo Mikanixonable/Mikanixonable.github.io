@@ -1,127 +1,59 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8" content="異形明朝比較ページ">
-		<title>異形明朝比較ページ</title>
-
-<style media="screen">
-
-@font-face {
-font-family: 'mincho';
-  src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
-}
-@font-face {
-font-family: 'gothic';
-  src: url('fonts/SourceHanSans-Light.woff') format('woff');
-}
-
-
-@font-face {
-font-family: 'imincho';
-  src: url('fonts/IgyouMincho.woff') format('woff');
-}
-@font-face {
-font-family: 'imincho2';
-  src: url('fonts/IgyouMincho2.woff') format('woff');
-}
-@font-face {
-font-family: 'imincho3';
-  src: url('fonts/IgyouMincho3.woff') format('woff');
-}
-
-@font-face {
-font-family: 'igothicl';
-  src: url('fonts/IgyouGothic-Light.woff') format('woff');
-}
-@font-face {
-font-family: 'igothic2';
-  src: url('fonts/IgyouGothic2.woff') format('woff');
-}
-@font-face {
-font-family: 'igothic3';
-  src: url('fonts/IgyouGothic3.woff') format('woff');
-}
-
-@font-face {
-font-family: 'ifude';
-  src: url('fonts/IgyouFude.woff') format('woff');
-}
-
-
-body{
-  font-family: "imincho","mincho","sans-serif";
-
-		display: flex;
-		background: #AAA;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 8%
-	}
-
-	.display {
-	color: #267;
-	height: 500px;
-	width: 80%;
-	background: #FFF;
-	font-size: 40px;
-	text-align: center;
-
-	}
-
-	.display p {
-	padding: 2px;
-	}
-
-
-	.input1{
-	border: 0px
-
-	}
-	.input1::placeholder {
-	  text-align: center;
-	}
-
-	.out2{
-		font-family: "imincho2","mincho","sans-serif";
-	}
-	.out1{
-		font-family: "mincho","sans-serif";
-	}
-	.out3{
-		font-family: "imincho","sans-serif";
-	}
-</style>
-
+<!doctype html>
+<html lang="js">
+<head>
+    <meta charset="utf-8">
+    <title>CATリスト</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
+    <!-- html -->
+<div class="div_cat"></div>
 
-
-	<div class="display">
-<p id="out1" class="out1"></p>
-<p id="out2" class="out2"></p>
-<p id="out3" class="out3"></p>
-	</div>
-
-	<form name="form1" class="form1">
-	<input type="text" id="input1" value="愛のあるユニークで豊かな書体" placeholder="enter" class="input1">
-	</form>
-
-
+<form name="form1" action="">
+    <input name="textBox1" type="text" value="" />
+    <input id="exec" type="button" value="Exec"/>
+</form>
+<hr />
+<div id="output"></div>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
-const i = document.forms.form1.input1;
-i.addEventListener('input',()=>{
-	var str = i.value
+$(function(){
+    //JSONデータ
+    var cat = {"cat_info": [
+        {
+            "name": "ネコ",
+            "prefecture": "北海道",
+        },
+        {
+            "name": "ネコ2",
+            "prefecture": "秋田",
+        },
+        {
+            "name": "ネコ3",
+            "prefecture": "青森",
+        },
+    ]}
 
-  let display1  = document.getElementById('out1');
-	let display2  = document.getElementById('out2');
-	let display3  = document.getElementById('out3');
+    //HTMLを生成
+    for(var index in cat.cat_info){
+      $('<p>'+
+          cat.cat_info[index].name + cat.cat_info[index].prefecture +'</p>').appendTo('.div_cat');
+    }//for文終了
 
-	display1.textContent = str
-	display2.textContent = str
-	display3.textContent = str
+    //onButtonClick
+    $('#exec').on('click', function(){
+        var value = document.forms.form1.textBox1.value;
+        //もし、検索窓に入力した文字列とidが一致したら、そのオブジェクトを（特定して）取り出したい
+        for(var index in cat.cat_info) {
+            if(cat.cat_info[index].name == value) {
+                $('#output').append(JSON.stringify(cat.cat_info[index]));
+            }
+        }
+    });
 });
-
 </script>
-	</body>
+</body>
 </html>
