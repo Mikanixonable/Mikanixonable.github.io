@@ -58,7 +58,8 @@
 		fetch("json/nessa.json")
 			.then(response => response.json())
 			.then(data => {
-				let word = data.words.filter((v) => v.entry.form.match(input.value));
+				let word = data.words.filter((v) => v.entry.form.match("^"+input.value));
+				let meaning = data.words.filter((v) => v.translations[0].forms[0].match(input.value));
 				let IN = input.value
 
 				//一致単語実装
@@ -78,8 +79,17 @@
 
 				//サジェスト実装
 				IME.innerHTML = ""
-				//動作が不安定、このfor文の後ろに処理を書くと動かないことがある
-				for (let step = 0; step < 100; step++) {
+				//訳語サジェスト
+				for (let step = 0; step < Math.min(meaning.length,100); step++) {
+					IME.innerHTML +=
+					"【" + meaning[step].translations[0].title[0] + "】"
+						+ meaning[step].entry.form
+						+ " : "
+						+ meaning[step].translations[0].forms[0]
+						+ "<br>"
+				}
+				//単語サジェスト
+				for (let step = 0; step < Math.min(word.length,100); step++) {
 					IME.innerHTML +=
 						"【" + word[step].translations[0].title[0] + "】"
 						+ word[step].entry.form
