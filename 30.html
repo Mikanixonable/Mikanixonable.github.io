@@ -1,76 +1,152 @@
-<html>
-  <head>
-    <title>SigmaJS example</title>
-   <!-- Sigma core -->
-   
-<script src="js/sigma.js"></script>
-<script src="js/sigmamin.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
-   <!-- Sigma plugins -->
-    <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/supervisor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/plugins/sigma.layout.forceAtlas2/worker.js"></script>
-  <style>
+<!DOCTYPE html>
+<html lang="ja">
 
-        html { height:400px;}
-        body {height: 100%; margin:0;}
-        #sigma-container { width:100%; height:100%; background-color:#E1E1E1}
-
-  </style>
+<head>
+	<title>人工言語辞書試作json読込2</title>
 </head>
-  <body>
-    <div id="container"></div>
-    <div id='sigma-container'></div>
-    <div id="json-container"></div>
-  </body>
-  <script>
+<link rel="stylesheet" href="js/style.css">
+<style>
+	@font-face {
+		font-family: "ehtaplen";
+		src: url("fonts/ehtaplen.ttf");
+	}
 
-var s = new sigma(
-  {
-    renderer: {
-      container: document.getElementById('sigma-container'),
-      type: 'canvas'
-    },
-    settings: {
-      minArrowSize: 10
-    }
-  }
-);
+	body {
+		display: flex;
+		background: var(--c1);
+		color: var(--c2);
+		flex-direction: column;
+		justify-content: center;
+		/* align-items: center; */
+		padding: 1em;
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 2em;
+	}
 
-// Generate a random graph:
-var nbNode = 50;
-var nbEdge = 200;
-var graph = {
-  nodes: [],
-  edges: []
-};
-for (i = 0; i < nbNode; i++)
-  graph.nodes.push({ 
-    id:  i,
-    label: 'Node ' + i,
-    x: Math.random(),
-    y: Math.random(),
-    size: 1,
-    color: '#EE651D'
-  });
+	#header{
+		padding: 1em;
+	}
 
-for (i = 0; i < nbEdge; i++)
-  graph.edges.push({ 
-    id: i, 
-    source: '' + (Math.random() * nbNode | 0), 
-    target: '' + (Math.random() * nbNode | 0),
-    color: '#202020',
-    type: 'curvedArrow'
-  });
+	#preview {
+		/* font-family: "ehtaplen"; */
+		font-size: 2em;
+	}
+	#input{
+		font-size: 1.5em;
+		height: 2em;
+		width: 100%;
+		border: 0em;
+	}
+</style>
 
 
-// load the graph
-s.graph.read(graph);
-// draw the graph
-s.refresh();
-// launch force-atlas for 5sec
-s.startForceAtlas2();
-window.setTimeout(function() {s.killForceAtlas2()}, 10000);
+<body>
+	<div id="header">
+		<h1>Nessa語辞書</h1>
+		<a href="https://zpdic.ziphil.com/dictionary/91">ZpDIC版</a>
+		<a href="https://github.com/Mikanixonable/dictionary">GitHub</a>
+		<form id="form1">
+			<div id="preview"></div>
+			<div id="preview2"></div>
+			<input id="input" type="text" name="input1" value="">
+		</form>
+	</div>
+
+	<div id="IME"></div>
+</body>
 
 
-  </script>
+<script>
+	const input = document.forms.form1.input1;
+	const IME = document.getElementById("IME");
+	const preview = document.getElementById('preview')
+	const preview2 = document.getElementById('preview2')
+
+	function jsonFetch() {
+		fetch("json/nessa.json")
+			.then(response => response.json())
+			.then(data => {
+				let word = data.words.filter((v) => v.entry.form.match("^"+input.value));
+				let meaning = data.words.filter((v) => v.translations[0].forms[0].match(input.value));
+				let IN = input.value
+
+				//一致単語実装
+				if (data.words.some((v) => v.entry.form == IN)) {
+					preview2.textContent =
+						"【" + word[0].translations[0].title + "】"
+						+ word[0].translations[0].forms
+				}
+				//派生語尾実装
+				else if (
+					(IN.slice(IN.length - 2, IN.length) == "ns")
+					& (data.words.some((v) => v.entry.form == IN.slice(0, IN.length - 1)))
+				) {
+					let sug = data.words.find((v) => v.entry.form == IN.slice(0, IN.length - 2) + "s")
+					preview2.textContent = "(過去形)" + sug.translations[0].forms
+				} else { preview2.textContent = "" }
+
+				//サジェスト実装
+				IME.innerHTML = ""
+				//訳語サジェスト
+				for (let step = 0; step < Math.min(meaning.length,100); step++) {
+					IME.innerHTML +=
+					"【" + meaning[step].translations[0].title[0] + "】"
+						+ meaning[step].entry.form
+						+ " : "
+						+ meaning[step].translations[0].forms[0]
+						+ "<br>"
+				}
+				//単語サジェスト
+				for (let step = 0; step < Math.min(word.length,100); step++) {
+					IME.innerHTML +=
+						"【" + word[step].translations[0].title[0] + "】"
+						+ word[step].entry.form
+						+ " : "
+
+						+ word[step].translations[0].forms[0]
+						+ "<br>"
+				}
+			})
+			.catch(error => console.error(error));
+	}
+
+	function view() {
+		// str = henkan(str)
+		preview.textContent = input.value
+		jsonFetch()
+	}
+
+	function henkan(str) {
+		str = str.replace(/ya/g, "\u{f0605}")
+		str = str.replace(/ye/g, "\u{f0606}")
+		str = str.replace(/yo/g, "\u{f0607}")
+		str = str.replace(/yu/g, "\u{f0608}")
+
+		str = str.replace(/pa/g, "\u{f0609}")
+		str = str.replace(/pe/g, "\u{f060A}")
+		str = str.replace(/pi/g, "\u{f060B}")
+		str = str.replace(/po/g, "\u{f060C}")
+		str = str.replace(/pu/g, "\u{f060D}")
+
+		str = str.replace(/ta/g, "\u{f060E}")
+		str = str.replace(/te/g, "\u{f060F}")
+		str = str.replace(/ti/g, "\u{f0610}")
+		str = str.replace(/to/g, "\u{f0611}")
+		str = str.replace(/tu/g, "\u{f0612}")
+
+		str = str.replace(/a/g, "\u{f0600}")
+		str = str.replace(/e/g, "\u{f0601}")
+		str = str.replace(/i/g, "\u{f0602}")
+		str = str.replace(/o/g, "\u{f0603}")
+		str = str.replace(/u/g, "\u{f0604}")
+
+		return str
+	}
+
+
+	input.addEventListener('input', () => { view() })
+	document.addEventListener("DOMContentLoaded", () => { view() })
+
+</script>
+
 </html>
