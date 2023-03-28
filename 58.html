@@ -19,7 +19,8 @@
 		align-items: center;
 		padding: 1em;
 	}
-	#nessa{
+
+	#nessa {
 		font-size: 1em;
 	}
 
@@ -39,12 +40,13 @@
 
 	<form id="form1">
 		<div id="preview"></div>
+		<div id="preview2"></div>
 		<input type="text" name="input1" value="">
-		
-		<div id="IME"></div>
-		
 
-		
+		<div id="IME"></div>
+
+
+
 	</form>
 
 
@@ -55,35 +57,49 @@
 <script>
 	const input = document.forms.form1.input1;
 	const IME = document.getElementById("IME");
+	const preview = document.getElementById('preview')
+	const preview2 = document.getElementById('preview2')
 
 	function jsonFetch() {
 		fetch("json/nessa.json")
 			.then(response => response.json())
 			.then(data => {
 				let word = data.words.filter((v) => v.entry.form.match(input.value));
+				if(data.words.some((v) => v.entry.form == input.value)){
+					preview2.textContent = 
+					"【" + word[0].translations[0].title + "】" 
+					+ word[0].translations[0].forms
+				}
+
+				
+
 				IME.innerHTML = ""
+
+				//動作が不安定、このfor文の後ろに処理を書くと動かないことがある
 				for (let step = 0; step < 100; step++) {
-					IME.innerHTML += word[step].entry.form
+					IME.innerHTML += 
+					"【" + word[step].translations[0].title[0] + "】"
+					+ word[step].entry.form
 					+ " : "
-					+ "【"+word[step].translations[0].title[0]+"】"
+					
 					+ word[step].translations[0].forms[0]
 					+ "<br>"
 				}
-				if (data.words.some((v) => v.entry.form == input.value)){
-					preview.textContent += " : "
-				}
+		
+
+				// let result = data.words.find((v2) => v2.entry.form == input.value)
+				// preview.textContent += " : " + word[0].translations[0].forms[0]
+
 			})
 			.catch(error => console.error(error));
 	}
 
 	input.addEventListener('input', () => {
-		let str = input.value
 		// str = henkan(str)
-		let preview = document.getElementById('preview')
-		preview.textContent = str
+		preview.textContent = input.value
 		jsonFetch()
 	})
-	
+
 	function henkan(str) {
 		str = str.replace(/ya/g, "\u{f0605}")
 		str = str.replace(/ye/g, "\u{f0606}")
