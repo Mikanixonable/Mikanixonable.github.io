@@ -35,6 +35,7 @@
 
 
 <body>
+	<h1>Nessa語辞書</h1>
 
 	<form id="form1">
 		<div id="preview"></div>
@@ -68,8 +69,8 @@
 					+ word[step].translations[0].forms[0]
 					+ "<br>"
 				}
-				if (word[0].entry.form == input.value){
-					preview.textContent += " : " + word[0].translations[0].forms[0]
+				if (data.words.some((v) => v.entry.form == input.value)){
+					preview.textContent += " : "
 				}
 			})
 			.catch(error => console.error(error));
