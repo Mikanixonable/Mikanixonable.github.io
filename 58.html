@@ -14,11 +14,12 @@
 	body {
 		display: flex;
 		background: var(--c1);
-		color: #DDD;
+		color: var(--c2);
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 1em;
+		font-family: 'Times New Roman', Times, serif;
 		font-size: 2em;
 	}
 
@@ -31,7 +32,7 @@
 	}
 
 	#preview {
-		font-family: "ehtaplen";
+		/* font-family: "ehtaplen"; */
 		font-size: 2em;
 	}
 </style>
@@ -68,23 +69,24 @@
 			.then(data => {
 				let word = data.words.filter((v) => v.entry.form.match(input.value));
 				let IN = input.value
+
+				//一致単語実装
 				if (data.words.some((v) => v.entry.form == IN)) {
 					preview2.textContent =
 						"【" + word[0].translations[0].title + "】"
 						+ word[0].translations[0].forms
 				}
+				//派生語尾実装
 				else if (
 					(IN.slice(IN.length - 2, IN.length) == "ns")
+					&(data.words.some((v) => v.entry.form == IN.slice(0, IN.length-1)))
 				) {
-					preview2.textContent = "ert"
+					let sug = data.words.find((v) => v.entry.form == IN.slice(0, IN.length-2)+"s")
+					preview2.textContent = "(過去形)"+sug.translations[0].forms
 				} else { preview2.textContent = "" }
 
-
-
-
-
+				//サジェスト実装
 				IME.innerHTML = ""
-
 				//動作が不安定、このfor文の後ろに処理を書くと動かないことがある
 				for (let step = 0; step < 100; step++) {
 					IME.innerHTML +=
@@ -95,11 +97,6 @@
 						+ word[step].translations[0].forms[0]
 						+ "<br>"
 				}
-
-
-				// let result = data.words.find((v2) => v2.entry.form == IN)
-				// preview.textContent += " : " + word[0].translations[0].forms[0]
-
 			})
 			.catch(error => console.error(error));
 	}
