@@ -1,50 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-.button{
-    font-size: 200%;
-}
-</style>
-<title>
-イラストランダム表示
-</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
-
-
 <body>
-
-
-<script>
-let url = new URL(window.location.href);
-let params = url.searchParams;
-
-
-var param = params.get("n");
-if(!param){
-	var n = Math.floor(Math.random() * 527)+1
-	url.searchParams.append('n',n);
-	location.href = url}
-else{var n = param};
-
-
-
-var img = "https://Mikanixonable.github.io/"+n+".png";
-document.write("<img src=" + img+ " height = 80%><br>");
-document.write("<big><big>link: <a href="+img+">"+img+"</a></big></big><br>");
-</script>
-
-<input
-type="button" 
-class="button"
-style="width:15em;height:3em;"
-value="シャッフル"
-onclick="
-	var k = Math.floor(Math.random() * 527)+1;
-	window.history.replaceState(null, null, '?n='+k);
-	window.location.reload();
-	">
-
-
+	
 </body>
-
 </html>

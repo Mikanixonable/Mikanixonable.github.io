@@ -1,25 +1,66 @@
 <html>
 <head>
-<title>
-
-</title>
+<style>
+  body{
+    display: flex;
+    background: #456;
+    color: #DDD;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+  .button{
+    color: #DDD;
+    font-size: 200%;
+    background-color: #567;
+    border: 0px;
+  }
+  a{
+    color: #6AD;
+  }
+</style>
+<title>イラストランダム表示</title>
+<meta content="描いたイラストをボタンをおすごとにランダムに表示する">
 </head>
 
 
 <body>
 
 
-
-
 <script>
+let url = new URL(window.location.href);
+let params = url.searchParams;
+var h = 530;
+var h2 = 205;
 
-var n = Math.floor(Math.random() * 527)+1;
-var img = "https://Mikanixonable.github.io/"+n+".png";
-document.write("<img src=" + img+ " height=80%><br>");
-document.write("link: <a href="+img+">"+img+"</a><br>");
+var param = params.get("n");
+if(!param){
+	var n = Math.floor(Math.random() * 527)+1
+	url.searchParams.append('n',n);
+	location.href = url}
+else{var n = param};
+
+
+
+var img = ""+n+".png";
+document.write("<big><big><big><big>"+n+"</big></big></big></big><br>");
+document.write("<img src=" + img+ " height = 80%><br>");
+document.write("<big><big>link: <a href="+img+">"+img+"</a></big></big><br>");
 </script>
 
-<input type="button" value="再読込" onclick="window.location.reload();" />
+<input
+type="button"
+class="button"
+style="width:15em;height:3em;"
+value="シャッフル"
+onclick="
+	var k = Math.floor(Math.random() * (h + h2)-h2);
+	window.history.replaceState(null, null, '?n='+k);
+	window.location.reload();
+	">
+
+
 </body>
 
 </html>
