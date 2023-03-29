@@ -19,7 +19,7 @@
     }
 </style>
 <body>
-  <h1>Title</h1>
+  <h1>時刻</h1>
   <p id="p"></p>
 
 </body>
@@ -40,20 +40,21 @@
   const hour = new Date().getHours();
   const p = document.getElementById("p")
   let theta = -Math.cos(hour/12*Math.PI)
-  const c1 = "#2A2A38"
+  const c1 = "#1C1D28"
   const c2 = "#A34748"
-  const c3 = "#1B4F77"
+  const c3 = "#3A849E"
 
   let arr1 = code2rgb(c1)
   let arr2 = code2rgb(c2)
   let arr3 = code2rgb(c3)
 
   function niji(x,a,b,c){
-    let y = (2*a-4*b+2*c)*x**2 + (-3*a+4*b-c)*x + a
+    let y = a*(1-x)+c*x+(b-(a+c)/2)*Math.exp(-200*(x-0.5)**2)
     return y
   }
 
-  theta = 0.9
+
+
 
   let arr4 = [
     niji(theta,arr1[0],arr2[0],arr3[0]),
@@ -63,7 +64,7 @@
 
   let c4 = rgb2code(arr4)
 
-  p.innerHTML = theta
+  p.innerHTML = hour+"時"
 
 document.body.style.backgroundColor = c4
 </script>
