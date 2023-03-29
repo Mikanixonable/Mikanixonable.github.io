@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Document</title>
+  <title>東京の温湿度</title>
 </head>
 <link rel="stylesheet" href="js/style.css">
 <style>
@@ -16,18 +16,34 @@
     font-size: 3em;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
   }
-  #div1{
+
+  #div1 {
     font-size: 0.5em;
   }
+  #cont2{
+    display: flex;
+    flex-direction: row;
+  }
+  .value{
+    font-size: 2em;
+    margin: 0.2em;
+  }
+  .i{
+    font-size: 0.5em;
+  }
+
 </style>
 
 <body>
   <div id="cont1">
-    
-    <div id="title">東京の温湿度</div>
+
+    <div id="title">東京の温湿度<span class="i">(10分毎)</span></div>
     <div id="div1"></div>
-    <div id="div2"></div>
-    <div id="div3"></div>
+
+    <div id="cont2">
+      <div id="div2" class="value"></div>
+      <div id="div3" class="value"></div>
+    </div>
   </div>
 </body>
 
