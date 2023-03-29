@@ -49,11 +49,11 @@
   let arr3 = code2rgb(c3)
 
   function niji(x,a,b,c){
-    let y = (2*a-4*b+2*c)*x**2 + (-3*a+4*b-c)*x + c
+    let y = (2*a-4*b+2*c)*x**2 + (-3*a+4*b-c)*x + a
     return y
   }
 
-  theta = 0
+  theta = 0.9
 
   let arr4 = [
     niji(theta,arr1[0],arr2[0],arr3[0]),

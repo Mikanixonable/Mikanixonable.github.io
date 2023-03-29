@@ -92,7 +92,8 @@
           div1.textContent = timeData.slice(0, 16)
             .replaceAll("T", " ")
             .replaceAll("-", "/")
-          let temp = 1 / (1 + Math.exp(-(skyData["44132"].temp[0] / 35 - 0.5)))
+          let temp = skyData["44132"].temp[0]/45
+          if (temp<0){temp = 0}else if(temp>45){temp = 45}
           let humid = skyData["44132"].humidity[0] / 100
           div2.textContent = skyData["44132"].temp[0].toString().slice(0, 2) + "C"
           div3.textContent = skyData["44132"].humidity[0] + "%"
@@ -109,6 +110,10 @@
           rgb[0] = rgb[0] + (rgb[0] - sum(rgb) / 3) * (l - 0.5) * 2
           rgb[1] = rgb[1] + (rgb[1] - sum(rgb) / 3) * (l - 0.5) * 2
           rgb[2] = rgb[2] + (rgb[2] - sum(rgb) / 3) * (l - 0.5) * 2
+          
+          if (rgb[0]>255){rgb[0]=255}
+          if (rgb[1]>255){rgb[1]=255}
+          if (rgb[2]>255){rgb[2]=255}
 
           document.body.style.backgroundColor = rgb2code(rgb);
         })
