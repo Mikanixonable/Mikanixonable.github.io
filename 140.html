@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+  <title> visualizing amedas fork</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+  <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+</head>
+
+<body>
+
+<div id="mapid" style="position:absolute;top:0;left:0;bottom:0;right:0;"></div>
+<script>
+
+(async function() { 
+
+// 気温カラースケール定義
+const temparatureColorScale = [
+  { temp: 35, color: '#B40068' },
+  { temp: 30, color: '#FF2800' },
+  { temp: 25, color: '#FF9900' },
+  { temp: 20, color: '#FFF500' },
+  { temp: 15, color: '#FFFF96' },
+  { temp: 10, color: '#FFFFF0' },
+  { temp: 5, color: '#B9EBFF' },
+  { temp: 0, color: '#0096FF' },
+  { temp: -5, color: '#0041FF' },
+  { temp: -273.15, color: '#002080' }
+]
+
+// 気温カラーの取得
+const getTemparatureColor = (temp) => {
+  const colorScale = temparatureColorScale.find(item => {
+    return temp > item.temp 
+  })
+
+  if( !colorScale ) return {temp: 'N/A', color: '#000000'}
+
+  return colorScale
+}
+
+
+// アメダスデータの読み取り
+const fetchAmedasThenGenerateVoronoi = async (option) => {
+
+  // アメダス観測所データの読み取り
+  const fetchAmedasObservatories = async () => {
+    const url = "https://www.jma.go.jp/bosai/amedas/const/amedastable.json"
+    const amedasObservatories = {}
+    
+    const res = await fetch(url)
+    const json = await res.json()
+
+    Object.keys(json).map( key => {
+      const amedas = json[key]
+      json[key].lat = amedas.lat[0] + (amedas.lat[1] / 60)
+      json[key].lon = amedas.lon[0] + (amedas.lon[1] / 60)
+    })
+
+    return json
+  }
+
+  // アメダス気象情報データの読み取り
+  const fetchAmedasWeatherInformations = async (queryDatetime) => {  
+
+    const url = "https://www.jma.go.jp/bosai/amedas/data/map/" + queryDatetime + ".json"
+
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+  }
+
+
+  // アメダス観測所からボロノイポリゴンを作成
+  const generateGeoJsonAmedasVoronoiPolygons = async (amedas, option) => {
+    const points = []
+    Object.keys(amedas).map( key => {
+      const item = amedas[key]
+      points.push(turf.point([item.lon, item.lat],{'key': key, 'kjName': item.kjName, 'knName': item.knName, 'alt': item.alt}))
+    })
+    const collection = turf.featureCollection(points)
+    const voronoiPolygons = turf.voronoi(collection, {bbox: turf.bbox(turf.buffer(collection, 50, {}))})
+
+    datetime = option.queryDatetime.match( /(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/ )
+    // アメダス観測所ポイントとボロノイポリゴンの内外判定を行い、観測所データをポリゴンへ移植
+    points.map( point => {
+      voronoiPolygons.features.some( polygon => {
+        if( turf.booleanPointInPolygon(point, polygon) === true ){
+          polygon.properties.key = point.properties.key
+          polygon.properties.kjName = point.properties.kjName
+          polygon.properties.knName = point.properties.knName
+          polygon.properties.alt = point.properties.alt
+          polygon.properties.lon = point.geometry.coordinates[0]
+          polygon.properties.lat = point.geometry.coordinates[1]
+          polygon.properties.queryDatetime = datetime[1] + '-' + datetime[2] + '-' + datetime[3] + ' ' + datetime[4] + ':' + datetime[5] + ':' + datetime[6]
+          return true
+        }
+        return false
+      })
+    })
+
+    // ボロノイ図を陸地でクリッピング
+    if( option.isClipping === true) {
+      const dissolvePolygons = turf.dissolve(turf.buffer(collection, 30, {steps: 2}))
+      voronoiPolygons.features.map( voronoiPolygon => {
+        dissolvePolygons.features.some( dissolvePolygon => {
+          const intersectPolygon = turf.intersect(voronoiPolygon, dissolvePolygon)
+          if (!intersectPolygon){
+            return false
+          } 
+          voronoiPolygon.geometry = intersectPolygon.geometry
+          return true
+        })
+      })
+    }
+
+    return voronoiPolygons
+  }
+
+      // 現在日時からアメダス気象情報取得パラメータを生成
+  const generateDateimeString = () => {
+    const nowTime = new Date()
+    nowTime.setHours((new Date()).getHours() -1)
+    //nowTime.setMonth((new Date()).getMonth() -4)
+    return nowTime.getFullYear().toString() + (nowTime.getMonth() + 1).toString().padStart(2, '0')  + nowTime.getDate().toString().padStart(2, '0')  + nowTime.getHours().toString().padStart(2, '0')  + "0000"
+  }
+
+  const queryDatetime = generateDateimeString()
+
+  const amedasObservatories = await fetchAmedasObservatories()
+  const amedasWeatherInfos =  await fetchAmedasWeatherInformations(queryDatetime)
+  const voronoiPolygons = await generateGeoJsonAmedasVoronoiPolygons(amedasObservatories, {isClipping: option.isClipping, queryDatetime: queryDatetime})
+
+  return {observatories: amedasObservatories, weatherInfos: amedasWeatherInfos, voronoiPolygons: voronoiPolygons, queryDatetime: queryDatetime }
+}
+
+// Leaflet地図初期化
+const initializeMainMap = () => {
+
+  const map = L.map("mapid", L.extend({
+    zoom: 18,
+    minZoom: 3,
+    center: [35.17097, 136.88435],
+    worldCopyJump: "true"
+  }))
+
+  map.setView([35.17097, 136.88435], 13)
+
+  // スケールの追加
+  L.control.scale({
+    imperial: false,
+    metric: true
+  }).addTo(map)
+
+  const controlLayers = L.control.layers({}, {},{collapsed: false}).addTo(map)
+
+  return { map: map, controlLayers: controlLayers }
+}
+
+// ベースマップ
+const initializeBaseMaps = (mainMap) => {
+  const map = mainMap.map
+  const controlLayers = mainMap.controlLayers
+
+  // ベース地図の追加
+  const osmDarkLayer = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+    attribution: 'Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL.',
+    maxZoom: 22,
+    maxNativeZoom: 18
+  }).addTo(map)
+
+  const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 22,
+    maxNativeZoom: 18
+  })
+
+  const gsiStdLayer = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>',
+    maxZoom: 22,
+    maxNativeZoom: 18
+  })
+
+  const gsiOrtLayer = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg', {
+    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>, Images on 世界衛星モザイク画像 obtained from site https://lpdaac.usgs.gov/data_access maintained by the NASA Land Processes Distributed Active Archive Center (LP DAAC), USGS/Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, (Year). Source of image data product.',
+    maxZoom: 22,
+    maxNativeZoom: 8
+  })
+
+  const gsiblankLayer = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>',
+    maxZoom: 22,
+    maxNativeZoom: 14
+  })
+
+  const baseMaps = {
+    'OpenStreetMap(Dark)': osmDarkLayer,
+    'OpenStreetMap': osmLayer,
+    '国土地理院(標準)': gsiStdLayer,
+    '国土地理院(写真)': gsiOrtLayer,
+    '国土地理院(白地図)': gsiblankLayer
+  }
+
+  // レイヤ切り替えコントール設定
+  Object.keys(baseMaps).map( key => {
+    controlLayers.addBaseLayer(baseMaps[key], key)
+  })
+
+  return baseMaps
+}
+
+
+// パネルウインドウ
+const initializePanels = (mainMap) => {
+  const map = mainMap.map
+  // 情報パネル
+  const addInfoPanel = (lmap) => {
+    const info = L.control()
+    const div = L.DomUtil.create('div', 'info')      
+
+    info.onAdd = (map) => {
+      return div
+    }
+    info.update = (props) => {
+      div.innerHTML = '<h4>Temperature</h4>' +  
+        (props ?
+          '<b>' + props.queryDatetime + '<br />' + props.kjName + '<br />' + props.knName + '</b><br />' + props.temp + ' ℃'
+          : 'Hover over polygon'
+        )
+    }
+    info.addTo(lmap)  
+
+    return info
+  }
+
+  // 凡例パネル
+  const addLegendPanel = (lmap) => {
+    const legend = L.control({position: 'bottomright'})
+    legend.onAdd = (map) => {
+
+      const div = L.DomUtil.create('div', 'info legend')
+      temparatureColorScale.map( item => {
+        div.innerHTML +=
+              '<i style="background:' + item.color + '"></i> ' +
+              '&gt; ' + item.temp + '<br>'
+      })
+      div.innerHTML += '<i style="background:' + getTemparatureColor('N/A').color + '  opacity:0.0"></i> ' + 'N/A'
+      return div
+    }
+    legend.addTo(lmap)
+    return legend 
+  }
+
+  const infoPanel = addInfoPanel(map)
+  const legendPanel = addLegendPanel(map)
+
+  return {info : infoPanel, legend: legendPanel}
+}
+
+
+// オーバーレイレイヤ
+const initializeOverlayMaps = (mainMap, amedas, infoPanel) => {
+  const map = mainMap.map
+  const controlLayers = mainMap.controlLayers
+
+  // アメダス観測所レイヤ
+  const amedasObservatoryLayer = L.featureGroup([], {
+    attribution: '<a href="https://www.jma.go.jp/bosai/map.html#6/41.27/133.308/&elem=temp&contents=amedas&interval=60">気象庁「アメダス」を加工して作成</a>'
+  })
+  .on('add', (event) => {
+    Object.keys(amedas.observatories).map( key => {
+      const amedasItem = amedas.observatories[key]
+      L.circle([amedasItem.lat, amedasItem.lon], {radius: 200, weight: 2}).addTo(event.sourceTarget).bindPopup(amedasItem.kjName)
+    })
+  })
+  .addTo(map)
+
+  // アメダス気象情報(気温)レイヤ
+  const amedasTemperatureLayer = L.geoJSON( amedas.voronoiPolygons, {
+    attribution: '<a href="https://www.jma.go.jp/bosai/map.html#6/41.27/133.308/&elem=temp&contents=amedas&interval=60">気象庁「アメダス」を加工して作成</a>',
+    onEachFeature: (feature, layer) => {
+
+      layer.on({
+        add: (event) => {
+          const layer = event.target
+
+          const style = {'color': '#000000', 'weight': 0.5, 'opacity': 1, 'fillOpacity': 0.8 }
+          const weather = amedas.weatherInfos[layer.feature.properties.key]
+          if( weather && weather.temp ) {
+            style.fillColor = getTemparatureColor(weather.temp[0]).color
+            layer.feature.properties.temp = weather.temp[0]
+          } else  {
+            style.fillOpacity = 0
+            style.fillColor = getTemparatureColor(30).color
+            layer.feature.properties.temp = 'N/A'
+          }
+          layer.originalStyle = style
+
+          layer.setStyle(style)
+        },
+        mouseover: (event) => {
+          const layer = event.target
+
+          layer.setStyle({
+              weight: 5,
+              color: '#666666'
+          })
+
+          infoPanel.update(layer.feature.properties)
+
+          if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+              layer.bringToFront()
+          }          
+        },
+        mouseout: (event) => {
+          const layer = event.target
+          layer.setStyle(layer.originalStyle)
+
+          infoPanel.update()
+
+        }
+      })
+    }
+  })
+  .addTo(map)
+
+  const overlayMaps = {
+    "アメダス観測所": amedasObservatoryLayer,
+    "気温": amedasTemperatureLayer
+  }
+
+  // レイヤ切り替えコントール設定
+  Object.keys(overlayMaps).map( key => {
+    controlLayers.addOverlay(overlayMaps[key], key)
+  })
+
+return overlayMaps
+
+}
+
+// メイン
+const main = async () => {
+  const amedas = await fetchAmedasThenGenerateVoronoi({isClipping: true})
+  const mainMap = initializeMainMap()
+  const panels = initializePanels(mainMap)
+  const baseMaps = initializeBaseMaps(mainMap)
+  const overlayMaps = initializeOverlayMaps(mainMap, amedas, panels.info)
+}
+
+main()
+
+}())
+
+</script>
+
+<style>
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777777;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+</style>
+
+</body>
+</html>
