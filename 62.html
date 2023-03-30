@@ -22,20 +22,12 @@
 		font-size: 4em;
 	}
 
-	#chart {
+	/* #chart {
 		background-color: #ee5;
-	}
+	} */
 
 	.d3svg {
-		background-color: #ddd;
-	}
-
-	.testDiv {
-		background-color: #ee5;
-	}
-
-	.testSVG {
-		background-color: #ddd;
+		background-color: #ffffff11;
 	}
 </style>
 
@@ -44,67 +36,24 @@
 	<h1>Site Map</h1>
 	<div id="dev"></div>
 	<div id="chart"></div>
-
-	<!-- <div class="testDiv">
-		<svg width="500" height="500" viewBox="0 0 500 500" class="testSVG">
-
-			<g transform="translate(250, 250)">
-				<g transform="translate(0,0)">
-					<a href="50.html">
-						<circle r="30" fill="var(--c3)" />
-						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
-					</a>
-				</g>
-				<g transform="translate(0, 50)">
-					<a href="50.html">
-						<circle r="30" fill="var(--c3)" />
-						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
-					</a>
-				</g>
-			</g>
-		</svg>
-	</div> -->
-
 </body>
 <script src="js/d3.js"></script>
 <script>
-
+	const n = 200
 
 	let dev = document.getElementById("dev")
-	// function genre(name) {
-	// 	let result
-	// 	fetch(name)
-	// 		.then(response => {
-	// 			return response.text();
-	// 		})
-	// 		.then(body => {
-	// 			var m = body.match(/content=\"(.*)\"/);
-	// 			// body.match(/content=\"(.*)\"/);
-	// 			result = m[0]
-
-	// 		});
-	// }
-
-	// fetch("json/meta4.json")
-	// 	.then(response => { return response.json(); })
-	// 	.then(json => {
-
-
-	// 		dev.innerHTML = json.pages[0].ctime
-	// 	});
-
-
-
 	let i = document.getElementById("i")
 	let str = window.location.href.split('/').pop();
 	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
 	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
-	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
+	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " 
+	+ `<a href=\"index.html\">Top</a>`+ " "
+	+ `<a href=\"${num2}\">${num2}></a>`
 
 	let maxWidth = self.innerWidth
 	let width = maxWidth * 0.9
 	let height = self.innerHeight * 0.6
-	const n = 100
+
 	const data = [...Array(n)].map((v, i) => i + 1)
 	const datar = [...Array(n)].map(Math.random)
 	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
@@ -134,8 +83,7 @@
 				let r2 = 0.5 * r + 0.5 * r * datar[i]
 				return r2
 			})
-			.attr("fill", "#789")
-		// .attr("fill", "var(--c3)")
+		// .attr("fill", "#789")
 
 		const text = g.append("text")
 			.text((d, i) => d)
@@ -144,67 +92,47 @@
 			.attr("alignment-baseline", "central")
 			.attr("fill", "var(--c2)")
 
+		//色塗り
 		fetch("json/meta4.json")
 			.then(response => { return response.json(); })
 			.then(json => {
-				// circle.attr("fill", (d, i) => {
-				// 	if(json.pages[d].genre=="illust"){
-				// 		return "#222"
-				// 	}
-				// 	return "#2aa"
-				// })
-
-				// let all_cities = json.pages.filter(function (item, index) {
-				// 	if (item.genre == "illust") return true;
-				// });
-
-				let v = json.pages.filter((item,index) => {
-					if(item.genre == "illust"){
-			return true}
-			return false});
-				
-				let vName = v.map((v,i) => v.filename)
-				dev.innerHTML = vName[0]
-				let vName2 = [4]
-				
-				circle.attr("fill",(d,i)=>{
-					if(vName.indexOf(d+".html")!==-1){
-						return "#aaa"
+				let illustP = json.pages.filter((item, index) => {
+					if (item.genre == "illust") {
+						return true
 					}
-					return "#a95"
+					return false
+				});
+				let fontP = json.pages.filter((item, index) => {
+					if (item.genre == "font") {
+						return true
+					}
+					return false
+				});
+
+				let illust = illustP.map((v, i) => v.filename)//illust
+				let font = fontP.map((v, i) => v.filename)//illust
+				// dev.innerHTML = vName[0]
+				let exist = json.pages.map((v, i) => v.filename)//exist
+
+				circle.attr("fill", (d, i) => {
+					if (illust.indexOf(d + ".html") !== -1) {
+						return "var(--c4)"
+					}
+					else if(font.indexOf(d + ".html") !== -1){
+						return "var(--c6)"
+
+					}
+					else if (exist.indexOf(d + ".html") == -1) {
+						return "#00000030"
+					}
+					return "var(--c5)"//normal color
 				})
-				
 			});
 
-
-		// // g.selectAll("circle").attr("fill", "#456")
 	}
 	d3main()
 
-	// flame.selectAll("circle")
-	// 	.data(htmlList)
-	// 	.join("circle")
-	// 	.attr("cx", (d, i) => i * 40)
-	// 	.attr("cy", 0)
-	// 	.attr("r", 18)
-	// 	.attr("fill", "var(--c3)")
-
-
-	// const obj = flame.append("a")
-	// 	.attr("href", "1.html")
-
-	// obj.append("circle")
-	// 	.attr("r", "30")
-	// 	.attr("fill", "var(--c3)")
-	// obj.append("text")
-	// 	.attr("text-anchor", "middle")
-	// 	.attr("alignment-baseline", "middle")
-	// 	.attr("fill", "var(--c2)")
-	// 	.text("1")
 </script>
-<!-- <script type="module">
-	import data from "./json/meta4.json" assert { type: "json" }
-	// dev.innerHTML = data.pages
-</script> -->
+
 
 </html>

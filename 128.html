@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
 
-		<title>CuneiformHan</title>
-
+<html dir="ltr" lang="ja">
+<head>
+<title>CuneiformHan</title>
 <style media="screen">
 
 @font-face {
@@ -49,23 +48,19 @@ text-align: center;
 	font-family: "cu";
 }
 </style>
-
-</head>
+<meta genre="font"/></head>
 <body>
 <p>CuneiformHan</p>
-
-	<div class="display">
-<p id="out1" class="out1"></p>
+<div class="display">
+<p class="out1" id="out1"></p>
 <!-- <p id="out2" class="out2"></p>
 <p id="out3" class="out3"></p> -->
-	</div>
-
-<form name="form1" class="form1">
-<input type="text" id="input1" value=" " placeholder="enter" class="input1">
-<br>
+</div>
+<form class="form1" name="form1">
+<input class="input1" id="input1" placeholder="enter" type="text" value=" "/>
+<br/>
 <a href="https://mikanixonable.booth.pm/items/4624667">配布(booth)</a>
-
-</body>
+</form></body>
 <script>
 const i = document.forms.form1.input1;
 i.addEventListener('input',()=>{
@@ -79,5 +74,4 @@ i.addEventListener('input',()=>{
 });
 
 </script>
-
 </html>

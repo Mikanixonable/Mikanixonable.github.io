@@ -46,7 +46,9 @@
 	let str = window.location.href.split('/').pop();
 	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
 	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
-	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
+	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " 
+	+ `<a href=\"index.html\">Top</a>`+ " "
+	+ `<a href=\"${num2}\">${num2}></a>`
 
 	let maxWidth = self.innerWidth
 	let width = maxWidth * 0.9
@@ -94,22 +96,33 @@
 		fetch("json/meta4.json")
 			.then(response => { return response.json(); })
 			.then(json => {
-				let v = json.pages.filter((item, index) => {
+				let illustP = json.pages.filter((item, index) => {
 					if (item.genre == "illust") {
 						return true
 					}
 					return false
 				});
+				let fontP = json.pages.filter((item, index) => {
+					if (item.genre == "font") {
+						return true
+					}
+					return false
+				});
 
-				let vName = v.map((v, i) => v.filename)//illust
+				let illust = illustP.map((v, i) => v.filename)//illust
+				let font = fontP.map((v, i) => v.filename)//illust
 				// dev.innerHTML = vName[0]
-				let vName2 = json.pages.map((v, i) => v.filename)//exist
+				let exist = json.pages.map((v, i) => v.filename)//exist
 
 				circle.attr("fill", (d, i) => {
-					if (vName.indexOf(d + ".html") !== -1) {
+					if (illust.indexOf(d + ".html") !== -1) {
 						return "var(--c4)"
 					}
-					else if (vName2.indexOf(d + ".html") == -1) {
+					else if(font.indexOf(d + ".html") !== -1){
+						return "var(--c6)"
+
+					}
+					else if (exist.indexOf(d + ".html") == -1) {
 						return "#00000030"
 					}
 					return "var(--c5)"//normal color

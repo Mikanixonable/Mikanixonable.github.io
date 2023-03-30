@@ -95,7 +95,6 @@ for i in range(len(files)):
     "type": "image",
     "image": "e.svg",
     "color": "BLUE"
-
     }
     nodes.append(node_dic)
 
