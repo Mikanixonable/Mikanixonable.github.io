@@ -1,33 +1,179 @@
 <html>
 
 <head>
-	<title>D3 Demo</title>
-	<script src="https://unpkg.com/d3/dist/d3.min.js"></script>
+	<title></title>
+	<meta content=>
 </head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+	body {
+		background-color: var(--c1);
+		color: var(--c2);
+		display: flex;
+		/* justify-content: center; */
+		flex-direction: column;
+		align-items: center;
+		padding: 0em;
+		font-size: 1em;
+		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	#chart {
+		background-color: #ee5;
+	}
+
+	.d3svg {
+		background-color: #ddd;
+	}
+
+	.testDiv {
+		background-color: #ee5;
+	}
+
+	.testSVG {
+		background-color: #ddd;
+	}
+</style>
 
 <body>
+	<div id="i"></div>
+	<h1>Title</h1>
+	<div id="dev"></div>
 	<div id="chart"></div>
+
+	<!-- <div class="testDiv">
+		<svg width="500" height="500" viewBox="0 0 500 500" class="testSVG">
+
+			<g transform="translate(250, 250)">
+				<g transform="translate(0,0)">
+					<a href="50.html">
+						<circle r="30" fill="var(--c3)" />
+						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
+					</a>
+				</g>
+				<g transform="translate(0, 50)">
+					<a href="50.html">
+						<circle r="30" fill="var(--c3)" />
+						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
+					</a>
+				</g>
+			</g>
+		</svg>
+	</div> -->
+
 </body>
+<script src="js/d3.js"></script>
 <script>
-	const dataset = [5, 4, 3, 2, 1];
-	const width = 400, height = 100;
-	const x = d3.scaleLinear()
-		.domain([0, dataset.length - 1])
-		.range([50, 350]);
-	const size = d3.scaleSqrt()
-		.domain([0, d3.max(dataset)])
-		.range([0, height / 2]);
-	const svg = d3.select("#chart").append("svg")
-		.attr("width", width)
-		.attr("height", height);
-	svg.selectAll("circle")
-		.data(dataset)
-		.join("circle")
-		.attr("cx", (d, i) => x(i))
-		.attr("cy", height / 2)
-		.attr("r", size)
-		.attr("fill", "red")
-		.attr("opacity", 0.5);
+
+	let dev = document.getElementById("dev")
+	// function genre(name) {
+	// 	let result
+	// 	fetch(name)
+	// 		.then(response => {
+	// 			return response.text();
+	// 		})
+	// 		.then(body => {
+	// 			var m = body.match(/content=\"(.*)\"/);
+	// 			// body.match(/content=\"(.*)\"/);
+	// 			result = m[0]
+
+	// 		});
+	// }
+
+
+
+
+
+	let i = document.getElementById("i")
+	let str = window.location.href.split('/').pop();
+	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
+	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
+	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
+
+	let maxWidth = self.innerWidth
+	let width = maxWidth * 0.9
+	let height = self.innerHeight * 0.6
+	const n = 100
+	const data = [...Array(n)].map((v, i) => i + 1)
+	const datar = [...Array(n)].map(Math.random)
+	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
+
+	// dev.innerHTML = genre("6.html")
+
+	//準備
+	function d3main() {
+		const r = width / 10 / 2
+		const svg = d3.select("#chart").append("svg")
+			.attr("class", "d3svg")
+			.attr("width", maxWidth)
+			.attr("height", data.length / 10 * r * 2)
+			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
+		const flame = svg.append("g")
+			.attr("transform", `translate(${maxWidth / 2},${r})`)
+
+
+		//描画
+		const g = flame.selectAll("g").data(data).join("g")
+			.attr("transform", (d, i) => `translate(${-width / 2 + r + 2 * r * (i % 10)},${Math.floor(i / 10) * 2 * r})`)//locale
+			.append("a")
+			.attr("href", (d, i) => d + ".html")
+
+		const circle = g.append("circle")
+			.attr("r", (d, i) => {
+				let r2 = 0.5 * r + 0.5 * r * datar[i]
+				return r2
+			})
+		// .attr("fill", "var(--c3)")
+
+		const text = g.append("text")
+			.text((d, i) => d)
+			.attr("style", (d, i) => `font-size: ${0.5 * r + 0.5 * r * datar[i]}px`)
+			.attr("text-anchor", "middle")
+			.attr("alignment-baseline", "central")
+			.attr("fill", "var(--c2)")
+		// let m = 6
+
+		// fetch(m + ".html")
+		// 	.then(response => { return response.text(); })
+		// 	.then(body => {
+		// 		var m = body.match(/genre=\"(.*)\"/);
+		// 		// body.match(/content=\"(.*)\"/);
+		// 		result = m[1]
+		// 		circle.attr("fill", (d, i) => {
+		// 			if (d == 6) {
+		// 				return "#777"
+		// 			}
+		// 		})
+
+		// 	});
+		// // g.selectAll("circle").attr("fill", "#456")
+	}
+	d3main()
+
+	// flame.selectAll("circle")
+	// 	.data(htmlList)
+	// 	.join("circle")
+	// 	.attr("cx", (d, i) => i * 40)
+	// 	.attr("cy", 0)
+	// 	.attr("r", 18)
+	// 	.attr("fill", "var(--c3)")
+
+
+	// const obj = flame.append("a")
+	// 	.attr("href", "1.html")
+
+	// obj.append("circle")
+	// 	.attr("r", "30")
+	// 	.attr("fill", "var(--c3)")
+	// obj.append("text")
+	// 	.attr("text-anchor", "middle")
+	// 	.attr("alignment-baseline", "middle")
+	// 	.attr("fill", "var(--c2)")
+	// 	.text("1")
 </script>
 
 </html>
