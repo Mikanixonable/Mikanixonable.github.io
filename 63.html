@@ -69,6 +69,7 @@
 <script src="js/d3.js"></script>
 <script>
 
+
 	let dev = document.getElementById("dev")
 	// function genre(name) {
 	// 	let result
@@ -84,7 +85,13 @@
 	// 		});
 	// }
 
+	// fetch("json/meta4.json")
+	// 	.then(response => { return response.json(); })
+	// 	.then(json => {
 
+
+	// 		dev.innerHTML = json.pages[0].ctime
+	// 	});
 
 
 
@@ -102,7 +109,7 @@
 	const datar = [...Array(n)].map(Math.random)
 	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
 
-	// dev.innerHTML = genre("6.html")
+
 
 	//準備
 	function d3main() {
@@ -127,6 +134,7 @@
 				let r2 = 0.5 * r + 0.5 * r * datar[i]
 				return r2
 			})
+			.attr("fill", "#789")
 		// .attr("fill", "var(--c3)")
 
 		const text = g.append("text")
@@ -135,21 +143,40 @@
 			.attr("text-anchor", "middle")
 			.attr("alignment-baseline", "central")
 			.attr("fill", "var(--c2)")
-		// let m = 6
 
-		// fetch(m + ".html")
-		// 	.then(response => { return response.text(); })
-		// 	.then(body => {
-		// 		var m = body.match(/genre=\"(.*)\"/);
-		// 		// body.match(/content=\"(.*)\"/);
-		// 		result = m[1]
-		// 		circle.attr("fill", (d, i) => {
-		// 			if (d == 6) {
-		// 				return "#777"
-		// 			}
-		// 		})
+		fetch("json/meta4.json")
+			.then(response => { return response.json(); })
+			.then(json => {
+				// circle.attr("fill", (d, i) => {
+				// 	if(json.pages[d].genre=="illust"){
+				// 		return "#222"
+				// 	}
+				// 	return "#2aa"
+				// })
 
-		// 	});
+				// let all_cities = json.pages.filter(function (item, index) {
+				// 	if (item.genre == "illust") return true;
+				// });
+
+				let v = json.pages.filter((item,index) => {
+					if(item.genre == "illust"){
+			return true}
+			return false});
+				
+				let vName = v.map((v,i) => v.filename)
+				dev.innerHTML = vName[0]
+				let vName2 = [4]
+				
+				circle.attr("fill",(d,i)=>{
+					if(vName.indexOf(d+".html")!==-1){
+						return "#aaa"
+					}
+					return "#a95"
+				})
+				
+			});
+
+
 		// // g.selectAll("circle").attr("fill", "#456")
 	}
 	d3main()
@@ -175,5 +202,9 @@
 	// 	.attr("fill", "var(--c2)")
 	// 	.text("1")
 </script>
+<!-- <script type="module">
+	import data from "./json/meta4.json" assert { type: "json" }
+	// dev.innerHTML = data.pages
+</script> -->
 
 </html>
