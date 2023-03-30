@@ -41,7 +41,7 @@
 
 <body>
 	<div id="i"></div>
-	<h1>Title</h1>
+	<h1>Site Map</h1>
 	<div id="dev"></div>
 	<div id="chart"></div>
 
@@ -68,6 +68,33 @@
 </body>
 <script src="js/d3.js"></script>
 <script>
+
+
+	let dev = document.getElementById("dev")
+	// function genre(name) {
+	// 	let result
+	// 	fetch(name)
+	// 		.then(response => {
+	// 			return response.text();
+	// 		})
+	// 		.then(body => {
+	// 			var m = body.match(/content=\"(.*)\"/);
+	// 			// body.match(/content=\"(.*)\"/);
+	// 			result = m[0]
+
+	// 		});
+	// }
+
+	// fetch("json/meta4.json")
+	// 	.then(response => { return response.json(); })
+	// 	.then(json => {
+
+
+	// 		dev.innerHTML = json.pages[0].ctime
+	// 	});
+
+
+
 	let i = document.getElementById("i")
 	let str = window.location.href.split('/').pop();
 	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
@@ -80,39 +107,79 @@
 	const n = 100
 	const data = [...Array(n)].map((v, i) => i + 1)
 	const datar = [...Array(n)].map(Math.random)
-	// let dev = document.getElementById("dev")
-	// dev.innerHTML = htmlList
+	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
+
+
 
 	//準備
-	const r = width/10/2
-	const svg = d3.select("#chart").append("svg")
-		.attr("class", "d3svg")
-		.attr("width", maxWidth)
-		.attr("height", data.length/10*r*2)
-		.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
-	const flame = svg.append("g")
-		.attr("transform", `translate(${maxWidth / 2},${r})`)
+	function d3main() {
+		const r = width / 10 / 2
+		const svg = d3.select("#chart").append("svg")
+			.attr("class", "d3svg")
+			.attr("width", maxWidth)
+			.attr("height", data.length / 10 * r * 2)
+			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
+		const flame = svg.append("g")
+			.attr("transform", `translate(${maxWidth / 2},${r})`)
 
-	
 
-	//描画
-	const g = flame.selectAll("g").data(data).join("g")
-		.attr("transform", (d, i) => `translate(${-width/2+r+2*r*(i%10)},${Math.floor(i/10)*2*r})`)//locale
-		.append("a")
-		.attr("href", (d, i) => d + ".html")
+		//描画
+		const g = flame.selectAll("g").data(data).join("g")
+			.attr("transform", (d, i) => `translate(${-width / 2 + r + 2 * r * (i % 10)},${Math.floor(i / 10) * 2 * r})`)//locale
+			.append("a")
+			.attr("href", (d, i) => d + ".html")
 
-	const gc = g.append("circle")
-		.attr("r", (d,i)=>{
-			let r2 = 0.5*r+0.5*r*datar[i]
-			return r2})
-		.attr("fill", "var(--c3)")
-	g.append("text")
-		.text((d, i) => d)
-		.attr("style",(d,i)=> `font-size: ${0.5*r+0.5*r*datar[i]}px`)
-		.attr("text-anchor", "middle")
-		.attr("alignment-baseline", "central")
-		.attr("fill", "var(--c2)")
+		const circle = g.append("circle")
+			.attr("r", (d, i) => {
+				let r2 = 0.5 * r + 0.5 * r * datar[i]
+				return r2
+			})
+			.attr("fill", "#789")
+		// .attr("fill", "var(--c3)")
 
+		const text = g.append("text")
+			.text((d, i) => d)
+			.attr("style", (d, i) => `font-size: ${0.5 * r + 0.5 * r * datar[i]}px`)
+			.attr("text-anchor", "middle")
+			.attr("alignment-baseline", "central")
+			.attr("fill", "var(--c2)")
+
+		fetch("json/meta4.json")
+			.then(response => { return response.json(); })
+			.then(json => {
+				// circle.attr("fill", (d, i) => {
+				// 	if(json.pages[d].genre=="illust"){
+				// 		return "#222"
+				// 	}
+				// 	return "#2aa"
+				// })
+
+				// let all_cities = json.pages.filter(function (item, index) {
+				// 	if (item.genre == "illust") return true;
+				// });
+
+				let v = json.pages.filter((item,index) => {
+					if(item.genre == "illust"){
+			return true}
+			return false});
+				
+				let vName = v.map((v,i) => v.filename)
+				dev.innerHTML = vName[0]
+				let vName2 = [4]
+				
+				circle.attr("fill",(d,i)=>{
+					if(vName.indexOf(d+".html")!==-1){
+						return "#aaa"
+					}
+					return "#a95"
+				})
+				
+			});
+
+
+		// // g.selectAll("circle").attr("fill", "#456")
+	}
+	d3main()
 
 	// flame.selectAll("circle")
 	// 	.data(htmlList)
@@ -135,5 +202,9 @@
 	// 	.attr("fill", "var(--c2)")
 	// 	.text("1")
 </script>
+<!-- <script type="module">
+	import data from "./json/meta4.json" assert { type: "json" }
+	// dev.innerHTML = data.pages
+</script> -->
 
 </html>
