@@ -10,7 +10,7 @@
 		background-color: var(--c1);
 		color: var(--c2);
 		display: flex;
-		justify-content: center;
+		/* justify-content: center; */
 		flex-direction: column;
 		align-items: center;
 		padding: 0em;
@@ -64,6 +64,7 @@
 			</g>
 		</svg>
 	</div> -->
+
 </body>
 <script src="js/d3.js"></script>
 <script>
@@ -73,35 +74,44 @@
 	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
 	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
 
-	let width = self.innerWidth
+	let maxWidth = self.innerWidth
+	let width = maxWidth * 0.9
 	let height = self.innerHeight * 0.6
-	const htmlList = [...Array(10)].map((v, i) => i + 1)
+	const n = 100
+	const data = [...Array(n)].map((v, i) => i + 1)
+	const datar = [...Array(n)].map(Math.random)
 	// let dev = document.getElementById("dev")
 	// dev.innerHTML = htmlList
 
+	//準備
+	const r = width/10/2
 	const svg = d3.select("#chart").append("svg")
 		.attr("class", "d3svg")
-		.attr("width", width)
-		.attr("height", height)
-		.attr("viewbox", "0 0 100 100")
+		.attr("width", maxWidth)
+		.attr("height", data.length/10*r*2)
+		.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
 	const flame = svg.append("g")
-		.attr("transform", `translate(${width / 2},${height / 2})`)
+		.attr("transform", `translate(${maxWidth / 2},${r})`)
 
-	const g = flame.selectAll("g").data(htmlList).join("g")
-	.attr("transform", (d,i)=>`translate(${d*50},0)`)
-	.append("a")
-	.attr("href",(d,i)=>d+".html")
+	
 
-	g.append("circle")
-		.attr("r", 18)
+	//描画
+	const g = flame.selectAll("g").data(data).join("g")
+		.attr("transform", (d, i) => `translate(${-width/2+r+2*r*(i%10)},${Math.floor(i/10)*2*r})`)//locale
+		.append("a")
+		.attr("href", (d, i) => d + ".html")
+
+	const gc = g.append("circle")
+		.attr("r", (d,i)=>{
+			let r2 = 0.5*r+0.5*r*datar[i]
+			return r2})
 		.attr("fill", "var(--c3)")
 	g.append("text")
+		.text((d, i) => d)
+		.attr("style",(d,i)=> `font-size: ${0.5*r+0.5*r*datar[i]}px`)
 		.attr("text-anchor", "middle")
-		.attr("alignment-baseline", "middle")
+		.attr("alignment-baseline", "central")
 		.attr("fill", "var(--c2)")
-		.text((d,i)=>d)
-
-
 
 
 	// flame.selectAll("circle")
@@ -124,10 +134,6 @@
 	// 	.attr("alignment-baseline", "middle")
 	// 	.attr("fill", "var(--c2)")
 	// 	.text("1")
-
-
-
-
 </script>
 
 </html>
