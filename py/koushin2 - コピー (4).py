@@ -27,10 +27,12 @@ print(files)
 
 #ファイルの情報の取得、リスト化
 dates=[]
-graphs={
-    "nodes" : [],
-    "edges" : []
-}
+# graphs={
+#     "nodes" : [],
+#     "edges" : []
+# }
+nodes = []
+links = []
 
 size = []
 for file in files:
@@ -83,39 +85,39 @@ for i in range(len(files)):
     #グラフ描画用、頂点####################################
     node_dic = {
     "id":"_"+str(files[i]).replace(".",""),
-    "label":"<"+str(files[i].replace(".html",""))+">"+title,
+    # "label":"<"+str(files[i].replace(".html",""))+">"+title,
+    "label":str(files[i].replace(".html","")),
     "x": random.gauss(0,1),
     "y": random.gauss(0,1),
     "size": (len(str(soup))/max(size))**(0.5)*3+2,
     "url": "1.html",
     
     "type": "image",
-    "image": "./e.svg",
+    "image": "e.svg",
     "color": "BLUE"
 
     }
-    graphs["nodes"].append(node_dic)
+    nodes.append(node_dic)
 
     #グラフ描画用、辺
     hrefs = []
     try: 
         #タグ付きのリンクリスト
-        links = soup.find_all("a") 
+        links1 = soup.find_all("a") 
 
         #タグなしのリンクリスト
         urls = []
-        for link in links:
+        for link in links1:
             urls.append(link.get("href")) 
 
         #タグなしのリンクリスト(重複なし)
         urls = list(set(urls))
-
         for url in urls:
             if url in files:
                 hrefs.append(url)
     except AttributeError:
+        links1 = ""
 
-        links = ""
     # coe = (1-math.exp(-(len(urls)-1))) #1toInf->0to1
     coe =len(urls)
     if coe > 20:
@@ -125,25 +127,27 @@ for i in range(len(files)):
 
     # +hex(math.floor((1-coe/20)*15+1))[2:]
 
-    for k in hrefs:
+    for k in range(len(hrefs)):
         edge_dic = {
-        "id":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
-        "source":"_"+str(files[i]).replace(".",""),
-        "target":"_"+str(k).replace(".",""),
+        # "id":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
+        # "source":"_"+str(files[i]).replace(".",""),
+        # "target":"_"+str(k).replace(".",""),
+        "source": i,
+        "target": k,
         # "label":"_"+str(files[i]).replace(".","")+"_"+str(k).replace(".",""),
-        "label":"r",
+        # "label":"r",
         
 
         # "size": (len(str(soup))/max(size))*30,
-        "size": 5,
+        # "size": 5,
 
-        "color": edge_color,
+        # "color": edge_color,
 
         # "type": 'curvedArrow',
-        "type": 'arrow',
+        # "type": 'arrow',
+        "type": 'suit'
         }
-        graphs["edges"].append(edge_dic)
-        print(k+"_"+files[i])
+        links.append(edge_dic)
         
 
 
@@ -157,6 +161,8 @@ json1.close()
 # json2.close()
 
 #js形式
-graphs2 = "graph = "+ str(graphs)
-with codecs.open('./js/meta2.js',"w","utf-8") as o:
+graphs2 = "var nodes = "+ str(nodes)
+graphs3 = "var links = "+ str(links)
+with codecs.open('./js/meta4.js',"w","utf-8") as o:
     print(graphs2, file = o)
+    print(graphs3, file = o)

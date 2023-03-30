@@ -1,0 +1,1014 @@
+{
+  "pages": [
+    {
+      "filename": "1.html",
+      "ctime": "1678761862",
+      "mtime": "1680149552",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "#1 サイトマップ",
+      "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
+      "genre": null
+    },
+    {
+      "filename": "10.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号1~99のイラスト",
+      "content": "作品番号1~99のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "100.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "人造日本人",
+      "content": "二代目トップページ保管場所、各SNSへのリンクあります",
+      "genre": null
+    },
+    {
+      "filename": "101.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "人造日本人",
+      "content": "古いホームのバックアップ",
+      "genre": null
+    },
+    {
+      "filename": "102.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "人造日本人",
+      "content": "古いホームのバックアップ",
+      "genre": null
+    },
+    {
+      "filename": "103.html",
+      "ctime": "1678761862",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "#1 サイトマップ",
+      "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
+      "genre": null
+    },
+    {
+      "filename": "11.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号100~199のイラスト",
+      "content": "作品番号100~199のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "110.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "SigmaJS example サイトツリー",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "111.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "d3test",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "112.html",
+      "ctime": "1679250555",
+      "mtime": "1680083516",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "network graph test",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "113.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "d3js グラフサイトマップ 緑",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "114.html",
+      "ctime": "1679250555",
+      "mtime": "1680083570",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "network graph test",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "12.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号200~299のイラスト",
+      "content": "作品番号200~299のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "120.html",
+      "ctime": "1679250117",
+      "mtime": "1680039938",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "自動改札三種題名",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "121.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "異形明朝比較ページ",
+      "content": "異形明朝比較ページ",
+      "genre": null
+    },
+    {
+      "filename": "122.html",
+      "ctime": "1679250117",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Document",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "123.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Document",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "124.html",
+      "ctime": "1679250117",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Document",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "125.html",
+      "ctime": "1679233279",
+      "mtime": "1679250950",
+      "cdate": "2023-03-19",
+      "mdate": "2023-03-20",
+      "title": "Document",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "126.html",
+      "ctime": "1679677008",
+      "mtime": "1679677179",
+      "cdate": "2023-03-25",
+      "mdate": "2023-03-25",
+      "title": "CuneiformHanB KhmerHanB MeltHan",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "127.html",
+      "ctime": "1679676624",
+      "mtime": "1679677199",
+      "cdate": "2023-03-25",
+      "mdate": "2023-03-25",
+      "title": "CuneiformHanB KhmerHanB MeltHan",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "128.html",
+      "ctime": "1679250555",
+      "mtime": "1680040034",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "CuneiformHan",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "129.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "異形明朝比較ページ",
+      "content": "異形明朝比較ページ",
+      "genre": null
+    },
+    {
+      "filename": "13.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号300~399のイラスト",
+      "content": "作品番号300~399のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "130.html",
+      "ctime": "1679250555",
+      "mtime": "1679677993",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-25",
+      "title": "自動改札デモページ",
+      "content": "異形明朝比較ページ",
+      "genre": null
+    },
+    {
+      "filename": "14.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号400~499のイラスト",
+      "content": "作品番号400~499のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "143.html",
+      "ctime": "1680074071",
+      "mtime": "1680083624",
+      "cdate": "2023-03-29",
+      "mdate": "2023-03-29",
+      "title": "None",
+      "content": "",
+      "genre": null
+    },
+    {
+      "filename": "15.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号500~599のイラスト",
+      "content": "作品番号500~599のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "16.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号600~699のイラスト",
+      "content": "作品番号600~699のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "17.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号700~799のイラスト",
+      "content": "作品番号700~799のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "18.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号800~899のイラスト",
+      "content": "作品番号800~899のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "19.html",
+      "ctime": "1678761862",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号900~999のイラスト",
+      "content": "作品番号900~999のイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "2.html",
+      "ctime": "1678761863",
+      "mtime": "1679250891",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "Warabimochi",
+      "content": "音が鳴ります",
+      "genre": null
+    },
+    {
+      "filename": "20.html",
+      "ctime": "1678761863",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "作品番号がマイナスのイラスト",
+      "content": "2019年以前の作品番号を振る前のイラストに遡及的に負の作品番号のファイル名を振り機械的に表示",
+      "genre": "illust"
+    },
+    {
+      "filename": "21.html",
+      "ctime": "1678761863",
+      "mtime": "1679250476",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "インターネット目録(仮)",
+      "content": "有用なサイト一覧",
+      "genre": null
+    },
+    {
+      "filename": "22.html",
+      "ctime": "1678761863",
+      "mtime": "1679250476",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "VRchatで作ったもの",
+      "content": "VRCで作ったワールドの紹介",
+      "genre": null
+    },
+    {
+      "filename": "23.html",
+      "ctime": "1678761863",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "架空惑星ギャラリー",
+      "content": "主にblenderで作成した架空惑星の画像の展示室",
+      "genre": "illust"
+    },
+    {
+      "filename": "231.html",
+      "ctime": "1679250556",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "イラスト選集",
+      "content": "お気に入りの絵を色のまとまりが良くなる配置でまとめたページ",
+      "genre": null
+    },
+    {
+      "filename": "232.html",
+      "ctime": "1679250556",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "#1 サイトマップ",
+      "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
+      "genre": null
+    },
+    {
+      "filename": "24.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "#24 ロビー",
+      "content": "ロビー、雑多",
+      "genre": null
+    },
+    {
+      "filename": "26.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "ランダムグラフ",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "27.html",
+      "ctime": "1678761863",
+      "mtime": "1679250478",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "3Dworks",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "28.html",
+      "ctime": "1680067491",
+      "mtime": "1680154552",
+      "cdate": "2023-03-29",
+      "mdate": "2023-03-30",
+      "title": "時刻により背景画像変更",
+      "content": "時刻で色を変えるギミック",
+      "genre": null
+    },
+    {
+      "filename": "29.html",
+      "ctime": "1680048215",
+      "mtime": "1680089652",
+      "cdate": "2023-03-29",
+      "mdate": "2023-03-29",
+      "title": "東京の温湿度",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "3.html",
+      "ctime": "1678761863",
+      "mtime": "1679250478",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "Mikanixonable's all 2D works",
+      "content": "全イラスト、重め",
+      "genre": null
+    },
+    {
+      "filename": "30.html",
+      "ctime": "1679250555",
+      "mtime": "1680040811",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "Nessa語辞書",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "31.html",
+      "ctime": "1678761863",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "ねこかわ",
+      "content": "ねこかわいいよねこ",
+      "genre": "illust"
+    },
+    {
+      "filename": "32.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "レゴで作った森の3Dモデル",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "33.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "Hetero Earth",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "334.html",
+      "ctime": "1678761863",
+      "mtime": "1679250479",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "な阪関無",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "34.html",
+      "ctime": "1678761863",
+      "mtime": "1680166188",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "PE",
+      "content": "架空惑星の地球儀が自転する インタラクティブ要素なし",
+      "genre": null
+    },
+    {
+      "filename": "35.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "PE",
+      "content": "架空惑星の地名付き3Dモデル　マウス操作あり",
+      "genre": null
+    },
+    {
+      "filename": "36.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "Sci-fi box",
+      "content": "JSplacementで作ったテクスチャの色情報をもとにblenderのディスプレイスメントを使って凹凸をつけたモデル",
+      "genre": null
+    },
+    {
+      "filename": "37.html",
+      "ctime": "1678761863",
+      "mtime": "1680166225",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "矢印",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "38.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "#38 ハブ",
+      "content": "text/html; charset=utf-8",
+      "genre": null
+    },
+    {
+      "filename": "39.html",
+      "ctime": "1678761863",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "mikumiku",
+      "content": "描いた初音ミクのイラスト",
+      "genre": "illust"
+    },
+    {
+      "filename": "4.html",
+      "ctime": "1678761864",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "異形フォントシリーズ一覧",
+      "content": "異形シリーズのフォントのデモンストレーション",
+      "genre": null
+    },
+    {
+      "filename": "40.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "インパクトファクター",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "404.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "None",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "41.html",
+      "ctime": "1678761864",
+      "mtime": "1679250481",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "犯行予告風世界人権宣言",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "42.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "人工言語の挨拶一覧(ツイートボタン付き)",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "43.html",
+      "ctime": "1678761864",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "Gochiusa Pictures",
+      "content": "描いたごちうさの絵",
+      "genre": "illust"
+    },
+    {
+      "filename": "44.html",
+      "ctime": "1678761864",
+      "mtime": "1680183778",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "非二次絵",
+      "content": "二次絵じゃない風景画や抽象画のうちお気に入りのものを展示するページ",
+      "genre": "illust"
+    },
+    {
+      "filename": "45.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "二つの惑星",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "46.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "二体問題",
+      "content": "退屈",
+      "genre": null
+    },
+    {
+      "filename": "47.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "たくさんの惑星、白背景",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "48.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "たくさんの惑星、青背景、フレキシブル",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "49.html",
+      "ctime": "1678761864",
+      "mtime": "1679905176",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-27",
+      "title": "創作文字ehtaplenのキーボード",
+      "content": "webフォントでehtaplenをリアルタイムに入力できます",
+      "genre": null
+    },
+    {
+      "filename": "50.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "三体問題　紫背景　サイズ可変",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "51.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "テキスト読込み",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "52.html",
+      "ctime": "1679250555",
+      "mtime": "1679865585",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-27",
+      "title": "うわ、餃子でか",
+      "content": "インターネット老人会",
+      "genre": null
+    },
+    {
+      "filename": "53.html",
+      "ctime": "1678761864",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "marquee要素による銀河鉄道の夜",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "54.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "常用漢字一覧",
+      "content": "常用漢字のテキスト",
+      "genre": null
+    },
+    {
+      "filename": "55.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "TEX",
+      "content": "TEX使う",
+      "genre": null
+    },
+    {
+      "filename": "57.html",
+      "ctime": "1679250555",
+      "mtime": "1679993270",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-28",
+      "title": "異形明朝のデモページ",
+      "content": "AIの生成した明朝体のフォントのデモンストレーション",
+      "genre": null
+    },
+    {
+      "filename": "6.html",
+      "ctime": "1678761864",
+      "mtime": "1680170192",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-30",
+      "title": "Kawaii Pictures",
+      "content": "描いた二次絵のうちお気に入りを集めたページ",
+      "genre": "illust"
+    },
+    {
+      "filename": "60.html",
+      "ctime": "1679249370",
+      "mtime": "1679979401",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-28",
+      "title": "イラストランダム表示",
+      "content": "描いたイラストをボタンをおすごとにランダムに表示する",
+      "genre": null
+    },
+    {
+      "filename": "61.html",
+      "ctime": "1679249370",
+      "mtime": "1679250950",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "SigmaJS example",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "62.html",
+      "ctime": "1680134531",
+      "mtime": "1680168772",
+      "cdate": "2023-03-30",
+      "mdate": "2023-03-30",
+      "title": "None",
+      "content": "",
+      "genre": null
+    },
+    {
+      "filename": "63.html",
+      "ctime": "1680136846",
+      "mtime": "1680181757",
+      "cdate": "2023-03-30",
+      "mdate": "2023-03-30",
+      "title": "None",
+      "content": "",
+      "genre": null
+    },
+    {
+      "filename": "7.html",
+      "ctime": "1678761865",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "illustrations terminal",
+      "content": "イラスト総合ページ",
+      "genre": null
+    },
+    {
+      "filename": "70.html",
+      "ctime": "1679249370",
+      "mtime": "1679249370",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "untitled",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "71.html",
+      "ctime": "1679249370",
+      "mtime": "1679249370",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "untitled",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "72.html",
+      "ctime": "1679249370",
+      "mtime": "1680083374",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "3body",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "8.html",
+      "ctime": "1678761865",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "Photographs",
+      "content": "写真の総合ページ",
+      "genre": null
+    },
+    {
+      "filename": "80.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Weierstrass-Riemann function",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "81.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Weierstrass-Riemann function variables 1",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "82.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "Weierstrass-Riemann function variables 2",
+      "content": "JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き",
+      "genre": null
+    },
+    {
+      "filename": "83.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "#83 数学小部屋",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "84.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "グラフ",
+      "content": "JSXGraph.jsによるスライダーでいじれるグラフ",
+      "genre": null
+    },
+    {
+      "filename": "85.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "崩れたリーマン関数フラクタル",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "86.html",
+      "ctime": "1679250555",
+      "mtime": "1680040333",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "フラクタル白背景巨大画面",
+      "content": null,
+      "genre": null
+    },
+    {
+      "filename": "87.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "マンデルブロ集合",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "88.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "ジュリア集合",
+      "content": "",
+      "genre": ""
+    },
+    {
+      "filename": "89.html",
+      "ctime": "1679250555",
+      "mtime": "1680083456",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-29",
+      "title": "julia",
+      "content": "",
+      "genre": null
+    },
+    {
+      "filename": "9.html",
+      "ctime": "1678761865",
+      "mtime": "1679250951",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "#9 サイトマップ",
+      "content": "notionで作成したサイトマップ",
+      "genre": null
+    },
+    {
+      "filename": "94.html",
+      "ctime": "1679250555",
+      "mtime": "1679250891",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "右と下に落ちるボール",
+      "content": "JS習作",
+      "genre": null
+    },
+    {
+      "filename": "95.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "跳ねるボール",
+      "content": "",
+      "genre": null
+    },
+    {
+      "filename": "96.html",
+      "ctime": "1678761863",
+      "mtime": "1679250950",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-20",
+      "title": "惑星",
+      "content": "万有引力をJSで作る練習",
+      "genre": null
+    },
+    {
+      "filename": "index.html",
+      "ctime": "1678761867",
+      "mtime": "1680039735",
+      "cdate": "2023-03-14",
+      "mdate": "2023-03-29",
+      "title": "月面植物園",
+      "content": "トップページ",
+      "genre": null
+    },
+    {
+      "filename": "index1.html",
+      "ctime": "1679249370",
+      "mtime": "1679249370",
+      "cdate": "2023-03-20",
+      "mdate": "2023-03-20",
+      "title": "index1 - 人造日本人",
+      "content": "This is a Mikanixonable's official web page. It contains introduction, links of their accounts on social platforms, and their works in a various formats.",
+      "genre": null
+    }
+  ]
+}
