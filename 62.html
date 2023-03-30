@@ -1,0 +1,104 @@
+<html>
+
+<head>
+	<title></title>
+	<meta content=>
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+	body {
+		background-color: var(--c1);
+		color: var(--c2);
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 1em;
+		font-size: 1em;
+		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+
+	#chart{
+		background-color: #ee5;
+	}
+	.d3svg{
+		background-color: #ddd;
+	}
+
+	.testDiv{
+		background-color: #ee5;
+	}
+	.testSVG{
+		background-color: #ddd;
+	}
+
+
+
+
+</style>
+
+<body>
+	<div id="i"></div>
+	<h1>Title</h1>
+	<div id="chart"></div>
+
+	<div class="testDiv">
+		<svg width="100" height="100" viewBox="0 0 100 100" class="testSVG">
+
+			<g transform="translate(50, 50)">
+				<a href="50.html">
+					<circle r="30" fill="var(--c3)" />
+					<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
+				</a>
+			</g>
+		</svg>
+	</div>
+
+
+	<!-- <svg viewBox="0 0 100 100">
+		<g transform="translate(50, 50)">
+		  <circle r="30" fill="yellow" />
+		  <text text-anchor="middle" alignment-baseline="middle">Hello World!</text>
+		</g>
+	  </svg> -->
+
+</body>
+<script src="js/d3.js"></script>
+<script>
+	let i = document.getElementById("i")
+	let str = window.location.href.split('/').pop();
+	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
+	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
+	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
+
+	const svg = d3.select("#chart").append("svg")
+	.attr("class","d3svg")
+		.attr("width", "100")
+		.attr("height", "100")
+		.attr("viewbox", "0 0 100 100")
+
+		.append("g")
+		.attr("transform", "translate(50, 50)")
+
+		.append("a")
+		.attr("href", "50.html")
+
+		svg.append("circle")
+		.attr("r", "30")
+		.attr("fill", "var(--c3)")
+		svg.append("text")
+		.attr("text-anchor","middle")
+		.attr("alignment-baseline","middle")
+		.attr("fill","var(--c2)")
+		.text("50")
+		
+
+
+
+</script>
+
+</html>

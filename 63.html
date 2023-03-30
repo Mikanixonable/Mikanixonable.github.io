@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html>
+
 <head>
-  <title>うわ、餃子でか</title>
-  <meta content="インターネット老人会">
+	<title>D3 Demo</title>
+	<script src="https://unpkg.com/d3/dist/d3.min.js"></script>
 </head>
+
 <body>
-  <marquee behavior="" direction="">( ´∀`)ﾄｩｰﾄｩｰﾄｩﾏｼｪﾘｰﾏｰｼｪｰﾘｰ</marquee>
-  <marquee behavior="" direction="">( ´∀`)ﾄｩｰﾄｩｰﾄｩﾏｼｪﾘｰﾏｰｼｪｰﾘｰ</marquee>
+	<div id="chart"></div>
 </body>
+<script>
+	const dataset = [5, 4, 3, 2, 1];
+	const width = 400, height = 100;
+	const x = d3.scaleLinear()
+		.domain([0, dataset.length - 1])
+		.range([50, 350]);
+	const size = d3.scaleSqrt()
+		.domain([0, d3.max(dataset)])
+		.range([0, height / 2]);
+	const svg = d3.select("#chart").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+	svg.selectAll("circle")
+		.data(dataset)
+		.join("circle")
+		.attr("cx", (d, i) => x(i))
+		.attr("cy", height / 2)
+		.attr("r", size)
+		.attr("fill", "red")
+		.attr("opacity", 0.5);
+</script>
+
 </html>
