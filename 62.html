@@ -13,7 +13,7 @@
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		padding: 1em;
+		padding: 0em;
 		font-size: 1em;
 		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
 	}
@@ -22,50 +22,48 @@
 		font-size: 4em;
 	}
 
-	#chart{
+	#chart {
 		background-color: #ee5;
 	}
-	.d3svg{
+
+	.d3svg {
 		background-color: #ddd;
 	}
 
-	.testDiv{
+	.testDiv {
 		background-color: #ee5;
 	}
-	.testSVG{
+
+	.testSVG {
 		background-color: #ddd;
 	}
-
-
-
-
 </style>
 
 <body>
 	<div id="i"></div>
 	<h1>Title</h1>
+	<div id="dev"></div>
 	<div id="chart"></div>
 
-	<div class="testDiv">
-		<svg width="100" height="100" viewBox="0 0 100 100" class="testSVG">
+	<!-- <div class="testDiv">
+		<svg width="500" height="500" viewBox="0 0 500 500" class="testSVG">
 
-			<g transform="translate(50, 50)">
-				<a href="50.html">
-					<circle r="30" fill="var(--c3)" />
-					<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
-				</a>
+			<g transform="translate(250, 250)">
+				<g transform="translate(0,0)">
+					<a href="50.html">
+						<circle r="30" fill="var(--c3)" />
+						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
+					</a>
+				</g>
+				<g transform="translate(0, 50)">
+					<a href="50.html">
+						<circle r="30" fill="var(--c3)" />
+						<text text-anchor="middle" alignment-baseline="middle" fill="var(--c2)">50</text>
+					</a>
+				</g>
 			</g>
 		</svg>
-	</div>
-
-
-	<!-- <svg viewBox="0 0 100 100">
-		<g transform="translate(50, 50)">
-		  <circle r="30" fill="yellow" />
-		  <text text-anchor="middle" alignment-baseline="middle">Hello World!</text>
-		</g>
-	  </svg> -->
-
+	</div> -->
 </body>
 <script src="js/d3.js"></script>
 <script>
@@ -75,27 +73,58 @@
 	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
 	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " + `<a href=\"${num2}\">${num2}></a>`
 
+	let width = self.innerWidth
+	let height = self.innerHeight * 0.6
+	const htmlList = [...Array(10)].map((v, i) => i + 1)
+	// let dev = document.getElementById("dev")
+	// dev.innerHTML = htmlList
+
 	const svg = d3.select("#chart").append("svg")
-	.attr("class","d3svg")
-		.attr("width", "100")
-		.attr("height", "100")
+		.attr("class", "d3svg")
+		.attr("width", width)
+		.attr("height", height)
 		.attr("viewbox", "0 0 100 100")
+	const flame = svg.append("g")
+		.attr("transform", `translate(${width / 2},${height / 2})`)
 
-		.append("g")
-		.attr("transform", "translate(50, 50)")
+	const g = flame.selectAll("g").data(htmlList).join("g")
+	.attr("transform", (d,i)=>`translate(${d*50},0)`)
+	.append("a")
+	.attr("href",(d,i)=>d+".html")
 
-		.append("a")
-		.attr("href", "50.html")
-
-		svg.append("circle")
-		.attr("r", "30")
+	g.append("circle")
+		.attr("r", 18)
 		.attr("fill", "var(--c3)")
-		svg.append("text")
-		.attr("text-anchor","middle")
-		.attr("alignment-baseline","middle")
-		.attr("fill","var(--c2)")
-		.text("50")
-		
+	g.append("text")
+		.attr("text-anchor", "middle")
+		.attr("alignment-baseline", "middle")
+		.attr("fill", "var(--c2)")
+		.text((d,i)=>d)
+
+
+
+
+	// flame.selectAll("circle")
+	// 	.data(htmlList)
+	// 	.join("circle")
+	// 	.attr("cx", (d, i) => i * 40)
+	// 	.attr("cy", 0)
+	// 	.attr("r", 18)
+	// 	.attr("fill", "var(--c3)")
+
+
+	// const obj = flame.append("a")
+	// 	.attr("href", "1.html")
+
+	// obj.append("circle")
+	// 	.attr("r", "30")
+	// 	.attr("fill", "var(--c3)")
+	// obj.append("text")
+	// 	.attr("text-anchor", "middle")
+	// 	.attr("alignment-baseline", "middle")
+	// 	.attr("fill", "var(--c2)")
+	// 	.text("1")
+
 
 
 
