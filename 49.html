@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます">
-		<title>創作文字ehtaplenのキーボード</title>
 
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8" content="webフォントでehtaplenをリアルタイムに入力できます" genre="font"/>
+<title>創作文字ehtaplenのキーボード</title>
 <style media="screen">
 
 @font-face {
@@ -45,20 +45,14 @@ body{
 	}
 
 </style>
-
 </head>
 <body>
-
-
-	<div class="display">
+<div class="display">
 <p id="out"></p>
-	</div>
-
-	<form name="form1" class="form1">
-	<input type="text" id="input1" value="" placeholder="enter" class="input1">
-	</form>
-
-
+</div>
+<form class="form1" name="form1">
+<input class="input1" id="input1" placeholder="enter" type="text" value=""/>
+</form>
 <script>
 const i = document.forms.form1.input1;
 i.addEventListener('input',()=>{
@@ -92,5 +86,5 @@ str = str.replace(/u/g,"\u{f0604}")
 
 	display.textContent = str });
 </script>
-	</body>
+</body>
 </html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8" content="異形明朝比較ページ">
-		<title>自動改札デモページ</title>
 
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8" content="異形明朝比較ページ" genre="font"/>
+<title>自動改札デモページ</title>
 <style media="screen">
 
 @font-face {
@@ -61,27 +61,22 @@ body{
 		font-family: "jc";
 	}
 </style>
-
 </head>
 <body>
-	<p>自動改札シリーズデモページ</p>
-	<p>(読込に15秒くらいかかります)</p>
-	
-	<!-- <input type="button" value="狂う" onclick="repeater()" class="clue"> -->
-
-
-	<div class="display">
-<p id="out1" class="out1"></p>
-<p id="out2" class="out2"></p>
-<p id="out3" class="out3"></p>
-	</div>
-
-<form name="form1" class="form1">
-<input type="text" id="input1" value=" " placeholder="enter" class="input1">
-<br><br><br>
-<a href="122.html">自動改札A　全グリフ(負荷大)</a><br>
-<a href="122.html">自動改札B　全グリフ(負荷大)</a><br>
-<a href="122.html">自動改札C　全グリフ(負荷大)</a><br>
+<p>自動改札シリーズデモページ</p>
+<p>(読込に15秒くらいかかります)</p>
+<!-- <input type="button" value="狂う" onclick="repeater()" class="clue"> -->
+<div class="display">
+<p class="out1" id="out1"></p>
+<p class="out2" id="out2"></p>
+<p class="out3" id="out3"></p>
+</div>
+<form class="form1" name="form1">
+<input class="input1" id="input1" placeholder="enter" type="text" value=" "/>
+<br/><br/><br/>
+<a href="122.html">自動改札A　全グリフ(負荷大)</a><br/>
+<a href="122.html">自動改札B　全グリフ(負荷大)</a><br/>
+<a href="122.html">自動改札C　全グリフ(負荷大)</a><br/>
 <a href="https://mikanixonable.booth.pm/items/4626912">配布</a>
 <!-- </form>
 <div>
@@ -89,8 +84,6 @@ body{
   </div>
   <button name="send">送信</button>
 </form> -->
-
-
 <script>
 	var notr = 0;
 	var obj1=document.getElementById("body");
@@ -129,5 +122,5 @@ i.addEventListener('input',()=>{
 });
 
 </script>
-	</body>
+</form></body>
 </html>
