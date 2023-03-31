@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="js/style.css">
 <style>
 	body {
-		background-color: var(--c1);
+		background-color: #1c1f1e;
 		color: var(--c2);
 		display: flex;
 		/* justify-content: center; */
@@ -26,9 +26,9 @@
 		background-color: #ee5;
 	} */
 
-	.d3svg {
-		background-color: #808387;
-	}
+	/* .d3svg {
+		background-color: #24272c;
+	} */
 
 
 
@@ -77,7 +77,7 @@
 		const mTimeScl = d3.scaleLinear()
 			.domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
 			.range([0, 1]);
-		var c1 = d3.scaleSequential().domain([0, 2])
+		var c1 = d3.scaleSequential().domain([-0.7, 2.8])
 			.interpolator(d3.interpolateCubehelixDefault);
 		var c2 = d3.scaleSequential().domain([0, 2])
 			.interpolator(d3.interpolateBlues);
@@ -111,8 +111,9 @@
 				// if (d.genre == "font") { return "var(--c4)" }
 				// if (d.genre == "") { return "var(--c6)" }
 				// return "#886"
-			}).attr("opacity", "0.6")
+			}).attr("opacity", "1")
 
+		//labels
 		const num = g.append("g").attr("transform", `translate(0,-30)`)
 			.append("text")
 			.text((d, i) => d.name)
@@ -131,17 +132,17 @@
 			.attr("style", "text-align:center")
 			.html((d, i) => d.title)
 
+		//mouse effect
 		g.on('mouseover', function (d, i) {
 			d3.select(this).select("circle").attr("opacity", "0.4")
 		})
 			.on('mouseout', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "0.6")
+				d3.select(this).select("circle").attr("opacity", "1")
 			})
 
-
-
+		//transition
 		g.transition()
-			.duration(700) // duration of the animation
+			.duration(500) // duration of the animation
 			.delay(0) // delay animation start
 			.attr("transform", (d, i) => {
 				let sortX = sort1(d, r)[0]
