@@ -29,6 +29,27 @@
 	.d3svg {
 		background-color: #ffffff11;
 	}
+
+	.circle {
+		background-color: blue;
+		height: 100%;
+		border-radius: 100%;
+		text-align: center;
+		line-height: 200px;
+		font-size: 30px;
+	}
+
+	.circle span {
+		line-height: normal;
+		display: inline-block;
+		vertical-align: middle;
+		color: white;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+	}
+
+	.str {
+		color: var(--c2)
+	}
 </style>
 
 <body>
@@ -60,40 +81,76 @@
 
 
 
-	
-	function d3main(pages) {
-		//準備　svgタグ作成と座標変換
+	function d3main(json) {
+		//設定
 		const r = width / 10 / 2
+		const cTimeScl = d3.scaleLinear()
+			.domain([Math.min(...json.map((p) => p.ctime)), Math.max(...json.map((p) => p.ctime))])
+			.range([0, 1]);
+
+		const mTimeScl = d3.scaleLinear()
+			.domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
+			.range([0, 1]);
+		var myColor = d3.scaleSequential().domain([1, -0.5])
+			.interpolator(d3.interpolateCividis);
+
+		//準備　svgタグ作成と座標変換
 		const svg = d3.select("#chart").append("svg")
 			.attr("class", "d3svg")
 			.attr("width", maxWidth)
 			.attr("height", data.length / 10 * r * 2)
 			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
 		const flame = svg.append("g")
-			.attr("transform", `translate(${maxWidth / 2},${r})`)
+			.attr("transform", `translate(${maxWidth / 2},${2 * r})`)
+
 
 		//描画
-		const g = flame.selectAll("g").data(data).join("g")
-			.attr("transform", (d, i) => `translate(${-width / 2 + r + 2 * r * (i % 10)},${Math.floor(i / 10) * 2 * r})`)//locale
+		const g = flame.selectAll("g").data(json).join("g")
+			.attr("transform", (d, i) => {
+				let x = -width / 2 + r + 2 * r * (d.name % 10)
+				let y = Math.floor(d.name / 10) * 2 * r + 150
+				return `translate(${x},${y})`
+			})//locale
 			.append("a")
-			.attr("href", (d, i) => d + ".html")
+			.attr("href", (d, i) => d.name + ".html")
 
 		const circle = g.append("circle")
-			.attr("r", (d, i) => {
-				let r2 = 0.5 * r + 0.5 * r * datar[i]
-				return r2
+			.attr("r", (d, i) => { return r })
+			.attr("fill", (d, i) => {
+				return myColor(cTimeScl(d.ctime))
+				// if (d.genre == "illust") { return "var(--c3)" }
+				// if (d.genre == "font") { return "var(--c4)" }
+				// if (d.genre == "") { return "var(--c6)" }
+				// return "#886"
 			})
-			.attr("fill", "#789")
 
-		const text = g.append("text")
-			.text((d, i) => d)
-			.attr("style", (d, i) => `font-size: ${0.5 * r + 0.5 * r * datar[i]}px`)
+		const num = g.append("g").attr("transform", `translate(0,-30)`)
+			.append("text")
+			.text((d, i) => d.name)
+			.attr("style", (d, i) => `font-size: ${2}em`)
 			.attr("text-anchor", "middle")
 			.attr("alignment-baseline", "central")
 			.attr("fill", "var(--c2)")
+		const title = g.append("g").attr("transform", `translate(0,-10)`)
+			.append("foreignObject")
+			.attr("x", -r * 0.7)
+			.attr("y", "0")
+			.attr("width", r * 2 * 0.7)
+			.attr("height", r)
+			.attr("class", "str")
+			.attr("font-size",(d,i)=>`${((0.2*r/d.title.length)**0.1)*0.8}em`)
+			.attr("style", "text-align:center")
+			.html((d, i) => d.title)
+		// .append("text")
+		// 	.text((d, i) => d.title)
+		// 	// .attr("style", (d, i) => `font-size: ${3/(d.title.length**0.5)}em`)
+		// 	.attr("style", (d, i) => `font-size: ${1}em`)
+		// 	.attr("text-anchor", "middle")
+		// 	.attr("alignment-baseline", "central")
+		// 	.attr("fill", "var(--c2)")
 
-		g
-			.transition()
+
+		g.transition()
 			.duration(1000) // duration of the animation
 			.delay(200) // delay animation start
 			.attr("transform", (d, i) => {
@@ -101,58 +158,14 @@
 				let sortY = 0
 				return `translate(${sortX},${sortY})`
 			})
-			.transition() 
-		//色塗り
-
-		// let illustP = json.pages.filter((item, index) => {
-		// 	if (item.genre == "illust") {
-		// 		return true
-		// 	}
-		// 	return false
-		// });
-		// let fontP = json.pages.filter((item, index) => {
-		// 	if (item.genre == "font") {
-		// 		return true
-		// 	}
-		// 	return false
-		// });
-
-		// let illust = illustP.map((v, i) => v.filename)//illust
-		// let font = fontP.map((v, i) => v.filename)//illust
-		// // dev.innerHTML = vName[0]
-		// let exist = json.pages.map((v, i) => v.filename)//exist
-
-		// circle.attr("fill", (d, i) => {
-		// 	if (illust.indexOf(d + ".html") !== -1) {
-		// 		return "var(--c4)"
-		// 	}
-		// 	else if (font.indexOf(d + ".html") !== -1) {
-		// 		return "var(--c6)"
-
-		// 	}
-		// 	else if (exist.indexOf(d + ".html") == -1) {
-		// 		return "#00000030"
-		// 	}
-		// 	return "var(--c5)"//normal color
-
-		// });
-
+			.transition()
 	}
 
-	d3.json("json/meta4.json")
-		.then((data) => {
-			dev.innerHTML = data
-			d3main(data)
+	fetch("json/meta4.json")
+		.then(response => { return response.json(); })
+		.then(json => {
+			d3main(json)
 		})
-		.catch((error) => {
-			console.error("Error loading the data");
-		});
-
-	// fetch("json/meta4.json")
-	// 	.then(response => { return response.json(); })
-	// 	.then(json => {
-	// 		d3main(json)
-	// 	})
 
 </script>
 

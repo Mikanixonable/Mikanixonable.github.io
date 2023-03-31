@@ -1,134 +1,96 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-	<title>サイトマップ d3js</title>
-	<meta content="">
+    <meta charset="utf-8">
+    <title>Basic Bubble Chart</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    /* custom css styles will go here */
+
+
+    </style>
 </head>
-<link rel="stylesheet" href="js/style.css">
-<style>
-	body {
-		background-color: var(--c1);
-		color: var(--c2);
-		display: flex;
-		/* justify-content: center; */
-		flex-direction: column;
-		align-items: center;
-		padding: 0em;
-		font-size: 1em;
-		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
-	}
-
-	h1 {
-		font-size: 4em;
-	}
-
-	/* #chart {
-		background-color: #ee5;
-	} */
-
-	.d3svg {
-		background-color: #ffffff11;
-	}
-</style>
-
 <body>
-	<div id="i"></div>
-	<h1>Site Map</h1>
-	<div id="dev"></div>
-	<div id="chart"></div>
-</body>
 <script src="js/d3v7.js"></script>
 <script>
-	const n = 200
 
-	let dev = document.getElementById("dev")
-	let i = document.getElementById("i")
-	let str = window.location.href.split('/').pop();
-	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
-	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
-	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " " 
-	+ `<a href=\"index.html\">Top</a>`+ " "
-	+ `<a href=\"${num2}\">${num2}></a>`
+function wrap(d) {
+    var text = d3.select(this),
+      width = d.r * 2,
+      x = d.x,
+      y = d.y,
+      words = text.text().split(/\s+/).reverse(),
+      word,
+      line = [],
+      lineNumber = 0,
+      lineHeight = 1.1,
+      tspan = text.text(null).append("tspan").attr("x", x).attr("y", y);
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + "em").text(word);
+      }
+    }
+}
 
-	let maxWidth = self.innerWidth
-	let width = maxWidth * 0.9
-	let height = self.innerHeight * 0.6
+var diameter = 500, //max size of the bubbles
+    format   = d3.format(",d"),
+    color    = d3.scaleOrdinal(d3.schemeCategory10);
+    //more color options: https://github.com/d3/d3-scale-chromatic
 
-	const data = [...Array(n)].map((v, i) => i + 1)
-	const datar = [...Array(n)].map(Math.random)
-	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
+var bubble = d3.pack()
+    .size([diameter, diameter])
+    .padding(1.5);
 
-	//準備
-	function d3main() {
-		const r = width / 10 / 2
-		const svg = d3.select("#chart").append("svg")
-			.attr("class", "d3svg")
-			.attr("width", maxWidth)
-			.attr("height", data.length / 10 * r * 2)
-			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
-		const flame = svg.append("g")
-			.attr("transform", `translate(${maxWidth / 2},${r})`)
+var svg = d3.select("body")
+    .append("svg")
+    .attr("width", diameter)
+    .attr("height", diameter)
+    .attr("class", "bubble");
+
+d3.csv("json/fruit.csv").then(function(data){
 
 
-		//描画
-		const g = flame.selectAll("g").data(data).join("g")
-			.attr("transform", (d, i) => `translate(${-width / 2 + r + 2 * r * (i % 10)},${Math.floor(i / 10) * 2 * r})`)//locale
-			.append("a")
-			.attr("href", (d, i) => d + ".html")
+    //convert numerical values from strings to numbers
+    data = data.map(function(d){ d.value = +d["Amount"]; return d; });
 
-		const circle = g.append("circle")
-			.attr("r", (d, i) => {
-				let r2 = 0.5 * r + 0.5 * r * datar[i]
-				return r2
-			})
-		// .attr("fill", "#789")
+    //Sets up a hierarchy of data object
+    var root = d3.hierarchy({children:data})
+      .sum(function(d) { return d.value; })
+      .sort(function(a, b) { return b.value - a.value; });
 
-		const text = g.append("text")
-			.text((d, i) => d)
-			.attr("style", (d, i) => `font-size: ${0.5 * r + 0.5 * r * datar[i]}px`)
-			.attr("text-anchor", "middle")
-			.attr("alignment-baseline", "central")
-			.attr("fill", "var(--c2)")
+    //Once we have hierarchal data, run bubble generator
+    bubble(root);
 
-		//色塗り
-		fetch("json/meta4.json")
-			.then(response => { return response.json(); })
-			.then(json => {
-				let illustP = json.pages.filter((item, index) => {
-					if (item.genre == "illust") {
-						return true
-					}
-					return false
-				});
-				let fontP = json.pages.filter((item, index) => {
-					if (item.genre == "font") {
-						return true
-					}
-					return false
-				});
+    //setup the chart
+    var bubbles = svg.selectAll(".bubble")
+        .data(root.children)
+        .enter();
 
-				let illust = illustP.map((v, i) => v.filename)//illust
-				let font = fontP.map((v, i) => v.filename)//illust
-				// dev.innerHTML = vName[0]
-				let exist = json.pages.map((v, i) => v.filename)//exist
+    //create the bubbles
+    bubbles.append("circle")
+        .attr("class", "circle")
+        .attr("r", function(d){ return d.r; })
+        .attr("cx", function(d){ return d.x; })
+        .attr("cy", function(d){ return d.y; })
+        .style("fill", function(d) { return color(d.value); });
 
-				circle.attr("fill", (d, i) => {
-					if (illust.indexOf(d + ".html") !== -1) {
-						return "var(--c4)"
-					}
-					else if(font.indexOf(d + ".html") !== -1){
-						return "var(--c6)"
-
-					}
-					else if (exist.indexOf(d + ".html") == -1) {
-						return "#00000030"
-					}
-					return "var(--c5)"//normal color
-				})
-			});
-
-	}
-	d3main()
-
+    //format the text for each bubble
+    bubbles.append("text")
+        .attr("x", function(d){ return d.x; })
+        .attr("y", function(d){ return d.y + 5; })
+        .attr("text-anchor", "middle")
+        .text(function(d){ return d.data["Fruit"]; })
+        .style("fill","white")
+        .style("font-family", "Helvetica Neue, Helvetica, Arial, san-serif")
+        .style("font-size", "1em")
+        .each(wrap);
+});
 </script>
+</body>
 </html>
