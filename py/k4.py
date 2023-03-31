@@ -31,8 +31,9 @@ def main(file,files):
     except AttributeError:
         genre = ""
     
+    
     page = {
-        "filename":str(file),
+        "name":os.path.splitext(os.path.basename(file))[0],
         "ctime":str(ctime),
         "mtime":str(mtime),
         "cdate":str(cdate),
@@ -41,12 +42,12 @@ def main(file,files):
         "content":content,
         "genre":genre
     }
-    dic["pages"].append(page)
+    dic.append(page)
 
 
     
 
-dic = {"pages":[]}
+dic = []
 files = glob.glob("*.html")
 for file in files:
     main(file,files)
