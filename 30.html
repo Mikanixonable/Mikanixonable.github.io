@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
 
+<html lang="ja">
 <head>
-	<title>Nessa語辞書</title>
-</head>
-<link rel="stylesheet" href="js/style.css">
+<title>Nessa語辞書</title>
+<meta genre="conlang"/></head>
+<link href="js/style.css" rel="stylesheet"/>
 <style>
 	@font-face {
 		font-family: "ehtaplen";
@@ -38,24 +38,19 @@
 		border: 0em;
 	}
 </style>
-
-
 <body>
-	<div id="header">
-		<h1>Nessa語辞書</h1>
-		<a href="https://zpdic.ziphil.com/dictionary/91">ZpDIC版</a>
-		<a href="https://github.com/Mikanixonable/dictionary">GitHub</a>
-		<form id="form1">
-			<div id="preview"></div>
-			<div id="preview2"></div>
-			<input id="input" type="text" name="input1" value="">
-		</form>
-	</div>
-
-	<div id="IME"></div>
+<div id="header">
+<h1>Nessa語辞書</h1>
+<a href="https://zpdic.ziphil.com/dictionary/91">ZpDIC版</a>
+<a href="https://github.com/Mikanixonable/dictionary">GitHub</a>
+<form id="form1">
+<div id="preview"></div>
+<div id="preview2"></div>
+<input id="input" name="input1" type="text" value=""/>
+</form>
+</div>
+<div id="IME"></div>
 </body>
-
-
 <script>
 	const input = document.forms.form1.input1;
 	const IME = document.getElementById("IME");
@@ -148,5 +143,4 @@
 	document.addEventListener("DOMContentLoaded", () => { view() })
 
 </script>
-
 </html>
