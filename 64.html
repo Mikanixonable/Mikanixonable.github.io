@@ -1,289 +1,236 @@
 <html>
 
 <head>
-	<title>サイトマップ d3js</title>
-	<meta content="">
+  <title>サイトマップ d3js</title>
+  <meta content="">
 </head>
 <link rel="stylesheet" href="js/style.css">
 <style>
-	body {
-		background-color: #1c1f1e;
-		color: var(--c2);
-		display: flex;
-		/* justify-content: center; */
-		flex-direction: column;
-		align-items: center;
-		padding: 0em;
-		font-size: 1em;
-		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
-	}
+  body {
+    background-color: #1c1f1e;
+    color: var(--c2);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  }
 
-	h1 {
-		font-size: 4em;
-	}
+  h1 {
+    font-size: 4em;
+  }
 
-	/* #chart {
+  /* #chart {
 		background-color: #ee5;
 	} */
 
-	/* .d3svg {
+  /* .d3svg {
 		background-color: #24272c;
 	} */
 
 
 
-	.str {
-		color: var(--c2)
-	}
+  .str {
+    color: var(--c2)
+  }
 </style>
 
 <body>
-	<div id="i"></div>
-	<h1>Site Map</h1>
-	<div id="dev"></div>
-	<div id="chart"></div>
+  <div id="i"></div>
+  <h1>Site Map</h1>
+  <div id="dev"></div>
+  <div id="chart"></div>
 </body>
 <script src="js/d3v7.js"></script>
 <script>
-	//サイトマップに読み込むページのバックナンバーの上限
-	const n = 200
+  //サイトマップに読み込むページのバックナンバーの上限
+  const n = 200
 
-	//前後ページへのリンク
-	let dev = document.getElementById("dev")
-	let i = document.getElementById("i")
-	let str = window.location.href.split('/').pop();
-	let num0 = parseInt(str.split(".")[0], 10)
-	let num1 = parseInt(str.split(".")[0], 10) - 1
-	let num2 = parseInt(str.split(".")[0], 10) + 1
-	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
-		+ `<a href=\"index.html\">|${num0}|</a>` + " "
-		+ `<a href=\"${num2}\">${num2}></a>`
+  //前後ページへのリンク
+  let dev = document.getElementById("dev")
+  let i = document.getElementById("i")
+  let str = window.location.href.split('/').pop();
+  let num0 = parseInt(str.split(".")[0], 10)
+  let num1 = parseInt(str.split(".")[0], 10) - 1
+  let num2 = parseInt(str.split(".")[0], 10) + 1
+  i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
+    + `<a href=\"index.html\">|${num0}|</a>` + " "
+    + `<a href=\"${num2}\">${num2}></a>`
 
-	let maxWidth = self.innerWidth
-	let width = maxWidth * 0.9
-	let height = self.innerHeight * 0.6
+  let maxWidth = self.innerWidth
+  let width = maxWidth * 0.9
+  let height = self.innerHeight * 0.6
 
-	function sort1(d, r) {
-		let d2 = d
-		if (d == "index") { d2 = 0 }
-		return [-width / 2 + r + 2 * r * (d2 % 10),
-		Math.floor(d2 / 10) * 2 * r + 150]
-	}
+  function sort1(d, r) {
+    let d2 = d
+    if (d == "index") { d2 = 0 }
+    return [-width / 2 + r + 2 * r * (d2 % 10),
+    Math.floor(d2 / 10) * 2 * r + 150]
+  }
 
+  function d3main(json) {
+    //設定
+    const r = width / 10 / 2
+    const cTimeScl = d3.scaleLinear()
+      .domain([Math.min(...json.map((p) => p.ctime)), Math.max(...json.map((p) => p.ctime))])
+      .range([0, 1]);
 
-
-
-	function d3main(json) {
-		//設定
-		const r = width / 10 / 2
-		const cTimeScl = d3.scaleLinear()
-			.domain([Math.min(...json.map((p) => p.ctime)), Math.max(...json.map((p) => p.ctime))])
-			.range([0, 1]);
-
-		const mTimeScl = d3.scaleLinear()
-			.domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
-			.range([0, 1]);
-		var c1 = d3.scaleSequential().domain([-0.7, 2.8])
-			.interpolator(d3.interpolateCubehelixDefault);
-		var c2 = d3.scaleSequential().domain([0, 2])
-			.interpolator(d3.interpolateBlues);
+    const mTimeScl = d3.scaleLinear()
+      .domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
+      .range([0, 1]);
+    var c1 = d3.scaleSequential().domain([-0.7, 2.8])
+      .interpolator(d3.interpolateCubehelixDefault);
+    var c2 = d3.scaleSequential().domain([0, 2])
+      .interpolator(d3.interpolateBlues);
 
 
-		//準備　svgタグ作成と座標変換
-		const svg = d3.select("#chart").append("svg")
-			.attr("class", "d3svg")
-			.attr("width", maxWidth)
-			.attr("height", n / 10 * r * 2)
-			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
-		const flame = svg.append("g")
-			.attr("transform", `translate(${maxWidth / 2},${2 * r})`)
+    //準備　svgタグ作成と座標変換
+    const svg = d3.select("#chart").append("svg")
+      .attr("class", "d3svg")
+      .attr("width", maxWidth)
+      .attr("height", n / 10 * r * 2)
+      .attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
+    const flame = svg.append("g")
+      .attr("transform", `translate(${maxWidth / 2},${2 * r})`)
 
 
-		//描画
-		const g = flame.selectAll("g").data(json).join("g")
-			.attr("transform", (d, i) => {
-				let x = 0
-				let y = 0
-				return `translate(${x},${y})`
-			})//locale
-			.append("a")
-			.attr("href", (d, i) => d.name + ".html")
+    //描画
+    const g = flame.selectAll("g").data(json).join("g")
+      .attr("transform", (d, i) => {
+        let x = 0
+        let y = 0
+        return `translate(${x},${y})`
+      })//locale
+      .append("a")
+      .attr("href", (d, i) => d.name + ".html")
 
-		const circle = g.append("circle")
-			.attr("r", (d, i) => { return r })
-			.attr("fill", (d, i) => {
-				return c1(cTimeScl(d.ctime))
-				// if (d.genre == "illust") { return "var(--c3)" }
-				// if (d.genre == "font") { return "var(--c4)" }
-				// if (d.genre == "") { return "var(--c6)" }
-				// return "#886"
-			}).attr("opacity", "1")
+    const circle = g.append("circle")
+      .attr("r", (d, i) => { return r })
+      .attr("fill", (d, i) => {
+        return c1(cTimeScl(d.ctime))
+        // if (d.genre == "illust") { return "var(--c3)" }
+        // if (d.genre == "font") { return "var(--c4)" }
+        // if (d.genre == "") { return "var(--c6)" }
+        // return "#886"
+      }).attr("opacity", "1")
 
-		//labels
-		const num = g.append("g").attr("transform", `translate(0,-30)`)
-			.append("text")
-			.text((d, i) => d.name)
-			.attr("style", (d, i) => `font-size: ${2}em`)
-			.attr("text-anchor", "middle")
-			.attr("alignment-baseline", "central")
-			.attr("fill", "var(--c2)")
-		const title = g.append("g").attr("transform", `translate(0,-10)`)
-			.append("foreignObject")
-			.attr("x", -r * 0.7)
-			.attr("y", "0")
-			.attr("width", r * 2 * 0.7)
-			.attr("height", r)
-			.attr("class", "str")
-			.attr("font-size", (d, i) => `${((0.2 * r / d.title.length) ** 0.1) * 0.8}em`)
-			.attr("style", "text-align:center")
-			.html((d, i) => d.title)
+    //labels
+    const num = g.append("g").attr("transform", `translate(0,-30)`)
+      .append("text")
+      .text((d, i) => d.name)
+      .attr("style", (d, i) => `font-size: ${2}em`)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "central")
+      .attr("fill", "var(--c2)")
+    const title = g.append("g").attr("transform", `translate(0,-10)`)
+      .append("foreignObject")
+      .attr("x", -r * 0.7)
+      .attr("y", "0")
+      .attr("width", r * 2 * 0.7)
+      .attr("height", r)
+      .attr("class", "str")
+      .attr("font-size", (d, i) => `${((0.2 * r / d.title.length) ** 0.1) * 0.8}em`)
+      .attr("style", "text-align:center")
+      .html((d, i) => d.title)
 
-		//mouse effect
-		g.on('mouseover', function (d, i) {
-			d3.select(this).select("circle").attr("opacity", "0.4")
-		})
-			.on('mouseout', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "1")
-			})
+    //mouse effect
+    g.on('mouseover', function (d, i) {
+      d3.select(this).select("circle").attr("opacity", "0.4")
+    })
+      .on('mouseout', function (d, i) {
+        d3.select(this).select("circle").attr("opacity", "1")
+      })
 
-		//transition
-		g.transition()
-			.duration(500) // duration of the animation
-			.delay(0) // delay animation start
-			.attr("transform", (d, i) => {
-				let sortX, sortY
-				sortX = sort1(d.name, r)[0]
-				sortY = sort1(d.name, r)[1]
-				return `translate(${sortX},${sortY})`
-			})
+    //transition
+    g.transition()
+      .duration(0)
+      .delay(0)
+      .attr("transform", (d, i) => {
+        let sortX, sortY
+        sortX = sort1(d.name, r)[0]
+        sortY = sort1(d.name, r)[1]
+        return `translate(${sortX},${sortY})`
+      })
 
+    //genre sort button
+    const buttonL = ["illust", "font","math","3D"]
+    function genreList(genreName) {
+      let a = json.filter((v) => v.genre == genreName)
+      let sortedList = a.map((v) => v.name).sort((a, b) => a - b)
+      return sortedList
+    }
 
+    const buttonFlame = flame.append("g")
+    const button = buttonFlame.selectAll("g").data(buttonL).join("g")
+      .attr("transform", (d, i) => { return `translate(${i * 2 * r},${0})` })
+    button.append("circle")
+      .attr("r", r)
+      .attr("fill", "var(--c4)")
+    button.append("text")
+      .text((d, i) => d)
+      .attr("style", `font-size: ${2}em`)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .attr("fill", "var(--c2)")
+    button
+      .on('mouseover', function (d, i) {
+        d3.select(this).select("circle").attr("opacity", "0.4")
+      })
+      .on('mouseout', function (d, i) {
+        d3.select(this).select("circle").attr("opacity", "1")
+      })
+    button.on('click', (d,i) => {
+      g.transition()
+        .duration(500)
+        .attr("transform", (d_g, i_g) => {
+          let x = sort1(d_g.name, r)[0]
+          let y = sort1(d_g.name, r)[1] + 8 * r
+          if (d_g.genre == i) {//なぜかindexのiの方にジャンル名が入っている
+            let k = genreList(i).indexOf(d_g.name)
+            x = sort1(k, r)[0]
+            y = sort1(k, r)[1]
+          }
+          return `translate(${x},${y})`
+        })
+    })
 
-		//button
-		const buttonList = ["illust", "font"]
-		const buttonDic = {"illust":0,"font":1}
-		const illusts0 = json.filter((v) => v.genre == "illust")
-		const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
-		const fonts0 = json.filter((v) => v.genre == "font")
-		const fonts = fonts0.map((v) => v.name).sort((a, b) => a - b)
-		const sortList = [illusts, fonts]
+    //reset sort button
+    const reset = flame.append("g").attr("transform", `translate(${-8 * r},${0})`)
+    reset.append("circle")
+      .attr("r", r)
+      .attr("fill", "var(--c4)")
+    reset.append("text")
+      .text("reset")
+      .attr("style", `font-size: ${2}em`)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .attr("fill", "var(--c2)")
+    reset
+      .on('mouseover', function (d, i) {
+        d3.select(this).select("circle").attr("opacity", "0.4")
+      })
+      .on('mouseout', function (d, i) {
+        d3.select(this).select("circle").attr("opacity", "1")
+      })
+    reset.on('click', function () {
+      g.transition()
+        .duration(500)
+        .attr("transform", (d, i) => {
+          let x = sort1(d.name, r)[0]
+          let y = sort1(d.name, r)[1]
+          return `translate(${x},${y})`
+        })
+    })
+  }
 
-		const buttonFlame = flame.append("g")
-		const button = buttonFlame.selectAll("g").data(buttonList).join("g")
-			.attr("transform", (d, i) => { return `translate(${i * 2 * r},${0})` })
-		button.append("circle")
-			.attr("r", r)
-			.attr("fill", "var(--c4)")
-		button.append("text")
-			.text((d, i) => d)
-			.attr("style", `font-size: ${2}em`)
-			.attr("text-anchor", "middle")
-			.attr("alignment-baseline", "middle")
-			.attr("fill", "var(--c2)")
-		button
-			.on('mouseover', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "0.4")
-			})
-			.on('mouseout', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "1")
-			})
-		
-		// console.log("rtyu")
-		button.on('click', (d, i) => {
-			g.transition()
-				.duration(500)
-				.attr("transform", (d_g, i_g) => {
-					let x = sort1(d_g.name, r)[0]
-					let y = sort1(d_g.name, r)[1] + 8 * r
-
-					if (d_g.genre == i) {
-						
-						let k = sortList[buttonDic[i]].indexOf(d_g.name)
-						x = sort1(k, r)[0]
-						y = sort1(k, r)[1]
-					}
-					return `translate(${x},${y})`
-				})
-		})
-
-
-		// const button1 = flame.append("g").attr("transform", `translate(${-4 * r},${0})`)
-		// button1.append("circle")
-		// 	.attr("r", r)
-		// 	.attr("fill", "var(--c4)")
-		// button1.append("text")
-		// 	.text("illust")
-		// 	.attr("style", `font-size: ${2}em`)
-		// 	.attr("text-anchor", "middle")
-		// 	.attr("alignment-baseline", "middle")
-		// 	.attr("fill", "var(--c2)")
-		// button1
-		// 	.on('mouseover', function (d, i) {
-		// 		this.attr("opacity", "0.4")
-		// 		//d3.select(this).select("circle").attr("opacity", "0.4")
-		// 	})
-		// 	.on('mouseout', function (d, i) {
-		// 		this.attr("opacity", "1")
-		// 	})
-		// const illusts0 = json.filter((v) => v.genre == "illust")
-		// const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
-		// button1.on('click', function () {
-		// 	g.transition()
-		// 		.duration(500)
-		// 		.attr("transform", (d, i) => {
-		// 			let x = sort1(d.name, r)[0]
-		// 			let y = sort1(d.name, r)[1] + 8 * r
-		// 			if (d.genre == "illust") {
-		// 				let i = illusts.indexOf(d.name)
-		// 				x = sort1(i, r)[0]
-		// 				y = sort1(i, r)[1]
-		// 			}
-		// 			return `translate(${x},${y})`
-		// 		})
-		// })
-
-		const button2 = flame.append("g").attr("transform", `translate(${-8 * r},${0})`)
-		button2.append("circle")
-			.attr("r", r)
-			.attr("fill", "var(--c4)")
-		button2.append("text")
-			.text("reset")
-			.attr("style", `font-size: ${2}em`)
-			.attr("text-anchor", "middle")
-			.attr("alignment-baseline", "middle")
-			.attr("fill", "var(--c2)")
-		button2
-			.on('mouseover', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "0.4")
-			})
-			.on('mouseout', function (d, i) {
-				d3.select(this).select("circle").attr("opacity", "1")
-			})
-		// const illusts0 = json.filter((v) => v.genre == "illust")
-		// const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
-		button2.on('click', function () {
-			g.transition()
-				.duration(500)
-				.attr("transform", (d, i) => {
-					let x = sort1(d.name, r)[0]
-					let y = sort1(d.name, r)[1]
-					// if (d.genre == "illust") {
-					// 	let i = illusts.indexOf(d.name)
-					// 	x = sort1(i, r)[0]
-					// 	y = sort1(i, r)[1]
-					// }
-					return `translate(${x},${y})`
-				})
-		})
-
-
-	}
-
-	fetch("json/meta4.json")
-		.then(response => { return response.json(); })
-		.then(json => {
-			d3main(json)
-		})
+  //main
+  fetch("json/meta4.json")
+    .then(response => { return response.json(); })
+    .then(json => {
+      d3main(json)
+    })
 
 </script>
 

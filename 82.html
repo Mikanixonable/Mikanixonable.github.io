@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta property="og:description" content="JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き">
-  <meta property="og:image" content="ogp/85.png">
-  <title>Weierstrass-Riemann function variables 2</title>
 
+<html dir="ltr" lang="en">
+<head>
+<meta content="JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き" genre="math" property="og:description"/>
+<meta content="ogp/85.png" property="og:image"/>
+<title>Weierstrass-Riemann function variables 2</title>
 <style media="screen">
   body{
   display: flex;
@@ -33,37 +33,25 @@
 
 
 </style>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
-
-
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script><script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script><script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 </head>
-
 <body>
-  <h3>Weierstrass-Riemann function variables 2</h3>
-  <!--式-->
-  <p class='formula'>$\displaystyle
+<h3>Weierstrass-Riemann function variables 2</h3>
+<!--式-->
+<p class="formula">$\displaystyle
     x(t)=\sum_{k=1}^{n} \frac{\cos{(\pi (k+m)^l t)}}{(k+m)^l}
     \qquad
     y(t)=\sum_{k=1}^{n} \frac{\sin{(\pi (k+m)^l t )}}{(k+m)^l}\times(1-2key)^k \quad (key=0,1)
   $</p>
-
 <p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
-
 <!--グラフ-->
-  <div class="graph-wrap">
-    <div id="jxgbox" class="graph"></div>
-  </div>
-
+<div class="graph-wrap">
+<div class="graph" id="jxgbox"></div>
+</div>
 <!--リンク-->
-
 <a href="83.html">数学小部屋に戻る</a>
 </body>
-
-
-
 <script type="text/javascript">
 const text_css = 'font-family: "Times New Roman", Times, "serif"; font-style: italic';
 
