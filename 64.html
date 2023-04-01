@@ -46,7 +46,7 @@
 <script src="js/d3v7.js"></script>
 <script>
   //サイトマップに読み込むページのバックナンバーの上限
-  const n = 200
+  const n = 800
 
   //前後ページへのリンク
   let dev = document.getElementById("dev")
@@ -155,7 +155,7 @@
       })
 
     //genre sort button
-    const buttonL = ["illust", "font","math","3D"]
+    const buttonL = ["illust", "font", "math", "3D", "conlang"]
     function genreList(genreName) {
       let a = json.filter((v) => v.genre == genreName)
       let sortedList = a.map((v) => v.name).sort((a, b) => a - b)
@@ -181,7 +181,7 @@
       .on('mouseout', function (d, i) {
         d3.select(this).select("circle").attr("opacity", "1")
       })
-    button.on('click', (d,i) => {
+    button.on('click', (d, i) => {
       g.transition()
         .duration(500)
         .attr("transform", (d_g, i_g) => {
