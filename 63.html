@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="js/style.css">
 <style>
 	body {
-		background-color: var(--c1);
+		background-color: #1c1f1e;
 		color: var(--c2);
 		display: flex;
 		/* justify-content: center; */
@@ -26,26 +26,11 @@
 		background-color: #ee5;
 	} */
 
-	.d3svg {
-		background-color: #ffffff11;
-	}
+	/* .d3svg {
+		background-color: #24272c;
+	} */
 
-	.circle {
-		background-color: blue;
-		height: 100%;
-		border-radius: 100%;
-		text-align: center;
-		line-height: 200px;
-		font-size: 30px;
-	}
 
-	.circle span {
-		line-height: normal;
-		display: inline-block;
-		vertical-align: middle;
-		color: white;
-		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-	}
 
 	.str {
 		color: var(--c2)
@@ -74,10 +59,11 @@
 	let maxWidth = self.innerWidth
 	let width = maxWidth * 0.9
 	let height = self.innerHeight * 0.6
+	function sort1(d, r) {
+		return [-width / 2 + r + 2 * r * (d.name % 10),
+		Math.floor(d.name / 10) * 2 * r + 150]
+	}
 
-	const data = [...Array(n)].map((v, i) => i + 1)
-	const datar = [...Array(n)].map(Math.random)
-	// const datag = [...Array(n)].map((v, i) => genre((i) + ".html")) //genreList
 
 
 
@@ -91,14 +77,17 @@
 		const mTimeScl = d3.scaleLinear()
 			.domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
 			.range([0, 1]);
-		var myColor = d3.scaleSequential().domain([1, -0.5])
-			.interpolator(d3.interpolateCividis);
+		var c1 = d3.scaleSequential().domain([-0.7, 2.8])
+			.interpolator(d3.interpolateCubehelixDefault);
+		var c2 = d3.scaleSequential().domain([0, 2])
+			.interpolator(d3.interpolateBlues);
+
 
 		//準備　svgタグ作成と座標変換
 		const svg = d3.select("#chart").append("svg")
 			.attr("class", "d3svg")
 			.attr("width", maxWidth)
-			.attr("height", data.length / 10 * r * 2)
+			.attr("height", n / 10 * r * 2)
 			.attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
 		const flame = svg.append("g")
 			.attr("transform", `translate(${maxWidth / 2},${2 * r})`)
@@ -107,8 +96,8 @@
 		//描画
 		const g = flame.selectAll("g").data(json).join("g")
 			.attr("transform", (d, i) => {
-				let x = -width / 2 + r + 2 * r * (d.name % 10)
-				let y = Math.floor(d.name / 10) * 2 * r + 150
+				let x = 0
+				let y = 0
 				return `translate(${x},${y})`
 			})//locale
 			.append("a")
@@ -117,13 +106,14 @@
 		const circle = g.append("circle")
 			.attr("r", (d, i) => { return r })
 			.attr("fill", (d, i) => {
-				return myColor(cTimeScl(d.ctime))
+				return c1(cTimeScl(d.ctime))
 				// if (d.genre == "illust") { return "var(--c3)" }
 				// if (d.genre == "font") { return "var(--c4)" }
 				// if (d.genre == "") { return "var(--c6)" }
 				// return "#886"
-			})
+			}).attr("opacity", "1")
 
+		//labels
 		const num = g.append("g").attr("transform", `translate(0,-30)`)
 			.append("text")
 			.text((d, i) => d.name)
@@ -138,24 +128,25 @@
 			.attr("width", r * 2 * 0.7)
 			.attr("height", r)
 			.attr("class", "str")
-			.attr("font-size",(d,i)=>`${((0.2*r/d.title.length)**0.1)*0.8}em`)
+			.attr("font-size", (d, i) => `${((0.2 * r / d.title.length) ** 0.1) * 0.8}em`)
 			.attr("style", "text-align:center")
 			.html((d, i) => d.title)
-		// .append("text")
-		// 	.text((d, i) => d.title)
-		// 	// .attr("style", (d, i) => `font-size: ${3/(d.title.length**0.5)}em`)
-		// 	.attr("style", (d, i) => `font-size: ${1}em`)
-		// 	.attr("text-anchor", "middle")
-		// 	.attr("alignment-baseline", "central")
-		// 	.attr("fill", "var(--c2)")
 
+		//mouse effect
+		g.on('mouseover', function (d, i) {
+			d3.select(this).select("circle").attr("opacity", "0.4")
+		})
+			.on('mouseout', function (d, i) {
+				d3.select(this).select("circle").attr("opacity", "1")
+			})
 
+		//transition
 		g.transition()
-			.duration(1000) // duration of the animation
-			.delay(200) // delay animation start
+			.duration(500) // duration of the animation
+			.delay(0) // delay animation start
 			.attr("transform", (d, i) => {
-				let sortX = 1 * d
-				let sortY = 0
+				let sortX = sort1(d, r)[0]
+				let sortY = sort1(d, r)[1]
 				return `translate(${sortX},${sortY})`
 			})
 			.transition()

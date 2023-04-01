@@ -45,23 +45,27 @@
 </body>
 <script src="js/d3v7.js"></script>
 <script>
+	//サイトマップに読み込むページのバックナンバーの上限
 	const n = 200
 
+	//前後ページへのリンク
 	let dev = document.getElementById("dev")
 	let i = document.getElementById("i")
 	let str = window.location.href.split('/').pop();
-	let num1 = parseInt(str.split(".")[0], 10) - 1 + ".html"
-	let num2 = parseInt(str.split(".")[0], 10) + 1 + ".html"
+	let num0 = parseInt(str.split(".")[0], 10)
+	let num1 = parseInt(str.split(".")[0], 10) - 1
+	let num2 = parseInt(str.split(".")[0], 10) + 1
 	i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
-		+ `<a href=\"index.html\">Top</a>` + " "
+		+ `<a href=\"index.html\">|${num0}|</a>` + " "
 		+ `<a href=\"${num2}\">${num2}></a>`
 
 	let maxWidth = self.innerWidth
 	let width = maxWidth * 0.9
 	let height = self.innerHeight * 0.6
+
 	function sort1(d, r) {
-		return [-width / 2 + r + 2 * r * (d.name % 10),
-		Math.floor(d.name / 10) * 2 * r + 150]
+		return [-width / 2 + r + 2 * r * (d % 10),
+		Math.floor(d / 10) * 2 * r + 150]
 	}
 
 
@@ -145,11 +149,59 @@
 			.duration(500) // duration of the animation
 			.delay(0) // delay animation start
 			.attr("transform", (d, i) => {
-				let sortX = sort1(d, r)[0]
-				let sortY = sort1(d, r)[1]
+				let sortX = sort1(d.name, r)[0]
+				let sortY = sort1(d.name, r)[1]
 				return `translate(${sortX},${sortY})`
 			})
-			.transition()
+
+
+
+		//button
+		const button = flame.append("g").attr("transform", `translate(${-4 * r},${0})`)
+		button.append("circle")
+			.attr("r", r)
+			.attr("fill", "var(--c4)")
+		button.append("text")
+			.text("sort")
+			.attr("style", `font-size: ${2}em`)
+			.attr("text-anchor", "middle")
+			.attr("alignment-baseline", "middle")
+			.attr("fill", "var(--c2)")
+		button
+			.on('mouseover', function (d, i) {
+				this.attr("opacity", "0.4")
+				//d3.select(this).select("circle").attr("opacity", "0.4")
+			})
+			.on('mouseout', function (d, i) {
+				this.attr("opacity", "1")
+			})
+		const illusts0 = json.filter((v) => v.genre == "illust")
+		const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
+		// dev.innerHTML = "rerht"
+		let c = 0
+		button.on('click', function () {
+			g.transition()
+				.duration(500)
+				.attr("transform", (d, i) => {
+					let x, y
+					if (c == 0) {
+						if (d.genre == "illust") {
+							let i = illusts.indexOf(d.name)
+							x = sort1(i, r)[0]
+							y = sort1(i, r)[1]
+						} else {
+							x = sort1(d.name, r)[0]
+							y = sort1(d.name, r)[1] + 8 * r
+						}
+						c = 1
+					} else {
+						x = sort1(d.name, r)[0]
+						y = sort1(d.name, r)[1]
+						c = 0
+					}
+					return `translate(${x},${y})`
+				})
+		})
 	}
 
 	fetch("json/meta4.json")
