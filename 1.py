@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 # nums = [4,49,41,54,120,121,122,123,123,125,126,127,128,129,130]
 # nums = [80,81,82,83,84,85,86,87,88,89] #math
 # nums = [22,23,27,32,33,34,35,36] #3d
-nums = [22,23,27,32,33,34,35,36] #3D
-genre = ""
+nums = [30,42,49] #conlang
+genre = "conlang"
 names = map(lambda n: str(n)+".html",nums)
 for name in names:
     with open(name, mode='rt', encoding='utf-8') as f:

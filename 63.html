@@ -155,7 +155,7 @@
       })
 
     //genre sort button
-    const buttonL = ["illust", "font","math","3D"]
+    const buttonL = ["illust", "font","math","3D","conlang"]
     function genreList(genreName) {
       let a = json.filter((v) => v.genre == genreName)
       let sortedList = a.map((v) => v.name).sort((a, b) => a - b)
