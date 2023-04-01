@@ -161,6 +161,13 @@
 
 		//button
 		const buttonList = ["illust", "font"]
+		const buttonDic = {"illust":0,"font":1}
+		const illusts0 = json.filter((v) => v.genre == "illust")
+		const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
+		const fonts0 = json.filter((v) => v.genre == "font")
+		const fonts = fonts0.map((v) => v.name).sort((a, b) => a - b)
+		const sortList = [illusts, fonts]
+
 		const buttonFlame = flame.append("g")
 		const button = buttonFlame.selectAll("g").data(buttonList).join("g")
 			.attr("transform", (d, i) => { return `translate(${i * 2 * r},${0})` })
@@ -180,11 +187,7 @@
 			.on('mouseout', function (d, i) {
 				d3.select(this).select("circle").attr("opacity", "1")
 			})
-		const illusts0 = json.filter((v) => v.genre == "illust")
-		const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
-		const fonts0 = json.filter((v) => v.genre == "font")
-		const fonts = fonts0.map((v) => v.name).sort((a, b) => a - b)
-		const sortList = [illusts, fonts]
+		
 		// console.log("rtyu")
 		button.on('click', (d, i) => {
 			g.transition()
@@ -195,7 +198,7 @@
 
 					if (d_g.genre == i) {
 						
-						let k = sortList[1].indexOf(d_g.name)
+						let k = sortList[buttonDic[i]].indexOf(d_g.name)
 						x = sort1(k, r)[0]
 						y = sort1(k, r)[1]
 					}
