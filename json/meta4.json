@@ -2,19 +2,19 @@
   {
     "name": "1",
     "ctime": "1678761862",
-    "mtime": "1680149552",
+    "mtime": "1680783568",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
-    "title": "#1 サイトマップ",
-    "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
-    "genre": null
+    "mdate": "2023-04-06",
+    "title": "サイトマップ d3js",
+    "content": "D3jsによるインタラクティブなサイトマップ",
+    "genre": ""
   },
   {
     "name": "10",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680845010",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "作品番号1~99のイラスト",
     "content": "作品番号1~99のイラスト",
     "genre": "illust"
@@ -22,49 +22,49 @@
   {
     "name": "100",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680783020",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-06",
     "title": "人造日本人",
     "content": "二代目トップページ保管場所、各SNSへのリンクあります",
     "genre": null
   },
   {
     "name": "101",
-    "ctime": "1679250555",
-    "mtime": "1679250891",
-    "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "人造日本人",
-    "content": "古いホームのバックアップ",
+    "ctime": "1678761865",
+    "mtime": "1680845010",
+    "cdate": "2023-03-14",
+    "mdate": "2023-04-07",
+    "title": "旧サイトマップ1",
+    "content": "notionで作成したサイトマップ",
     "genre": null
   },
   {
     "name": "102",
-    "ctime": "1679250555",
-    "mtime": "1679250891",
-    "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "人造日本人",
-    "content": "古いホームのバックアップ",
+    "ctime": "1678761862",
+    "mtime": "1680844753",
+    "cdate": "2023-03-14",
+    "mdate": "2023-04-07",
+    "title": "旧サイトマップ2",
+    "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
     "genre": null
   },
   {
     "name": "103",
     "ctime": "1678761862",
-    "mtime": "1679250950",
+    "mtime": "1680844749",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "#1 サイトマップ",
+    "mdate": "2023-04-07",
+    "title": "旧サイトマップ3",
     "content": "JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です",
     "genre": null
   },
   {
     "name": "11",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "作品番号100~199のイラスト",
     "content": "作品番号100~199のイラスト",
     "genre": "illust"
@@ -122,9 +122,9 @@
   {
     "name": "12",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "作品番号200~299のイラスト",
     "content": "作品番号200~299のイラスト",
     "genre": "illust"
@@ -152,40 +152,40 @@
   {
     "name": "122",
     "ctime": "1679250117",
-    "mtime": "1680187788",
+    "mtime": "1680844087",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-30",
-    "title": "Document",
+    "mdate": "2023-04-07",
+    "title": "自動改札A　全グリフ",
     "content": null,
     "genre": "font"
   },
   {
     "name": "123",
     "ctime": "1679250555",
-    "mtime": "1680187788",
+    "mtime": "1680844108",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-30",
-    "title": "Document",
+    "mdate": "2023-04-07",
+    "title": "自動改札B　全グリフ",
     "content": null,
     "genre": "font"
   },
   {
     "name": "124",
     "ctime": "1679250117",
-    "mtime": "1679250891",
+    "mtime": "1680844122",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "Document",
+    "mdate": "2023-04-07",
+    "title": "自動改札C　全グリフ",
     "content": null,
     "genre": null
   },
   {
     "name": "125",
     "ctime": "1679233279",
-    "mtime": "1680187788",
+    "mtime": "1680844804",
     "cdate": "2023-03-19",
-    "mdate": "2023-03-30",
-    "title": "Document",
+    "mdate": "2023-04-07",
+    "title": "蟹行鳥跡　全グリフ",
     "content": null,
     "genre": "font"
   },
@@ -232,9 +232,9 @@
   {
     "name": "13",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "作品番号300~399のイラスト",
     "content": "作品番号300~399のイラスト",
     "genre": "illust"
@@ -252,71 +252,21 @@
   {
     "name": "14",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "作品番号400~499のイラスト",
     "content": "作品番号400~499のイラスト",
     "genre": "illust"
   },
   {
-    "name": "143",
-    "ctime": "1680074071",
-    "mtime": "1680083624",
-    "cdate": "2023-03-29",
-    "mdate": "2023-03-29",
-    "title": "None",
-    "content": "",
-    "genre": null
-  },
-  {
     "name": "15",
     "ctime": "1678761862",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "作品番号500~599のイラスト",
     "content": "作品番号500~599のイラスト",
-    "genre": "illust"
-  },
-  {
-    "name": "16",
-    "ctime": "1678761862",
-    "mtime": "1680183778",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
-    "title": "作品番号600~699のイラスト",
-    "content": "作品番号600~699のイラスト",
-    "genre": "illust"
-  },
-  {
-    "name": "17",
-    "ctime": "1678761862",
-    "mtime": "1680183778",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
-    "title": "作品番号700~799のイラスト",
-    "content": "作品番号700~799のイラスト",
-    "genre": "illust"
-  },
-  {
-    "name": "18",
-    "ctime": "1678761862",
-    "mtime": "1680183778",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
-    "title": "作品番号800~899のイラスト",
-    "content": "作品番号800~899のイラスト",
-    "genre": "illust"
-  },
-  {
-    "name": "19",
-    "ctime": "1678761862",
-    "mtime": "1680183778",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
-    "title": "作品番号900~999のイラスト",
-    "content": "作品番号900~999のイラスト",
     "genre": "illust"
   },
   {
@@ -332,9 +282,9 @@
   {
     "name": "20",
     "ctime": "1678761863",
-    "mtime": "1680183778",
+    "mtime": "1680843815",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "作品番号がマイナスのイラスト",
     "content": "2019年以前の作品番号を振る前のイラストに遡及的に負の作品番号のファイル名を振り機械的に表示",
     "genre": "illust"
@@ -342,9 +292,9 @@
   {
     "name": "21",
     "ctime": "1678761863",
-    "mtime": "1679250476",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-07",
     "title": "インターネット目録(仮)",
     "content": "有用なサイト一覧",
     "genre": null
@@ -352,32 +302,32 @@
   {
     "name": "22",
     "ctime": "1678761863",
-    "mtime": "1679250476",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "VRchatで作ったもの",
     "content": "VRCで作ったワールドの紹介",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "23",
     "ctime": "1678761863",
-    "mtime": "1680183778",
+    "mtime": "1680783020",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "架空惑星ギャラリー",
     "content": "主にblenderで作成した架空惑星の画像の展示室",
-    "genre": "illust"
+    "genre": "3D"
   },
   {
     "name": "231",
     "ctime": "1679250556",
-    "mtime": "1679250891",
+    "mtime": "1680349814",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "イラスト選集",
     "content": "お気に入りの絵を色のまとまりが良くなる配置でまとめたページ",
-    "genre": null
+    "genre": "illust"
   },
   {
     "name": "232",
@@ -392,12 +342,22 @@
   {
     "name": "24",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-07",
     "title": "#24 ロビー",
     "content": "ロビー、雑多",
     "genre": null
+  },
+  {
+    "name": "25",
+    "ctime": "1680074071",
+    "mtime": "1680348991",
+    "cdate": "2023-03-29",
+    "mdate": "2023-04-01",
+    "title": "Template",
+    "content": "",
+    "genre": ""
   },
   {
     "name": "26",
@@ -412,12 +372,12 @@
   {
     "name": "27",
     "ctime": "1678761863",
-    "mtime": "1679250478",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "3Dworks",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "28",
@@ -442,29 +402,29 @@
   {
     "name": "3",
     "ctime": "1678761863",
-    "mtime": "1679250478",
+    "mtime": "1680845010",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-07",
     "title": "Mikanixonable's all 2D works",
     "content": "全イラスト、重め",
-    "genre": null
+    "genre": "illust"
   },
   {
     "name": "30",
     "ctime": "1679250555",
-    "mtime": "1680040811",
+    "mtime": "1680349291",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-29",
+    "mdate": "2023-04-01",
     "title": "Nessa語辞書",
-    "content": "",
-    "genre": ""
+    "content": null,
+    "genre": "conlang"
   },
   {
     "name": "31",
     "ctime": "1678761863",
-    "mtime": "1680183778",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "ねこかわ",
     "content": "ねこかわいいよねこ",
     "genre": "illust"
@@ -472,22 +432,22 @@
   {
     "name": "32",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348571",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "レゴで作った森の3Dモデル",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "33",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Hetero Earth",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "334",
@@ -502,32 +462,32 @@
   {
     "name": "34",
     "ctime": "1678761863",
-    "mtime": "1680166188",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-01",
     "title": "PE",
     "content": "架空惑星の地球儀が自転する インタラクティブ要素なし",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "35",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "PE",
     "content": "架空惑星の地名付き3Dモデル　マウス操作あり",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "36",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Sci-fi box",
     "content": "JSplacementで作ったテクスチャの色情報をもとにblenderのディスプレイスメントを使って凹凸をつけたモデル",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "37",
@@ -542,9 +502,9 @@
   {
     "name": "38",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-07",
     "title": "#38 ハブ",
     "content": "text/html; charset=utf-8",
     "genre": null
@@ -552,9 +512,9 @@
   {
     "name": "39",
     "ctime": "1678761863",
-    "mtime": "1680183778",
+    "mtime": "1680782658",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-06",
     "title": "mikumiku",
     "content": "描いた初音ミクのイラスト",
     "genre": "illust"
@@ -592,9 +552,9 @@
   {
     "name": "405",
     "ctime": "1679249370",
-    "mtime": "1679249370",
+    "mtime": "1680783020",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-06",
     "title": "index1 - 人造日本人",
     "content": "This is a Mikanixonable's official web page. It contains introduction, links of their accounts on social platforms, and their works in a various formats.",
     "genre": null
@@ -612,19 +572,19 @@
   {
     "name": "42",
     "ctime": "1678761864",
-    "mtime": "1679250951",
+    "mtime": "1680349291",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "人工言語の挨拶一覧(ツイートボタン付き)",
     "content": null,
-    "genre": null
+    "genre": "conlang"
   },
   {
     "name": "43",
     "ctime": "1678761864",
-    "mtime": "1680183778",
+    "mtime": "1680843815",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "Gochiusa Pictures",
     "content": "描いたごちうさの絵",
     "genre": "illust"
@@ -632,62 +592,32 @@
   {
     "name": "44",
     "ctime": "1678761864",
-    "mtime": "1680183778",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "非二次絵",
     "content": "二次絵じゃない風景画や抽象画のうちお気に入りのものを展示するページ",
     "genre": "illust"
   },
   {
-    "name": "45",
-    "ctime": "1678761864",
-    "mtime": "1679250951",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "二つの惑星",
-    "content": "",
-    "genre": ""
-  },
-  {
-    "name": "46",
-    "ctime": "1678761864",
-    "mtime": "1679250951",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "二体問題",
-    "content": "退屈",
-    "genre": null
-  },
-  {
-    "name": "47",
-    "ctime": "1678761864",
-    "mtime": "1679250951",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "たくさんの惑星、白背景",
-    "content": "",
-    "genre": ""
-  },
-  {
-    "name": "48",
-    "ctime": "1678761864",
-    "mtime": "1679250951",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "たくさんの惑星、青背景、フレキシブル",
-    "content": "",
-    "genre": ""
-  },
-  {
     "name": "49",
     "ctime": "1678761864",
-    "mtime": "1680187788",
+    "mtime": "1680349291",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-01",
     "title": "創作文字ehtaplenのキーボード",
     "content": "webフォントでehtaplenをリアルタイムに入力できます",
-    "genre": "font"
+    "genre": "conlang"
+  },
+  {
+    "name": "5",
+    "ctime": "1680434038",
+    "mtime": "1680842646",
+    "cdate": "2023-04-02",
+    "mdate": "2023-04-07",
+    "title": "イラストランダム表示",
+    "content": "描いたイラストをボタンをおすごとにランダムに表示する",
+    "genre": "illust"
   },
   {
     "name": "50",
@@ -742,12 +672,12 @@
   {
     "name": "55",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680349615",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "TEX",
+    "mdate": "2023-04-01",
+    "title": "mathjax TEX test",
     "content": "TEX使う",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "57",
@@ -762,9 +692,9 @@
   {
     "name": "6",
     "ctime": "1678761864",
-    "mtime": "1680170192",
+    "mtime": "1680843815",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "Kawaii Pictures",
     "content": "描いた二次絵のうちお気に入りを集めたページ",
     "genre": "illust"
@@ -772,22 +702,22 @@
   {
     "name": "60",
     "ctime": "1679249370",
-    "mtime": "1679979401",
+    "mtime": "1680437419",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-28",
+    "mdate": "2023-04-02",
     "title": "イラストランダム表示",
     "content": "描いたイラストをボタンをおすごとにランダムに表示する",
-    "genre": null
+    "genre": "illust"
   },
   {
     "name": "61",
     "ctime": "1679249370",
-    "mtime": "1679250950",
+    "mtime": "1680609670",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "SigmaJS example",
+    "mdate": "2023-04-04",
+    "title": "サイトマップ d3js",
     "content": "",
-    "genre": ""
+    "genre": null
   },
   {
     "name": "62",
@@ -802,51 +732,61 @@
   {
     "name": "63",
     "ctime": "1680136846",
-    "mtime": "1680256499",
+    "mtime": "1680350669",
     "cdate": "2023-03-30",
-    "mdate": "2023-03-31",
+    "mdate": "2023-04-01",
     "title": "サイトマップ d3js",
     "content": "",
     "genre": null
   },
   {
-    "name": "64",
-    "ctime": "1680245431",
-    "mtime": "1680257927",
-    "cdate": "2023-03-31",
-    "mdate": "2023-03-31",
-    "title": "サイトマップ d3js",
+    "name": "65",
+    "ctime": "1680690860",
+    "mtime": "1680842834",
+    "cdate": "2023-04-05",
+    "mdate": "2023-04-07",
+    "title": "illust archive",
     "content": "",
-    "genre": null
+    "genre": "illust"
+  },
+  {
+    "name": "66",
+    "ctime": "1680773916",
+    "mtime": "1680842826",
+    "cdate": "2023-04-06",
+    "mdate": "2023-04-07",
+    "title": "illust archive",
+    "content": "",
+    "genre": "illust"
   },
   {
     "name": "7",
     "ctime": "1678761865",
-    "mtime": "1680187661",
+    "mtime": "1680844998",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-07",
     "title": "illustrations terminal",
     "content": "イラスト総合ページ",
-    "genre": ""
+    "genre": "illust"
   },
   {
     "name": "70",
     "ctime": "1679249370",
-    "mtime": "1679249370",
+    "mtime": "1680349332",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "untitled",
-    "content": "",
+    "mdate": "2023-04-01",
+    "title": "3body",
+    "content": null,
     "genre": ""
   },
   {
     "name": "71",
     "ctime": "1679249370",
-    "mtime": "1679249370",
+    "mtime": "1680349347",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "untitled",
-    "content": "",
+    "mdate": "2023-04-01",
+    "title": "3body",
+    "content": null,
     "genre": ""
   },
   {
@@ -858,6 +798,66 @@
     "title": "3body",
     "content": "",
     "genre": ""
+  },
+  {
+    "name": "74",
+    "ctime": "1678761864",
+    "mtime": "1679250951",
+    "cdate": "2023-03-14",
+    "mdate": "2023-03-20",
+    "title": "たくさんの惑星、白背景",
+    "content": "",
+    "genre": ""
+  },
+  {
+    "name": "75",
+    "ctime": "1678761864",
+    "mtime": "1679250951",
+    "cdate": "2023-03-14",
+    "mdate": "2023-03-20",
+    "title": "二つの惑星",
+    "content": "",
+    "genre": ""
+  },
+  {
+    "name": "76",
+    "ctime": "1678761864",
+    "mtime": "1679250951",
+    "cdate": "2023-03-14",
+    "mdate": "2023-03-20",
+    "title": "たくさんの惑星、青背景、フレキシブル",
+    "content": "",
+    "genre": ""
+  },
+  {
+    "name": "77",
+    "ctime": "1678761863",
+    "mtime": "1680844854",
+    "cdate": "2023-03-14",
+    "mdate": "2023-04-07",
+    "title": "楕円軌道の惑星",
+    "content": "万有引力をJSで作る練習",
+    "genre": null
+  },
+  {
+    "name": "78",
+    "ctime": "1678761863",
+    "mtime": "1679250950",
+    "cdate": "2023-03-14",
+    "mdate": "2023-03-20",
+    "title": "跳ねるボール",
+    "content": "",
+    "genre": null
+  },
+  {
+    "name": "79",
+    "ctime": "1679250555",
+    "mtime": "1679250891",
+    "cdate": "2023-03-20",
+    "mdate": "2023-03-20",
+    "title": "右と下に落ちるボール",
+    "content": "JS習作",
+    "genre": null
   },
   {
     "name": "8",
@@ -872,142 +872,102 @@
   {
     "name": "80",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "81",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function variables 1",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "82",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function variables 2",
     "content": "JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "83",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "#83 数学小部屋",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "84",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680844238",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "グラフ",
+    "mdate": "2023-04-07",
+    "title": "スライダー付きグラフの練習",
     "content": "JSXGraph.jsによるスライダーでいじれるグラフ",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "85",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "崩れたリーマン関数フラクタル",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "86",
     "ctime": "1679250555",
-    "mtime": "1680040333",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-29",
+    "mdate": "2023-04-01",
     "title": "フラクタル白背景巨大画面",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "87",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "マンデルブロ集合",
-    "content": "",
-    "genre": ""
+    "content": null,
+    "genre": "math"
   },
   {
     "name": "88",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "ジュリア集合",
-    "content": "",
-    "genre": ""
+    "content": null,
+    "genre": "math"
   },
   {
     "name": "89",
     "ctime": "1679250555",
-    "mtime": "1680083456",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-29",
+    "mdate": "2023-04-01",
     "title": "julia",
     "content": "",
-    "genre": null
-  },
-  {
-    "name": "9",
-    "ctime": "1678761865",
-    "mtime": "1679250951",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "#9 サイトマップ",
-    "content": "notionで作成したサイトマップ",
-    "genre": null
-  },
-  {
-    "name": "94",
-    "ctime": "1679250555",
-    "mtime": "1679250891",
-    "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
-    "title": "右と下に落ちるボール",
-    "content": "JS習作",
-    "genre": null
-  },
-  {
-    "name": "95",
-    "ctime": "1678761863",
-    "mtime": "1679250950",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "跳ねるボール",
-    "content": "",
-    "genre": null
-  },
-  {
-    "name": "96",
-    "ctime": "1678761863",
-    "mtime": "1679250950",
-    "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
-    "title": "惑星",
-    "content": "万有引力をJSで作る練習",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "index",
