@@ -64,8 +64,10 @@
 	let height = self.innerHeight * 0.6
 
 	function sort1(d, r) {
-		return [-width / 2 + r + 2 * r * (d % 10),
-		Math.floor(d / 10) * 2 * r + 150]
+		let d2 = d
+		if (d == "index") { d2 = 0 }
+		return [-width / 2 + r + 2 * r * (d2 % 10),
+		Math.floor(d2 / 10) * 2 * r + 150]
 	}
 
 
@@ -149,59 +151,129 @@
 			.duration(500) // duration of the animation
 			.delay(0) // delay animation start
 			.attr("transform", (d, i) => {
-				let sortX = sort1(d.name, r)[0]
-				let sortY = sort1(d.name, r)[1]
+				let sortX, sortY
+				sortX = sort1(d.name, r)[0]
+				sortY = sort1(d.name, r)[1]
 				return `translate(${sortX},${sortY})`
 			})
 
 
 
 		//button
-		const button = flame.append("g").attr("transform", `translate(${-4 * r},${0})`)
+		const buttonList = ["illust", "font"]
+		const buttonFlame = flame.append("g")
+		const button = buttonFlame.selectAll("g").data(buttonList).join("g")
+			.attr("transform", (d, i) => { return `translate(${i * 2 * r},${0})` })
 		button.append("circle")
 			.attr("r", r)
 			.attr("fill", "var(--c4)")
 		button.append("text")
-			.text("sort")
+			.text((d, i) => d)
 			.attr("style", `font-size: ${2}em`)
 			.attr("text-anchor", "middle")
 			.attr("alignment-baseline", "middle")
 			.attr("fill", "var(--c2)")
 		button
 			.on('mouseover', function (d, i) {
-				this.attr("opacity", "0.4")
-				//d3.select(this).select("circle").attr("opacity", "0.4")
+				d3.select(this).select("circle").attr("opacity", "0.4")
 			})
 			.on('mouseout', function (d, i) {
-				this.attr("opacity", "1")
+				d3.select(this).select("circle").attr("opacity", "1")
 			})
 		const illusts0 = json.filter((v) => v.genre == "illust")
 		const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
-		// dev.innerHTML = "rerht"
-		let c = 0
-		button.on('click', function () {
+		const fonts0 = json.filter((v) => v.genre == "font")
+		const fonts = fonts0.map((v) => v.name).sort((a, b) => a - b)
+		const sortList = [illusts, fonts]
+		// console.log("rtyu")
+		button.on('click', (d, i) => {
 			g.transition()
 				.duration(500)
-				.attr("transform", (d, i) => {
-					let x, y
-					if (c == 0) {
-						if (d.genre == "illust") {
-							let i = illusts.indexOf(d.name)
-							x = sort1(i, r)[0]
-							y = sort1(i, r)[1]
-						} else {
-							x = sort1(d.name, r)[0]
-							y = sort1(d.name, r)[1] + 8 * r
-						}
-						c = 1
-					} else {
-						x = sort1(d.name, r)[0]
-						y = sort1(d.name, r)[1]
-						c = 0
+				.attr("transform", (d_g, i_g) => {
+					let x = sort1(d_g.name, r)[0]
+					let y = sort1(d_g.name, r)[1] + 8 * r
+
+					if (d_g.genre == i) {
+						
+						let k = sortList[1].indexOf(d_g.name)
+						x = sort1(k, r)[0]
+						y = sort1(k, r)[1]
 					}
 					return `translate(${x},${y})`
 				})
 		})
+
+
+		// const button1 = flame.append("g").attr("transform", `translate(${-4 * r},${0})`)
+		// button1.append("circle")
+		// 	.attr("r", r)
+		// 	.attr("fill", "var(--c4)")
+		// button1.append("text")
+		// 	.text("illust")
+		// 	.attr("style", `font-size: ${2}em`)
+		// 	.attr("text-anchor", "middle")
+		// 	.attr("alignment-baseline", "middle")
+		// 	.attr("fill", "var(--c2)")
+		// button1
+		// 	.on('mouseover', function (d, i) {
+		// 		this.attr("opacity", "0.4")
+		// 		//d3.select(this).select("circle").attr("opacity", "0.4")
+		// 	})
+		// 	.on('mouseout', function (d, i) {
+		// 		this.attr("opacity", "1")
+		// 	})
+		// const illusts0 = json.filter((v) => v.genre == "illust")
+		// const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
+		// button1.on('click', function () {
+		// 	g.transition()
+		// 		.duration(500)
+		// 		.attr("transform", (d, i) => {
+		// 			let x = sort1(d.name, r)[0]
+		// 			let y = sort1(d.name, r)[1] + 8 * r
+		// 			if (d.genre == "illust") {
+		// 				let i = illusts.indexOf(d.name)
+		// 				x = sort1(i, r)[0]
+		// 				y = sort1(i, r)[1]
+		// 			}
+		// 			return `translate(${x},${y})`
+		// 		})
+		// })
+
+		const button2 = flame.append("g").attr("transform", `translate(${-8 * r},${0})`)
+		button2.append("circle")
+			.attr("r", r)
+			.attr("fill", "var(--c4)")
+		button2.append("text")
+			.text("reset")
+			.attr("style", `font-size: ${2}em`)
+			.attr("text-anchor", "middle")
+			.attr("alignment-baseline", "middle")
+			.attr("fill", "var(--c2)")
+		button2
+			.on('mouseover', function (d, i) {
+				d3.select(this).select("circle").attr("opacity", "0.4")
+			})
+			.on('mouseout', function (d, i) {
+				d3.select(this).select("circle").attr("opacity", "1")
+			})
+		// const illusts0 = json.filter((v) => v.genre == "illust")
+		// const illusts = illusts0.map((v) => v.name).sort((a, b) => a - b)
+		button2.on('click', function () {
+			g.transition()
+				.duration(500)
+				.attr("transform", (d, i) => {
+					let x = sort1(d.name, r)[0]
+					let y = sort1(d.name, r)[1]
+					// if (d.genre == "illust") {
+					// 	let i = illusts.indexOf(d.name)
+					// 	x = sort1(i, r)[0]
+					// 	y = sort1(i, r)[1]
+					// }
+					return `translate(${x},${y})`
+				})
+		})
+
+
 	}
 
 	fetch("json/meta4.json")
