@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
+
+<html dir="ltr" lang="ja">
 <head>
-<meta charset="utf-8" content="JSXGraph.jsによるスライダーでいじれるグラフ">
+<meta charset="utf-8" content="JSXGraph.jsによるスライダーでいじれるグラフ" genre="math"/>
 <title>グラフ</title>
-
-
 <style media="screen">
 body{
 		display: flex;
@@ -26,16 +25,13 @@ body{
     height: 100%;
   }
 </style>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.min.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
-
-  </head>
+</head>
 <body>
 <div class="graph-wrap">
-  <!-- グラフの出力先(JSXGraph用) -->
-  <div id="plot" class="graph"></div>
-
+<!-- グラフの出力先(JSXGraph用) -->
+<div class="graph" id="plot"></div>
 </div>
 <a href="83.html">数学小部屋に戻る</a>
 </body>
@@ -94,6 +90,4 @@ graph = board.create('functiongraph', [f, 0, 1]);
 graph = board.create('functiongraph', [plot, 0, 1]);
 
 </script>
-
-
 </html>

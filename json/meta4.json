@@ -352,22 +352,22 @@
   {
     "name": "22",
     "ctime": "1678761863",
-    "mtime": "1679250476",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "VRchatで作ったもの",
     "content": "VRCで作ったワールドの紹介",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "23",
     "ctime": "1678761863",
-    "mtime": "1680183778",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-01",
     "title": "架空惑星ギャラリー",
     "content": "主にblenderで作成した架空惑星の画像の展示室",
-    "genre": "illust"
+    "genre": "3D"
   },
   {
     "name": "231",
@@ -412,12 +412,12 @@
   {
     "name": "27",
     "ctime": "1678761863",
-    "mtime": "1679250478",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "3Dworks",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "28",
@@ -442,12 +442,12 @@
   {
     "name": "3",
     "ctime": "1678761863",
-    "mtime": "1679250478",
+    "mtime": "1680348416",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Mikanixonable's all 2D works",
     "content": "全イラスト、重め",
-    "genre": null
+    "genre": "illust"
   },
   {
     "name": "30",
@@ -472,22 +472,22 @@
   {
     "name": "32",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348571",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "レゴで作った森の3Dモデル",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "33",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Hetero Earth",
     "content": null,
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "334",
@@ -502,32 +502,32 @@
   {
     "name": "34",
     "ctime": "1678761863",
-    "mtime": "1680166188",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-01",
     "title": "PE",
     "content": "架空惑星の地球儀が自転する インタラクティブ要素なし",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "35",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "PE",
     "content": "架空惑星の地名付き3Dモデル　マウス操作あり",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "36",
     "ctime": "1678761863",
-    "mtime": "1679250950",
+    "mtime": "1680348571",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Sci-fi box",
     "content": "JSplacementで作ったテクスチャの色情報をもとにblenderのディスプレイスメントを使って凹凸をつけたモデル",
-    "genre": null
+    "genre": "3D"
   },
   {
     "name": "37",
@@ -772,12 +772,12 @@
   {
     "name": "60",
     "ctime": "1679249370",
-    "mtime": "1679979401",
+    "mtime": "1680348380",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-28",
+    "mdate": "2023-04-01",
     "title": "イラストランダム表示",
     "content": "描いたイラストをボタンをおすごとにランダムに表示する",
-    "genre": null
+    "genre": "illust"
   },
   {
     "name": "61",
@@ -802,9 +802,9 @@
   {
     "name": "63",
     "ctime": "1680136846",
-    "mtime": "1680256499",
+    "mtime": "1680347753",
     "cdate": "2023-03-30",
-    "mdate": "2023-03-31",
+    "mdate": "2023-04-01",
     "title": "サイトマップ d3js",
     "content": "",
     "genre": null
@@ -812,9 +812,9 @@
   {
     "name": "64",
     "ctime": "1680245431",
-    "mtime": "1680257927",
+    "mtime": "1680348629",
     "cdate": "2023-03-31",
-    "mdate": "2023-03-31",
+    "mdate": "2023-04-01",
     "title": "サイトマップ d3js",
     "content": "",
     "genre": null
@@ -822,12 +822,12 @@
   {
     "name": "7",
     "ctime": "1678761865",
-    "mtime": "1680187661",
+    "mtime": "1680348433",
     "cdate": "2023-03-14",
-    "mdate": "2023-03-30",
+    "mdate": "2023-04-01",
     "title": "illustrations terminal",
     "content": "イラスト総合ページ",
-    "genre": ""
+    "genre": "illust"
   },
   {
     "name": "70",
@@ -872,102 +872,102 @@
   {
     "name": "80",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "81",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function variables 1",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "82",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "Weierstrass-Riemann function variables 2",
     "content": "JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "83",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "#83 数学小部屋",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "84",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "グラフ",
     "content": "JSXGraph.jsによるスライダーでいじれるグラフ",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "85",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "崩れたリーマン関数フラクタル",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "86",
     "ctime": "1679250555",
-    "mtime": "1680040333",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-29",
+    "mdate": "2023-04-01",
     "title": "フラクタル白背景巨大画面",
     "content": null,
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "87",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "マンデルブロ集合",
-    "content": "",
-    "genre": ""
+    "content": null,
+    "genre": "math"
   },
   {
     "name": "88",
     "ctime": "1679250555",
-    "mtime": "1679250891",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-20",
+    "mdate": "2023-04-01",
     "title": "ジュリア集合",
-    "content": "",
-    "genre": ""
+    "content": null,
+    "genre": "math"
   },
   {
     "name": "89",
     "ctime": "1679250555",
-    "mtime": "1680083456",
+    "mtime": "1680348278",
     "cdate": "2023-03-20",
-    "mdate": "2023-03-29",
+    "mdate": "2023-04-01",
     "title": "julia",
     "content": "",
-    "genre": null
+    "genre": "math"
   },
   {
     "name": "9",
