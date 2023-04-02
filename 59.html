@@ -5,64 +5,79 @@
   <title>イラストランダム表示</title>
   <meta content="描いたイラストをボタンをおすごとにランダムに表示する" genre="illust">
 </head>
+<link rel="stylesheet" href="js/style.css">
 <style>
   body {
     display: flex;
-    background: #456;
+    font-family:Arial, Helvetica, sans-serif;
+    background: var(--c1);
     color: #DDD;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1em;
+    font-size: 2em;
   }
 
   .button {
     color: #DDD;
-    font-size: 200%;
-    background-color: #567;
+    font-size: 1em;
+    background-color: var(--c3);
     border: 0px;
   }
 
-  a {
-    color: #6AD;
+  #imgTitle{
+    font-size: 2em;
   }
+
 </style>
 
 <body>
-
-  <script>
-    let range = [-205, 531]
-
-    let url = new URL(window.location.href);
-    let n = url.searchParams.get("n");
-
-    function dice(range){
-      return Math.floor(Math.random() * (-range[0] + range[1] + 1) + range[0])
-    }
-    if (!n) {
-      let works = -range[0] + range[1]
-      n = dice(range)
-      url.searchParams.append('n', n);
-      location.href = url
-    }
-
-    let imgPath = "illusts/" + n + ".png";
-    document.write("<big><big><big><big>" + n + "</big></big></big></big><br>");
-    document.write("<img src=" + imgPath + " height = 80%><br>");
-    document.write("<big><big>link: <a href=" + imgPath + ">" + imgPath + "</a></big></big><br>");
-
-    function button() {
-      let k = Math.floor(Math.random() * (range[1] - range[0]) + range[0]);
-      window.history.replaceState(null, null, '?n=' + k);
-      window.location.reload();
-    }
-
-  </script>
-
+  <div id="imgTitle"></div>
+  <div id="imgDiv"></div>
+  <div id="imgLink"></div>
   <input type="button" class="button" style="width:15em;height:3em;" value="シャッフル" onclick="
 	button()">
 
-
+  <svg><image href="illusts/34.png" alt="illust"></svg>
 </body>
 
+<script>
+    function button() {
+    let k = Math.floor(Math.random() * (range[1] - range[0]) + range[0]);
+    window.history.replaceState(null, null, '?n=' + k);
+    window.location.reload();
+  }
+  function dice(range){
+    return Math.floor(Math.random() * (-range[0] + range[1] + 1) + range[0])
+  }
+  let imgTitle = document.getElementById("imgTitle")
+  let imgDiv = document.getElementById("imgDiv")
+  let imgLink = document.getElementById("imgLink")
+
+  let range = [-205, 531]
+  let url = new URL(window.location.href);
+  let n = url.searchParams.get("n");
+
+  if (!n) {
+    let works = -range[0] + range[1]
+    n = dice(range)
+    url.searchParams.append('n', n);
+    location.href = url
+  }
+
+  imgTitle.innerText = n
+  let imgPath = "illusts/" + n + ".png";
+  imgDiv.innerHTML = "<img src=" + imgPath + " height = 500>"
+  imgLink.innerHTML = "link: "+"<a href=" + imgPath + ">" + imgPath + "</a>"
+
+
+  
+  // document.write("<big><big><big><big>" + n + "</big></big></big></big><br>");
+  // document.write("<img src=" + imgPath + " height = 80%><br>");
+  // document.write("<big><big>link: <a href=" + imgPath + ">" + imgPath + "</a></big></big><br>");
+
+
+
+</script>
 </html>
