@@ -1,17 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <title>Document</title>
-</head>
-<body>
-  
-</body>
-<script type="text/javascript">
+<html>
 
-  setTimeout("link()", 0);
-  function link(){
-  location.href=`illusts/76.png`;
+<head>
+  <title>サイトマップ d3js</title>
+  <meta content="">
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+  body {
+    background-color: #1c1f1e;
+    color: var(--c2);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
   }
 
-  </script>
+  h1 {
+    font-size: 4em;
+  }
+
+  /* #chart {
+		background-color: #ee5;
+	} */
+
+  /* .d3svg {
+		background-color: #24272c;
+	} */
+
+  .str {
+    color: var(--c2)
+  }
+</style>
+
+<body>
+  <div id="i"></div>
+  <h1>test</h1>
+  <div id="dev"></div>
+  <div id="chart"></div>
+</body>
+<script src="js/d3v7.js"></script>
+<script>
+  //サイトマップに読み込むページのバックナンバーの上限
+  const n = 800
+
+  //前後ページへのリンク
+  let dev = document.getElementById("dev")
+  let i = document.getElementById("i")
+  let str = window.location.href.split('/').pop();
+  let num0 = parseInt(str.split(".")[0], 10)
+  let num1 = parseInt(str.split(".")[0], 10) - 1
+  let num2 = parseInt(str.split(".")[0], 10) + 1
+  i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
+    + `<a href=\"index.html\">|${num0}|</a>` + " "
+    + `<a href=\"${num2}\">${num2}></a>`
+
+  let maxWidth = self.innerWidth
+  let width = maxWidth * 0.9
+  let height = self.innerHeight * 0.6
+
+  function sort1(d, r) {
+    let d2 = d
+    if (d == "index") { d2 = 0 }
+    let dx = -width / 2 + r + 2 * r * (d2[d2.length - 1])
+    // if(d2<0){dx =dx*-1-18*r}
+    return [dx,
+      Math.floor(d2 / 10) * 2 * r + 150]
+  }
+
+  function d3main(json) {
+    //設定
+    const r = width / 10 / 2
+    const cTimeScl = d3.scaleLinear()
+      .domain([Math.min(...json.map((p) => p.ctime)), Math.max(...json.map((p) => p.ctime))])
+      .range([0, 1]);
+
+    const mTimeScl = d3.scaleLinear()
+      .domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
+      .range([0, 1]);
+    var c1 = d3.scaleSequential().domain([-0.7, 2.8])
+      .interpolator(d3.interpolateCubehelixDefault);
+    var c2 = d3.scaleSequential().domain([0, 2])
+      .interpolator(d3.interpolateBlues);
+
+
+    //準備　svgタグ作成と座標変換
+    const svg = d3.select("#chart").append("svg")
+      .attr("class", "d3svg")
+      .attr("width", maxWidth)
+      .attr("height", n / 10 * r * 2)
+      .attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
+    const flame = svg.append("g")
+      .attr("transform", `translate(${maxWidth / 2},${2 * r})`)
+
+    const gFlame = flame.append("g")
+      .attr("transform", `translate(${-width / 2},${0})`)
+
+    function makeRow(arr, width, num) {
+      let k = 0
+      let list = []
+      let row = []
+      for (const img in arr) {
+ 
+        row.push(img["name"])
+        k += 1
+        if (k > num - 1) {
+          list.push(row)
+          row = []
+          k=0
+        }
+      }
+      return list
+    }
+
+      let imgList = makeRow(json,width,10)
+
+      // gFlame.append("circle").attr("r", "34").attr("fill", "red")
+      gFlame.selectAll("g").data(json).join("g")
+      .append("circle")
+      .attr("cx",(d,i)=>d.name*100)
+      .attr("cy",(d,i)=>5)
+      .attr("r",7)
+ 
+
+
+
+
+
+      //描画
+      // const g = flame.selectAll("g").data(json).join("g")
+      //   .attr("transform", (d, i) => {
+      //     let x = sort1(d.name, r)[0]
+      //     let y = sort1(d.name, r)[1]
+      //     return `translate(${x},${y})`
+      //   })//locale
+      // // .append("a")
+      // // .attr("href", (d, i) => d.name + ".html")
+
+      // g.append("circle").attr("r", (d, i) => r)
+
+      // const img = g.append("g").attr("transform", (d, i) => {
+      //   let rate = d.height / d.width
+      //   let x = -Math.sqrt(r ** 2 / (1 + rate ** 2))
+      //   let y = x * rate
+      //   return `translate(${x},${y})`
+      // }).append("image")
+      //   .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
+      //   .attr("height", (d, i) => {
+      //     let rate = d.height / d.width
+      //     let x = -Math.sqrt(r ** 2 / (1 + rate ** 2))
+      //     let y = x * rate
+      //     return -2 * y
+      //   })
+
+      // //labels
+      // const num = g.append("g").attr("transform", `translate(0,-30)`)
+      //   .append("text")
+      //   .text((d, i) => d.name)
+      //   .attr("style", (d, i) => `font-size: ${2}em`)
+      //   .attr("text-anchor", "middle")
+      //   .attr("alignment-baseline", "central")
+      //   .attr("fill", "var(--c2)")
+      // const title = g.append("g").attr("transform", `translate(0,-10)`)
+      //   .append("foreignObject")
+      //   .attr("x", -r * 0.7)
+      //   .attr("y", "0")
+      //   .attr("width", r * 2 * 0.7)
+      //   .attr("height", r)
+      //   .attr("class", "str")
+      //   .attr("font-size", (d, i) => `${((0.2 * r / d.title.length) ** 0.1) * 0.8}em`)
+      //   .attr("style", "text-align:center")
+      //   .html((d, i) => d.title)
+
+      // //mouse effect
+      // g.on('mouseover', function (d, i) {
+      //   d3.select(this).select("circle").attr("opacity", "0.4")
+      // })
+      //   .on('mouseout', function (d, i) {
+      //     d3.select(this).select("circle").attr("opacity", "1")
+      //   })
+
+
+
+
+
+    }
+
+    //main
+    fetch("json/illusts.json")
+      .then(response => { return response.json(); })
+      .then(json => {
+        d3main(json)
+      })
+
+</script>
+
+
 </html>

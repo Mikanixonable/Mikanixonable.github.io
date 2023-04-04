@@ -67,6 +67,7 @@
   }
 
   imgTitle.innerText = n
+  document.title = n + ".png"
   let imgPath = "illusts/" + n + ".png";
   imgDiv.innerHTML = "<img src=" + imgPath + " height = 500>"
   imgLink.innerHTML = "link: "+"<a href=" + imgPath + ">" + imgPath + "</a>"
