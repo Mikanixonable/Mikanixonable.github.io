@@ -80,7 +80,9 @@
     const mTimeScl = d3.scaleLinear()
       .domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
       .range([0, 1]);
-    var c1 = d3.scaleSequential().domain([-0.7, 2.8])
+    var c1 = d3.scaleSequential().domain([-0.5, 2.8])
+      .interpolator(d3.interpolateCubehelixDefault);
+      var c1a = d3.scaleSequential().domain([-0.7, 2.8])
       .interpolator(d3.interpolateCubehelixDefault);
     var c2 = d3.scaleSequential().domain([0, 2])
       .interpolator(d3.interpolateBlues);
@@ -108,7 +110,7 @@
     const circle = g.append("circle")
       .attr("r", (d, i) => { return r })
       .attr("fill", (d, i) => {
-        return c1(cTimeScl(d.ctime))
+        return c1a(mTimeScl(d.mtime))//配色
         // if (d.genre == "illust") { return "var(--c3)" }
         // if (d.genre == "font") { return "var(--c4)" }
         // if (d.genre == "") { return "var(--c6)" }
