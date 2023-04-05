@@ -188,16 +188,17 @@
       //画面中央に移動
       d3.select(this).transition().duration(150)
         .attr("transform", (di, ii) => {
-          let x = width / 2 - di.width / 2
-          let y = di.y
+          let r = Math.sqrt(di.width**2 + di.height**2)
+          let x = width / 2 - height*di.width/(r*2)
+          let y = window.scrollY - height*di.height/(r*2)
           return `translate(${x},${y}) scale(${1})`
-
-          d3.select(this).select("image").transition().duration(150)
-            .attr("height", 300)
-
-
-
         })
+        d3.select(this).selectAll("image").transition().duration(150)
+            .attr("height", (d,i)=>{
+              let r = Math.sqrt(d.width**2 + d.height**2)
+              let h = height*d.height/r
+              return `${h}`
+            })
     })
 
     // g.on('mouseover', function (d, i) {
