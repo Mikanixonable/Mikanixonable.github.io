@@ -106,8 +106,11 @@
       .append("a")
       .attr("href", (d, i) => d.name + ".html")
 
-    const circle = g.append("circle")
-      .attr("r", (d, i) => { return r })
+      const circle = g.append("path")
+      .attr("d", (d,i)=>{
+        let k = 1.7
+        return `M${26*k} ${15*k} L0 ${30*k} L-${26*k} ${15*k} L-${26*k} -${15*k} L-0 -${30*k} L${26*k} -${15*k} z`
+    })
       .attr("fill", (d, i) => {
         return c1(cTimeScl(d.ctime))
         // if (d.genre == "illust") { return "var(--c3)" }
@@ -115,6 +118,16 @@
         // if (d.genre == "") { return "var(--c6)" }
         // return "#886"
       }).attr("opacity", "1")
+
+    // const circle = g.append("circle")
+    //   .attr("r", (d, i) => { return r })
+    //   .attr("fill", (d, i) => {
+    //     return c1(cTimeScl(d.ctime))
+    //     // if (d.genre == "illust") { return "var(--c3)" }
+    //     // if (d.genre == "font") { return "var(--c4)" }
+    //     // if (d.genre == "") { return "var(--c6)" }
+    //     // return "#886"
+    //   }).attr("opacity", "1")
 
     //labels
     const num = g.append("g").attr("transform", `translate(0,-30)`)
