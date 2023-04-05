@@ -58,6 +58,7 @@
   let range = [-205, 531]
   let url = new URL(window.location.href);
   let n = url.searchParams.get("n");
+  let height = window.innerHeight
 
   if (!n) {
     let works = -range[0] + range[1]
@@ -69,7 +70,7 @@
   imgTitle.innerText = n
   document.title = n + ".png"
   let imgPath = "illusts/" + n + ".png";
-  imgDiv.innerHTML = "<img src=" + imgPath + " height = 500>"
+  imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height*0.7}>`
   imgLink.innerHTML = "link: "+"<a href=" + imgPath + ">" + imgPath + "</a>"
 
 
