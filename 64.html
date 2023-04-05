@@ -49,7 +49,7 @@
     + `<a href=\"index.html\">|${num0}|</a>` + " "
     + `<a href=\"${num2}\">${num2}></a>`
 
-  let maxWidth = self.innerWidth*0.95
+  let maxWidth = self.innerWidth * 0.95
   let width = maxWidth * 0.9
   let height = self.innerHeight * 0.6
 
@@ -85,45 +85,46 @@
     return arr
   }
 
-  //グループ化した配列から画像の座標を計算し辞書にする
+  //グループ化した配列から画像の座標を計算し辞書に入れる
   function makeDic(json, arr, width) {
     let dic = []
     let heightsum = 0
-    
-    
+    //一行単位の操作
     for (let k = 0; k < arr.length; k++) {
-    
-      let rowWidth = arr[k].reduce((sum, num) => {
+      let normalWidth = arr[k].reduce((sum, num) => {
         let img = json.find((v) => v.name == num)
         return sum + img["width"] / img["height"]
       }, 0)
-     
-      let height = width / rowWidth
-      heightsum += height
+
+      //一画像単位の操作
+      let imgHeight = width / normalWidth
+      heightsum += imgHeight
       let numD = {}
       let rate = 0
-      let img;
 
       for (let s = 0; s < arr[k].length; s++) {
-
+        let image = json.find((v) => v.name == arr[k][s])
         numD = {}
-        numD["name"] = [arr[k][s]]
-        numD["height"] = height
+        numD["name"] = image["name"]
+        numD["title"] = image["title"]
+        numD["tag"] = image["tag"]
+        numD["width"] = image["width"] / image["height"] * height
+        numD["height"] = imgHeight
 
         rate = 0
-
+        let img;
         for (let ss = 0; ss < s; ss++) {
           img = json.find((v) => v.name == arr[k][ss])
-          rate += (img["width"] / img["height"]) / rowWidth
+          rate += (img["width"] / img["height"]) / normalWidth
         }
 
         numD["x"] = width * rate
-        numD["y"] = heightsum - height
+        numD["y"] = heightsum - imgHeight
         dic.push(numD)
 
       }
     }
-   
+
     return dic
   }
 
@@ -164,17 +165,24 @@
       .attr("transform", `translate(${-width / 2},${0})`)
 
     let dic = make3(json, width, 5)
-    console.log(dic)
 
-    gFlame.selectAll("g").data(dic).join("g")
-    .attr("transform",(d,i)=>{
-      return`translate(${d.x},${d.y})`
-    })
-      .append("image")
+    const g = gFlame.selectAll("g").data(dic).join("g")
+      .attr("transform", (d, i) => {
+        return `translate(${d.x},${d.y})`
+      })
+    const img = g.append("image")
       .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
       .attr("height", (d, i) => {
-        return d.height-5
+        return d.height - 5
       })
+
+    //mouse effect
+    img.on('mouseover', function (d, i) {
+      d3.select(this).attr("height", (d, i) => { return d.height - 10 })
+    })
+    img.on('mouseout', function (d, i) {
+      d3.select(this).attr("height", (d, i) => { return d.height - 5 })
+    })
 
     //描画
     // const g = flame.selectAll("g").data(json).join("g")
@@ -221,13 +229,7 @@
     //   .attr("style", "text-align:center")
     //   .html((d, i) => d.title)
 
-    // //mouse effect
-    // g.on('mouseover', function (d, i) {
-    //   d3.select(this).select("circle").attr("opacity", "0.4")
-    // })
-    //   .on('mouseout', function (d, i) {
-    //     d3.select(this).select("circle").attr("opacity", "1")
-    //   })
+
 
 
 

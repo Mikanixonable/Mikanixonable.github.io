@@ -34,6 +34,7 @@
   <div id="chart"></div>
 </body>
 <script src="js/d3v7.js"></script>
+<script type="text/javascript" src="js/svg-z-order.js"></script>
 <script>
   //サイトマップに読み込むページのバックナンバーの上限
   const n = 800
@@ -49,7 +50,7 @@
     + `<a href=\"index.html\">|${num0}|</a>` + " "
     + `<a href=\"${num2}\">${num2}></a>`
 
-  let maxWidth = self.innerWidth*0.95
+  let maxWidth = self.innerWidth * 0.95
   let width = maxWidth * 0.9
   let height = self.innerHeight * 0.6
 
@@ -85,45 +86,47 @@
     return arr
   }
 
-  //グループ化した配列から画像の座標を計算し辞書にする
+  //グループ化した配列から画像の座標を計算し辞書に入れる
   function makeDic(json, arr, width) {
     let dic = []
     let heightsum = 0
-    
-    
+    //一行単位の操作
     for (let k = 0; k < arr.length; k++) {
-    
-      let rowWidth = arr[k].reduce((sum, num) => {
+      let normalWidth = arr[k].reduce((sum, num) => {
         let img = json.find((v) => v.name == num)
         return sum + img["width"] / img["height"]
       }, 0)
-     
-      let height = width / rowWidth
-      heightsum += height
-      let numD = {}
+
+      //一画像単位の操作
+      let imgDic = {}
       let rate = 0
-      let img;
-
+      let imgWidth
+      let imgHeight = width / normalWidth
+      heightsum += imgHeight
       for (let s = 0; s < arr[k].length; s++) {
-
-        numD = {}
-        numD["name"] = [arr[k][s]]
-        numD["height"] = height
+        let image = json.find((v) => v.name == arr[k][s])
+        imgDic = {}
+        imgDic["name"] = image["name"]
+        imgDic["title"] = image["title"]
+        imgDic["tag"] = image["tag"]
+        imgWidth = image["width"] / image["height"] * height
+        imgDic["width"] = imgWidth
+        imgDic["height"] = imgHeight
 
         rate = 0
-
+        let img;
         for (let ss = 0; ss < s; ss++) {
           img = json.find((v) => v.name == arr[k][ss])
-          rate += (img["width"] / img["height"]) / rowWidth
+          rate += (img["width"] / img["height"]) / normalWidth
         }
 
-        numD["x"] = width * rate
-        numD["y"] = heightsum - height
-        dic.push(numD)
+        imgDic["x"] = (width * rate) + imgWidth / 2
+        imgDic["y"] = (heightsum - imgHeight) + imgHeight / 2
+        dic.push(imgDic)
 
       }
     }
-   
+
     return dic
   }
 
@@ -164,17 +167,63 @@
       .attr("transform", `translate(${-width / 2},${0})`)
 
     let dic = make3(json, width, 5)
-    console.log(dic)
 
-    gFlame.selectAll("g").data(dic).join("g")
-    .attr("transform",(d,i)=>{
-      return`translate(${d.x},${d.y})`
+    const g = gFlame.selectAll("g").data(dic).join("g")
+      .attr("transform", (d, i) => {
+        return `translate(${d.x},${d.y}) scale(${1})`
+      })
+    const img = g.append("g").attr("transform", (d, i) => {
+      return `translate(${-d.width / 2},${-d.height / 2}) scale(${1})`
     })
-      .append("image")
+      .append("g").append("image")
       .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
       .attr("height", (d, i) => {
-        return d.height-5
+        return d.height
       })
+
+
+
+    // g.on('mouseover', function (d, i) {
+    //   d3.select(this).transition().duration(150)
+    //     .select("image").attr("height", (d_i, i_i) => {
+    //       return d_i.height - d_i.height*0.02
+    //     })
+    //   d3.select(this).transition().duration(150)
+    //   .attr("transform", (d_i, i_i) => {
+    //     return `translate(${d_i.x + (d_i.width/d_i.height)*2},${d_i.y + d_i.height*0.01}) scale(${1})`
+    //   })
+    // })
+
+    // g.on('mouseout', function (d, i) {
+    //   d3.select(this).transition().duration(150)
+    //     .select("image").attr("height", (d_i, i_i) => {
+    //       return d_i.height
+    //     })
+    //   d3.select(this).transition().duration(150)
+    //   .attr("transform", (d_i, i_i) => {
+    //     return `translate(${d_i.x},${d_i.y }) scale(${1})`
+    //   })
+    // })
+
+    g.on('click', function (d, i) {
+      let d3g = d3.select(this);
+      svgz_element(d3g.node()).toTop();//最前面に移動
+
+      // d3.select(this).transition().duration(150)
+      //   .select("image").attr("height", (d_i, i_i) => {
+      //     return d_i.height
+      //   })
+      d3.select(this).transition().duration(150)
+        .attr("transform", (d_i, i_i) => {
+          return `translate(${width/2},${0}) scale(${1})`
+
+        })
+    })
+
+    //   d3.select(this).attr("transform", (d, i) => {
+    //     return `translate(${0},${0}) scale(${1})`
+    //   })
+    // })
 
     //描画
     // const g = flame.selectAll("g").data(json).join("g")
@@ -221,13 +270,7 @@
     //   .attr("style", "text-align:center")
     //   .html((d, i) => d.title)
 
-    // //mouse effect
-    // g.on('mouseover', function (d, i) {
-    //   d3.select(this).select("circle").attr("opacity", "0.4")
-    // })
-    //   .on('mouseout', function (d, i) {
-    //     d3.select(this).select("circle").attr("opacity", "1")
-    //   })
+
 
 
 
