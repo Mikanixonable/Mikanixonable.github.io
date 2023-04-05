@@ -49,7 +49,7 @@
     + `<a href=\"index.html\">|${num0}|</a>` + " "
     + `<a href=\"${num2}\">${num2}></a>`
 
-  let maxWidth = self.innerWidth
+  let maxWidth = self.innerWidth*0.95
   let width = maxWidth * 0.9
   let height = self.innerHeight * 0.6
 
@@ -88,48 +88,52 @@
   //グループ化した配列から画像の座標を計算し辞書にする
   function makeDic(json, arr, width) {
     let dic = []
-    for (let row in arr) {
-
-      let rowWidth = row.reduce((sum, num) => {
+    let heightsum = 0
+    
+    
+    for (let k = 0; k < arr.length; k++) {
+    
+      let rowWidth = arr[k].reduce((sum, num) => {
         let img = json.find((v) => v.name == num)
         return sum + img["width"] / img["height"]
       }, 0)
      
-  
-
       let height = width / rowWidth
+      heightsum += height
       let numD = {}
       let rate = 0
-      let img
-      for (let s = 0; s < row.length; s++) {
+      let img;
+
+      for (let s = 0; s < arr[k].length; s++) {
 
         numD = {}
-        numD["name"] = [row[s]]
+        numD["name"] = [arr[k][s]]
         numD["height"] = height
 
         rate = 0
 
         for (let ss = 0; ss < s; ss++) {
-          img = json.find((v) => v.name == row[ss])
+          img = json.find((v) => v.name == arr[k][ss])
           rate += (img["width"] / img["height"]) / rowWidth
         }
 
         numD["x"] = width * rate
+        numD["y"] = heightsum - height
         dic.push(numD)
 
       }
     }
+   
     return dic
   }
 
-  function make3(json, width) {
-    let list = makeList(9)
-    let arr = makeRow(list, width, 10)
+  function make3(json, width, div) {
+    let list = makeList(30)
+    let arr = makeRow(list, width, div)
     let dic = makeDic(json, arr, width)
     return dic
   }
   // dev.innerHTML = makeRow(makeList(23),width,10)
-
 
   function d3main(json) {
     //設定
@@ -159,28 +163,18 @@
     const gFlame = flame.append("g")
       .attr("transform", `translate(${-width / 2},${0})`)
 
-    let dic = make3(json, width)
-    let y = []
-    let yy = {}
-    yy["rt"] = "ty"
-    y = []
-    yy = {}
-    yy["rt"] = "ty"
-    y.push(yy)
-    dev.innerHTML = y[0]["rt"]
-    let dic1 = [2, 5]
+    let dic = make3(json, width, 5)
+    console.log(dic)
 
-    gFlame.selectAll("g").data(dic1).join("g")
-      .append("circle")
-      .attr("cx", "4")
-      .attr("cy", "6")
-      .attr("r", "40")
-      .attr("fill", "red")
-
-
-
-
-
+    gFlame.selectAll("g").data(dic).join("g")
+    .attr("transform",(d,i)=>{
+      return`translate(${d.x},${d.y})`
+    })
+      .append("image")
+      .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
+      .attr("height", (d, i) => {
+        return d.height-5
+      })
 
     //描画
     // const g = flame.selectAll("g").data(json).join("g")
