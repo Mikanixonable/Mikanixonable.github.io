@@ -109,7 +109,7 @@
         imgDic["name"] = image["name"]
         imgDic["title"] = image["title"]
         imgDic["tag"] = image["tag"]
-        imgWidth = image["width"] / image["height"] * height
+        imgWidth = (image["width"] / image["height"]) * imgHeight
         imgDic["width"] = imgWidth
         imgDic["height"] = imgHeight
 
@@ -120,8 +120,8 @@
           rate += (img["width"] / img["height"]) / normalWidth
         }
 
-        imgDic["x"] = (width * rate) + imgWidth / 2
-        imgDic["y"] = (heightsum - imgHeight) + imgHeight / 2
+        imgDic["x"] = (width * rate)
+        imgDic["y"] = (heightsum - imgHeight)
         dic.push(imgDic)
 
       }
@@ -130,8 +130,8 @@
     return dic
   }
 
-  function make3(json, width, div) {
-    let list = makeList(30)
+  function make3(json, width, div, num) {
+    let list = makeList(num)
     let arr = makeRow(list, width, div)
     let dic = makeDic(json, arr, width)
     return dic
@@ -161,27 +161,44 @@
       .attr("height", n / 10 * r * 2)
       .attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
     const flame = svg.append("g")
-      .attr("transform", `translate(${maxWidth / 2},${2 * r})`)
+      .attr("transform", `translate(${maxWidth / 2},${0})`)
+
 
     const gFlame = flame.append("g")
       .attr("transform", `translate(${-width / 2},${0})`)
 
-    let dic = make3(json, width, 5)
-
+    //描画
+    let dic = make3(json, width, 7, 300)
     const g = gFlame.selectAll("g").data(dic).join("g")
       .attr("transform", (d, i) => {
         return `translate(${d.x},${d.y}) scale(${1})`
       })
-    const img = g.append("g").attr("transform", (d, i) => {
-      return `translate(${-d.width / 2},${-d.height / 2}) scale(${1})`
-    })
-      .append("g").append("image")
+    g.append("image")
       .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
       .attr("height", (d, i) => {
         return d.height
       })
 
+    //animation
+    g.on('click', function (d, i) {
+      //表示を最前面に
+      let d3g = d3.select(this);
+      svgz_element(d3g.node()).toTop();
 
+      //画面中央に移動
+      d3.select(this).transition().duration(150)
+        .attr("transform", (di, ii) => {
+          let x = width / 2 - di.width / 2
+          let y = di.y
+          return `translate(${x},${y}) scale(${1})`
+
+          d3.select(this).select("image").transition().duration(150)
+            .attr("height", 300)
+
+
+
+        })
+    })
 
     // g.on('mouseover', function (d, i) {
     //   d3.select(this).transition().duration(150)
@@ -205,20 +222,7 @@
     //   })
     // })
 
-    g.on('click', function (d, i) {
-      let d3g = d3.select(this);
-      svgz_element(d3g.node()).toTop();//最前面に移動
 
-      // d3.select(this).transition().duration(150)
-      //   .select("image").attr("height", (d_i, i_i) => {
-      //     return d_i.height
-      //   })
-      d3.select(this).transition().duration(150)
-        .attr("transform", (d_i, i_i) => {
-          return `translate(${width/2},${0}) scale(${1})`
-
-        })
-    })
 
     //   d3.select(this).attr("transform", (d, i) => {
     //     return `translate(${0},${0}) scale(${1})`
