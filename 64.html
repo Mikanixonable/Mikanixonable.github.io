@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="js/style.css">
 <style>
   body {
-    background-color: #1c1f1e;
+    background-color: var(--c1);
     color: var(--c2);
     display: flex;
     /* justify-content: center; */
@@ -15,7 +15,7 @@
     align-items: center;
     padding: 0em;
     font-size: 1em;
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   h1 {
@@ -28,40 +28,41 @@
 </style>
 
 <body>
-  <div id="i"></div>
+
   <h1>illust index d3js</h1>
   <div id="dev"></div>
   <div id="chart"></div>
 </body>
+
 <script src="js/d3v7.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="js/jquery.js"></script> -->
 <script type="text/javascript" src="js/svg-z-order.js"></script>
 <script>
   //サイトマップに読み込むページのバックナンバーの上限
-  const n = 800
+  function main(json) {
+    dic = make3(json, pageWidth, 7, 500)
+    yList = dic.map(function (p) {
+      return p.y;
+    });
+    let yMax = Math.max.apply(null,yList)
+    let yMax2 = dic.find((p)=>p.y == yMax).height
+    pageHeight = yMax + yMax2
 
-  //前後ページへのリンク
-  let dev = document.getElementById("dev")
-  let i = document.getElementById("i")
-  let str = window.location.href.split('/').pop();
-  let num0 = parseInt(str.split(".")[0], 10)
-  let num1 = parseInt(str.split(".")[0], 10) - 1
-  let num2 = parseInt(str.split(".")[0], 10) + 1
-  i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
-    + `<a href=\"index.html\">|${num0}|</a>` + " "
-    + `<a href=\"${num2}\">${num2}></a>`
 
-  let maxWidth = self.innerWidth * 0.95
-  let width = maxWidth * 0.9
-  let height = self.innerHeight * 0.6
-
-  function sort1(d, r) {
-    let d2 = d
-    if (d == "index") { d2 = 0 }
-    let dx = -width / 2 + r + 2 * r * (d2[d2.length - 1])
-    // if(d2<0){dx =dx*-1-18*r}
-    return [dx,
-      Math.floor(d2 / 10) * 2 * r + 150]
   }
+  let n = 800
+  let margin = 50
+  let dev = document.getElementById("dev")
+  let maxWidth = window.innerWidth
+  let pageWidth = maxWidth - margin
+  let viewHeight = self.innerHeight * 0.6
+
+  let dic
+  let yList
+  let pageHeight
+
+
 
   //テーマに基づいて作品番号の配列をつくる
   function makeList(num) {
@@ -138,38 +139,26 @@
   }
   // dev.innerHTML = makeRow(makeList(23),width,10)
 
-  function d3main(json) {
+  function d3main(json, dic) {
     //設定
-    const r = width / 10 / 2
-    // const cTimeScl = d3.scaleLinear()
-    //   .domain([Math.min(...json.map((p) => p.ctime)), Math.max(...json.map((p) => p.ctime))])
-    //   .range([0, 1]);
-
-    // const mTimeScl = d3.scaleLinear()
-    //   .domain([Math.min(...json.map((p) => p.mtime)), Math.max(...json.map((p) => p.mtime))])
-    //   .range([0, 1]);
-    // var c1 = d3.scaleSequential().domain([-0.7, 2.8])
-    //   .interpolator(d3.interpolateCubehelixDefault);
-    // var c2 = d3.scaleSequential().domain([0, 2])
-    //   .interpolator(d3.interpolateBlues);
-
+    let r = pageWidth / 10 / 2
 
     //準備　svgタグ作成と座標変換
-    const svg = d3.select("#chart").append("svg")
+    let svg = d3.select("#chart").append("svg")
       .attr("class", "d3svg")
       .attr("width", maxWidth)
-      .attr("height", n / 10 * r * 2)
-      .attr(`viewbox`, `0 0 ${maxWidth} ${height}`)
-    const flame = svg.append("g")
+      .attr("height", pageHeight)
+      .attr(`viewbox`, `0 0 ${maxWidth} ${pageHeight}`)
+    let flame = svg.append("g")
       .attr("transform", `translate(${maxWidth / 2},${0})`)
 
 
-    const gFlame = flame.append("g")
-      .attr("transform", `translate(${-width / 2},${0})`)
+    let gFlame = flame.append("g")
+      .attr("transform", `translate(${-pageWidth / 2},${0})`)
 
     //描画
-    let dic = make3(json, width, 7, 300)
-    const g = gFlame.selectAll("g").data(dic).join("g")
+
+    let g = gFlame.selectAll("g").data(dic).join("g")
       .attr("transform", (d, i) => {
         return `translate(${d.x},${d.y}) scale(${1})`
       })
@@ -181,116 +170,87 @@
 
     //animation
     g.on('click', function (d, i) {
+
+      //add rect
+      let rect = gFlame.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", pageWidth)
+        .attr("height", pageHeight)
+        .attr("fill", "var(--c1)")
+        .attr("opacity", 0.5)
+      //add rect anim
+      rect.on('click', function (d, i) {
+        gFlame.selectAll("g")
+          .attr("transform", (d, i) => {
+            return `translate(${d.x},${d.y}) scale(${1})`
+          })
+        gFlame.selectAll("circle").remove()
+        rect.remove()
+        gFlame.selectAll(".preview").remove()
+      })
+
+      //円を追加
+      d3.select(this)
+        .append("circle")
+        .attr("cx", (d, i) => {
+          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+          return viewHeight * d.width / (r * 2)
+        })
+        .attr("cy", (d, i) => {
+          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+          return viewHeight * d.height / (r * 2)
+        })
+        .attr("r", (d, i) => {
+          let r = viewHeight / 2
+          return r
+        })
+        .attr("opacity", "0.7")
+
+      //フルサイズ画像の表示
+      d3.select(this).append("image").attr("class", "preview")
+        .attr("href", (d, i) => `illusts/${d.name}.png`)
+        .attr("height", (d, i) => {
+          return d.height
+        })
+        .attr("height", (d, i) => {
+          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+          let h = viewHeight * d.height / r
+          return `${h}`
+        })
+
       //表示を最前面に
-      let d3g = d3.select(this);
+      let d3g = d3.select(this)
       svgz_element(d3g.node()).toTop();
 
-      //画面中央に移動
+      //gを画面中央に移動
       d3.select(this).transition().duration(150)
         .attr("transform", (di, ii) => {
-          let r = Math.sqrt(di.width**2 + di.height**2)
-          let x = width / 2 - height*di.width/(r*2)
-          let y = window.scrollY - height*di.height/(r*2)
+          let r = Math.sqrt(di.width ** 2 + di.height ** 2)
+          let x = pageWidth / 2 - viewHeight * di.width / (r * 2)
+          let y = window.scrollY - viewHeight * di.height / (r * 2) + viewHeight / 2
           return `translate(${x},${y}) scale(${1})`
         })
-        d3.select(this).selectAll("image").transition().duration(150)
-            .attr("height", (d,i)=>{
-              let r = Math.sqrt(d.width**2 + d.height**2)
-              let h = height*d.height/r
-              return `${h}`
-            })
+      //画像サイズ変更
+      // d3.select(this).select("image").transition().duration(150)
+      //   .attr("height", (d, i) => {
+      //     let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+      //     let h = height * d.height / r
+      //     return `${h}`
+      //   })
+
     })
-
-    // g.on('mouseover', function (d, i) {
-    //   d3.select(this).transition().duration(150)
-    //     .select("image").attr("height", (d_i, i_i) => {
-    //       return d_i.height - d_i.height*0.02
-    //     })
-    //   d3.select(this).transition().duration(150)
-    //   .attr("transform", (d_i, i_i) => {
-    //     return `translate(${d_i.x + (d_i.width/d_i.height)*2},${d_i.y + d_i.height*0.01}) scale(${1})`
-    //   })
-    // })
-
-    // g.on('mouseout', function (d, i) {
-    //   d3.select(this).transition().duration(150)
-    //     .select("image").attr("height", (d_i, i_i) => {
-    //       return d_i.height
-    //     })
-    //   d3.select(this).transition().duration(150)
-    //   .attr("transform", (d_i, i_i) => {
-    //     return `translate(${d_i.x},${d_i.y }) scale(${1})`
-    //   })
-    // })
-
-
-
-    //   d3.select(this).attr("transform", (d, i) => {
-    //     return `translate(${0},${0}) scale(${1})`
-    //   })
-    // })
-
-    //描画
-    // const g = flame.selectAll("g").data(json).join("g")
-    //   .attr("transform", (d, i) => {
-    //     let x = sort1(d.name, r)[0]
-    //     let y = sort1(d.name, r)[1]
-    //     return `translate(${x},${y})`
-    //   })//locale
-    // // .append("a")
-    // // .attr("href", (d, i) => d.name + ".html")
-
-    // g.append("circle").attr("r", (d, i) => r)
-
-    // const img = g.append("g").attr("transform", (d, i) => {
-    //   let rate = d.height / d.width
-    //   let x = -Math.sqrt(r ** 2 / (1 + rate ** 2))
-    //   let y = x * rate
-    //   return `translate(${x},${y})`
-    // }).append("image")
-    //   .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
-    //   .attr("height", (d, i) => {
-    //     let rate = d.height / d.width
-    //     let x = -Math.sqrt(r ** 2 / (1 + rate ** 2))
-    //     let y = x * rate
-    //     return -2 * y
-    //   })
-
-    // //labels
-    // const num = g.append("g").attr("transform", `translate(0,-30)`)
-    //   .append("text")
-    //   .text((d, i) => d.name)
-    //   .attr("style", (d, i) => `font-size: ${2}em`)
-    //   .attr("text-anchor", "middle")
-    //   .attr("alignment-baseline", "central")
-    //   .attr("fill", "var(--c2)")
-    // const title = g.append("g").attr("transform", `translate(0,-10)`)
-    //   .append("foreignObject")
-    //   .attr("x", -r * 0.7)
-    //   .attr("y", "0")
-    //   .attr("width", r * 2 * 0.7)
-    //   .attr("height", r)
-    //   .attr("class", "str")
-    //   .attr("font-size", (d, i) => `${((0.2 * r / d.title.length) ** 0.1) * 0.8}em`)
-    //   .attr("style", "text-align:center")
-    //   .html((d, i) => d.title)
-
-
-
-
-
-
-
   }
 
   //main
   fetch("json/illusts.json")
     .then(response => { return response.json(); })
     .then(json => {
-      d3main(json)
+
+      main(json)
+      d3main(json, dic)
+
     })
-
 </script>
-
 
 </html>
