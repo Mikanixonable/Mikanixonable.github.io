@@ -15,7 +15,7 @@
   position: relative;
   align-items: flex-start;
   background-size: cover;
-  background-image: url('https://mikanixonable.github.io/500.png');
+  background-image: url('illusts/500.png');
   background-repeat: repeat;
   background-position: left;
 }
@@ -598,7 +598,7 @@
   border-radius: 30px;
   flex-direction: column;
   background-size: cover;
-  background-image: url('https://mikanixonable.github.io/456.png');
+  background-image: url('illusts/456.png');
 }
 .index3-text27 {
   color: var(--dl-color-primary-text);
@@ -636,7 +636,7 @@
   border-radius: 30px;
   flex-direction: column;
   background-size: cover;
-  background-image: url('https://mikanixonable.github.io/242.png');
+  background-image: url('illusts/242.png');
 }
 .index3-text29 {
   color: var(--dl-color-primary-text);
@@ -994,7 +994,7 @@
   .index3-head-container {
     width: 100%;
     height: 250px;
-    background-image: url('https://mikanixonable.github.io/500.png');
+    background-image: url('illusts/500.png');
   }
   .index3-title-con {
     align-self: center;
@@ -1048,7 +1048,7 @@
   }
   .index3-head-container {
     width: 100%;
-    background-image: url('https://mikanixonable.github.io/500.png');
+    background-image: url('illusts/500.png');
   }
   .index3-title {
     top: 100px;
@@ -1215,7 +1215,7 @@
   .index3-head-container {
     width: 100%;
     height: 250px;
-    background-image: url('https://mikanixonable.github.io/500.png');
+    background-image: url('illusts/500.png');
   }
   .index3-title-con {
     flex-wrap: wrap;
