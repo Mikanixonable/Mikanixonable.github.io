@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="js/style.css">
 <style>
   body {
-    background-color: #1c1f1e;
+    background-color: var(--c1);
     color: var(--c2);
     display: flex;
     /* justify-content: center; */
@@ -38,26 +38,18 @@
 </style>
 
 <body id="body">
-  <div id="i"></div>
+
   <h1>Site Map</h1>
   <div id="dev"></div>
   <div id="chart"></div>
 </body>
 <script src="js/d3v7.js"></script>
+<script src="js/main.js"></script>
 <script>
   //サイトマップに読み込むページのバックナンバーの上限
   const n = 800
 
-  //前後ページへのリンク
-  let dev = document.getElementById("dev")
-  let i = document.getElementById("i")
-  let str = window.location.href.split('/').pop();
-  let num0 = parseInt(str.split(".")[0], 10)
-  let num1 = parseInt(str.split(".")[0], 10) - 1
-  let num2 = parseInt(str.split(".")[0], 10) + 1
-  i.innerHTML = `<a href=\"${num1}\"><${num1}</a>` + " "
-    + `<a href=\"index.html\">|${num0}|</a>` + " "
-    + `<a href=\"${num2}\">${num2}></a>`
+
 
   let maxWidth = document.documentElement.clientWidth * 0.95
   let width = maxWidth * 0.9

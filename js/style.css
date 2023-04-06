@@ -1,6 +1,6 @@
 :root {
-    --c1: #464a4e;
-    --c2: #ececec;
+    --c1: #363639;
+    --c2: #f9f9f9;
     --c3: #3789c3;
     --c4: #a24e58;
     --c5: #878784;
@@ -8,5 +8,17 @@
 
   }
   a{ 
-    color: rgb(132, 212, 255);
+    color: #c5dbff;
+  }
+
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    /*スクロールバー非表示（IE・Edge）*/
+    -ms-overflow-style: none;
+ 
+    /*スクロールバー非表示（Firefox）*/
+    scrollbar-width: none;
   }
