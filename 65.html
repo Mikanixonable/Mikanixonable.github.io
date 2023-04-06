@@ -1,8 +1,8 @@
 <html>
 
 <head>
-  <title>illust index d3js</title>
-  <meta content="">
+  <title>イラストアルバム</title>
+  <meta content="" genre="illust">
 </head>
 <link rel="stylesheet" href="js/style.css">
 <style>
@@ -26,49 +26,55 @@
     color: var(--c2)
   }
 
+  /* div{
+    overflow: scroll;
+  } */
 </style>
 
 <body>
-<!-- 
-  <h1>illust index d3js</h1>
-  <div id="dev"></div> -->
+
+  <h1>illust archive</h1>
+  <div id="dev"></div>
   <div id="chart"></div>
 </body>
 
 <script src="js/d3v7.js"></script>
-<!-- <script src="js/main.js"></script> -->
+<script src="js/main.js"></script>
 <!-- <script src="js/jquery.js"></script> -->
 <script type="text/javascript" src="js/svg-z-order.js"></script>
 <script>
-  //サイトマップに読み込むページのバックナンバーの上限
-  function main(json) {
-    dic = make3(json, mainWidth, 7, 500)
-    yList = dic.map(function (p) {
-      return p.y;
-    });
-    let yMax = Math.max.apply(null, yList)
-    let yMax2 = dic.find((p) => p.y == yMax).height
-    pageHeight = yMax + yMax2
-
-
-  }
-  let n = 800
+  const n = 530
   let margin = 50
   let dev = document.getElementById("dev")
   let pageWidth = window.innerWidth
   let mainWidth = pageWidth - margin
   let viewHeight = window.innerHeight
+  let viewWidth = pageWidth
+
 
   let dic
-  let yList
+
   let pageHeight
+  let box
 
 
+  function main(json) {
+    dic = make3(json, mainWidth, 8, n)
+    let yList = dic.map(function (p) {
+      return p.y;
+    });
+    let bottomRowY = Math.max.apply(null, yList)
+    let bottomY = dic.find((p) => p.y == bottomRowY).height
+    pageHeight = bottomRowY + bottomY
+    box = Math.min(viewWidth, viewHeight)
+  }
 
   //テーマに基づいて作品番号の配列をつくる
   function makeList(num) {
-    list = [...Array(num)].map((_, i) => i)
-    return list
+    let list = [...Array(num)].map((_, i) => String(i))
+    let list2 = list.reverse()
+
+    return list2
   }
 
   //作品番号の配列を列ごとにグループ化した配列を作る
@@ -76,8 +82,8 @@
     let k = 0
     let arr = []
     let row = []
-    for (const num in list) {
-      row.push(String(num))
+    for (let i = 0; i < list.length; i++) {
+      row.push(list[i])
       k += 1
       if (k > thres - 1) {
         arr.push(row)
@@ -143,11 +149,10 @@
   function d3main(json, dic) {
 
     //準備　svgタグ作成と座標変換
-    let svg = d3.select("#chart").append("svg")
+    let svg = d3.select("#chart").append("svg").attr("id", "svgE")
       .attr("class", "d3svg")
       .attr("width", pageWidth)
       .attr("height", pageHeight)
-      .attr(`viewbox`, `0 0 ${pageWidth} ${pageHeight}`)
     let flame = svg.append("g")
       .attr("transform", `translate(${pageWidth / 2},${0})`)
 
@@ -156,92 +161,126 @@
       .attr("transform", `translate(${-mainWidth / 2},${0})`)
 
     //描画
-
     let g = gFlame.selectAll("g").data(dic).join("g")
       .attr("transform", (d, i) => {
         return `translate(${d.x},${d.y}) scale(${1})`
       })
     const img = g.append("image").attr("class", "image")
-      .attr("href", (d, i) => `illusts/s2/${d.name}.png`)
+      .attr("href", (d, i) => `illusts/s/${d.name}.png`)
       .attr("height", (d, i) => {
         return d.height
       })
 
     //animation
-    g.on('click', function (d, i) {
+    let albumMode = true //when preview is open=>false
+    let gAnim = g.on('click', function (d, i) {
+      if (albumMode) {
 
-      //add rect
-      let rect = gFlame.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", mainWidth)
-        .attr("height", pageHeight)
-        .attr("fill", "var(--c7)")
-        .attr("opacity", 0.9)
+        //add background rect
+        let rect = gFlame.append("rect")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", mainWidth)
+          .attr("height", pageHeight)
+          .attr("fill", "var(--c7)")
+          .attr("opacity", 0.9)
+        //選択解除時
+        rect.on('click', function (d, i) {
+          gFlame.selectAll("g")
+            .attr("transform", (d, i) => {
+              return `translate(${d.x},${d.y}) scale(${1})`
+            })
+          // gFlame.selectAll("circle").remove()
+          rect.remove()
+          preview.remove()
+          title.remove()
+          titleRect.remove()
+          gFlame.selectAll(".image")
+            .attr("height", (d, i) => {
+              return d.height
+            })
+          albumMode = true
+        })
 
-      //選択解除時
-      rect.on('click', function (d, i) {
-        gFlame.selectAll("g")
-          .attr("transform", (d, i) => {
-            return `translate(${d.x},${d.y}) scale(${1})`
+
+
+        //説明用背景
+        const titleRect = d3.select(this).append("rect")
+          .attr("x", d.width / d.height * box * 0.7 / 2)
+          .attr("y", 0)
+          .attr("width", (d, i) => {
+            let x = d.width / d.height * box * 0.7
+            if (d.width > d.height) {
+              x = box * 0.7
+            }
+            return `${x}`
           })
-        gFlame.selectAll("circle").remove()
-        rect.remove()
-        gFlame.selectAll(".preview").remove()
-        gFlame.selectAll(".image")
+          .attr("height", box * 0.7)
+          .attr("fill", "#222")
+          .attr("opacity", 1)
+
+        //絵の説明
+        const title = d3.select(this)
+          .append("foreignObject")
+          .attr("x", (d, i) => {
+            let x = d.width / d.height * box * 0.7
+            if (d.width > d.height) {
+              x = box * 0.7
+            }
+            return `${x}`
+          })
+          .attr("y", "0")
+          .attr("width", (d, i) => {
+            let x = mainWidth / 2 - d.width / d.height * box * 0.7 / 2
+            return x
+          })
+          .attr("height", 1000)
+          .attr("font-size", `3em`)
+          .attr("style", "text-align:center")
+          .html((d, i) => {
+            return d.name + "<br>rtyu"
+          })
+        //フルサイズ画像の表示
+        const preview = d3.select(this).append("image")
+          .attr("href", (d, i) => `illusts/${d.name}.png`)
           .attr("height", (d, i) => {
             return d.height
           })
-
-      })
-
-      //円を追加
-      const backCircle = d3.select(this)
-        .append("circle")
-        .attr("cx", (d, i) => {
-          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
-          return viewHeight * d.width / (r * 2)
-        })
-        .attr("cy", (d, i) => {
-          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
-          return viewHeight * d.height / (r * 2)
-        })
-        .attr("r", (d, i) => {
-          let r = viewHeight / 2
-          return r
-        })
-        .attr("opacity", "0.7")
-
-      //フルサイズ画像の表示
-      d3.select(this).append("image").attr("class", "preview")
-        .attr("href", (d, i) => `illusts/${d.name}.png`)
-      .attr("height", (d, i) => {
-        return d.height
-      })
+        //表示を最前面に
+        let d3g = d3.select(this)
+        svgz_element(d3g.node()).toTop();
 
 
-      //表示を最前面に
-      let d3g = d3.select(this)
-      svgz_element(d3g.node()).toTop();
+        //gを画面中央に移動
+        d3.select(this).transition().delay(0).duration(150)
+          .attr("transform", (di, ii) => {
+            // let r = Math.sqrt(di.width ** 2 + di.height ** 2)
+            // let x = mainWidth / 2 - viewHeight * di.width / (r * 2)
+            let x = mainWidth / 2 - 0.5 * (di.width / di.height * box * 0.7)
+            if (di.width > di.height) {
+              x = mainWidth / 2 - box * 0.7 / 2
+            }
+            // let h = viewHeight * di.height / r
+            // let y = window.scrollY + (viewHeight - h) / 2
+            let y = window.pageYOffset
+            return `translate(${x},${y}) scale(${1})`
+          })
+        //画像サイズ変更
+        d3.select(this).selectAll("image").transition().delay(0).duration(150)
+          .attr("height", (d, i) => {
+            let result = box * 0.7//縦長の場合
+            if (d.width > d.height) {
+              result = box * 0.7 * d.height / d.width
+            }
 
-      //gを画面中央に移動
-      d3.select(this).transition().delay(0).duration(150)
-        .attr("transform", (di, ii) => {
-          let r = Math.sqrt(di.width ** 2 + di.height ** 2)
-          let x = mainWidth / 2 - viewHeight * di.width / (r * 2)
-          
-          let h = viewHeight * di.height / r
-          let y = window.scrollY+(viewHeight-h)/2 - 7.7
-          return `translate(${x},${y}) scale(${1})`
-        })
-      //画像サイズ変更
-      d3.select(this).selectAll("image").transition().delay(0).duration(150)
-        .attr("height", (d, i) => {
-          let r = Math.sqrt(d.width ** 2 + d.height ** 2)
-          let h = viewHeight * d.height / r
-          return `${h}`
-        })
+            // let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+            // let h = viewHeight * d.height / r
+            return `${result}`
+          })
 
+        albumMode = false
+
+      }
     })
   }
 
