@@ -1,3 +1,4 @@
+#サイトマップ生成用のページ格納辞書meta4.jsonのビルドプログラム
 import json
 import bs4
 import glob
