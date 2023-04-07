@@ -120,6 +120,9 @@
         imgWidth = (image["width"] / image["height"]) * imgHeight
         imgDic["width"] = imgWidth
         imgDic["height"] = imgHeight
+        imgDic["widthR"] = image["width"]
+        imgDic["heightR"] = image["height"]
+
 
         rate = 0
         let img;
@@ -204,7 +207,7 @@
 
 
 
-        //説明用背景
+        //説明欄背景
         const titleRect = d3.select(this).append("rect")
           .attr("x", d.width / d.height * box * 0.7 / 2)
           .attr("y", 0)
@@ -213,7 +216,7 @@
             if (d.width > d.height) {
               x = box * 0.7
             }
-            return `${x}`
+            return `${box}`
           })
           .attr("height", box * 0.7)
           .attr("fill", "#222")
@@ -238,8 +241,13 @@
           .attr("font-size", `3em`)
           .attr("style", "text-align:center")
           .html((d, i) => {
-            return d.name + "<br>rtyu"
+            return d.name
+              + "<br> width: " + d.widthR + "px height: " + d.heightR + "px"
+              + "<br>" + `<a href="illusts/${d.name}.png">original image</a>`
+              + "<br>" + `<a href="https://mikanixonable.github.io/5.html?n=${d.name}">page</a>`
           })
+
+
         //フルサイズ画像の表示
         const preview = d3.select(this).append("image")
           .attr("href", (d, i) => `illusts/${d.name}.png`)
