@@ -78,7 +78,7 @@
   numInput.addEventListener("input", () => {
     q = numInput.value
     if (q == "") {
-      button()
+      
     } else {
       window.history.replaceState(null, null, '?n=' + q);
       main()
@@ -96,7 +96,7 @@
   let meta
   let q
   let k
-  const range = [-205, 531]
+  const range = [-213, 531]
   let height = window.innerHeight
 
   function main() {
@@ -128,6 +128,7 @@
     let imgPath = "illusts/" + n + ".png";
     imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height * 0.7}>`
     p = json.find((p) => p.name == n)
+  
 
     //meta data
     meta = "link: " + "<a href=" + imgPath + ">" + imgPath + "</a>"
@@ -135,9 +136,9 @@
       + "<br>"
     if (p.title) { meta += "title: " + p.title }
     if (p.date) { meta += "date: " + p.date }
-    if (p.tag.length > 0) {
-      for (let k; k < p.tag.length; k++) {
-        meta += "#" + p.tag[k] + " "
+    if (p.tags.length > 0) {
+      for (let k; k < p.tags.length; k++) {
+        meta += "#" + p.tags[k] + " "
       }
     }
     imgMeta.innerHTML = meta
