@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>イラストアルバム</title>
+  <title>illust archive</title>
   <meta content="" genre="illust">
 </head>
 <link rel="stylesheet" href="js/style.css">
@@ -191,6 +191,8 @@
         rect.on('click', function (d, i) {
           gFlame.selectAll("g")
             .attr("transform", (d, i) => {
+              document.title = "illust archive"
+
               return `translate(${d.x},${d.y}) scale(${1})`
             })
           // gFlame.selectAll("circle").remove()
@@ -212,6 +214,15 @@
           .attr("x", d.width / d.height * box * 0.7 / 2)
           .attr("y", 0)
           .attr("width", (d, i) => {
+            document.title = d.name + ".png"
+            window.history.replaceState(null, null, '?n=' + d.name)
+  
+            //           let p = url.searchParams.get("p");
+            // if (!p) {
+            //   p = "x"
+            //   url.searchParams.append('p', p);
+            //   location.href = url
+            // }
             let x = d.width / d.height * box * 0.7
             if (d.width > d.height) {
               x = box * 0.7
@@ -244,7 +255,7 @@
             return d.name
               + "<br> width: " + d.widthR + "px height: " + d.heightR + "px"
               + "<br>" + `<a href="illusts/${d.name}.png">original image</a>`
-              + "<br>" + `<a href="https://mikanixonable.github.io/5.html?n=${d.name}">page</a>`
+              + "<br>" + `<a href="5.html?n=${d.name}">page</a>`
           })
 
 

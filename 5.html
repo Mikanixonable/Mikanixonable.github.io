@@ -9,7 +9,7 @@
 <style>
   body {
     display: flex;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: var(--c1);
     color: #DDD;
     flex-direction: column;
@@ -26,10 +26,9 @@
     border: 0px;
   }
 
-  #imgTitle{
+  #imgTitle {
     font-size: 2em;
   }
-
 </style>
 
 <body>
@@ -43,12 +42,12 @@
 </body>
 
 <script>
-    function button() {
+  function button() {
     let k = Math.floor(Math.random() * (range[1] - range[0]) + range[0]);
     window.history.replaceState(null, null, '?n=' + k);
-    window.location.reload();
+    update()
   }
-  function dice(range){
+  function dice(range) {
     return Math.floor(Math.random() * (-range[0] + range[1] + 1) + range[0])
   }
   let imgTitle = document.getElementById("imgTitle")
@@ -56,25 +55,28 @@
   let imgLink = document.getElementById("imgLink")
 
   let range = [-205, 531]
-  let url = new URL(window.location.href);
-  let n = url.searchParams.get("n");
+
   let height = window.innerHeight
 
-  if (!n) {
-    let works = -range[0] + range[1]
-    n = dice(range)
-    url.searchParams.append('n', n);
-    location.href = url
+
+  function update() {
+    let url = new URL(window.location.href);
+    let n = url.searchParams.get("n");
+    if (!n) {
+      let works = -range[0] + range[1]
+      n = dice(range)
+      url.searchParams.append('n', n);
+      location.href = url
+    }
+    imgTitle.innerText = n
+    document.title = n + ".png"
+    let imgPath = "illusts/" + n + ".png";
+    imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height * 0.7}>`
+    imgLink.innerHTML = "link: " + "<a href=" + imgPath + ">" + imgPath + "</a>"
   }
-
-  imgTitle.innerText = n
-  document.title = n + ".png"
-  let imgPath = "illusts/" + n + ".png";
-  imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height*0.7}>`
-  imgLink.innerHTML = "link: "+"<a href=" + imgPath + ">" + imgPath + "</a>"
+  update()
 
 
-  
   // document.write("<big><big><big><big>" + n + "</big></big></big></big><br>");
   // document.write("<img src=" + imgPath + " height = 80%><br>");
   // document.write("<big><big>link: <a href=" + imgPath + ">" + imgPath + "</a></big></big><br>");
@@ -82,4 +84,5 @@
 
 
 </script>
+
 </html>
