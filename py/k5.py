@@ -11,8 +11,14 @@ def new(illust,illusts):
     png = {
         "name":os.path.splitext(os.path.basename(illust))[0],
         "title":"",
-        "tag":[],
-        "date":""
+        "description":"",
+
+        "date":"",
+        "licence":"",
+        "link":"",
+        "series":[],
+        "tags":[],
+        "colors":[],
     }
     illusts.append(png)
 
