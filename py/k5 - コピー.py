@@ -27,29 +27,24 @@ def update(illust,illusts):
     illust["width"] = img.width
     illust["height"] = img.height
 
-def main():
-    nameList2 = list(map(makeName, glob.glob("./illusts/*.png")))
-    newList = [x for x in nameList2 if x not in nameList]
-    print(newList)
 
-    for illust in nameList2:
-        new(illust,illusts)
 
-    for illust in illusts:
-        update(illust,illusts)
-
-jsonPath = './json/illusts3.json'
-f = codecs.open(jsonPath, "r", "utf-8")
+f = codecs.open('./json/illusts.json', "r", "utf-8")
 illusts = json.load(f)
 nameList = [illust1.get('name') for illust1 in illusts]
 f.close()
 
-main()
+nameList2 = list(map(makeName, glob.glob("./illusts/*.png")))
+newList = [x for x in nameList2 if x not in nameList]
+print(newList)
 
-f = codecs.open(jsonPath, "w", "utf-8")
+for illust in nameList2:
+    new(illust,illusts)
+
+for illust in illusts:
+    update(illust,illusts)
+
+
+f = codecs.open('./json/illusts.json', "w", "utf-8")
 json.dump(illusts, f, indent = 2, ensure_ascii=False)
 f.close()
-
-
-
-

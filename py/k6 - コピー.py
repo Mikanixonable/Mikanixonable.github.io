@@ -20,21 +20,49 @@ import csv
 #         writer.writerow([i, []])
 
 
-#date.csvファイルを扱いやすい辞書オブジェクトに加工するプログラム
-#jsonに代入する前処理
+# CSVファイルのパス
+csv_file_path = './json/tags.csv'
+
+# 書き換える行のインデックスと新しい値を指定
+row_index = 2  # 書き換える行のインデックス (0から始まる)
+new_value = 'new_value'  # 新しい値
+
+# CSVファイルを読み込み、指定された行の値を書き換え
+with open(csv_file_path, 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    rows = [row for row in reader]  # CSVの各行をリストとして取得
+
+    if row_index < len(rows):
+        # 指定された行の値を書き換え
+        rows[row_index][0] = new_value
+
+# CSVファイルを上書き保存
+with open(csv_file_path, 'w', encoding='utf-8', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(rows)
+
+print(f"行 {row_index} の値を書き換えました: {new_value}")
+
+
+
+
+# タブ区切りCSVファイルのパス
 csv_file_path = './json/date.csv'
+
+# 辞書オブジェクトを格納する変数
 dateDic = {}
+
+# CSVファイルを読み込み、辞書オブジェクトを作成
 with open(csv_file_path, 'r', encoding='utf-8') as csvfile:
     reader = csv.reader(csvfile, delimiter='\t')
     for row in reader:
+        # 一列目をキー、二列目を値として辞書に追加
         dateDic[row[0]] = row[1]
 
+# print(my_dict)
+# print(dateDic["1"])
 
-#illustsjsonにタグ追加するプログラム
-import json
 
-
-jsonPath = './json/illusts2.json'
 def update(png):
     img = Image.open(png)
     name = os.path.splitext(os.path.basename(png))[0]
@@ -56,20 +84,12 @@ def update(png):
     }
     dic.append(imgDic)
 
-#illust辞書の作成
+
 dic = []
 pngs = glob.glob("illusts/*.png")
 for png in pngs:
     update(png)
 
-#タグ挿入
-targets = [1,2,3,4,5,7]
-targets = [str(target) for target in targets]
-target_name = "56"  # 書き換える辞書オブジェクトのname要素の値
-for item in dic:
-    if "name" in item and item["name"] in targets:
-        item["tags"].append("yuyu")
-
-f = codecs.open(jsonPath, "w", "utf-8")
+f = codecs.open('./json/illusts.json', "w", "utf-8")
 json.dump(dic, f, indent = 2, ensure_ascii=False)
 f.close()
