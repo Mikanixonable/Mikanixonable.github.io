@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>eridian clock</title>
+    <meta content=>
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+    @font-face {
+        font-family: "eridian";
+        src: url("fonts/eridian.ttf");
+    }
+    body {
+        background-color: var(--c1);
+        color: var(--c2);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        font-size: 3em;
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    }
+    #clock{
+        font-size: 3em;
+        font-family: "eridian";
+    }
+</style>
+
+<body>
+    <!-- <h1>Title</h1> -->
+    <p id="clock"></p>
+</body>
+<script>
+    function showClock1() {
+        let time1 = (Date.now()/2000|0).toString(6).substr(7)
+        document.getElementById("clock").innerHTML = time1;
+    }
+    setInterval('showClock1()', 10);
+</script>
+
+</html>
