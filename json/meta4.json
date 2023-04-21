@@ -272,7 +272,7 @@
   {
     "name": "16",
     "ctime": "1682086304",
-    "mtime": "1682087450",
+    "mtime": "1682089078",
     "cdate": "2023-04-21",
     "mdate": "2023-04-21",
     "title": "eridian clock",
@@ -992,12 +992,12 @@
   {
     "name": "9",
     "ctime": "1681048280",
-    "mtime": "1681050852",
+    "mtime": "1682090788",
     "cdate": "2023-04-09",
-    "mdate": "2023-04-09",
+    "mdate": "2023-04-22",
     "title": "Ehtaplenの文法",
-    "content": "text/html; charset=utf-8",
-    "genre": null
+    "content": "自作言語の文法書",
+    "genre": "conlang"
   },
   {
     "name": "index",
