@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title>illust archive</title>
+  <meta content="" genre="illust">
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+  body {
+    background-color: var(--c7);
+    color: var(--c2);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .str {
+    color: var(--c2)
+  }
+
+  /* div{
+    overflow: scroll;
+  } */
+</style>
+
+<body>
+
+  <h1>d3 geo</h1>
+  <div id="dev"></div>
+  <div id="chart"></div>
+  <div id="content">
+    <canvas width="800" height="400"></canvas>
+  </div>
+</body>
+
+<script src="js/d3v7.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="js/jquery.js"></script> -->
+<script>
+
+let geojson = {}
+
+let context = d3.select('#content canvas')
+  .node()
+  .getContext('2d');
+
+let projection = d3.geoOrthographic()
+  .scale(300);
+
+let geoGenerator = d3.geoPath()
+  .projection(projection)
+  .pointRadius(4)
+  .context(context);
+
+let yaw = 300;
+
+function update() {
+  projection.rotate([yaw, -45])
+
+  context.clearRect(0, 0, 800, 600);
+
+  context.lineWidth = 0.5;
+  context.strokeStyle = '#333';
+
+  context.beginPath();
+  geoGenerator({type: 'FeatureCollection', features: geojson.features})
+  context.stroke();
+
+  // Graticule
+  let graticule = d3.geoGraticule();
+  context.beginPath();
+  context.strokeStyle = '#ccc';
+  geoGenerator(graticule());
+  context.stroke();
+
+  yaw -= 0.2
+}
+
+
+
+// REQUEST DATA
+d3.json('https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json')
+	.then(function(json) {
+  geojson = json;
+  window.setInterval(update, 100);
+})
+ 
+</script>
+
+</html>
