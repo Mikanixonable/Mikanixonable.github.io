@@ -1,0 +1,109 @@
+<html>
+<head>
+  <title>d3v7 earth</title>
+  <meta content="" genre="">
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+
+</style>
+
+<body>
+
+  <div id="map"></div>
+
+</body>
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<script src="js/d3v7.js"></script>
+<script>
+
+  let width = window.innerWidth
+  let height = window.innerHeight
+  const sensitivity = 75
+
+  let projection = d3.geoOrthographic()
+    .scale(250)
+    .center([0, 0])
+    .rotate([0, -30])
+    .translate([width / 2, height / 2])
+
+
+  const initialScale = projection.scale()
+  let path = d3.geoPath().projection(projection)
+
+  //描画
+  let svg = d3.select("#map")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
+  let globe = svg.append("circle")
+    .attr("fill", "#EEE")
+    .attr("stroke", "#000")
+    .attr("stroke-width", "0.2")
+    .attr("cx", width / 2)
+    .attr("cy", height / 2)
+    .attr("r", initialScale)
+
+  svg
+  .call(d3.drag().on('drag', (e) => {
+    const rotate = projection.rotate()
+    const k = sensitivity / projection.scale()
+    projection.rotate([
+      rotate[0] + e.dx * k,
+      rotate[1] - e.dy * k
+    ])
+    path = d3.geoPath().projection(projection)
+    svg.selectAll("path").attr("d", path)
+  }))
+    .call(d3.zoom().on('zoom', (e) => {
+      if (e.transform.k > 0.3) {
+        projection.scale(initialScale * e.transform.k)
+        path = d3.geoPath().projection(projection)
+        svg.selectAll("path").attr("d", path)
+        globe.attr("r", projection.scale())
+      }
+      else {
+        e.transform.k = 0.3
+      }
+    }))
+
+  let map = svg.append("g")
+
+
+  fetch("json/world.json")
+    .then(response => { return response.json(); })
+    .then(data => {
+
+      map.append("g")
+        .attr("class", "countries")
+        .selectAll("path")
+        .data(data.features)
+        .enter().append("path")
+        .attr("class", d => "country_" + d.properties.name.replace(" ", "_"))
+        .attr("d", path)
+        .attr("fill", "white")
+        .style('stroke', 'black')
+        .style('stroke-width', 0.3)
+        .style("opacity", 0.8)
+    })
+
+
+
+
+
+  //Optional rotate
+  d3.timer(function (elapsed) {
+    const rotate = projection.rotate()
+    const k = sensitivity / projection.scale()
+    projection.rotate([
+      rotate[0] - 1 * k,
+      rotate[1]
+    ])
+    path = d3.geoPath().projection(projection)
+    svg.selectAll("path").attr("d", path)
+  }, 200)
+
+</script>
+
+</html>
