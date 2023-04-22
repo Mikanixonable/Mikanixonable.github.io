@@ -1,98 +1,89 @@
 <html>
 
 <head>
-  <title>illust archive</title>
-  <meta content="" genre="illust">
+  <title>d3v7 earth</title>
 </head>
-<link rel="stylesheet" href="js/style.css">
 <style>
   body {
-    background-color: var(--c7);
-    color: var(--c2);
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
-    padding: 0em;
-    font-size: 1em;
-    font-family: 'Times New Roman', Times, serif;
+    background: black;
+    text-align: center;
+    margin-top: 20px;
   }
 
-  h1 {
-    font-size: 4em;
+  #worldmap {
+    margin: 0 auto;
   }
 
-  .str {
-    color: var(--c2)
+  #worldmap svg {
+    background: rgba(50, 167, 224, 0.4);
+    border-radius: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
 
-  /* div{
-    overflow: scroll;
-  } */
+  .land {
+    fill: rgba(188, 188, 188, .94);
+  }
+
+  #globesarecool {
+    color: #fff;
+  }
 </style>
 
-<body>
 
-  <h1>d3 geo</h1>
-  <div id="dev"></div>
-  <div id="chart"></div>
-  <div id="content">
-    <canvas width="800" height="400"></canvas>
-  </div>
+<body>
+  <div id="worldmap"></div>
 </body>
 
+
 <script src="js/d3v7.js"></script>
-<script src="js/main.js"></script>
-<!-- <script src="js/jquery.js"></script> -->
+<script src="js/topojson.js"></script>
 <script>
 
-let geojson = {}
+  let width = 400, height = 400;
 
-let context = d3.select('#content canvas')
-  .node()
-  .getContext('2d');
+  let projection = d3.geoOrthographic()
+    .scale(200)
+    .translate([width / 2, height / 2])
+    .clipAngle(90);
 
-let projection = d3.geoOrthographic()
-  .scale(300);
+  let path = d3.geoPath()
+    .projection(projection);
 
-let geoGenerator = d3.geoPath()
-  .projection(projection)
-  .pointRadius(4)
-  .context(context);
+  let lambda = d3.scaleLinear()
+    .domain([0, width])
+    .range([-180, 180]);
 
-let yaw = 300;
+  let phy = d3.scaleLinear()
+    .domain([0, height])
+    .range([90, -90]);
 
-function update() {
-  projection.rotate([yaw, -45])
-
-  context.clearRect(0, 0, 800, 600);
-
-  context.lineWidth = 0.5;
-  context.strokeStyle = '#333';
-
-  context.beginPath();
-  geoGenerator({type: 'FeatureCollection', features: geojson.features})
-  context.stroke();
-
-  // Graticule
-  let graticule = d3.geoGraticule();
-  context.beginPath();
-  context.strokeStyle = '#ccc';
-  geoGenerator(graticule());
-  context.stroke();
-
-  yaw -= 0.2
-}
+  //描画
+  let svg = d3.select("#worldmap").append("svg")
+    .attr("width", width)
+    .attr("height", height);
 
 
+  fetch("json/c.json")
+    .then(response => { return response.json(); })
+    .then(json => {
 
-// REQUEST DATA
-d3.json('https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json')
-	.then(function(json) {
-  geojson = json;
-  window.setInterval(update, 100);
-})
- 
+      svg.append("path")
+        .datum(topojson.feature(json, json.objects.land))
+        .attr("class", "land")
+        .attr("d", path);
+      let scrollSpeed = 50
+      let current = 0
+
+      function bgscroll() {
+        current += 1;
+        projection.rotate([lambda(current), 0]);
+        svg.selectAll("path").attr("d", path);
+      }
+
+      setInterval(bgscroll, scrollSpeed);
+    })
+
+
 </script>
 
 </html>
