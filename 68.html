@@ -1,8 +1,7 @@
 <html>
-
 <head>
   <title>d3v7 earth</title>
-  <meta content="">
+  <meta content="" genre="">
 </head>
 <link rel="stylesheet" href="js/style.css">
 <style>
@@ -20,7 +19,8 @@
 
   let width = window.innerWidth
   let height = window.innerHeight
-  const sensitivity = 75
+  const speed = 0
+  const dragSens = 100
 
   let projection = d3.geoOrthographic()
     .scale(250)
@@ -39,7 +39,7 @@
     .attr("height", height)
 
   let globe = svg.append("circle")
-    .attr("fill", "#EEE")
+    .attr("fill", "#79a")
     .attr("stroke", "#000")
     .attr("stroke-width", "0.2")
     .attr("cx", width / 2)
@@ -49,7 +49,7 @@
   svg
   .call(d3.drag().on('drag', (e) => {
     const rotate = projection.rotate()
-    const k = sensitivity / projection.scale()
+    const k = dragSens / projection.scale()
     projection.rotate([
       rotate[0] + e.dx * k,
       rotate[1] - e.dy * k
@@ -89,21 +89,17 @@
         .style("opacity", 0.8)
     })
 
-
-
-
-
   //Optional rotate
-  d3.timer(function (elapsed) {
-    const rotate = projection.rotate()
-    const k = sensitivity / projection.scale()
-    projection.rotate([
-      rotate[0] - 1 * k,
-      rotate[1]
-    ])
-    path = d3.geoPath().projection(projection)
-    svg.selectAll("path").attr("d", path)
-  }, 200)
+  // d3.timer(function (elapsed) {
+  //   const rotate = projection.rotate()
+  //   const k = speed / projection.scale()
+  //   projection.rotate([
+  //     rotate[0] - 1 * k,
+  //     rotate[1]
+  //   ])
+  //   path = d3.geoPath().projection(projection)
+  //   svg.selectAll("path").attr("d", path)
+  // }, 200)
 
 </script>
 
