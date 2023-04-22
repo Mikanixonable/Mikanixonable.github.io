@@ -38,25 +38,25 @@
     .attr("width", width)
     .attr("height", height)
 
-  let globe = svg.append("circle")
-    .attr("fill", "#79a")
-    .attr("stroke", "#000")
-    .attr("stroke-width", "0.2")
-    .attr("cx", width / 2)
-    .attr("cy", height / 2)
-    .attr("r", initialScale)
+  // let globe = svg.append("circle")
+  //   .attr("fill", "#79a")
+  //   .attr("stroke", "#000")
+  //   .attr("stroke-width", "0.2")
+  //   .attr("cx", width / 2)
+  //   .attr("cy", height / 2)
+  //   .attr("r", initialScale)
 
   svg
-  .call(d3.drag().on('drag', (e) => {
-    const rotate = projection.rotate()
-    const k = dragSens / projection.scale()
-    projection.rotate([
-      rotate[0] + e.dx * k,
-      rotate[1] - e.dy * k
-    ])
-    path = d3.geoPath().projection(projection)
-    svg.selectAll("path").attr("d", path)
-  }))
+  // .call(d3.drag().on('drag', (e) => {
+  //   const rotate = projection.rotate()
+  //   const k = dragSens / projection.scale()
+  //   projection.rotate([
+  //     rotate[0] + e.dx * k,
+  //     rotate[1] - e.dy * k
+  //   ])
+  //   path = d3.geoPath().projection(projection)
+  //   svg.selectAll("path").attr("d", path)
+  // }))
     .call(d3.zoom().on('zoom', (e) => {
       if (e.transform.k > 0.3) {
         projection.scale(initialScale * e.transform.k)
