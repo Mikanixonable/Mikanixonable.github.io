@@ -46,8 +46,7 @@
     .attr("cy", height / 2)
     .attr("r", initialScale)
 
-  svg
-  .call(d3.drag().on('drag', (e) => {
+  svg.call(d3.drag().on('drag', (e) => {
     const rotate = projection.rotate()
     const k = dragSens / projection.scale()
     projection.rotate([
@@ -57,7 +56,7 @@
     path = d3.geoPath().projection(projection)
     svg.selectAll("path").attr("d", path)
   }))
-    .call(d3.zoom().on('zoom', (e) => {
+    svg.call(d3.zoom().on('zoom', (e) => {
       if (e.transform.k > 0.3) {
         projection.scale(initialScale * e.transform.k)
         path = d3.geoPath().projection(projection)
@@ -72,7 +71,7 @@
   let map = svg.append("g")
 
 
-  fetch("json/world.json")
+  fetch("json/world2.json")
     .then(response => { return response.json(); })
     .then(data => {
 
@@ -81,11 +80,11 @@
         .selectAll("path")
         .data(data.features)
         .enter().append("path")
-        .attr("class", d => "country_" + d.properties.name.replace(" ", "_"))
+        // .attr("class", d => "country_" + d.properties.name.replace(" ", "_"))
         .attr("d", path)
-        .attr("fill", "white")
-        .style('stroke', 'black')
-        .style('stroke-width', 0.3)
+        .attr("fill", "#aca")
+        .style('stroke', '#456')
+        .style('stroke-width', 1.2)
         .style("opacity", 0.8)
     })
 
