@@ -140,37 +140,36 @@
       }
 
       var h
-
-        //ズーム時の掴んだ場所の記録
-        , v = 0
-
-        , g = u(m, "zoomstart", "zoom", "zoomend")
-        , m = d3.behavior
-          .zoom()
-          .on("zoomstart", function () {
-            var r = d3.mouse(this)
-              , i = e(h.rotate())
-              , u = n(h, r);
-            //並行ドラッグ
-
-            u && (p = u),
-              M.call(m, "zoom", function () {
-                h.scale(z.k = d3.event.scale);
-                var e = d3.mouse(this)
-                  , s = o(p, n(h, e));
-                h.rotate(z.r = c(i = s ? a(i, s) : a(t(h, r, e), i))),
-                  r = e,
-                  l(g.of(this, arguments))
-              }),
-              s(g.of(this, arguments))
-          }).on("zoomend", function () {
-            M.call(m, "zoom", null),
-              d(g.of(this, arguments))
-          }), M = m.on, z = {
-            r: [0, 0, 0],
-            k: 1
-          }
-      return m.rotateTo = function () {
+      , f
+      , p
+      , v = 0
+      , g = u(m, "zoomstart", "zoom", "zoomend")
+      , m = d3.behavior
+      .zoom()
+      .on("zoomstart", function () {
+        var r = d3.mouse(this)
+          , i = e(h.rotate())
+          , u = n(h, r);
+        u && (p = u),
+          M.call(m, "zoom", function () {
+            h.scale(z.k = d3.event.scale);
+            var e = d3.mouse(this)
+              , s = o(p, n(h, e));
+            h.rotate(z.r = c(i = s ? a(i, s) : a(t(h, r, e), i))),
+              r = e,
+              l(g.of(this, arguments))
+          }),
+          s(g.of(this, arguments))
+      }).on("zoomend", function () {
+        M.call(m, "zoom", null),
+          d(g.of(this, arguments))
+      }), M = m.on, z = {
+        r: [0, 0, 0],
+        k: 1
+      }
+      return m.rotateTo = function (t) {
+        var n = o(i(t), i([-z.r[0], -z.r[1]]));
+        return c(a(e(z.r), n))
       },
         m.projection = function (t) {
           return arguments.length ? (h = t,
@@ -184,7 +183,7 @@
     }
   }(),
 
-
+  
 
     function () {
       function meta(t, n, e) {
@@ -251,22 +250,36 @@
         }),
 
 
+        function a(e, a, u) {
+          let h = earth(i, s).rotate([0, 0])
+          let f = d3.geo.path().projection(h);
 
-        //描画
-        d3.json("json/world-110m.json", function (t, n) {
+          let v = d3.select("#rotations").insert("svg", "*").datum({
+            path: f
+          }).attr("width", i).attr("height", s + 20).call(meta, f)
+
+          var m = d3.behavior.drag().on("drag", function () {
+          })
+        }
+      var o = []
+        , i = 220
+        , s = 220
+
+
+      //描画
+      d3.json("json/world-110m.json", function (t, n) {
+        d3.selectAll("svg")
+          .insert("path", ".foreground")
+          .datum(topojson.feature(n, n.objects.land))
+          .attr("class", "land"),
+
           d3.selectAll("svg")
             .insert("path", ".foreground")
-            .datum(topojson.feature(n, n.objects.land))
-            .attr("class", "land"),
+            .datum(topojson.mesh(n, n.objects.countries))
+            .attr("class", "mesh"),
 
-            //国境線
-            d3.selectAll("svg")
-              .insert("path", ".foreground")
-              .datum(topojson.mesh(n, n.objects.countries))
-              .attr("class", "mesh"),
-
-            r.world()
-        })
+          r.world()
+      })
     }();
 
 </script>
