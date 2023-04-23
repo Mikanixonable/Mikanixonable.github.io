@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <title>d3v7 earth</title>
+</head>
+<style>
+  body {
+    background: black;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #worldmap {
+    margin: 0 auto;
+  }
+
+  #worldmap svg {
+    background: rgba(50, 167, 224, 0.4);
+    border-radius: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .land {
+    fill: rgba(188, 188, 188, .94);
+  }
+
+  #globesarecool {
+    color: #fff;
+  }
+</style>
+
+
+<body>
+  <div id="worldmap"></div>
+</body>
+
+
+<script src="js/d3v7.js"></script>
+<script src="js/topojson.js"></script>
+<script>
+
+  let width = 400, height = 400;
+
+  let projection = d3.geoOrthographic()
+    .scale(200)
+    .translate([width / 2, height / 2])
+    .clipAngle(90);
+
+  let path = d3.geoPath()
+    .projection(projection);
+
+  let lambda = d3.scaleLinear()
+    .domain([0, width])
+    .range([-180, 180]);
+
+  let phy = d3.scaleLinear()
+    .domain([0, height])
+    .range([90, -90]);
+
+  //描画
+  let svg = d3.select("#worldmap").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+  fetch("json/c.json")
+    .then(response => { return response.json(); })
+    .then(json => {
+
+      svg.append("path")
+        .datum(topojson.feature(json, json.objects.land))
+        .attr("class", "land")
+        .attr("d", path);
+      let scrollSpeed = 50
+      let current = 0
+
+      function bgscroll() {
+        current += 1;
+        projection.rotate([lambda(current), 0]);
+        svg.selectAll("path").attr("d", path);
+      }
+
+      setInterval(bgscroll, scrollSpeed);
+    })
+
+
+</script>
+
+</html>
