@@ -4,7 +4,7 @@
 <title>PE</title>
 <meta content="架空惑星の地球儀が自転する インタラクティブ要素なし" genre="3D"/>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
-<script src="https://unpkg.com/three@0.137.4/build/three.min.js"></script>
+<script src="js/three.js"></script>
 </head>
 <body>
 <canvas height="1800" id="canvas" style="width: 900px; height: 900px;" width="1800"></canvas>
@@ -37,7 +37,7 @@
     var geometry = new THREE.SphereGeometry(10, 100, 100);
 
     var loader = new THREE.TextureLoader();
-    var texture = loader.load('https://mikanixonable.github.io/PE.jpg');
+    var texture = loader.load('assets/PE.jpg');
     // マテリアルにテクスチャーを設定
     var material = new THREE.MeshStandardMaterial({
       map: texture
