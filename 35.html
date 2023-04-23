@@ -8,7 +8,7 @@
 <body>
 <canvas height="1800" id="canvas" style="width: 900px; height: 900px;" width="1800"></canvas>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
-<script src="https://unpkg.com/three@0.137.4/build/three.min.js"></script>
+<script src="js/three.js"></script>
 <script src="https://unpkg.com/three@0.137.4/examples/js/controls/OrbitControls.js"></script>
 <script>
 $(function(){
@@ -47,7 +47,7 @@ const controls = new THREE.OrbitControls(camera, document.body);
 	var geometry = new THREE.SphereGeometry(30, 100, 100);
 
   var loader = new THREE.TextureLoader();
-  var texture = loader.load('https://mikanixonable.github.io/PE2.png');
+  var texture = loader.load('assets/PE2.png');
   // マテリアルにテクスチャーを設定
   var material = new THREE.MeshStandardMaterial({
     map: texture
