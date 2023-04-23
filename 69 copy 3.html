@@ -58,7 +58,7 @@
       return e && isFinite(e[0]) && isFinite(e[1]) && coscos(e)
     }
     function cosSin(t) {
-      let n = .5 * t[0] * d
+      var n = .5 * t[0] * d
         , e = .5 * t[1] * d
         , a = .5 * t[2] * d
         , o = Math.sin(n)
@@ -70,7 +70,7 @@
       return [r * i * l + o * c * s, o * i * l - r * c * s, r * c * l + o * i * s, r * i * s - o * c * l]
     }
     function dainyu(t, n) {
-      let e = t[0]
+      var e = t[0]
         , a = t[1]
         , o = t[2]
         , r = t[3]
@@ -189,13 +189,15 @@
         t.append("path")
           .datum(d3.geo.graticule())
           .attr("class", "graticule")
-        
+          .attr("d", n)
+
         //輪郭
         t.append("path").datum({
           type: "Sphere"
         })
-        //経緯線　海
           .attr("class", "foreground")
+          .attr("d", n)
+
       }
       function earth(t, n) {
         return d3.geo.orthographic()

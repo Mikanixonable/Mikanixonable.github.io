@@ -5,31 +5,25 @@
 </head>
 <link rel="stylesheet" href="js/style.css">
 <style>
-
 </style>
 
 <body>
-
   <div id="map"></div>
-
 </body>
-<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+
 <script src="js/d3v7.js"></script>
 <script>
-
   let width = window.innerWidth
   let height = window.innerHeight
   const speed = 0
   const dragSens = 100
-
   let projection = d3.geoOrthographic()
     .scale(250)
     .center([0, 0])
     .rotate([0, -30])
     .translate([width / 2, height / 2])
-
-
   const initialScale = projection.scale()
+
   let path = d3.geoPath().projection(projection)
 
   //描画

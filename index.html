@@ -1,160 +1,203 @@
-<!DOCTYPE html>
-<!--
+<html>
+  <miku>
+  <!--
+   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⢀⠠⡠⠠⡠⡰⣒⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢌⢂⠢⡡⢑⠡⠪⡹⢮⢲⢱⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⡡⢘⠨⡂⢆⠢⡀⡯⣮⡪⢂⠕⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢐⢇⠧⣑⢄⠐⠈⠪⢢⡫⡟⠌⡂⡂⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⡱⡡⢳⠠⠠⠀⡀⠕⢍⠀⠀⢐⠨⢐⢐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠌⢎⡂⠀⠉⣂⡕⠅⠕⠅⢁⠀⠐⡨⢐⢐⠨⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠅⠅⢅⠢⠀⢕⢗⢎⢎⠌⢀⠀⠠⠀⢂⢂⠢⠨⡈⠄⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢡⢑⢐⢅⢐⠡⡃⡂⡑⡌⠄⠂⠂⠀⠐⡐⡡⢁⠢⠐⡀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢨⢪⢢⡣⠧⢑⢼⡐⡅⢎⢾⢜⢶⠅⠀⠀⢱⢐⠡⠨⢐⠀⠄⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⡇⣗⢵⢙⠈⣔⠅⡏⡪⠘⠨⣻⢮⡂⠀⠀⠨⡪⡊⠌⡀⠂⠀⠄⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣜⢮⡺⣜⡀⡢⡳⡅⢌⢆⠁⠀⡯⣗⡇⠀⠀⠀⢹⡪⡀⠄⠂⠀⠀⠄⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠠⡸⡪⢣⢙⠜⡰⡹⢸⢪⠡⠪⡄⠀⣯⣳⢣⠀⠀⠀⠐⡝⡆⡂⢂⠈⢀⠠⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠠⢱⡁⠆⣇⢕⢕⢜⠮⡨⠂⢕⣕⢌⠢⣗⢗⢽⡀⠀⠀⠀⢣⡳⡨⢐⠨⠀⠄⠐⡀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠠⣑⢵⢕⡼⣾⣺⢾⣗⢅⠕⡱⠘⡜⣌⡮⣯⡇⡎⣇⠀⠀⠀⠨⣪⠢⡂⢊⠌⢂⠡⠐⠀⠀
+  ⠀⠀⠀⠀⠀⠠⣑⡾⣝⡆⢟⢼⡺⡯⡯⣳⡐⣄⡧⡯⡗⡫⣷⣳⠱⡽⡀⠀⠀⠀⡣⡣⠊⠄⢌⠐⠌⠌⡂⠀
+  ⠀⠀⠀⠀⡠⠡⡢⡻⡮⡏⡢⢇⢋⠯⠯⡪⢏⠳⡽⠰⢈⢸⣗⣗⢕⢝⣆⠀⠀⠀⢪⢪⠨⠨⠠⠡⠡⠡⠨⡀
+  ⠀⠀⠀⡐⠄⢅⣗⢥⢪⣂⠄⡂⠄⠩⡈⠀⠁⠃⠅⢃⢢⠻⣺⡪⣎⢮⠳⠀⠀⠀⢂⠇⢌⠌⠌⠌⠌⠌⡂⡂
+  ⠀⠀⡐⡐⢡⡳⣕⢧⡣⣯⣻⢺⣪⠢⠂⠀⠀⠘⡽⡽⣕⢧⠀⠂⠂⠁⠀⠀⠀⠀⢐⠅⠅⠌⠌⠌⠌⡂⡂⡂
+  ⠀⢐⢐⢈⢲⢝⢮⡳⣕⣗⣗⢗⡗⢅⠀⠀⠀⠀⢹⣝⢮⣳⡀⠀⠀⠀⠀⠀⠀⠀⡐⠌⢜⠨⡊⠌⡂⡂⠢⠨
+  ⠀⢂⢂⠢⢣⢫⡳⣝⢮⣞⣮⡳⡝⠄⠀⠀⠀⠀⠐⡽⣕⡷⡅⠀⠀⠀⠀⠀⠀⠀⢌⢜⢜⢜⢌⢂⠢⠨⠨⠨
+  ⠈⠄⡂⢌⠪⡪⡪⡮⡳⣗⣗⢯⡇⡅⠀⠀⠀⠀⠀⢸⣗⢯⢯⠀⠀⠀⠀⠀⠀⠨⡐⡼⣕⢕⢕⠔⡡⠡⢁⠡
+  ⠄⠁⡂⠢⡑⢌⢺⡪⣏⡷⣝⢗⡗⡕⠀⠀⠀⠀⠀⠈⡮⣏⢯⡂⠀⠀⠀⠀⠀⡪⢰⢣⡣⡣⡣⡊⠄⠂⠀⠀
+  ⡂⡐⠌⡂⡊⠔⡵⡹⣜⣟⣮⡳⡑⠩⡀⠀⠀⠀⠀⠀⠹⣮⡳⣇⠀⠀⠀⠀⡨⡪⡪⡪⡪⡪⡪⢌⢪⠠⠁⠀
+  ⢂⠔⠡⡂⡪⢨⢪⢪⣺⣟⡮⡇⠀⠀⠂⡀⠀⠀⠀⠀⠀⠳⣯⣻⣆⠀⠀⢀⣗⢝⣜⢮⡪⣪⢪⡪⡂⠇⠁⠀
+  ⠐⡨⢸⢌⢆⢕⢕⣕⡯⣗⡯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣾⢽⣆⠀⠐⡕⢕⢕⢧⡫⡮⡳⡑⠁⠀⠀⠀
+  ⠀⠨⢪⢳⡱⡵⣕⠗⣯⣗⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣽⣺⠄⠀⠨⠈⢇⠧⡳⡹⠈⠀⠀⠀⠀⠀
+  ⠀⠀⠈⠑⢝⢜⢘⠀⡷⣯⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣞⣗⠀⠀⠈⠀⠅⠃⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠁⠂⠁⡯⣗⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢺⣝⠆⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⣯⠳⡅⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡪⢯⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⢮⡫⡪⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢇⢇⢗⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+  ⠀⠀⠀⠀⠀⠀⠀⠀⠹⡎⠗⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢕⢕⠳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
 -->
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8" content="トップページ">
-    <title>月面植物園</title>
-    <link rel="stylesheet" href="js/style.css">
-    <style media="screen">
-      @font-face {
-      font-family: 'mincho';
-        src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
-      }
+</miku>
 
+<head>
+  <title>月面植物園</title>
+  <meta content="にそなのホームページ" genre="">
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+  /* body {
+    background-color: var(--c1);
+    color: var(--c2);
+    display: flex;
 
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  } */
 
-      @font-face {
-      font-family: 'imincho';
-        src: url('fonts/IgyouMincho.ttf');
-      }
-      @font-face {
-      font-family: 'imincho2';
-        src: url('fonts/IgyouMincho2.ttf');
-      }
+  h1 {
+    font-size: 4em;
+  }
 
-      body{
-        background-color: var(--c1);
-        margin: 4em;
-        color: #ffffff;
-        font-size: 1.1em;
-        
-      }
-      article{
-        color: #5f6577;
-        background-color: #e9e6e3
-        
-      }
-      
-     
+  .str {
+    color: var(--c2)
+  }
 
-      p{
-        color: #383d3c;
-      }
-      h1{
-        font-size: 3em;
-        font-family: 'igothic2',"gothic";
-      }
-      .clue{
-        font-family: 'imincho2';
-        background-color: #9179c7;
-        color: #e9e6e3;
-        border-width: 10px;
-        border-color: #e9e6e3;
-      }
-      a{
-        color: #1057f0;
-      }
-      .denkou{
-        background-color: #8a99a7;
-        border:thick ridge silver;width:340;height:20;
-      }
-      .div1{
-        display: flex;
-        flex-direction: row;
-      }
+  svg {
+    background-color: var(--c1);
+  }
+</style>
 
-
-    </style>
-  </head>
 <body id="body">
-<h1 id="h1">月面植物園</h1>
+  <div id="chart"></div>
+</body>
+<script src="js/d3v7.js"></script>
 
-<div class="div1">
+<script>
+  const width = window.innerWidth
+  const height = window.innerHeight
+  let n = 10
+  const unit = width / n
 
-<Table  class="denkou" cellpadding="5" Cellspacing="0" style=""><Tr><Td>
+  const svg = d3.select("#chart").append("svg")
+    .attr("width", width)
+    .attr("height", height*5)
 
-<marquee width="320" scrollamount="2" truespeed>にそなのホームページへようこそ</marquee>
-</Td></Tr></Table>
+  const snsURLs = {
+    "twitter":"https://twitter.com/Mikanixonable",
+    "twitter2":"https://twitter.com/botseikatu",
+    "twitter3":"https://twitter.com/Unicode_pod",
+    "twitter4":"https://twitter.com/Eustralo",
+    "discord": "https://discord.com/users/396122233698910218",
+    "kakuyomu":"https://kakuyomu.jp/users/Eustralopithecus",
+    "mstdn":"https://mstdn.jp/@Mikanixonable",
+    "misskey":"https://misskey.io/@Mikanixonable",
+    "pixiv":"https://www.pixiv.net/users/20149051/illustrations",
+    "soundcloud":"https://soundcloud.com/mikanixonable",
+    "keybase":"https://keybase.io/mikanixonable",
+    "instagram":"https://www.instagram.com/mikanixonable/",
+    "youtube":"https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA",
+    "github":"https://github.com/Mikanixonable",
+    "spotify":"https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2",
+    "niconico":"https://www.nicovideo.jp/user/60514629/video",
+    "vrchat":"https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b",
+    "tiktok":"https://www.tiktok.com/@mikanixonable",
+    "tumblr":"https://mikanixonable.tumblr.com/",
+    "odaibako":"https://odaibako.net/u/Mikanixonable",
 
-<input type="button" value="狂う" onclick="repeater()" class="clue">
-
-</div>
-
-
-<article>
-<h2>Contents</h2>
-<p><a href="1.html">サイトマップ</a></p>
-<p><a href="100.html">旧トップページ</a></p>
-
-<h2 class="h">自己紹介</h2>
-<h3 class="h">名前</h3>
-<p>2016年からTwitter上で@Mikanixonableというユーザーネームで絵や音楽や小説を投稿しています。名前の由来はみかん(果物)+ニクソン(アメリカ大統領)+able(派生語尾)で特に意味はありません。長いので普段はにそなと名乗っています。ホームページを訪問してくれてありがとうございます</p>
-<h3 class="h">趣味</h3>
-<p>人工言語製作、架空地図製作、DTMなど</p>
-
-<h3 class="h">好きなアニメ</h3>
-<p>未来少年コナン、宇宙戦艦ヤマト2199、ご注文はうさぎですか？、プリンセス・プリンシパル、少女歌劇レヴュースタァライト、ぼっち・ざ・ろっくなど</p>
-
-
-<h3 class="h">その他</h3>
-<p>夢は初音ミクになることです</p>
-<p>上にある「狂う」ボタンのフォントは自作フォントの
-  <a href="4.html">異形シリーズ</a>
-  を使用しています。</p>
-
-
-  <img src="https://ghchart.rshah.org/mikanixonable" alt="" style="width:100%;">
-  <a href="https://github.com/Mikanixonable">GitHub</a>
-
-
-<h3 class="h">★おすすめCITY POPプレイリスト★</h3>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3ajuLlCh5RlEY6Tb6YaiI7?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-<h2 class="h">このサイトの歴史</h2>
-<p>
-2018-07-02　サイト名「人造日本人」として開設<br>
-2019-05-19　FC2からGitHubPagesに移設<br>
-2019-05-30　キューマンさんによる改修<br>
-2022-03-18　Teleporthqによる二代目トップページへ<br>
-2023-02-08　html直打ち三代目トップページへ<br>
-2023-02-15　サイト名を「月面植物園」に改名<br>
-</p>
-
-<h2 class="h">相互かもしれないリンク</h2>
-<p><a href="https://www.haxibami.net/">haxibami.net</a></p>
-<p><a href="https://sno2wman.net/">sno2wman.net</a></p>
-<p><a href="https://ideoaves.cf/">ideoaves.cf</a></p>
-<p><a href="https://www.fabon.info/">fabon.info</a></p>
-
-
-
-
-</article>
-  </body>
-  <script type="text/javascript">
-  var notr = 0;
-  var obj1=document.getElementById("body");
-  var obj2=document.getElementById("h1");
-  function repeater(){
-  if(notr===0){
-    notr=1;
-    obj1.style.fontFamily = "imincho2","mincho";
-    obj2.style.fontFamily = "imincho2","mincho";
-  }else{
-    if(notr===1){
-      notr=2;
-      obj1.style.fontFamily = "imincho","mincho";
-      obj2.style.fontFamily = "imincho","mincho";
-    }else{
-      notr=0;
-      obj1.style.fontFamily = "sans-serif";
-      obj2.style.fontFamily = "igothic2";
-
-    }
+    "hatena":"https://mikanixonable.hatenablog.com/",
+    "marshmallow":"https://marshmallow-qa.com/mikanixonable",
+    "twicass":"https://twitcasting.tv/mikanixonable",
+    "artstation":"https://www.artstation.com/mikanixonable",
+    "niconicopic":"https://seiga.nicovideo.jp/user/illust/60514629",
+    "peing":"https://peing.net/ja/mikanixonable",
+    "askfm":"https://ask.fm/Mikanixonable",
+    "bookmeter":"https://bookmeter.com/users/1292458",
   }
 
-  }
-  </script>
+
+
+
+
+function makeTile(sns,x,y,size){
+  svg.append("a").attr("href", snsURLs[sns])
+    .append("image")
+    .attr("x", unit*x)
+    .attr("y", unit*y)
+    .attr("width", unit*size*0.5)
+    // .attr("height", unit*size*0.5)
+    .attr("xlink:href", `icon/${sns}.png`)
+}
+
+function makeLink(url,x,y,size){
+  svg.append("a").attr("href", url)
+    .append("rect")
+    .attr("x", unit*x)
+    .attr("y", unit*y)
+    .attr("width", unit*size)
+    .attr("height", unit*size)
+    .attr("fill", `var(--c3)`)
+}
+
+svg.append("image")
+.attr("x", 0)
+    .attr("y", 0)
+    .attr("width", width)
+    // .attr("height", 100)
+    .attr("xlink:href", `illusts/500.png`)
+
+makeTile("twitter",0,0,2)
+makeTile("twitter2",4,0.5,0.5)
+makeTile("twitter3",3,0,1)
+makeTile("twitter4",4,1,0.03)
+makeTile("kakuyomu",2,1,1.5)
+makeTile("mstdn",1,2,0.5)
+makeTile("discord",5,0,1)
+
+makeTile("spotify",7,0,1)
+makeTile("pixiv",8,0,2)
+makeTile("tumblr",7,2,2)
+makeTile("tiktok",9,2,1)
+makeTile("niconico",9,3,1)
+makeTile("vrchat",6,3,1)
+makeTile("misskey",5,1,2)
+makeTile("github",7,1,1)
+
+makeTile("youtube",0.5,3,1)
+makeTile("keybase",3,2.5,1)
+makeTile("soundcloud",2,3,1)
+makeTile("instagram",1.5,2.5,0.5)
+makeTile("hatena",0,2,1)
+
+svg.append("text")
+.attr("x",unit*0)
+.attr("y",unit*5)
+.attr("font-size","3em")
+.attr("fill","var(--c2)")
+.text("月面植物園")
+svg.append("text")
+.attr("x",unit*0)
+.attr("y",unit*5.5)
+.attr("font-size","1em")
+.attr("fill","var(--c2)")
+.text("にそなのホームページ")
+
+makeLink("34.html",0,7,1)
+
+// svg.append("rect")
+// .attr("x",0)
+// .attr("y",100)
+// .attr("width",400)
+// .attr("height",1000)
+// .attr("fill","var(--c3)")
+
+// svg.append("circle")
+// .attr("cx",10)
+// .attr("cy",10)
+// .attr("r",100)
+// .attr("fill","var(--c3)")
+
+
+</script>
+
+
 </html>
