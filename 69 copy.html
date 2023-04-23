@@ -56,65 +56,10 @@
   }
 </style>
 
-<p class="breadcrumbs"><a href="http://www.jasondavies.com/">Jason Davies</a> → <a href="../">Maps</a>
-
 <div id="map">
-  <h1>Rotate the World</h1>
-</div>
-<p class="caption">Drag to rotate the world. Scroll or pinch to zoom.
 
-<div class="wrapper">
-  <p><a href="http://d3js.org">D3</a>’s geographic projections allow features to be rotated about <a
-      href="http://bl.ocks.org/mbostock/4282586">three axes</a>.
-    The three angles used are called <a href="http://en.wikipedia.org/wiki/Euler_angles">Euler angles</a>, and in D3
-    they specify the following sequence of rotations:
 </div>
 
-<div id="rotations"></div>
-
-<div class="wrapper">
-  <p>This sequence is convenient, since if we approximate the globe as a sphere, the first two angles can be used to
-    specify a central meridian λ<sub>0</sub> and central meridian φ<sub>0</sub> by simple negation:
-    <code>[-λ<sub>0</sub>, -φ<sub>0</sub>]</code>, and the third angle allows <a
-      href="http://www.progonos.com/furuti/MapProj/Normal/ProjObl/projObl.html">oblique projections</a>.
-</div>
-
-<div class="wrapper">
-  <h2>Interactive Rotations</h2>
-  <p>A naïve implementation simply takes the x- and y-coordinates in 2D screen space and uses them directly as the first
-    two Euler angles mentioned above.
-  <p>However, the geographic start point of the gesture often moves at a different speed to the cursor, making it
-    difficult to control.
-    Moreover, since only two angles of rotation are being controlled, it is impossible to interactively specify the
-    third angle using this method.
-</div>
-
-<div id="comparison"></div>
-<p class="caption">Naïve implementation (left) and improved version (right).
-
-<div class="wrapper">
-  <p>An improved implementation ensures the geographic start point remains under the cursor where possible.
-    If the gesture goes outside the projection range, it adjusts the third Euler angle (the oblique projection angle).
-  <p>It also incrementally rotates the world about an axis perpendicular to the incremental direction in spherical
-    coordinates.
-    This allows all three angles of rotation to be adjusted by dragging, and it works for arbitrary map projections,
-    such as Eisenlohr’s projection below.
-</div>
-
-<p class="caption">Drag to rotate Eisenlohr’s projection.
-<div id="eisenlohr"></div>
-
-<div class="wrapper">
-  <h2>Animated Zooming</h2>
-  <p>See <a href="../zoom/">Animated World Zoom</a>.
-
-  <h2>Notes</h2>
-  <p>I used <a href="http://en.wikipedia.org/wiki/Versor">versors</a> (unit quaternions) to accumulate the 3D rotation
-    during a gesture, as they can be easily converted to and from <a
-      href="http://en.wikipedia.org/wiki/Axis%E2%80%93angle_representation">axis-angle representations</a>.
-  <p class="caption">Data: Natural Earth <a
-      href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">1:110m Cultural Vectors</a>
-</div>
 
 <script src="js/d3v3.js"></script>
 <script src="js/d3.geo.projection.min.js"></script>
@@ -209,8 +154,7 @@
             d3.event = r
           }
         }
-      }
-        ,
+      },
         o
     }
     var d = Math.PI / 180
@@ -264,13 +208,11 @@
               k: h.scale()
             },
             m.scale(z.k)) : h
-        }
-        ,
+        },
         m.duration = function (t) {
           return arguments.length ? (f = t,
             m) : f
-        }
-        ,
+        },
         m.event = function (t) {
           t.each(function () {
             var t = d3.select(this)
@@ -308,15 +250,13 @@
               } catch (i) { }
             } else
               this.__chart__ = z,
-                s(n),
-                l(n),
-                d(n)
+                s(n), l(n), d(n)
           })
-        }
-        ,
+        },
         d3.rebind(m, g, "on")
     }
   }(),
+  
     function () {
       function t(t, n, e) {
         var a = n.projection();
@@ -444,9 +384,19 @@
               }
             })
         }(),
-        d3.json("js/world-110m.json", function (t, n) {
-          d3.selectAll("svg").insert("path", ".foreground").datum(topojson.feature(n, n.objects.land)).attr("class", "land"),
-            d3.selectAll("svg").insert("path", ".foreground").datum(topojson.mesh(n, n.objects.countries)).attr("class", "mesh"),
+
+        //描画
+        d3.json("json/world-110m.json", function (t, n) {
+          d3.selectAll("svg")
+            .insert("path", ".foreground")
+            .datum(topojson.feature(n, n.objects.land))
+            .attr("class", "land"),
+
+            d3.selectAll("svg")
+              .insert("path", ".foreground")
+              .datum(topojson.mesh(n, n.objects.countries))
+              .attr("class", "mesh"),
+
             r.world()
         })
     }();
