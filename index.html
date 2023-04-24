@@ -88,7 +88,7 @@
   //svg要素作成
   const svg = d3.select("#chart").append("svg")
     .attr("width", width)
-    .attr("height", height * 5)
+    .attr("height", height)
 
   //汎用リンク作成関数定義
 
@@ -121,7 +121,7 @@
 
   //ヘッダ作成
   {
-    const headerH = unit * 4.5
+    const headerH = height
     //ヘッダ背景
     const header = svg.append("image")
       .attr("x", 0)
@@ -208,13 +208,13 @@
     {
       const titleG = svg.append("g")
         .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
-    
+    //タイトル背景
       titleG.append("rect")
       .attr("x", 0)
       .attr("y", 0)
-      .attr("width", "25em")
+      .attr("width", width)
       .attr("height", unit * 1)
-      .attr("fill", `var(--c1)`)
+      .attr("fill", `var(--c4)`)
 
       titleG
       // .append("g")
@@ -256,7 +256,7 @@
       .attr("y", 0)
       .attr("width", unit * dic2.size)
       .attr("height", unit * dic2.size)
-      .attr("fill", `var(--c3)`)
+      .attr("fill", `var(--c5)`)
     // a.append("circle")
     // .attr("cx",0)
     // .attr("r",100)
@@ -272,14 +272,14 @@
   }
   
   makeLink2({
-    "x": 0,
-    "y": 4.5,
+    "x": 8,
+    "y": 3.5,
     "url": "1.html",
     "size": 2,
     "name": "サイトマップ"
   })
   makeLink2({
-    "x": 6.5,
+    "x": 7,
     "y": 3.5,
     "url": "5.html?n=" + dice,
     "size": 1,
