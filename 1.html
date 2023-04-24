@@ -190,7 +190,8 @@
     })
 
     //reset sort button
-    const reset = flame.append("g").attr("transform", `translate(${-8 * r},${0})`)
+    const reset = flame.append("g")
+    .attr("transform", `translate(${-8 * r},${0})`)
     reset.append("circle")
       .attr("r", r)
       .attr("fill", "var(--c4)")
