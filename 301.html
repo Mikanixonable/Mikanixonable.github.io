@@ -120,7 +120,7 @@
 
 
   //ヘッダ作成
-  {
+  
     const headerH = height
     //ヘッダ背景
     const header = svg.append("image")
@@ -133,7 +133,7 @@
       .attr("preserveAspectRatio", "xMidYMin slice")
 
     //ヘッダ1 SNS
-    {
+    
       //SNSリンク集
       const snsURLs = {
         "twitter": "https://twitter.com/Mikanixonable",
@@ -177,7 +177,7 @@
           .attr("xlink:href", `icon/${sns}.png`)
       }
       //SNSリンク作成
-      {
+      
 
         makeTile("twitter", 0, 0, 2)
         makeTile("twitter2", 4, 0.5, 0.5)
@@ -201,11 +201,10 @@
         makeTile("soundcloud", 2, 3, 1)
         makeTile("instagram", 1.5, 2.5, 0.5)
         makeTile("hatena", 0, 2, 1)
-      }
-    }
-
+      
+    
     //ヘッダ2 タイトル
-    {
+    
       const titleG = svg.append("g")
         .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
     //タイトル背景
@@ -233,8 +232,8 @@
         .attr("font-size", "1em")
         .attr("fill", "var(--c2)")
         .text("にそなのホームページ")
-    }
-  }
+    
+  
   //ヘッダ終わり
 
   function makeLink2(dic) {
