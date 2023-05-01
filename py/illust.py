@@ -9,7 +9,7 @@ import extcolors
 
 # deskPath = "./Mikanixonable.github.io/"
 deskPath = "./"
-jsonPath = deskPath + 'json/illusts5.json'
+jsonPath = deskPath + 'json/illusts.json'
 
 def makeCSV(filename,nums):
     illustRange = (min(int(nums)), max(int(nums)))
@@ -57,12 +57,14 @@ def main():
     tagDic = csv2dic("json/tag.csv")
     for illust in illusts:
         imgPath = deskPath + "illusts/" + illust["num"] + ".png"
-        img = Image.open(imgPath).resize((64,4))
+        img = Image.open(imgPath).resize((64,64))
         n = illust["num"]
 
         colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = 5)
         colorCodes = ['#{:02x}{:02x}{:02x}'.format(*rgb[0]) for rgb in colors]
         colorRates = [rgb[1] for rgb in colors]
+        while len(colorCodes)<5:
+            colorCodes.append(colorCodes[len(colorCodes)-1])
 
         illust["date"] = dateDic[n]
         illust["tags"] = tagDic[n]
