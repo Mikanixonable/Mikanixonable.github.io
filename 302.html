@@ -180,14 +180,11 @@
     makeTile("hatena", 0, 2, 1)
 
 
-    //ヘッダ2 タイトル
-
+    //タイトル
     const titleG = svg.append("g")
       .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
+
     //タイトル背景
-
-
-
     let illust = json.find((v) => v.num == String(dice))
     titleG.append("rect")
       .attr("x", 0)
@@ -196,17 +193,23 @@
       .attr("height", unit * 1)
       .attr("fill", illust["colors"][0])
 
-    titleG
-      // .append("g")
-      // .attr("transform",`translate(${0},${0.5*unit})`)
-      .append("text")
+    titleG.append("text")
       .attr("x", unit * 0)
       .attr("y", "1em")
       .attr("font-size", "3em")
-      .attr("fill", "var(--c2)")
-      // .attr("text-anchor", "middle")
-      // .attr("alignment-baseline", "auto")
+      .attr("fill", ()=>{
+        let bgcolor = illust["colors"][0]
+        let color = "var(--c2)"
+        if(true){
+          color = "#666666"
+
+        }
+      
+
+        
+        return color})
       .text("月面植物園")
+
     titleG.append("text")
       .attr("x", "15em")
       .attr("y", "1em")
@@ -241,9 +244,6 @@
         .attr("width", unit * dic2.size)
         .attr("height", unit * dic2.size)
         .attr("fill", dic2.bgcolor)
-      // a.append("circle")
-      // .attr("cx",0)
-      // .attr("r",100)
       a.append("g")
         .append("text")
         .attr("x", unit * dic2.size / 2)
