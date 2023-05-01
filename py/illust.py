@@ -57,13 +57,14 @@ def main():
     tagDic = csv2dic("json/tag.csv")
     for illust in illusts:
         imgPath = deskPath + "illusts/" + illust["num"] + ".png"
-        img = Image.open(imgPath).resize((64,64))
+        img = Image.open(imgPath).resize((256,256))
         n = illust["num"]
+        limit = 15
 
-        colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = 7)
+        colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = limit)
         colorCodes = ['#{:02x}{:02x}{:02x}'.format(*rgb[0]) for rgb in colors]
         colorRates = [rgb[1] for rgb in colors]
-        while len(colorCodes)<5:
+        while len(colorCodes)<limit:
             colorCodes.append(colorCodes[len(colorCodes)-1])
 
         illust["date"] = dateDic[n]
