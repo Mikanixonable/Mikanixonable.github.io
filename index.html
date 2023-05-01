@@ -82,45 +82,24 @@
   //設定
   const width = window.innerWidth
   const height = window.innerHeight
-  let n = 10
+  let n = 10 //分割数
   const unit = width / n
   const dice = Math.floor(Math.random() * 532 + 1)
-  //svg要素作成
-  const svg = d3.select("#chart").append("svg")
-    .attr("width", width)
-    .attr("height", height)
 
-  //汎用リンク作成関数定義
+  fetch("json/illusts.json")
+    .then(response => { return response.json(); })
+    .then(json => {
 
-  // function makeLink(url, x, y, size, name) {
-  //   let a = svg.append("g")
-  //     .attr("transform", `translate(${unit * x},${unit * y})`)
-  //     .append("a").attr("href", url)
-  //   a.append("rect")
-  //     .attr("x", 0)
-  //     .attr("y", 0)
-  //     .attr("width", unit * size)
-  //     .attr("height", unit * size)
-  //     .attr("fill", `var(--c3)`)
-  //   // a.append("circle")
-  //   // .attr("cx",0)
-  //   // .attr("r",100)
-  //   a.append("g")
-  //     .append("text")
-  //     .attr("x", unit * size / 2)
-  //     .attr("y", unit * size / 2)
-  //     .attr("font-size", "1em")
-  //     .attr("text-anchor", "middle")
-  //     .attr("alignment-baseline", "middle")
-  //     .attr("fill", "var(--c2)")
-  //     .html(name)
-  // }
-  
+      main(json)
+    })
 
+  function main(json) {
+    //svg要素作成
+    const svg = d3.select("#chart").append("svg")
+      .attr("width", width)
+      .attr("height", height)
 
-
-  //ヘッダ作成
-  
+    //ヘッダ作成
     const headerH = height
     //ヘッダ背景
     const header = svg.append("image")
@@ -133,159 +112,166 @@
       .attr("preserveAspectRatio", "xMidYMin slice")
 
     //ヘッダ1 SNS
-    
-      //SNSリンク集
-      const snsURLs = {
-        "twitter": "https://twitter.com/Mikanixonable",
-        "twitter2": "https://twitter.com/botseikatu",
-        "twitter3": "https://twitter.com/Unicode_pod",
-        "twitter4": "https://twitter.com/Eustralo",
-        "discord": "https://discord.com/users/396122233698910218",
-        "kakuyomu": "https://kakuyomu.jp/users/Eustralopithecus",
-        "mstdn": "https://mstdn.jp/@Mikanixonable",
-        "misskey": "https://misskey.io/@Mikanixonable",
-        "pixiv": "https://www.pixiv.net/users/20149051/illustrations",
-        "soundcloud": "https://soundcloud.com/mikanixonable",
-        "keybase": "https://keybase.io/mikanixonable",
-        "instagram": "https://www.instagram.com/mikanixonable/",
-        "youtube": "https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA",
-        "github": "https://github.com/Mikanixonable",
-        "spotify": "https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2",
-        "niconico": "https://www.nicovideo.jp/user/60514629/video",
-        "vrchat": "https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b",
-        "tiktok": "https://www.tiktok.com/@mikanixonable",
-        "tumblr": "https://mikanixonable.tumblr.com/",
-        "odaibako": "https://odaibako.net/u/Mikanixonable",
 
-        "hatena": "https://mikanixonable.hatenablog.com/",
-        "marshmallow": "https://marshmallow-qa.com/mikanixonable",
-        "twicass": "https://twitcasting.tv/mikanixonable",
-        "artstation": "https://www.artstation.com/mikanixonable",
-        "niconicopic": "https://seiga.nicovideo.jp/user/illust/60514629",
-        "peing": "https://peing.net/ja/mikanixonable",
-        "askfm": "https://ask.fm/Mikanixonable",
-        "bookmeter": "https://bookmeter.com/users/1292458",
-      }
-      //SNSリンクタイル作成関数定義
-      function makeTile(sns, x, y, size) {
-        svg.append("a").attr("href", snsURLs[sns])
-          .append("image")
-          .attr("x", unit * x)
-          .attr("y", unit * y)
-          .attr("width", unit * size * 0.5)
-          // .attr("height", unit*size*0.5)
-          .attr("xlink:href", `icon/${sns}.png`)
-      }
-      //SNSリンク作成
-      
+    //SNSリンク集
+    const snsURLs = {
+      "twitter": "https://twitter.com/Mikanixonable",
+      "twitter2": "https://twitter.com/botseikatu",
+      "twitter3": "https://twitter.com/Unicode_pod",
+      "twitter4": "https://twitter.com/Eustralo",
+      "discord": "https://discord.com/users/396122233698910218",
+      "kakuyomu": "https://kakuyomu.jp/users/Eustralopithecus",
+      "mstdn": "https://mstdn.jp/@Mikanixonable",
+      "misskey": "https://misskey.io/@Mikanixonable",
+      "pixiv": "https://www.pixiv.net/users/20149051/illustrations",
+      "soundcloud": "https://soundcloud.com/mikanixonable",
+      "keybase": "https://keybase.io/mikanixonable",
+      "instagram": "https://www.instagram.com/mikanixonable/",
+      "youtube": "https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA",
+      "github": "https://github.com/Mikanixonable",
+      "spotify": "https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2",
+      "niconico": "https://www.nicovideo.jp/user/60514629/video",
+      "vrchat": "https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b",
+      "tiktok": "https://www.tiktok.com/@mikanixonable",
+      "tumblr": "https://mikanixonable.tumblr.com/",
+      "odaibako": "https://odaibako.net/u/Mikanixonable",
 
-        makeTile("twitter", 0, 0, 2)
-        makeTile("twitter2", 4, 0.5, 0.5)
-        makeTile("twitter3", 3, 0, 1)
-        makeTile("twitter4", 4, 1, 0.03)
-        makeTile("kakuyomu", 2, 1, 1.5)
-        makeTile("mstdn", 1, 2, 0.5)
-        makeTile("discord", 5, 0, 1)
+      "hatena": "https://mikanixonable.hatenablog.com/",
+      "marshmallow": "https://marshmallow-qa.com/mikanixonable",
+      "twicass": "https://twitcasting.tv/mikanixonable",
+      "artstation": "https://www.artstation.com/mikanixonable",
+      "niconicopic": "https://seiga.nicovideo.jp/user/illust/60514629",
+      "peing": "https://peing.net/ja/mikanixonable",
+      "askfm": "https://ask.fm/Mikanixonable",
+      "bookmeter": "https://bookmeter.com/users/1292458",
+    }
+    //SNSリンクタイル作成関数定義
+    function makeTile(sns, x, y, size) {
+      svg.append("a").attr("href", snsURLs[sns])
+        .append("image")
+        .attr("x", unit * x)
+        .attr("y", unit * y)
+        .attr("width", unit * size * 0.5)
+        // .attr("height", unit*size*0.5)
+        .attr("xlink:href", `icon/${sns}.png`)
+    }
+    //SNSリンク作成
+    makeTile("twitter", 0, 0, 2)
+    makeTile("twitter2", 4, 0.5, 0.5)
+    makeTile("twitter3", 3, 0, 1)
+    makeTile("twitter4", 4, 1, 0.03)
+    makeTile("kakuyomu", 2, 1, 1.5)
+    makeTile("mstdn", 1, 2, 0.5)
+    makeTile("discord", 5, 0, 1)
 
-        makeTile("spotify", 7, 0, 1)
-        makeTile("pixiv", 8, 0, 2)
-        makeTile("tumblr", 7, 2, 2)
-        makeTile("tiktok", 9, 2, 1)
-        makeTile("niconico", 9, 3, 1)
-        makeTile("vrchat", 6, 3, 1)
-        makeTile("misskey", 5, 1, 2)
-        makeTile("github", 7, 1, 1)
+    makeTile("spotify", 7, 0, 1)
+    makeTile("pixiv", 8, 0, 2)
+    makeTile("tumblr", 7, 2, 2)
+    makeTile("tiktok", 9, 2, 1)
+    makeTile("niconico", 9, 3, 1)
+    makeTile("vrchat", 6, 3, 1)
+    makeTile("misskey", 5, 1, 2)
+    makeTile("github", 7, 1, 1)
 
-        makeTile("youtube", 0.5, 3, 1)
-        makeTile("keybase", 3, 2.5, 1)
-        makeTile("soundcloud", 2, 3, 1)
-        makeTile("instagram", 1.5, 2.5, 0.5)
-        makeTile("hatena", 0, 2, 1)
-      
-    
+    makeTile("youtube", 0.5, 3, 1)
+    makeTile("keybase", 3, 2.5, 1)
+    makeTile("soundcloud", 2, 3, 1)
+    makeTile("instagram", 1.5, 2.5, 0.5)
+    makeTile("hatena", 0, 2, 1)
+
+
     //ヘッダ2 タイトル
-    
-      const titleG = svg.append("g")
-        .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
+
+    const titleG = svg.append("g")
+      .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
     //タイトル背景
-      titleG.append("rect")
+
+
+
+    let illust = json.find((v) => v.num == String(dice))
+    titleG.append("rect")
       .attr("x", 0)
       .attr("y", 0)
       .attr("width", width)
       .attr("height", unit * 1)
-      .attr("fill", `var(--c4)`)
+      .attr("fill", illust["colors"][0])
 
-      titleG
+    titleG
       // .append("g")
       // .attr("transform",`translate(${0},${0.5*unit})`)
       .append("text")
-        .attr("x", unit * 0)
-        .attr("y", "1em")
-        .attr("font-size", "3em")
-        .attr("fill", "var(--c2)")
-        // .attr("text-anchor", "middle")
-        // .attr("alignment-baseline", "auto")
-        .text("月面植物園")
-      titleG.append("text")
-        .attr("x", "15em")
-        .attr("y", "1em")
-        .attr("font-size", "1em")
-        .attr("fill", "var(--c2)")
-        .text("にそなのホームページ")
-    
-  
-  //ヘッダ終わり
-
-  function makeLink2(dic) {
-    let dic2 = {
-      "name": "name",
-      "url": "1.html",
-      "x": 0,
-      "y": 0,
-    }
-    for (let key in dic) {
-      dic2[key] = dic[key];
-    }
-    let a = svg.append("g")
-      .attr("transform",
-        `translate(${unit * dic2.x},${unit * dic2.y})`)
-      .append("a").attr("href", dic2.url)
-    a.append("rect")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", unit * dic2.size)
-      .attr("height", unit * dic2.size)
-      .attr("fill", `var(--c5)`)
-    // a.append("circle")
-    // .attr("cx",0)
-    // .attr("r",100)
-    a.append("g")
-      .append("text")
-      .attr("x", unit * dic2.size / 2)
-      .attr("y", unit * dic2.size / 2)
-      .attr("font-size", "1em")
-      .attr("text-anchor", "middle")
-      .attr("alignment-baseline", "middle")
+      .attr("x", unit * 0)
+      .attr("y", "1em")
+      .attr("font-size", "3em")
       .attr("fill", "var(--c2)")
-      .html(dic2.name)
+      // .attr("text-anchor", "middle")
+      // .attr("alignment-baseline", "auto")
+      .text("月面植物園")
+    titleG.append("text")
+      .attr("x", "15em")
+      .attr("y", "1em")
+      .attr("font-size", "1em")
+      .attr("fill", "var(--c2)")
+      .text("にそなのホームページ")
+
+
+
+    //ヘッダ終わり
+
+    function makeLink2(dic) {
+      //デフォルト値
+      let dic2 = {
+        "name": "name",
+        "url": "1.html",
+        "x": 0,
+        "y": 0,
+        "bgcolor":"var(--c5)",
+        "color":"var(--c2)"
+      }
+      for (let key in dic) {
+        dic2[key] = dic[key];
+      }
+      let a = svg.append("g")
+        .attr("transform",
+          `translate(${unit * dic2.x},${unit * dic2.y})`)
+        .append("a").attr("href", dic2.url)
+      a.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", unit * dic2.size)
+        .attr("height", unit * dic2.size)
+        .attr("fill", dic2.bgcolor)
+      // a.append("circle")
+      // .attr("cx",0)
+      // .attr("r",100)
+      a.append("g")
+        .append("text")
+        .attr("x", unit * dic2.size / 2)
+        .attr("y", unit * dic2.size / 2)
+        .attr("font-size", "1em")
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .attr("fill", dic2.color)
+        .html(dic2.name)
+    }
+
+    makeLink2({
+      "x": 8,
+      "y": 3.5,
+      "url": "1.html",
+      "size": 2,
+      "name": "サイトマップ",
+      "bgcolor":illust.colors[3],
+    })
+    makeLink2({
+      "x": 7,
+      "y": 3.5,
+      "url": "5.html?n=" + dice,
+      "size": 1,
+      "name": "背景画像",
+      "bgcolor":illust.colors[2]
+    })
   }
-  
-  makeLink2({
-    "x": 8,
-    "y": 3.5,
-    "url": "1.html",
-    "size": 2,
-    "name": "サイトマップ"
-  })
-  makeLink2({
-    "x": 7,
-    "y": 3.5,
-    "url": "5.html?n=" + dice,
-    "size": 1,
-    "name": "背景画像"
-  })
-
 </script>
-
 
 </html>
