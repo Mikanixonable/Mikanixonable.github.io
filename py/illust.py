@@ -60,7 +60,7 @@ def main():
         img = Image.open(imgPath).resize((64,64))
         n = illust["num"]
 
-        colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = 5)
+        colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = 7)
         colorCodes = ['#{:02x}{:02x}{:02x}'.format(*rgb[0]) for rgb in colors]
         colorRates = [rgb[1] for rgb in colors]
         while len(colorCodes)<5:

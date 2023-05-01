@@ -197,24 +197,40 @@
       .attr("x", unit * 0)
       .attr("y", "1em")
       .attr("font-size", "3em")
-      .attr("fill", ()=>{
+      .attr("fill", () => {
+        function whity(c) {
+          let colrs = [c.slice(1, 3),c.slice(3, 5),c.slice(5, 7)]
+          .map((v)=>parseInt(v, 16)/255)
+          return (colrs[0] + colrs[1] + colrs[2])/3
+        }
         let bgcolor = illust["colors"][0]
         let color = "var(--c2)"
-        if(true){
-          color = "#666666"
-
+        if (whity(bgcolor)>0.7) {
+          let cList = illust["colors"].map((v)=>whity(v))
+          color = illust["colors"][cList.indexOf(Math.min(...cList))]
         }
-      
-
-        
-        return color})
+        return color
+      })
       .text("月面植物園")
 
     titleG.append("text")
       .attr("x", "15em")
       .attr("y", "1em")
       .attr("font-size", "1em")
-      .attr("fill", "var(--c2)")
+      .attr("fill",() => {
+        function whity(c) {
+          let colrs = [c.slice(1, 3),c.slice(3, 5),c.slice(5, 7)]
+          .map((v)=>parseInt(v, 16)/255)
+          return (colrs[0] + colrs[1] + colrs[2])/3
+        }
+        let bgcolor = illust["colors"][0]
+        let color = "var(--c2)"
+        if (whity(bgcolor)>0.7) {
+          let cList = illust["colors"].map((v)=>whity(v))
+          color = illust["colors"][cList.indexOf(Math.min(...cList))]
+        }
+        return color
+      })
       .text("にそなのホームページ")
 
 
@@ -228,8 +244,8 @@
         "url": "1.html",
         "x": 0,
         "y": 0,
-        "bgcolor":"var(--c5)",
-        "color":"var(--c2)"
+        "bgcolor": "var(--c5)",
+        "color": "var(--c2)"
       }
       for (let key in dic) {
         dic2[key] = dic[key];
@@ -261,7 +277,21 @@
       "url": "1.html",
       "size": 2,
       "name": "サイトマップ",
-      "bgcolor":illust.colors[3],
+      "bgcolor": illust.colors[3],
+      "color":() => {
+        function whity(c) {
+          let colrs = [c.slice(1, 3),c.slice(3, 5),c.slice(5, 7)]
+          .map((v)=>parseInt(v, 16)/255)
+          return (colrs[0] + colrs[1] + colrs[2])/3
+        }
+        let bgcolor = illust["colors"][3]
+        let color = "var(--c2)"
+        if (whity(bgcolor)>0.7) {
+          let cList = illust["colors"].map((v)=>whity(v))
+          color = illust["colors"][cList.indexOf(Math.min(...cList))]
+        }
+        return color
+      }
     })
     makeLink2({
       "x": 7,
@@ -269,7 +299,22 @@
       "url": "5.html?n=" + dice,
       "size": 1,
       "name": "背景画像",
-      "bgcolor":illust.colors[2]
+      "bgcolor": illust.colors[2],
+      "color":() => {
+        let bgcolor = illust["colors"][2]
+
+        function whity(c) {
+          let colrs = [c.slice(1, 3),c.slice(3, 5),c.slice(5, 7)]
+          .map((v)=>parseInt(v, 16)/255)
+          return (colrs[0] + colrs[1] + colrs[2])/3
+        }
+        let color = "var(--c2)"
+        if (whity(bgcolor)>0.7) {
+          let cList = illust["colors"].map((v)=>whity(v))
+          color = illust["colors"][cList.indexOf(Math.min(...cList))]
+        }
+        return color
+      }
     })
   }
 </script>
