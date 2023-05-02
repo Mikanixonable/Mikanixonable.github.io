@@ -101,7 +101,7 @@
     //一行単位の操作
     for (let k = 0; k < arr.length; k++) {
       let normalWidth = arr[k].reduce((sum, num) => {
-        let img = json.find((v) => v.name == num)
+        let img = json.find((v) => v.num == num)
         return sum + img["width"] / img["height"]
       }, 0)
 
@@ -112,11 +112,11 @@
       let imgHeight = width / normalWidth
       heightsum += imgHeight
       for (let s = 0; s < arr[k].length; s++) {
-        let image = json.find((v) => v.name == arr[k][s])
+        let image = json.find((v) => v.num == arr[k][s])
         imgDic = {}
-        imgDic["name"] = image["name"]
-        imgDic["title"] = image["title"]
-        imgDic["tag"] = image["tag"]
+        imgDic["num"] = image["num"]
+       
+    
         imgWidth = (image["width"] / image["height"]) * imgHeight
         imgDic["width"] = imgWidth
         imgDic["height"] = imgHeight
@@ -127,7 +127,7 @@
         rate = 0
         let img;
         for (let ss = 0; ss < s; ss++) {
-          img = json.find((v) => v.name == arr[k][ss])
+          img = json.find((v) => v.num == arr[k][ss])
           rate += (img["width"] / img["height"]) / normalWidth
         }
 
@@ -169,7 +169,7 @@
         return `translate(${d.x},${d.y}) scale(${1})`
       })
     const img = g.append("image").attr("class", "image")
-      .attr("href", (d, i) => `illusts/s/${d.name}.png`)
+      .attr("href", (d, i) => `illusts/s/${d.num}.png`)
       .attr("height", (d, i) => {
         return d.height
       })
@@ -214,8 +214,8 @@
           .attr("x", d.width / d.height * box * 0.7 / 2)
           .attr("y", 0)
           .attr("width", (d, i) => {
-            document.title = d.name + ".png"
-            window.history.replaceState(null, null, '?n=' + d.name)
+            document.title = d.num + ".png"
+            window.history.replaceState(null, null, '?n=' + d.num)
   
             //           let p = url.searchParams.get("p");
             // if (!p) {
@@ -252,16 +252,16 @@
           .attr("font-size", `3em`)
           .attr("style", "text-align:center")
           .html((d, i) => {
-            return d.name
+            return d.num
               + "<br> width: " + d.widthR + "px height: " + d.heightR + "px"
-              + "<br>" + `<a href="illusts/${d.name}.png">original image</a>`
-              + "<br>" + `<a href="5.html?n=${d.name}">page</a>`
+              + "<br>" + `<a href="illusts/${d.num}.png">original image</a>`
+              + "<br>" + `<a href="5.html?n=${d.num}">page</a>`
           })
 
 
         //フルサイズ画像の表示
         const preview = d3.select(this).append("image")
-          .attr("href", (d, i) => `illusts/${d.name}.png`)
+          .attr("href", (d, i) => `illusts/${d.num}.png`)
           .attr("height", (d, i) => {
             return d.height
           })
