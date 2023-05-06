@@ -53,6 +53,16 @@
     font-size: 1em;
     font-family: monospace
   }
+  p{
+    margin: 0;
+ 
+
+  }
+  foreignObject{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   h1 {
     font-size: 4em;
@@ -256,33 +266,60 @@
         dic2[key] = dic[key];
       }
 
+
       let a = svg.append("g")
         .attr("transform",
           `translate(${unit * dic2.x},${unit * dic2.y})`)
         .append("a").attr("href", dic2.url)
+
+      //文字ボックス
       a.append("rect")
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", unit * dic2.wh[0])
         .attr("height", unit * dic2.wh[1])
         .attr("fill", dic2.bgcolor)
-      a.append("g")
-        .append("text")
-        .attr("x", unit * dic2.wh[0] / 2)
-        .attr("y", unit * dic2.wh[1])
+      a.append("g").attr("transform", `translate(0,0)`)
+
+        .append("foreignObject")
+
+        .attr("width", unit * dic2.wh[0])
+        .attr("height", unit * dic2.wh[1])
         .attr("font-size", () => {
-          let half = dic2.name.replace(/[^0-9a-z]/gi,'').length
-          let full = dic2.name.length - half
+          // let mojisu = Math.floor(dic2.wh[0]/dic2.wh[1])
+          // let boxsize = dic2.wh[0]*unit/mojisu
+          // return boxsize
+          
+
+          let halfs = dic2.name.replace(/[^0-9a-z]/gi, '').length
+          let fulls = dic2.name.length - halfs
+          let letters =  fulls + halfs * 0.5//半角文字を正規化した文字数
 
           let em = Math.min(
-            dic2.wh[0] * unit / (half*0.5+full),
-            dic2.wh[1] * unit
+            dic2.wh[0] * unit / letters,//縦長の場合、幅が制限要素
+            dic2.wh[1] * unit//横長の場合、高さが制限要素
           )
+
+          let boxes = Math.floor(dic2.wh[0]/dic2.wh[1])
+          if(boxes*2<=letters
+          &&
+          em*4<dic2.wh[1] * unit){
+            em*=2
+          }
           return em
         })
-        .attr("text-anchor", "middle")
-        // .attr("alignment-baseline", "middle")
-        .attr("fill", () => {
+
+        // .attr("font-size", () => {
+        //     let half = dic2.name.replace(/[^0-9a-z]/gi,'').length
+        //     let full = dic2.name.length - half
+
+        //     let em = Math.min(
+        //       dic2.wh[0] * unit / (half*0.5+full),
+        //       dic2.wh[1] * unit
+        //     )
+        //     return em
+        //   })
+        .attr("color", () => {
           let bgcolor = dic2.bgcolor
 
           function whity(c) {
@@ -297,7 +334,43 @@
           }
           return color
         })
-        .html(dic2.name)
+
+        // .attr("style", "text-align:center")
+      
+        .html("<p>"+dic2.name+"</p>")
+
+      // a
+      //   .append("text")
+      //   .attr("x", unit * dic2.wh[0] / 2)
+      //   .attr("y", unit * dic2.wh[1])
+      //   .attr("font-size", () => {
+      //     let half = dic2.name.replace(/[^0-9a-z]/gi,'').length
+      //     let full = dic2.name.length - half
+
+      //     let em = Math.min(
+      //       dic2.wh[0] * unit / (half*0.5+full),
+      //       dic2.wh[1] * unit
+      //     )
+      //     return em
+      //   })
+      //   .attr("text-anchor", "middle")
+      //   // .attr("alignment-baseline", "middle")
+      //   .attr("fill", () => {
+      //     let bgcolor = dic2.bgcolor
+
+      //     function whity(c) {
+      //       let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
+      //         .map((v) => parseInt(v, 16) / 255)
+      //       return (colrs[0] + colrs[1] + colrs[2]) / 3
+      //     }
+      //     let color = "var(--c2)"
+      //     if (whity(bgcolor) > 0.7) {
+      //       let cList = illust["colors"].map((v) => whity(v))
+      //       color = illust["colors"][cList.indexOf(Math.min(...cList))]
+      //     }
+      //     return color
+      //   })
+      //   .html(dic2.name)
     }
 
 
@@ -328,18 +401,18 @@
 
 
     tile({
-      "x": 2,
+      "x": 0,
       "y": 4.5,
       "wh": [3, 1],
       "name": "最近の更新",
       "bgcolor": illust.colors[4],
     })
 
-    for (let k = 0; k < 10; k++) {
+    for (let k = 0; k < 3; k++) {
       tile({
-        "x": Math.random() * 3,
+        "x": 0,
         "y": 5.5 + k,
-        "wh": [3 + 6 * Math.random(), 1],
+        "wh": [5, 1],
         "url": news[k].name + ".html",
         "name":
           news[k].name + " "
