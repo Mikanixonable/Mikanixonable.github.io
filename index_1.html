@@ -62,21 +62,21 @@
 
   foreignObject {
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    margin: 0em;
+    /* text-anchor: middle; */
+    /* text-align:end */
   }
 
-  h1 {
-    font-size: 4em;
-  }
 
-  .str {
-    color: var(--c2)
-  }
+ 
 
-  svg {
-    background-color: var(--c1);
-  }
+ 
+
+ 
 </style>
 
 <body id="body">
@@ -151,7 +151,7 @@
         .attr("height", unit * dic2.wh[1])
         .attr("fill", dic2.bgcolor)
 
-      a.append("g").attr("transform", `translate(0,0)`)
+      a
         .append("foreignObject")
         .attr("width", unit * dic2.wh[0])
         .attr("height", unit * dic2.wh[1])
@@ -182,7 +182,7 @@
           }
           return color
         })
-        .html("<p>" + dic2.name + "</p>")
+        .html(dic2.name)
     }
 
     //svg要素作成
@@ -191,15 +191,15 @@
       .attr("height", height)
 
     //ヘッダ作成
-    const headerH = height
+
     //ヘッダ背景
     const header = svg.append("image")
       .attr("x", 0)
       .attr("y", 0)
       .attr("width", width)
-      .attr("height", headerH)
+      .attr("height", height)
       .attr("xlink:href", `illusts/${dice}.png`)
-      // .attr("opacity", 0.9)
+ 
       .attr("preserveAspectRatio", "xMidYMin slice")
 
     //ヘッダ1 SNS
@@ -285,68 +285,41 @@
     makeTile("artstation", 1.5, 2, 0.5)
 
     //タイトル
+   
     const titleG = svg.append("g")
       .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
 
-    //タイトル背景
-
-    titleG.append("rect")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", width)
-      .attr("height", unit * 1)
-      .attr("fill", illust["colors"][0])
-
-    titleG.append("text")
-      .attr("x", unit * 0)
-      .attr("y", "1em")
-      .attr("font-size", "3em")
-      .attr("fill", () => {
-        let bgcolor = illust["colors"][0]
-        let color = "var(--c2)"
-        if (whity(bgcolor) > 0.7) {
-          color = clist[0]
-        }
-        return color
-      })
-      .text("月面植物園")
-
-    titleG.append("text")
-      .attr("x", "15em")
-      .attr("y", "1em")
-      .attr("font-size", "1em")
-      .attr("fill", () => {
-
-        let bgcolor = illust["colors"][0]
-        let color = "var(--c2)"
-        if (whity(bgcolor) > 0.7) {
-          color = clist[0]
-        }
-        return color
-      })
-      .text("にそなのホームページ")
-
-
-
-
-
-
+      tile({
+      "x": 0,
+      "y": 3.5,
+      "wh": [5, 1.5],
+      "name": "月面植物園",
+      "bgcolor": clist[0],
+    })
+    tile({
+      "x": 5,
+      "y": 3.5,
+      "wh": [2, 1.5],
+      "name": "にそなのホームページ",
+      "bgcolor": clist[0],
+    })
+    tile({
+      "x": 7,
+      "y": 3.5,
+      "wh": [1, 2],
+      "url": "5.html?n=" + dice,
+      "name": "現在の背景画像",
+      "bgcolor": clist[2],
+    })
     tile({
       "x": 8,
       "y": 3.5,
       "wh": [2, 2],
       "url": "1.html",
       "name": "サイトマップ",
-      "bgcolor": illust.colors[3],
+      "bgcolor": clist[3],
     })
-    tile({
-      "x": 7,
-      "y": 3.5,
-      "wh": [1, 1],
-      "url": "5.html?n=" + dice,
-      "name": "背景画像",
-      "bgcolor": illust.colors[2],
-    })
+
 
     let news = json2.sort((a, b) => { return b.mtime - a.mtime })
     // .filter((v)=>!v.name.match(/_/))
@@ -354,9 +327,9 @@
 
 
     tile({
-      "x": 0,
-      "y": 4.5,
-      "wh": [3, 1],
+      "x": 5,
+      "y": 7,
+      "wh": [3, 2],
       "name": "最近の更新",
       "bgcolor": illust.colors[4],
     })
@@ -364,7 +337,7 @@
     for (let k = 0; k < 10; k++) {
       tile({
         "x": 0,
-        "y": 5.5 + k,
+        "y": 7 + k,
         "wh": [5, 1],
         "url": news[k].name + ".html",
         "name":
