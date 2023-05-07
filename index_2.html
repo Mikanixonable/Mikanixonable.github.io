@@ -221,6 +221,7 @@
       "twitter": "https://twitter.com/Mikanixonable",
       "twitter2": "https://twitter.com/botseikatu",
       "twitter3": "https://twitter.com/Unicode_pod",
+      "nisoho": "https://twitter.com/nisoho",
       "twitter4": "https://twitter.com/Eustralo",
       "discord": "https://discord.com/users/396122233698910218",
       "kakuyomu": "https://kakuyomu.jp/users/Eustralopithecus",
@@ -237,16 +238,21 @@
       "vrchat": "https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b",
       "tiktok": "https://www.tiktok.com/@mikanixonable",
       "tumblr": "https://mikanixonable.tumblr.com/",
+      "calckey": "https://calckey.jp/@Mikanixonable",
+      "hatena": "https://mikanixonable.hatenablog.com/",
+      "bookmeter": "https://bookmeter.com/users/1292458",
+
       "odaibako": "https://odaibako.net/u/Mikanixonable",
 
-      "hatena": "https://mikanixonable.hatenablog.com/",
+
+   
       "marshmallow": "https://marshmallow-qa.com/mikanixonable",
       "twicass": "https://twitcasting.tv/mikanixonable",
       "artstation": "https://www.artstation.com/mikanixonable",
       "niconicopic": "https://seiga.nicovideo.jp/user/illust/60514629",
       "peing": "https://peing.net/ja/mikanixonable",
       "askfm": "https://ask.fm/Mikanixonable",
-      "bookmeter": "https://bookmeter.com/users/1292458",
+     
     }
     //SNSリンクタイル作成関数定義
     function makeTile(sns, x, y, size) {
@@ -255,16 +261,20 @@
         .attr("x", unit * x)
         .attr("y", unit * y)
         .attr("width", unit * size * 0.5)
-        // .attr("height", unit*size*0.5)
+
         .attr("xlink:href", `icon/${sns}.png`)
     }
     //SNSリンク作成
     makeTile("twitter", 0, 0, 2)
     makeTile("twitter2", 4, 0.5, 0.5)
     makeTile("twitter3", 3, 0, 1)
-    makeTile("twitter4", 4, 1, 0.03)
+    makeTile("twitter4", 4, 1, 0.06)
+    makeTile("nisoho", 2.5, 0, 0.5)
+
     makeTile("kakuyomu", 2, 1, 1.5)
-    makeTile("mstdn", 1, 2, 0.5)
+    makeTile("mstdn", 4, 1, 0.5)
+    makeTile("calckey", 4, 2, 0.5)
+
     makeTile("discord", 5, 0, 1)
 
     makeTile("spotify", 7, 0, 1)
@@ -279,9 +289,12 @@
     makeTile("youtube", 0.5, 3, 1)
     makeTile("keybase", 3, 2.5, 1)
     makeTile("soundcloud", 2, 3, 1)
-    makeTile("instagram", 1.5, 2.5, 0.5)
+    makeTile("instagram", 1.5, 3, 0.5)
     makeTile("hatena", 0, 2, 1)
-
+ 
+    makeTile("bookmeter", 6.5, 0, 0.5)
+    makeTile("odaibako", 0, 3, 0.5)
+    makeTile("artstation", 1.5, 2, 0.5)
 
     //タイトル
     const titleG = svg.append("g")
@@ -347,9 +360,10 @@
       "bgcolor": illust.colors[2],
     })
 
-    let news = json2.map((v) => parseInt(v.mtime, 10))
-      .sort((a, b) => b - a)
-      .map((v) => json2.find((k) => parseInt(k.mtime, 10) == v))
+    let news = json2.sort((a, b) => { return b.mtime - a.mtime })
+    // .filter((v)=>!v.name.match(/_/))
+    //開発中のhtmlファイル名はアンダーバーを含むため、除外
+
 
     tile({
       "x": 0,

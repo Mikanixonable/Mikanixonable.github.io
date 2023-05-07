@@ -2,48 +2,7 @@
 <head>
 	<title>旧サイトマップ3</title>
   <meta content="JavaScriptのfetchを利用してhtmlファイルから自動的にtitleやcontent情報を抜き出して表示する全自動サイトマップ(今開いているページ)です">
-  <style media="screen">
-    @font-face {
-    font-family: 'mincho';
-      src: url('fonts/SourceHanSerif-Bold.woff') format('woff');
-    }
-    @font-face {
-    font-family: 'gothic';
-      src: url('fonts/SourceHanSans-Light.woff') format('woff');
-    }
 
-
-    @font-face {
-    font-family: 'imincho';
-      src: url('fonts/IgyouMincho.woff') format('woff');
-    }
-    @font-face {
-    font-family: 'imincho2';
-      src: url('fonts/IgyouMincho2.woff') format('woff');
-    }
-    @font-face {
-    font-family: 'imincho3';
-      src: url('fonts/IgyouMincho3.woff') format('woff');
-    }
-
-    @font-face {
-    font-family: 'igothicl';
-      src: url('fonts/IgyouGothic-Light.woff') format('woff');
-    }
-    @font-face {
-    font-family: 'igothic2';
-      src: url('fonts/IgyouGothic2.woff') format('woff');
-    }
-    @font-face {
-    font-family: 'igothic3';
-      src: url('fonts/IgyouGothic3.woff') format('woff');
-    }
-
-    @font-face {
-    font-family: 'ifude';
-      src: url('fonts/IgyouFude.woff') format('woff');
-    }
-  </style>
   <style>
 	body{
 		background-color: #456;
@@ -107,15 +66,15 @@ for (var i = 0; i < n; i++) {
     var p = document.createElement("p");
     if(i===0&&k===0){
         a.href="index.html";
-        a.id="_indexhtml";
+        a.id="index";
         p.textContent = "index"
-        p.id="p_indexhtml"
+        p.id="p_index"
     }else{
         a.href=String(10*i+k)+".html";
-        a.id="_"+String(10*i+k)+"html";
+        a.id="_"+String(10*i+k);
      
         p.textContent=String(10*i+k);
-        p.id="p_"+String(10*i+k)+"html"
+        p.id="p_"+String(10*i+k)
     }
     a.style.backgroundColor="#0002"
     
@@ -139,10 +98,10 @@ function titleInsert(url){
         for(let file of data){
 
           //本題
-          var resul = document.getElementById(file.name);
+          var resul = document.getElementById("_"+file.name);
           resul.innerHTML = file.title;
           resul.title = file.content;
-          var resul2 = document.getElementById("p"+file.name);
+          var resul2 = document.getElementById("p_"+file.name);
           resul2.title = file.cdate;
         }
       });
@@ -174,11 +133,11 @@ function coloring(url){
         for(let file of data){
 
           //本題
-          let lapse = Math.floor(Date.now()/1000)-file.ctime //経過秒数
+          let lapse = Math.floor(Date.now()/1000)-file.mtime //経過秒数
           lapse = lapse/1000000
           let grad = 1-Math.exp(-lapse*(1/2));
 
-          var result = document.getElementById("td"+file.name);
+          var result = document.getElementById("_"+file.name);
           result.style.backgroundColor = gradColor(color1,color2,grad);
 
         }
