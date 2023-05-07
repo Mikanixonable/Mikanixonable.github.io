@@ -70,13 +70,6 @@
     /* text-anchor: middle; */
     /* text-align:end */
   }
-
-
- 
-
- 
-
- 
 </style>
 
 <body id="body">
@@ -114,6 +107,7 @@
     })
 
   function main(json1, json2) {
+
     function whity(c) {
       let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
         .map((v) => parseInt(v, 16) / 255)
@@ -123,6 +117,7 @@
     let clist = illust["colors"].sort((a, b) => {
       return whity(a) - whity(b)
     })
+
     function tile(dic) {
       //デフォルト値
       let dic2 = {
@@ -136,12 +131,16 @@
       for (let key in dic) {
         dic2[key] = dic[key];
       }
-
-
       let a = svg.append("g")
         .attr("transform",
           `translate(${unit * dic2.x},${unit * dic2.y})`)
-        .append("a").attr("href", dic2.url)
+
+      if (dic2.url) {
+        a = a.append("a").attr("href", dic2.url)
+      }
+      if (dic2.on) {
+        a = a.on(dic2.on[0], dic2.on[1])
+      }
 
       //文字ボックス
       a.append("rect")
@@ -193,13 +192,13 @@
     //ヘッダ作成
 
     //ヘッダ背景
-    const header = svg.append("image")
+    svg.append("image")
       .attr("x", 0)
       .attr("y", 0)
       .attr("width", width)
       .attr("height", height)
       .attr("xlink:href", `illusts/${dice}.png`)
- 
+
       .attr("preserveAspectRatio", "xMidYMin slice")
 
     //ヘッダ1 SNS
@@ -233,23 +232,25 @@
       "odaibako": "https://odaibako.net/u/Mikanixonable",
 
 
-   
+
       "marshmallow": "https://marshmallow-qa.com/mikanixonable",
       "twicass": "https://twitcasting.tv/mikanixonable",
       "artstation": "https://www.artstation.com/mikanixonable",
       "niconicopic": "https://seiga.nicovideo.jp/user/illust/60514629",
       "peing": "https://peing.net/ja/mikanixonable",
       "askfm": "https://ask.fm/Mikanixonable",
-     
+
     }
+
+    const header = svg.append("g")
     //SNSリンクタイル作成関数定義
+
     function makeTile(sns, x, y, size) {
-      svg.append("a").attr("href", snsURLs[sns])
+      header.append("a").attr("href", snsURLs[sns])
         .append("image")
         .attr("x", unit * x)
         .attr("y", unit * y)
         .attr("width", unit * size * 0.5)
-
         .attr("xlink:href", `icon/${sns}.png`)
     }
     //SNSリンク作成
@@ -279,17 +280,15 @@
     makeTile("soundcloud", 2, 3, 1)
     makeTile("instagram", 1.5, 3, 0.5)
     makeTile("hatena", 0, 2, 1)
- 
+
     makeTile("bookmeter", 6.5, 0, 0.5)
     makeTile("odaibako", 0, 3, 0.5)
     makeTile("artstation", 1.5, 2, 0.5)
 
     //タイトル
-   
-    const titleG = svg.append("g")
-      .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
 
-      tile({
+
+    tile({
       "x": 0,
       "y": 3.5,
       "wh": [5, 1.5],
@@ -347,6 +346,33 @@
         "bgcolor": clist[k],
       })
     }
+  
+
+      function mikuButton(name,num, k){
+        tile({
+      "x": 0 + k,
+      "y": 5.5,
+      "wh": [1, 1],
+      "name": name,
+      "bgcolor": clist[k],
+      "on": [
+        "click",
+        () => {
+          let music = new Audio(num + '.mp3');
+          music.currentTime = 0;
+          music.play();
+        }
+      ]
+    })
+      }
+      mikuButton("ミクボタン",1,0)
+      mikuButton("ねう",2,1)
+      mikuButton("Mazurek Dąbrowskiego",3,2)
+      mikuButton("ねこーっ",4,3)
+      mikuButton("ねこねこ",5,4)
+      mikuButton("にゃう",6,5)
+      mikuButton("ぬい~",7,6)
+      // mikuButton("pikopiko",8,7)
 
 
 
