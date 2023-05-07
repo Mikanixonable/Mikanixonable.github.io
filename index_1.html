@@ -89,7 +89,8 @@
   const height = window.innerHeight
   let n = 10 //分割数
   const unit = width / n
-  const dice = Math.floor(Math.random() * 532 + 1)
+  let offset = 300
+  const dice = offset + Math.floor(Math.random() * (534-offset) + 1)
 
 
   //実行
