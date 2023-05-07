@@ -49,7 +49,7 @@ def main(file,files):
     
 
 dic = []
-files = glob.glob("*.html")
+files = [e for e in glob.glob("*.html")if "_" not in e]
 for file in files:
     main(file,files)
 
