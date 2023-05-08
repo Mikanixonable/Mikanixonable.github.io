@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="utf-8" content="" genre="font"/>
+<title>Igyou</title>
+<style media="screen">
+
+@font-face {
+font-family: 'j';
+  src: url('fonts/IgyouMincho.ttf');
+}
+@font-face {
+font-family: 'jb';
+  src: url('fonts/IgyouMincho2.ttf');
+}
+@font-face {
+font-family: 'jc';
+  src: url('fonts/IgyouMincho3.ttf');
+}
+
+
+body{
+
+	display: flex;
+	background: #AAA;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 8%
+	}
+
+	.display {
+	height: 8em;
+	width: 100%;
+	background: #FFF;
+	font-size: 4em;
+	text-align: center;
+	}
+
+	.display p {
+	padding: 2px;
+	}
+
+	.input1{
+	border: 0px
+
+	}
+	/* .input1::placeholder {
+	  text-align: center;
+	} */
+	.out1{
+		font-family: "j";
+	}
+	.out2{
+		font-family: "jb";
+	}
+	.out3{
+		font-family: "jc";
+	}
+</style>
+</head>
+<body>
+<!-- <input type="button" value="狂う" onclick="repeater()" class="clue"> -->
+<div class="display">
+<p class="out1" id="out1"></p>
+<p class="out2" id="out2"></p>
+<p class="out3" id="out3"></p>
+</div>
+<form class="form1" name="form1">
+<input class="input1" id="input1" placeholder="enter" type="text" value=" "/>
+<!-- </form>
+<div>
+	<textarea class="required maxlength" data-maxlength="100" name="inquiry" id="inquiry" rows="5" cols="50"></textarea>
+  </div>
+  <button name="send">送信</button>
+</form> -->
+<script>
+	var notr = 0;
+	var obj1=document.getElementById("body");
+	var obj2=document.getElementById("h1");
+  function repeater(){
+  if(notr===0){
+    notr=1;
+    obj1.style.fontFamily = "imincho2","mincho";
+    obj2.style.fontFamily = "imincho2","mincho";
+  }else{
+    if(notr===1){
+      notr=2;
+      obj1.style.fontFamily = "imincho","mincho";
+      obj2.style.fontFamily = "imincho","mincho";
+    }else{
+      notr=0;
+      obj1.style.fontFamily = "sans-serif";
+      obj2.style.fontFamily = "igothic2";
+
+    }
+  }
+
+  }
+
+const i = document.forms.form1.input1;
+i.addEventListener('input',()=>{
+	var str = i.value
+
+	let display1  = document.getElementById('out1');
+	let display2  = document.getElementById('out2');
+	let display3  = document.getElementById('out3');
+
+	display1.textContent = str
+	display2.textContent = str
+	display3.textContent = str
+});
+
+</script>
+</form></body>
+</html>
