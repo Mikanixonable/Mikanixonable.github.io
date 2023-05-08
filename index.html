@@ -76,21 +76,28 @@
   <div id="chart"></div>
 </body>
 
-<script src="js/jquery.js"></script>
+<!-- <script src="js/jquery.js"></script> -->
 <script src="js/d3v7.js"></script>
 <script>
   //リロード時に先頭へ移動
-  $(function () {
-    $('html,body').animate({ scrollTop: 0 }, '1');
-  });
+  // $(function () {
+  //   $('html,body').animate({ scrollTop: 0 }, '1');
+  // });
 
   //設定
-  const width = window.innerWidth
-  const height = window.innerHeight
-  let n = 10 //分割数
-  const unit = width / n
+  let width = window.innerWidth
+  let height = window.innerHeight
+  let unit = width / 10
+  let PC = 0
+  if (width>600){
+    unit = width / 20
+    PC = 1
+  }else{
+    unit = width / 10
+    PC = 0
+  }
   let offset = 300
-  const dice = offset + Math.floor(Math.random() * (534-offset) + 1)
+  const dice = offset + Math.floor(Math.random() * (534 - offset) + 1)
 
 
   //実行
@@ -151,8 +158,7 @@
         .attr("height", unit * dic2.wh[1])
         .attr("fill", dic2.bgcolor)
 
-      a
-        .append("foreignObject")
+      a.append("foreignObject")
         .attr("width", unit * dic2.wh[0])
         .attr("height", unit * dic2.wh[1])
         .attr("font-size", () => {
@@ -244,68 +250,67 @@
     }
 
     const header = svg.append("g")
+    const header2 = svg.append("g")
+    .attr("transform",
+          `translate(${0 + 10*unit*PC},${2*unit*(1-PC)})`)
     //SNSリンクタイル作成関数定義
 
-    function makeTile(sns, x, y, size) {
+    function makeTile(sns, x, y, size, header) {
       header.append("a").attr("href", snsURLs[sns])
         .append("image")
         .attr("x", unit * x)
         .attr("y", unit * y)
-        .attr("width", unit * size * 0.5)
+        .attr("width", unit * size *1)
         .attr("xlink:href", `icon/${sns}.png`)
     }
     //SNSリンク作成
-    makeTile("twitter", 0, 0, 2)
-    makeTile("twitter2", 4, 0.5, 0.5)
-    makeTile("twitter3", 3, 0, 1)
-    makeTile("twitter4", 4, 1, 0.06)
-    makeTile("nisoho", 2.5, 0, 0.5)
+    makeTile("twitter", 0, 0, 2, header)
+    makeTile("twitter2", 2, 0.5, 0.5, header)
+    makeTile("twitter3", 3, 0, 1, header)
+    makeTile("twitter4", 4, 1, 0.06, header)
+    makeTile("nisoho", 2.5, 0, 0.5, header)
+    makeTile("kakuyomu", 2, 1, 1, header)
+    makeTile("mstdn", 4, 1, 0.5, header)
+    makeTile("calckey", 3.5, 1.5, 0.5, header)
+    makeTile("discord", 4, 0, 1, header)
+    makeTile("spotify", 7, 0, 1, header)
+    makeTile("pixiv", 8, 0, 2, header)
+    makeTile("misskey", 5, 0.5, 1.5, header)
+    makeTile("github", 7, 1, 1, header)
+    makeTile("bookmeter", 6.5, 0, 0.5, header)
 
-    makeTile("kakuyomu", 2, 1, 1.5)
-    makeTile("mstdn", 4, 1, 0.5)
-    makeTile("calckey", 4, 2, 0.5)
-
-    makeTile("discord", 5, 0, 1)
-
-    makeTile("spotify", 7, 0, 1)
-    makeTile("pixiv", 8, 0, 2)
-    makeTile("tumblr", 7, 2, 2)
-    makeTile("tiktok", 9, 2, 1)
-    makeTile("niconico", 9, 3, 1)
-    makeTile("vrchat", 6, 3, 1)
-    makeTile("misskey", 5, 1, 2)
-    makeTile("github", 7, 1, 1)
-
-    makeTile("youtube", 0.5, 3, 1)
-    makeTile("keybase", 3, 2.5, 1)
-    makeTile("soundcloud", 2, 3, 1)
-    makeTile("instagram", 1.5, 3, 0.5)
-    makeTile("hatena", 0, 2, 1)
-
-    makeTile("bookmeter", 6.5, 0, 0.5)
-    makeTile("odaibako", 0, 3, 0.5)
-    makeTile("artstation", 1.5, 2, 0.5)
+    makeTile("tumblr", 7, 0, 2, header2)
+    makeTile("tiktok", 9, 0, 1, header2)
+    makeTile("niconico", 9, 1, 1, header2)
+    makeTile("vrchat", 6, 1, 1, header2)
+    makeTile("youtube", 0.5, 1, 1, header2)
+    makeTile("keybase", 3, 0.5, 1, header2)
+    makeTile("soundcloud", 2, 1, 1, header2)
+    makeTile("instagram", 1.5, 1, 0.5, header2)
+    makeTile("hatena", 0, 0, 1, header2)
+    makeTile("odaibako", 0, 1, 0.5, header2)
+    makeTile("artstation", 1.5, 0, 0.5, header2)
 
     //タイトル
 
 
     tile({
       "x": 0,
-      "y": 3.5,
+      "y": 4,
       "wh": [5, 1.5],
       "name": "月面植物園",
       "bgcolor": clist[0],
     })
     tile({
       "x": 5,
-      "y": 3.5,
+      "y": 4,
       "wh": [2, 1.5],
       "name": "にそなのホームページ",
       "bgcolor": clist[0],
     })
     tile({
       "x": 7,
-      "y": 3.5,
+      "y": 4,
       "wh": [1, 2],
       "url": "5.html?n=" + dice,
       "name": "現在の背景画像",
@@ -313,7 +318,7 @@
     })
     tile({
       "x": 8,
-      "y": 3.5,
+      "y": 4,
       "wh": [2, 2],
       "url": "1.html",
       "name": "サイトマップ",
@@ -347,33 +352,33 @@
         "bgcolor": clist[k],
       })
     }
-  
 
-      function mikuButton(name,num, k){
-        tile({
-      "x": 0 + k,
-      "y": 5.5,
-      "wh": [1, 1],
-      "name": name,
-      "bgcolor": clist[k],
-      "on": [
-        "click",
-        () => {
-          let music = new Audio(num + '.mp3');
-          music.currentTime = 0;
-          music.play();
-        }
-      ]
-    })
-      }
-      mikuButton("ミクボタン",1,0)
-      mikuButton("ねう",2,1)
-      mikuButton("Mazurek Dąbrowskiego",3,2)
-      mikuButton("ねこーっ",4,3)
-      mikuButton("ねこねこ",5,4)
-      mikuButton("にゃう",6,5)
-      mikuButton("ぬい~",7,6)
-      // mikuButton("pikopiko",8,7)
+
+    function mikuButton(name, num, k) {
+      tile({
+        "x": 0 + k,
+        "y": 5.5,
+        "wh": [1, 1],
+        "name": name,
+        "bgcolor": clist[k],
+        "on": [
+          "click",
+          () => {
+            let music = new Audio(num + '.mp3');
+            music.currentTime = 0;
+            music.play();
+          }
+        ]
+      })
+    }
+    mikuButton("ミクボタン", 1, 0)
+    mikuButton("ねう", 2, 1)
+    mikuButton("Mazurek Dąbrowskiego", 3, 2)
+    mikuButton("ねこーっ", 4, 3)
+    mikuButton("ねこねこ", 5, 4)
+    mikuButton("にゃう", 6, 5)
+    mikuButton("ぬい~", 7, 6)
+    // mikuButton("pikopiko",8,7)
 
 
 
