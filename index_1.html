@@ -115,6 +115,7 @@
       return (colrs[0] + colrs[1] + colrs[2]) / 3
     }
     let illust = json1.find((v) => v.num == String(dice))
+  
     let clist = illust["colors"].sort((a, b) => {
       return whity(a) - whity(b)
     })
