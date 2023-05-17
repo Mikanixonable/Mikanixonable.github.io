@@ -54,16 +54,21 @@
     font-family: monospace
   }
 
-  h1 {
-    font-size: 4em;
+  p {
+    margin: 0;
+
+
   }
 
-  .str {
-    color: var(--c2)
-  }
-
-  svg {
-    background-color: var(--c1);
+  foreignObject {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    margin: 0em;
+    /* text-anchor: middle; */
+    /* text-align:end */
   }
 </style>
 
@@ -71,20 +76,28 @@
   <div id="chart"></div>
 </body>
 
-<script src="js/jquery.js"></script>
+<!-- <script src="js/jquery.js"></script> -->
 <script src="js/d3v7.js"></script>
 <script>
   //リロード時に先頭へ移動
-  $(function () {
-    $('html,body').animate({ scrollTop: 0 }, '1');
-  });
+  // $(function () {
+  //   $('html,body').animate({ scrollTop: 0 }, '1');
+  // });
 
   //設定
-  const width = window.innerWidth
-  const height = window.innerHeight
-  let n = 10 //分割数
-  const unit = width / n
-  const dice = Math.floor(Math.random() * 532 + 1)
+  let width = window.innerWidth
+  let height = window.innerHeight
+  let unit = width / 10
+  let PC = 0
+  if (width>600){
+    unit = width / 20
+    PC = 1
+  }else{
+    unit = width / 10
+    PC = 0
+  }
+  let offset = 300
+  const dice = offset + Math.floor(Math.random() * (534 - offset) + 1)
 
 
   //実行
@@ -102,21 +115,97 @@
     })
 
   function main(json1, json2) {
+
+    function whity(c) {
+      let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
+        .map((v) => parseInt(v, 16) / 255)
+      return (colrs[0] + colrs[1] + colrs[2]) / 3
+    }
+    let illust = json1.find((v) => v.num == String(dice))
+    let clist = illust["colors"].sort((a, b) => {
+      return whity(a) - whity(b)
+    })
+
+    function tile(dic) {
+      //デフォルト値
+      let dic2 = {
+        "name": "name",
+        "x": 0,
+        "y": 0,
+        "wh": [1, 1],
+        "bgcolor": "var(--c5)",
+      }
+      //デフォルト値と入力値が違うときのみ上書き
+      for (let key in dic) {
+        dic2[key] = dic[key];
+      }
+      let a = svg.append("g")
+        .attr("transform",
+          `translate(${unit * dic2.x},${unit * dic2.y})`)
+
+      if (dic2.url) {
+        a = a.append("a").attr("href", dic2.url)
+      }
+      if (dic2.on) {
+        a = a.on(dic2.on[0], dic2.on[1])
+      }
+
+      //文字ボックス
+      a.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", unit * dic2.wh[0])
+        .attr("height", unit * dic2.wh[1])
+        .attr("fill", dic2.bgcolor)
+
+      a.append("foreignObject")
+        .attr("width", unit * dic2.wh[0])
+        .attr("height", unit * dic2.wh[1])
+        .attr("font-size", () => {
+          let halfs = dic2.name.replace(/[^0-9a-z]/gi, '').length
+          let fulls = dic2.name.length - halfs
+          let letters = fulls + halfs * 0.5//半角文字を正規化した文字数
+
+          let em = Math.min(
+            dic2.wh[0] * unit / letters,//縦長の場合、幅が制限要素
+            dic2.wh[1] * unit//横長の場合、高さが制限要素
+          )
+
+          let boxes = Math.floor(dic2.wh[0] / dic2.wh[1])
+          if (boxes * 2 <= letters
+            &&
+            em * 5 < dic2.wh[1] * unit) {
+            em *= 2
+          }
+          return em
+        })
+
+        .attr("color", () => {
+          let bgcolor = dic2.bgcolor
+          let color = "var(--c2)"
+          if (whity(bgcolor) > 0.7) {
+            color = clist[0]
+          }
+          return color
+        })
+        .html(dic2.name)
+    }
+
     //svg要素作成
     const svg = d3.select("#chart").append("svg")
       .attr("width", width)
-      .attr("height", height)
+      .attr("height", height*3)
 
     //ヘッダ作成
-    const headerH = height
+
     //ヘッダ背景
-    const header = svg.append("image")
+    svg.append("image")
       .attr("x", 0)
       .attr("y", 0)
       .attr("width", width)
-      .attr("height", headerH)
+      .attr("height", height)
       .attr("xlink:href", `illusts/${dice}.png`)
-      // .attr("opacity", 0.9)
+
       .attr("preserveAspectRatio", "xMidYMin slice")
 
     //ヘッダ1 SNS
@@ -126,6 +215,7 @@
       "twitter": "https://twitter.com/Mikanixonable",
       "twitter2": "https://twitter.com/botseikatu",
       "twitter3": "https://twitter.com/Unicode_pod",
+      "nisoho": "https://twitter.com/nisoho",
       "twitter4": "https://twitter.com/Eustralo",
       "discord": "https://discord.com/users/396122233698910218",
       "kakuyomu": "https://kakuyomu.jp/users/Eustralopithecus",
@@ -142,212 +232,153 @@
       "vrchat": "https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b",
       "tiktok": "https://www.tiktok.com/@mikanixonable",
       "tumblr": "https://mikanixonable.tumblr.com/",
+      "calckey": "https://calckey.jp/@Mikanixonable",
+      "hatena": "https://mikanixonable.hatenablog.com/",
+      "bookmeter": "https://bookmeter.com/users/1292458",
+
       "odaibako": "https://odaibako.net/u/Mikanixonable",
 
-      "hatena": "https://mikanixonable.hatenablog.com/",
+
+
       "marshmallow": "https://marshmallow-qa.com/mikanixonable",
       "twicass": "https://twitcasting.tv/mikanixonable",
       "artstation": "https://www.artstation.com/mikanixonable",
-      "niconicopic": "https://seiga.nicovideo.jp/user/illust/60514629",
+      "seiga": "https://seiga.nicovideo.jp/user/illust/60514629",
       "peing": "https://peing.net/ja/mikanixonable",
       "askfm": "https://ask.fm/Mikanixonable",
-      "bookmeter": "https://bookmeter.com/users/1292458",
+
     }
+
+    const header = svg.append("g")
+    const header2 = svg.append("g")
+    .attr("transform",
+          `translate(${0 + 10*unit*PC},${2*unit*(1-PC)})`)
     //SNSリンクタイル作成関数定義
-    function makeTile(sns, x, y, size) {
-      svg.append("a").attr("href", snsURLs[sns])
+
+    function makeTile(sns, x, y, size, header) {
+      header.append("a").attr("href", snsURLs[sns])
         .append("image")
         .attr("x", unit * x)
         .attr("y", unit * y)
-        .attr("width", unit * size * 0.5)
-        // .attr("height", unit*size*0.5)
+        .attr("width", unit * size *1)
         .attr("xlink:href", `icon/${sns}.png`)
     }
     //SNSリンク作成
-    makeTile("twitter", 0, 0, 2)
-    makeTile("twitter2", 4, 0.5, 0.5)
-    makeTile("twitter3", 3, 0, 1)
-    makeTile("twitter4", 4, 1, 0.03)
-    makeTile("kakuyomu", 2, 1, 1.5)
-    makeTile("mstdn", 1, 2, 0.5)
-    makeTile("discord", 5, 0, 1)
+    makeTile("twitter", 0, 0, 2, header)
+    makeTile("twitter2", 2, 0.5, 0.5, header)
+    makeTile("twitter3", 3, 0, 1, header)
+    makeTile("twitter4", 4, 1, 0.06, header)
+    makeTile("nisoho", 2.5, 0, 0.5, header)
+    makeTile("kakuyomu", 2, 1, 1, header)
+    makeTile("mstdn", 4, 1, 0.5, header)
+    makeTile("calckey", 3.5, 1.5, 0.5, header)
+    makeTile("discord", 4, 0, 1, header)
+    makeTile("spotify", 7, 0, 1, header)
+    makeTile("pixiv", 8, 0, 2, header)
+    makeTile("misskey", 5, 0.5, 1.5, header)
+    makeTile("github", 7, 1, 1, header)
+    makeTile("bookmeter", 6.5, 0, 0.5, header)
 
-    makeTile("spotify", 7, 0, 1)
-    makeTile("pixiv", 8, 0, 2)
-    makeTile("tumblr", 7, 2, 2)
-    makeTile("tiktok", 9, 2, 1)
-    makeTile("niconico", 9, 3, 1)
-    makeTile("vrchat", 6, 3, 1)
-    makeTile("misskey", 5, 1, 2)
-    makeTile("github", 7, 1, 1)
-
-    makeTile("youtube", 0.5, 3, 1)
-    makeTile("keybase", 3, 2.5, 1)
-    makeTile("soundcloud", 2, 3, 1)
-    makeTile("instagram", 1.5, 2.5, 0.5)
-    makeTile("hatena", 0, 2, 1)
-
-
+    makeTile("tumblr", 7, 0, 2, header2)
+    makeTile("tiktok", 9, 0, 1, header2)
+    makeTile("niconico", 9, 1, 1, header2)
+    makeTile("vrchat", 6, 1, 1, header2)
+    makeTile("youtube", 0.5, 1, 1, header2)
+    makeTile("keybase", 3, 0.5, 1, header2)
+    makeTile("soundcloud", 2, 1, 1, header2)
+    makeTile("instagram", 1.5, 1, 0.5, header2)
+    makeTile("hatena", 0, 0, 1, header2)
+    makeTile("odaibako", 0, 1, 0.5, header2)
+    makeTile("artstation", 1.5, 0, 0.5, header2)
+    makeTile("seiga", 1.5, 0.5, 0.5, header2)
     //タイトル
-    const titleG = svg.append("g")
-      .attr("transform", `translate(${unit * 0},${unit * 3.5})`)
-
-    //タイトル背景
-    let illust = json1.find((v) => v.num == String(dice))
-    titleG.append("rect")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", width)
-      .attr("height", unit * 1)
-      .attr("fill", illust["colors"][0])
-
-    titleG.append("text")
-      .attr("x", unit * 0)
-      .attr("y", "1em")
-      .attr("font-size", "3em")
-      .attr("fill", () => {
-        function whity(c) {
-          let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
-            .map((v) => parseInt(v, 16) / 255)
-          return (colrs[0] + colrs[1] + colrs[2]) / 3
-        }
-        let bgcolor = illust["colors"][0]
-        let color = "var(--c2)"
-        if (whity(bgcolor) > 0.7) {
-          let cList = illust["colors"].map((v) => whity(v))
-          color = illust["colors"][cList.indexOf(Math.min(...cList))]
-        }
-        return color
-      })
-      .text("月面植物園")
-
-    titleG.append("text")
-      .attr("x", "15em")
-      .attr("y", "1em")
-      .attr("font-size", "1em")
-      .attr("fill", () => {
-        function whity(c) {
-          let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
-            .map((v) => parseInt(v, 16) / 255)
-          return (colrs[0] + colrs[1] + colrs[2]) / 3
-        }
-        let bgcolor = illust["colors"][0]
-        let color = "var(--c2)"
-        if (whity(bgcolor) > 0.7) {
-          let cList = illust["colors"].map((v) => whity(v))
-          color = illust["colors"][cList.indexOf(Math.min(...cList))]
-        }
-        return color
-      })
-      .text("にそなのホームページ")
-
-
-    function tile(dic) {
-      //デフォルト値
-      let dic2 = {
-        "name": "name",
-        "x": 0,
-        "y": 0,
-        "wh": [1, 1],
-        "bgcolor": "var(--c5)",
-      }
-      //デフォルト値と入力値が違うときのみ上書き
-      for (let key in dic) {
-        dic2[key] = dic[key];
-      }
-
-      let a = svg.append("g")
-        .attr("transform",
-          `translate(${unit * dic2.x},${unit * dic2.y})`)
-        .append("a").attr("href", dic2.url)
-      a.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", unit * dic2.wh[0])
-        .attr("height", unit * dic2.wh[1])
-        .attr("fill", dic2.bgcolor)
-      a.append("g")
-        .append("text")
-        .attr("x", unit * dic2.wh[0] / 2)
-        .attr("y", unit * dic2.wh[1])
-        .attr("font-size", () => {
-          let half = dic2.name.replace(/[^0-9a-z]/gi,'').length
-          let full = dic2.name.length - half
-
-          let em = Math.min(
-            dic2.wh[0] * unit / (half*0.5+full),
-            dic2.wh[1] * unit
-          )
-          return em
-        })
-        .attr("text-anchor", "middle")
-        // .attr("alignment-baseline", "middle")
-        .attr("fill", () => {
-          let bgcolor = dic2.bgcolor
-
-          function whity(c) {
-            let colrs = [c.slice(1, 3), c.slice(3, 5), c.slice(5, 7)]
-              .map((v) => parseInt(v, 16) / 255)
-            return (colrs[0] + colrs[1] + colrs[2]) / 3
-          }
-          let color = "var(--c2)"
-          if (whity(bgcolor) > 0.7) {
-            let cList = illust["colors"].map((v) => whity(v))
-            color = illust["colors"][cList.indexOf(Math.min(...cList))]
-          }
-          return color
-        })
-        .html(dic2.name)
-    }
-
 
 
     tile({
+      "x": 0,
+      "y": 4,
+      "wh": [5, 1.5],
+      "name": "月面植物園",
+      "bgcolor": clist[0],
+    })
+    tile({
+      "x": 5,
+      "y": 4,
+      "wh": [2, 1.5],
+      "name": "にそなのホームページ",
+      "bgcolor": clist[0],
+    })
+    tile({
+      "x": 7,
+      "y": 4,
+      "wh": [1, 2],
+      "url": "5.html?n=" + dice,
+      "name": "現在の背景画像",
+      "bgcolor": clist[2],
+    })
+    tile({
       "x": 8,
-      "y": 3.5,
+      "y": 4,
       "wh": [2, 2],
       "url": "1.html",
       "name": "サイトマップ",
-      "bgcolor": illust.colors[3],
+      "bgcolor": clist[3],
     })
 
-    tile({
-      "x": 7,
-      "y": 3.5,
-      "wh": [1, 1],
-      "url": "5.html?n=" + dice,
-      "name": "背景画像",
-      "bgcolor": illust.colors[2],
-    })
 
-    let news = json2.map((v) => parseInt(v.mtime, 10))
-      .sort((a, b) => b - a)
-      .map((v) => json2.find((k) => parseInt(k.mtime, 10) == v))
-
-
+    let news = json2.sort((a, b) => { return b.mtime - a.mtime })
+    // .filter((v)=>!v.name.match(/_/))
+    //開発中のhtmlファイル名はアンダーバーを含むため、除外
 
 
     tile({
-      "x": 2,
-      "y": 4.5,
-      "wh": [3, 1],
+      "x": 5,
+      "y": 7,
+      "wh": [3, 2],
       "name": "最近の更新",
       "bgcolor": illust.colors[4],
     })
 
     for (let k = 0; k < 10; k++) {
       tile({
-        "x": Math.random() * 3,
-        "y": 5.5 + k,
-        "wh": [3 + 6 * Math.random(), 1],
+        "x": 0,
+        "y": 7 + k,
+        "wh": [5, 1],
         "url": news[k].name + ".html",
         "name":
           news[k].name + " "
           + news[k].title
           + " " + news[k].mdate,
-        "bgcolor": illust.colors[(5 + k) % 15],
+        "bgcolor": clist[k],
       })
     }
+
+
+    function mikuButton(name, num, k) {
+      tile({
+        "x": 0 + k,
+        "y": 5.5,
+        "wh": [1, 1],
+        "name": name,
+        "bgcolor": clist[k],
+        "on": [
+          "click",
+          () => {
+            let music = new Audio(num + '.mp3');
+            music.currentTime = 0;
+            music.play();
+          }
+        ]
+      })
+    }
+    mikuButton("ミクボタン", 1, 0)
+    mikuButton("ねう", 2, 1)
+    mikuButton("Mazurek Dąbrowskiego", 3, 2)
+    mikuButton("ねこーっ", 4, 3)
+    mikuButton("ねこねこ", 5, 4)
+    mikuButton("にゃう", 6, 5)
+    mikuButton("ぬい~", 7, 6)
+    // mikuButton("pikopiko",8,7)
 
 
 
