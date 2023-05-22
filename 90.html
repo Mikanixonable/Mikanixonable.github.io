@@ -1,0 +1,135 @@
+<html>
+
+<head>
+  <title>illust archive</title>
+  <meta content="" genre="illust">
+</head>
+<!-- <link rel="stylesheet" href="js/style.css"> -->
+<style>
+  body {
+    padding: 0em;
+    margin: 0em;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    /*スクロールバー非表示（IE・Edge）*/
+    -ms-overflow-style: none;
+
+    /*スクロールバー非表示（Firefox）*/
+    scrollbar-width: none;
+  }
+  div{
+    background-color: #aaa;
+  }
+</style>
+
+<body>
+  <div id="chart"></div>
+</body>
+
+<script src="js/d3v7.js"></script>
+<script type="text/javascript" src="js/svg-z-order.js"></script>
+<script>
+
+
+
+
+  fetch("json/illust.csv")
+    .then(response => response.arrayBuffer())
+    .then(binary => {
+      let csv = new TextDecoder('shift-jis').decode(binary)
+      let dics = csv2dic(csv)
+      main2(dics)
+    })
+    .catch(error => {
+      console.error('CSVの読み込みエラー:', error);
+    })
+
+  function csv2dic(csv) {
+    //文字列ファイルのcsvをパースし二次元配列へ
+    function pard(csv) {
+      let tmp = [];
+      csv = csv.replace(/("[^"]*")+/g, (match) => {
+        tmp.push(match.slice(1, -1).replace(/""/g, '"')); return '[TMP]';
+      });
+      return csv.split("\n").map((row) => {
+        return row.split(',').map((val) => val === '[TMP]' ? tmp.shift() : val)
+      });
+    }
+
+    //csvを辞書化
+    let lines = pard(csv)
+    const header = lines[0];
+    const dics = [];
+    for (let i = 1; i < lines.length; i++) {
+      const v = lines[i];
+      if (v.length === header.length) {
+        const dic = {};
+        for (let j = 0; j < header.length; j++) {
+          dic[header[j]] = v[j];
+        }
+        dics.push(dic);
+      }
+    }
+    return dics
+  };
+
+  function main2(dics) {
+    //準備
+    const width = window.innerWidth
+    const height = window.innerHeight*15
+    const svg = d3.select("#chart").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+
+    const y = d3.scaleLinear()
+    .domain([
+      Math.min(...dics.map((d)=>d.num)),
+      Math.max(...dics.map((d)=>d.num))
+    ])
+    .range([100,height-100])
+
+    const x = d3.scaleLinear()
+    .domain([
+    Math.min(...dics.map((d) =>d.date)
+.filter(n=>n).map((d)=>new Date(d).getTime())),
+    Math.max(...dics.map((d) =>d.date)
+.filter(n=>n).map((d)=>new Date(d).getTime()))
+  ])
+    .range([100,width-100])
+
+// console.log(Math.max(...dics.map((d) =>d.date)
+// .filter(n=>n).map((d)=>new Date(d).getTime())))
+   //画像の親要素
+      const pic = svg.selectAll("g").data(dics).join("g")
+      .attr("transform",(d,i)=> `translate(${
+        x(new Date(d.date).getTime())
+      },${
+       y(i)*0.8
+      })`)
+
+      pic.append("circle")
+      .attr("cx", (d,i)=>0)
+      .attr("cy", (d,i)=>0)
+      .attr("r", (d,i)=>3)
+      .attr("fill", "#258")
+
+      pic.append("text")
+      .text((d, i) => d.num)
+      .attr("style", (d,i)=>`font-size: ${3}px`)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .attr("fill", "#eee")
+      .attr("text",(d,i)=>d.num)
+
+      
+
+      
+  }
+</script>
+
+</html>
