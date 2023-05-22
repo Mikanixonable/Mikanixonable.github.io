@@ -1,0 +1,287 @@
+<html>
+
+<head>
+  <title>illust archive</title>
+  <meta content="" genre="illust">
+</head>
+<link rel="stylesheet" href="js/style.css">
+<style>
+  body {
+    background-color: var(--c7);
+    color: var(--c2);
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+</style>
+
+<body>
+  <div id="chart"></div>
+</body>
+
+<script src="js/d3v7.js"></script>
+<script type="text/javascript" src="js/svg-z-order.js"></script>
+<script>
+  let n = 530
+  let margin = 0
+  let mainWidth = window.innerWidth
+  let viewHeight = window.innerHeight
+
+  //main
+  fetch("json/illusts.json")
+    .then(response => { return response.json(); })
+    .then(json => {
+      prepare(json)
+      d3main(json, dic)
+    })
+
+  function prepare(json) {
+    dic = ordering(json, mainWidth, 8, n)
+    let yList = dic.map(function (p) {
+      return p.y;
+    });
+    let bottomRowY = Math.max.apply(null, yList)
+    let bottomY = dic.find((p) => p.y == bottomRowY).height
+    pageHeight = bottomRowY + bottomY
+    box = Math.min(mainWidth, viewHeight)
+  }
+
+  //画像位置データ作成関数
+  function ordering(json, width, div, num) {
+    let list = makeList(num)
+    let arr = makeRow(list, width, div)
+    let dic = makeDic(json, arr, width)
+    return dic
+  }
+  //テーマに基づいて作品番号の配列をつくる
+  function makeList(num) {
+    let list = [...Array(num)].map((_, i) => String(i))
+    let list2 = list.reverse()
+    return list2
+  }
+
+  //作品番号の配列を列ごとにグループ化した配列を作る
+  function makeRow(list, width, thres) {
+    let k = 0
+    let arr = []
+    let row = []
+    for (let i = 0; i < list.length; i++) {
+      row.push(list[i])
+      k += 1
+      if (k > thres - 1) {
+        arr.push(row)
+        row = []
+        k = 0
+      }
+    }
+    return arr
+  }
+
+  //グループ化した配列から画像の座標を計算し辞書に入れる
+  function makeDic(json, arr, width) {
+    let dic = []
+    let heightsum = 0
+    //一行単位の操作
+    for (let k = 0; k < arr.length; k++) {
+      let normalWidth = arr[k].reduce((sum, num) => {
+        let img = json.find((v) => v.num == num)
+        return sum + img["width"] / img["height"]
+      }, 0)
+
+      //一画像単位の操作
+      let imgDic = {}
+      let rate = 0
+      let imgWidth
+      let imgHeight = width / normalWidth
+      heightsum += imgHeight
+      for (let s = 0; s < arr[k].length; s++) {
+        let image = json.find((v) => v.num == arr[k][s])
+        imgDic = {}
+        imgDic["num"] = image["num"]
+
+        imgWidth = (image["width"] / image["height"]) * imgHeight
+        imgDic["width"] = imgWidth
+        imgDic["height"] = imgHeight
+        imgDic["widthR"] = image["width"]
+        imgDic["heightR"] = image["height"]
+
+        rate = 0
+        let img;
+        for (let ss = 0; ss < s; ss++) {
+          img = json.find((v) => v.num == arr[k][ss])
+          rate += (img["width"] / img["height"]) / normalWidth
+        }
+
+        imgDic["x"] = (width * rate)
+        imgDic["y"] = (heightsum - imgHeight)
+        dic.push(imgDic)
+
+      }
+    }
+    return dic
+  }
+
+
+  //D3描画
+  function d3main(json, dic) {
+
+    //準備　svgタグ作成と座標変換
+    let svg = d3.select("#chart").append("svg").attr("id", "svgE")
+      .attr("class", "d3svg")
+      .attr("width", mainWidth)
+      .attr("height", pageHeight)
+    let flame = svg.append("g")
+      .attr("transform", `translate(${mainWidth / 2},${0})`)
+
+
+    let gFlame = flame.append("g")
+      .attr("transform", `translate(${-mainWidth / 2},${0})`)
+
+    //描画
+    let g = gFlame.selectAll("g").data(dic).join("g")
+      .attr("transform", (d, i) => {
+        return `translate(${d.x},${d.y}) scale(${1})`
+      })
+    const img = g.append("image").attr("class", "image")
+      .attr("href", (d, i) => `illusts/s/${d.num}.png`)
+      .attr("height", (d, i) => {
+        return d.height
+      })
+
+    //animation
+    let albumMode = true //when preview is open=>false
+    let gAnim = g.on('click', function (d, i) {
+      if (albumMode) {
+
+        //add background rect
+        let rect = gFlame.append("rect")
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", mainWidth)
+          .attr("height", pageHeight)
+          .attr("fill", "var(--c7)")
+          .attr("opacity", 0.9)
+        //選択解除時
+        rect.on('click', function (d, i) {
+          gFlame.selectAll("g")
+            .attr("transform", (d, i) => {
+              document.title = "illust archive"
+
+              return `translate(${d.x},${d.y}) scale(${1})`
+            })
+          // gFlame.selectAll("circle").remove()
+          rect.remove()
+          preview.remove()
+          title.remove()
+          titleRect.remove()
+          gFlame.selectAll(".image")
+            .attr("height", (d, i) => {
+              return d.height
+            })
+          albumMode = true
+        })
+
+
+
+        //説明欄背景
+        const titleRect = d3.select(this).append("rect")
+          .attr("x", d.width / d.height * box * 0.7 / 2)
+          .attr("y", 0)
+          .attr("width", (d, i) => {
+            document.title = d.num + ".png"
+            window.history.replaceState(null, null, '?n=' + d.num)
+
+            //           let p = url.searchParams.get("p");
+            // if (!p) {
+            //   p = "x"
+            //   url.searchParams.append('p', p);
+            //   location.href = url
+            // }
+            let x = d.width / d.height * box * 0.7
+            if (d.width > d.height) {
+              x = box * 0.7
+            }
+            return `${box}`
+          })
+          .attr("height", box * 0.7)
+          .attr("fill", "#222")
+          .attr("opacity", 1)
+
+        //絵の説明
+        const title = d3.select(this)
+          .append("foreignObject")
+          .attr("x", (d, i) => {
+            let x = d.width / d.height * box * 0.7
+            if (d.width > d.height) {
+              x = box * 0.7
+            }
+            return `${x}`
+          })
+          .attr("y", "0")
+          .attr("width", (d, i) => {
+            let x = mainWidth / 2 - d.width / d.height * box * 0.7 / 2
+            return x
+          })
+          .attr("height", 1000)
+          .attr("font-size", `3em`)
+          .attr("style", "text-align:center")
+          .html((d, i) => {
+            return d.num
+              + "<br> width: " + d.widthR + "px height: " + d.heightR + "px"
+              + "<br>" + `<a href="illusts/${d.num}.png">original image</a>`
+              + "<br>" + `<a href="5.html?n=${d.num}">page</a>`
+          })
+
+
+        //フルサイズ画像の表示
+        const preview = d3.select(this).append("image")
+          .attr("href", (d, i) => `illusts/${d.num}.png`)
+          .attr("height", (d, i) => {
+            return d.height
+          })
+        //表示を最前面に
+        let d3g = d3.select(this)
+        svgz_element(d3g.node()).toTop();
+
+
+        //gを画面中央に移動
+        d3.select(this).transition().delay(0).duration(150)
+          .attr("transform", (di, ii) => {
+            // let r = Math.sqrt(di.width ** 2 + di.height ** 2)
+            // let x = mainWidth / 2 - viewHeight * di.width / (r * 2)
+            let x = mainWidth / 2 - 0.5 * (di.width / di.height * box * 0.7)
+            if (di.width > di.height) {
+              x = mainWidth / 2 - box * 0.7 / 2
+            }
+            // let h = viewHeight * di.height / r
+            // let y = window.scrollY + (viewHeight - h) / 2
+            let y = window.pageYOffset
+            return `translate(${x},${y}) scale(${1})`
+          })
+        //画像サイズ変更
+        d3.select(this).selectAll("image").transition().delay(0).duration(150)
+          .attr("height", (d, i) => {
+            let result = box * 0.7//縦長の場合
+            if (d.width > d.height) {
+              result = box * 0.7 * d.height / d.width
+            }
+
+            // let r = Math.sqrt(d.width ** 2 + d.height ** 2)
+            // let h = viewHeight * d.height / r
+            return `${result}`
+          })
+
+        albumMode = false
+
+      }
+    })
+  }
+
+
+</script>
+
+</html>
