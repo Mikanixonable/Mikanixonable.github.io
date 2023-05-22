@@ -21,18 +21,13 @@ def makeCSV(filename,nums):
 
 def csv2dic(filename):
     csv_file_path = deskPath + filename
-    dic = {}
+    dateDic = {}
     with open(csv_file_path, 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         for row in reader:
-            dic[row[0]] = row[1]
-    return dic
+            dateDic[row[0]] = row[1]
 
-def csv2dic2(filename):
-    csv_file_path = deskPath + filename
-    with open(csv_file_path, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-    return reader
+    return dateDic
 
 #実行
 def main():
@@ -58,31 +53,24 @@ def main():
         illust["size"] = os.path.getsize(imgPath)
 
     #追加情報の追加
-    csv = csv2dic2('json/illust.csv')
     dateDic = csv2dic('json/date.csv')
     tagDic = csv2dic("json/tag.csv")
     for illust in illusts:
-        n = illust["num"]
-
-        illust["date"] = mofu(csv,n)['date']
-        illust["tags"] = mofu(csv,n)['tags']
-     
-       
-
-        #色抽出
-        imgPath = deskPath + "illusts/" + n + ".png"
+        imgPath = deskPath + "illusts/" + illust["num"] + ".png"
         img = Image.open(imgPath).resize((256,256))
+        n = illust["num"]
         limit = 15
+
         colors, pixelCount = extcolors.extract_from_image(img, tolerance = 12, limit = limit)
         colorCodes = ['#{:02x}{:02x}{:02x}'.format(*rgb[0]) for rgb in colors]
         colorRates = [rgb[1] for rgb in colors]
         while len(colorCodes)<limit:
             colorCodes.append(colorCodes[len(colorCodes)-1])
 
+        illust["date"] = dateDic[n]
+        illust["tags"] = tagDic[n]
         illust["colors"] = colorCodes
         illust["colorRates"] = [colorRate/pixelCount for colorRate in colorRates]
-
-    
         print(n)
 #       {
 #     "name": "-10",

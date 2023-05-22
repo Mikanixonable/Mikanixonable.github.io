@@ -84,6 +84,7 @@
       main()
     }
   })
+
   function button() {
     k = Math.floor(Math.random() * (1 + range[1] - range[0]) + range[0]);
     window.history.replaceState(null, null, '?n=' + k);
@@ -99,17 +100,51 @@
   const range = [-213, 531]
   let height = window.innerHeight
 
+  function csv2dic(csvFile) {
+
+}
+const parseCSV=(csv)=>{
+    let tmp=[];
+    csv=csv.replace(/("[^"]*")+/g,(match)=>{
+        tmp.push(match.slice(1,-1).replace(/""/g,'"'));return '[TMP]';
+    });
+    return csv.split("\n").map((row)=>{
+        return row.split(',').map((val)=>val==='[TMP]'?tmp.shift():val)
+    });
+};
+
   function main() {
-    fetch("json/illusts.json")
-      .then(response => { return response.json(); })
-      .then(json => {
-        main2(json)
-      })
-  }
+    return fetch("json/illust.csv")
+    .then(response => response.arrayBuffer())
+    .then(binary => {
+      let text = new TextDecoder('shift-jis').decode(binary)
+      const lines = parseCSV(text);
+      const headers = lines[0];
+      const dictionaryArray = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const values = lines[i];
+        if (values.length === headers.length) {
+          const dictionary = {};
+          for (let j = 0; j < headers.length; j++) {
+            dictionary[headers[j]] = values[j];
+          }
+          dictionaryArray.push(dictionary);
+        }
+      }
+      main2(dictionaryArray)
+    })
+    .catch(error => {
+      console.error('CSVの読み込みエラー:', error);
+    })}
+
+    
 
   main()
 
   function main2(json) {
+   
+
     url = new URL(window.location.href);
     n = url.searchParams.get("n");
     if (!n) {
@@ -123,24 +158,31 @@
     }
 
     // imgTitle.innerText = n
+  
     numInput.value = n
     document.title = n + ".png"
     let imgPath = "illusts/" + n + ".png";
     imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height * 0.7}>`
-    p = json.find((p) => p.name == n)
-  
+
+    p = json.find((p) => p.num == n)
 
     //meta data
-    meta = "link: " + "<a href=" + imgPath + ">" + imgPath + "</a>"
+    // let meta = p.date
+    // imgMeta.innerHTML = meta
+    let meta = "link: " + "<a href=" + imgPath + ">" + imgPath + "</a>"
       + "<br>" + "w×h: " + p.width + "×" + p.height
       + "<br>"
-    if (p.title) { meta += "title: " + p.title }
-    if (p.date) { meta += "date: " + p.date }
+      
+    if (p.title) { meta += "title: " + p.title + "<br>"}
+    if (p.date) { meta += "date: " + p.date + "<br>"}
     if (p.tags.length > 0) {
-      for (let k; k < p.tags.length; k++) {
-        meta += "#" + p.tags[k] + " "
+      meta +="tags: "
+      for (let k=0; k < p.tags.split(",").length; k++) {
+        meta += "#"+p.tags.split(",")[k]+" "
       }
+      meta += "<br>"
     }
+    if (p.description) { meta += "description: " + p.description + "<br>"}
     imgMeta.innerHTML = meta
   }
 </script>
