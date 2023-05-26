@@ -88,10 +88,11 @@
 
     const y = d3.scaleLinear()
     .domain([
-      Math.min(...dics.map((d)=>d.num)),
+      // Math.min(...dics.map((d)=>d.num)),
+      0,
       Math.max(...dics.map((d)=>d.num))
     ])
-    .range([100,height-100])
+    .range([0,height-100])
 
     const x = d3.scaleLinear()
     .domain([
@@ -100,7 +101,7 @@
     Math.max(...dics.map((d) =>d.date)
 .filter(n=>n).map((d)=>new Date(d).getTime()))
   ])
-    .range([10,width-10])
+    .range([10,width])
 
 // console.log(Math.max(...dics.map((d) =>d.date)
 // .filter(n=>n).map((d)=>new Date(d).getTime())))
@@ -115,16 +116,29 @@
       pic.append("circle")
       .attr("cx", (d,i)=>0)
       .attr("cy", (d,i)=>0)
-      .attr("r", (d,i)=>3)
+      .attr("r", (d,i)=>5)
       .attr("fill", "#258")
 
       pic.append("text")
       .text((d, i) => d.num)
-      .attr("style", (d,i)=>`font-size: ${3}px`)
+      .attr("style", (d,i)=>`font-size: ${6}px`)
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
       .attr("fill", "#eee")
       .attr("text",(d,i)=>d.num)
+
+      pic
+      .on('mouseover', function (d, i) {
+      const datet = d3.select(this)
+      .append("text")
+      .attr("id","tetete")
+      .attr("x",0).attr("y",-15)
+      .attr("fill","#268")
+      .text(i.date)
+    })
+      .on("mouseout",(e)=>{
+        d3.select("#tetete").remove()
+      })
 
       
 
