@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+
+<head>
+	<meta charset="utf-8" content="" genre="font" />
+	<title>異形明朝デモページ</title>
+	<style media="screen">
+		@font-face {
+			font-family: 'IgyouMincho';
+			src: url('fonts/IgyouMincho.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouMincho2';
+			src: url('fonts/IgyouMincho2.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouMincho3';
+			src: url('fonts/IgyouMincho3.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouGothic';
+			src: url('fonts/IgyouGothic.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouGothic2';
+			src: url('fonts/IgyouGothic2.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouGothic3';
+			src: url('fonts/IgyouGothic3.ttf');
+		}
+
+		@font-face {
+			font-family: 'InuitHan';
+			src: url('fonts/InuitHan.ttf');
+		}
+
+		@font-face {
+			font-family: 'KhmerHan';
+			src: url('fonts/KhmerHan.ttf');
+		}
+
+		@font-face {
+			font-family: 'KhmerHanB';
+			src: url('fonts/KhmerHanB.ttf');
+		}
+
+		@font-face {
+			font-family: 'HangulHan';
+			src: url('fonts/HangulHan.ttf');
+		}
+
+		@font-face {
+			font-family: 'JidouKaisatsu';
+			src: url('fonts/JidouKaisatsu.ttf');
+		}
+
+		@font-face {
+			font-family: 'JidouKaisatsuB';
+			src: url('fonts/JidouKaisatsuB.ttf');
+		}
+
+		@font-face {
+			font-family: 'JidouKaisatsuC';
+			src: url('fonts/JidouKaisatsuC.ttf');
+		}
+
+		@font-face {
+			font-family: 'JidouKaisatsuBlack';
+			src: url('fonts/JidouKaisatsuBlack.ttf');
+		}
+
+		@font-face {
+			font-family: 'CuneiformHan';
+			src: url('fonts/CuneiformHan.ttf');
+		}
+
+		@font-face {
+			font-family: 'CuneiformHanB';
+			src: url('fonts/CuneiformHanB.ttf');
+		}
+
+		@font-face {
+			font-family: 'MeltHan';
+			src: url('fonts/MeltHan.ttf');
+		}
+
+		@font-face {
+			font-family: 'IgyouFude';
+			src: url('fonts/IgyouFude.ttf');
+		}
+
+		@font-face {
+			font-family: 'DatsuaNyuou';
+			src: url('fonts/DatsuaNyuou.ttf');
+		}
+
+		@font-face {
+			font-family: 'KaikouChouseki';
+			src: url('fonts/KaikouChouseki.ttf');
+		}
+
+		@font-face {
+			font-family: 'JidouKaisatsuMin';
+			src: url('fonts/JidouKaisatsuMin.ttf');
+		}
+
+		body {
+			padding: 0em;
+			margin: 0em;
+			background: #AAA;
+			padding: 4%;
+
+
+		}
+
+		.article1 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.article2 {
+			display: flex;
+			flex-direction: column;
+
+		}
+
+		.display {
+			height: 8em;
+			width: 100%;
+			background: #FFF;
+			font-size: 4em;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.display p {
+			padding: 2px;
+		}
+
+		.name {
+			font-size: 0.3em;
+			margin: 0em;
+		}
+
+		.out {
+			margin: 0em;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width: 10em;"><a href="index.html">
+			<img src="icon2/title2.png" width="100%"></a></div>
+
+	<article class="article1">
+		<form name="form0">
+			<select name="select" id="select">
+				<option value="異形明朝">異形明朝シリーズ</option>
+				<option value="異形ゴシック">異形ゴシックシリーズ</option>
+				<option value="異形グリフ">異形グリフシリーズ</option>
+				<option value="異形グリフ2">異形グリフシリーズ2</option>
+				<option value="楔形文字">楔形文字</option>
+				<option value="クメール文字">クメール文字</option>
+				<option value="自動改札">自動改札シリーズ(負荷大)</option>
+				<option value="カラー">他カラーフォント(負荷大)</option>
+			</select>
+		</form>
+		<div class="display">
+			<div>
+				<p class="out" id="out1"></p>
+				<p class="name" id="fname1">1</p>
+				<p class="out" id="out2"></p>
+				<p class="name" id="fname2">2</p>
+				<p class="out" id="out3"></p>
+				<p class="name" id="fname3">3</p>
+			</div>
+		</div>
+		<form name="form1">
+			<input id="input1" />
+		</form>
+	</article>
+	<article class="article2">
+		<p>関連リンク</p>
+		<a href="4.html">異形フォントシリーズ一覧(非カラーフォント)</a>
+		<a href="https://www.nicovideo.jp/watch/sm41984071">niconico動画(製作過程)</a>
+		<a href="https://github.com/Mikanixonable/IgyouMincho">GitHub(配布)</a>
+		<a href="https://mikanixonable.booth.pm/">booth(配布)</a>
+	</article>
+</body>
+<script>
+	let select = document.getElementById("select")
+	let display1 = document.getElementById('out1');
+	let display2 = document.getElementById('out2');
+	let display3 = document.getElementById('out3');
+	let fname1 = document.getElementById('fname1');
+	let fname2 = document.getElementById('fname2');
+	let fname3 = document.getElementById('fname3');
+
+	let i = document.forms.form1.input1;
+
+	//フォント
+	fdic = {
+		"異形明朝": ["IgyouMincho", "IgyouMincho2", "IgyouMincho3"],
+		"異形ゴシック": ["IgyouGothic", "IgyouGothic2", "IgyouGothic3"],
+		"異形グリフ": ["InuitHan", "HangulHan", "KhmerHan"],
+		"異形グリフ2": ["MeltHan", "IgyouFude", "JidouKaisatsuBlack"],
+		"楔形文字": ["CuneiformHan", "CuneiformHanB"],
+		"クメール文字": ["KhmerHan", "KhmerHanB"],
+		"自動改札": ["JidouKaisatsu", "JidouKaisatsuB", "JidouKaisatsuC"],
+		"カラー": ["DatsuaNyuou", "KaikouChouseki", "JidouKaisatsuMin"],
+	}
+
+	const fontUpdate = () => {
+		let i2 = document.forms.form0.select.value;
+		display1.style.fontFamily = fdic[i2][0]
+		display2.style.fontFamily = fdic[i2][1]
+		display3.style.fontFamily = fdic[i2][2]
+		fname1.innerHTML = fdic[i2][0] + ` <a href=\"fonts/${fdic[i2][0]}.ttf\">↓</a>`
+		fname2.innerHTML = fdic[i2][1] + ` <a href=\"fonts/${fdic[i2][1]}.ttf\">↓</a>`
+		fname3.innerHTML = fdic[i2][2] + ` <a href=\"fonts/${fdic[i2][2]}.ttf\">↓</a>`
+	}
+
+	const fontLoad = () => {
+		fontUpdate()
+		let i2 = document.forms.form0.select.value;
+		i.value = i2
+		display1.textContent = i2
+		display2.textContent = i2
+		display3.textContent = i2
+	}
+	window.onload = fontLoad
+	select.addEventListener("change", fontUpdate)
+
+	//入力
+	i.addEventListener('input', () => {
+		let str = i.value
+
+		display1.textContent = str
+		display2.textContent = str
+		display3.textContent = str
+	})
+
+</script>
+
+</html>

@@ -105,7 +105,7 @@
 }
 const parseCSV=(csv)=>{
     let tmp=[];
-    csv=csv.replace(/("[^"]*")+/g,(match)=>{
+    csv = csv.replace(/("[^"]*")+/g,(match)=>{
         tmp.push(match.slice(1,-1).replace(/""/g,'"'));return '[TMP]';
     });
     return csv.split("\n").map((row)=>{
@@ -121,6 +121,7 @@ const parseCSV=(csv)=>{
       const lines = parseCSV(text);
       const headers = lines[0];
       const dictionaryArray = [];
+      console.log(lines)
 
       for (let i = 1; i < lines.length; i++) {
         const values = lines[i];
@@ -132,13 +133,12 @@ const parseCSV=(csv)=>{
           dictionaryArray.push(dictionary);
         }
       }
+      console.log(dictionaryArray)
       main2(dictionaryArray)
     })
     .catch(error => {
       console.error('CSVの読み込みエラー:', error);
     })}
-
-    
 
   main()
 
