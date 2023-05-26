@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>illust archive</title>
+  <title>illust plots</title>
   <meta content="" genre="illust">
 </head>
 <!-- <link rel="stylesheet" href="js/style.css"> -->
@@ -81,7 +81,7 @@
   function main2(dics) {
     //準備
     const width = window.innerWidth
-    const height = window.innerHeight*15
+    const height = window.innerHeight
     const svg = d3.select("#chart").append("svg")
     .attr("width", width)
     .attr("height", height)
@@ -100,7 +100,7 @@
     Math.max(...dics.map((d) =>d.date)
 .filter(n=>n).map((d)=>new Date(d).getTime()))
   ])
-    .range([100,width-100])
+    .range([10,width-10])
 
 // console.log(Math.max(...dics.map((d) =>d.date)
 // .filter(n=>n).map((d)=>new Date(d).getTime())))
