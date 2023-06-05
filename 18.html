@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <html dir="ltr" lang="ja">
 
 <head>
@@ -111,39 +111,40 @@
 		}
 
 		body {
-			padding: 0em;
 			margin: 0em;
-			background: #AAA;
-			padding: 4%;
-
-
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			background-color: #95959b;
 		}
+		
 
 		.article1 {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			flex-grow: 1;
+			/* background-color: #686b5d; */
 		}
 
 		.article2 {
 			display: flex;
 			flex-direction: column;
 
+			flex-grow: 1;
+
+			justify-content: flex-end;
+			/* background-color: #ae9e9e; */
 		}
 
 		.display {
-			height: 8em;
 			width: 100%;
-			background: #FFF;
+			background: #eee;
 			font-size: 4em;
 			text-align: center;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-		}
-
-		.display p {
-			padding: 2px;
 		}
 
 		.name {
@@ -154,16 +155,24 @@
 		.out {
 			margin: 0em;
 		}
+
+		.form{
+			height: 1.5em;
+			background-color: #ffffffa0;
+			border: 0em;
+			color: #302e2e;
+			font-size: 1.5em;
+		}
 	</style>
 </head>
 
 <body>
-	<div style="width: 10em;"><a href="index.html">
+	<div class="article0" style="width: 10em;"><a href="index.html">
 			<img src="icon2/title2.png" width="100%"></a></div>
 
-	<article class="article1">
+	<div class="article1">
 		<form name="form0">
-			<select name="select" id="select">
+			<select name="select" id="select" class="form">
 				<option value="異形明朝">異形明朝シリーズ</option>
 				<option value="異形ゴシック">異形ゴシックシリーズ</option>
 				<option value="異形グリフ">異形グリフシリーズ</option>
@@ -185,16 +194,16 @@
 			</div>
 		</div>
 		<form name="form1">
-			<input id="input1" />
+			<input id="input1" class="form"/>
 		</form>
-	</article>
-	<article class="article2">
+	</div>
+	<div class="article2">
 		<p>関連リンク</p>
 		<a href="4.html">異形フォントシリーズ一覧(非カラーフォント)</a>
 		<a href="https://www.nicovideo.jp/watch/sm41984071">niconico動画(製作過程)</a>
 		<a href="https://github.com/Mikanixonable/IgyouMincho">GitHub(配布)</a>
 		<a href="https://mikanixonable.booth.pm/">booth(配布)</a>
-	</article>
+	</div>
 </body>
 <script>
 	let select = document.getElementById("select")
