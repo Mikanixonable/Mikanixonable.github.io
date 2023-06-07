@@ -117,7 +117,7 @@
 			height: 100%;
 			background-color: #95959b;
 		}
-		
+
 
 		.article1 {
 			display: flex;
@@ -127,36 +127,40 @@
 			/* background-color: #686b5d; */
 		}
 
-		.article2 {
+
+		.row {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.col {
 			display: flex;
 			flex-direction: column;
-
-			flex-grow: 1;
-
-			justify-content: flex-end;
-			/* background-color: #ae9e9e; */
+			margin-right: 1em;
 		}
 
 		.display {
 			width: 100%;
 			background: #eee;
-			font-size: 4em;
-			text-align: center;
 			display: flex;
+			text-align: center;
 			justify-content: center;
-			align-items: center;
-		}
-
-		.name {
-			font-size: 0.3em;
-			margin: 0em;
 		}
 
 		.out {
-			margin: 0em;
+			font-size: 4rem;
+			margin-top: 2rem;
+			margin-bottom: 0em;
 		}
 
-		.form{
+
+		.name {
+			font-size: 1rem;
+			margin-top: 0em;
+			margin-bottom: 2rem;
+		}
+
+		.form {
 			height: 1.5em;
 			background-color: #ffffffa0;
 			border: 0em;
@@ -194,15 +198,21 @@
 			</div>
 		</div>
 		<form name="form1">
-			<input id="input1" class="form"/>
+			<input id="input1" class="form" />
 		</form>
 	</div>
-	<div class="article2">
-		<p>関連リンク</p>
-		<a href="4.html">異形フォントシリーズ一覧(非カラーフォント)</a>
-		<a href="https://www.nicovideo.jp/watch/sm41984071">niconico動画(製作過程)</a>
-		<a href="https://github.com/Mikanixonable/IgyouMincho">GitHub(配布)</a>
-		<a href="https://mikanixonable.booth.pm/">booth(配布)</a>
+	<div class="row">
+		<div class="col">
+			<p>関連リンク</p>
+			<a href="4.html">異形フォントシリーズ一覧</a>
+			<a href="57.html">異形フォントシリーズ使用例</a>
+		</div>
+		<div class="col">
+			<p>外部リンク</p>
+			<a href="https://www.nicovideo.jp/watch/sm41984071">niconico動画(製作過程)</a>
+			<a href="https://github.com/Mikanixonable/IgyouMincho">GitHub(配布)</a>
+			<a href="https://mikanixonable.booth.pm/">booth(配布)</a>
+		</div>
 	</div>
 </body>
 <script>
