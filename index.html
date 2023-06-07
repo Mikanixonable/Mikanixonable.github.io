@@ -10,18 +10,17 @@
     background-image: url("topography.svg");
     background-color: #68c1be;
     color: white;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* align-items: center; */
     padding: 1em;
     margin: 0em;
     font-size: 1em;
-    /* font-family: 'Franklin Gothic Medium', Arial, sans-serif; */
-    /*スクロールバー非表示（IE・Edge）*/
+
+   /*スクロールバー非表示（IE・Edge）*/
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   body::-webkit-scrollbar {
@@ -55,12 +54,20 @@
     padding: 0;
   }
 
-
   .box {
     background-color: #4b7699a4;
     padding: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
+  
+  }
+  .box2 {
+    background-color: #4b7699a4;
+    padding: 1em;
+    width:max-content ;
+ position: fixed;
+ bottom: 0;
+ 
   }
 
   a {
@@ -124,7 +131,10 @@
       2016年ごろからネット上で絵や曲などを投稿しています。人に言及されると喜びます。
     </p>
     <p>連絡: mikanixonable1@gmail.com</p>
-    <a href="1.html">サイトマップ</a>
+   
+  </div>
+  <div class="box2">
+    <p> <a href="1.html">サイトマップ</a></p>
   </div>
 
 </body>
