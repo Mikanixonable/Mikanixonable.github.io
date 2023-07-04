@@ -33,11 +33,18 @@
         flex-direction: column;
         margin: 1em;
     }
+    h2{
+        color: #456;
+    }
+    h2 span{
+        background-color: #456;
+        color: #eee;
+    }
 </style>
 
 <body>
 
-
+<h2>Mikanixonable <span>icon</span> generator</h2>
     <!-- <input type="button" onclick="download()" value="download png" /> -->
 
 
@@ -45,10 +52,12 @@
     <img id="output" src="" alt="">
     <form name="form1" class="form1">
         <p>背景色
-            <input type="text" value="#456" id="input1">
+
+            <input type="color" value="#405060" id="input1">
         </p>
         <p>文字色
-            <input type="text" value="#fff" id="input2">
+         
+            <input type="color" value="#ffffff" id="input2">
         </p>
     </form>
     <svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1024.000000 1024.000000" id="input">
