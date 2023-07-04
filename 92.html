@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>link maker</title>
 </head>
+<style>
+  body{
+display: flex;
+flex-direction: column;
+  }
+</style>
+
 <body>
-  iue
+  https付きの生のリンクを入れると各行についてaタグに囲んで出力してくれる便利ツールです
+  <textarea name=”” rows=”” cols=”” wrap=”” id="input1"></textarea>
+  <!-- <input type="text" id="input1"> -->
+  <p id="output1"></p>
 </body>
+<script>
+  let intxt = document.getElementById("input1")
+  let outtxt = document.getElementById("output1")
+
+  input()
+  intxt.addEventListener("input", () => {
+    input()
+  })
+
+  function input() {
+    let str = ""
+    let rows = intxt.value.split("\n")
+    for(let i=0;i<rows.length;i++){
+      str += linker(rows[i])+"<br>\n"
+    }
+    outtxt.innerText = str
+  }
+
+  function linker(str){
+    return "<a href=\""+str+"\">"+str.replace("https://","")+"</a>"
+  }
+</script>
+
 </html>
