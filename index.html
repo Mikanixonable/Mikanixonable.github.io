@@ -36,10 +36,19 @@
     padding: 0em;
   }
 
-  .con {
+  .icons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .icons a{
+    margin-right: 1em;
+  }
+
+  .box {
+    background-color: #00031f7c;
+    padding: 1em;
+    margin-bottom: 1em;
   }
 
   .btncon {
@@ -48,17 +57,14 @@
     flex-wrap: wrap;
   }
 
-  .btncon>.box {
+  .btncon .box {
     margin-right: 1em;
     margin-bottom: 1em;
     padding: 0;
   }
 
-  .box {
-    background-color: #00031f7c;
-    padding: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
+  h2 {
+    margin-top: 0em;
   }
 
   h3 {
@@ -74,9 +80,8 @@
     <p>みかぶるのホームページ</p>
   </div>
 
-
-  <div class="con" id="con">
-
+  <div class="icons" id="con">
+    <!-- sns icons -->
   </div>
 
   <div class="btncon">
@@ -176,11 +181,11 @@
   <div class="box">
     FFの個人サイトリスト<br>
     <a href="https://qmainconts.dev/">qmainconts.dev/</a><br>
-    <a href="https://www.haxibami.net/">www.haxibami.net/</a><br>
-    <a href="https://ideoaves.cf/">ideoaves.cf/</a><br>
+    <a href="https://haxibami.net/">haxibami.net/</a><br>
+    <a href="https://ideoaves.github.io/">ideoaves.github.io/</a><br>
     <a href="https://sno2wman.net/">sno2wman.net/</a><br>
     <a href="https://gainencomphand.pages.dev/">gainencomphand.pages.dev/</a><br>
-    <a href="https://www.sapporo-posse.com/">www.sapporo-posse.com/</a><br>
+    <a href="https://sapporo-posse.com/">sapporo-posse.com/</a><br>
     <a href="https://yuuri3.github.io/">yuuri3.github.io/</a><br>
     <a href="http://www2s.biglobe.ne.jp/~masamich/index.html">http://www2s.biglobe.ne.jp/~masamich/index.html</a><br>
     <a href="http://ziphil.com/">http://ziphil.com/</a><br>
@@ -206,15 +211,15 @@
     <a href="https://tachibana51.github.io/">tachibana51.github.io/</a><br>
     <a href="https://gfngfn.github.io/ja/">gfngfn.github.io/ja/</a><br>
     <a href="https://notolyte.github.io/pensee/">notolyte.github.io/pensee/</a><br>
-    <a href="http://www.ximco.jp/">http://www.ximco.jp/</a><br>
+    <a href="http://ximco.jp/">http://ximco.jp/</a><br>
     <a href="https://kuina.ch/">kuina.ch/</a><br>
     <a href="https://kawane.icu/">kawane.icu/</a><br>
     <a href="http://kanto.me/xeno/">http://kanto.me/xeno/</a><br>
-    <a href="https://www.fabon.info/">www.fabon.info/</a><br>
+    <a href="https://fabon.info/">fabon.info/</a><br>
     <a href="https://ofni.necocen.info">ofni.necocen.info</a><br>
-    <a href="https://www.machinery-tomoko.com/">www.machinery-tomoko.com/</a><br>
+    <a href="https://machinery-tomoko.com/">machinery-tomoko.com/</a><br>
     <a href="http://souzoumap.starfree.jp/">http://souzoumap.starfree.jp/</a><br>
-    <a href="https://www.alz.jp/221b/index.html">www.alz.jp/221b/index.html</a><br>
+    <a href="https://alz.jp/221b/index.html">alz.jp/221b/index.html</a><br>
     <a href="http://pref-karafuto.net/Index.html">http://pref-karafuto.net/Index.html</a><br>
     <a href="https://sites.google.com/site/syxobo/">sites.google.com/site/syxobo/</a><br>
     <a href="https://sites.google.com/site/moyacilang/">sites.google.com/site/moyacilang/</a><br>
@@ -285,20 +290,20 @@
 
   let con = document.getElementById("con")
   let html2 = ""
-  html2+= sns("misskey")
-  html2+= sns("pixiv")
-  html2+= sns("github")
-  html2+= sns("twitter")
-  html2+= sns("tumblr")
-  html2+= sns("niconico")
-  html2+= sns("vrchat")
-  html2+= sns("hatena")
-  html2+= sns("youtube")
-  html2+= sns("spotify")
-  html2+= sns("keybase")
-  html2+= sns("bookmeter")
-  html2+= sns("kakuyomu")
-  html2+= sns("discord")
+  html2 += sns("misskey")
+  html2 += sns("pixiv")
+  html2 += sns("github")
+  html2 += sns("twitter")
+  html2 += sns("tumblr")
+  html2 += sns("niconico")
+  html2 += sns("vrchat")
+  html2 += sns("hatena")
+  html2 += sns("youtube")
+  html2 += sns("spotify")
+  html2 += sns("keybase")
+  html2 += sns("bookmeter")
+  html2 += sns("kakuyomu")
+  html2 += sns("discord")
   con.innerHTML = html2
 </script>
 
