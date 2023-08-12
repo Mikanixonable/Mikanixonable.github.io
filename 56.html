@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+
+<head>
+  <meta content="JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き" genre="math" property="og:description" />
+  <meta content="ogp/85.png" property="og:image" />
+  <title>Weierstrass-Riemann function variables 2</title>
+  <style media="screen">
+    body {
+      display: flex;
+      background: #456;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      color: #DDD;
+    }
+
+    .formula {
+      font-size: 1.5em;
+    }
+
+    .graph-wrap {
+      width: 50em;
+      height: 50em;
+    }
+
+    .graph {
+      background-color: #567;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.min.js"></script>
+  <script
+    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
+  <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"
+    type="text/javascript"></script>
+</head>
+
+<body>
+  <h3>Weierstrass-Riemann function variables 2</h3>
+  <!--式-->
+  <p class="formula">
+    $
+    x_{n+1}=ax_n(1-x_n)
+    $
+  </p>
+  <p>shift+左ドラッグで移動　shift+ホイールで拡大</p>
+  <!--グラフ-->
+  <div class="graph-wrap">
+    <div class="graph" id="jxgbox"></div>
+  </div>
+  <!--リンク-->
+  <a href="83.html">数学小部屋に戻る</a>
+</body>
+<script type="text/javascript">
+  var board = JXG.JSXGraph.initBoard('jxgbox', { boundingbox: [-1, 2, 200, -1], axis: true });
+
+  // 離散的なプロットのデータ点
+  var dataPoints = [
+  ];
+  ini = 0.3
+  alpha = 3.55
+  for (var k = 0; k < 200; k++) {
+    for (var i = 0; i < 200; i++) {
+      if (i > 100) {
+        dataPoints.push({ x: k, y: ini })
+      }
+      ini = (k*0.1+1) * ini * (1 - ini)
+
+
+    }
+  }
+
+  // データ点をループしてプロットを作成
+  for (var i = 0; i < dataPoints.length; i++) {
+    var point = board.create('point', [dataPoints[i].x, dataPoints[i].y], { name: '(' + dataPoints[i].x + ',' + dataPoints[i].y + ')', fillColor: 'black', strokeWidth: 0, label: false, withLabel: false });
+  }
+
+</script>
+
+</html>
