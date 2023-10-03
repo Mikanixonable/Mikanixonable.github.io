@@ -13,10 +13,10 @@ import math
 print(math.pi)
 ~~~
 
-kgkjh
-kjh
 
 [site map](1)
+[旧トップ](300)
+[test](140)
 
 [チートシート](https://github.com/pages-themes/leap-day/blob/master/index.md)
 
