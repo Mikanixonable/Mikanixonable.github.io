@@ -4,7 +4,13 @@ title: 月面植物園
 ---
 
 # 月面植物園
+This sentence uses `$` delimiters to show math inline:  
+$\sqrt{3x-1}+(1+x)^2$
 
+~~~python
+import math
+print(math.pi)
+~~~
 [site map](./1.html)
 [site map](./1)
 [site map](1)
