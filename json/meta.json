@@ -60,6 +60,36 @@
     "genre": null
   },
   {
+    "name": "104",
+    "ctime": "1683496743",
+    "mtime": "1686649050",
+    "cdate": "2023-05-08",
+    "mdate": "2023-06-13",
+    "title": "月面植物園",
+    "content": "にそなのホームページ",
+    "genre": ""
+  },
+  {
+    "name": "105",
+    "ctime": "1683496743",
+    "mtime": "1683570254",
+    "cdate": "2023-05-08",
+    "mdate": "2023-05-09",
+    "title": "月面植物園",
+    "content": "にそなのホームページ",
+    "genre": ""
+  },
+  {
+    "name": "106",
+    "ctime": "1678761867",
+    "mtime": "1688580067",
+    "cdate": "2023-03-14",
+    "mdate": "2023-07-06",
+    "title": "月面植物園",
+    "content": "トップページ",
+    "genre": null
+  },
+  {
     "name": "11",
     "ctime": "1678761862",
     "mtime": "1683496737",
@@ -268,16 +298,6 @@
     "title": "異形明朝デモページ",
     "content": "",
     "genre": "font"
-  },
-  {
-    "name": "1_1",
-    "ctime": "1683496743",
-    "mtime": "1683496743",
-    "cdate": "2023-05-08",
-    "mdate": "2023-05-08",
-    "title": "サイトマップ d3js",
-    "content": "",
-    "genre": null
   },
   {
     "name": "2",
@@ -730,6 +750,16 @@
     "genre": "math"
   },
   {
+    "name": "56",
+    "ctime": "1691687787",
+    "mtime": "1691694803",
+    "cdate": "2023-08-11",
+    "mdate": "2023-08-11",
+    "title": "Weierstrass-Riemann function variables 2",
+    "content": "JSXGraph.jsによるインタラクティブなグラフいじりページ　調整バー付き",
+    "genre": "math"
+  },
+  {
     "name": "57",
     "ctime": "1679250555",
     "mtime": "1680187306",
@@ -1032,12 +1062,12 @@
   {
     "name": "9",
     "ctime": "1681048280",
-    "mtime": "1683496742",
+    "mtime": "1695410967",
     "cdate": "2023-04-09",
-    "mdate": "2023-05-08",
+    "mdate": "2023-09-23",
     "title": "Ehtaplenの文法",
-    "content": "自作言語の文法書",
-    "genre": "conlang"
+    "content": "text/html; charset=utf-8",
+    "genre": null
   },
   {
     "name": "90",
@@ -1068,35 +1098,5 @@
     "title": "link maker",
     "content": null,
     "genre": null
-  },
-  {
-    "name": "index",
-    "ctime": "1678761867",
-    "mtime": "1688580067",
-    "cdate": "2023-03-14",
-    "mdate": "2023-07-06",
-    "title": "月面植物園",
-    "content": "トップページ",
-    "genre": null
-  },
-  {
-    "name": "index_1",
-    "ctime": "1683496743",
-    "mtime": "1683570254",
-    "cdate": "2023-05-08",
-    "mdate": "2023-05-09",
-    "title": "月面植物園",
-    "content": "にそなのホームページ",
-    "genre": ""
-  },
-  {
-    "name": "index_2",
-    "ctime": "1683496743",
-    "mtime": "1686649050",
-    "cdate": "2023-05-08",
-    "mdate": "2023-06-13",
-    "title": "月面植物園",
-    "content": "にそなのホームページ",
-    "genre": ""
   }
 ]
