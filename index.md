@@ -4,10 +4,10 @@ title: 月面植物園
 ---
 # 月面植物園
 みかぶるのホームページ
----
+
 > テクノなまこ、科学の力
 
-sns
+SNS
 - [bluesky](https://bsky.app/profile/mikanixonable.bsky.social)
 - [misskey](https://misskey.io/@Mikanixonable)
 - [twitter](https://twitter.com/Mikanixonable)
