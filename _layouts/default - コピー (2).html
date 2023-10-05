@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.lang | default: " ja" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- IE互換性のためのおまじない -->
+  <link rel="stylesheet" href="./md/style.css">
+  <script
+    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  {% seo %}
+  {% include head-custom.html %}
+</head>
+
+<body>
+  <div class="wrapper">
+    <section>
+      <!-- <div id="title">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+        </div> -->
+
+      {{ content }}
+
+    </section>
+
+  </div>
+</body>
+
+</html>
