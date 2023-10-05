@@ -81,6 +81,7 @@ strong {
   padding: 0 20px;
 }
 
+
 section img {
   max-width: 100%;
 }
@@ -275,6 +276,9 @@ section {
 
   }
 }
+
+
+/* コードブロック */
 
 @media print, screen and (max-width: 720px) {
 
