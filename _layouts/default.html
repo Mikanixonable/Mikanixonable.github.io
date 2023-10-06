@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark" />
   <!-- IE互換性のためのおまじない -->
   <link rel="stylesheet" href="./md/style.css">
   <script
@@ -35,3 +36,28 @@
 </body>
 
 </html>
+<script>
+    let sheets = document.styleSheets
+  let sheet = sheets[sheets.length - 1];
+  let codeElements = document.querySelectorAll("code");
+  for (let i = 0; i < codeElements.length; i++) {
+    codeElement = codeElements[i]
+    codeElement.classList.add("code" + i)
+
+    // <div class="language-shell highlighter-rouge">
+    // <div class="highlight">
+    // <pre class="highlight">
+    // <code>
+    // から「python」を抽出
+    clsname = codeElement
+      .parentElement
+      .parentElement
+      .parentElement
+      .className
+      .match(/language-(\S+)\s/)[1]
+
+    sheet.insertRule(
+      `.code${i}:before {  content: "${clsname}";}`,
+      sheet.cssRules.length);
+  }
+</script>

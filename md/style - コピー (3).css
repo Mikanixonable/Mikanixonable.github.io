@@ -97,43 +97,16 @@ blockquote {
   font-style:italic;
 }
 
-code:before {
-  display: block;
-  position:absolute;
-  inset-block-start: -2.5em;
-  inset-inline-start: 0;
-  content: attr(class);
-  padding-block: .5em;
-  padding-inline: 1em;
-  inline-size: fit-content;
-  background-color: #323e52;
-  color: white;
-  border-radius: .5em .5em 0 0;
-  /* content: "python"; */
-  
-}
-
 code {
-
-  display: block;
-  position: relative;
-  margin: 0 4px;
-  padding: 4px 6px;
-  margin-block-start: 3em;
-  padding-block: 2em;
-  background-color: #1a2638;
-  border-radius: 0 .5em .5em .5em;
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color:#efefef;
   font-size:13px;
-  overflow: auto;
-  /* overflow-y: hidden; */
+  margin: 0 4px;
+  padding: 4px 6px;
+  border-radius: 2px;
 }
 
-
-
-
-/* pre {
+pre {
   padding:8px 15px;
   background: #191919;
   border-radius: 2px;
@@ -148,7 +121,7 @@ code {
     margin: 0;
     padding: 0;
   }
-} */
+}
 
 table {
   width:100%;
