@@ -20,6 +20,13 @@
 <body>
   <div class="wrapper">
     <section>
+      <!-- <div id="title">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+        </div> -->
 
       {{ content }}
 
@@ -30,6 +37,19 @@
 
 </html>
 <script>
+  // let sheets = document.styleSheets
+  // let sheet = sheets[sheets.length - 1];
+  // let codeElm = document.querySelectorAll("code");
+  // clsname = codeElm[0]
+  //   .parentElement
+  //   .parentElement
+  //   .parentElement
+  //   .className
+  //   .match(/language-(\S+)\s/)[1]
+  // sheet.insertRule(
+  //   `code:before {  display: block;  position: absolute;  inset-block-start: -2.5em; inset-inline-start: 0;  content: attr(class);  padding-block: .5em;  padding-inline: 1em;  inline-size: fit-content;  background-color: #323e52;  color: white;  border-radius: .5em .5em 0 0;  content: "${clsname}";}`,
+  //   sheet.cssRules.length);
+
   let sheets = document.styleSheets
   let sheet = sheets[sheets.length - 1];
   let codeElements = document.querySelectorAll("code");
