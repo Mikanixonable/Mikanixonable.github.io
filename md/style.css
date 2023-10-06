@@ -97,12 +97,12 @@ blockquote {
   font-style:italic;
 }
 
-code:before {
+pre:before {
   display: block;
-  position:absolute;
-  inset-block-start: -2.5em;
+  /* position: absolute; */
+  inset-block-start: 0em;
   inset-inline-start: 0;
-  content: attr(class);
+  /* content: attr(class); */
   padding-block: .5em;
   padding-inline: 1em;
   inline-size: fit-content;
@@ -117,9 +117,9 @@ code {
 
   display: block;
   position: relative;
-  margin: 0 4px;
+  /* margin: 0 4px; */
   padding: 4px 6px;
-  margin-block-start: 3em;
+  /* margin-block-start: 3em; */
   padding-block: 2em;
   background-color: #1a2638;
   border-radius: 0 .5em .5em .5em;
