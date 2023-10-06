@@ -37,19 +37,37 @@
 
 </html>
 <script>
-    let sheets = document.styleSheets
+  // let sheets = document.styleSheets
+  // let sheet = sheets[sheets.length - 1];
+  // let codeElm = document.querySelectorAll("code");
+  // clsname = codeElm[0]
+  //   .parentElement
+  //   .parentElement
+  //   .parentElement
+  //   .className
+  //   .match(/language-(\S+)\s/)[1]
+  // sheet.insertRule(
+  //   `code:before {  display: block;  position: absolute;  inset-block-start: -2.5em; inset-inline-start: 0;  content: attr(class);  padding-block: .5em;  padding-inline: 1em;  inline-size: fit-content;  background-color: #323e52;  color: white;  border-radius: .5em .5em 0 0;  content: "${clsname}";}`,
+  //   sheet.cssRules.length);
+
+  let sheets = document.styleSheets
   let sheet = sheets[sheets.length - 1];
   let codeElements = document.querySelectorAll("code");
   for (let i = 0; i < codeElements.length; i++) {
-    codeElement = codeElements[i]
-    codeElement.classList.add("code" + i)
+    let codeElement = codeElements[i]
+    codeElement.parentElement.classList.add("pre" + i)
 
     // <div class="language-shell highlighter-rouge">
     // <div class="highlight">
     // <pre class="highlight">
     // <code>
     // から「python」を抽出
-    clsname = codeElement
+    clsName = codeElement
+    .parentElement
+      .parentElement
+      .parentElement
+      .className
+    langName = codeElement
       .parentElement
       .parentElement
       .parentElement
@@ -57,7 +75,7 @@
       .match(/language-(\S+)\s/)[1]
 
     sheet.insertRule(
-      `.code${i}:before {  content: "${clsname}";}`,
+      `.pre${i}:before { content: "${langName}";}`,
       sheet.cssRules.length);
   }
 </script>
