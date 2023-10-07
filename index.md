@@ -50,7 +50,7 @@ graph TD;
     B-->D;
     C-->D;
 ```
-
+\$\sqrt{2}\$
 services
 - [github](https://github.com/Mikanixonable)
 - [blog](https://mikanixonable.hatenablog.com/)
