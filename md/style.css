@@ -6,7 +6,7 @@ body {
   /* padding:0px 0 20px 0px; */
   margin: 0 0;
   font:14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#f0e7d5;
+  color:white;
   font-weight: normal;
   background: #181921;
   /* background-attachment: fixed !important; */
@@ -20,7 +20,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:white;
   margin:0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -104,7 +103,6 @@ pre:before {
 }
 
 code {
-
   display: block;
   position: relative;
   padding: 1em 1em;
