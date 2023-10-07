@@ -9,6 +9,8 @@ categories: main
 ##### みかぶるのホームページ
 > テクノなまこ、科学の力
 
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" style="overflow: hidden; max-width: 100%;" xmlns="http://www.w3.org/2000/svg" width="100%" id="graph-div" height="100%" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"><style>@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");'</style><g id="viewport-20231007132113840" class="svg-pan-zoom_viewport" transform="matrix(1.9549267019031176,0,0,1.9549267019031176,15.639406157771418,274.61400227596175)" style="transform: matrix(1.95493, 0, 0, 1.95493, 15.6394, 274.614);"><style>#graph-div{font-family:TimesNewRoman Times Serif;font-size:16px;fill:white;}#graph-div .error-icon{fill:#1a2638;}#graph-div .error-text{fill:white;stroke:white;}#graph-div .edge-thickness-normal{stroke-width:2px;}#graph-div .edge-thickness-thick{stroke-width:3.5px;}#graph-div .edge-pattern-solid{stroke-dasharray:0;}#graph-div .edge-pattern-dashed{stroke-dasharray:3;}#graph-div .edge-pattern-dotted{stroke-dasharray:2;}#graph-div .marker{fill:aliceblue;stroke:aliceblue;}#graph-div .marker.cross{stroke:aliceblue;}#graph-div svg{font-family:TimesNewRoman Times Serif;font-size:16px;}#graph-div .label{font-family:TimesNewRoman Times Serif;color:white;}#graph-div .cluster-label text{fill:white;}#graph-div .cluster-label span,#graph-div p{color:white;}#graph-div .label text,#graph-div span,#graph-div p{fill:white;color:white;}#graph-div .node rect,#graph-div .node circle,#graph-div .node ellipse,#graph-div .node polygon,#graph-div .node path{fill:#323e52;stroke:aliceblue;stroke-width:1px;}#graph-div .flowchart-label text{text-anchor:middle;}#graph-div .node .label{text-align:center;}#graph-div .node.clickable{cursor:pointer;}#graph-div .arrowheadPath{fill:#0b0b0b;}#graph-div .edgePath .path{stroke:aliceblue;stroke-width:2.0px;}#graph-div .flowchart-link{stroke:aliceblue;fill:none;}#graph-div .edgeLabel{background-color:#397;text-align:center;}#graph-div .edgeLabel rect{opacity:0.5;background-color:#397;fill:#397;}#graph-div .labelBkg{background-color:rgba(51, 153, 119, 0.5);}#graph-div .cluster rect{fill:#1a2638;stroke:slategray;stroke-width:1px;}#graph-div .cluster text{fill:white;}#graph-div .cluster span,#graph-div p{color:white;}#graph-div div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:TimesNewRoman Times Serif;font-size:12px;background:#1a2638;border:1px solid slategray;border-radius:2px;pointer-events:none;z-index:100;}#graph-div .flowchartTitleText{text-anchor:middle;font-size:18px;fill:white;}#graph-div :root{--mermaid-font-family:TimesNewRoman Times Serif;}</style><g><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="6" viewBox="0 0 10 10" class="marker flowchart" id="graph-div_flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="4.5" viewBox="0 0 10 10" class="marker flowchart" id="graph-div_flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11" viewBox="0 0 10 10" class="marker flowchart" id="graph-div_flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1" viewBox="0 0 10 10" class="marker flowchart" id="graph-div_flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12" viewBox="0 0 11 11" class="marker cross flowchart" id="graph-div_flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1" viewBox="0 0 11 11" class="marker cross flowchart" id="graph-div_flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-o LE-t" id="L-o-t-0" d="M317.677,68.086L313.51,68.086C309.344,68.086,301.01,68.086,292.677,68.086C284.344,68.086,276.01,68.086,271.844,68.086L267.677,68.086"></path><path marker-end="url(#graph-div_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-t LE-b" id="L-t-b-0" d="M240.358,58.058L235.578,54.002C230.798,49.947,221.237,41.835,213.174,37.78C205.11,33.724,198.544,33.724,195.26,33.724L191.977,33.724"></path><path marker-end="url(#graph-div_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-b LE-m" id="L-b-m-0" d="M119.229,33.724L115.062,33.724C110.896,33.724,102.562,33.724,94.224,36.129C85.885,38.534,77.54,43.343,73.368,45.748L69.196,48.153"></path><path marker-end="url(#graph-div_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-m LE-t" id="L-m-t-0" d="M64.604,85.372L69.542,88.218C74.479,91.064,84.354,96.756,99.079,99.602C113.804,102.448,133.378,102.448,152.953,102.448C172.528,102.448,192.102,102.448,205.996,98.964C219.89,95.48,228.103,88.511,232.21,85.027L236.317,81.543"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><a transform="translate(337.8020782470703, 68.08593559265137)" xlink:href="https://github.com/Mikanixonable"><g id="flowchart-o-13" class="node default clickable flowchart-label"><rect height="39" width="40.25" y="-19.5" x="-20.125" ry="19.5" rx="19.5" style=""></rect><g transform="translate(-7.75, -12)" style="" class="label"><rect></rect><foreignObject height="24" width="15.5"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><i class="fab fa-github"></i></span></div></foreignObject></g></g></a><a transform="translate(252.1770782470703, 68.08593559265137)" xlink:href="https://twitter.com/Mikanixonable"><g id="flowchart-t-14" class="node default clickable flowchart-label"><circle height="39" width="31" r="15.5" ry="0" rx="0" style="fill: #1C96E8;stroke-width: 0;"></circle><g transform="translate(-8, -12)" style="" class="label"><rect></rect><foreignObject height="24" width="16"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel"><i class="fab fa-twitter"></i></span></div></foreignObject></g></g></a><a transform="translate(152.95312118530273, 33.72395706176758)" xlink:href="https://bsky.app/profile/mikanixonable.bsky.social"><g id="flowchart-b-16" class="node default clickable flowchart-label"><circle height="39" width="67.44791793823242" r="33.72395896911621" ry="0" rx="0" style="fill: #007DFF;stroke-width: 0;"></circle><g transform="translate(-26.22395896911621, -12)" style="" class="label"><rect></rect><foreignObject height="24" width="52.44791793823242"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Bluesky</span></div></foreignObject></g></g></a><a transform="translate(34.61458206176758, 68.08593559265137)" xlink:href="https://misskey.io/@Mikanixonable"><g id="flowchart-m-18" class="node default clickable flowchart-label"><circle height="39" width="69.22916793823242" r="34.61458396911621" ry="0" rx="0" style="fill: #7BA700;stroke-width: 0;"></circle><g transform="translate(-27.11458396911621, -12)" style="" class="label"><rect></rect><foreignObject height="24" width="54.22916793823242"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Misskey</span></div></foreignObject></g></g></a></g></g></g></g><defs><style id="svg-pan-zoom-controls-styles" type="text/css">.svg-pan-zoom-control { cursor: pointer; fill: black; fill-opacity: 0.333; } .svg-pan-zoom-control:hover { fill-opacity: 0.8; } .svg-pan-zoom-control-background { fill: white; fill-opacity: 0.5; } .svg-pan-zoom-control-background { fill-opacity: 0.8; }</style></defs><g id="svg-pan-zoom-controls" transform="translate(661 674) scale(0.75)" class="svg-pan-zoom-control"><g id="svg-pan-zoom-zoom-in" transform="translate(30.5 5) scale(0.015)" class="svg-pan-zoom-control"><rect x="0" y="0" width="1500" height="1400" class="svg-pan-zoom-control-background"></rect><path d="M1280 576v128q0 26 -19 45t-45 19h-320v320q0 26 -19 45t-45 19h-128q-26 0 -45 -19t-19 -45v-320h-320q-26 0 -45 -19t-19 -45v-128q0 -26 19 -45t45 -19h320v-320q0 -26 19 -45t45 -19h128q26 0 45 19t19 45v320h320q26 0 45 19t19 45zM1536 1120v-960 q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5t84.5 -203.5z" class="svg-pan-zoom-control-element"></path></g><g id="svg-pan-zoom-reset-pan-zoom" transform="translate(5 35) scale(0.4)" class="svg-pan-zoom-control"><rect x="2" y="2" width="182" height="58" class="svg-pan-zoom-control-background"></rect><path d="M33.051,20.632c-0.742-0.406-1.854-0.609-3.338-0.609h-7.969v9.281h7.769c1.543,0,2.701-0.188,3.473-0.562c1.365-0.656,2.048-1.953,2.048-3.891C35.032,22.757,34.372,21.351,33.051,20.632z" class="svg-pan-zoom-control-element"></path><path d="M170.231,0.5H15.847C7.102,0.5,0.5,5.708,0.5,11.84v38.861C0.5,56.833,7.102,61.5,15.847,61.5h154.384c8.745,0,15.269-4.667,15.269-10.798V11.84C185.5,5.708,178.976,0.5,170.231,0.5z M42.837,48.569h-7.969c-0.219-0.766-0.375-1.383-0.469-1.852c-0.188-0.969-0.289-1.961-0.305-2.977l-0.047-3.211c-0.03-2.203-0.41-3.672-1.142-4.406c-0.732-0.734-2.103-1.102-4.113-1.102h-7.05v13.547h-7.055V14.022h16.524c2.361,0.047,4.178,0.344,5.45,0.891c1.272,0.547,2.351,1.352,3.234,2.414c0.731,0.875,1.31,1.844,1.737,2.906s0.64,2.273,0.64,3.633c0,1.641-0.414,3.254-1.242,4.84s-2.195,2.707-4.102,3.363c1.594,0.641,2.723,1.551,3.387,2.73s0.996,2.98,0.996,5.402v2.32c0,1.578,0.063,2.648,0.19,3.211c0.19,0.891,0.635,1.547,1.333,1.969V48.569z M75.579,48.569h-26.18V14.022h25.336v6.117H56.454v7.336h16.781v6H56.454v8.883h19.125V48.569z M104.497,46.331c-2.44,2.086-5.887,3.129-10.34,3.129c-4.548,0-8.125-1.027-10.731-3.082s-3.909-4.879-3.909-8.473h6.891c0.224,1.578,0.662,2.758,1.316,3.539c1.196,1.422,3.246,2.133,6.15,2.133c1.739,0,3.151-0.188,4.236-0.562c2.058-0.719,3.087-2.055,3.087-4.008c0-1.141-0.504-2.023-1.512-2.648c-1.008-0.609-2.607-1.148-4.796-1.617l-3.74-0.82c-3.676-0.812-6.201-1.695-7.576-2.648c-2.328-1.594-3.492-4.086-3.492-7.477c0-3.094,1.139-5.664,3.417-7.711s5.623-3.07,10.036-3.07c3.685,0,6.829,0.965,9.431,2.895c2.602,1.93,3.966,4.73,4.093,8.402h-6.938c-0.128-2.078-1.057-3.555-2.787-4.43c-1.154-0.578-2.587-0.867-4.301-0.867c-1.907,0-3.428,0.375-4.565,1.125c-1.138,0.75-1.706,1.797-1.706,3.141c0,1.234,0.561,2.156,1.682,2.766c0.721,0.406,2.25,0.883,4.589,1.43l6.063,1.43c2.657,0.625,4.648,1.461,5.975,2.508c2.059,1.625,3.089,3.977,3.089,7.055C108.157,41.624,106.937,44.245,104.497,46.331z M139.61,48.569h-26.18V14.022h25.336v6.117h-18.281v7.336h16.781v6h-16.781v8.883h19.125V48.569z M170.337,20.14h-10.336v28.43h-7.266V20.14h-10.383v-6.117h27.984V20.14z" class="svg-pan-zoom-control-element"></path></g><g id="svg-pan-zoom-zoom-out" transform="translate(30.5 70) scale(0.015)" class="svg-pan-zoom-control"><rect x="0" y="0" width="1500" height="1400" class="svg-pan-zoom-control-background"></rect><path d="M1280 576v128q0 26 -19 45t-45 19h-896q-26 0 -45 -19t-19 -45v-128q0 -26 19 -45t45 -19h896q26 0 45 19t19 45zM1536 1120v-960q0 -119 -84.5 -203.5t-203.5 -84.5h-960q-119 0 -203.5 84.5t-84.5 203.5v960q0 119 84.5 203.5t203.5 84.5h960q119 0 203.5 -84.5 t84.5 -203.5z" class="svg-pan-zoom-control-element"></path></g></g></svg>
+
 [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
 ## Link
@@ -29,92 +31,6 @@ categories: main
 
 ### その他
 - [bento.me](https://bento.me/miku)
-
-### テイラー展開
-$$
-f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
-$$
-
-~~~python
-from matplotlib import pyplot as plt
-import cv2 as cv2
-import numpy as np
-
-img = cv2.imread("1.png")
-img = cv2.resize(img,(64,64))
-
-print(img)
-r = img[:,:,2]
-g = img[:,:,1]
-b = img[:,:,0]
-
-rgb = np.dstack((r, g, b))
-rgb_flat = rgb.reshape((rgb.shape[0]*rgb.shape[1], 3))
-def rgb_to_hex(rgb):
-    return '#{:02x}{:02x}{:02x}'.format(*rgb)
-cCodes = np.apply_along_axis(rgb_to_hex, 1, rgb_flat)
-
-# print(cCodes)
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1, projection='3d')
-ax.scatter(b, g, r, c=cCodes,alpha=1)
-plt.show()
-~~~
-
-```mermaid
-%%{init:{
-  "theme": "base",
-  "fontFamily": "TimesNewRoman Times Serif",
-  "themeVariables": {
-    "lineColor": "aliceblue",
-    "primaryColor": "#323e52",
-    "secondaryColor": "#397",
-    "tertiaryColor": "#1a2638",
-    "primaryTextColor": "white",
-    "secondaryTextColor": "white",
-    "tertiaryTextColor": "white",
-    "primaryBorderColor": "aliceblue",
-    "secondaryBorderColor": "aliceblue",
-    "tertiaryBorderColor": "slategray"
-}
-}}%%
-graph TD
-o([fa:fa-link])
-
-t((Twitter))
-click t href "https://twitter.com/Mikanixonable"
-style t fill: #1C96E8,stroke-width: 0
-o --> t
-
-b((Bluesky))
-style b fill: #007DFF,stroke-width: 0
-click b href "https://bsky.app/profile/mikanixonable.bsky.social"
-o --> b
-
-m((Misskey))
-style m fill: #7BA700,stroke-width: 0
-click m href "https://misskey.io/@Mikanixonable"
-o --> m
-```
-ma
-~~~mermaid
-graph TD
-          A[fa:fa-twitter] -->|Get money| B(Go shopping)
-          B --> C{Let me think}
-          B --> G[/Another/]
-          C ==>|One| D[Laptop]
-          C -->|Two| E[iPhone]
-          C -->|Three| F[fa:fa-car Car]
-          subgraph section
-            C
-            D
-            E
-            F
-            G
-          end
-~~~
-
-\$\sqrt{2}\$
 
 - 連絡 mikanixonable1@gmail.com
 
