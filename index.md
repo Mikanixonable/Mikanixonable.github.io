@@ -62,15 +62,7 @@ plt.show()
 ~~~
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-```mermaid
-%%{init: {'theme':'forest'}}%%
+%%{init: {'theme':'neutral'}}%%
 graph TD;
     A-->B;
     A-->C;
@@ -79,26 +71,25 @@ graph TD;
 ```
 
 \$\sqrt{2}\$
-services
-- [github](https://github.com/Mikanixonable)
-- [blog](https://mikanixonable.hatenablog.com/)
 
 
-連絡 mikanixonable1@gmail.com
 
-探検
+
+- 連絡 mikanixonable1@gmail.com
+
+## 探検
 - [site map](1)
 - [旧トップ](300)
 
-## links
-
-
+## コンテンツ
 - [140](140)
 - [141](141)
 - [142](142)
 - [notes](notes)
 
-## external links
+## 外部リンク
+
+## 編集用
 - [チートシート]([https://github.com/pages-themes/leap-day/blob/master/index.md](https://itopaloglu83.github.io/Jekyll-Markdown-Cheat-Sheet/))
 - [チートシート日本語](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
 
