@@ -70,7 +70,7 @@ graph TD;
 ```
 ~~~mermaid
 graph TD
-          A[Christmas] -->|Get money| B(Go shopping)
+          A[fa:fa-twitter] -->|Get money| B(Go shopping)
           B --> C{Let me think}
           B --> G[/Another/]
           C ==>|One| D[Laptop]

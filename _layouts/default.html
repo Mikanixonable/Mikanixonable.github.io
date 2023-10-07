@@ -23,37 +23,6 @@
 <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
 <script>
   function initializeMermaid() {
-    let sheets = document.styleSheets
-    let sheet = sheets[sheets.length - 1];
-    let elms = document.querySelectorAll("code");
-    for (let i = 0; i < elms.length; i++) {
-      let elm = elms[i]
-
-      // <div class="language-shell highlighter-rouge">
-      // <div class="highlight">
-      // <pre class="highlight">
-      // <code>
-      // から「python」を抽出
-      let langName = elm
-        .parentElement
-        .parentElement
-        .parentElement
-        .className
-        .match(/language-(\S+)\s/)[1]
-
-      if (langName == "mermaid") {
-        elm.parentElement.classList.add("mermaidpre")
-
-      } else {
-        elm.classList.add("code")
-        elm.parentElement.classList.add("codepre")
-        elm.parentElement.classList.add("codepre" + i)
-        sheet.insertRule(
-          `.codepre${i}:before { content: "${langName}";}`,
-          sheet.cssRules.length);
-      }
-    }
-
     mermaid.initialize({
       startOnLoad: true,
       // theme: "dark",
@@ -63,13 +32,42 @@
         primaryTextColor: "white",
         primaryBorderColor: "white",
         lineColor: "white",
-        secondaryColor: "#323e52",
-        tertiaryColor: "var(--b2)"
+        secondaryColor: "#323e52"
       }
     });
     window.mermaid.init(
       undefined,
       document.querySelectorAll('.language-mermaid'),
     );
+  }
+  let sheets = document.styleSheets
+  let sheet = sheets[sheets.length - 1];
+  let elms = document.querySelectorAll("code");
+  for (let i = 0; i < elms.length; i++) {
+    let elm = elms[i]
+
+    // <div class="language-shell highlighter-rouge">
+    // <div class="highlight">
+    // <pre class="highlight">
+    // <code>
+    // から「python」を抽出
+    let langName = elm
+      .parentElement
+      .parentElement
+      .parentElement
+      .className
+      .match(/language-(\S+)\s/)[1]
+
+    if (langName == "mermaid") {
+      elm.parentElement.classList.add("mermaidpre")
+
+    } else {
+      elm.classList.add("code")
+      elm.parentElement.classList.add("codepre")
+      elm.parentElement.classList.add("codepre" + i)
+      sheet.insertRule(
+        `.codepre${i}:before { content: "${langName}";}`,
+        sheet.cssRules.length);
+    }
   }
 </script>
