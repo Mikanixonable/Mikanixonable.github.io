@@ -44,12 +44,22 @@ plt.show()
 ~~~
 
 ```mermaid
+%%{init: {'theme':'dark'}}%%
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
 ```
+```mermaid
+%%{init: {'theme':'forest'}}%%
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 \$\sqrt{2}\$
 services
 - [github](https://github.com/Mikanixonable)
