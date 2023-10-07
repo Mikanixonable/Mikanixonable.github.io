@@ -5,29 +5,30 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
-# 月面植物園
-みかぶるのホームページ
-
-  <link rel="stylesheet" href="./md/style.css">
-
-<svg version="1.1" baseProfile="full" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-<a href="https://twitter.com/Mikanixonable"><g transform="translate(500,100)"><circle cx="0" cy="0" r="100" fill="#1C96E8" />
-<text x="0" y="0" font-size="50" text-anchor="middle"alignment-baseline="central" fill="white">
+<svg version="1.1" baseProfile="full" width="350" height="200" xmlns="http://www.w3.org/2000/svg">
+<a href="https://twitter.com/Mikanixonable"><g transform="translate(60,60)"><circle cx="0" cy="0" r="50" fill="#1C96E8" />
+<text x="-10" y="20" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
 Twitter</text></g></a>
-<a href="https://bsky.app/profile/mikanixonable.bsky.social"><g transform="translate(340,60)"><circle cx="0" cy="0" r="60" fill="#007DFF" />
-<text x="0" y="0" font-size="30" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://bsky.app/profile/mikanixonable.bsky.social"><g transform="translate(40,135)"><circle cx="0" cy="0" r="25" fill="#007DFF" />
+<text x="2" y="-8" font-size="13" text-anchor="middle"alignment-baseline="central" fill="white">
 Bluesky</text></g></a>
-<a href="https://misskey.io/@Mikanixonable"><g transform="translate(370,160)"><circle cx="0" cy="0" r="40" fill="#7BA700" />
-<text x="0" y="0" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://misskey.io/@Mikanixonable"><g transform="translate(90,130)"><circle cx="0" cy="0" r="20" fill="#7BA700" />
+<text x="-1" y="5" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
 Misskey</text></g></a>
 <a href="https://github.com/Mikanixonable">
-<g transform="translate(280,150)"><circle cx="0" cy="0" r="45" fill="#444" />
-<text x="0" y="0" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(140,100)"><circle rx="0" ry="0" r="20" fill="#333" />
+<text x="10" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
 GitHub</text></g></a>
 <a href="https://www.pixiv.net/users/20149051/illustrations">
-<g transform="translate(220,60)"><circle cx="0" cy="0" r="40" fill="#0196FA" />
-<text x="0" y="0" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
-Pixiv</text></g></a>  
+<g transform="translate(220,160)"><circle cx="0" cy="0" r="20" fill="#0196FA" /><text x="0" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
+Pixiv</text></g></a>
+<a href="https://discord.com/users/396122233698910218">
+<g transform="translate(230,110)"><circle cx="0" cy="0" r="17" fill="#5865F2" /><text x="-4" y="4" font-size="12" text-anchor="middle"alignment-baseline="central" fill="white">
+Discord</text></g></a>  
+<text x="0" y="40" font-size="30"fill="white">
+月面植物園</text>
+<text x="4" y="60" font-size="15"fill="white">
+みかぶるのホームページ</text>
   </svg>
 
 > テクノなまこ、科学の力
