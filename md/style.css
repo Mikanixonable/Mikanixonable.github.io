@@ -97,6 +97,7 @@ blockquote {
   inline-size: fit-content;
   background-color: #323e52;
   color: white;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   border-radius: .5em .5em 0 0;
   /* content: "python"; */
 }
