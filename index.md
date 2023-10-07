@@ -43,6 +43,14 @@ ax.scatter(b, g, r, c=cCodes,alpha=1)
 plt.show()
 ~~~
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 services
 - [github](https://github.com/Mikanixonable)
 - [blog](https://mikanixonable.hatenablog.com/)
