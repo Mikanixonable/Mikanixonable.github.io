@@ -10,14 +10,25 @@
   {% seo %}
 </head>
 
-<body>
+<body onload="initializeMermaid()">
   <div class="wrapper">
    {{ content }}
   </div>
 </body>
 
 </html>
+<script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
 <script>
+  function initializeMermaid() {
+   mermaid.initialize({
+      startOnLoad:true,
+      theme: "default",
+   });
+   window.mermaid.init(
+      undefined,
+      document.querySelectorAll('.language-mermaid'),
+   );
+}
   let sheets = document.styleSheets
   let sheet = sheets[sheets.length - 1];
   let codeElements = document.querySelectorAll("code");
