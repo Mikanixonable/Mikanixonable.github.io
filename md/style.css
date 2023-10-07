@@ -1,6 +1,8 @@
-/* @import "normalize"; */
-@import "fonts";
-/* @import "rouge-base16-dark.scss"; */
+:root{
+  --b1: #181921;
+  --b2: #1a2638;
+  --b3: #323e52;
+}
 
 body {
   /* padding:0px 0 20px 0px; */
@@ -95,7 +97,7 @@ blockquote {
   padding-block: .5em;
   padding-inline: 1em;
   inline-size: fit-content;
-  background-color: #323e52;
+  background-color: var(--b3);
   color: white;
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   border-radius: .5em .5em 0 0;
@@ -106,7 +108,7 @@ blockquote {
   display: block;
   position: relative;
   padding: 1em 1em;
-  background-color: #1a2638;
+  background-color: var(--b2);
   border-radius: 0 .5em .5em .5em;
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color:#efefef;
