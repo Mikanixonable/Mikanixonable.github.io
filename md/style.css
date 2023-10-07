@@ -19,7 +19,7 @@ body {
 .wrapper {
   margin: 0 auto;
   padding: 2em;
-  max-width:650px;
+  max-width:600px;
   position:relative;
 }
 
@@ -60,6 +60,7 @@ a {
 
   &:hover {
     color: #f69eaa;
+    text-decoration: none;
   }
 }
 
