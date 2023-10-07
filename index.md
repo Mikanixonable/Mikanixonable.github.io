@@ -62,7 +62,6 @@ plt.show()
 ~~~
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 graph TD;
     A-->B;
     A-->C;
