@@ -86,7 +86,7 @@ blockquote {
   font-style:italic;
 }
 
-pre:before {
+.codeBlock:before {
   display: block;
   /* position: absolute; */
   inset-block-start: 0em;
@@ -113,6 +113,10 @@ code {
   font-size:13px;
   overflow: auto;
   /* overflow-y: hidden; */
+}
+
+svg {
+  background-color: #151515;
 }
 
 table {
