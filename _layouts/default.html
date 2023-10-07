@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: " ja" }}">
+<html lang="{{ site.lang | default: 'ja' }}">
 <head>
   <meta charset="utf-8">
   <meta name="color-scheme" content="light dark" />
@@ -12,9 +12,7 @@
 
 <body>
   <div class="wrapper">
-    <section>
-      {{ content }}
-    </section>
+   {{ content }}
   </div>
 </body>
 
@@ -42,7 +40,7 @@
       .parentElement
       .parentElement
       .className
-      
+
       .match(/language-(\S+)\s/)[1]
     sheet.insertRule(
       `.pre${i}:before { content: "${langName}";}`,
