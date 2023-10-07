@@ -115,9 +115,15 @@ blockquote {
   /* overflow-y: hidden; */
 }
 
-svg {
-  background-color: #1F2020;
+.mermaidpre {
+  /* background-color: #5292c7; */
+  display: flex;
+  justify-content: center;
 }
+/* .language-mermaid {
+  background-color: #51e1bd;
+  margin: 0 auto;
+} */
 
 table {
   width:100%;
