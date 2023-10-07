@@ -24,32 +24,29 @@
 <script>
   function initializeMermaid() {
     mermaid.initialize({
-      startOnLoad: true,
-      // theme: "dark",
-      
-  theme: "base",
-  fontFamily: "TimesNewRoman Times Serif",
-  themeVariables: {
-    lineColor: "aliceblue",
-    primaryColor: "#323e52",
-    secondaryColor: "#397",
-    tertiaryColor: "#1a2638",
+      theme: "base",
+      fontFamily: "TimesNewRoman Times Serif",
+      themeVariables: {
+        lineColor: "aliceblue",
+        primaryColor: "#323e52",
+        secondaryColor: "#397",
+        tertiaryColor: "#1a2638",
 
-    primaryTextColor: "white",
-    secondaryTextColor: "white",
-    tertiaryTextColor: "white",
+        primaryTextColor: "white",
+        secondaryTextColor: "white",
+        tertiaryTextColor: "white",
 
-    primaryBorderColor: "aliceblue",
-    secondaryBorderColor: "aliceblue",
-    tertiaryBorderColor: "slategray"
-  }
-
+        primaryBorderColor: "aliceblue",
+        secondaryBorderColor: "aliceblue",
+        tertiaryBorderColor: "slategray"
+      }
     });
     window.mermaid.init(
       undefined,
       document.querySelectorAll('.language-mermaid'),
     );
   }
+
   let sheets = document.styleSheets
   let sheet = sheets[sheets.length - 1];
   let elms = document.querySelectorAll("code");
