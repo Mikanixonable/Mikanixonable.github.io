@@ -35,7 +35,7 @@
   for (let i = 0; i < elms.length; i++) {
     let elm = elms[i]
 
-       // <div class="language-shell highlighter-rouge">
+    // <div class="language-shell highlighter-rouge">
     // <div class="highlight">
     // <pre class="highlight">
     // <code>
@@ -48,11 +48,14 @@
       .match(/language-(\S+)\s/)[1]
 
     if (langName == "mermaid"){
+      elm.classList.add("mermaid")
 
     }else{
-    elm.parentElement.classList.add("codeBlock" + i)
+    elm.classList.add("code")
+    elm.parentElement.classList.add("codepre")
+    elm.parentElement.classList.add("codepre" + i)
     sheet.insertRule(
-      `.codeBlock${i}:before { content: "${langName}";}`,
+      `.codepre${i}:before { content: "${langName}";}`,
       sheet.cssRules.length);
   }
   }

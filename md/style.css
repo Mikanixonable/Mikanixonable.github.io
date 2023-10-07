@@ -86,7 +86,7 @@ blockquote {
   font-style:italic;
 }
 
-.codeBlock:before {
+.codepre:before {
   display: block;
   /* position: absolute; */
   inset-block-start: 0em;
@@ -99,10 +99,9 @@ blockquote {
   color: white;
   border-radius: .5em .5em 0 0;
   /* content: "python"; */
-  
 }
 
-code {
+.code {
   display: block;
   position: relative;
   padding: 1em 1em;
@@ -115,7 +114,7 @@ code {
   /* overflow-y: hidden; */
 }
 
-svg {
+.mermaid {
   background-color: #151515;
 }
 
