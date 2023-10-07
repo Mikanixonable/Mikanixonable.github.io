@@ -8,11 +8,27 @@ categories: main
 # 月面植物園
 ###### みかぶるのホームページ
 > テクノなまこ、科学の力
-[github repository](https://github.com/Mikanixonable)
-SNS
+
+[github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
+
+## Link
+### SNS
 - [bluesky](https://bsky.app/profile/mikanixonable.bsky.social)
 - [misskey](https://misskey.io/@Mikanixonable)
 - [twitter](https://twitter.com/Mikanixonable)
+- 
+### Socials
+- [blog](https://mikanixonable.hatenablog.com/)
+- [spotify](https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2)
+- [pixiv](https://www.pixiv.net/users/20149051/illustrations)
+- [AIみかぶる](https://twitter.com/Mikanixonable2)
+- [Unicode Pod](https://twitter.com/Unicode_pod)
+- [tumblr](https://mikanixonable.tumblr.com/)
+- [kakuyomu](https://kakuyomu.jp/users/Eustralopithecus)
+- [GitHub](https://github.com/Mikanixonable)
+
+### Other...
+- [bento.me](bento.me/miku)
 
 ### テイラー展開
 $$
