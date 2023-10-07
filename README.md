@@ -1,6 +1,6 @@
 # Mikanixonable.github.io
-[ホームページ](https://mikanixonable.github.io/)  
-みかぶるのファイル保管ディレクトリです
+[GitHub Pages](https://mikanixonable.github.io/)  
+みかぶるのホームページおよびファイル保管ディレクトリです
 
 拡張子：png
 イラストです。数字は作品番号で大きいほど新しいです。ただしハイフンから始まる場合は作品番号を付け始める前の作品で数字が大きいほど古くなります。作品番号が正の場合はふつう画像の右下に完成日付と作品番号があります。Mikanixonable.github.io/3　で全作品を閲覧できます。
