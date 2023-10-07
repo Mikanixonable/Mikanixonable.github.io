@@ -69,11 +69,24 @@ graph TD;
     B-->D;
     C-->D;
 ```
+~~~mermaid
+graph TD
+          A[Christmas] -->|Get money| B(Go shopping)
+          B --> C{Let me think}
+          B --> G[/Another/]
+          C ==>|One| D[Laptop]
+          C -->|Two| E[iPhone]
+          C -->|Three| F[fa:fa-car Car]
+          subgraph section
+            C
+            D
+            E
+            F
+            G
+          end
+~~~
 
 \$\sqrt{2}\$
-
-
-
 
 - 連絡 mikanixonable1@gmail.com
 
@@ -88,6 +101,11 @@ graph TD;
 - [notes](notes)
 
 ## 外部リンク
+相互リンク
+- [haxibami.net](https://haxibami.net/)
+- [fabon.info](https://fabon.info)
+- [sno2wman.net](https://sno2wman.net/)
+- [ideoaves.github.io](https://ideoaves.github.io/)
 
 ## 編集用
 - [チートシート]([https://github.com/pages-themes/leap-day/blob/master/index.md](https://itopaloglu83.github.io/Jekyll-Markdown-Cheat-Sheet/))
