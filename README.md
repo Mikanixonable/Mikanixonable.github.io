@@ -1,5 +1,6 @@
 # Mikanixonable.github.io
 [GitHub Pages](https://mikanixonable.github.io/)  
+[index.md](https://github.com/Mikanixonable/Mikanixonable.github.io/blob/master/index.md)
 みかぶるのホームページおよびファイル保管ディレクトリです
 
 拡張子：png
