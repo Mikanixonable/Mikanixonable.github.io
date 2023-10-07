@@ -119,7 +119,7 @@ code {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color:#efefef;
   font-size:13px;
-  /* overflow: auto; */
+  overflow: auto;
   /* overflow-y: hidden; */
 }
 
