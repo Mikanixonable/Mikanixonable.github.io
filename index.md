@@ -68,6 +68,7 @@ graph TD;
     B-->D;
     C-->D;
 ```
+ma
 ~~~mermaid
 graph TD
           A[fa:fa-twitter] -->|Get money| B(Go shopping)
