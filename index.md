@@ -1,12 +1,14 @@
 ---
 layout: default
 title: 月面植物園
+date: 2023-10-07 00:00:00
+image: ./logo.png
+categories: main
 ---
 # 月面植物園
 ###### みかぶるのホームページ
-
 > テクノなまこ、科学の力
-
+[github repository](https://github.com/Mikanixonable)
 SNS
 - [bluesky](https://bsky.app/profile/mikanixonable.bsky.social)
 - [misskey](https://misskey.io/@Mikanixonable)
