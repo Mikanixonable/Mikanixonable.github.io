@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'ja' }}">
+
 <head>
   <meta charset="utf-8">
   <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="./md/style.css">
-  <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script
+    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   {% seo %}
 </head>
 
 <body onload="initializeMermaid()">
   <div class="wrapper">
-   {{ content }}
+    {{ content }}
   </div>
 </body>
 
@@ -20,15 +23,23 @@
 <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
 <script>
   function initializeMermaid() {
-   mermaid.initialize({
-      startOnLoad:true,
-      theme: "dark",
-   });
-   window.mermaid.init(
+    mermaid.initialize({
+      startOnLoad: true,
+      // theme: "dark",
+      theme: "base",
+      themeVariables: {
+        primaryColor: "#00000000",
+        primaryTextColor: "#eee",
+        primaryBorderColor: "#eee",
+        lineColor: "#eee",
+        secondaryColor: "#456"
+      }
+    });
+    window.mermaid.init(
       undefined,
       document.querySelectorAll('.language-mermaid'),
-   );
-}
+    );
+  }
   let sheets = document.styleSheets
   let sheet = sheets[sheets.length - 1];
   let elms = document.querySelectorAll("code");
@@ -47,16 +58,16 @@
       .className
       .match(/language-(\S+)\s/)[1]
 
-    if (langName == "mermaid"){
+    if (langName == "mermaid") {
       elm.classList.add("mermaidpre")
 
-    }else{
-    elm.classList.add("code")
-    elm.parentElement.classList.add("codepre")
-    elm.parentElement.classList.add("codepre" + i)
-    sheet.insertRule(
-      `.codepre${i}:before { content: "${langName}";}`,
-      sheet.cssRules.length);
-  }
+    } else {
+      elm.classList.add("code")
+      elm.parentElement.classList.add("codepre")
+      elm.parentElement.classList.add("codepre" + i)
+      sheet.insertRule(
+        `.codepre${i}:before { content: "${langName}";}`,
+        sheet.cssRules.length);
+    }
   }
 </script>

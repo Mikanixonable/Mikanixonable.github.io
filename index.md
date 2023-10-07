@@ -6,7 +6,7 @@ image: ./logo.png
 categories: main
 ---
 # 月面植物園
-###### みかぶるのホームページ
+##### みかぶるのホームページ
 > テクノなまこ、科学の力
 
 [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
