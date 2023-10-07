@@ -62,11 +62,39 @@ plt.show()
 ~~~
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+%%{init:{
+  "theme": "base",
+  "fontFamily": "TimesNewRoman Times Serif",
+  "themeVariables": {
+    "lineColor": "aliceblue",
+    "primaryColor": "#323e52",
+    "secondaryColor": "#397",
+    "tertiaryColor": "#1a2638",
+    "primaryTextColor": "white",
+    "secondaryTextColor": "white",
+    "tertiaryTextColor": "white",
+    "primaryBorderColor": "aliceblue",
+    "secondaryBorderColor": "aliceblue",
+    "tertiaryBorderColor": "slategray"
+}
+}}%%
+graph TD
+o([fa:fa-link])
+
+t((Twitter))
+click t href "https://twitter.com/Mikanixonable"
+style t fill: #1C96E8,stroke-width: 0
+o --> t
+
+b((Bluesky))
+style b fill: #007DFF,stroke-width: 0
+click b href "https://bsky.app/profile/mikanixonable.bsky.social"
+o --> b
+
+m((Misskey))
+style m fill: #7BA700,stroke-width: 0
+click m href "https://misskey.io/@Mikanixonable"
+o --> m
 ```
 ma
 ~~~mermaid
