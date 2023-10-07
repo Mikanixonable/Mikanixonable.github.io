@@ -15,6 +15,9 @@ Bluesky</text></g></a>
 <a href="https://misskey.io/@Mikanixonable"><g transform="translate(90,130)"><circle cx="0" cy="0" r="20" fill="#7BA700" />
 <text x="-1" y="5" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
 Misskey</text></g></a>
+<a href="https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2"><g transform="translate(122,148)"><circle cx="0" cy="0" r="12" fill="#08a030" />
+<text x="-1" y="5" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
+Spotify</text></g></a>
 <a href="https://github.com/Mikanixonable">
 <g transform="translate(140,100)"><circle rx="0" ry="0" r="20" fill="#333" />
 <text x="10" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
@@ -22,6 +25,9 @@ GitHub</text></g></a>
 <a href="https://www.pixiv.net/users/20149051/illustrations">
 <g transform="translate(220,160)"><circle cx="0" cy="0" r="20" fill="#0196FA" /><text x="0" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
 Pixiv</text></g></a>
+<a href="https://mikanixonable.tumblr.com/">
+<g transform="translate(270,150)"><circle cx="0" cy="0" r="20" fill="#001835" /><text x="0" y="3" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
+Tumblr</text></g></a>
 <a href="https://discord.com/users/396122233698910218">
 <g transform="translate(230,110)"><circle cx="0" cy="0" r="17" fill="#5865F2" /><text x="-4" y="4" font-size="12" text-anchor="middle"alignment-baseline="central" fill="white">
 Discord</text></g></a>  
@@ -36,13 +42,6 @@ Discord</text></g></a>
 [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
 ## Link
-### SNS
-- [bluesky](https://bsky.app/profile/mikanixonable.bsky.social)
-- [misskey](https://misskey.io/@Mikanixonable)
-- [twitter](https://twitter.com/Mikanixonable)
-
-
-### Socials
 - [blog](https://mikanixonable.hatenablog.com/)
 - [spotify](https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2)
 - [pixiv](https://www.pixiv.net/users/20149051/illustrations)
