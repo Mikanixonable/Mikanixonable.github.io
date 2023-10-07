@@ -27,8 +27,8 @@ categories: main
 - [kakuyomu](https://kakuyomu.jp/users/Eustralopithecus)
 - [GitHub](https://github.com/Mikanixonable)
 
-### Other...
-- [bento.me](bento.me/miku)
+### その他
+- [bento.me](https://bento.me/miku)
 
 ### テイラー展開
 $$
