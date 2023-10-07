@@ -3,8 +3,8 @@
 /* @import "rouge-base16-dark.scss"; */
 
 body {
-  padding:0px 0 20px 0px;
-  margin: 0px;
+  /* padding:0px 0 20px 0px; */
+  margin: 0 0;
   font:14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#f0e7d5;
   font-weight: normal;
@@ -13,8 +13,9 @@ body {
 }
 
 .wrapper {
+  margin: 0 auto;
+  padding: 2em;
   max-width:650px;
-  margin: 2em;
   position:relative;
 }
 
