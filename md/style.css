@@ -115,8 +115,8 @@ blockquote {
   /* overflow-y: hidden; */
 }
 
-.mermaid {
-  background-color: #151515;
+svg {
+  background-color: #1F2020;
 }
 
 table {
