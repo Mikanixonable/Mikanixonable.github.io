@@ -1,28 +1,19 @@
 <!doctype html>
 <html lang="{{ site.lang | default: " ja" }}">
-
 <head>
   <meta charset="utf-8">
-  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <meta name="color-scheme" content="light dark" />
-  <!-- IE互換性のためのおまじない -->
   <link rel="stylesheet" href="./md/style.css">
-  <script
-    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   {% seo %}
-  <!-- {% include head-custom.html %} -->
 </head>
 
 <body>
   <div class="wrapper">
     <section>
-
       {{ content }}
-
     </section>
   </div>
 </body>
@@ -51,8 +42,8 @@
       .parentElement
       .parentElement
       .className
+      
       .match(/language-(\S+)\s/)[1]
-
     sheet.insertRule(
       `.pre${i}:before { content: "${langName}";}`,
       sheet.cssRules.length);
