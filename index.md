@@ -74,13 +74,28 @@ AIみかぶる</text></g></a>
 みかぶるのホームページ</text>
   </svg>
 
-> テクノなまこ、科学の力
 
-# Profile
-<img src="logo.png" width="10%" />
 
-2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます  
-連絡: TwteerのDMか、mikanixonable1@gmail.com
+<div style="
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #333;
+border-radius: 3em 3em 0em 0em;
+margin:0 8em
+">
+<img src="logo5.png" width="10%"/>
+自己紹介（略式）
+<p>
+2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
+連絡: TwteerのDM/mikanixonable1@gmail.com
+</p>
+
+</div>
+
+
+
 
 
 ## コンテンツ
@@ -99,7 +114,7 @@ AIみかぶる</text></g></a>
 
 
 ## 一方的リンク
->ツイッターやMisskeyのFFの個人サイトをまとめたものです。素敵なサイトがたくさんあります。散策していってください  
+>ツイッターやMisskeyのFFの個人サイト
 
 https://qmainconts.dev/  
 https://sites.google.com/view/farascarrelhttps://www.haxibami.net/  
