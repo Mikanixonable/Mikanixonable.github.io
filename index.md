@@ -97,9 +97,7 @@ Mikanixonableの自己紹介（略式）
 
 >テクノなまこ、科学の力
 
-
   ### ミクボタン（音が鳴ります）
-  
   <div class="mikuButton">
     <button onclick="btn('1.mp3', this)">ミクボタン</button>
     <button onclick="btn('2.mp3', this)">ねう</button>
@@ -111,7 +109,6 @@ Mikanixonableの自己紹介（略式）
   </div>
 
   ### 音楽視聴
-
   <div class="musicButton">
     <button onclick="btn('8.mp3', this)">pikopiko tune</button>
     <button onclick="btn('9.mp3', this)">人のいない美術館</button>
@@ -128,6 +125,9 @@ Mikanixonableの自己紹介（略式）
     <button onclick="btn('20.mp3', this)">対流圏</button>
   </div>
 
+
+
+
 ## コンテンツ
 - [サイトマップ](1) マークダウンからの生成ページはヒットしない、改修待ち
 - [旧トップ](300)
@@ -142,6 +142,16 @@ Mikanixonableの自己紹介（略式）
 - [fabon.info](https://fabon.info)
 - [sno2wman.net](https://sno2wman.net/)
 
+## バナー
+<a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" /></a>  
+>&lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" />&lt;/a>
+
+このサイトはリンク自由です
+
+~~~mermaid
+flowchart TD
+  a --> b --> c
+~~~
 
 ## 一方的リンク
 >ツイッターやMisskeyのFFの個人サイト
