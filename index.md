@@ -73,9 +73,11 @@ AIみかぶる</text></g></a>
 <text x="4" y="60" font-size="15"fill="white">
 みかぶるのホームページ</text>
 </svg>
-
-
-
+<div style="
+display: flex;
+flex-direction: column;
+align-items: center;
+">
 <div style="
 display: flex;
 flex-direction: column;
@@ -83,7 +85,7 @@ align-items: center;
 justify-content: center;
 background-color: #333;
 border-radius: 3em 3em 0em 0em;
-margin:0 8em
+max-width: 400px
 ">
 <img src="logo5.png" width="10%"/>
 Mikanixonableの自己紹介（略式）
@@ -91,7 +93,7 @@ Mikanixonableの自己紹介（略式）
 2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
 連絡: TwteerのDM/mikanixonable1@gmail.com
 </p>
-</div><br>
+</div></div><br>
 
 >テクノなまこ、科学の力
 
@@ -121,23 +123,18 @@ function btn(filePath, button) {
       color: white;
       border-radius: 1em;
       border-width: 0;
-
       &:hover {
         filter: hue-rotate(20deg) saturate(90%) brightness(90%)
       }
-
       &.playing {
         filter: hue-rotate(20deg) saturate(200%)
       }
     }
-
     .mikuButton button {
       background-color: #47848b;
     }
-
     .musicButton button {
       background-color: #8b4755;
-
     }
   </style>
   ### ミクボタン（音が鳴ります）
