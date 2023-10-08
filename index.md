@@ -5,7 +5,7 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
-<svg version="1.1" baseProfile="full" width="350" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" baseProfile="full" width="80vw" height="40vw" viewbox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
 <a href="https://twitter.com/Mikanixonable"><g transform="translate(60,60)"><circle cx="0" cy="0" r="50" fill="#1C96E8" />
 <text x="-10" y="20" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
 Twitter</text></g></a>
@@ -23,30 +23,30 @@ Spotify</text></g></a>
 <text x="10" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
 GitHub</text></g></a>
 <a href="https://www.pixiv.net/users/20149051/illustrations">
-<g transform="translate(220,200)"><circle cx="0" cy="0" r="30" fill="#0196FA" /><text x="0" y="-13" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(220,100)"><circle cx="0" cy="0" r="20" fill="#0196FA" /><text x="0" y="0" font-size="15" text-anchor="middle"alignment-baseline="central" fill="white">
 Pixiv</text></g></a>
 <a href="https://mikanixonable.tumblr.com/">
-<g transform="translate(260,150)"><circle cx="0" cy="0" r="20" fill="#102745" /><text x="0" y="3" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(260,100)"><circle cx="0" cy="0" r="15" fill="#102745" /><text x="0" y="0" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
 Tumblr</text></g></a>
 <a href="https://discord.com/users/396122233698910218">
 <g transform="translate(80,160)"><circle cx="0" cy="0" r="10" fill="#5865F2" /><text x="0" y="2" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 Discord</text></g></a>
 <a href="https://www.artstation.com/mikanixonable">
-<g transform="translate(340,120)"><circle cx="0" cy="0" r="10" fill="#26a" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(340,100)"><circle cx="0" cy="0" r="10" fill="#26a" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 ArtStation</text></g></a>
 <a href="https://mikanixonable.hatenablog.com/">
-<g transform="translate(160,-45)"><circle cx="0" cy="0" r="90" fill="#505259" /><text x="20" y="60" font-size="18" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(180,40)"><circle cx="0" cy="0" r="20" fill="#505259" /><text x="0" y="0" font-size="14" text-anchor="middle"alignment-baseline="central" fill="white">
 Blog</text></g></a>
 <a href="https://truthsocial.com/@mikanixonable">
 <g transform="translate(20,102)"><circle cx="0" cy="0" r="5" fill="#42a" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Truth</text></g></a>
 <a href="https://iris.to/npub15m0s2qs5580f342d9endsuu464g974tmc7fqpdxdqt35zx9tqw9s6hy98w"><g transform="translate(66,115)"><circle cx="0" cy="0" r="5" fill="#603285" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Nostr</text></g></a>  
-<a href="https://www.instagram.com/mikanixonable/"><g transform="translate(335,142)"><circle cx="0" cy="0" r="8" fill="#CD1070" /><text x="-2" y="0" font-size="4" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.instagram.com/mikanixonable/"><g transform="translate(220,40)"><circle cx="0" cy="0" r="15" fill="#CD1070" /><text x="0" y="0" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
 Instagram</text></g></a>  
-<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(270,20)"><circle cx="0" cy="0" r="17" fill="#FF0000" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(260,40)"><circle cx="0" cy="0" r="15" fill="#FF0000" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 YouTube</text></g></a>
-<a href="https://kakuyomu.jp/users/Eustralopithecus"><g transform="translate(0,200)"><circle cx="0" cy="0" r="25" fill="#2893CA" /><text x="15" y="-10" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://kakuyomu.jp/users/Eustralopithecus"><g transform="translate(0,120)"><circle cx="0" cy="0" r="15" fill="#2893CA" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 kakuyomu</text></g></a>
 <a href="https://keybase.io/mikanixonable"><g transform="translate(155,64)"><circle cx="0" cy="0" r="8" fill="#FF6F21" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 keybase</text></g></a>
@@ -62,7 +62,7 @@ VRChat</text></g></a>
 mstdn</text></g></a>
 <a href="https://twitter.com/Unicode_pod"><g transform="translate(50,173)"><circle cx="0" cy="0" r="8" fill="#288E9C" /><text x="-2" y="0" font-size="4" text-anchor="middle"alignment-baseline="central" fill="white">
 Unicode pod</text></g></a>  
-<a href="https://twitter.com/Mikanixonable2"><g transform="translate(105,188)"><circle cx="0" cy="0" r="8" fill="#8BAAAF" /><text x="2" y="0" font-size="4" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://twitter.com/Mikanixonable2"><g transform="translate(105,178)"><circle cx="0" cy="0" r="8" fill="#8BAAAF" /><text x="2" y="0" font-size="4" text-anchor="middle"alignment-baseline="central" fill="white">
 AIみかぶる</text></g></a>  
 <text x="0" y="40" font-size="30"fill="white">
 月面植物園</text>
@@ -74,19 +74,8 @@ AIみかぶる</text></g></a>
 
 [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
-## Link
-- [blog](https://mikanixonable.hatenablog.com/)
-- [spotify](https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2)
-- [pixiv](https://www.pixiv.net/users/20149051/illustrations)
-- [AIみかぶる](https://twitter.com/Mikanixonable2)
-- [Unicode Pod](https://twitter.com/Unicode_pod)
-- [tumblr](https://mikanixonable.tumblr.com/)
-- [kakuyomu](https://kakuyomu.jp/users/Eustralopithecus)
-- [GitHub](https://github.com/Mikanixonable)
-
 ### その他
 - [bento.me](https://bento.me/miku)
-
 - 連絡 mikanixonable1@gmail.com
 
 ## 探検
