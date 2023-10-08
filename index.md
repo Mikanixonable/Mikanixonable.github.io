@@ -5,7 +5,7 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
-<svg version="1.1" baseProfile="full" width="84vw" height="40vw" viewbox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" baseProfile="full" width="84vw" height="50vw" viewbox="0 0 350 200" xmlns="http://www.w3.org/2000/svg">
 <a href="https://twitter.com/Mikanixonable"><g transform="translate(60,60)"><circle cx="0" cy="0" r="50" fill="#1C96E8" />
 <text x="-10" y="20" font-size="20" text-anchor="middle"alignment-baseline="central" fill="white">
 Twitter</text></g></a>
@@ -72,7 +72,7 @@ AIみかぶる</text></g></a>
 月面植物園</text>
 <text x="4" y="60" font-size="15"fill="white">
 みかぶるのホームページ</text>
-  </svg>
+</svg>
 
 
 
@@ -91,11 +91,46 @@ margin:0 8em
 2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
 連絡: TwteerのDM/mikanixonable1@gmail.com
 </p>
+</div><br>
 
-</div>
+>テクノなまこ、科学の力
 
-
-
+<script>
+const audioElements = {};
+function btn(filePath, button) {
+  if (!audioElements[filePath]) {
+      // 新しい音声ファイルを再生
+      audioElements[filePath] = new Audio(filePath);
+      audioElements[filePath].play();
+      button.classList.add('playing'); // ボタンのスタイルを変更
+      // 音声再生終了時のイベントハンドラを設定
+      audioElements[filePath].addEventListener('ended', function() {
+          button.classList.remove('playing'); // ボタンのスタイルを元に戻す
+          delete audioElements[filePath]; // オブジェクトから削除
+      });} else {
+      // 既存の音声ファイルを停止
+      audioElements[filePath].pause();
+      audioElements[filePath].currentTime = 0; // 音声を最初から再生できるようにリセット
+      delete audioElements[filePath]; // オブジェクトから削除
+      button.classList.remove('playing'); // ボタンのスタイルを元に戻す
+  }}
+</script>
+<style>
+button{
+  background-color: #47848b;
+  color: white;
+  border-radius: 1em;border-width: 0;
+  &:hover {background-color: #4d9fa9;}
+  &.playing {background-color: #14656e;}
+}
+</style>
+<button onclick="btn('1.mp3', this)">ミクボタン</button>
+<button onclick="btn('2.mp3', this)">ねう</button>
+<button onclick="btn('3.mp3', this)">Mazurek Dąbrowskiego</button>
+<button onclick="btn('4.mp3', this)">ねこーっ</button>
+<button onclick="btn('5.mp3', this)">ねこねこ</button>
+<button onclick="btn('6.mp3', this)">にゃう</button>
+<button onclick="btn('7.mp3', this)">ぬい~</button>
 
 
 ## コンテンツ
