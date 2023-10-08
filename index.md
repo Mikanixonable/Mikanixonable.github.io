@@ -87,7 +87,7 @@ background-color: #333;
 border-radius: 3em 3em 0em 0em;
 max-width: 400px
 ">
-<img src="logo5.png" width="10%"/>
+<img src="logo5.png" style="width: min(100px, 90%)"/>
 Mikanixonableの自己紹介（略式）
 <p>
 2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
@@ -97,46 +97,7 @@ Mikanixonableの自己紹介（略式）
 
 >テクノなまこ、科学の力
 
-<script>
-const audioElements = {};
-function btn(filePath, button) {
-  if (!audioElements[filePath]) {
-      // 新しい音声ファイルを再生
-      audioElements[filePath] = new Audio(filePath);
-      audioElements[filePath].play();
-      button.classList.add('playing'); // ボタンのスタイルを変更
-      // 音声再生終了時のイベントハンドラを設定
-      audioElements[filePath].addEventListener('ended', function() {
-          button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-          delete audioElements[filePath]; // オブジェクトから削除
-      });} else {
-      // 既存の音声ファイルを停止
-      audioElements[filePath].pause();
-      audioElements[filePath].currentTime = 0; // 音声を最初から再生できるようにリセット
-      delete audioElements[filePath]; // オブジェクトから削除
-      button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-  }}
-</script>
-  <style>
-    button {
-      background-color: slategrey;
-      color: white;
-      border-radius: 1em;
-      border-width: 0;
-      &:hover {
-        filter: hue-rotate(20deg) saturate(90%) brightness(90%)
-      }
-      &.playing {
-        filter: hue-rotate(20deg) saturate(200%)
-      }
-    }
-    .mikuButton button {
-      background-color: #47848b;
-    }
-    .musicButton button {
-      background-color: #8b4755;
-    }
-  </style>
+
   ### ミクボタン（音が鳴ります）
   
   <div class="mikuButton">
