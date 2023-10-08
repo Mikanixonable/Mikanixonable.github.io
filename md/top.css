@@ -1,0 +1,18 @@
+button {
+  background-color: slategrey;
+  color: white;
+  border-radius: 1em;
+  border-width: 0;
+  &:hover {
+    filter: hue-rotate(20deg) saturate(90%) brightness(90%)
+  }
+  &.playing {
+    filter: hue-rotate(20deg) saturate(200%)
+  }
+}
+.mikuButton button {
+  background-color: #47848b;
+}
+.musicButton button {
+  background-color: #8b4755;
+}
