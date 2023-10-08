@@ -29,22 +29,22 @@ Pixiv</text></g></a>
 <g transform="translate(260,150)"><circle cx="0" cy="0" r="20" fill="#102745" /><text x="0" y="3" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
 Tumblr</text></g></a>
 <a href="https://discord.com/users/396122233698910218">
-<g transform="translate(234,112)"><circle cx="0" cy="0" r="10" fill="#5865F2" /><text x="0" y="2" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(80,160)"><circle cx="0" cy="0" r="10" fill="#5865F2" /><text x="0" y="2" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 Discord</text></g></a>
-<a href="https://discord.com/users/396122233698910218">
-<g transform="translate(230,82)"><circle cx="0" cy="0" r="10" fill="#26a" /><text x="0" y="2" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.artstation.com/mikanixonable">
+<g transform="translate(190,120)"><circle cx="0" cy="0" r="10" fill="#26a" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 ArtStation</text></g></a>
 <a href="https://mikanixonable.hatenablog.com/">
-<g transform="translate(280,112)"><circle cx="0" cy="0" r="17" fill="#999" /><text x="0" y="-3" font-size="12" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(160,-45)"><circle cx="0" cy="0" r="90" fill="#505259" /><text x="20" y="60" font-size="18" text-anchor="middle"alignment-baseline="central" fill="white">
 Blog</text></g></a>
 <a href="https://truthsocial.com/@mikanixonable">
-<g transform="translate(200,112)"><circle cx="0" cy="0" r="5" fill="#42a" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(20,102)"><circle cx="0" cy="0" r="5" fill="#42a" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Truth</text></g></a>
 <a href="https://iris.to/npub15m0s2qs5580f342d9endsuu464g974tmc7fqpdxdqt35zx9tqw9s6hy98w"><g transform="translate(66,115)"><circle cx="0" cy="0" r="5" fill="#603285" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Nostr</text></g></a>  
 <a href="https://www.instagram.com/mikanixonable/"><g transform="translate(180,142)"><circle cx="0" cy="0" r="8" fill="#CD1070" /><text x="-2" y="0" font-size="4" text-anchor="middle"alignment-baseline="central" fill="white">
 Instagram</text></g></a>  
-<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(150,142)"><circle cx="0" cy="0" r="13" fill="#FF0000" /><text x="0" y="-3" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(310,142)"><circle cx="0" cy="0" r="13" fill="#FF0000" /><text x="0" y="-3" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 YouTube</text></g></a>  
 <text x="0" y="40" font-size="30"fill="white">
 月面植物園</text>
