@@ -86,7 +86,7 @@ border-radius: 3em 3em 0em 0em;
 margin:0 8em
 ">
 <img src="logo5.png" width="10%"/>
-自己紹介（略式）
+Mikanixonableの自己紹介（略式）
 <p>
 2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
 連絡: TwteerのDM/mikanixonable1@gmail.com
@@ -115,23 +115,60 @@ function btn(filePath, button) {
       button.classList.remove('playing'); // ボタンのスタイルを元に戻す
   }}
 </script>
-<style>
-button{
-  background-color: #47848b;
-  color: white;
-  border-radius: 1em;border-width: 0;
-  &:hover {background-color: #4d9fa9;}
-  &.playing {background-color: #14656e;}
-}
-</style>
-<button onclick="btn('1.mp3', this)">ミクボタン</button>
-<button onclick="btn('2.mp3', this)">ねう</button>
-<button onclick="btn('3.mp3', this)">Mazurek Dąbrowskiego</button>
-<button onclick="btn('4.mp3', this)">ねこーっ</button>
-<button onclick="btn('5.mp3', this)">ねこねこ</button>
-<button onclick="btn('6.mp3', this)">にゃう</button>
-<button onclick="btn('7.mp3', this)">ぬい~</button>
+  <style>
+    button {
+      background-color: slategrey;
+      color: white;
+      border-radius: 1em;
+      border-width: 0;
 
+      &:hover {
+        filter: hue-rotate(20deg) saturate(90%) brightness(90%)
+      }
+
+      &.playing {
+        filter: hue-rotate(20deg) saturate(200%)
+      }
+    }
+
+    .mikuButton button {
+      background-color: #47848b;
+    }
+
+    .musicButton button {
+      background-color: #8b4755;
+
+    }
+  </style>
+  ### ミクボタン（音が鳴ります）
+  
+  <div class="mikuButton">
+    <button onclick="btn('1.mp3', this)">ミクボタン</button>
+    <button onclick="btn('2.mp3', this)">ねう</button>
+    <button onclick="btn('3.mp3', this)">Mazurek Dąbrowskiego</button>
+    <button onclick="btn('4.mp3', this)">ねこーっ</button>
+    <button onclick="btn('5.mp3', this)">ねこねこ</button>
+    <button onclick="btn('6.mp3', this)">にゃう</button>
+    <button onclick="btn('7.mp3', this)">ぬい~</button>
+  </div>
+
+  ### 音楽視聴
+
+  <div class="musicButton">
+    <button onclick="btn('8.mp3', this)">pikopiko tune</button>
+    <button onclick="btn('9.mp3', this)">人のいない美術館</button>
+    <button onclick="btn('10.mp3', this)">warabimochi</button>
+    <button onclick="btn('11.mp3', this)">きのこの森での記録</button>
+    <button onclick="btn('12.mp3', this)">game music 1</button>
+    <button onclick="btn('13.mp3', this)">雨</button>
+    <button onclick="btn('14.mp3', this)">土曜日のテーマ</button>
+    <button onclick="btn('15.mp3', this)">piano matrix</button>
+    <button onclick="btn('16.mp3', this)">piano matrix2</button>
+    <button onclick="btn('17.mp3', this)">Tetete</button>
+    <button onclick="btn('18.mp3', this)">台風のうた</button>
+    <button onclick="btn('19.mp3', this)">時計台</button>
+    <button onclick="btn('20.mp3', this)">対流圏</button>
+  </div>
 
 ## コンテンツ
 - [サイトマップ](1) マークダウンからの生成ページはヒットしない、改修待ち
