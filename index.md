@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: top
 title: 月面植物園
 date: 2023-10-07 00:00:00
 image: ./logo.png
@@ -26,35 +26,39 @@ GitHub</text></g></a>
 <g transform="translate(270,100)"><circle cx="0" cy="0" r="30" fill="#0196FA" /><text x="0" y="0" font-size="17" text-anchor="middle"alignment-baseline="central" fill="white">
 Pixiv</text></g></a>
 <a href="https://mikanixonable.tumblr.com/">
-<g transform="translate(245,140)"><circle cx="0" cy="0" r="15" fill="#102745" /><text x="0" y="0" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(245,50)"><circle cx="0" cy="0" r="22" fill="#102745" /><text x="0" y="0" font-size="10" text-anchor="middle"alignment-baseline="central" fill="white">
 Tumblr</text></g></a>
 <a href="https://discord.com/users/396122233698910218">
 <g transform="translate(80,160)"><circle cx="0" cy="0" r="10" fill="#5865F2" /><text x="0" y="2" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 Discord</text></g></a>
 <a href="https://www.artstation.com/mikanixonable">
-<g transform="translate(300,130)"><circle cx="0" cy="0" r="10" fill="#26a" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(225,90)"><circle cx="0" cy="0" r="12" fill="#26a" /><text x="-2" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 ArtStation</text></g></a>
 <a href="https://mikanixonable.hatenablog.com/">
 <g transform="translate(180,40)"><circle cx="0" cy="0" r="20" fill="#505259" /><text x="0" y="0" font-size="14" text-anchor="middle"alignment-baseline="central" fill="white">
 Blog</text></g></a>
 <a href="https://truthsocial.com/@mikanixonable">
-<g transform="translate(20,102)"><circle cx="0" cy="0" r="5" fill="#42a" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
+<g transform="translate(70,147)"><circle cx="0" cy="0" r="5" fill="#42a" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Truth</text></g></a>
 <a href="https://iris.to/npub15m0s2qs5580f342d9endsuu464g974tmc7fqpdxdqt35zx9tqw9s6hy98w"><g transform="translate(66,115)"><circle cx="0" cy="0" r="5" fill="#603285" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
 Nostr</text></g></a>  
-<a href="https://www.instagram.com/mikanixonable/"><g transform="translate(275,150) rotate(90 0 0)"><circle cx="0" cy="0" r="10" fill="#CD1070" /><text x="10" y="0" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.instagram.com/mikanixonable/"><g transform="translate(310,150) rotate(50 0 0)"><circle cx="0" cy="0" r="10" fill="#CD1070" /><text x="10" y="0" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
 Instagram</text></g></a>
-<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(245,50)"><circle cx="0" cy="0" r="20" fill="#FF0000" /><text x="0" y="0" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.flickr.com/photos/196365191@N08/"><g transform="translate(305,120) rotate(0 0 0)"><circle cx="0" cy="0" r="8" fill="#0063DC" /><text x="3" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+Flickr</text></g></a>
+<a href="https://www.youtube.com/channel/UCQ02LvaZAbZAgAWBN5pYniA"><g transform="translate(270,155)"><circle cx="0" cy="0" r="20" fill="#FF0000" /><text x="0" y="0" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
 YouTube</text></g></a>
-<a href="https://kakuyomu.jp/users/Eustralopithecus"><g transform="translate(0,120)"><circle cx="0" cy="0" r="15" fill="#2893CA" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://kakuyomu.jp/users/Eustralopithecus"><g transform="translate(20,105) rotate(0 0 0)"><circle cx="0" cy="0" r="8" fill="#2893CA" /><text x="5" y="1" font-size="5" text-anchor="middle"alignment-baseline="central" fill="white">
 kakuyomu</text></g></a>
-<a href="https://keybase.io/mikanixonable"><g transform="translate(155,64)"><circle cx="0" cy="0" r="8" fill="#FF6F21" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://keybase.io/mikanixonable"><g transform="translate(235,163)"><circle cx="0" cy="0" r="8" fill="#FF6F21" /><text x="-3" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 keybase</text></g></a>
-<a href="https://soundcloud.com/mikanixonable"><g transform="translate(230,80)"><circle cx="0" cy="0" r="9" fill="#FF3902" /><text x="0" y="0" font-size="3" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://bento.me/miku"><g transform="translate(150,70)"><circle cx="0" cy="0" r="6" fill="#888" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
+bento</text></g></a>
+<a href="https://soundcloud.com/mikanixonable"><g transform="translate(240,135)"><circle cx="0" cy="0" r="15" fill="#FF3902" /><text x="-7" y="-3" font-size="8" text-anchor="middle"alignment-baseline="central" fill="white">
 SoundCloud</text></g></a>
 <a href="https://www.nicovideo.jp/user/60514629/video"><g transform="translate(290,55)"><circle cx="0" cy="0" r="13" fill="#333" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 niconico</text></g></a>
-<a href="https://www.tiktok.com/@mikanixonable"><g transform="translate(270,25)"><circle cx="0" cy="0" r="10" fill="#353050" /><text x="0" y="0" font-size="5" text-anchor="middle"alignment-baseline="central" fill="white">
+<a href="https://www.tiktok.com/@mikanixonable"><g transform="translate(290,135)"><circle cx="0" cy="0" r="7" fill="#353050" /><text x="0" y="0" font-size="5" text-anchor="middle"alignment-baseline="central" fill="white">
 TikTok</text></g></a>  
 <a href="https://vrchat.com/home/user/usr_37713f32-f424-4242-86c2-b8cb7bcc2b3b"><g transform="translate(320,100)"><circle cx="0" cy="0" r="13" fill="#354e45" /><text x="0" y="0" font-size="6" text-anchor="middle"alignment-baseline="central" fill="white">
 VRChat</text></g></a>
@@ -72,31 +76,30 @@ AIみかぶる</text></g></a>
 
 > テクノなまこ、科学の力
 
-[github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
+# Profile
+<img src="logo.png" width="10%" />
 
-### その他
-- [bento.me](https://bento.me/miku)
-- 連絡 mikanixonable1@gmail.com
+2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます  
+連絡: TwteerのDMか、mikanixonable1@gmail.com
 
-## 探検
-- [site map](1)
-- [旧トップ](300)
 
 ## コンテンツ
+- [サイトマップ](1)
+- [旧トップ300](300)
 - [140](140)
 - [141](141)
 - [142](142)
 - [notes](notes)
 
-## 外部リンク
-相互リンク
+## 相互リンク
+- [ideoaves.github.io](https://ideoaves.github.io/)
 - [haxibami.net](https://haxibami.net/)
 - [fabon.info](https://fabon.info)
 - [sno2wman.net](https://sno2wman.net/)
-- [ideoaves.github.io](https://ideoaves.github.io/)
 
 ## 編集用
 - [チートシート]([https://github.com/pages-themes/leap-day/blob/master/index.md](https://itopaloglu83.github.io/Jekyll-Markdown-Cheat-Sheet/))
 - [チートシート日本語](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
+- [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
 
