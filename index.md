@@ -186,6 +186,7 @@ https://sozysozbot.github.io/
 https://skytomo221.github.io/  
 https://tachibana51.github.io/  
 https://gfngfn.github.io/ja/  
+https://licjar-xeymelloz.github.io/  
 https://notolyte.github.io/pensee/  
 http://www.ximco.jp/  
 https://kuina.ch/  
