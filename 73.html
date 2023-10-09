@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>改行を半角空白2個に変換する</title>
+</head>
+<style>
+  body{
+display: flex;
+flex-direction: column;
+  }
+</style>
+
+  
+<body>
+  <textarea name=”” rows=”” cols=”” wrap=”” id="input1"></textarea>
+  <!-- <input type="text" id="input1"> -->
+  <p id="output1"></p>
+</body>
+<script>
+  let intxt = document.getElementById("input1")
+  let outtxt = document.getElementById("output1")
+
+  input()
+  intxt.addEventListener("input", () => {
+    input()
+  })
+
+  function input() {
+
+    outtxt.innerText = intext.value.replace("\n","  ")
+  }
+</script>
+
+</html>
