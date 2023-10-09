@@ -15,6 +15,7 @@ flex-direction: column;
 
   
 <body>
+  改行を半角空白2個に変換する。プレーンテキストからのマークダウン作成用
   <textarea name=”” rows=”” cols=”” wrap=”” id="input1"></textarea>
   <!-- <input type="text" id="input1"> -->
   <p id="output1"></p>
@@ -30,7 +31,7 @@ flex-direction: column;
 
   function input() {
 
-    outtxt.innerText = intext.value.replace("\n","  ")
+    outtxt.innerText = intxt.value.replaceAll("\n","  ").replaceAll("    \n","  \n")
   }
 </script>
 
