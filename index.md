@@ -6,28 +6,6 @@ image: ./logo.png
 categories: main
 ---
 
-<!-- <div style="
-display: flex;
-flex-direction: column;
-align-items: center;
-">
-<div style="
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: #333;
-border-radius: 3em 3em 0em 0em;
-max-width: 400px
-">
-<img src="logo5.png" style="width: min(100px, 90%)"/>
-Mikanixonableの自己紹介（略式）
-<p>
-2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
-連絡: TwteerのDM/mikanixonable1@gmail.com
-</p>
-</div></div><br> -->
-
 <blockquote>
   <p id="quote">テクノなまこ、科学の力</p>
 </blockquote>
@@ -115,7 +93,66 @@ oft.show
 </details>
 
 
+## みかぶるについて
+<div style="
+display: flex;
+flex-direction: column;
+align-items: center;
+">
+<div style="
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #333;
+border-radius: 3em 3em 0em 0em;
+max-width: 400px
+">
+<div style="
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-size: 2em
+">
+<img src="logo5.png" style="width: min(100px, 90%)"/>
+　みかぶる
+</div>
+<p>
+正式名称：Mikanixonable<br>
+別名義：にそな, ユーストラロピテクス, indene, 三日原みか<br>
+他称：み氏, みの人
+</p>
+</div></div><br>
+2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
 
+### 興味
+人工言語、架空地図、地学（大地形）、フォント製作など
+
+### 趣味
+ふとんとまくらを吸うこと、地衣類や苔の写真をとること、絵をかくこと、曲を作ること
+
+### favorite
+- アニメ
+  - 少女☆歌劇 レヴュースタァライト
+  - 未来少年コナン
+  - ぼっち・ざ・ろっく！
+  - 宇宙戦艦ヤマト2199
+- 漫画
+  - 少女終末旅行
+
+- 音楽家
+  - jain
+  - ginger root
+  - Charles Valentin Alkan
+- 彫刻
+  - 流政之
+  - ジャコメッティ
+
+
+### 連絡
+- TwteerのDM
+- mikanixonable1@gmail.com
 
 
 ## 相互リンク
