@@ -26,10 +26,12 @@ oft.show
     <button onclick="btn('5.mp3', this)">ねこねこ</button>
     <button onclick="btn('6.mp3', this)">にゃう</button>
     <button onclick="btn('7.mp3', this)">ぬい~</button>
+    <button onclick="btn('21.mp3', this)">JR-SH3-3(東京駅)</button>
   </div>
 
-  ### 音楽視聴
+  ### 音楽コーナー
   <div class="musicButton">
+  <button onclick="btn('22.mp3', this)">恒星間播種船のテーマ</button>
     <button onclick="btn('8.mp3', this)">pikopiko tune</button>
     <button onclick="btn('9.mp3', this)">人のいない美術館</button>
     <button onclick="btn('10.mp3', this)">warabimochi</button>
@@ -154,6 +156,11 @@ font-size: 2em
 - TwteerのDM
 - mikanixonable1@gmail.com
 
+## バナー
+<a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" /></a>  
+>&lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" />&lt;/a>
+
+このサイトはリンク自由です
 
 ## 相互リンク
 - [ideoaves.github.io](https://ideoaves.github.io/)
@@ -161,11 +168,7 @@ font-size: 2em
 - [fabon.info](https://fabon.info)
 - [sno2wman.net](https://sno2wman.net/)
 
-## バナー
-<a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" /></a>  
->&lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" />&lt;/a>
 
-このサイトはリンク自由です
 
 
 ## 一方的リンク
