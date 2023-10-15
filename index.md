@@ -187,11 +187,8 @@ https://enden-nix.github.io/
 https://sozysozbot.github.io/  
 https://skytomo221.github.io/  
 https://tachibana51.github.io/  
-<<<<<<< Updated upstream
 https://gfngfn.github.io/ja/  
 https://licjar-xeymelloz.github.io/  
-=======
->>>>>>> Stashed changes
 https://notolyte.github.io/pensee/  
 https://strv.dev/  
 https://kuina.ch/  
