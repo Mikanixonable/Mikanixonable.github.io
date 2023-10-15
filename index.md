@@ -28,7 +28,16 @@ Mikanixonableの自己紹介（略式）
 </p>
 </div></div><br> -->
 
->テクノなまこ、科学の力
+<blockquote>
+  <p id="quote">テクノなまこ、科学の力</p>
+</blockquote>
+
+
+~~~python
+import ofuton.pyplot as oft
+oft.plot(gravity)
+oft.show
+~~~
 
   ### ミクボタン（音が鳴ります）
   <div class="mikuButton">
@@ -59,7 +68,9 @@ Mikanixonableの自己紹介（略式）
   </div>
 
 ## コンテンツ
-- [サイトマップ](1)　マークダウンからの生成ページはヒットしない、改修待ち
+### [サイトマップ](1)　マークダウンからの生成ページはヒットしない、改修待ち
+
+- [イラスト](129)
 - [インターネット目録](128)　お気に入りのサイトなど
 - [東京の温湿度](29)　気象庁のAPI遊び
 - [時刻](28)　JS遊び
