@@ -73,7 +73,7 @@ AIみかぶる</text></g></a>
 <text x="4" y="60" font-size="15"fill="white">
 みかぶるのホームページ</text>
 </svg>
-<div style="
+<!-- <div style="
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -93,7 +93,7 @@ Mikanixonableの自己紹介（略式）
 2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
 連絡: TwteerのDM/mikanixonable1@gmail.com
 </p>
-</div></div><br>
+</div></div><br> -->
 
 >テクノなまこ、科学の力
 
