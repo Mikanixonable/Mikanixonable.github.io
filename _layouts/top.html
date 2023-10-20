@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="./md/style.css">
+  <link rel="stylesheet" href="../md/style.css">
+  
   <script
     type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
   <script type="text/javascript" async
@@ -14,8 +16,7 @@
 </head>
 
 <body onload="initializeMermaid()">
-  <div class="wrapper">
-    <svg version="1.1" baseProfile="full" width="84vw" height="50vw" viewbox="0 0 350 200"
+  <svg version="1.1" baseProfile="full" width="84vw" height="50vw" viewbox="0 0 350 200"
       xmlns="http://www.w3.org/2000/svg">
       <a href="https://twitter.com/Mikanixonable">
         <g transform="translate(60,60)">
@@ -197,6 +198,8 @@
       <text x="4" y="60" font-size="15" fill="white">
         みかぶるのホームページ</text>
     </svg>
+  <div class="wrapper">
+    
     {{ content }}
   </div>
 </body>
@@ -306,27 +309,3 @@
     }
   }
 </script>
-<style>
-  button {
-    background-color: slategrey;
-    color: white;
-    border-radius: 1em;
-    border-width: 0;
-
-    &:hover {
-      filter: hue-rotate(20deg) saturate(90%) brightness(90%)
-    }
-
-    &.playing {
-      filter: hue-rotate(20deg) saturate(200%)
-    }
-  }
-
-  .mikuButton button {
-    background-color: #47848b;
-  }
-
-  .musicButton button {
-    background-color: #8b4755;
-  }
-</style>
