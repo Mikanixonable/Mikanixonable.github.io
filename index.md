@@ -5,6 +5,7 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
+[他サービスへのリンク](132)
 <blockquote>
   <p id="quote">テクノなまこ、科学の力</p>
 </blockquote>
@@ -39,7 +40,7 @@ categories: main
 - [音楽コーナー](145)
 - [このサイトについて](37)
 - [みかぶるについて](143)
-- []()
+- [SNSリンク等](132)
 
 
 ## バナー
