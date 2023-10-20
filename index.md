@@ -5,17 +5,9 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
-
 <blockquote>
   <p id="quote">テクノなまこ、科学の力</p>
 </blockquote>
-
-
-~~~python
-import ofuton.pyplot as oft
-oft.plot(gravity)
-oft.show
-~~~
 
   ### ミクボタン（音が鳴ります）
   <div class="mikuButton">
@@ -29,136 +21,21 @@ oft.show
     <button onclick="btn('21.mp3', this)">JR-SH3-3(東京駅)</button>
   </div>
 
-  ### 音楽コーナー
-  <div class="musicButton">
-  <button onclick="btn('22.mp3', this)">恒星間播種船のテーマ</button>
-    <button onclick="btn('8.mp3', this)">pikopiko tune</button>
-    <button onclick="btn('9.mp3', this)">人のいない美術館</button>
-    <button onclick="btn('10.mp3', this)">warabimochi</button>
-    <button onclick="btn('11.mp3', this)">きのこの森での記録</button>
-    <button onclick="btn('12.mp3', this)">game music 1</button>
-    <button onclick="btn('13.mp3', this)">雨</button>
-    <button onclick="btn('14.mp3', this)">土曜日のテーマ</button>
-    <button onclick="btn('15.mp3', this)">piano matrix</button>
-    <button onclick="btn('16.mp3', this)">piano matrix2</button>
-    <button onclick="btn('17.mp3', this)">Tetete</button>
-    <button onclick="btn('18.mp3', this)">台風のうた</button>
-    <button onclick="btn('19.mp3', this)">時計台</button>
-    <button onclick="btn('20.mp3', this)">対流圏</button>
-  </div>
 
 ## コンテンツ
-### [サイトマップ](1)　マークダウンからの生成ページはヒットしない、改修待ち
+- [案内所](144)
+- [サイトマップ](1)　マークダウンからの生成ページはヒットしない、改修待ち
+- [音楽コーナー](145)
+- [このサイトについて](37)
+- [リンク](142)
+- [みかぶるについて](143)
 
-- [イラスト](129)
-- [インターネット目録](128)　お気に入りのサイトなど
-- [東京の温湿度](29)　気象庁のAPI遊び
-- [時刻](28)　JS遊び
-
-
-
-<details>
-<summary>旧トップページ</summary>
-
-  - [2代目トップ](100)
-  - 3代目トップ
-    - [3代目トップa](104)
-    - [3代目トップb](105)
-    - [3代目トップc](107)
-    - [3代目トップd](108)
-    - [3代目トップe](109)
-    - [3代目トップe](115)
-  - [4代目トップ](116) 
-  - [5代目トップ](106)
-  - 6代目トップ
-    - [6代目トップ](126)
-    - [6代目トップ](127)
-</details>
-
-
-<details>
-<summary>1</summary>
-
-- [140](140)
-- [141](141)
-- [142](142)
-- [notes](notes)
-</details>
-
- - []()
- - []()
- - []()
-
-
-<details>
-<summary></summary>
-</details>
-
-
-## みかぶるについて
-<div style="
-display: flex;
-flex-direction: column;
-align-items: center;
-">
-<div style="
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: #333;
-border-radius: 3em 3em 0em 0em;
-max-width: 400px
-">
-<div style="
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-font-size: 2em
-">
-<img src="logo5.png" style="width: min(100px, 90%)"/>
-　みかぶる
-</div>
-<p>
-正式名称：Mikanixonable<br>
-別名義：にそな, ユーストラロピテクス, indene, 三日原みか<br>
-他称：み氏, みの人
-</p>
-</div></div><br>
-2016年ごろから、インターネット上で「みかぶる」と名乗り、絵や音楽や小説などを投稿しています。言及されると喜びます<br/>
-
-### 興味
-人工言語、架空地図、地学（大地形）、フォント製作など
-
-### 趣味
-ふとんとまくらを吸うこと、地衣類や苔の写真をとること、絵をかくこと、曲を作ること
-
-### favorite
-- アニメ
-  - 少女☆歌劇 レヴュースタァライト
-  - 未来少年コナン
-  - ぼっち・ざ・ろっく！
-  - 宇宙戦艦ヤマト2199
-- 漫画
-  - 少女終末旅行
-
-- 音楽家
-  - jain
-  - ginger root
-  - Charles Valentin Alkan
-- 彫刻
-  - 流政之
-  - ジャコメッティ
-
-
-### 連絡
-- TwteerのDM
-- mikanixonable1@gmail.com
 
 ## バナー
-<a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" /></a>  
->&lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="人造日本人" />&lt;/a>
+<a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" /></a>  
+> 画像: https://mikanixonable.github.io/banner.png  
+
+>タグ: &lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" />&lt;/a>
 
 このサイトはリンク自由です
 
@@ -167,57 +44,7 @@ font-size: 2em
 - [haxibami.net](https://haxibami.net/)
 - [fabon.info](https://fabon.info)
 - [sno2wman.net](https://sno2wman.net/)
-
-
-
-
-## 一方的リンク
->ツイッターやMisskeyのFFの個人サイト
-
-https://qmainconts.dev/  
-https://gainencomphand.pages.dev/  
-https://www.sapporo-posse.com/  
-http://www2s.biglobe.ne.jp/~masamich/ 
-https://foldr.moe/  
-https://riq0h.jp  
-http://www.ximco.jp/  
-http://souzoumap.starfree.jp/  
-http://nymwa.net   
-https://sksat.net  
-https://neriko.net/  
-https://ransewhale.net/  
-http://pref-karafuto.net  
-https://kusakabeworks.net/  
-http://blz.x0.com/  
-http://ziphil.com/  
-https://haibala.com/  
-https://hundredburger.com/  
-https://nbrkdrnfnht.zatunen.com/  
-https://www.machinery-tomoko.com/  
-https://kitakami7kouren.jimdofree.com/  
-https://yuchiki.github.io/  
-https://kepeken.github.io/  
-https://haar-you.github.io/ 
-https://reirisono.github.io/  
-https://gfngfn.github.io/ja/   
-https://enden-nix.github.io/  
-https://sozysozbot.github.io/  
-https://skytomo221.github.io/  
-https://yuuri3.github.io/  
-https://tachibana51.github.io/  
-https://gfngfn.github.io/ja/  
-https://licjar-xeymelloz.github.io/  
-https://notolyte.github.io/pensee/  
-https://strv.dev/  
-https://kuina.ch/  
-https://kawane.icu/  
-http://kanto.me/xeno/  
-https://ofni.necocen.info  
-https://www.alz.jp/221b
-https://sites.google.com/site/syxobo/  
-https://sites.google.com/site/moyacilang/  
-https://sites.google.com/site/faraspalt/  
-https://tomohironakano.com/tomohiro-nakano  
+>[まだ相互ではないリンク](142)
 
 
 ## 編集用
