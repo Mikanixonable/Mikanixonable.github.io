@@ -31,7 +31,12 @@ categories: main
 - [写真](8)
 - [旧インターネット目録](21)
 - [インターネット目録](128)
-- [![](./illusts/500.png)イラスト](129)
+<div class="row">
+<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
+<a href="./129" class="linkcard"><img src="./assets/3.png">VRChatで製作したワールド</a>
+<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
+<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
+</div>
 - []()
 - []()
 
