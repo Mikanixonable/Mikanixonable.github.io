@@ -3,6 +3,7 @@
   --b2: #1a2638;
   --b3: #323e52;
   --b4: #323e52;
+  --b4: #1a2a2c;
 }
 
 body {
@@ -43,8 +44,9 @@ svg {
   max-height: 400px;
 }
 
-p img{
+img{
   max-height: 80vh;
+  max-width: 80vw;
 }
 
 section img {
