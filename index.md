@@ -48,8 +48,8 @@ categories: main
 
 
 ## 編集用
-- [チートシート]([https://github.com/pages-themes/leap-day/blob/master/index.md](https://itopaloglu83.github.io/Jekyll-Markdown-Cheat-Sheet/))
+
 - [チートシート日本語](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
-- [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
+
 
 
