@@ -19,6 +19,19 @@ body {
   /* background-attachment: fixed !important; */
 }
 
+a {
+  background-color: #1a2638;
+  border-radius: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & img{
+    width: 8em;
+    height: 12em;
+    object-fit: cover;
+    border-radius: 5em 5em 5em 5em   
+  }
+}
 
 article{
   background-color: #1a2638;
