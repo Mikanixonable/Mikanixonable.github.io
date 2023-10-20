@@ -25,18 +25,19 @@ categories: main
 ## コンテンツ
 - [案内所](144)
 - [サイトマップ](1)　マークダウンからの生成ページはヒットしない、改修待ち
+<div class="row">
+<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
+<a href="./8" class="linkcard"><img src="./photos/2.png">写真</a>
+<a href="./129" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
+<a href="./22" class="linkcard"><img src="./assets/3.png">VRChat</a>
+</div>
 - [イラスト](129)
 - [旧トップ](100)
 - [架空惑星ギャラリー](23)
 - [写真](8)
 - [旧インターネット目録](21)
 - [インターネット目録](128)
-<div class="row">
-<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
-<a href="./129" class="linkcard"><img src="./assets/3.png">VRChatで製作したワールド</a>
-<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
-<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
-</div>
+
 - []()
 - []()
 
