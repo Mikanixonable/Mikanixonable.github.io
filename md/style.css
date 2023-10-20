@@ -15,6 +15,18 @@ body {
   /* background-attachment: fixed !important; */
 }
 
+article{
+  background-color: #1a2638;
+  margin: 1em 0em;
+  padding: 1em;
+  border-radius: 1em;
+  & article {
+    margin: 1em -0.5em;
+    padding: 1em 0.5em;
+    background-color: #323e52;
+  }
+}
+
 svg {
   max-width: 660px;
   max-height: 300px;
@@ -27,8 +39,27 @@ svg {
   position:relative;
 }
 
+button {
+  background-color: slategrey;
+  color: white;
+  border-radius: 1em;
+  border-width: 0;
+  &:hover {
+    filter: hue-rotate(20deg) saturate(90%) brightness(90%)
+  }
+  &.playing {
+    filter: hue-rotate(20deg) saturate(200%)
+  }
+}
+.mikuButton button {
+  background-color: #47848b;
+}
+.musicButton button {
+  background-color: #8b4755;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  margin:25px 0px 0px;
+  margin:0px;
   color: white;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
