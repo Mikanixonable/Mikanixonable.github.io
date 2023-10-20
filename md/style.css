@@ -19,7 +19,7 @@ body {
   /* background-attachment: fixed !important; */
 }
 
-a {
+.linkcard {
   background-color: #1a2638;
   border-radius: 5em;
   display: flex;
@@ -31,6 +31,19 @@ a {
     object-fit: cover;
     border-radius: 5em 5em 5em 5em   
   }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & a, div, p{
+    margin: 1em;
+  }
+}
+.columun {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 article{
