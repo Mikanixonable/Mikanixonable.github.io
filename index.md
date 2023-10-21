@@ -32,8 +32,17 @@ categories: main
 <div class="row">
 <a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
 <a href="./8" class="linkcard"><img src="./photos/2.png">写真</a>
-<a href="./129" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
+<a href="./23" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
 </div>
+
+- [ツイッターハッシュタグノート](133)
+- [リンク](142)
+- [インターネット目録](128)
+- [vrchatで製作したワールド](22)
+- [音楽コーナー](145)
+- [このサイトについて](37)
+- [みかぶるについて](143)
+- [他サービスへのリンク](132)
 
 ~~~mermaid
 graph TD;
@@ -43,7 +52,6 @@ A ----> illusts
 ~~~mermaid
 graph TD;
 
-A{Mikanixonablegithubio}
 A ----> illusts
 A --> musics
 A --> pages
@@ -65,15 +73,6 @@ end
 pages --> musics
 pages --> illusts
 ~~~
-
-[ツイッターハッシュタグノート](133)
-- [リンク](142)
-- [インターネット目録](128)
-- [vrchatで製作したワールド](22)
-- [音楽コーナー](145)
-- [このサイトについて](37)
-- [みかぶるについて](143)
-- [他サービスへのリンク](132)
 
 
 ## バナー
