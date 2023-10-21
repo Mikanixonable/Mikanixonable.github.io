@@ -1,6 +1,4 @@
-markdown: kramdown
-
-kramdown:
-   input: GFM
-   hard_wrap: true
-   
+markdown: GFM
+plugins:
+ - jekyll-sitemap
+highlighter: rouge
