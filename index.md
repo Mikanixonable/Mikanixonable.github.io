@@ -54,11 +54,12 @@ categories: main
 このサイトはリンク自由です
 
 ## 相互リンク
-- [ideoaves.github.io](https://ideoaves.github.io/)
-- [haxibami.net](https://haxibami.net/)
-- [fabon.info](https://fabon.info)
+- [ideoaves](https://ideoaves.github.io/)
+- [haxibami](https://haxibami.net/)
+- [ふぁぼんのホームページ](https://fabon.info)
 - [sno2wman.net](https://sno2wman.net/)
->[まだ相互ではないリンク](142)
+
+[まだ相互ではないリンク](142)
 
 
 ## 編集用
