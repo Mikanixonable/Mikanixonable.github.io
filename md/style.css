@@ -79,10 +79,6 @@ article article {
   position:relative;
 }
 
-svg {
-  max-width: 660px;
-  max-height: 400px;
-}
 
 img{
   max-height: 80vh;
