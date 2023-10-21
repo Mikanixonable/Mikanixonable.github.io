@@ -26,10 +26,29 @@ categories: main
 
   ~~~mermaid
   graph LR;
-  さなボタン .->|影響| M{ミクボタン}
+  S[さなボタン] .->|影響| M{ミクボタン}
+  click S "https://www.natorisana.love/"
   M -->|提供| 国歌
+  click 国歌 "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%B3%E3%83%96%E3%83%AD%E3%83%95%E3%82%B9%E3%82%AD%E3%81%AE%E3%83%9E%E3%82%BA%E3%83%AB%E3%82%AB"
   M -->|提供| 鳴き声
   M -->|提供| 発射メロディ
+
+  H .->|文化的影響| N
+  H --- M
+  N --- S
+
+
+  subgraph イデア界;
+  H((初音ミク))
+  click H "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01"
+  N((名取さな))
+  click N "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA"
+  end
+
+  subgraph ボタン界;
+  M
+  S
+  end
   ~~~
   概念図
 
@@ -45,15 +64,7 @@ categories: main
 [絵](129)
 [曲](145)
 [小説](146)
-~~~mermaid
-graph RL;
-A((ホウネンエビ))
-B[なまこ]
-A -->|二時間毎にバックアップ| C[(南半球海洋データベース)]
-C -->|復元| A
-C .->|ホスティング| B
-B ===>|捕食|A
-~~~
+
 [架空惑星](23)
 [フォントデモ・ダウンロード](12)
 [人工言語の挨拶一覧](42)
@@ -68,7 +79,15 @@ Link
 About
 [このサイトについて](37)
 [みかぶるについて](143)
-
+~~~mermaid
+graph RL;
+A((ホウネンエビ))
+B[なまこ]
+A -->|二時間毎にバックアップ| C[(南半球海洋データベース)]
+C -->|復元| A
+C .->|ホスティング| B
+B ===>|捕食|A
+~~~
 
 
 ## バナー
