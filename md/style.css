@@ -26,7 +26,7 @@ body {
   /* align-items: center; */
 }
 .linkcard img{
-  width: 4em;
+  width: 6em;
   height: 12em;
   object-fit: cover;
   border-radius: 5em 5em 5em 5em   
