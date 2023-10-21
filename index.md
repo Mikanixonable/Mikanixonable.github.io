@@ -5,6 +5,7 @@ date: 2023-10-07 00:00:00
 image: ./logo.png
 categories: main
 ---
+
 [他サービスへのリンク](132)
 <blockquote>
   <p id="quote">テクノなまこ、科学の力</p>
@@ -23,6 +24,7 @@ categories: main
     <button onclick="btn('./musics/7.mp3', this)">ぬい~</button>
     <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
   </div>
+
 
 
 ## コンテンツ
