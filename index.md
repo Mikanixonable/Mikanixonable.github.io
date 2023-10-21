@@ -33,6 +33,32 @@ categories: main
 <a href="./129" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
 </div>
 
+~~~mermaid
+graph TD;
+
+A{Mikanixonable.github.io}
+A ---->|保管| illusts
+A -->|保管| musics
+A -->|ホスト| pages
+A --- 外部リンク
+
+subgraph pages
+.html
+.md
+end
+
+subgraph musics
+.mp3
+end
+
+subgraph illusts
+.png
+end
+
+pages -->|再生ページ| musics
+pages -->|閲覧ページ| illusts
+~~~
+
 [ツイッターハッシュタグノート](133)
 - [リンク](142)
 - [インターネット目録](128)
