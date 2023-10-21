@@ -40,7 +40,10 @@
         let str = ""
         let rows = input.value.split("\n")
         for (let i = 0; i < rows.length; i++) {
-            str += pattern.replaceAll("q", rows[i]).replaceAll("n", rows[i].replace("https://", ""))
+            str += pattern
+            .replaceAll("q", rows[i])
+            .replaceAll("n", rows[i].replace("https://", "")
+            .replace(" ",""))
             if (i!==rows.length-1){
                 str += "\n"
             }
