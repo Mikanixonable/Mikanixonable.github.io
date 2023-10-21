@@ -6,13 +6,11 @@ image: ./logo.png
 categories: main
 ---
 
-[他サービスへのリンク](132)
 <blockquote>
   <p id="quote">テクノなまこ、科学の力</p>
 </blockquote>
 
-
-### ミクボタン（音が鳴ります）
+## ミクボタン（音が鳴ります）
 
   <div class="mikuButton">
     <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
@@ -29,25 +27,36 @@ categories: main
 
 ## コンテンツ
 - [サイトマップ](144)
-- [ページ一覧](1)
+<a href="./1" class="linkcard2"><img src="./assets/11.png">ページ一覧</a>
 - [旧トップ](100)
 <div class="row">
-<a href="./129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
+<a href="129" class="linkcard"><img src="./illusts/501.png">イラスト</a>
 <a href="./8" class="linkcard"><img src="./photos/2.png">写真</a>
 <a href="./23" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
 </div>
 
-<a href="./129" class="linkcard2"><img src="./illusts/501.png">イラスト</a>
-<a href="./23" class="linkcard2"><img src="./illusts/298.png">架空惑星</a>
 
-- [ツイッターハッシュタグノート](133)
-- [リンク](142)
-- [インターネット目録](128)
+<a href="./18" class="linkcard2"><img src="./assets/12.png">フォントデモ&ダウンロード</a>
+<a href="./42" class="linkcard2"><img src="./assets/42.png">人工言語の挨拶一覧</a>
+
+創作物
 - [vrchatで製作したワールド](22)
 - [音楽コーナー](145)
+
+お楽しみ
+[illust random](5)
+
+
+その他
+- [ツイッターハッシュタグノート](133)
+
+Link
+- [一方的リンク](142)
+- [インターネット目録](128)
+
+About
 - [このサイトについて](37)
 - [みかぶるについて](143)
-- [他サービスへのリンク](132)
 
 
 ## バナー
@@ -68,8 +77,9 @@ categories: main
 
 
 ## 編集用
-
 - [チートシート日本語](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
+- [トップページの更新ツリー](https://github.com/Mikanixonable/Mikanixonable.github.io/commits/109158783b79299f765f2bf44b7f14397afab2c5/index.html)
+- [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
 
 
