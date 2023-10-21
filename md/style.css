@@ -35,9 +35,9 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  & a, div, p{
-    margin: 1em;
-  }
+}
+.row a, div, p{
+  margin: 1em;
 }
 .columun {
   display: flex;
@@ -83,12 +83,12 @@ button {
   color: white;
   border-radius: 1em;
   border-width: 0;
-  &:hover {
-    filter: hue-rotate(20deg) saturate(90%) brightness(90%)
-  }
-  &.playing {
-    filter: hue-rotate(20deg) saturate(200%)
-  }
+}
+button:hover {
+  filter: hue-rotate(20deg) saturate(90%) brightness(90%)
+}
+button.playing {
+  filter: hue-rotate(20deg) saturate(200%)
 }
 .mikuButton button {
   background-color: #47848b;
