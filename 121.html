@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音声再生ボタン</title>
-
+    <title>link maker</title>
 </head>
-<body>
 <style>
-.playing {
-    background-color: #00bfff; /* 再生中のボタンの背景色を変更 */
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    textarea {
+        resize: none;
+        line-height: 1.5;
+        width: 100%;
+        padding: 10;
+    }
 </style>
-<button onclick="btn('1.mp3', this)">再生/停止 1</button>
-<button onclick="btn('2.mp3', this)">再生/停止 2</button>
-<button onclick="btn('3.mp3', this)">再生/停止 3</button>
 
-<script>
-    const audioElements = {};
-    function btn(filePath, button) {
-        if (!audioElements[filePath]) {
-            // 新しい音声ファイルを再生
-            audioElements[filePath] = new Audio(filePath);
-            audioElements[filePath].play();
-            button.classList.add('playing'); // ボタンのスタイルを変更
+<body>
+    <p>html用</p>
+    https://hoge -> &lt;a href="hoge">hoge&lt;/a>&lt;br>
 
-            // 音声再生終了時のイベントハンドラを設定
-            audioElements[filePath].addEventListener('ended', function() {
-                button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-                delete audioElements[filePath]; // オブジェクトから削除
-            });} else {
-            // 既存の音声ファイルを停止
-            audioElements[filePath].pause();
-            audioElements[filePath].currentTime = 0; // 音声を最初から再生できるようにリセット
-            delete audioElements[filePath]; // オブジェクトから削除
-            button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-        }}
-</script>
+    <textarea rows='1' oninput="fit(this),convert('<a href=\'q\'>n</a><br>',this,'output1')"></textarea>
+    <textarea id="output1" rows='1'></textarea>
+
+    <p>markdown用</p>
+    https://hoge -> [hoge](https://hoge)
+
+
+    <textarea rows='1' oninput="fit(this),convert('[n](q)',this,'output2')"></textarea>
+    <textarea id="output2" rows='1'></textarea>
 </body>
+<script>
+    function convert(pattern, input, output) {
+        let str = ""
+        let rows = input.value.split("\n")
+        for (let i = 0; i < rows.length; i++) {
+            str += pattern.replaceAll("q", rows[i]).replaceAll("n", rows[i].replace("https://", ""))
+            if (i!==rows.length-1){
+                str += "\n"
+            }
+        }
+        let outtxt = document.getElementById(output)
+        outtxt.innerHTML = str
+        fit(outtxt)
+    }
+
+
+function fit (elem) {
+            let lineHeight = getComputedStyle(elem).lineHeight.replace(/[^-\d\.]/g, '');
+            // textarea要素に入力された値の行数
+            const lines = (elem.value + '\n').match(/\n/g).length;
+            // 高さを再計算
+            elem.style.height = lineHeight*lines+ 'px';
+    };
+</script>
+
 </html>
