@@ -11,7 +11,7 @@ categories: main
 </blockquote>
 
 
-  ### ミクボタン（音が鳴ります）
+### ミクボタン（音が鳴ります）
 
   <div class="mikuButton">
     <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
@@ -34,6 +34,9 @@ categories: main
 <a href="./8" class="linkcard"><img src="./photos/2.png">写真</a>
 <a href="./23" class="linkcard"><img src="./illusts/298.png">架空惑星</a>
 </div>
+
+<a href="./129" class="linkcard2"><img src="./illusts/501.png">イラスト</a>
+<a href="./23" class="linkcard2"><img src="./illusts/298.png">架空惑星</a>
 
 - [ツイッターハッシュタグノート](133)
 - [リンク](142)

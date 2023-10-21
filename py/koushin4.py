@@ -6,23 +6,7 @@ import os
 import math
 import datetime
 import codecs
-import re
 
-def md2title(file_path,subject):
-    try:
-        # ファイルを開いて内容を読み込む
-        with open(file_path, 'r', encoding='utf-8') as file:
-            markdown_text = file.read()
-        # 正規表現を使用してタイトルを抽出
-        match = re.search(rf'{subject}:\s+(.*?)\s+', markdown_text)
-        if match:
-            title = match.group(1)
-            return title
-        else:
-            return str(subject)
-    except FileNotFoundError:
-        return str(subject)
-    
 def main(file,files):
    #UnixTimeStamp取得
     ctime = math.floor(os.path.getctime(file)) #1679250555
@@ -71,9 +55,9 @@ def main(file,files):
         "mtime":str(mtime),
         "cdate":str(cdate),
         "mdate":str(mdate),
-        "title":md2title(file,"title"),
+        "title":"markdown",
         "content":"content",
-        "genre":md2title(file,"categories")
+        "genre":"markdown"
         }
         dic.append(page)
 
