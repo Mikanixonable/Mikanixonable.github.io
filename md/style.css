@@ -36,7 +36,7 @@ body {
   flex-direction: row;
   align-items: center;
 }
-.row a, div, p{
+.row a{
   margin: 1em;
 }
 .columun {
@@ -139,6 +139,7 @@ a small {
   margin-top:-0.6em;
   display:block;
 }
+
 
 ul{
   list-style-image:url('../images/bullet.png');
