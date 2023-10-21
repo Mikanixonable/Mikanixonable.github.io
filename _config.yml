@@ -1,5 +1,6 @@
-markdown: redcarpet
-redcarpet:
-  extensions: ["autolink", "hard_wrap"]
-plugins:
- - jekyll-sitemap
+markdown: kramdown
+
+kramdown:
+   input: GFM
+   hard_wrap: true
+   
