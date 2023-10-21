@@ -50,11 +50,11 @@ article{
   margin: 1em 0em;
   padding: 1em;
   border-radius: 1em;
-  & article {
-    margin: 1em -0.5em;
-    padding: 1em 0.5em;
-    background-color: #323e52;
-  }
+}
+article article {
+  margin: 1em -0.5em;
+  padding: 1em 0.5em;
+  background-color: #323e52;
 }
 
 .wrapper {
@@ -127,11 +127,10 @@ a {
   color:#f5abb5;
   font-weight:400;
   text-decoration:none;
-
-  &:hover {
-    color: #f69eaa;
-    text-decoration: none;
-  }
+}
+a:hover {
+  color: #f69eaa;
+  text-decoration: none;
 }
 
 a small {
