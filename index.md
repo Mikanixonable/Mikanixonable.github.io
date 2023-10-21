@@ -44,36 +44,6 @@ categories: main
 - [みかぶるについて](143)
 - [他サービスへのリンク](132)
 
-~~~mermaid
-graph TD;
-A ----> illusts
-~~~
-
-~~~mermaid
-graph TD;
-
-A ----> illusts
-A --> musics
-A --> pages
-A --- K
-
-subgraph pages
-html
-md
-end
-
-subgraph musics
-mp3
-end
-
-subgraph illusts
-png
-end
-
-pages --> musics
-pages --> illusts
-~~~
-
 
 ## バナー
 <a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" /></a>  
