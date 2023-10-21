@@ -37,6 +37,11 @@ categories: main
 
 ~~~mermaid
 graph TD;
+A ----> illusts
+~~~
+
+~~~mermaid
+graph TD;
 
 A{Mikanixonablegithubio}
 A ----> illusts
