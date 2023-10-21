@@ -21,6 +21,7 @@ categories: main
     <button onclick="btn('./musics/6.mp3', this)">にゃう</button>
     <button onclick="btn('./musics/7.mp3', this)">ぬい~</button>
     <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
+        <button onclick="btn('./musics/100.mp3', this)">water crown(目黒駅)</button>
   </div>
 
 
