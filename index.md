@@ -15,7 +15,7 @@ categories: main
   <div class="mikuButton">
     <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
     <button onclick="btn('./musics/2.mp3', this)">ねう</button>
-    <button onclick="btn('./musics/3.mp3', this)">Mazurek Dąbrowskiego</button>
+    <button onclick="btn('./musics/3_1.mp3', this)">Mazurek Dąbrowskiego</button>
     <button onclick="btn('./musics/4.mp3', this)">ねこーっ</button>
     <button onclick="btn('./musics/5.mp3', this)">ねこねこ</button>
     <button onclick="btn('./musics/6.mp3', this)">にゃう</button>
