@@ -14,14 +14,14 @@ categories: main
   ### ミクボタン（音が鳴ります）
 
   <div class="mikuButton">
-    <button onclick="btn('1.mp3', this)">ミクボタン</button>
-    <button onclick="btn('2.mp3', this)">ねう</button>
-    <button onclick="btn('3.mp3', this)">Mazurek Dąbrowskiego</button>
-    <button onclick="btn('4.mp3', this)">ねこーっ</button>
-    <button onclick="btn('5.mp3', this)">ねこねこ</button>
-    <button onclick="btn('6.mp3', this)">にゃう</button>
-    <button onclick="btn('7.mp3', this)">ぬい~</button>
-    <button onclick="btn('21.mp3', this)">JR-SH3-3(東京駅)</button>
+    <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
+    <button onclick="btn('./musics/2.mp3', this)">ねう</button>
+    <button onclick="btn('./musics/3.mp3', this)">Mazurek Dąbrowskiego</button>
+    <button onclick="btn('./musics/4.mp3', this)">ねこーっ</button>
+    <button onclick="btn('./musics/5.mp3', this)">ねこねこ</button>
+    <button onclick="btn('./musics/6.mp3', this)">にゃう</button>
+    <button onclick="btn('./musics/7.mp3', this)">ぬい~</button>
+    <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
   </div>
 
 
