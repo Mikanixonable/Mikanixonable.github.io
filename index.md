@@ -38,27 +38,27 @@ categories: main
 ~~~mermaid
 graph TD;
 
-A{Mikanixonable.github.io}
-A ---->|保管| illusts
-A -->|保管| musics
-A -->|ホスト| pages
-A --- 外部リンク
+A{Mikanixonablegithubio}
+A ----> illusts
+A --> musics
+A --> pages
+A --- K
 
 subgraph pages
-.html
-.md
+html
+md
 end
 
 subgraph musics
-.mp3
+mp3
 end
 
 subgraph illusts
-.png
+png
 end
 
-pages -->|再生ページ| musics
-pages -->|閲覧ページ| illusts
+pages --> musics
+pages --> illusts
 ~~~
 
 [ツイッターハッシュタグノート](133)
