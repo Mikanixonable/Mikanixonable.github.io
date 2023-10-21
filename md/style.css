@@ -24,12 +24,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  & img{
-    width: 8em;
-    height: 12em;
-    object-fit: cover;
-    border-radius: 5em 5em 5em 5em   
-  }
+}
+.linkcard img{
+  width: 8em;
+  height: 12em;
+  object-fit: cover;
+  border-radius: 5em 5em 5em 5em   
 }
 .row {
   display: flex;
