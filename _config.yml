@@ -1,4 +1,6 @@
-markdown: GFM
+markdown: kramdown
 plugins:
  - jekyll-sitemap
 highlighter: rouge
+kramdown:
+  hard_wrap: true
