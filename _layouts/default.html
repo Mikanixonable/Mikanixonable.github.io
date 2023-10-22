@@ -14,34 +14,35 @@
 </head>
 
 <body onload="initializeMermaid()">
-  <div class="menu">{:toc}</div>
+  <!-- <div class="menu">
+    {:toc}
+  </div> -->
   <div class="wrapper">
     {{ content }}
-    
   </div>
-  
+
 </body>
 
 </html>
 <script src="https://unpkg.com/mermaid@10.5.1/dist/mermaid.min.js"></script>
 <script>
   function initializeMermaid() {
-mermaid.initialize({
-  "theme": "base",
-  "fontFamily": "TimesNewRoman Times Serif",
-  "themeVariables": {
-    "lineColor": "aliceblue",
-    "primaryColor": "#323e52",
-    "secondaryColor": "#397",
-    "tertiaryColor": "#1a2638",
-    "primaryTextColor": "white",
-    "secondaryTextColor": "white",
-    "tertiaryTextColor": "white",
-    "primaryBorderColor": "aliceblue",
-    "secondaryBorderColor": "aliceblue",
-    "tertiaryBorderColor": "slategray"
-  }
-});
+    mermaid.initialize({
+      "theme": "base",
+      "fontFamily": "TimesNewRoman Times Serif",
+      "themeVariables": {
+        "lineColor": "aliceblue",
+        "primaryColor": "#323e52",
+        "secondaryColor": "#397",
+        "tertiaryColor": "#1a2638",
+        "primaryTextColor": "white",
+        "secondaryTextColor": "white",
+        "tertiaryTextColor": "white",
+        "primaryBorderColor": "aliceblue",
+        "secondaryBorderColor": "aliceblue",
+        "tertiaryBorderColor": "slategray"
+      }
+    });
     window.mermaid.init(
       undefined,
       document.querySelectorAll('.language-mermaid'),
