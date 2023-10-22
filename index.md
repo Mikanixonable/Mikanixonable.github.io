@@ -32,7 +32,7 @@ graph TD;
   D .- pages
 
   subgraph pages;
-  direction TB
+  direction LR
     subgraph function;
     direction LR
     I((ホーム))
