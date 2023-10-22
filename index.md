@@ -15,7 +15,7 @@ categories: main
   <div class="mikuButton">
     <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
     <button onclick="btn('./musics/2.mp3', this)">ねう</button>
-    <button onclick="btn('./musics/3_1.mp3', this)">Mazurek Dąbrowskiego</button>
+    <button class="poland" onclick="btn('./musics/3_1.mp3', this)">Mazurek Dąbrowskiego</button>
     <button onclick="btn('./musics/4.mp3', this)">ねこーっ</button>
     <button onclick="btn('./musics/5.mp3', this)">ねこねこ</button>
     <button onclick="btn('./musics/6.mp3', this)">にゃう</button>
@@ -90,20 +90,26 @@ graph TD;
 
 
 ## コンテンツ
+#### function
 [ページ一覧](1)
-
 [ラウンジ](159)
 [ロビー](144)
 [アトリウム](160)
 
+#### genre
 [絵](129)
-[絵](154)
+[写真](154)
 [音楽](145)
 [小説](146)
 
-About
+#### about
 [みかぶるについて](143)
 [このサイトについて](37)
+
+#### link
+[SNS](132)
+[相互リンク](135)
+[非相互リンク](142)
 
 
 ## バナー
@@ -119,8 +125,4 @@ About
 [haxibami](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
 [sno2wman.net](https://sno2wman.net/)
-
 [まだ相互ではないリンク](142)
-
-
-
