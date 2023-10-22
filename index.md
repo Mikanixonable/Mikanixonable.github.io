@@ -25,57 +25,41 @@ categories: main
   </div>
 
 
-  ~~~mermaid
-  graph LR;
-  S[さなボタン] .->|影響| M{ミクボタン}
-  click S "https://www.natorisana.love/"
-  M -->|提供| 国歌
-  click 国歌 "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%B3%E3%83%96%E3%83%AD%E3%83%95%E3%82%B9%E3%82%AD%E3%81%AE%E3%83%9E%E3%82%BA%E3%83%AB%E3%82%AB"
-  M -->|提供| 鳴き声
-  M -->|提供| 発射メロディ
+~~~mermaid
+graph LR;
+S[さなボタン] .->|影響| M{ミクボタン}
+click S "https://www.natorisana.love/"
+M -->|提供| 国歌
+click 国歌 "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%B3%E3%83%96%E3%83%AD%E3%83%95%E3%82%B9%E3%82%AD%E3%81%AE%E3%83%9E%E3%82%BA%E3%83%AB%E3%82%AB"
+M -->|提供| 鳴き声
+M -->|提供| 発射メロディ
 
-  H .->|文化的影響| N
-  H --- M
-  N --- S
+H .->|文化的影響| N
+H --- M
+N --- S
 
+subgraph イデア界;
+H((初音ミク))
+click H "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01"
+N((名取さな))
+click N "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA"
+end
 
-  subgraph イデア界;
-  H((初音ミク))
-  click H "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv01"
-  N((名取さな))
-  click N "https://www.youtube.com/channel/UCIdEIHpS0TdkqRkHL5OkLtA"
-  end
-
-  subgraph ボタン界;
-  M
-  S
-  end
-  ~~~
-  概念図
-
-
-
-
+subgraph ボタン界;
+M
+S
+end
+~~~
+概念図
 
 ## コンテンツ
 [ページ一覧](1)
-[案内所](144)
-[旧トップ](100)
+[第3ロビー](144)
+
 
 [絵](129)
 [曲](145)
 [小説](146)
-
-[架空惑星](23)
-[フォントデモ・ダウンロード](12)
-[人工言語の挨拶一覧](42)
-[vrchatで製作したワールド](22)
-[illust random](5)
-[ツイッターハッシュタグノート](133)
-
-Link
-[一方的リンク](142)
-[インターネット目録](128)
 
 About
 [このサイトについて](37)
@@ -106,12 +90,6 @@ B ===>|捕食|A
 [sno2wman.net](https://sno2wman.net/)
 
 [まだ相互ではないリンク](142)
-
-
-## 編集用
-- [チートシート日本語](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
-- [トップページの更新ツリー](https://github.com/Mikanixonable/Mikanixonable.github.io/commits/109158783b79299f765f2bf44b7f14397afab2c5/index.html)
-- [github repository](https://github.com/Mikanixonable/Mikanixonable.github.io)
 
 
 
