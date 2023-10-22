@@ -14,7 +14,7 @@ body {
   font-weight: normal;
   background: #181921;
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   flex-direction: column;
   /* background-attachment: fixed !important; */
 }
