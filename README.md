@@ -1,26 +1,29 @@
 # Mikanixonable.github.io
 [GitHub Pages](https://mikanixonable.github.io/)  
-[index.md](https://github.com/Mikanixonable/Mikanixonable.github.io/blob/master/index.md)  
-みかぶるのホームページおよびファイル保管ディレクトリです
+[index.md編集用リンク](https://github.com/Mikanixonable/Mikanixonable.github.io/blob/master/index.md)  
+みかぶるのホームページリポジトリ兼ファイル保管ディレクトリです
 
-拡張子：png
-イラストです。数字は作品番号で大きいほど新しいです。ただしハイフンから始まる場合は作品番号を付け始める前の作品で数字が大きいほど古くなります。作品番号が正の場合はふつう画像の右下に完成日付と作品番号があります。Mikanixonable.github.io/3　で全作品を閲覧できます。
+## 拡張子
+### html, md
+[Mikanixonable.github.io](https://mikanixonable.github.io/)  
+を構成するページです。
 
-拡張子：txt
-小説です。
+### png
+./illusts/配下にあるものはイラスト、./photos/配下にあるものは写真です。./illusts/354.pngのようなパスで、ファイル名が作品番号の整数になっています。イラストの作品番号に負の数があるのは、作品番号をつけ始めた後に過去の作品に遡及的に番号を振ったためです。イラストの場合作品番号が正数ならふつう画像の右下に完成日付と作品番号があります。[Mikanixonable.github.io/5](Mikanixonable.github.io/5)　で全イラスト作品を閲覧できます。
 
-拡張子：mp4
-アニメーションです。
+### mp3
+./musics/以下にあるものは曲かミクボタン用の音声ファイルです。
 
-拡張子：html/css/png
-Mikanixonable.github.ioを構成するページです。
+### txt
+小説です
 
-拡張子：mp3
-Warabimochiという名前の曲です
+### mp4
+アニメーションです
 
-拡張子：mid
+### mid
 最上川童謡です。view rawからダウンロードして再生できます
-〽たなばたーもふもふー
+
+>〽たなばたーもふもふー
 おさかなーぴょんぴょんぴょん
 ながらがーわもがみがわー
 いちたすいちはーもがみがわー
