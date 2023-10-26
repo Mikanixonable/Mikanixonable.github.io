@@ -131,3 +131,7 @@ graph TD;
 [ふぁぼんのホームページ](https://fabon.info)
 [sno2wman.net](https://sno2wman.net/)
 [まだ相互ではないリンク](142)
+
+## アクセスカウンター
+![](https://count.getloli.com/get/@:mikanixonable)
+2023-10-27設置
