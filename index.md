@@ -31,6 +31,11 @@ graph TD;
   click D "1"
   D .- pages
 
+  G{{GitHub repository}}
+  click G "https://github.com/Mikanixonable/Mikanixonable.github.io"
+
+  G .- D
+
   subgraph pages;
   direction LR
     subgraph function;
@@ -90,23 +95,23 @@ graph TD;
 
 
 ## コンテンツ
-#### function
+### function
 [ページ一覧](1)
 [ラウンジ](159)
 [ロビー](144)
 [アトリウム](160)
 
-#### genre
+### genre
 [絵](129)
 [写真](154)
 [音楽](145)
 [小説](146)
 
-#### about
+### about
 [みかぶるについて](143)
 [このサイトについて](37)
 
-#### link
+### link
 [SNS](132)
 [相互リンク](135)
 [非相互リンク](142)
@@ -121,7 +126,7 @@ graph TD;
 このサイトはリンク自由です
 
 ## 相互リンク
-[ideoaves](https://ideoaves.github.io/)
+[![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
 [haxibami](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
 [sno2wman.net](https://sno2wman.net/)
