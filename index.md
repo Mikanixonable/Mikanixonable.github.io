@@ -126,15 +126,12 @@ graph TD;
 このサイトはリンク自由です
 
 ## 相互リンク
-<div id=sougo>
-
 [![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
 [mythfinder](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
 [SnO2WMaN.net](https://sno2wman.net/)
 [まだ相互ではないリンク](142)
 
-</div>
 
 ## アクセスカウンター
 ![](https://count.getloli.com/get/@:mikanixonable)
