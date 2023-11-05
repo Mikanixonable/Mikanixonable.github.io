@@ -24,14 +24,14 @@ categories: main
         <button onclick="btn('./musics/100.mp3', this)">water crown(目黒駅)</button>
   </div>
 
-# サイトマップ
+## サイトマップ
 ~~~mermaid
 graph TD;
   D[(ページ一覧)]
   click D "1"
   D .- pages
 
-  G{{GitHub repository}}
+  G{{GitHubRepository}}
   click G "https://github.com/Mikanixonable/Mikanixonable.github.io"
 
   G .- D
@@ -126,11 +126,15 @@ graph TD;
 このサイトはリンク自由です
 
 ## 相互リンク
+<div id=sougo>
+
 [![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
-[haxibami](https://haxibami.net/)
+[mythfinder](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
-[sno2wman.net](https://sno2wman.net/)
+[SnO2WMaN.net](https://sno2wman.net/)
 [まだ相互ではないリンク](142)
+
+</div>
 
 ## アクセスカウンター
 ![](https://count.getloli.com/get/@:mikanixonable)

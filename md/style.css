@@ -98,6 +98,10 @@ pre{
   max-width: calc(100vw - 60px)
 }
 
+#sougo:hover{
+  transform: skew(15deg, 15deg);
+}
+
 img {
   max-height: 80vh;
   max-width: 80vw;
