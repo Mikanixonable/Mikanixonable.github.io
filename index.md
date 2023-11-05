@@ -10,7 +10,7 @@ categories: main
   <p id="quote">テクノなまこ、科学の力</p>
 </blockquote>
 
-## ミクボタン（音が鳴ります）
+### ミクボタン（音が鳴ります）
 
   <div class="mikuButton">
     <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
@@ -23,6 +23,13 @@ categories: main
     <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
         <button onclick="btn('./musics/100.mp3', this)">water crown(目黒駅)</button>
   </div>
+
+### About
+[みかぶるについて](143)
+[このサイトについて](37)
+~~~javascript
+let email = "Mikanixonable1" + "@" + "gmail.com";
+~~~
 
 ## サイトマップ
 ~~~mermaid
@@ -106,10 +113,6 @@ graph TD;
 [写真](154)
 [音楽](145)
 [小説](146)
-
-### about
-[みかぶるについて](143)
-[このサイトについて](37)
 
 ### link
 [SNS](132)
