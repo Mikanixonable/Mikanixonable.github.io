@@ -29,7 +29,7 @@ body {
 }
 
 .wrapper > * {
-  max-width: calc(100vw - 60px);
+  max-width: min(calc(100vw - 60px),660px);
 }
 
 
@@ -245,10 +245,8 @@ blockquote {
 
 .codepre:before {
   display: block;
-  /* position: absolute; */
   inset-block-start: 0em;
   inset-inline-start: 0;
-  /* content: attr(class); */
   padding-block: .5em;
   padding-inline: 1em;
   inline-size: fit-content;
