@@ -24,11 +24,14 @@ body {
   padding: 30px;
   max-width: 660px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-svg {
-  max-width: 660px;
+.wrapper > * {
+  max-width: calc(100vw - 60px);
 }
+
 
 #headerSVG {
   max-height: 400px;
@@ -185,6 +188,7 @@ p,
 ul,
 ol,
 table,
+pre,
 dl {
   margin: 0 0 20px;
 }
@@ -210,6 +214,7 @@ h3 {
   font-weight: normal;
 }
 
+
 ul {
   list-style-image: url('../images/bullet.png');
 }
@@ -228,18 +233,6 @@ blockquote {
 
 }
 
-.code {
-  display: block;
-  position: relative;
-  padding: 1em 1em;
-  background-color: var(--b2);
-  border-radius: 0 .5em .5em .5em;
-  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
-  color: #efefef;
-  font-size: 13px;
-  overflow: auto;
-}
-
 .codepre:before {
   display: block;
   /* position: absolute; */
@@ -256,14 +249,27 @@ blockquote {
   /* content: "python"; */
 }
 
-pre {
-  width: calc(100vw - 60px);
+.code {
+  display: block;
+  position: relative;
+  padding: 1em 1em;
+  background-color: var(--b2);
+  border-radius: 0 .5em .5em .5em;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+  color: #efefef;
+  font-size: 13px;
+  overflow: auto;
+  /* overflow-y: hidden; */
 }
 
-pre:has(.language-mermaid){
+.mermaidpre {
+  /* background-color: #5292c7; */
+  display: flex;
   justify-content: center;
-  max-width: calc(100vw - 60px);
 }
+
+/* pre:has(.language-mermaid){
+} */
 
 table {
   width: 100%;
