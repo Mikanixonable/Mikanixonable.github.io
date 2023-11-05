@@ -19,6 +19,21 @@ body {
   /* background-attachment: fixed !important; */
 }
 
+.wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 660px;
+  position: relative;
+}
+
+svg {
+  max-width: 660px;
+}
+
+#headerSVG {
+  max-height: 400px;
+}
+
 .linkcard {
   border-radius: 5em;
   display: flex;
@@ -78,38 +93,52 @@ article article {
   background-color: #323e52;
 }
 
-.wrapper {
-  margin: 0 auto;
-  padding: 30px;
-  max-width: 660px;
-  position: relative;
+a {
+  color: #f5abb5;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-svg {
-  max-width: 660px;
+a:hover {
+  color: #f69eaa;
+  text-decoration: none;
 }
 
-#headerSVG {
-  max-height: 400px;
+a small {
+  font-size: 11px;
+  color: #666;
+  margin-top: -0.6em;
+  display: block;
 }
 
-pre{
-  display: flex;
-  max-width: calc(100vw - 60px)
-}
 
-#sougo:hover{
-  transform: skew(15deg, 15deg);
+#相互リンク:hover{
+  transform: skew(30deg, 1deg);
+  transition: all 300ms 0s ease;
 }
+#相互リンク{
+  transition: all 300ms 0s ease;
+}
+#相互リンク + p{
+  animation: ugoki 3s linear infinite;
+  }
+  @keyframes ugoki {
+    0% {
+       filter: hue-rotate(0deg)
+    }
+  
+    100% {
+       filter: hue-rotate(360deg)
+    }
+  }
+
 
 img {
   max-height: 80vh;
   max-width: 80vw;
 }
 
-section img {
-  max-width: 100%;
-}
+
 
 button {
   background-color: slategrey;
@@ -182,24 +211,6 @@ h3 {
   font-weight: normal;
 }
 
-a {
-  color: #f5abb5;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #f69eaa;
-  text-decoration: none;
-}
-
-a small {
-  font-size: 11px;
-  color: #666;
-  margin-top: -0.6em;
-  display: block;
-}
-
 
 ul {
   list-style-image: url('../images/bullet.png');
@@ -257,6 +268,10 @@ blockquote {
 /* .language-mermaid {
   background-color: #51e1bd;
   margin: 0 auto;
+} */
+/* pre {
+  display: flex;
+  max-width: calc(100vw - 60px)
 } */
 
 table {
