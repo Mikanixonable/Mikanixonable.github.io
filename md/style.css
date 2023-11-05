@@ -93,6 +93,11 @@ svg {
   max-height: 400px;
 }
 
+pre{
+  display: flex;
+  max-width: calc(100vw - 60px)
+}
+
 img {
   max-height: 80vh;
   max-width: 80vw;
