@@ -185,7 +185,6 @@ p,
 ul,
 ol,
 table,
-pre,
 dl {
   margin: 0 0 20px;
 }
@@ -262,7 +261,6 @@ pre {
 }
 
 pre:has(.language-mermaid){
-  display: flex;
   justify-content: center;
   max-width: calc(100vw - 60px);
 }
