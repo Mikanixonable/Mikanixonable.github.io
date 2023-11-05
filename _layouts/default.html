@@ -67,10 +67,7 @@
       .className
       .match(/language-(\S+)\s/)[1]
 
-    if (langName == "mermaid") {
-      elm.parentElement.classList.add("mermaidpre")
-
-    } else {
+    if (langName != "mermaid") {
       elm.classList.add("code")
       elm.parentElement.classList.add("codepre")
       elm.parentElement.classList.add("codepre" + i)

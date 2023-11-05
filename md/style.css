@@ -265,14 +265,10 @@ blockquote {
   justify-content: center;
 }
 
-/* .language-mermaid {
-  background-color: #51e1bd;
-  margin: 0 auto;
-} */
-/* pre {
+pre:has(.language-mermaid){
   display: flex;
   max-width: calc(100vw - 60px)
-} */
+}
 
 table {
   width: 100%;
