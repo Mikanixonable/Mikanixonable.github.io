@@ -30,7 +30,8 @@ categories: main
 <script>
 let randomg = document.getElementById("randomg");
 let rand = Math.floor(Math.random()*570)+1
-randomg.innerHTML = `<img src="./illusts/${rand}.png"/>`;
+randomg.innerHTML = `<a href="./5.html?n=${rand}"><img src="./illusts/${rand}.png"/></a>`;
+randomg.innerHTML += `<p>No: ${rand}</p>`
 </script>
 
 
