@@ -24,6 +24,16 @@ categories: main
     <button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
   </div>
 
+### Random Gallery
+
+<div id="randomg"></div>
+<script>
+let randomg = document.getElementById("randomg");
+let rand = Math.floor(Math.random()*570)+1
+randomg.innerHTML = `<img src="./illusts/${rand}.png"/>`;
+</script>
+
+
 ### About
 [みかぶるについて](143)
 [このサイトについて](37)
