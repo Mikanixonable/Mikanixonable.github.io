@@ -24,7 +24,7 @@ categories: main
     <button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
   </div>
 
-### Random Gallery
+### Random Gallery(クリックで詳細に飛びます)
 
 <div id="randomg"></div>
 <script>
