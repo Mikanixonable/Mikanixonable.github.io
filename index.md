@@ -24,6 +24,17 @@ categories: main
     <button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
   </div>
 
+  ### 音楽再生コーナー
+  ミクボタンの流用。このボタンのJavaScriptはここにある、ほとんど全部ChatGPTに書いてもらった[https://mikanixonable.hatenablog.com/entry/2023/10/08/171856](https://mikanixonable.hatenablog.com/entry/2023/10/08/171856)
+
+  <div class="musicButton">
+<button onclick="btn('./musics/11.mp3', this)">きのこの森での記録</button>
+<button onclick="btn('./musics/22.mp3', this)">恒星間播種船のテーマ</button>
+<button onclick="btn('./musics/19.mp3', this)">時計台</button>
+  </div>
+
+  [他の音楽](145)
+
 ### Random Gallery(クリックで詳細に飛びます)
 
 <div id="randomg"></div>
@@ -38,9 +49,6 @@ randomg.innerHTML += `<p>No: ${rand}</p>`
 ### About
 [みかぶるについて](143)
 [このサイトについて](37)
-~~~javascript
-let email = "Mikanixonable1" + "@" + "gmail.com";
-~~~
 
 ## サイトマップ
 ~~~mermaid
