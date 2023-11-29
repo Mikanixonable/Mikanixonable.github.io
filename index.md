@@ -25,6 +25,7 @@ categories: main
   </div>
 
   ### 音楽再生コーナー
+
   ミクボタンの流用。このボタンのJavaScriptはここにある、ほとんど全部ChatGPTに書いてもらった[https://mikanixonable.hatenablog.com/entry/2023/10/08/171856](https://mikanixonable.hatenablog.com/entry/2023/10/08/171856)
 
   <div class="musicButton">
@@ -44,11 +45,6 @@ let rand = Math.floor(Math.random()*570)+1
 randomg.innerHTML = `<a href="./5.html?n=${rand}"><img src="./illusts/${rand}.png"/></a>`;
 randomg.innerHTML += `<p>No: ${rand}</p>`
 </script>
-
-
-### About
-[みかぶるについて](143)
-[このサイトについて](37)
 
 ## サイトマップ
 ~~~mermaid
@@ -122,31 +118,31 @@ graph TD;
 
 
 ## コンテンツ
+### About
+[みかぶるについて](143)　自己紹介のような文章
+[このサイトについて](37)　サイト史
+
 ### function
-[ページ一覧](1)
-[ロビー](144)
-[ラウンジ](159)
-[アトリウム](160)
+[ページ一覧](1)　すべてのページとその新しさ加減が見れる
+[ロビー](144)　とりあえずいろいろのリンクはここにまとめてある
 
 ### 創作
-[絵](129)
-[写真](154)
-[音楽](145)
-[小説](146)
-[架空世界](166)
-[人工言語](128)
+[絵](129)　pixivの方が見やすい
+[音楽](145)　再生ボタンが並ぶ
+[人工言語](128)　記事はmigdalにもある。ehtaplenチートシートや日本の人工言語関連リンクリストがある
 
-### リンク
-[SNS](132)
-[相互リンク](135)
-[非相互リンク](142)
+[写真](154)
+[小説](146)　kakuyomuの抜粋
+[架空世界](166)　未整備
+[SNS一覧](132)　トップページ上部に載せきれない網羅的な各サービスへのリンク
+
 
 
 ## バナー
 <a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" /></a>  
-> 画像: https://mikanixonable.github.io/banner.png  
+画像: https://mikanixonable.github.io/banner.png  
 
->タグ: &lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" />&lt;/a>
+タグ: &lt;a href="">&lt;img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" />&lt;/a>
 
 このサイトはリンク自由です
 
@@ -155,9 +151,133 @@ graph TD;
 [mythfinder](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
 [SnO2WMaN.net](https://sno2wman.net/)
+[相互リンク](135)
 [まだ相互ではないリンク](142)
+↓相関図
+
+~~~mermaid
+graph TD;
+A{Mikanixonable.github.io}
+click A Mikanixonable.github.io
+I((ideoaves.github.io))
+click I "https://ideoaves.github.io"
+
+    A <--> I
+    A <--> H
+    A <--> F
+    A <--> S
+
+H((haxibami.net))
+click H "https://haxibami.net"
+
+    H <--> F
+    H <--> S
+    H <--> N
+    H <--> fuku.day
+    click fuku.day "https://fuku.day"
+    H <--> donabe8898.dev
+    click donabe8898.dev "https://donabe8898.dev"
+    H <---------> Y
 
 
-## アクセスカウンター
+S((sno2wman.net))
+click S "https://sno2wman.net"
+    S <---> N
+    S <----> fuku.day
+    S <---> dekameshi.com
+    click dekameshi.com "https://dekameshi.com"
+    rinsuki.net <------> dekameshi.com
+
+    S <----> ryota-ka.me
+    click ryota-ka.me "https://ryota-ka.me"
+    S <-----> xeiaso.net
+    click xeiaso.net "https://xeiaso.net"
+    S <--> rinsuki.net
+    click rinsuki.net "https://rinsuki.net"
+
+        dekameshi.com <----> kewiihai.com
+        click kewiihai.com "https://kewiihai.com"
+
+        dekameshi.com <-----> do.un0.me
+        click do.un0.me "https://do.un0.me"
+
+        dekameshi.com <------> okkaradon.com
+        click okkaradon.com "https://okkaradon.com"
+
+        dekameshi.com <-------> rz7.dev
+        click rz7.dev "https://rz7.dev"
+
+            shigu.jp <--> rz7.dev <--> S
+            click rz7.dev "https://rz7.dev"
+
+            rz7.dev <--> blog.gattxxa.org <--> dekameshi.com
+            click blog.gattxxa.org "https://blog.gattxxa.org"
+
+            blog.gattxxa.org <--> shigu.jp
+            laynor.me <--> rz7.dev <--> S
+            click laynor.me "https://laynor.me"
+            rz7.dev <-----> Y
+            
+        dekameshi.com <--> laynor.me
+        dekameshi.com <--> blog.gattxxa.org
+
+
+F((fabon.info))
+click F "https://fabon.info"
+
+    F <---> S
+    F <--> taisa.site
+    click taisa.site "https://taisa.site"
+
+    taisa.site <----> hakariuri.blog
+    click hakariuri.blog "https://hakariuri.blog"
+
+    taisa.site <---> tommytestpage.ie-yasu.com
+    click tommytestpage.ie-yasu.com "https://tommytestpage.ie-yasu.com"
+
+    F <---> tommytestpage.ie-yasu.com
+
+
+N[not-miso-inside.netlify.app]
+click N "https://not-miso-inside.netlify.app"
+
+Y[yude.jp]
+click Y "https://yude.jp"
+    rz7.dev <--> Y
+    Y <----> fuku.day
+    fuku.day <---> s7tya.com
+    click s7tya.com "https://s7tya.com"
+    fuku.day <--> abap34.com
+    click abap34.com "https://abap34.com"
+
+    Y <---> E
+    Y <----> nona-takahara.github.io
+    click nona-takahara.github.io "https://nona-takahara.github.io"
+    Y <----> pepepper.net
+    click pepepper.net "https://pepepper.net"
+    Y <--> arkw.net/en
+    click arkw.net/en "https://arkw.net/en"
+    Y <-----> kris.fail
+    click kris.fail "https://kris.fail"
+    Y <---------> kusaremkn.com <-----> qqey.net
+    click kusaremkn.com "https://kusaremkn.com"
+    qqey.net
+    click qqey.net "https://qqey.net"
+    kusaremkn.com <----> pepepper.net
+    click pepepper.net "https://pepepper.net"
+    kusaremkn.com <---> moyashim-25.com
+    click moyashim-25.com "https://moyashim-25.com"
+    kusaremkn.com <--> donabe8898.dev
+    click donabe8898.dev "https://donabe8898.dev"
+
+    Y <----> donabe8898.dev
+    click donabe8898.dev "https://donabe8898.dev"
+
+
+E[exout.net/~kirby3ds]
+click E "https://exout.net/~kirby3ds"
+~~~
+
+## 萌え萌えアクセスカウンター
 ![](https://count.getloli.com/get/@:mikanixonable)
 2023-10-27設置
