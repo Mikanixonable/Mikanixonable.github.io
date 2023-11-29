@@ -1,4 +1,3 @@
-import json
 import glob
 import os
 import codecs
@@ -9,7 +8,7 @@ import extcolors
 
 # deskPath = "./Mikanixonable.github.io/"
 deskPath = "./"
-jsonPath = deskPath + 'json/illusts.json'
+
 
 nums = [int(os.path.splitext(os.path.basename(png))[0]) for png in glob.glob(deskPath + "illusts/*.png")]
 def makeCSV(filename,nums):
@@ -39,4 +38,4 @@ def makeCSV(filename,nums):
                 ])
             print(i)
 
-makeCSV("yy.csv",nums)
+makeCSV("yy2.csv",nums)
