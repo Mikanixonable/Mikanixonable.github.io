@@ -68,7 +68,7 @@
   <input type="button" class="button" style="width:15em;height:3em;" value="ランダム" onclick="	button()" />
 </body>
 
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> -->
 <script>
   // let imgTitle = document.getElementById("imgTitle")
   let imgDiv = document.getElementById("imgDiv")
@@ -175,6 +175,7 @@ const parseCSV=(csv)=>{
       
     if (p.title) { meta += "title: " + p.title + "<br>"}
     if (p.date) { meta += "date: " + p.date + "<br>"}
+    if (p.twitter) { meta += "twitter: " + `<a href="${p.twitter}">twitter<a/>` + "<br>"}
     if (p.tags.length > 0) {
       meta +="tags: "
       for (let k=0; k < p.tags.split(",").length; k++) {
