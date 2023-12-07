@@ -24,9 +24,8 @@ categories: main
     <button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
   </div>
 
-  ### 音楽再生コーナー
 
-  ミクボタンの流用。このボタンのJavaScriptはここにある、ほとんど全部ChatGPTに書いてもらった[https://mikanixonable.hatenablog.com/entry/2023/10/08/171856](https://mikanixonable.hatenablog.com/entry/2023/10/08/171856)
+  ### 音楽再生コーナー
 
   <div class="musicButton">
 <button onclick="btn('./musics/11.mp3', this)">きのこの森での記録</button>
@@ -34,7 +33,23 @@ categories: main
 <button onclick="btn('./musics/19.mp3', this)">時計台</button>
   </div>
 
-  [他の音楽](145)
+  <div class="musicButton">
+<button onclick="btn('./musics/8.mp3', this)">pikopiko tune</button>
+<button onclick="btn('./musics/9.mp3', this)">人のいない美術館</button>
+<button onclick="btn('./musics/10.mp3', this)">warabimochi</button>
+<button onclick="btn('./musics/12.mp3', this)">game music 1</button>
+<button onclick="btn('./musics/13.mp3', this)">雨</button>
+<button onclick="btn('./musics/14.mp3', this)">土曜日のテーマ</button>
+<button onclick="btn('./musics/15.mp3', this)">piano matrix</button>
+<button onclick="btn('./musics/16.mp3', this)">piano matrix2</button>
+<button onclick="btn('./musics/17.mp3', this)">Tetete</button>
+<button onclick="btn('./musics/18.mp3', this)">台風のうた</button>
+<button onclick="btn('./musics/20.mp3', this)">対流圏</button>
+</div>
+
+ミクボタンの流用。このボタンのJavaScriptは[ここ](https://mikanixonable.hatenablog.com/entry/2023/10/08/171856)にある、ほとんど全部ChatGPTに書いてもらった
+
+[他の音楽](145)
 
 ### Random Gallery(クリックで詳細に飛びます)
 
