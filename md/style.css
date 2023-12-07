@@ -28,8 +28,8 @@ body {
   flex-direction: column;
 }
 
-.wrapper > * {
-  max-width: min(calc(100vw - 60px),660px);
+.wrapper>* {
+  max-width: min(calc(100vw - 60px), 660px);
 }
 
 
@@ -116,42 +116,42 @@ a small {
 }
 
 
-#相互リンク:hover{
+#相互リンク:hover {
   transform: skew(30deg, 1deg);
   transition: all 300ms 0s ease;
 }
-#相互リンク{
+
+#相互リンク {
   color: #11ef68;
   background: linear-gradient(slateblue, #631e2a);
   transition: all 300ms 0s ease;
   animation: ugoki 5s ease infinite;
-  }
-  @keyframes ugoki {
-    0% {
-      transform: skew(40deg);
-      filter: hue-rotate(0deg) blur(0.2px)
-    }
-    50%{
-      transform: skew(-40deg);
-      filter: hue-rotate(100deg) blur(2px)
-    }
-    70% {
-      filter: hue-rotate(380deg) blur(0.1px)
-    }
-  
-    100% {
-      transform: skew(40deg);
-      filter: hue-rotate(720deg)  blur(2px)
-    }
-  }
-
-
-img {
-  /* max-height: 80vh; */
-  max-width: 80vw;
 }
 
+@keyframes ugoki {
+  0% {
+    transform: skew(40deg);
+    filter: hue-rotate(0deg) blur(0.2px)
+  }
 
+  50% {
+    transform: skew(-40deg);
+    filter: hue-rotate(100deg) blur(2px)
+  }
+
+  70% {
+    filter: hue-rotate(380deg) blur(0.1px)
+  }
+
+  100% {
+    transform: skew(40deg);
+    filter: hue-rotate(720deg) blur(2px)
+  }
+}
+
+img {
+  max-width: 660px;
+}
 
 button {
   background-color: slategrey;
@@ -180,7 +180,7 @@ button.playing {
 .musicButton button {
   background-color: #8b4755;
 }
- 
+
 
 h1,
 h2,

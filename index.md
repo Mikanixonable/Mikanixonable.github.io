@@ -12,28 +12,27 @@ categories: main
 
 ### ミクボタン（音が鳴ります）
 
-  <div class="mikuButton">
-    <button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
-    <button onclick="btn('./musics/2.mp3', this)">ねう</button>
-    <button class="poland" onclick="btn('./musics/3_1.mp3', this)">Mazurek Dąbrowskiego</button>
-    <button onclick="btn('./musics/4.mp3', this)">ねこーっ</button>
-    <button onclick="btn('./musics/5.mp3', this)">ねこねこ</button>
-    <button onclick="btn('./musics/6.mp3', this)">にゃう</button>
-    <button onclick="btn('./musics/7.mp3', this)">ぬい~</button>
-    <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
-    <button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
-  </div>
+<div class="mikuButton">
+<button onclick="btn('./musics/1.mp3', this)">ミクボタン</button>
+<button onclick="btn('./musics/2.mp3', this)">ねう</button>
+<button class="poland" onclick="btn('./musics/3_1.mp3', this)">Mazurek Dąbrowskiego</button>
+<button onclick="btn('./musics/4.mp3', this)">ねこーっ</button>
+<button onclick="btn('./musics/5.mp3', this)">ねこねこ</button>
+<button onclick="btn('./musics/6.mp3', this)">にゃう</button>
+<button onclick="btn('./musics/7.mp3', this)">ぬい~</button>
+<button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(東京駅)</button>
+<button onclick="btn('./musics/82.mp3', this)">water crown(目黒駅)</button>
+</div>
 
+### 音楽再生コーナー
 
-  ### 音楽再生コーナー
-
-  <div class="musicButton">
+<div class="musicButton">
 <button onclick="btn('./musics/11.mp3', this)">きのこの森での記録</button>
 <button onclick="btn('./musics/22.mp3', this)">恒星間播種船のテーマ</button>
 <button onclick="btn('./musics/19.mp3', this)">時計台</button>
-  </div>
+</div>
 
-  <div class="musicButton">
+<div class="musicButton">
 <button onclick="btn('./musics/8.mp3', this)">pikopiko tune</button>
 <button onclick="btn('./musics/9.mp3', this)">人のいない美術館</button>
 <button onclick="btn('./musics/10.mp3', this)">warabimochi</button>
@@ -61,7 +60,29 @@ randomg.innerHTML = `<a href="./5.html?n=${rand}"><img src="./illusts/${rand}.pn
 randomg.innerHTML += `<p>No: ${rand}</p>`
 </script>
 
-## サイトマップ
+## コンテンツ
+### About
+[みかぶるについて](143)　自己紹介のような文章
+[このサイトについて](37)　サイト史
+
+### function
+[ページ一覧](1)　すべてのページとその新しさ加減が見れる
+[ロビー](144)　とりあえずいろいろのリンクはここにまとめてある
+
+### 創作
+[絵](129)　pixivの方が見やすい
+[音楽](145)　再生ボタンが並ぶ
+[人工言語](128)　記事はmigdalにもある。ehtaplenチートシートや日本の人工言語関連リンクリストがある
+
+[写真](154)
+[小説](146)　kakuyomuの抜粋
+[架空世界](166)　未整備
+[SNS一覧](132)　トップページ上部に載せきれない網羅的な各サービスへのリンク
+
+
+## サイト構造
+実際はもっと大量のページがある
+
 ~~~mermaid
 graph TD;
   D[(ページ一覧)]
@@ -130,28 +151,6 @@ graph TD;
     click F2 "18"
   end
 ~~~
-
-
-## コンテンツ
-### About
-[みかぶるについて](143)　自己紹介のような文章
-[このサイトについて](37)　サイト史
-
-### function
-[ページ一覧](1)　すべてのページとその新しさ加減が見れる
-[ロビー](144)　とりあえずいろいろのリンクはここにまとめてある
-
-### 創作
-[絵](129)　pixivの方が見やすい
-[音楽](145)　再生ボタンが並ぶ
-[人工言語](128)　記事はmigdalにもある。ehtaplenチートシートや日本の人工言語関連リンクリストがある
-
-[写真](154)
-[小説](146)　kakuyomuの抜粋
-[架空世界](166)　未整備
-[SNS一覧](132)　トップページ上部に載せきれない網羅的な各サービスへのリンク
-
-
 
 ## バナー
 <a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" /></a>  
