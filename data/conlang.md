@@ -3,6 +3,11 @@
 　英単語を縮めた三文字で意味を伝える国際補助語
 言語名: 3CL[site](https://web.archive.org/web/20061209210102/http://members.goo.ne.jp/home/3cl/) [site2](https://web.archive.org/web/20041010133035/http://www.geocities.co.jp/SiliconValley/3338/) [site3](https://web.archive.org/web/20041031105937/http://www.geocities.co.jp/SiliconValley/3338/page019.html) [文法](https://web.archive.org/web/20050128142511/http://www.geocities.co.jp/SiliconValley/3338/page006.html) 分類: 国際補助語
 
+### [ア語](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/ago)
+年代: 2014
+　アラズ語に影響を受けて作られた言語。アラズ語は単語がないが、ア語は単語が「A」の一つだけある。アラズ語が最も習得しやすい言語なら、ア語は二番目に習得しやすい言語である。
+言語名: ア語作者: slaimsan もやし[site](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/ago) 分類: 実験的言語 PHI/JOK
+
 ### [アコトマ語](https://www.pixiv.net/artworks/67452700)
 年代: 2018
 言語名: アコトマ語作者: ての / TENO[site](https://www.pixiv.net/artworks/67452700) [site2](https://www.pixiv.net/artworks/67742715) [site3](https://www.pixiv.net/artworks/67452667) 作者Twitter: [@MapleSyrupped](https://twitter.com/MapleSyrupped) 
@@ -18,6 +23,21 @@
 　作者による小説「星界の紋章」シリーズに登場する、日本語から派生したはるか未来の言語で、格助詞が名詞と縮約・融合して格変化が誕生し屈折語となっている。作者による別の短編集「夢の樹が接げたなら」では、普通名詞を持たない言語を話す宇宙船で生まれた子供というアイデアの話がある。日本製OSであるTRONの文字セットにはアーヴ語の文字アースが登録されている。インタビュー：http://www.sf-fantasy.com/magazine/interview/010201.shtml
 言語名: アーヴ語作者: 森岡浩之[site](http://dadh-baronr.s5.xrea.com/) 分類: 芸術言語
 
+### [アヲアヲアー語](https://twitter.com/cicada3301_kig/status/897798456898576384)
+年代: 2017
+　全部母音だけの言語。スライムさんのムシイン語と同じアプローチ。
+言語名: アヲアヲアー語作者: すきえんてぃあ minerva scientia[site](https://twitter.com/cicada3301_kig/status/897798456898576384) 分類: 実験的言語例文: a:j→ ?→ 'ai↑'ai↑ awo→awo→a:↑ ; y:?→j↑?↑ 'ai↑ wu↑wo→ ???「私はアヲアヲアー語を話していましたが皆さんは話しますかね」
+
+### [アラズ語](https://cogas.github.io/pages/runbau/araz_go/)
+年代: 2015年8月2日-2023
+　単語がなく、それゆえに初めから完成している言語。世界で最も習得しやすい。語彙数を増やした方がよいという思想の極端なカウンターであり、人工言語界隈でミーム化している。非公式に1万字強の考察「アラズ語の全貌(2023)」- ンソピハ がある(https://migdal.jp/nsopikha/%E3%82%A2%E3%83%A9%E3%82%BA%E8%AA%9E%E3%81%AE%E5%85%A8%E8%B2%8C-4l37)
+　toki ponaではtoki alaと呼ばれる。
+言語名: アラズ語 toki ala作者: おかゆ[site](https://cogas.github.io/pages/runbau/araz_go/) 作者Twitter: [@oka_iu_tcan](https://twitter.com/oka_iu_tcan) 分類: 実験的言語 PHI/JOK
+
+### イズイ語
+年代: 2019
+言語名: イズイ語 Izui 巌井作者: ざわンとすD.C作者Twitter: [@DC05062892](https://twitter.com/DC05062892) [辞書](https://writening.net/page?4GvM2x) 
+
 ### [イジェール語](https://zaslon.info/idyer/)
 年代: 2008-2023
 　未来の地球を舞台にした架空世界で使われる言語。日本語と英語がベースのアポステリオリ言語。SOV語順で、動詞がすべて他動詞。
@@ -28,7 +48,7 @@
 　精神疾患者や失語者の助詞や助動詞のミスに基づいて新しい語法や文法を採用した。上古代日本語、瀬戸内海域方言、茨城県常総市の水海道方言、台湾原住民語、アイヌ語、バスク語などがベース
 　https://iwasakijunichi.net/2/1/8/6/6-3.pdf
 　旧サイト: https://web.archive.org/web/20180818080023/https://iwasaki-conlang.com/
-言語名: 岩崎式日本語 ISReJP作者: 岩崎純一[site](https://iwasakijunichi.net/2/1/8/8/8-15.pdf) 世界創作: あり分類: アポステリオリ言語
+言語名: 岩崎式日本語 ISReJP作者: 岩崎純一[site](https://iwasakijunichi.net/2/1/8/8/8-15.pdf) 作者Twitter: [@iwasaki_j](https://twitter.com/iwasaki_j) 世界創作: あり分類: アポステリオリ言語
 
 ### [エシュガル語](https://w.atwiki.jp/suwiruzo/)
 年代: 2007-2023
@@ -60,6 +80,15 @@
 年代: 2012年6月-2014
 　ロシア語、グルジア語から文法に影響を受けている
 言語名: オルチシェフ語 orchishoef作者: 沖渡尋威[site](https://w.atwiki.jp/orchishoef/) [文法](https://w.atwiki.jp/orchishoef/pages/17.html) 世界創作: あり分類: アプリオリ言語
+
+### カムツ語
+年代: 2018
+　人形劇Vtuber「高い城のアムフォ」で使われる言語
+言語名: カムツ語作者: 巡宙艦ボンタ作者Twitter: [@bonta634](https://twitter.com/bonta634) 
+
+### [ゼノス語](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/)
+年代: -2021
+言語名: ゼノス語 XENOS作者: ヘイル[site](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/) 作者Twitter: [@XENOSLANGUAGE](https://twitter.com/XENOSLANGUAGE) [辞書](https://web.archive.org/web/20220809071810/http://xylops.cswiki.jp/index.php?%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3) 
 
 ### [火語(かご)](https://w.atwiki.jp/hrain/pages/22.html)
 年代: 2000年ごろ-2011
@@ -197,7 +226,7 @@
 ### [スライムさん第3回人工言語コンペ参加言語](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75!19923&ithint=file%2cdocx&app=Word&authkey=!AMrMmqlCLZx_OlE)
 年代: 2018
 　2018-02-18にかけて行われた第3回人工言語コンペ参加作品(https://twitter.com/lang_compe/status/955787459777912833)
-言語名: スライムさん第3回人工言語コンペ参加言語作者: スライムさん slaimsan[site](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75!19923&ithint=file%2cdocx&app=Word&authkey=!AMrMmqlCLZx_OlE) 作者Twitter: [@slaimsan/](https://twitter.com/slaimsan/) 
+言語名: スライムさん第3回人工言語コンペ参加言語作者: スライムさん slaimsan.ポンタ[site](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75!19923&ithint=file%2cdocx&app=Word&authkey=!AMrMmqlCLZx_OlE) 作者Twitter: [@slaimsan/](https://twitter.com/slaimsan/) 
 
 ### [tanijiwi語](http://2shiki.seesaa.net/article/456356973.html)
 年代: 2018
@@ -222,7 +251,7 @@
 ### [スライムさん第1回人工言語コンペ参加言語](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75%2119691&authkey=!APrQJgaKJy5NXX8)
 年代: 2017
 　2017年11月14日から2017年11月25日にかけて行われた第1回人工言語コンペの参加作品。(https://twitter.com/slaimsan/status/934436495687008256)お題は「命名用の言語を作り、47都道府県の名前を翻訳せよ。」(https://twitter.com/slaimsan/status/930209787454808064)
-言語名: スライムさん第1回人工言語コンペ参加言語作者: スライムさん slaimsan[site](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75%2119691&authkey=!APrQJgaKJy5NXX8) 作者Twitter: [@slaimsan/](https://twitter.com/slaimsan/) 
+言語名: スライムさん第1回人工言語コンペ参加言語作者: スライムさん slaimsan.ポンタ[site](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75%2119691&authkey=!APrQJgaKJy5NXX8) 作者Twitter: [@slaimsan/](https://twitter.com/slaimsan/) 
 
 ### [みかぶるさん第2回人工言語コンペ参加言語](https://twitter.com/Mikanixonable/status/942734979112493056)
 年代: 2017
@@ -339,11 +368,6 @@
 　印欧祖語、古ゲルマン語から語彙を、日本語、英語から文法を借用したアポステリオリ言語。コニフまたはコヒニュと呼ばれる架空世界が舞台。
 言語名: ノヒュア語 ノフア語作者: wakmona[site](https://w.atwiki.jp/noqa/) [文法](https://w.atwiki.jp/noqa/pages/22.html) 世界創作: あり分類: アポステリオリ言語
 
-### [幽楽称](https://www.pixiv.net/artworks/66231161)
-年代: 2017
-　曼荼羅のように無限に展開できる表記法を持つ。曼荼羅の腕が右に曲がると平叙文、左に曲がると否定文になる。作品: https://www.pixiv.net/artworks/66231161
-言語名: 幽楽称作者: Hitsuji[site](https://www.pixiv.net/artworks/66231161) 
-
 ### [パラディス語](https://w.atwiki.jp/paladisren/pages/1.html)
 年代: 2012
 言語名: パラディス語作者: 渡辺しま[site](https://w.atwiki.jp/paladisren/pages/1.html) [辞書](https://w.atwiki.jp/paladisren/pages/45.html) [文法](https://w.atwiki.jp/paladisren/pages/17.html) 世界創作: あり分類: アプリオリ
@@ -391,21 +415,6 @@
 　OVS語順で、一つの単語につき6つの単語文が表せる。フォラトーゼン(マクェン文字)と呼ばれる独自文字で表記する。紹介: https://migdal.jp/acacia/-%E3%83%9E%E3%82%AF%E3%82%A7%E3%83%B3%E8%AA%9E--maqen-bemon--%E3%81%AE%E6%A6%82%E8%A6%81-2g62
 言語名: マクェン語 maqen bemon作者: acacia[site](https://maqenbemon.localinfo.jp/) 作者Twitter: [@maqenbemon](https://twitter.com/maqenbemon) [辞書](https://zpdic.ziphil.com/dictionary/mqe) 
 
-### [ムシイン語](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C)
-年代: 2016-2021
-　全部母音だけの言語。すきえんてぃあさんのアヲアヲアー語と同じアプローチ。
-言語名: ムシイン語 aejaije作者: スライムさん slaimsan[site](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C) 分類: 実験的言語例文: uv?ova ijaov?ja? ovej?uvei. 「私は果実を食べる。」
-
-### ムボイン語
-年代: 2016-2023
-　母音がない言語。子音のないムシイン語と逆のアプローチでありHush語と同じアプローチ。声帯の機能を失った人でも会話できる。
-言語名: ムボイン語作者: スライムさん slaimsan分類: 実験的言語
-
-### [アヲアヲアー語](https://twitter.com/cicada3301_kig/status/897798456898576384)
-年代: 2017
-　全部母音だけの言語。スライムさんのムシイン語と同じアプローチ。
-言語名: アヲアヲアー語作者: すきえんてぃあ minerva scientia[site](https://twitter.com/cicada3301_kig/status/897798456898576384) 分類: 実験的言語例文: a:j→ ?→ 'ai↑'ai↑ awo→awo→a:↑ ; y:?→j↑?↑ 'ai↑ wu↑wo→ ???「私はアヲアヲアー語を話していましたが皆さんは話しますかね」
-
 ### [mixic](https://mixi.jp/view_community.pl?id=543186)
 年代: 2006-2019
 　rjuka(榴火)(穆念真)さん(https://mixi.jp/show_friend.pl?pt=1702130085&sig=59f40a4a7785ab19e1703fd0610057289874c8a0&content_id=543186&route_trace=010001900000&id=505702)が発起人となったmixiコミュニティーで製作した言語。
@@ -414,6 +423,16 @@
 ### [ミリ語](https://mili.ninja-web.net/15/15.html)
 年代: 2006-2012
 言語名: ミリ語作者: koaes mokos hele helte nymwa[site](https://mili.ninja-web.net/15/15.html) 作者Twitter: [@nymwa](https://twitter.com/nymwa) [辞書](https://mili.ninja-web.net/15/38.html) [文法](https://mili.ninja-web.net/15/18.html) 世界創作: あり分類: アプリオリ言語
+
+### [ムシイン語](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C)
+年代: 2016-2021
+　全部母音だけの言語。すきえんてぃあさんのアヲアヲアー語と同じアプローチ。
+言語名: ムシイン語 aejaije作者: スライムさん slaimsan.ポンタ[site](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C) 分類: 実験的言語例文: uv?ova ijaov?ja? ovej?uvei. 「私は果実を食べる。」
+
+### ムボイン語
+年代: 2016-2023
+　母音がない言語。子音のないムシイン語と逆のアプローチでありHush語と同じアプローチ。声帯の機能を失った人でも会話できる。
+言語名: ムボイン語作者: スライムさん slaimsan.ポンタ分類: 実験的言語
 
 ### [ムンビーナ語](http://ww22.tiki.ne.jp/%7Ephalsail/gengo/munb/index.htm)
 年代: 1980-2023
@@ -446,15 +465,29 @@
 　https://conlangarchive.wiki.fc2.com/wiki/%E3%80%90%E3%83%A4%E3%83%A9%E3%82%A4%E3%83%A9%E8%AA%9E%E3%80%91%E7%B7%8F%E5%90%88%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89
 言語名: ヤライラ語作者: nuluyo分類: アポステリオリ言語
 
+### ヤタシ語
+年代: 2019
+　ヤタシ語族の祖語、格変化がある(https://twitter.com/DC05062892/status/1124646868443512837)
+言語名: ヤタシ語作者: ざわンとすD.C
+
+### [幽楽称](https://www.pixiv.net/artworks/66231161)
+年代: 2017
+　曼荼羅のように無限に展開できる表記法を持つ。曼荼羅の腕が右に曲がると平叙文、左に曲がると否定文になる。作品: https://www.pixiv.net/artworks/66231161
+言語名: 幽楽称作者: 新世紀ラムひつじ Hitsuji[site](https://www.pixiv.net/artworks/66231161) 作者Twitter: [@LamWolf222](https://twitter.com/LamWolf222) 
+
 ### [ユーゴック語](https://sites.google.com/site/yuugokku/)
 年代: 2010-2023
 　リパライン語との共同の創作世界「悠里」の中核となる言語。ユーナリアと呼ばれる独自文字で表記する。
 言語名: ユーゴック語作者: KPHT かぱはた[site](https://sites.google.com/site/yuugokku/) 作者Twitter: [@yuugokku_2](https://twitter.com/yuugokku_2) [辞書](https://sites.google.com/site/yuugokku/ci-shu?authuser=0) [文法](https://sites.google.com/site/yuugokku/ci-shu?authuser=0) 世界創作: あり分類: アプリオリ言語
 
+### 説為音響
+年代: 2020
+言語名: 説為音響
+
 ### [Lingo Mondo](https://web.archive.org/web/20060813110655/http://ip.tosp.co.jp/i.asp?I=lingomondo)
 年代: 2006-2012
 　ホームページトップのみアーカイブに残っているが文法や語彙は2023年時点でアクセスできない。人工言語野では活用や格変化がないと紹介されている。(https://dos.chottu.net/conlang_link.html?l=index)
-言語名: Lingo Mondo作者: 縄田幹治[site](https://web.archive.org/web/20060813110655/http://ip.tosp.co.jp/i.asp?I=lingomondo) [辞書](https://web.archive.org/web/20130120164032/http://www9.atwiki.jp/fai_iaf/pages/15.html) 分類: 国際補助語
+言語名: Lingo Mondo作者: 縄田幹治[site](https://web.archive.org/web/20060813110655/http://ip.tosp.co.jp/i.asp?I=lingomondo) [辞書](https://souzoumap.menhera.io/Taosenai/Ekimeigojiten.HTM) 分類: 国際補助語
 
 ### [リパライン語](https://w.atwiki.jp/cgwj/pages/42.html)
 年代: 2011-2023
@@ -468,11 +501,20 @@
 　https://web.archive.org/web/20080221165546/http://www.innovative.jp/interview/2006/0125.php
 言語名: LoCoS作者: 太田幸夫
 
+### [時雨語](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E)
+年代: 2017
+言語名: 時雨語 Shigure作者: 時雨薫[site](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E) 作者Twitter: [@wojiaomolotov](https://twitter.com/wojiaomolotov) [文法](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E#%E6%96%87%E5%9E%8B) 
+
+### 日本駅名語
+年代: 2015-2016
+　元ネタの曲と響きの似ている駅名で替え歌をする動画ジャンル「駅名替え歌」(垰瀬内シリーズ)で使われる駅名を言語とみなすことで生まれた言語。
+言語名: 日本駅名語作者: 4b3 はらしとと 想像地図研究所作者Twitter: [@koridentetsu](https://twitter.com/koridentetsu) [辞書](https://web.archive.org/web/20210418210337/http://souzoumap.webcrow.jp/Taosenai/Ekimeigojiten.HTM) [文法](https://tanukipedia.miraheze.org/wiki/%E6%97%A5%E6%9C%AC%E9%A7%85%E5%90%8D%E8%AA%9E#%E6%96%87%E6%B3%95) モユネ分類: ART/REA/SER/SPE/SON/AWL
+
 ### [更紗語（さらさご）](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E)
 年代: 2014-2023
 　想像地図プロジェクトの城栄国でもっともよく離される言語で、千織語の千織字をもとに作られた更紗字を用いる。
 　https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E#%E5%8D%98%E8%AA%9E
-言語名: 更紗語（さらさご）作者: 時雨薫[site](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E) 作者Twitter: [@wojiaomolotov](https://twitter.com/wojiaomolotov) [辞書](https://zpdic.ziphil.com/dictionary/sarasa) [文法](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E#%E6%96%87) 世界創作: 想像地図、城栄国北部分類: アプリオリ言語
+言語名: 更紗語（さらさご）作者: 時雨薫 想像地図の人[site](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E) 作者Twitter: [@wojiaomolotov](https://twitter.com/wojiaomolotov) [辞書](https://zpdic.ziphil.com/dictionary/sarasa) [文法](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E#%E6%96%87) 世界創作: 想像地図、城栄国北部分類: アプリオリ言語モユネ分類: NAT/IMG/SER
 
 ### [千織語](https://tanukipedia.miraheze.org/wiki/%E5%8D%83%E7%B9%94%E8%AA%9E)
 年代: 2014-2023
@@ -484,22 +526,110 @@
 　想像地図プロジェクトの城栄国北部の北陽道の先住民によって使われる。
 言語名: ヘツクース語作者: 担当者は篠永康平氏とは別である(https://x.com/koridentetsu/status/1347807296500375552?s=20)[site](https://tanukipedia.miraheze.org/wiki/%E3%83%98%E3%83%84%E3%82%AF%E3%83%BC%E3%82%B9%E8%AA%9E) 作者Twitter: [@koridentetsu](https://twitter.com/koridentetsu) [辞書](https://hetukuusika.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) 世界創作: 想像地図の城栄国北部の北陽道分類: アプリオリ言語
 
-### [ア語](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/ago)
-年代: 2014
-　アラズ語に影響を受けて作られた言語。アラズ語は単語がないが、ア語は単語が「A」の一つだけある。アラズ語が最も習得しやすい言語なら、ア語は二番目に習得しやすい言語である。
-言語名: ア語作者: slaimsan もやし[site](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/ago) 分類: 実験的言語 PHI/JOK
+### [レテシミ語](https://web.archive.org/web/20161102100211/https://sites.google.com/site/moyacilang/letesimigo)
+年代: 2015-2023
+　トキポナ(単語数120前後)からさらに単語を減らし52単語にしたミニマル言語。
+言語名: レテシミ語 ゴジュウニ語作者: スライムさん slaimsan.ポンタ[site](https://web.archive.org/web/20161102100211/https://sites.google.com/site/moyacilang/letesimigo) [辞書](https://onedrive.live.com/view.aspx?resid=9C3F8BE2B10E2F75!8131&wdo=2&authkey=!AH2_0EpKWW-2MZA) 分類: 実験的言語 アプリオリ言語モユネ分類: EXP  SON  JOK  AAV
 
-### [アラズ語](https://cogas.github.io/pages/runbau/araz_go/)
-年代: 2015年8月2日-2023
-　単語がなく、それゆえに初めから完成している言語。世界で最も習得しやすい。語彙数を増やした方がよいという思想の極端なカウンターであり、人工言語界隈でミーム化している。非公式に1万字強の考察「アラズ語の全貌(2023)」- ンソピハ がある(https://migdal.jp/nsopikha/%E3%82%A2%E3%83%A9%E3%82%BA%E8%AA%9E%E3%81%AE%E5%85%A8%E8%B2%8C-4l37)
-言語名: アラズ語作者: おかゆ[site](https://cogas.github.io/pages/runbau/araz_go/) 作者Twitter: [@oka_iu_tcan](https://twitter.com/oka_iu_tcan) 分類: 実験的言語 PHI/JOK
-
-### イズイ語
+### [ティポミポ語](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/cipomipo)
 年代: 2019
-言語名: イズイ語 Izui 巌井作者: ざわンとすD.C作者Twitter: [@DC05062892](https://twitter.com/DC05062892) [辞書](https://writening.net/page?4GvM2x) 
+言語名: ティポミポ語 チポミポ語[site](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/cipomipo) 
 
-### ヤタシ語
-年代: 2019
-　ヤタシ語族の祖語、格変化がある(https://twitter.com/DC05062892/status/1124646868443512837)
-言語名: ヤタシ語作者: ざわンとすD.C
+### レミリア共通語
+　資料: https://ziphil.github.io/ConlangVestiges/exhibit/14.html
+言語名: レミリア共通語 第三期ルエン語 レイア語作者: クノーツアクア作者Twitter: [@Qunoxts](https://twitter.com/Qunoxts) [辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=ectos&search=&type=0&agree=1&page=5) 
+
+### [亜共語](https://w.atwiki.jp/akyou_language/pages/12.html)
+年代: 2017-2018
+　アジア共通語として制作された。漢字とキリル文字を混ぜて使う。
+　紹介動画: https://www.youtube.com/watch?app=desktop&v=OqDv2iKxMTI
+　音声資料: https://www.youtube.com/watch?v=FKenvInbOY0
+言語名: 亜共語作者: Ikku[site](https://w.atwiki.jp/akyou_language/pages/12.html) [site2](https://www.youtube.com/@ikku6071/videos) 作者Twitter: [@ikku0925](https://twitter.com/ikku0925) 
+
+### [凪霧](https://maykloaayukawa.wixsite.com/nagili)
+年代: 2014-2020
+　アルカと世界観(アルシディア)を共有する。漢字とハングルで転写する。
+　旧サイト: https://web.archive.org/web/20190622052035/https://sites.google.com/site/nagilikuli/
+　旧文法: https://web.archive.org/web/20190622052748/https://sites.google.com/site/nagilikuli/wen-fa
+言語名: 凪霧 ???作者: 鮎川早月(Maycia Arenberg) セレン・アルバザード[site](https://maykloaayukawa.wixsite.com/nagili) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) [辞書](https://zpdic.ziphil.com/dictionary/nagili) [文法](https://drive.google.com/file/d/0BwaB-JfIm_OeZVZvQWdqMkpPazA/view?resourcekey=0-t3V-9Tqe2Xv2q3Umn-w5MQ) モユネ分類: NAT/IMGCLAコード: alt-rx (v1)  ~_ng_~_arx (v3)
+
+### アルメートル語
+言語名: アルメートル語作者: SAYASA=IF分類: アプリオリ言語
+
+### [ピース語](https://sites.google.com/site/tsapsaanja/%E5%87%BA%E5%85%A5%E5%8F%A3?authuser=0)
+年代: 2009-2023
+　ボーカロイドで歌わせるための歌唱言語。日本語ライブラリで歌えるように、日本語に含まれる音しか含まれていない。現在辞書は公開していない。旧サイト; https://w.atwiki.jp/tsapsaanja/
+　旧辞書: https://w.atwiki.jp/tsapsaanja/pages/11.html
+　旧文法: https://w.atwiki.jp/tsapsaanja/pages/13.html
+言語名: ピース語 匪斯語 匪語作者: ルーミア かりぐら Caligula=Armjanskaja[site](https://sites.google.com/site/tsapsaanja/%E5%87%BA%E5%85%A5%E5%8F%A3?authuser=0) 作者Twitter: [@Tsapsaanja](https://twitter.com/Tsapsaanja) [辞書](https://sites.google.com/site/tsapsaanja/%E8%BE%9E%E6%9B%B8?authuser=0) [文法](https://sites.google.com/site/tsapsaanja/%E6%96%87%E6%B3%95%E8%A9%B3%E7%B4%B0?authuser=0) 世界創作: なし分類: 歌唱言語 アプリオリ言語
+
+### [ゼノフェル語](https://w.atwiki.jp/xenofer/)
+年代: 2013-2016
+　印欧語族の言語に影響を受けているが、分詞構造や不規則変化はない。作者は「ゲルマン語とロマンス語の折衷的要素が強い」と評している。
+言語名: ゼノフェル語作者: xenofer[site](https://w.atwiki.jp/xenofer/) 作者Twitter: [@xenofer_fiel](https://twitter.com/xenofer_fiel) 世界創作: あり（レシュティアス大陸にはミルフェル）
+
+### [空見語](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E)
+年代: 2016-2017
+　創作プロジェクト大宇宙の言語のひとつ
+言語名: 空見語 sorami vari作者: アクマ アクア akvis[site](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E) 作者Twitter: [@harmat_noln](https://twitter.com/harmat_noln) 
+
+### ラヴィーム語
+言語名: ラヴィーム語作者: jus rahaaza世界創作: あり
+
+### [ルウォー語](https://sites.google.com/view/ruwoo)
+言語名: ルウォー語作者: mis?ke=furezza=Kagena[site](https://sites.google.com/view/ruwoo) 作者Twitter: [@Kagena_ryuuka](https://twitter.com/Kagena_ryuuka) [辞書](https://zpdic.ziphil.com/dictionary/41) [辞書2](https://sites.google.com/view/ruwoo/a-ruu-o-yu/a-yu-hui?authuser=0) 
+
+### [テーズウィゼラー語](https://sites.google.com/view/ruwoo/b-tezuu-izera-yu?authuser=0)
+言語名: テーズウィゼラー語作者: mis?ke=furezza=Kagena[site](https://sites.google.com/view/ruwoo/b-tezuu-izera-yu?authuser=0) 作者Twitter: [@Kagena_ryuuka](https://twitter.com/Kagena_ryuuka) [辞書](https://zpdic.ziphil.com/dictionary/57) [辞書2](https://sites.google.com/view/ruwoo/b-tezuu-izera-yu/z-yu-hui-yi-lan?authuser=0) 
+
+### [人煌言語](https://sites.google.com/view/ruwoo/c-ren-huang-yan-yu?authuser=0)
+年代: 2016
+言語名: 人煌言語作者: mis?ke=furezza=Kagena[site](https://sites.google.com/view/ruwoo/c-ren-huang-yan-yu?authuser=0) [site2](https://twitter.com/i/events/1004154830619725825) 作者Twitter: [@Kagena_ryuuka](https://twitter.com/Kagena_ryuuka) 
+
+### [デーレ語](https://tanukipedia.miraheze.org/wiki/%E3%83%87%E3%83%BC%E3%83%AC%E8%AA%9E)
+年代: 2015-2023
+　qaで「にゃー」と読む
+言語名: デーレ語 aulakk derle derle 出語 しゅつご作者: dali-einerZy:=asteain-ninia murano7[site](https://tanukipedia.miraheze.org/wiki/%E3%83%87%E3%83%BC%E3%83%AC%E8%AA%9E) 作者Twitter: [@einerzy](https://twitter.com/einerzy) [辞書](https://github.com/asteain-ninia/derle-DIctionary) 世界創作: あり（出界）
+
+### ena
+年代: 2020
+言語名: ena 恵那語作者: dali-einerZy:=asteain-ninia murano7作者Twitter: [@einerzy](https://twitter.com/einerzy) [辞書](https://github.com/asteain-ninia/ena-dictionary) 
+
+### [柳霧](https://sites.google.com/view/ryuuka)
+年代: 2010-2023
+言語名: 柳霧作者: 高木柳沙[site](https://sites.google.com/view/ryuuka) 作者Twitter: [@Takagi_ryuusa](https://twitter.com/Takagi_ryuusa) [辞書](https://sites.google.com/view/ryuuka/5-ri-liu-ci-dian?authuser=0) [辞書2](https://sites.google.com/view/ryuuka/6-liu-he-ci-dian?authuser=0) [文法](https://sites.google.com/view/ryuuka/4-wen-fa?authuser=0) 
+
+### [めつラング](https://metlang.jimdofree.com/)
+年代: 2021-2023
+言語名: めつラング サーラル語(旧名)[site](https://metlang.jimdofree.com/) 作者Twitter: [@saalal_group](https://twitter.com/saalal_group) 世界創作: あり（ニツァラシャ）
+
+### [Vaak?ar](https://sakar-conlang.jimdofree.com/)
+年代: 2016-2023
+　ブラーフミー系をベースに、チベット語、古代日本語、ヒンディー語、英語などの語彙を借用した半アプリオリ言語
+言語名: Vaak?ar ヴァークシャル サカル語(旧名1) シャカル語(旧名2)[site](https://sakar-conlang.jimdofree.com/) [文法](https://sakar-conlang.jimdofree.com/%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3/) 
+
+### [ようじょ語](https://togetter.com/li/1152542)
+年代: 2017
+　平仮名で表記する、かわいい響きのミニマル言語。SVO-AN
+　github: https://github.com/yuhr/youjogo
+言語名: ようじょ語作者: すきえんてぃあ minerva scientia yuhr[site](https://togetter.com/li/1152542) 作者Twitter: [@cicada3301_kig](https://twitter.com/cicada3301_kig) [辞書](https://niftg.github.io/youjogo/d.html) 世界創作: なし分類: 実験的言語
+
+### [ヴェオ語](https://linktr.ee/Xotarios)
+年代: 2021-2022
+言語名: ヴェオ語 翊天語 Vheon作者: Xotarios 翊天星少年(しょたりおす) ［aka きーらん］[site](https://linktr.ee/Xotarios) 作者Twitter: [@Xotarios](https://twitter.com/Xotarios) 世界創作: あり分類: 芸術言語
+
+### [yoka tetute](https://scrapbox.io/tgbg/tetute%E8%AA%9E%E8%B3%87%E6%96%99%E9%9B%86)
+年代: 2015-2023
+　文法が公開されていない言語。ひし形の文様のような文字で表記する。有志による解読作業が行われている。数詞ごとに品詞が異なる、同じ数を10以上の表現で表すなど複雑な数詞体系をもつhttps://x.com/casolot_/status/1664123209644642315?s=20
+　膠着語という説がある
+言語名: yoka tetute テトテ語作者: kakjeka[site](https://scrapbox.io/tgbg/tetute%E8%AA%9E%E8%B3%87%E6%96%99%E9%9B%86) [site2](https://www.evernote.com/shard/s655/client/snv?noteGuid=9598ef1f-c9f1-4064-ae74-be377e853ad6&noteKey=629c8b7213084fb13141958ce443e53b&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs655%2Fsh%2F9598ef1f-c9f1-4064-ae74-be377e853ad6%2F629c8b7213084fb13141958ce443e53b&title=tetute%25E8%25AA%259E%25E8%25AA%25BF%25E6%259F%25BB%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588) [site3](https://haar-you.github.io/TetuteInputMethod/grammar/ringo58.html) [site4](https://migdal.jp/bertia_arbarigmirok/taf-4a89) 作者Twitter: [@kakjeka](https://twitter.com/kakjeka) 
+
+### [フォルメア語](https://w.atwiki.jp/formean/)
+年代: 2015-2021
+言語名: フォルメア語作者: 舟鷹[site](https://w.atwiki.jp/formean/) [site2](https://w.atwiki.jp/formey/) 作者Twitter: [@hunataqa](https://twitter.com/hunataqa) 世界創作: あり
+
+### [@nalfij_carfady氏の不明言語](https://twitter.com/nalfij_carfady)
+年代: 2016
+　@nalfij_carfadyさんがツイッターでつぶやく言語。@nalfij_carfadyさんがこの言語でしかつぶやかないため言語の詳細は不明。Tetute語のkakjekaさんと交流がある？架空世界設定のような地図をツイートしたこともあった。(https://twitter.com/nalfij_carfady/status/754742565539237888/photo/1)
+言語名: @nalfij_carfady氏の不明言語作者: Nalfij Carfady[site](https://twitter.com/nalfij_carfady) 作者Twitter: [@nalfij_carfady](https://twitter.com/nalfij_carfady) 世界創作: あり
 
