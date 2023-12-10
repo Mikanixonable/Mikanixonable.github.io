@@ -3,6 +3,10 @@
 　英単語を縮めた三文字で意味を伝える国際補助語
 言語名: 3CL[site](https://web.archive.org/web/20061209210102/http://members.goo.ne.jp/home/3cl/) [site2](https://web.archive.org/web/20041010133035/http://www.geocities.co.jp/SiliconValley/3338/) [site3](https://web.archive.org/web/20041031105937/http://www.geocities.co.jp/SiliconValley/3338/page019.html) [文法](https://web.archive.org/web/20050128142511/http://www.geocities.co.jp/SiliconValley/3338/page006.html) 分類: 国際補助語
 
+### [アコトマ語](https://www.pixiv.net/artworks/67452700)
+年代: 2018
+言語名: アコトマ語作者: ての / TENO[site](https://www.pixiv.net/artworks/67452700) [site2](https://www.pixiv.net/artworks/67742715) [site3](https://www.pixiv.net/artworks/67452667) 作者Twitter: [@MapleSyrupped](https://twitter.com/MapleSyrupped) 
+
 ### [アルカ](https://conlinguistics.org/arka/)
 年代: 1993-2013
 　FF4の登場人物リディアが使っている言語というイメージで1993年から製作が始まった。後にアプリオリ性を高めてアルシディアと呼ばれる架空世界の文化をバックグラウンドにした芸術言語となった。2001年から2008年まで続いたとされる制アルカ、2008年から製作された新生アルカ、2013年の作者収監後にコミュニティーによって存続した俗アルカなどの複数のバージョンがある。架空世界の文化のリアリティーにこだわり、辞書の各見出し語には長い語義がある。2017年にセレン氏個人の言語創作に戻る旨(https://togetter.com/li/1088421)の連絡があり、セレン氏個人の言語が俗に獄アルカと呼ばれる。かつては1990年代に創作集団によって製作されたとしていたが、2018年に嘘の製作史だったことがアルカの書(https://conlinguistics.org/blog/?p=689)で作者が告白した。ネット上に初めて公開されたのは2005年(https://w.atwiki.jp/kakis/pages/10469.html)。アルカに影響を受けて多くの人工言語が誕生した。
@@ -36,20 +40,26 @@
 　はるか未来の別の惑星を舞台にした架空言語。単語数は1500弱。
 言語名: Eldein作者: nias avalentis[site](https://w.atwiki.jp/hrain/pages/66.html) [辞書](https://skydrive.live.com/?cid=b7fc9ffff390b3c6#!/?cid=B7FC9FFFF390B3C6&id=B7FC9FFFF390B3C6%21875) 世界創作: 世界創作あり、未来の別の惑星分類: アプリオリ言語
 
-### [オルチシェフ語](https://w.atwiki.jp/orchishoef/)
-年代: 2012年6月-2014
-　ロシア語、グルジア語から文法に影響を受けている
-言語名: オルチシェフ語 orchishoef作者: 沖渡尋威[site](https://w.atwiki.jp/orchishoef/) [文法](https://w.atwiki.jp/orchishoef/pages/17.html) 世界創作: あり分類: アプリオリ言語
-
 ### [エミュンス語](https://w.atwiki.jp/gionshantveed/pages/216.html)
 年代: 2017-2023
 　架空世界プロジェクト大宇宙(Gion S:antveed)のジエール帝国連邦の公用語。エミュンス名をつける文化があり、オエル語作者のloyukaはエミュンス語名
 言語名: エミュンス語 Lafoi aie Em:uns作者: ルニアス・ジヴェジルス[site](https://w.atwiki.jp/gionshantveed/pages/216.html) 作者Twitter: [@Lunias_Amakawa](https://twitter.com/Lunias_Amakawa) [文法](https://w.atwiki.jp/gionshantveed/pages/216.html#id_b295f97f) モユネ分類: ART/PHI/NAT/IMG/SON/LIT/SERCLAコード: lae-gs
 
+### [Ebe?sa language](https://sites.google.com/view/apupuna/eb%E1%BA%B9sa-language?authuser=0)
+年代: 2022-2023
+　言語公式ツイッターアカウント；https://twitter.com/A_P_conlang
+　記事1：https://migdal.jp/apupuna1/ebesa-language-%E3%81%AE%E3%82%84%E3%82%8A%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8-4h60
+言語名: Ebe?sa language作者: フクロウナギ apupuna[site](https://sites.google.com/view/apupuna/eb%E1%BA%B9sa-language?authuser=0) 作者Twitter: [@apupuna1](https://twitter.com/apupuna1) [辞書](https://migdal.jp/apupuna1/ebesa-language-%E3%81%AE%E8%AA%9E%E4%B8%80%E8%A6%A7-2i7p) 
+
 ### [オーレー語](http://conl.web.fc2.com/)
 年代: 2013
 　単語数10万を誇るアプリオリ言語。wikipediaの項目名から自動生成したと思われる。
 言語名: オーレー語作者: オーレー語学会[site](http://conl.web.fc2.com/) [辞書](http://conl.web.fc2.com/kword.html) [文法](http://conl.web.fc2.com/bunpo.html) 世界創作: なし分類: アプリオリ言語 冗談言語 国際補助語
+
+### [オルチシェフ語](https://w.atwiki.jp/orchishoef/)
+年代: 2012年6月-2014
+　ロシア語、グルジア語から文法に影響を受けている
+言語名: オルチシェフ語 orchishoef作者: 沖渡尋威[site](https://w.atwiki.jp/orchishoef/) [文法](https://w.atwiki.jp/orchishoef/pages/17.html) 世界創作: あり分類: アプリオリ言語
 
 ### [火語(かご)](https://w.atwiki.jp/hrain/pages/22.html)
 年代: 2000年ごろ-2011
@@ -61,11 +71,6 @@
 　現代ヨーロッパ風の世界が舞台の架空言語であるため、SI単位系や西暦をそのまま用いる。
 言語名: カルコレーシュ語 アーディアン(旧名1) アンデラディアン(旧名2)作者: らんべ Lambe Y.U[site](https://sites.google.com/view/calcoradish/calcoradishlanguage) 作者Twitter: [@lambeluza](https://twitter.com/lambeluza) [辞書](https://zpdic.ziphil.com/dictionary/calcoradish) 世界創作: あり分類: アプリオリモユネ分類: ART/NAT/IMG/SON/LIT/SERCLAコード: cal-ca(CLA v1) ~_ca_~_lmb(CLA v3)
 
-### [クシュカ語](https://web.archive.org/web/20050207043542/http://sanpo.electric-cat.org/)
-年代: 1998-2010
-　作者による小説「狗狼伝承」シリーズに登場する、中央アジアにかつて栄えたクシュカ帝国(Kus^kan Empire)で話されていたという体の言語で、ラテン語、ゲルマン諸語、日本語、フィンランド語を参考に作られている(https://dos.chottu.net/cl_ksk/index.html)。
-言語名: クシュカ語作者: 新城カズマ(1951-)[site](https://web.archive.org/web/20050207043542/http://sanpo.electric-cat.org/) 作者Twitter: [@SinjowKazma](https://twitter.com/SinjowKazma) [辞書](https://sinjowkazma.hatenadiary.org/entry/20081103/1257177014) [辞書2](https://web.archive.org/web/20050207015331/http://sanpo.electric-cat.org/txt/ksyuka.htm) 分類: 芸術言語
-
 ### クァン語
 言語名: クァン語 關語CLAコード: *_kw_han_vid
 
@@ -73,13 +78,18 @@
 年代: 2022
 言語名: グェーゼル語 ??c??ρ ???v??ρ グァゼー・ゴーグネール 具和是留語 芸是留語 具語 芸語作者: 空気。[site](https://conlinguistics.fandom.com/ja/wiki/%E3%82%B0%E3%82%A7%E3%83%BC%E3%82%BC%E3%83%AB%E8%AA%9E) [文法](https://conlinguistics.fandom.com/ja/wiki/%E3%82%B0%E3%82%A7%E3%83%BC%E3%82%BC%E3%83%AB%E8%AA%9E#%E6%96%87%E6%B3%95) CLAコード: ~_gw_~_kuk
 
-### [クレリカ](https://sites.google.com/site/qreriqa/qreriqa?authuser=0)
-言語名: クレリカ qreriqa作者: デネブ[site](https://sites.google.com/site/qreriqa/qreriqa?authuser=0) [文法](https://sites.google.com/site/qreriqa/qreriqa-v0-01/%E6%96%87%E6%B3%95?authuser=0) 世界創作: あり分類: 芸術言語モユネ分類: ART/EXP/PHI/IMG/CDE/GEN/SON/LIT/SER/TOLCLAコード: qrehr
+### [クシュカ語](https://web.archive.org/web/20050207043542/http://sanpo.electric-cat.org/)
+年代: 1998-2010
+　作者による小説「狗狼伝承」シリーズに登場する、中央アジアにかつて栄えたクシュカ帝国(Kus^kan Empire)で話されていたという体の言語で、ラテン語、ゲルマン諸語、日本語、フィンランド語を参考に作られている(https://dos.chottu.net/cl_ksk/index.html)。
+言語名: クシュカ語作者: 新城カズマ(1951-)[site](https://web.archive.org/web/20050207043542/http://sanpo.electric-cat.org/) 作者Twitter: [@SinjowKazma](https://twitter.com/SinjowKazma) [辞書](https://sinjowkazma.hatenadiary.org/entry/20081103/1257177014) [辞書2](https://web.archive.org/web/20050207015331/http://sanpo.electric-cat.org/txt/ksyuka.htm) 分類: 芸術言語
 
 ### [GUMOSOPO](https://w.atwiki.jp/gumosopo/)
 年代: 2005-2009
 　5ch言語版で集団創作された言語(https://web.archive.org/web/20070312030742/http://www6.atwiki.jp/gumosopo/archive/20070103/c378835f5e04c43fbc94c41c5f267a7b)
 言語名: GUMOSOPO グモソ語 グモソぺ語作者: ねらー[site](https://w.atwiki.jp/gumosopo/) [site2](https://web.archive.org/web/20190330045327/https://www.geocities.jp/gumosopo/) [辞書](https://w.atwiki.jp/gumosopo/pages/39.html) [文法](https://w.atwiki.jp/gumosopo/pages/11.html) 
+
+### [クレリカ](https://sites.google.com/site/qreriqa/qreriqa?authuser=0)
+言語名: クレリカ qreriqa作者: デネブ[site](https://sites.google.com/site/qreriqa/qreriqa?authuser=0) [文法](https://sites.google.com/site/qreriqa/qreriqa-v0-01/%E6%96%87%E6%B3%95?authuser=0) 世界創作: あり分類: 芸術言語モユネ分類: ART/EXP/PHI/IMG/CDE/GEN/SON/LIT/SER/TOLCLAコード: qrehr
 
 ### [ケデルド](https://w.atwiki.jp/kedeld/)
 年代: 2012-2013
@@ -89,6 +99,11 @@
 年代: 2002
 　同人音楽アルバム「7thMoon」中の曲名「金色ナリ我ガ姫ノ月」から着想して、ラテン語と古典ギリシャ語を参考に製作された(https://dos.chottu.net/cl_knj/index.html)。
 言語名: 金色語作者: 綾波使い。[site](https://web.archive.org/web/20070904112402/http://www.pionet.co.jp/~shinji/nickey/2004/200404.html#kazu) [site2](https://web.archive.org/web/20070904095329/http://www.pionet.co.jp/~shinji/nickey/2005/200505.html) [site3](https://web.archive.org/web/20070904112700/http://www.pionet.co.jp/~shinji/nickey/2004/200407.html#adverb) [文法](https://conlinguistics.fandom.com/ja/wiki/%E3%82%B0%E3%82%A7%E3%83%BC%E3%82%BC%E3%83%AB%E8%AA%9E#%E6%96%87%E6%B3%95) 分類: 芸術言語
+
+### [サーシュワ語](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33)
+年代: 2023
+　「キショイ文字の言語を作る」というコンセプトで制作された
+言語名: サーシュワ語[site](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33) 
 
 ### ジェン語
 年代: 2007
@@ -105,6 +120,11 @@
 　人工言語の作り方を解説するために、アルカ作者のセレン氏によって作られた言語
 言語名: 習作言語serix セリッシュ作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/lanxante/serix.html) [辞書](https://arxidia.another.jp/lanxante/serix_4.html) [辞書2](https://arxidia.another.jp/lanxante/serix_17.html) 
 
+### [ジレンゴ](https://web.archive.org/web/20140808060104/http://dok.esperantic.org/dbstudoj/17_Lins.htm)
+年代: 1888年から1889ごろ考案
+　ヴォラピュクを学ぶのが難しいと考えた動物学者の丘浅次郎氏が考案した。1906年「中央公論」で公表。Zi-lengoはジレンゴで「私たちの言葉」を意味する。発話例: https://www.youtube.com/watch?v=pRST6ipTcWU
+言語名: ジレンゴ Zilengo Zi-lengo作者: 丘浅次郎[site](https://web.archive.org/web/20140808060104/http://dok.esperantic.org/dbstudoj/17_Lins.htm) 分類: 国際補助語 アポステリオリ言語
+
 ### [シュライ語](https://web.archive.org/web/20130115155503/https://www9.atwiki.jp/fai_iaf/)
 年代: 2008年5月31日-2013
 言語名: シュライ語作者: 波砂間 壮人 末廣優[site](https://web.archive.org/web/20130115155503/https://www9.atwiki.jp/fai_iaf/) 作者Twitter: [@haSAMA_SOoto](https://twitter.com/haSAMA_SOoto) [文法](https://web.archive.org/web/20130120163833/http://www9.atwiki.jp/fai_iaf/pages/14.html) 世界創作: なし分類: アプリオリ言語
@@ -120,20 +140,19 @@
 
 ### ソウキ語
 年代: 2022-2023
-言語名: ソウキ語 ソウキ・ヘイコウ語作者: Ag Ycafsh R Zhefmnga(Ycaf? ? ?efm?a)作者Twitter: [@kyomu_aniki](https://twitter.com/kyomu_aniki) 
+言語名: ソウキ語 ソウキ・ヘイコウ語 ハラソウキ語作者: Ag Ycafsh R Zhefmnga(Ycaf? ? ?efm?a) 甲斐華冬 ソウキ・ハラー作者Twitter: [@kyomu_aniki](https://twitter.com/kyomu_aniki) 
 
 ### [ソヨル語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E)
 年代: 2017
 言語名: ソヨル語[site](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E) 
 
-### [サーシュワ語](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33)
-年代: 2023
-　「キショイ文字の言語を作る」というコンセプトで制作された
-言語名: サーシュワ語[site](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33) 
-
 ### [タコ語](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E?authuser=0)
 年代: 2018-2019
 言語名: タコ語作者: フクロウナギ apupuna[site](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E?authuser=0) 作者Twitter: [@apupuna1](https://twitter.com/apupuna1) [辞書](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E/%E3%83%88%E3%82%AD%E3%83%9D%E3%83%8A-%E3%82%BF%E3%82%B3%E8%AA%9E%E8%BE%9E%E6%9B%B8?authuser=0) [文法](https://drive.google.com/file/d/1HpNwc8wRXyouLJYQrjru_hGx6pARgzuq/view) 分類: ミニマル言語
+
+### [アププナ語](https://sites.google.com/view/apupuna/%E6%97%A7%E3%82%A2%E3%83%97%E3%83%97%E3%83%8A%E8%AA%9E?authuser=0)
+年代: 2018
+言語名: アププナ語作者: フクロウナギ apupuna[site](https://sites.google.com/view/apupuna/%E6%97%A7%E3%82%A2%E3%83%97%E3%83%97%E3%83%8A%E8%AA%9E?authuser=0) 作者Twitter: [@apupuna1](https://twitter.com/apupuna1) 
 
 ### [apupuna1第6回人工言語コンペ参加言語イシ・ククル語イシ・ククル(??' q?'q?'?)語](https://twitter.com/apupuna1/status/992390420016480257)
 年代: 2018
@@ -230,6 +249,26 @@
 　2018年2月2日から2018年2月23日にかけて行われた第4回人工言語コンペの優勝作品。(https://twitter.com/lang_compe/status/967022117324693504)お題は「人工言語で創世神話を記述する。既存のものでも良いし、架空文化の創世神話でも良い。。」(https://twitter.com/lang_compe/status/9594114007360348170)
 言語名: ノルウェー語たん第4回人工言語コンペ参加言語[site](https://sprache.skr.jp/clcp/?3) 作者Twitter: [@norsk_tan](https://twitter.com/norsk_tan) 
 
+### [ヒュムノス](http://game.salburg.com/hymmnoserver/index.php)
+年代: 2006
+　バンプレスト・ガスト原作のPlayStation2およびPlayStation3のゲームソフト「アルトネリコ」とその関連製品に登場する架空言語。同心円のグラフのようなSFチックな文字ヒュムノス文字を表記に使う。
+言語名: ヒュムノス作者: 土屋暁[site](http://game.salburg.com/hymmnoserver/index.php) [辞書](http://game.salburg.com/hymmnoserver/index.php?mode=help3) [辞書2](http://game.salburg.com/hymmnoserver/index.php?mode=help4) [辞書3](http://game.salburg.com/hymmnoserver/index.php?mode=abc&ryu=99) [辞書4](http://game.salburg.com/hymmnoserver/index.php?mode=aiu&ryu=99) [文法](http://fau-varda.net/Hymmnogram/) 世界創作: あり（ソル・シエール）
+
+### [フィダーヌス語](https://fidanus.wixsite.com/hebfid)
+年代: 2014-2020
+　SVO-NAで格が7つある屈折語。旧サイト: https://seesaawiki.jp/fidanus/
+言語名: フィダーヌス語作者: Fudanus[site](https://fidanus.wixsite.com/hebfid) 作者Twitter: [@FidaanasaUduhos](https://twitter.com/FidaanasaUduhos) [文法](https://seesaawiki.jp/fidanus/d/%cc%be%bb%ec) 分類: 芸術言語モユネ分類: INT/ART/PHI/IMG/CDE/GEN/SON/LIT/SER PWL/PUB
+
+### [北方祖語](https://fidanus.wixsite.com/hebfid/blank-31)
+年代: 2014-2020
+　フィダーヌス語の祖語
+言語名: 北方祖語作者: Fudanus[site](https://fidanus.wixsite.com/hebfid/blank-31) 作者Twitter: [@FidaanasaUduhos](https://twitter.com/FidaanasaUduhos) 
+
+### [イサマ語](https://fidanus.wixsite.com/hebfid/blank-31)
+年代: 2014-2020
+　フィダーヌス語の祖語民族と友好関係にあるイサマ民族の言語。回音節言語。
+言語名: イサマ語作者: Fudanus[site](https://fidanus.wixsite.com/hebfid/blank-31) 作者Twitter: [@FidaanasaUduhos](https://twitter.com/FidaanasaUduhos) 
+
 ### [地球語](https://www.earthlanguage.org/)
 年代: 1988-2021
 　読み方のない絵文字によって意味を伝える言語。真珠湾攻撃の前日(1941-12-07)に生まれた作者のMcFarland Yoshikoさんが、サンフランシスコで受けたカルチャーショックで、渡米2年目に製作し始めた言語。美術館で見た1500年前の中国の書が読めたことに感銘を受け、世界に住むそれぞれの母語を持った人が共通の絵文字によって意思を伝えるという理想のもと制作された(https://www.earthlanguage.org/yoshikoJ.htm)。原案の公開はアドア1992年1月創刊号(北米毎日新聞社)、1999-01-09の日米タイムズ、2005-09-10のサンフランシスコKTSFの番組Japanese Journal、月刊言語2006年11月号(https://www.amazon.co.jp/exec/obidos/ASIN/B000IY0AM6/conlangjinkog-22/ref=nosim)で紹介された。
@@ -300,6 +339,11 @@
 　印欧祖語、古ゲルマン語から語彙を、日本語、英語から文法を借用したアポステリオリ言語。コニフまたはコヒニュと呼ばれる架空世界が舞台。
 言語名: ノヒュア語 ノフア語作者: wakmona[site](https://w.atwiki.jp/noqa/) [文法](https://w.atwiki.jp/noqa/pages/22.html) 世界創作: あり分類: アポステリオリ言語
 
+### [幽楽称](https://www.pixiv.net/artworks/66231161)
+年代: 2017
+　曼荼羅のように無限に展開できる表記法を持つ。曼荼羅の腕が右に曲がると平叙文、左に曲がると否定文になる。作品: https://www.pixiv.net/artworks/66231161
+言語名: 幽楽称作者: Hitsuji[site](https://www.pixiv.net/artworks/66231161) 
+
 ### [パラディス語](https://w.atwiki.jp/paladisren/pages/1.html)
 年代: 2012
 言語名: パラディス語作者: 渡辺しま[site](https://w.atwiki.jp/paladisren/pages/1.html) [辞書](https://w.atwiki.jp/paladisren/pages/45.html) [文法](https://w.atwiki.jp/paladisren/pages/17.html) 世界創作: あり分類: アプリオリ
@@ -334,9 +378,33 @@
 　pasberth
 言語名: ベアン語 新ベアン語作者Twitter: [@pasberth](https://twitter.com/pasberth) [文法](https://gist.github.com/pasberth/4366917) 世界創作: あり分類: アプリオリ言語
 
+### [ボアーボム](https://www.oocities.org/athens/Acropolis/9801/lenguas/babm.html)
+年代: 1956ごろ
+言語名: ボアーボム Babm作者: 岡本普意識(1885-1963)[site](https://www.oocities.org/athens/Acropolis/9801/lenguas/babm.html) [site2](http://www.carolandray.plus.com/Briefscript/Babm_Lin.html) 分類: 国際補助語 アプリオリ言語
+
 ### [マゴ・アカタ](https://web.archive.org/web/20121113091924/http://www18.atwiki.jp/akata-command/)
 年代: 2011年9月-2012
 言語名: マゴ・アカタ作者: 山野[site](https://web.archive.org/web/20121113091924/http://www18.atwiki.jp/akata-command/) 世界創作: あり分類: アポステリオリ言語例文: Was ignind?do disarey? ire chio. 「私は何度でも空腹によって傷めつけられる。」
+
+### [マクェン語](https://maqenbemon.localinfo.jp/)
+年代: 2021
+　OVS語順で、一つの単語につき6つの単語文が表せる。フォラトーゼン(マクェン文字)と呼ばれる独自文字で表記する。紹介: https://migdal.jp/acacia/-%E3%83%9E%E3%82%AF%E3%82%A7%E3%83%B3%E8%AA%9E--maqen-bemon--%E3%81%AE%E6%A6%82%E8%A6%81-2g62
+言語名: マクェン語 maqen bemon作者: acacia[site](https://maqenbemon.localinfo.jp/) 作者Twitter: [@maqenbemon](https://twitter.com/maqenbemon) [辞書](https://zpdic.ziphil.com/dictionary/mqe) 
+
+### [ムシイン語](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C)
+年代: 2016-2021
+　全部母音だけの言語。すきえんてぃあさんのアヲアヲアー語と同じアプローチ。
+言語名: ムシイン語 aejaije作者: スライムさん slaimsan[site](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C) 分類: 実験的言語例文: uv?ova ijaov?ja? ovej?uvei. 「私は果実を食べる。」
+
+### ムボイン語
+年代: 2016-2023
+　母音がない言語。子音のないムシイン語と逆のアプローチでありHush語と同じアプローチ。声帯の機能を失った人でも会話できる。
+言語名: ムボイン語作者: スライムさん slaimsan分類: 実験的言語
+
+### [アヲアヲアー語](https://twitter.com/cicada3301_kig/status/897798456898576384)
+年代: 2017
+　全部母音だけの言語。スライムさんのムシイン語と同じアプローチ。
+言語名: アヲアヲアー語作者: すきえんてぃあ minerva scientia[site](https://twitter.com/cicada3301_kig/status/897798456898576384) 分類: 実験的言語例文: a:j→ ?→ 'ai↑'ai↑ awo→awo→a:↑ ; y:?→j↑?↑ 'ai↑ wu↑wo→ ???「私はアヲアヲアー語を話していましたが皆さんは話しますかね」
 
 ### [mixic](https://mixi.jp/view_community.pl?id=543186)
 年代: 2006-2019
