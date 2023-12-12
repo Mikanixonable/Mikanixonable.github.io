@@ -113,7 +113,7 @@
 言語名: クシュカ語作者: 新城カズマ(1951-)[site](https://web.archive.org/web/20050207043542/http://sanpo.electric-cat.org/) 作者Twitter: [@SinjowKazma](https://twitter.com/SinjowKazma) [辞書](https://sinjowkazma.hatenadiary.org/entry/20081103/1257177014) [辞書2](https://web.archive.org/web/20050207015331/http://sanpo.electric-cat.org/txt/ksyuka.htm) 分類: 芸術言語
 
 ### [GUMOSOPO](https://w.atwiki.jp/gumosopo/)
-年代: 2005-2009
+年代: 2004/01/17 20:59-2010/04/13(火) 23:41:53
 　5ch言語版で集団創作された言語(https://web.archive.org/web/20070312030742/http://www6.atwiki.jp/gumosopo/archive/20070103/c378835f5e04c43fbc94c41c5f267a7b)
 言語名: GUMOSOPO グモソ語 グモソぺ語作者: ねらー[site](https://w.atwiki.jp/gumosopo/) [site2](https://web.archive.org/web/20190330045327/https://www.geocities.jp/gumosopo/) [辞書](https://w.atwiki.jp/gumosopo/pages/39.html) [文法](https://w.atwiki.jp/gumosopo/pages/11.html) 
 
@@ -191,6 +191,9 @@
 ### [アププナ語](https://sites.google.com/view/apupuna/%E6%97%A7%E3%82%A2%E3%83%97%E3%83%97%E3%83%8A%E8%AA%9E?authuser=0)
 年代: 2018
 言語名: アププナ語作者: フクロウナギ apupuna[site](https://sites.google.com/view/apupuna/%E6%97%A7%E3%82%A2%E3%83%97%E3%83%97%E3%83%8A%E8%AA%9E?authuser=0) 作者Twitter: [@apupuna1](https://twitter.com/apupuna1) 
+
+### [イリウス](https://web.archive.org/web/20201202214004/http://lightnovels.minna-no.jp/lightnovels/view/921)
+言語名: イリウス[site](https://web.archive.org/web/20201202214004/http://lightnovels.minna-no.jp/lightnovels/view/921) 
 
 ### [apupuna1第6回人工言語コンペ参加言語イシ・ククル語イシ・ククル(??' q?'q?'?)語](https://twitter.com/apupuna1/status/992390420016480257)
 年代: 2018
@@ -494,10 +497,10 @@
 　全部母音だけの言語。すきえんてぃあさんのアヲアヲアー語と同じアプローチ。
 言語名: ムシイン語 aejaije作者: スライムさん slaimsan.ポンタ[site](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C) 分類: 実験的言語例文: uv?ova ijaov?ja? ovej?uvei. 「私は果実を食べる。」
 
-### ムボイン語
+### [ムボイン語](https://twitter.com/slaimsan/status/738934276444430336)
 年代: 2016-2023
 　母音がない言語。子音のないムシイン語と逆のアプローチでありHush語と同じアプローチ。声帯の機能を失った人でも会話できる。
-言語名: ムボイン語作者: スライムさん slaimsan.ポンタ分類: 実験的言語
+言語名: ムボイン語作者: スライムさん slaimsan.ポンタ[site](https://twitter.com/slaimsan/status/738934276444430336) [辞書](https://twitter.com/slaimsan/status/1180634090191474689) 分類: 実験的言語
 
 ### [ムンビーナ語](http://ww22.tiki.ne.jp/%7Ephalsail/gengo/munb/index.htm)
 年代: 1980-2023
@@ -700,11 +703,11 @@
 
 ### [lieso](https://lieso.kumogakure.com/)
 年代: 2007
-言語名: lieso[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
+言語名: lieso作者: イワ[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
 
 ### [リディア語](https://w.atwiki.jp/lidia/pages/1.html)
 年代: 2012
-言語名: リディア語[site](https://w.atwiki.jp/lidia/pages/1.html) 分類: 国際補助語
+言語名: リディア語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/lidia/pages/1.html) 分類: 国際補助語
 
 ### [メティオ語](https://w.atwiki.jp/kakis/pages/10674.html)
 年代: 2008年11月30日-
@@ -713,165 +716,275 @@
 
 ### [中メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=934)
 年代: 2009
-言語名: 中メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=934) 世界創作: アルシディア
+言語名: 中メティオ語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=934) 世界創作: アルシディア
 
 ### [古メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=933)
 年代: 2009
-言語名: 古メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=933) 世界創作: アルシディア
+言語名: 古メティオ語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=933) 世界創作: アルシディア
 
 ### [近メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938)
 年代: 2009
-言語名: 近メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938) 
+言語名: 近メティオ語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938) 
 
 ### [アルティア語](https://w.atwiki.jp/kakis/pages/10673.html)
 年代: 2008年11月30日-
-言語名: アルティア語[site](https://w.atwiki.jp/kakis/pages/10673.html) 世界創作: アルシディア
+言語名: アルティア語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10673.html) 世界創作: アルシディア
 
 ### [竜方語](https://w.atwiki.jp/kakis/pages/10675.html)
 年代: 2008年12月9-
-言語名: 竜方語[site](https://w.atwiki.jp/kakis/pages/10675.html) 世界創作: アルシディア
+言語名: 竜方語作者: seren arbazard(1982-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10675.html) 世界創作: アルシディア
 
 ### [ロロス語](https://w.atwiki.jp/kakis/pages/10676.html)
 年代: 2008年12月11-
-言語名: ロロス語[site](https://w.atwiki.jp/kakis/pages/10676.html) 世界創作: アルシディア
+言語名: ロロス語作者: seren arbazard(1983-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10676.html) 世界創作: アルシディア
 
 ### [北方語](https://w.atwiki.jp/kakis/pages/10690.html)
 年代: 2008年12月9-
-言語名: 北方語[site](https://w.atwiki.jp/kakis/pages/10690.html) 世界創作: アルシディア
+言語名: 北方語作者: seren arbazard(1984-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10690.html) 世界創作: アルシディア
 
 ### [東方語](https://w.atwiki.jp/kakis/pages/10669.html)
 年代: 2008年12月9-
 　後期制アルカをベースにアンシャル大陸東部内陸諸国で話される方言という設定をつけて流用したもの
-言語名: 東方語[site](https://w.atwiki.jp/kakis/pages/10669.html) 世界創作: アルシディア
+言語名: 東方語作者: seren arbazard(1985-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10669.html) 世界創作: アルシディア
 
 ### [西方語](https://w.atwiki.jp/kakis/pages/10667.html)
 年代: 2008年12月9-
-言語名: 西方語[site](https://w.atwiki.jp/kakis/pages/10667.html) 世界創作: アルシディア
+言語名: 西方語作者: seren arbazard(1986-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10667.html) 世界創作: アルシディア
 
 ### [南方語](https://w.atwiki.jp/kakis/pages/10663.html)
 年代: 2008年12月9-
-言語名: 南方語[site](https://w.atwiki.jp/kakis/pages/10663.html) 世界創作: アルシディア
+言語名: 南方語作者: seren arbazard(1987-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10663.html) 世界創作: アルシディア
 
 ### [極方語](https://w.atwiki.jp/kakis/pages/10670.html)
 年代: 2008年12月9-
-言語名: 極方語[site](https://w.atwiki.jp/kakis/pages/10670.html) 世界創作: アルシディア
+言語名: 極方語作者: seren arbazard(1988-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10670.html) 世界創作: アルシディア
 
 ### [魔方語](https://w.atwiki.jp/kakis/pages/10671.html)
 年代: 2008年12月9-
-言語名: 魔方語[site](https://w.atwiki.jp/kakis/pages/10671.html) [site2](https://arxidia.another.jp/atwiki8-arbazard/?pageid=937) 世界創作: アルシディア
+言語名: 魔方語作者: seren arbazard(1989-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10671.html) [site2](https://arxidia.another.jp/atwiki8-arbazard/?pageid=937) 世界創作: アルシディア
 
 ### [近魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936)
 年代: 2009
-言語名: 近魔方語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936) 
+言語名: 近魔方語作者: seren arbazard(1990-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936) 
 
 ### [中魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935)
 年代: 2009
-言語名: 中魔方語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935) 
+言語名: 中魔方語作者: seren arbazard(1991-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935) 
 
 ### [境方語](https://w.atwiki.jp/kakis/pages/10678.html)
 年代: 2008年12月9-
-言語名: 境方語[site](https://w.atwiki.jp/kakis/pages/10678.html) 世界創作: アルシディア
+言語名: 境方語作者: seren arbazard(1992-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10678.html) 世界創作: アルシディア
 
 ### [沙方語](https://w.atwiki.jp/kakis/pages/10679.html)
 年代: 2008年12月9-
-言語名: 沙方語[site](https://w.atwiki.jp/kakis/pages/10679.html) 世界創作: アルシディア
+言語名: 沙方語作者: seren arbazard(1993-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10679.html) 世界創作: アルシディア
 
 ### [暗方語](https://w.atwiki.jp/kakis/pages/10680.html)
 年代: 2008年12月9-
-言語名: 暗方語[site](https://w.atwiki.jp/kakis/pages/10680.html) 世界創作: アルシディア
+言語名: 暗方語作者: seren arbazard(1994-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10680.html) 世界創作: アルシディア
 
 ### [峡方語](https://w.atwiki.jp/kakis/pages/10681.html)
 年代: 2008年12月9-
-言語名: 峡方語[site](https://w.atwiki.jp/kakis/pages/10681.html) 世界創作: アルシディア
+言語名: 峡方語作者: seren arbazard(1995-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10681.html) 世界創作: アルシディア
 
 ### [理方語](https://w.atwiki.jp/kakis/pages/10682.html)
 年代: 2008年12月9-
 　2006年頃に作られたルティア方言がベース
-言語名: 理方語[site](https://w.atwiki.jp/kakis/pages/10682.html) 世界創作: アルシディア
+言語名: 理方語作者: seren arbazard(1996-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10682.html) 世界創作: アルシディア
 
 ### [灼方語](https://w.atwiki.jp/kakis/pages/10689.html)
 年代: 2008年12月9-
-言語名: 灼方語[site](https://w.atwiki.jp/kakis/pages/10689.html) 世界創作: アルシディア
+言語名: 灼方語作者: seren arbazard(1997-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10689.html) 世界創作: アルシディア
 
 ### [マレット語](https://w.atwiki.jp/kakis/pages/10685.html)
 年代: 2008年12月9-
 　南半球に住むマレット人の言葉
-言語名: マレット語[site](https://w.atwiki.jp/kakis/pages/10685.html) 世界創作: アルシディア
+言語名: マレット語作者: seren arbazard(1998-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10685.html) 世界創作: アルシディア
 
 ### [塔方語](https://w.atwiki.jp/kakis/pages/10683.html)
 年代: 2008年12月9-
-言語名: 塔方語 サヴィア語[site](https://w.atwiki.jp/kakis/pages/10683.html) 世界創作: アルシディア
+言語名: 塔方語 サヴィア語作者: seren arbazard(1999-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10683.html) 世界創作: アルシディア
 
 ### [ケヴェア語](https://w.atwiki.jp/kakis/pages/10686.html)
 年代: 2008年12月10-
-言語名: ケヴェア語[site](https://w.atwiki.jp/kakis/pages/10686.html) 世界創作: アルシディア
+言語名: ケヴェア語作者: seren arbazard(2000-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10686.html) 世界創作: アルシディア
 
 ### [アデント語](https://w.atwiki.jp/kakis/pages/10687.html)
 年代: 2008年12月11-
-言語名: アデント語[site](https://w.atwiki.jp/kakis/pages/10687.html) 世界創作: アルシディア
+言語名: アデント語作者: seren arbazard(2001-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10687.html) 世界創作: アルシディア
 
 ### [ファベル語](https://w.atwiki.jp/kakis/pages/10688.html)
 年代: 2008年12月12-
-言語名: ファベル語[site](https://w.atwiki.jp/kakis/pages/10688.html) 世界創作: アルシディア
+言語名: ファベル語作者: seren arbazard(2002-) セレン・アルバザード 貞苅詩門[site](https://w.atwiki.jp/kakis/pages/10688.html) 世界創作: アルシディア
 
 ### [プレディス語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930)
 年代: 2009
-言語名: プレディス語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
+言語名: プレディス語作者: seren arbazard(2003-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
 
 ### [レディア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930)
 年代: 2009
-言語名: レディア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
+言語名: レディア語作者: seren arbazard(2004-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
 
 ### [メディアン語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=932)
 年代: 2009
-言語名: メディアン語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=932) 世界創作: アルシディア
+言語名: メディアン語作者: seren arbazard(2005-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=932) 世界創作: アルシディア
 
 ### [カルセール語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=931)
 年代: 2009
-言語名: カルセール語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=931) 世界創作: アルシディア
+言語名: カルセール語作者: seren arbazard(2006-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=931) 世界創作: アルシディア
 
 ### [アルバレン](https://conlinguistics.org/arka/study_yulf_79.html)
 年代: 2014-2020
-言語名: アルバレン アルバザード語作者: faras palt tilasos 大宗組安右衛門[site](https://conlinguistics.org/arka/study_yulf_79.html) [site2](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren) [site3](https://arxidia.another.jp/atwiki8-arbazard/?pageid=916) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 世界創作: アルシディア
+言語名: アルバレン アルバザード語作者: seren arbazard(2007-) セレン・アルバザード 貞苅詩門[site](https://conlinguistics.org/arka/study_yulf_79.html) [site2](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren) [site3](https://arxidia.another.jp/atwiki8-arbazard/?pageid=916) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 世界創作: アルシディア
 
 ### [レスティル語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=915)
 年代: 2009
-言語名: レスティル語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=915) 世界創作: アルシディア
+言語名: レスティル語作者: seren arbazard(2008-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=915) 世界創作: アルシディア
 
 ### [リュディア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=914)
 年代: 2009
-言語名: リュディア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=914) 世界創作: アルシディア
+言語名: リュディア語作者: seren arbazard(2009-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=914) 世界創作: アルシディア
 
 ### [フィルヴェーユ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=913)
 年代: 2009
-言語名: フィルヴェーユ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=913) 世界創作: アルシディア
+言語名: フィルヴェーユ語作者: seren arbazard(2010-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=913) 世界創作: アルシディア
 
 ### [フィーリア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=912)
 年代: 2009
-言語名: フィーリア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=912) 世界創作: アルシディア
+言語名: フィーリア語作者: seren arbazard(2011-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=912) 世界創作: アルシディア
 
 ### [玲方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750)
 年代: 2009
-言語名: 玲方語 上方ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750) 
+言語名: 玲方語 上方ルティア語作者: seren arbazard(2012-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750) 
 
 ### [ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925)
 年代: 2009
-言語名: ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925) 世界創作: アルシディア
+言語名: ルティア語作者: seren arbazard(2015-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925) 世界創作: アルシディア
 
 ### [古ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=922)
 年代: 2009
-言語名: 古ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=922) 世界創作: アルシディア
+言語名: 古ルティア語作者: seren arbazard(2016-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=922) 世界創作: アルシディア
 
 ### [中ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=923)
 年代: 2009
-言語名: 中ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=923) 世界創作: アルシディア
+言語名: 中ルティア語作者: seren arbazard(2017-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=923) 世界創作: アルシディア
 
 ### [近ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=924)
 年代: 2009
-言語名: 近ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=924) 世界創作: アルシディア
+言語名: 近ルティア語作者: seren arbazard(2018-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=924) 世界創作: アルシディア
 
 ### [チェンバル語](https://dic.nicovideo.jp/a/%E3%83%81%E3%82%A7%E3%83%B3%E3%83%90%E3%83%AB%E8%AA%9E)
 年代: 2010
 　日本のお笑い芸人いがわゆり蚊のネタに登場する架空の言語
-言語名: チェンバル語[site](https://dic.nicovideo.jp/a/%E3%83%81%E3%82%A7%E3%83%B3%E3%83%90%E3%83%AB%E8%AA%9E) 分類: 冗談言語
+言語名: チェンバル語作者: いがわゆり蚊[site](https://dic.nicovideo.jp/a/%E3%83%81%E3%82%A7%E3%83%B3%E3%83%90%E3%83%AB%E8%AA%9E) 分類: 冗談言語
+
+### [タカン語](https://sites.google.com/site/syxobo/takan)
+年代: 2016-2021
+　悠里世界のアイル共和国の言語
+言語名: タカン語 皇語[site](https://sites.google.com/site/syxobo/takan) [文法](https://sites.google.com/site/syxobo/takan/wen-fa-luee-shuo?authuser=0) [文法2](https://zpdic.ziphil.com/dictionary/46) [文法3](https://github.com/jurliyuuri/takan_cen/blob/master/%E7%9A%87%E8%A8%80%E9%9B%86%E6%9B%B8.json) 世界創作: 悠里
+
+### [パイグ語](https://sites.google.com/site/syxobo/paigu-yu?authuser=0)
+年代: 2018-2023
+言語名: パイグ語 牌語[site](https://sites.google.com/site/syxobo/paigu-yu?authuser=0) [辞書](https://zpdic.ziphil.com/dictionary/21) [文法](https://sites.google.com/site/syxobo/paigu-yu/wen-fa-xiang-shuo?authuser=0) 
+
+### [東島通商語](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0)
+年代: 2019-2023
+言語名: 東島通商語 ペメセペ語[site](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0) [文法](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E/%E6%96%87%E6%B3%95%E7%95%A5%E8%AA%AC?authuser=0) 
+
+### [ラネーメ祖語](https://sites.google.com/site/syxobo/raneme-zu-yu?authuser=0)
+年代: 2018
+言語名: ラネーメ祖語[site](https://sites.google.com/site/syxobo/raneme-zu-yu?authuser=0) 
+
+### [バート語](http://jurliyuuri.com/bhaataan/index.html)
+年代: 2017-2023
+言語名: バート語[site](http://jurliyuuri.com/bhaataan/index.html) [辞書](https://zpdic.ziphil.com/dictionary/24) [文法](http://jurliyuuri.com/bhaataan/grammar.html) 
+
+### [ルノア語](https://w.atwiki.jp/rnoa/)
+年代: 2007
+言語名: ルノア語 rnoa作者: 2ch人工言語スレ住民[site](https://w.atwiki.jp/rnoa/) 辞書:  https://w.atwiki.jp/rnoa/pages/30.htmlhttps://w.atwiki.jp/rnoa/pages/7.html https://w.atwiki.jp/rnoa/pages/28.html https://w.atwiki.jp/rnoa/pages/29.html[文法](https://w.atwiki.jp/rnoa/pages/4.html) 
+
+### [アバハム語](https://w.atwiki.jp/sendanpon/pages/66.html)
+年代: 2012
+言語名: アバハム語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/66.html) 世界創作: コルキア
+
+### [エゼーフィ語](https://w.atwiki.jp/sendanpon/pages/68.html?guid=on)
+年代: 2009-2010
+言語名: エゼーフィ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/68.html?guid=on) [辞書](https://w.atwiki.jp/sendanpon/pages/44.html) 世界創作: コルキア
+
+### [カルーイユ語](https://w.atwiki.jp/sendanpon/pages/72.html?guid=on)
+年代: 2010
+言語名: カルーイユ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/72.html?guid=on) 世界創作: コルキア
+
+### [ターライン語](https://w.atwiki.jp/sendanpon/pages/70.html?guid=on)
+年代: 2010
+言語名: ターライン語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/70.html?guid=on) 世界創作: コルキア
+
+### [ドゥーナ語](https://w.atwiki.jp/sendanpon/pages/75.html?guid=on)
+年代: 2010
+言語名: ドゥーナ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/75.html?guid=on) 世界創作: コルキア
+
+### [トルポ語](https://w.atwiki.jp/sendanpon/pages/74.html?guid=on)
+年代: 2010
+言語名: トルポ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/74.html?guid=on) 世界創作: コルキア
+
+### [メラス語](https://w.atwiki.jp/sendanpon/pages/65.html?guid=on)
+年代: 2010
+言語名: メラス語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/65.html?guid=on) 世界創作: コルキア
+
+### [イド語](https://w.atwiki.jp/sendanpon/pages/43.html)
+年代: 2010-2012
+言語名: イド語 ユイド語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/43.html) [辞書](https://w.atwiki.jp/sendanpon/pages/41.html) 世界創作: コルキア
+
+### [ムハヤイク](https://w.atwiki.jp/sendanpon/pages/25.html)
+年代: 2012
+言語名: ムハヤイク作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/25.html) 世界創作: コルキア
+
+### [ウィシェード語](https://w.atwiki.jp/sendanpon/pages/62.html)
+年代: 2010-2012
+言語名: ウィシェード語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/62.html) [辞書](https://w.atwiki.jp/sendanpon/pages/63.html) 世界創作: コルキア
+
+### [イェチェ語](https://w.atwiki.jp/sendanpon/pages/64.html)
+年代: 2010
+言語名: イェチェ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/64.html) 世界創作: コルキア
+
+### [エマユハ語](https://w.atwiki.jp/sendanpon/pages/69.html)
+年代: 2012
+言語名: エマユハ語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/69.html) 世界創作: コルキア
+
+### [ユース語](https://w.atwiki.jp/sendanpon/pages/76.html)
+年代: 2012
+言語名: ユース語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/76.html) [辞書](https://w.atwiki.jp/sendanpon/pages/81.html) 世界創作: コルキア
+
+### [イエラ・ジン語](https://w.atwiki.jp/sendanpon/pages/77.html)
+年代: 2012
+言語名: イエラ・ジン語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/77.html) 世界創作: コルキア
+
+### [ディシュケク語](https://w.atwiki.jp/sendanpon/pages/71.html)
+年代: 2012
+言語名: ディシュケク語作者: せんだんぽん[site](https://w.atwiki.jp/sendanpon/pages/71.html) 世界創作: コルキア
+
+### [A語](https://w.atwiki.jp/kakis3/pages/22.html)
+年代: 2009
+言語名: A語作者: 2ちゃんねる言語学板人工言語作成スレ住民[site](https://w.atwiki.jp/kakis3/pages/22.html) 
+
+### [B語](https://w.atwiki.jp/kakis3/pages/18.html)
+年代: 2009
+言語名: B語作者: ◆MWu0P93oPA （前コテハン：司 ◆CnpJmoL3zc）[site](https://w.atwiki.jp/kakis3/pages/18.html) 
+
+### [C語](https://w.atwiki.jp/kakis3/pages/19.html)
+年代: 2009
+言語名: C語作者: ◆fmJRnC5rvE[site](https://w.atwiki.jp/kakis3/pages/19.html) 
+
+### [D語](https://w.atwiki.jp/kakis3/pages/21.html)
+年代: 2009
+言語名: D語作者: ◆of8rOUMfts[site](https://w.atwiki.jp/kakis3/pages/21.html) [辞書](https://w.atwiki.jp/kakis3/pages/38.html) 
+
+### [フェヤス語](https://w.atwiki.jp/kakis3/pages/46.html)
+年代: 2012
+　グモソ語の500年後の姿
+言語名: フェヤス語作者: 2ちゃんねる言語学板人工言語作成スレ住民[site](https://w.atwiki.jp/kakis3/pages/46.html) [辞書](https://w.atwiki.jp/kakis3/pages/47.html) [辞書2](https://w.atwiki.jp/kakis3/pages/51.html) [辞書3](https://w.atwiki.jp/kakis3/pages/53.html) [辞書4](https://w.atwiki.jp/kakis3/pages/54.html) [文法](https://w.atwiki.jp/kakis3/pages/46.html#id_ae3c1cab) 
+
+### [E語](https://w.atwiki.jp/kakis3/pages/23.html)
+年代: 2009
+言語名: E語作者: ◆PGWa3q81xA[site](https://w.atwiki.jp/kakis3/pages/23.html) [辞書](https://w.atwiki.jp/kakis3/pages/39.html) [文法](https://w.atwiki.jp/kakis3/pages/45.html) 
 
