@@ -16,7 +16,7 @@
 年代: 1993-2013
 　FF4の登場人物リディアが使っている言語というイメージで1993年から製作が始まった。後にアプリオリ性を高めてアルシディアと呼ばれる架空世界の文化をバックグラウンドにした芸術言語となった。2001年から2008年まで続いたとされる制アルカ、2008年から製作された新生アルカ、2013年の作者収監後にコミュニティーによって存続した俗アルカなどの複数のバージョンがある。架空世界の文化のリアリティーにこだわり、辞書の各見出し語には長い語義がある。2017年にセレン氏個人の言語創作に戻る旨(https://togetter.com/li/1088421)の連絡があり、セレン氏個人の言語が俗に獄アルカと呼ばれる。かつては1990年代に創作集団によって製作されたとしていたが、2018年に嘘の製作史だったことがアルカの書(https://conlinguistics.org/blog/?p=689)で作者が告白した。ネット上に初めて公開されたのは2005年(https://w.atwiki.jp/kakis/pages/10469.html)。アルカに影響を受けて多くの人工言語が誕生した。
 　ユーザーによる試料サイト：https://w.atwiki.jp/kakis/
-言語名: アルカ 幻語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://conlinguistics.org/arka/) [site2](https://w.atwiki.jp/kakis/) 作者Twitter: [@serenarbazard](https://twitter.com/serenarbazard) [辞書](https://conlinguistics.org/klel/) [辞書2](https://mindsc.ape.jp/klel/) [文法](https://conlinguistics.org/arka/study_yuli_2.html) 世界創作: あり（アルシディア）分類: 芸術言語モユネ分類: ART/NAT/REA/IMG/CDE/GEN/SON/LIT/SER/AAVCLAコード: ark-rx (v1) ~_as_~_arx (v3)
+言語名: アルカ 幻語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://conlinguistics.org/arka/) [site2](https://w.atwiki.jp/kakis/) [site3](https://arxidia.another.jp/atwiki8-arbazard/) 作者Twitter: [@serenarbazard](https://twitter.com/serenarbazard) 辞書: げんにちじてん：https://conlinguistics.org/klel/ 俗アルカ辞典：https://mindsc.ape.jp/klel/ https://arxidia.another.jp/arxidiaklel/?dic=arka[文法](https://conlinguistics.org/arka/study_yuli_2.html) 世界創作: あり（アルシディア）分類: 芸術言語モユネ分類: ART/NAT/REA/IMG/CDE/GEN/SON/LIT/SER/AAVCLAコード: ark-rx (v1) ~_as_~_arx (v3)
 
 ### [アーヴ語](http://dadh-baronr.s5.xrea.com/)
 年代: 1996
@@ -158,6 +158,10 @@
 年代: 2008年5月31日-2013
 言語名: シュライ語作者: 波砂間 壮人 末廣優[site](https://web.archive.org/web/20130115155503/https://www9.atwiki.jp/fai_iaf/) 作者Twitter: [@haSAMA_SOoto](https://twitter.com/haSAMA_SOoto) [文法](https://web.archive.org/web/20130120163833/http://www9.atwiki.jp/fai_iaf/pages/14.html) 世界創作: なし分類: アプリオリ言語
 
+### [シヴァン語](https://w.atwiki.jp/sobloxivanamna)
+年代: 2016
+言語名: シヴァン語作者: そぶろ[site](https://w.atwiki.jp/sobloxivanamna) 作者Twitter: [@soblo_xivan](https://twitter.com/soblo_xivan) 世界創作: アムナ
+
 ### セイセイ語
 年代: 2012年12月-
 言語名: セイセイ語作者: keiyu=tat
@@ -174,6 +178,11 @@
 ### [ソヨル語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E)
 年代: 2017
 言語名: ソヨル語[site](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E) 
+
+### [ファイ語](https://w.atwiki.jp/kakis/sp/archive/20081204/240f2260dcb3b6d59841d6386023c455)
+年代: 2008
+　「哲学的言語。少数総合的言語。ランガナータンの図書館の結合分類法に近い。」
+言語名: ファイ語作者: 末広優[site](https://w.atwiki.jp/kakis/sp/archive/20081204/240f2260dcb3b6d59841d6386023c455) 例文: FAI-I-ROI. JEN-O-A-IAF-I-ROI.ファイーロイ。ジェノアヤフィーロイ。「ファイが始まる。ジェンを超える言語が始まる。」
 
 ### [タコ語](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E?authuser=0)
 年代: 2018-2019
@@ -356,7 +365,7 @@
 ### [ノシロ語](https://www2s.biglobe.ne.jp/%7Enoxilo/index.htm)
 年代: 1997-2023
 　SVO、SOVの語順を入れ替えても良い、「部首」と呼ばれる接辞がつくことでおおよその単語の意味が推定できるなどのユニークな特徴をもった国際補助語。巣系のすべての人にとって学習コストが等しくなることを理念にしている。将来的にVSO語順も採用する予定。国際補助語のため、公式サイトは多言語対応している。公式サイトには2時間速習コースがあるほか、入門書が出版されている。公式文法書は「~号ホームページ」という名前の長大な複数のページに分割されている。非公式の概説(https://migdal.jp/slaimsan/%E3%83%8E%E3%82%B7%E3%83%AD%E8%AA%9E%E3%81%AE%E6%A6%82%E8%AA%AC-%E5%8F%8A%E3%81%B3-%E5%95%8F%E9%A1%8C%E7%82%B9%E3%81%A8%E3%81%9D%E3%81%AE%E8%A7%A3%E6%B1%BA%E6%A1%88-21b2)がある。
-言語名: ノシロ語 NOXILO作者: 水田扇太郎(1948-)[site](https://www2s.biglobe.ne.jp/%7Enoxilo/index.htm) [辞書](https://www2s.biglobe.ne.jp/~noxilo/sub3f.htm) [辞書2](https://www2s.biglobe.ne.jp/~noxilo/sub3e.htm) [文法](https://www2s.biglobe.ne.jp/~noxilo/mokuji3.htm) 分類: 国際補助語 アポステリオリ言語
+言語名: ノシロ語 NOXILO作者: 水田扇太郎(1948-)[site](https://www2s.biglobe.ne.jp/%7Enoxilo/index.htm) [辞書](https://www2s.biglobe.ne.jp/~noxilo/sub3f.htm) [辞書2](https://www2s.biglobe.ne.jp/~noxilo/sub3e.htm) [文法](https://www2s.biglobe.ne.jp/~noxilo/mokuji3.htm) [文法2](https://w.atwiki.jp/koreori/pages/128.html) 分類: 国際補助語 アポステリオリ言語
 
 ### [ノジエール語](https://nozieer.yukishigure.com/)
 年代: 2006-2007
@@ -368,6 +377,51 @@
 　印欧祖語、古ゲルマン語から語彙を、日本語、英語から文法を借用したアポステリオリ言語。コニフまたはコヒニュと呼ばれる架空世界が舞台。
 言語名: ノヒュア語 ノフア語作者: wakmona[site](https://w.atwiki.jp/noqa/) [文法](https://w.atwiki.jp/noqa/pages/22.html) 世界創作: あり分類: アポステリオリ言語
 
+### [butir k?nuk?noy](https://sites.google.com/site/faraspalt/%E6%B7%B5%E8%96%ABbutir-k?authuser=0)
+年代: 2015年12月31日0時7分-2015
+言語名: butir k?nuk?noy 淵薫 エンクン ヱンクン プティル・クーヌクーノイ作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E6%B7%B5%E8%96%ABbutir-k?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) [辞書](https://sites.google.com/site/faraspalt/%E6%B7%B5%E8%96%ABbutir-k/%E6%B7%B5%E6%97%A5%E8%BE%9E%E5%85%B8?authuser=0) [辞書2](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=butirk) [文法](https://sites.google.com/site/faraspalt/%E6%B7%B5%E8%96%ABbutir-k/%E6%B7%B5%E8%96%AB%E6%96%87%E6%B3%95?authuser=0) 分類: アプリオリ言語
+
+### [palam](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam?authuser=0)
+年代: 2012年6月27日23:02:46-2015
+言語名: palam 波藍作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) [辞書](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam/%E6%97%A5%E6%B3%A2%E8%BE%9E%E5%85%B8?authuser=0) [辞書2](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=faras) [文法](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam/%E6%96%87%E6%B3%95%E6%9B%B8?authuser=0) [文法2](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam/%E6%B3%A2%E8%97%8D%E6%96%87%E6%B3%95?authuser=0) 分類: アプリオリ言語
+
+### [?nj](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E7%88%B0%E7%8F%A0%C3%A9nj?authuser=0)
+年代: 2014年9月27日23時25分-2015
+言語名: ?nj 爰珠作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E7%88%B0%E7%8F%A0%C3%A9nj?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) [辞書](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E7%88%B0%E7%8F%A0%C3%A9nj/%E7%88%B0%E7%8F%A0%E6%96%87%E6%B3%95?authuser=0) [文法](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E7%88%B0%E7%8F%A0%C3%A9nj/%E7%88%B0%E6%97%A5%E8%BE%9E%E5%85%B8?authuser=0) [文法2](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=paltfim) 分類: アプリオリ言語
+
+### [Simna](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%B0%8B%E6%B5%A6simna?authuser=0)
+年代: 2014年10月17日22時48分
+言語名: Simna 尋浦作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%B0%8B%E6%B5%A6simna?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) [辞書](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%B0%8B%E6%B5%A6simna/%E5%B0%8B%E6%97%A5%E8%BE%9E%E5%85%B8?authuser=0) [文法](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%B0%8B%E6%B5%A6simna/%E5%B0%8B%E6%B5%A6%E6%96%87%E6%B3%95?authuser=0) 分類: アプリオリ言語
+
+### [Kagebata](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%99%AF%E5%B9%A1kagebata?authuser=0)
+年代: 2015年1月26日00時01分
+言語名: Kagebata 景幡作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%99%AF%E5%B9%A1kagebata?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) [辞書](https://sites.google.com/site/faraspalt/%E6%B7%B5%E8%96%ABbutir-k/%E6%B7%B5%E6%97%A5%E8%BE%9E%E5%85%B8?authuser=0) [文法](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%99%AF%E5%B9%A1kagebata/%E6%99%AF%E5%B9%A1%E6%96%87%E6%B3%95?authuser=0) 分類: アプリオリ言語
+
+### [j?sjek](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0)
+年代: 2016?年?9?月?13?日?17時34分
+言語名: j?sjek 叡潟 イェーシェク作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 分類: アプリオリ言語
+
+### [アルバレン](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren)
+年代: 2014-2020
+言語名: アルバレン作者: faras palt tilasos 大宗組安右衛門[site](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 
+
+### [モララー語](https://w.atwiki.jp/koreori/pages/32.html)
+年代: 2011
+言語名: モララー語[site](https://w.atwiki.jp/koreori/pages/32.html) 
+
+### [モナ語](https://w.atwiki.jp/koreori/pages/31.html)
+年代: 2011
+言語名: モナ語[site](https://w.atwiki.jp/koreori/pages/31.html) 
+
+### [シィ語](https://w.atwiki.jp/koreori/pages/23.html)
+年代: 2010-2011
+言語名: シィ語[site](https://w.atwiki.jp/koreori/pages/23.html) [辞書](https://w.atwiki.jp/koreori/pages/69.html) 
+
+### [モナモーラ語](https://w.atwiki.jp/koreori/pages/40.html)
+年代: 2010年10月-2011
+　新生アルカが元になっている
+言語名: モナモーラ語 モナモーラ・イタグ モナモーレタグ[site](https://w.atwiki.jp/koreori/pages/40.html) 
+
 ### [パラディス語](https://w.atwiki.jp/paladisren/pages/1.html)
 年代: 2012
 言語名: パラディス語作者: 渡辺しま[site](https://w.atwiki.jp/paladisren/pages/1.html) [辞書](https://w.atwiki.jp/paladisren/pages/45.html) [文法](https://w.atwiki.jp/paladisren/pages/17.html) 世界創作: あり分類: アプリオリ
@@ -376,6 +430,11 @@
 年代: 2006-2007
 　ラテン語、英語、フランス語、ドイツ語、日本語などをベースとした創作用の言語。言語仕様がGFDLライセンスで公開されているため、改良したり派生語を自由に作ることができる。作者がGADUMファンのため、サイトで小説が公開されている。FAQ(https://web.archive.org/web/20070904182453/http://www5.ocn.ne.jp/~meteors/html/faq.html)
 言語名: バルティオール作者: meteor[site](https://web.archive.org/web/20080911101405/http://www5.ocn.ne.jp/~meteors/html/top.html) [辞書](https://web.archive.org/web/20070904182804/http://www5.ocn.ne.jp/~meteors/bartivor.txt) [文法](https://web.archive.org/web/20070823085121/http://www5.ocn.ne.jp/~meteors/html/bartivor.html) 
+
+### [シィマシュ語](https://w.atwiki.jp/koreori/pages/70.html)
+年代: 2010-2011
+　「アルカシリーズの架空古語、ルティア語、シージア語の単語の音声をもとに、ルティア語、シージア語、フェイルヴェーユ語、フィーリア語、アルティア語、そして現実の古語である古アルカ、制アルカ、そして一部新生アルカの語彙に換字式暗号処置を加えて作った」言語である(https://w.atwiki.jp/koreori/pages/70.html)
+言語名: シィマシュ語[site](https://w.atwiki.jp/koreori/pages/70.html) [文法](https://w.atwiki.jp/koreori/pages/70.html#id_ae3c1cab) 分類: アポステリオリ言語
 
 ### [Palams](https://w.atwiki.jp/palams)
 年代: 2012年7月-2013
@@ -551,7 +610,7 @@
 　アルカと世界観(アルシディア)を共有する。漢字とハングルで転写する。
 　旧サイト: https://web.archive.org/web/20190622052035/https://sites.google.com/site/nagilikuli/
 　旧文法: https://web.archive.org/web/20190622052748/https://sites.google.com/site/nagilikuli/wen-fa
-言語名: 凪霧 ???作者: 鮎川早月(Maycia Arenberg) セレン・アルバザード[site](https://maykloaayukawa.wixsite.com/nagili) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) [辞書](https://zpdic.ziphil.com/dictionary/nagili) [文法](https://drive.google.com/file/d/0BwaB-JfIm_OeZVZvQWdqMkpPazA/view?resourcekey=0-t3V-9Tqe2Xv2q3Umn-w5MQ) モユネ分類: NAT/IMGCLAコード: alt-rx (v1)  ~_ng_~_arx (v3)
+言語名: 凪霧 ???作者: 鮎川早月(Maycia Arenberg) セレン・アルバザード[site](https://maykloaayukawa.wixsite.com/nagili) [site2](https://titlilgas.blogspot.com/2020/08/blog-post.html) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) [辞書](https://zpdic.ziphil.com/dictionary/nagili) [辞書2](https://arxidia.another.jp/arxidiaklel/?dic=nagili) [文法](https://drive.google.com/file/d/0BwaB-JfIm_OeZVZvQWdqMkpPazA/view?resourcekey=0-t3V-9Tqe2Xv2q3Umn-w5MQ) モユネ分類: NAT/IMGCLAコード: alt-rx (v1)  ~_ng_~_arx (v3)
 
 ### アルメートル語
 言語名: アルメートル語作者: SAYASA=IF分類: アプリオリ言語
@@ -632,4 +691,8 @@
 年代: 2016
 　@nalfij_carfadyさんがツイッターでつぶやく言語。@nalfij_carfadyさんがこの言語でしかつぶやかないため言語の詳細は不明。Tetute語のkakjekaさんと交流がある？架空世界設定のような地図をツイートしたこともあった。(https://twitter.com/nalfij_carfady/status/754742565539237888/photo/1)
 言語名: @nalfij_carfady氏の不明言語作者: Nalfij Carfady[site](https://twitter.com/nalfij_carfady) 作者Twitter: [@nalfij_carfady](https://twitter.com/nalfij_carfady) 世界創作: あり
+
+### [lieso](https://lieso.kumogakure.com/)
+年代: 2007
+言語名: lieso[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
 
