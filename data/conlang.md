@@ -8,6 +8,13 @@
 　アラズ語に影響を受けて作られた言語。アラズ語は単語がないが、ア語は単語が「A」の一つだけある。アラズ語が最も習得しやすい言語なら、ア語は二番目に習得しやすい言語である。
 言語名: ア語作者: slaimsan もやし[site](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/ago) 分類: 実験的言語 PHI/JOK
 
+### [亜共語](https://w.atwiki.jp/akyou_language/pages/12.html)
+年代: 2017-2018
+　アジア共通語として制作された。漢字とキリル文字を混ぜて使う。
+　紹介動画: https://www.youtube.com/watch?app=desktop&v=OqDv2iKxMTI
+　音声資料: https://www.youtube.com/watch?v=FKenvInbOY0
+言語名: 亜共語作者: Ikku[site](https://w.atwiki.jp/akyou_language/pages/12.html) [site2](https://www.youtube.com/@ikku6071/videos) 作者Twitter: [@ikku0925](https://twitter.com/ikku0925) 
+
 ### [アコトマ語](https://www.pixiv.net/artworks/67452700)
 年代: 2018
 言語名: アコトマ語作者: ての / TENO[site](https://www.pixiv.net/artworks/67452700) [site2](https://www.pixiv.net/artworks/67742715) [site3](https://www.pixiv.net/artworks/67452667) 作者Twitter: [@MapleSyrupped](https://twitter.com/MapleSyrupped) 
@@ -59,6 +66,9 @@
 年代: 2008年2月下旬-2010
 　はるか未来の別の惑星を舞台にした架空言語。単語数は1500弱。
 言語名: Eldein作者: nias avalentis[site](https://w.atwiki.jp/hrain/pages/66.html) [辞書](https://skydrive.live.com/?cid=b7fc9ffff390b3c6#!/?cid=B7FC9FFFF390B3C6&id=B7FC9FFFF390B3C6%21875) 世界創作: 世界創作あり、未来の別の惑星分類: アプリオリ言語
+
+### アルメートル語
+言語名: アルメートル語作者: SAYASA=IF分類: アプリオリ言語
 
 ### [エミュンス語](https://w.atwiki.jp/gionshantveed/pages/216.html)
 年代: 2017-2023
@@ -134,6 +144,11 @@
 　「キショイ文字の言語を作る」というコンセプトで制作された
 言語名: サーシュワ語[site](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33) 
 
+### [シージア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921)
+年代: 2009-2010
+　アルカと近縁な言語でSOV語順
+言語名: シージア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921) 
+
 ### ジェン語
 年代: 2007
 言語名: ジェン語作者: 漸屋じぇんや
@@ -171,6 +186,11 @@
 　ヘイコウ文字(https://conlinguistics.fandom.com/ja/wiki/%E3%83%98%E3%82%A4%E3%82%B3%E3%82%A6%E6%96%87%E5%AD%97)で表記する。
 言語名: セロ語 ???oqи?
 
+### [ゼノフェル語](https://w.atwiki.jp/xenofer/)
+年代: 2013-2016
+　印欧語族の言語に影響を受けているが、分詞構造や不規則変化はない。作者は「ゲルマン語とロマンス語の折衷的要素が強い」と評している。
+言語名: ゼノフェル語作者: xenofer[site](https://w.atwiki.jp/xenofer/) 作者Twitter: [@xenofer_fiel](https://twitter.com/xenofer_fiel) 世界創作: あり（レシュティアス大陸にはミルフェル）
+
 ### ソウキ語
 年代: 2022-2023
 言語名: ソウキ語 ソウキ・ヘイコウ語 ハラソウキ語作者: Ag Ycafsh R Zhefmnga(Ycaf? ? ?efm?a) 甲斐華冬 ソウキ・ハラー作者Twitter: [@kyomu_aniki](https://twitter.com/kyomu_aniki) 
@@ -178,6 +198,11 @@
 ### [ソヨル語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E)
 年代: 2017
 言語名: ソヨル語[site](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E) 
+
+### [空見語](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E)
+年代: 2016-2017
+　創作プロジェクト大宇宙の言語のひとつ
+言語名: 空見語 sorami vari作者: アクマ アクア akvis[site](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E) 作者Twitter: [@harmat_noln](https://twitter.com/harmat_noln) 
 
 ### [ファイ語](https://w.atwiki.jp/kakis/sp/archive/20081204/240f2260dcb3b6d59841d6386023c455)
 年代: 2008
@@ -325,6 +350,13 @@
 　https://conlangarchive.wiki.fc2.com/wiki/%E3%80%90%E3%83%A4%E3%83%A9%E3%82%A4%E3%83%A9%E8%AA%9E%E3%80%91%E7%B7%8F%E5%90%88%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89
 言語名: トクモグ語
 
+### [凪霧](https://maykloaayukawa.wixsite.com/nagili)
+年代: 2014-2020
+　アルカと世界観(アルシディア)を共有する。漢字とハングルで転写する。
+　旧サイト: https://web.archive.org/web/20190622052035/https://sites.google.com/site/nagilikuli/
+　旧文法: https://web.archive.org/web/20190622052748/https://sites.google.com/site/nagilikuli/wen-fa
+言語名: 凪霧 ???作者: 鮎川早月(Maycia Arenberg) セレン・アルバザード[site](https://maykloaayukawa.wixsite.com/nagili) [site2](https://titlilgas.blogspot.com/2020/08/blog-post.html) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) [辞書](https://zpdic.ziphil.com/dictionary/nagili) [辞書2](https://arxidia.another.jp/arxidiaklel/?dic=nagili) [文法](https://drive.google.com/file/d/0BwaB-JfIm_OeZVZvQWdqMkpPazA/view?resourcekey=0-t3V-9Tqe2Xv2q3Umn-w5MQ) モユネ分類: NAT/IMGCLAコード: alt-rx (v1)  ~_ng_~_arx (v3)
+
 ### [nosara語](https://blog.goo.ne.jp/littorio/e/4808a26b4ee27c0e157124b082075563)
 年代: 2008
 　自動車評論家国沢光宏氏の特徴的な言葉遣い「国沢語」やホロン部の言葉遣い「ホロン語」から語彙を借用している。他にも印欧祖語やアイヌ語、アラビア語、ヘブライ語からの借用がある。SVOまたはSOV語順。SVO語順のときは後置修飾、SOV語順の時は前置修飾になる。ブログの記事ごとに内容が分散している。https://blog.goo.ne.jp/littorio/e/0fe97108d2822c6110bb41ab12213a54
@@ -404,22 +436,10 @@
 年代: 2016?年?9?月?13?日?17時34分
 言語名: j?sjek 叡潟 イェーシェク作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 分類: アプリオリ言語
 
-### [モララー語](https://w.atwiki.jp/koreori/pages/32.html)
-年代: 2011
-言語名: モララー語[site](https://w.atwiki.jp/koreori/pages/32.html) 
-
-### [モナ語](https://w.atwiki.jp/koreori/pages/31.html)
-年代: 2011
-言語名: モナ語[site](https://w.atwiki.jp/koreori/pages/31.html) 
-
-### [シィ語](https://w.atwiki.jp/koreori/pages/23.html)
-年代: 2010-2011
-言語名: シィ語[site](https://w.atwiki.jp/koreori/pages/23.html) [辞書](https://w.atwiki.jp/koreori/pages/69.html) 
-
-### [モナモーラ語](https://w.atwiki.jp/koreori/pages/40.html)
-年代: 2010年10月-2011
-　新生アルカが元になっている
-言語名: モナモーラ語 モナモーラ・イタグ モナモーレタグ[site](https://w.atwiki.jp/koreori/pages/40.html) 
+### [新パトワ語](http://patwa.pbworks.com/w/page/14800495/index-j)
+年代: 2005
+　理研に在籍する在日翻訳家が多言語の経験に触発されて制作を開始した。
+言語名: 新パトワ語作者: ジェンズ・ウィルキンソン Jens Wilkinson[site](http://patwa.pbworks.com/w/page/14800495/index-j) [辞書](http://patwa.pbworks.com/f/P-J.pdf) [辞書2](http://patwa.pbworks.com/f/J-P.pdf) [文法](http://patwa.pbworks.com/w/page/14800472/bunpo) 
 
 ### [パラディス語](https://w.atwiki.jp/paladisren/pages/1.html)
 年代: 2012
@@ -445,10 +465,9 @@
 　日本語の使われる架空地図プロジェクト「創造地図」内(実際には翻訳で日本語に見えているとされる)で、日本語ではない地名が使われるヒッタン国の言語として登場する。ヒッタン文字という文字で表記する。
 言語名: Hiktan語 ヒッタン語作者: 篠永康平 創造地図の人[site](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E) 作者Twitter: [@koridentetsu](https://twitter.com/koridentetsu) [辞書](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E#%E6%96%87%E6%B3%95) 世界創作: 想像地図分類: アプリオリ言語
 
-### [シージア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921)
-年代: 2009-2010
-　アルカと近縁な言語でSOV語順
-言語名: シージア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921) 
+### [フォルメア語](https://w.atwiki.jp/formean/)
+年代: 2015-2021
+言語名: フォルメア語作者: 舟鷹[site](https://w.atwiki.jp/formean/) [site2](https://w.atwiki.jp/formey/) 作者Twitter: [@hunataqa](https://twitter.com/hunataqa) 世界創作: あり
 
 ### [ファルディアス語](https://w.atwiki.jp/cerie-ariinie/)
 年代: 2012年6月中旬
@@ -464,11 +483,6 @@
 年代: 2011年3月ごろ-2015
 　pasberth
 言語名: ベアン語 新ベアン語作者Twitter: [@pasberth](https://twitter.com/pasberth) [文法](https://gist.github.com/pasberth/4366917) 世界創作: あり分類: アプリオリ言語
-
-### [新パトワ語](http://patwa.pbworks.com/w/page/14800495/index-j)
-年代: 2005
-　理研に在籍する在日翻訳家が多言語の経験に触発されて制作を開始した。
-言語名: 新パトワ語作者: ジェンズ・ウィルキンソン Jens Wilkinson[site](http://patwa.pbworks.com/w/page/14800495/index-j) [辞書](http://patwa.pbworks.com/f/P-J.pdf) [辞書2](http://patwa.pbworks.com/f/J-P.pdf) [文法](http://patwa.pbworks.com/w/page/14800472/bunpo) 
 
 ### [ボアーボム](https://www.oocities.org/athens/Acropolis/9801/lenguas/babm.html)
 年代: 1956ごろ
@@ -528,6 +542,23 @@
 　日本語、英語がベースのアポステリオリ言語
 言語名: メイユラング 盟語作者: WYU[site](https://w.atwiki.jp/meijulange) 作者Twitter: [@aila_sunfa](https://twitter.com/aila_sunfa) [辞書](https://w.atwiki.jp/meijulange/pages/18.html) [文法](https://w.atwiki.jp/meijulange/pages/14.html) 世界創作: あり分類: アポステリオリ言語
 
+### [モララー語](https://w.atwiki.jp/koreori/pages/32.html)
+年代: 2011
+言語名: モララー語[site](https://w.atwiki.jp/koreori/pages/32.html) 
+
+### [モナ語](https://w.atwiki.jp/koreori/pages/31.html)
+年代: 2011
+言語名: モナ語[site](https://w.atwiki.jp/koreori/pages/31.html) 
+
+### [シィ語](https://w.atwiki.jp/koreori/pages/23.html)
+年代: 2010-2011
+言語名: シィ語[site](https://w.atwiki.jp/koreori/pages/23.html) [辞書](https://w.atwiki.jp/koreori/pages/69.html) 
+
+### [モナモーラ語](https://w.atwiki.jp/koreori/pages/40.html)
+年代: 2010年10月-2011
+　新生アルカが元になっている
+言語名: モナモーラ語 モナモーラ・イタグ モナモーレタグ[site](https://w.atwiki.jp/koreori/pages/40.html) 
+
 ### ヤライラ語
 年代: 2013年3月-
 　https://conlangarchive.wiki.fc2.com/wiki/%E3%80%90%E3%83%A4%E3%83%A9%E3%82%A4%E3%83%A9%E8%AA%9E%E3%80%91%E7%B7%8F%E5%90%88%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89
@@ -562,12 +593,12 @@
 　ユーゴック語とともに創作世界「悠里」の中核となる言語。リパライン語が離される世界を舞台にしたライトノベル「異世界語入門」が出版されている。複雑な緩衝母音体系を持つ。数学、技術史、プログラミング言語など他分野で架空世界が作り込まれている。
 言語名: リパライン語作者: Fafs S Sashimi ふぁふす[site](https://w.atwiki.jp/cgwj/pages/42.html) 作者Twitter: [@sashimiwiki](https://twitter.com/sashimiwiki) [辞書](https://zpdic.ziphil.com/dictionary/lineparine) [文法](https://sites.google.com/site/3tvalineparine/%E9%85%8D%E5%B8%83#h.tlkdm0865hzv) 世界創作: あり分類: アプリオリ言語
 
-### LoCoS
+### [LoCoS](https://note.com/otayukio_design/n/nb341f656d215)
 年代: 1991-2008
 　多摩美術大学デザイン学科の太田幸夫教授が1971年に雑誌グラフィックデザイン42号に公表、1991年にウィーンで行われた視覚コミュニケーションの国際会議で発表した、ピクトグラムによる視覚型国際補助語。作者の太田教授は、非常出口のピクトグラムを日本以外に広めたことで知られる。
 　https://web.archive.org/web/20070602161826/http://www.jiten.com/dicmi/docs/l/6981s.htm
 　https://web.archive.org/web/20080221165546/http://www.innovative.jp/interview/2006/0125.php
-言語名: LoCoS作者: 太田幸夫
+言語名: LoCoS作者: 太田幸夫[site](https://note.com/otayukio_design/n/nb341f656d215) 
 
 ### [時雨語](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E)
 年代: 2017
@@ -594,6 +625,10 @@
 　想像地図プロジェクトの城栄国北部の北陽道の先住民によって使われる。
 言語名: ヘツクース語作者: 担当者は篠永康平氏とは別である(https://x.com/koridentetsu/status/1347807296500375552?s=20)[site](https://tanukipedia.miraheze.org/wiki/%E3%83%98%E3%83%84%E3%82%AF%E3%83%BC%E3%82%B9%E8%AA%9E) 作者Twitter: [@koridentetsu](https://twitter.com/koridentetsu) [辞書](https://hetukuusika.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) 世界創作: 想像地図の城栄国北部の北陽道分類: アプリオリ言語
 
+### [ルノア語](https://w.atwiki.jp/rnoa/)
+年代: 2007
+言語名: ルノア語 rnoa作者: 2ch人工言語スレ住民[site](https://w.atwiki.jp/rnoa/) 辞書:  https://w.atwiki.jp/rnoa/pages/30.htmlhttps://w.atwiki.jp/rnoa/pages/7.html https://w.atwiki.jp/rnoa/pages/28.html https://w.atwiki.jp/rnoa/pages/29.html[文法](https://w.atwiki.jp/rnoa/pages/4.html) 
+
 ### [レテシミ語](https://web.archive.org/web/20161102100211/https://sites.google.com/site/moyacilang/letesimigo)
 年代: 2015-2023
 　トキポナ(単語数120前後)からさらに単語を減らし52単語にしたミニマル言語。
@@ -607,23 +642,6 @@
 　資料: https://ziphil.github.io/ConlangVestiges/exhibit/14.html
 言語名: レミリア共通語 第三期ルエン語 レイア語作者: クノーツアクア作者Twitter: [@Qunoxts](https://twitter.com/Qunoxts) [辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=ectos&search=&type=0&agree=1&page=5) 
 
-### [亜共語](https://w.atwiki.jp/akyou_language/pages/12.html)
-年代: 2017-2018
-　アジア共通語として制作された。漢字とキリル文字を混ぜて使う。
-　紹介動画: https://www.youtube.com/watch?app=desktop&v=OqDv2iKxMTI
-　音声資料: https://www.youtube.com/watch?v=FKenvInbOY0
-言語名: 亜共語作者: Ikku[site](https://w.atwiki.jp/akyou_language/pages/12.html) [site2](https://www.youtube.com/@ikku6071/videos) 作者Twitter: [@ikku0925](https://twitter.com/ikku0925) 
-
-### [凪霧](https://maykloaayukawa.wixsite.com/nagili)
-年代: 2014-2020
-　アルカと世界観(アルシディア)を共有する。漢字とハングルで転写する。
-　旧サイト: https://web.archive.org/web/20190622052035/https://sites.google.com/site/nagilikuli/
-　旧文法: https://web.archive.org/web/20190622052748/https://sites.google.com/site/nagilikuli/wen-fa
-言語名: 凪霧 ???作者: 鮎川早月(Maycia Arenberg) セレン・アルバザード[site](https://maykloaayukawa.wixsite.com/nagili) [site2](https://titlilgas.blogspot.com/2020/08/blog-post.html) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) [辞書](https://zpdic.ziphil.com/dictionary/nagili) [辞書2](https://arxidia.another.jp/arxidiaklel/?dic=nagili) [文法](https://drive.google.com/file/d/0BwaB-JfIm_OeZVZvQWdqMkpPazA/view?resourcekey=0-t3V-9Tqe2Xv2q3Umn-w5MQ) モユネ分類: NAT/IMGCLAコード: alt-rx (v1)  ~_ng_~_arx (v3)
-
-### アルメートル語
-言語名: アルメートル語作者: SAYASA=IF分類: アプリオリ言語
-
 ### [ピース語](https://sites.google.com/site/tsapsaanja/%E5%87%BA%E5%85%A5%E5%8F%A3?authuser=0)
 年代: 2009-2023
 　ボーカロイドで歌わせるための歌唱言語。日本語ライブラリで歌えるように、日本語に含まれる音しか含まれていない。現在辞書は公開していない。旧サイト; https://w.atwiki.jp/tsapsaanja/
@@ -631,18 +649,12 @@
 　旧文法: https://w.atwiki.jp/tsapsaanja/pages/13.html
 言語名: ピース語 匪斯語 匪語作者: ルーミア かりぐら Caligula=Armjanskaja[site](https://sites.google.com/site/tsapsaanja/%E5%87%BA%E5%85%A5%E5%8F%A3?authuser=0) 作者Twitter: [@Tsapsaanja](https://twitter.com/Tsapsaanja) [辞書](https://sites.google.com/site/tsapsaanja/%E8%BE%9E%E6%9B%B8?authuser=0) [文法](https://sites.google.com/site/tsapsaanja/%E6%96%87%E6%B3%95%E8%A9%B3%E7%B4%B0?authuser=0) 世界創作: なし分類: 歌唱言語 アプリオリ言語
 
-### [ゼノフェル語](https://w.atwiki.jp/xenofer/)
-年代: 2013-2016
-　印欧語族の言語に影響を受けているが、分詞構造や不規則変化はない。作者は「ゲルマン語とロマンス語の折衷的要素が強い」と評している。
-言語名: ゼノフェル語作者: xenofer[site](https://w.atwiki.jp/xenofer/) 作者Twitter: [@xenofer_fiel](https://twitter.com/xenofer_fiel) 世界創作: あり（レシュティアス大陸にはミルフェル）
-
-### [空見語](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E)
-年代: 2016-2017
-　創作プロジェクト大宇宙の言語のひとつ
-言語名: 空見語 sorami vari作者: アクマ アクア akvis[site](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E) 作者Twitter: [@harmat_noln](https://twitter.com/harmat_noln) 
-
 ### ラヴィーム語
 言語名: ラヴィーム語作者: jus rahaaza世界創作: あり
+
+### [lieso](https://lieso.kumogakure.com/)
+年代: 2007
+言語名: lieso作者: イワ[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
 
 ### [ルウォー語](https://sites.google.com/view/ruwoo)
 言語名: ルウォー語作者: mis?ke=furezza=Kagena[site](https://sites.google.com/view/ruwoo) 作者Twitter: [@Kagena_ryuuka](https://twitter.com/Kagena_ryuuka) [辞書](https://zpdic.ziphil.com/dictionary/41) [辞書2](https://sites.google.com/view/ruwoo/a-ruu-o-yu/a-yu-hui?authuser=0) 
@@ -692,18 +704,10 @@
 　膠着語という説がある
 言語名: yoka tetute テトテ語作者: kakjeka[site](https://scrapbox.io/tgbg/tetute%E8%AA%9E%E8%B3%87%E6%96%99%E9%9B%86) [site2](https://www.evernote.com/shard/s655/client/snv?noteGuid=9598ef1f-c9f1-4064-ae74-be377e853ad6&noteKey=629c8b7213084fb13141958ce443e53b&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs655%2Fsh%2F9598ef1f-c9f1-4064-ae74-be377e853ad6%2F629c8b7213084fb13141958ce443e53b&title=tetute%25E8%25AA%259E%25E8%25AA%25BF%25E6%259F%25BB%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588) [site3](https://haar-you.github.io/TetuteInputMethod/grammar/ringo58.html) [site4](https://migdal.jp/bertia_arbarigmirok/taf-4a89) 作者Twitter: [@kakjeka](https://twitter.com/kakjeka) 
 
-### [フォルメア語](https://w.atwiki.jp/formean/)
-年代: 2015-2021
-言語名: フォルメア語作者: 舟鷹[site](https://w.atwiki.jp/formean/) [site2](https://w.atwiki.jp/formey/) 作者Twitter: [@hunataqa](https://twitter.com/hunataqa) 世界創作: あり
-
 ### [@nalfij_carfady氏の不明言語](https://twitter.com/nalfij_carfady)
 年代: 2016
 　@nalfij_carfadyさんがツイッターでつぶやく言語。@nalfij_carfadyさんがこの言語でしかつぶやかないため言語の詳細は不明。Tetute語のkakjekaさんと交流がある？架空世界設定のような地図をツイートしたこともあった。(https://twitter.com/nalfij_carfady/status/754742565539237888/photo/1)
 言語名: @nalfij_carfady氏の不明言語作者: Nalfij Carfady[site](https://twitter.com/nalfij_carfady) 作者Twitter: [@nalfij_carfady](https://twitter.com/nalfij_carfady) 世界創作: あり
-
-### [lieso](https://lieso.kumogakure.com/)
-年代: 2007
-言語名: lieso作者: イワ[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
 
 ### [リディア語](https://w.atwiki.jp/lidia/pages/1.html)
 年代: 2012
@@ -724,7 +728,7 @@
 
 ### [近メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938)
 年代: 2009
-言語名: 近メティオ語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938) 
+言語名: 近メティオ語作者: seren arbazard(1981-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938) 世界創作: アルシディア
 
 ### [アルティア語](https://w.atwiki.jp/kakis/pages/10673.html)
 年代: 2008年11月30日-
@@ -765,11 +769,11 @@
 
 ### [近魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936)
 年代: 2009
-言語名: 近魔方語作者: seren arbazard(1990-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936) 
+言語名: 近魔方語作者: seren arbazard(1990-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936) 世界創作: アルシディア
 
 ### [中魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935)
 年代: 2009
-言語名: 中魔方語作者: seren arbazard(1991-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935) 
+言語名: 中魔方語作者: seren arbazard(1991-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935) 世界創作: アルシディア
 
 ### [境方語](https://w.atwiki.jp/kakis/pages/10678.html)
 年代: 2008年12月9-
@@ -855,7 +859,7 @@
 
 ### [玲方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750)
 年代: 2009
-言語名: 玲方語 上方ルティア語作者: seren arbazard(2012-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750) 
+言語名: 玲方語 上方ルティア語作者: seren arbazard(2012-) セレン・アルバザード 貞苅詩門[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750) 世界創作: アルシディア
 
 ### [ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925)
 年代: 2009
@@ -881,27 +885,23 @@
 ### [タカン語](https://sites.google.com/site/syxobo/takan)
 年代: 2016-2021
 　悠里世界のアイル共和国の言語
-言語名: タカン語 皇語[site](https://sites.google.com/site/syxobo/takan) [文法](https://sites.google.com/site/syxobo/takan/wen-fa-luee-shuo?authuser=0) [文法2](https://zpdic.ziphil.com/dictionary/46) [文法3](https://github.com/jurliyuuri/takan_cen/blob/master/%E7%9A%87%E8%A8%80%E9%9B%86%E6%9B%B8.json) 世界創作: 悠里
+言語名: タカン語 皇語作者: 悠里[site](https://sites.google.com/site/syxobo/takan) [文法](https://sites.google.com/site/syxobo/takan/wen-fa-luee-shuo?authuser=0) [文法2](https://zpdic.ziphil.com/dictionary/46) [文法3](https://github.com/jurliyuuri/takan_cen/blob/master/%E7%9A%87%E8%A8%80%E9%9B%86%E6%9B%B8.json) 世界創作: 悠里
 
 ### [パイグ語](https://sites.google.com/site/syxobo/paigu-yu?authuser=0)
 年代: 2018-2023
-言語名: パイグ語 牌語[site](https://sites.google.com/site/syxobo/paigu-yu?authuser=0) [辞書](https://zpdic.ziphil.com/dictionary/21) [文法](https://sites.google.com/site/syxobo/paigu-yu/wen-fa-xiang-shuo?authuser=0) 
+言語名: パイグ語 牌語作者: 悠里[site](https://sites.google.com/site/syxobo/paigu-yu?authuser=0) [辞書](https://zpdic.ziphil.com/dictionary/21) [文法](https://sites.google.com/site/syxobo/paigu-yu/wen-fa-xiang-shuo?authuser=0) 世界創作: 悠里
 
 ### [東島通商語](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0)
 年代: 2019-2023
-言語名: 東島通商語 ペメセペ語[site](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0) [文法](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E/%E6%96%87%E6%B3%95%E7%95%A5%E8%AA%AC?authuser=0) 
+言語名: 東島通商語 ペメセペ語作者: 悠里[site](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0) [文法](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E/%E6%96%87%E6%B3%95%E7%95%A5%E8%AA%AC?authuser=0) 世界創作: 悠里
 
 ### [ラネーメ祖語](https://sites.google.com/site/syxobo/raneme-zu-yu?authuser=0)
 年代: 2018
-言語名: ラネーメ祖語[site](https://sites.google.com/site/syxobo/raneme-zu-yu?authuser=0) 
+言語名: ラネーメ祖語作者: 悠里[site](https://sites.google.com/site/syxobo/raneme-zu-yu?authuser=0) 世界創作: 悠里
 
 ### [バート語](http://jurliyuuri.com/bhaataan/index.html)
 年代: 2017-2023
-言語名: バート語[site](http://jurliyuuri.com/bhaataan/index.html) [辞書](https://zpdic.ziphil.com/dictionary/24) [文法](http://jurliyuuri.com/bhaataan/grammar.html) 
-
-### [ルノア語](https://w.atwiki.jp/rnoa/)
-年代: 2007
-言語名: ルノア語 rnoa作者: 2ch人工言語スレ住民[site](https://w.atwiki.jp/rnoa/) 辞書:  https://w.atwiki.jp/rnoa/pages/30.htmlhttps://w.atwiki.jp/rnoa/pages/7.html https://w.atwiki.jp/rnoa/pages/28.html https://w.atwiki.jp/rnoa/pages/29.html[文法](https://w.atwiki.jp/rnoa/pages/4.html) 
+言語名: バート語作者: 悠里[site](http://jurliyuuri.com/bhaataan/index.html) [辞書](https://zpdic.ziphil.com/dictionary/24) [文法](http://jurliyuuri.com/bhaataan/grammar.html) 世界創作: 悠里
 
 ### [アバハム語](https://w.atwiki.jp/sendanpon/pages/66.html)
 年代: 2012
