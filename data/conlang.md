@@ -401,10 +401,6 @@
 年代: 2016?年?9?月?13?日?17時34分
 言語名: j?sjek 叡潟 イェーシェク作者: faras palt tilasos 大宗組安右衛門[site](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 分類: アプリオリ言語
 
-### [アルバレン](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren)
-年代: 2014-2020
-言語名: アルバレン作者: faras palt tilasos 大宗組安右衛門[site](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 
-
 ### [モララー語](https://w.atwiki.jp/koreori/pages/32.html)
 年代: 2011
 言語名: モララー語[site](https://w.atwiki.jp/koreori/pages/32.html) 
@@ -446,6 +442,11 @@
 　日本語の使われる架空地図プロジェクト「創造地図」内(実際には翻訳で日本語に見えているとされる)で、日本語ではない地名が使われるヒッタン国の言語として登場する。ヒッタン文字という文字で表記する。
 言語名: Hiktan語 ヒッタン語作者: 篠永康平 創造地図の人[site](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E) 作者Twitter: [@koridentetsu](https://twitter.com/koridentetsu) [辞書](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E#%E6%96%87%E6%B3%95) 世界創作: 想像地図分類: アプリオリ言語
 
+### [シージア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921)
+年代: 2009-2010
+　アルカと近縁な言語でSOV語順
+言語名: シージア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=921) 
+
 ### [ファルディアス語](https://w.atwiki.jp/cerie-ariinie/)
 年代: 2012年6月中旬
 　ラテン語やロシア語から単語を借用している。旧wiki:https://w.atwiki.jp/lyuca-fardias
@@ -460,6 +461,11 @@
 年代: 2011年3月ごろ-2015
 　pasberth
 言語名: ベアン語 新ベアン語作者Twitter: [@pasberth](https://twitter.com/pasberth) [文法](https://gist.github.com/pasberth/4366917) 世界創作: あり分類: アプリオリ言語
+
+### [新パトワ語](http://patwa.pbworks.com/w/page/14800495/index-j)
+年代: 2005
+　理研に在籍する在日翻訳家が多言語の経験に触発されて制作を開始した。
+言語名: 新パトワ語作者: ジェンズ・ウィルキンソン Jens Wilkinson[site](http://patwa.pbworks.com/w/page/14800495/index-j) [辞書](http://patwa.pbworks.com/f/P-J.pdf) [辞書2](http://patwa.pbworks.com/f/J-P.pdf) [文法](http://patwa.pbworks.com/w/page/14800472/bunpo) 
 
 ### [ボアーボム](https://www.oocities.org/athens/Acropolis/9801/lenguas/babm.html)
 年代: 1956ごろ
@@ -695,4 +701,177 @@
 ### [lieso](https://lieso.kumogakure.com/)
 年代: 2007
 言語名: lieso[site](https://lieso.kumogakure.com/) [辞書](https://lieso.kumogakure.com/dic/dictionary.html) [文法](https://lieso.kumogakure.com/lieso/dai.html) [世界創作](https://lieso.kumogakure.com/wasen/ehui.html) 
+
+### [リディア語](https://w.atwiki.jp/lidia/pages/1.html)
+年代: 2012
+言語名: リディア語[site](https://w.atwiki.jp/lidia/pages/1.html) 分類: 国際補助語
+
+### [メティオ語](https://w.atwiki.jp/kakis/pages/10674.html)
+年代: 2008年11月30日-
+　後期制アルカ時代のメテ方言の後身
+言語名: メティオ語[site](https://w.atwiki.jp/kakis/pages/10674.html) [site2](https://conlinguistics.org/arka/study_yulf_87.html) 世界創作: アルシディア
+
+### [中メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=934)
+年代: 2009
+言語名: 中メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=934) 世界創作: アルシディア
+
+### [古メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=933)
+年代: 2009
+言語名: 古メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=933) 世界創作: アルシディア
+
+### [近メティオ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938)
+年代: 2009
+言語名: 近メティオ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=938) 
+
+### [アルティア語](https://w.atwiki.jp/kakis/pages/10673.html)
+年代: 2008年11月30日-
+言語名: アルティア語[site](https://w.atwiki.jp/kakis/pages/10673.html) 世界創作: アルシディア
+
+### [竜方語](https://w.atwiki.jp/kakis/pages/10675.html)
+年代: 2008年12月9-
+言語名: 竜方語[site](https://w.atwiki.jp/kakis/pages/10675.html) 世界創作: アルシディア
+
+### [ロロス語](https://w.atwiki.jp/kakis/pages/10676.html)
+年代: 2008年12月11-
+言語名: ロロス語[site](https://w.atwiki.jp/kakis/pages/10676.html) 世界創作: アルシディア
+
+### [北方語](https://w.atwiki.jp/kakis/pages/10690.html)
+年代: 2008年12月9-
+言語名: 北方語[site](https://w.atwiki.jp/kakis/pages/10690.html) 世界創作: アルシディア
+
+### [東方語](https://w.atwiki.jp/kakis/pages/10669.html)
+年代: 2008年12月9-
+　後期制アルカをベースにアンシャル大陸東部内陸諸国で話される方言という設定をつけて流用したもの
+言語名: 東方語[site](https://w.atwiki.jp/kakis/pages/10669.html) 世界創作: アルシディア
+
+### [西方語](https://w.atwiki.jp/kakis/pages/10667.html)
+年代: 2008年12月9-
+言語名: 西方語[site](https://w.atwiki.jp/kakis/pages/10667.html) 世界創作: アルシディア
+
+### [南方語](https://w.atwiki.jp/kakis/pages/10663.html)
+年代: 2008年12月9-
+言語名: 南方語[site](https://w.atwiki.jp/kakis/pages/10663.html) 世界創作: アルシディア
+
+### [極方語](https://w.atwiki.jp/kakis/pages/10670.html)
+年代: 2008年12月9-
+言語名: 極方語[site](https://w.atwiki.jp/kakis/pages/10670.html) 世界創作: アルシディア
+
+### [魔方語](https://w.atwiki.jp/kakis/pages/10671.html)
+年代: 2008年12月9-
+言語名: 魔方語[site](https://w.atwiki.jp/kakis/pages/10671.html) [site2](https://arxidia.another.jp/atwiki8-arbazard/?pageid=937) 世界創作: アルシディア
+
+### [近魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936)
+年代: 2009
+言語名: 近魔方語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=936) 
+
+### [中魔方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935)
+年代: 2009
+言語名: 中魔方語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=935) 
+
+### [境方語](https://w.atwiki.jp/kakis/pages/10678.html)
+年代: 2008年12月9-
+言語名: 境方語[site](https://w.atwiki.jp/kakis/pages/10678.html) 世界創作: アルシディア
+
+### [沙方語](https://w.atwiki.jp/kakis/pages/10679.html)
+年代: 2008年12月9-
+言語名: 沙方語[site](https://w.atwiki.jp/kakis/pages/10679.html) 世界創作: アルシディア
+
+### [暗方語](https://w.atwiki.jp/kakis/pages/10680.html)
+年代: 2008年12月9-
+言語名: 暗方語[site](https://w.atwiki.jp/kakis/pages/10680.html) 世界創作: アルシディア
+
+### [峡方語](https://w.atwiki.jp/kakis/pages/10681.html)
+年代: 2008年12月9-
+言語名: 峡方語[site](https://w.atwiki.jp/kakis/pages/10681.html) 世界創作: アルシディア
+
+### [理方語](https://w.atwiki.jp/kakis/pages/10682.html)
+年代: 2008年12月9-
+　2006年頃に作られたルティア方言がベース
+言語名: 理方語[site](https://w.atwiki.jp/kakis/pages/10682.html) 世界創作: アルシディア
+
+### [灼方語](https://w.atwiki.jp/kakis/pages/10689.html)
+年代: 2008年12月9-
+言語名: 灼方語[site](https://w.atwiki.jp/kakis/pages/10689.html) 世界創作: アルシディア
+
+### [マレット語](https://w.atwiki.jp/kakis/pages/10685.html)
+年代: 2008年12月9-
+　南半球に住むマレット人の言葉
+言語名: マレット語[site](https://w.atwiki.jp/kakis/pages/10685.html) 世界創作: アルシディア
+
+### [塔方語](https://w.atwiki.jp/kakis/pages/10683.html)
+年代: 2008年12月9-
+言語名: 塔方語 サヴィア語[site](https://w.atwiki.jp/kakis/pages/10683.html) 世界創作: アルシディア
+
+### [ケヴェア語](https://w.atwiki.jp/kakis/pages/10686.html)
+年代: 2008年12月10-
+言語名: ケヴェア語[site](https://w.atwiki.jp/kakis/pages/10686.html) 世界創作: アルシディア
+
+### [アデント語](https://w.atwiki.jp/kakis/pages/10687.html)
+年代: 2008年12月11-
+言語名: アデント語[site](https://w.atwiki.jp/kakis/pages/10687.html) 世界創作: アルシディア
+
+### [ファベル語](https://w.atwiki.jp/kakis/pages/10688.html)
+年代: 2008年12月12-
+言語名: ファベル語[site](https://w.atwiki.jp/kakis/pages/10688.html) 世界創作: アルシディア
+
+### [プレディス語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930)
+年代: 2009
+言語名: プレディス語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
+
+### [レディア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930)
+年代: 2009
+言語名: レディア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=930) 世界創作: アルシディア
+
+### [メディアン語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=932)
+年代: 2009
+言語名: メディアン語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=932) 世界創作: アルシディア
+
+### [カルセール語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=931)
+年代: 2009
+言語名: カルセール語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=931) 世界創作: アルシディア
+
+### [アルバレン](https://conlinguistics.org/arka/study_yulf_79.html)
+年代: 2014-2020
+言語名: アルバレン アルバザード語作者: faras palt tilasos 大宗組安右衛門[site](https://conlinguistics.org/arka/study_yulf_79.html) [site2](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren) [site3](https://arxidia.another.jp/atwiki8-arbazard/?pageid=916) 作者Twitter: [@Faras_Tilasos](https://twitter.com/Faras_Tilasos) 世界創作: アルシディア
+
+### [レスティル語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=915)
+年代: 2009
+言語名: レスティル語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=915) 世界創作: アルシディア
+
+### [リュディア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=914)
+年代: 2009
+言語名: リュディア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=914) 世界創作: アルシディア
+
+### [フィルヴェーユ語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=913)
+年代: 2009
+言語名: フィルヴェーユ語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=913) 世界創作: アルシディア
+
+### [フィーリア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=912)
+年代: 2009
+言語名: フィーリア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=912) 世界創作: アルシディア
+
+### [玲方語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750)
+年代: 2009
+言語名: 玲方語 上方ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=750) 
+
+### [ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925)
+年代: 2009
+言語名: ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=925) 世界創作: アルシディア
+
+### [古ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=922)
+年代: 2009
+言語名: 古ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=922) 世界創作: アルシディア
+
+### [中ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=923)
+年代: 2009
+言語名: 中ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=923) 世界創作: アルシディア
+
+### [近ルティア語](https://arxidia.another.jp/atwiki8-arbazard/?pageid=924)
+年代: 2009
+言語名: 近ルティア語[site](https://arxidia.another.jp/atwiki8-arbazard/?pageid=924) 世界創作: アルシディア
+
+### [チェンバル語](https://dic.nicovideo.jp/a/%E3%83%81%E3%82%A7%E3%83%B3%E3%83%90%E3%83%AB%E8%AA%9E)
+年代: 2010
+　日本のお笑い芸人いがわゆり蚊のネタに登場する架空の言語
+言語名: チェンバル語[site](https://dic.nicovideo.jp/a/%E3%83%81%E3%82%A7%E3%83%B3%E3%83%90%E3%83%AB%E8%AA%9E) 分類: 冗談言語
 
