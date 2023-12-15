@@ -152,6 +152,17 @@ graph TD;
   end
 ~~~
 
+
+## Now Listening
+![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=cjsdijim4zllci0624b1wbak2)
+
+[みかぶるspottify](https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2)
+
+## GitHubの芝生
+
+![](https://ghchart.rshah.org/mikanixonable)
+[GitHub](https://github.com/Mikanixonable)
+
 ## バナー
 <a href=""><img src="https://mikanixonable.github.io/banner.png" width="200" height="40" alt="月面植物園" /></a>  
 画像: https://mikanixonable.github.io/banner.png  
