@@ -155,12 +155,13 @@ graph TD;
 
 ## Now Listening
 ![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=cjsdijim4zllci0624b1wbak2)
+powerd by Spotify Recently Played README Generator
 
 [みかぶるspottify](https://open.spotify.com/user/cjsdijim4zllci0624b1wbak2)
 
 ## GitHubの芝生
-
 ![](https://ghchart.rshah.org/mikanixonable)
+powerd by GitHun Chart API
 [GitHub](https://github.com/Mikanixonable)
 
 ## バナー
