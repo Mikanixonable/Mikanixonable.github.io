@@ -206,9 +206,13 @@
 年代: 2016
 言語名: シヴァン語作者: そぶろ[site](https://w.atwiki.jp/sobloxivanamna) 作者Twitter: [@soblo_xivan](https://twitter.com/soblo_xivan) 世界創作: アムナCLAコード: xiv-am
 
-### [シャーリヴーンツ語](https://w.atwiki.jp/xaalivungcz)
-年代: 2013-2016
-言語名: シャーリヴーンツ語[site](https://w.atwiki.jp/xaalivungcz) [文法](https://w.atwiki.jp/xaalivungcz/pages/21.html) 世界創作: caihup（チャイフープ）
+### [シャーリヴーンツ語](https://sites.google.com/site/xaanapalaadi/)
+年代: 2013-2017
+言語名: シャーリヴーンツ語 x?na pal?di シャーナ 花語作者: シャーナ[site](https://sites.google.com/site/xaanapalaadi/) [site2](https://w.atwiki.jp/xaalivungcz) 作者Twitter: [@xaana_palaadi](https://twitter.com/xaana_palaadi) [辞書](https://sites.google.com/site/xaanapalaadi/%E5%8D%98%E8%AA%9E%E9%9B%86?authuser=0) [辞書2](https://web.archive.org/web/20201027192926/https://sites.google.com/site/xaanapalaadi/dan-yu-ji) [文法](https://w.atwiki.jp/xaalivungcz/pages/21.html) [文法2](https://sites.google.com/site/xaanapalaadi/%E5%9F%BA%E6%9C%AC%E9%83%A8%E5%88%86?authuser=0) [文法3](https://web.archive.org/web/20201027192924/https://sites.google.com/site/xaanapalaadi/yin-yun) 世界創作: caihup（チャイフープ）
+
+### [キリエニア語](https://killiena.wordpress.com/)
+年代: 2017-2021
+言語名: キリエニア語作者: んらん?ぉ ?o?ufa[site](https://killiena.wordpress.com/) [site2](https://w.atwiki.jp/killiena/pages/24.html) 作者Twitter: [@n_langvo](https://twitter.com/n_langvo) [文法](https://killiena.wordpress.com/%e6%96%87%e6%b3%95-2/) 
 
 ### セイセイ語
 年代: 2012年12月-
@@ -227,6 +231,15 @@
 ### [ゼノス語](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/)
 年代: 2021
 言語名: ゼノス語 XENOS作者: ヘイル[site](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/) 作者Twitter: [@XENOSLANGUAGE](https://twitter.com/XENOSLANGUAGE) [辞書](https://web.archive.org/web/20220809071810/http://xylops.cswiki.jp/index.php?%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3) 
+
+### るる語
+年代: 2020-2023
+言語名: るる語作者: 多々井ゆかり作者Twitter: [@rafenemine](https://twitter.com/rafenemine) 
+
+### [LANDI](https://ameblo.jp/shimizu-tknr/entry-12787465480.html)
+年代: 2021-2023
+　トキポナにインスパイアされた単語数136のミニマル言語
+言語名: LANDI ７セグ語 人工言語ランディ作者: 清水隆紀(1971-)[site](https://ameblo.jp/shimizu-tknr/entry-12787465480.html) 作者Twitter: [@tokipona_landi](https://twitter.com/tokipona_landi) 
 
 ### ソウキ語
 年代: 2022-2023
@@ -600,9 +613,14 @@
 　rjuka(榴火)(穆念真)さん(https://mixi.jp/show_friend.pl?pt=1702130085&sig=59f40a4a7785ab19e1703fd0610057289874c8a0&content_id=543186&route_trace=010001900000&id=505702)が発起人となったmixiコミュニティーで製作した言語。
 言語名: mixic作者: rjuka(穆念真)さんほか計51人[site](https://mixi.jp/view_community.pl?id=543186) [辞書](https://mixi.jp/view_bbs.pl?id=3877215&comm_id=543186) [文法](https://mixi.jp/view_bbs.pl?id=3877019&comm_id=543186) 
 
-### [ミリ語](https://mili.ninja-web.net/15/15.html)
-年代: 2006-2012
-言語名: ミリ語作者: koaes mokos hele helte nymwa[site](https://mili.ninja-web.net/15/15.html) 作者Twitter: [@nymwa](https://twitter.com/nymwa) [辞書](https://mili.ninja-web.net/15/38.html) [文法](https://mili.ninja-web.net/15/18.html) 世界創作: あり分類: アプリオリ言語
+### [フーリカ語](https://tanukipedia.miraheze.org/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%AB%E8%AA%9E)
+年代: 2022-2023
+　作者情報はZiphilさんによるリストから(https://ziphil.com/other/other/1.html)
+言語名: フーリカ語 folik?na作者: 彩羽さいは[site](https://tanukipedia.miraheze.org/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%AB%E8%AA%9E) 
+
+### ノユラ語
+年代: 2020-2021
+言語名: ノユラ語作者Twitter: [@Asterisk6446229](https://twitter.com/Asterisk6446229) 
 
 ### [ムンビーナ語](http://ww22.tiki.ne.jp/%7Ephalsail/gengo/munb/index.htm)
 年代: 1980-2023
@@ -696,6 +714,10 @@
 　ホームページトップのみアーカイブに残っているが文法や語彙は2023年時点でアクセスできない。人工言語野では活用や格変化がないと紹介されている。(https://dos.chottu.net/conlang_link.html?l=index)
 言語名: Lingo Mondo作者: 縄田幹治[site](https://web.archive.org/web/20060813110655/http://ip.tosp.co.jp/i.asp?I=lingomondo) [辞書](https://souzoumap.menhera.io/Taosenai/Ekimeigojiten.HTM) 分類: 国際補助語
 
+### [wentiay-bangao](https://skytomo221.com/22/ja/)
+年代: 2023
+言語名: wentiay-bangao ウェンティアユ・バンガオ作者: skytomo[site](https://skytomo221.com/22/ja/) 作者Twitter: [@skytomo221](https://twitter.com/skytomo221) 
+
 ### [LoCoS](https://note.com/otayukio_design/n/nb341f656d215)
 年代: 1991-2008
 　多摩美術大学デザイン学科の太田幸夫教授が1971年に雑誌グラフィックデザイン42号に公表、1991年にウィーンで行われた視覚コミュニケーションの国際会議で発表した、ピクトグラムによる視覚型国際補助語。作者の太田教授は、非常出口のピクトグラムを日本以外に広めたことで知られる。
@@ -745,10 +767,6 @@
 　資料: https://ziphil.github.io/ConlangVestiges/exhibit/14.html
 言語名: レミリア共通語 第三期ルエン語 レイア語作者: クノーツアクア作者Twitter: [@Qunoxts](https://twitter.com/Qunoxts) [辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=ectos&search=&type=0&agree=1&page=5) 
 
-### [xaana palaadi](https://web.archive.org/web/20201027192924/https://sites.google.com/site/xaanapalaadi/home)
-年代: 2016-2020
-言語名: xaana palaadi作者: おかゆ[site](https://web.archive.org/web/20201027192924/https://sites.google.com/site/xaanapalaadi/home) [辞書](https://sites.google.com/site/xaanapalaadi/%E5%8D%98%E8%AA%9E%E9%9B%86?authuser=0) [辞書2](https://web.archive.org/web/20201027192926/https://sites.google.com/site/xaanapalaadi/dan-yu-ji) [文法](https://sites.google.com/site/xaanapalaadi/%E5%9F%BA%E6%9C%AC%E9%83%A8%E5%88%86?authuser=0) [文法2](https://web.archive.org/web/20201027192924/https://sites.google.com/site/xaanapalaadi/yin-yun) 
-
 ### [縁式](https://sites.google.com/site/enishikiceniski/)
 年代: 2015-2017
 　ロジバンの派生言語
@@ -764,6 +782,11 @@
 　旧辞書: https://w.atwiki.jp/tsapsaanja/pages/11.html
 　旧文法: https://w.atwiki.jp/tsapsaanja/pages/13.html
 言語名: ピース語 匪斯語 匪語作者: ルーミア かりぐら Caligula=Armjanskaja[site](https://sites.google.com/site/tsapsaanja/%E5%87%BA%E5%85%A5%E5%8F%A3?authuser=0) 作者Twitter: [@Tsapsaanja](https://twitter.com/Tsapsaanja) [辞書](https://sites.google.com/site/tsapsaanja/%E8%BE%9E%E6%9B%B8?authuser=0) [文法](https://sites.google.com/site/tsapsaanja/%E6%96%87%E6%B3%95%E8%A9%B3%E7%B4%B0?authuser=0) 世界創作: なし分類: 歌唱言語 アプリオリ言語
+
+### [人國語](https://twitter.com/koropinkoropin/status/1725118513671753799)
+年代: 2019-2023
+　漢字語表記されたアイヌ語の架空史
+言語名: 人國語作者: 高坂優希[site](https://twitter.com/koropinkoropin/status/1725118513671753799) 作者Twitter: [@koropinkoropin](https://twitter.com/koropinkoropin) 
 
 ### [ニャンコ語](https://tanukipedia.miraheze.org/wiki/%E3%83%8B%E3%83%A3%E3%83%B3%E3%82%B3%E8%AA%9E)
 年代: 2018-2020
@@ -794,6 +817,10 @@
 年代: 2016
 言語名: 人煌言語作者: mis?ke=furezza=Kagena[site](https://sites.google.com/view/ruwoo/c-ren-huang-yan-yu?authuser=0) [site2](https://twitter.com/i/events/1004154830619725825) 作者Twitter: [@Kagena_ryuuka](https://twitter.com/Kagena_ryuuka) 
 
+### [月本語](https://twitter.com/0O8z3b3PIKi2vpl/status/1269867024802443264)
+年代: 2019-2020
+言語名: 月本語作者: 【書家書太郎】タロッター＠ツイッター書道[site](https://twitter.com/0O8z3b3PIKi2vpl/status/1269867024802443264) 作者Twitter: [@0O8z3b3PIKi2vpl](https://twitter.com/0O8z3b3PIKi2vpl) 
+
 ### ena
 年代: 2020
 言語名: ena 恵那語作者: dali-einerZy:=asteain-ninia murano7作者Twitter: [@einerzy](https://twitter.com/einerzy) [辞書](https://github.com/asteain-ninia/ena-dictionary) 
@@ -809,7 +836,7 @@
 ### [Vaak?ar](https://sakar-conlang.jimdofree.com/)
 年代: 2016-2023
 　ブラーフミー系をベースに、チベット語、古代日本語、ヒンディー語、英語などの語彙を借用した半アプリオリ言語
-言語名: Vaak?ar ヴァークシャル サカル語(旧名1) シャカル語(旧名2)[site](https://sakar-conlang.jimdofree.com/) [文法](https://sakar-conlang.jimdofree.com/%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3/) 
+言語名: Vaak?ar ヴァークシャル サカル語(旧名1) シャカル語(旧名2)作者: 文津言比古[site](https://sakar-conlang.jimdofree.com/) [文法](https://sakar-conlang.jimdofree.com/%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3/) 
 
 ### [ようじょ語](https://togetter.com/li/1152542)
 年代: 2017
@@ -826,6 +853,14 @@
 　文法が公開されていない言語。ひし形の文様のような文字で表記する。有志による解読作業が行われている。数詞ごとに品詞が異なる、同じ数を10以上の表現で表すなど複雑な数詞体系をもつhttps://x.com/casolot_/status/1664123209644642315?s=20
 　膠着語という説がある
 言語名: yoka tetute テトテ語 テトゥテ語作者: kakjeka[site](https://scrapbox.io/tgbg/tetute%E8%AA%9E%E8%B3%87%E6%96%99%E9%9B%86) [site2](https://www.evernote.com/shard/s655/client/snv?noteGuid=9598ef1f-c9f1-4064-ae74-be377e853ad6&noteKey=629c8b7213084fb13141958ce443e53b&sn=https%3A%2F%2Fwww.evernote.com%2Fshard%2Fs655%2Fsh%2F9598ef1f-c9f1-4064-ae74-be377e853ad6%2F629c8b7213084fb13141958ce443e53b&title=tetute%25E8%25AA%259E%25E8%25AA%25BF%25E6%259F%25BB%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588) [site3](https://haar-you.github.io/TetuteInputMethod/grammar/ringo58.html) [site4](https://migdal.jp/bertia_arbarigmirok/taf-4a89) 作者Twitter: [@kakjeka](https://twitter.com/kakjeka) 
+
+### [シャハヤ](https://sites.google.com/site/chry7511/)
+年代: 2023
+言語名: シャハヤ[site](https://sites.google.com/site/chry7511/) 世界創作: あり
+
+### [ルア](https://sites.google.com/site/chry7511/home/lua?authuser=0)
+年代: 2023
+言語名: ルア[site](https://sites.google.com/site/chry7511/home/lua?authuser=0) 
 
 ### [@nalfij_carfady氏の不明言語](https://twitter.com/nalfij_carfady)
 年代: 2016
@@ -1008,7 +1043,7 @@
 
 ### [マクシャギュア語](https://saelawhiz.blog.fc2.com/blog-category-4.html)
 年代: 2014
-言語名: マクシャギュア語 幕語[site](https://saelawhiz.blog.fc2.com/blog-category-4.html) [辞書](https://limeputa.wiki.fc2.com/wiki/%E6%8E%A5%E5%B0%BE%E8%BE%9E) [辞書2](https://web.archive.org/web/20130615181839/https://macsyagyua.iinaa.net/) [文法](https://saelawhiz.blog.fc2.com/blog-entry-229.html) 
+言語名: マクシャギュア語 幕語作者: りよこ[site](https://saelawhiz.blog.fc2.com/blog-category-4.html) [辞書](https://limeputa.wiki.fc2.com/wiki/%E6%8E%A5%E5%B0%BE%E8%BE%9E) [辞書2](https://web.archive.org/web/20130615181839/https://macsyagyua.iinaa.net/) [文法](https://saelawhiz.blog.fc2.com/blog-entry-229.html) 
 
 ### ミーク語
 言語名: ミーク語 Viku
@@ -1149,7 +1184,12 @@
 
 ### [スィレフ語](https://w.atwiki.jp/cgwj/pages/29.html)
 年代: 2021
+　作者情報はZiphilさんによるリストから(https://ziphil.com/other/other/1.html)
 言語名: スィレフ語作者: (時間)の(概念)の(信仰対象)は(代名詞)だけに(動作)する[site](https://w.atwiki.jp/cgwj/pages/29.html) 世界創作: 悠里
+
+### [鴬語](https://w.atwiki.jp/phenyllithium)
+年代: 2023
+言語名: 鴬語作者: やみせふぇ[site](https://w.atwiki.jp/phenyllithium) [文法](https://w.atwiki.jp/phenyllithium/pages/11.html) 
 
 ### タフタット語
 年代: 2020
@@ -1172,6 +1212,10 @@
 ### [東島通商語](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0)
 年代: 2019-2023
 言語名: 東島通商語 ペメセペ語作者: 悠里[site](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E?authuser=0) [辞書](https://zpdic.ziphil.com/dictionary/54) [文法](https://sites.google.com/site/syxobo/%E6%9D%B1%E5%B3%B6%E9%80%9A%E5%95%86%E8%AA%9E/%E6%96%87%E6%B3%95%E7%95%A5%E8%AA%AC?authuser=0) 世界創作: 悠里
+
+### [ウィラ語](https://w.atwiki.jp/wilaseli/)
+年代: 2023
+言語名: ウィラ語作者: 人工言語ウィラ語たん[site](https://w.atwiki.jp/wilaseli/) 作者Twitter: [@wilaselija_ba](https://twitter.com/wilaselija_ba) 分類: アプリオリ言語
 
 ### [バート語](http://jurliyuuri.com/bhaataan/index.html)
 年代: 2017-2023
@@ -1420,8 +1464,18 @@
 年代: 2018
 言語名: レウゲニア語作者: @leugenius作者Twitter: [@leugenius](https://twitter.com/leugenius) 
 
+### [ダン=ラ=ハン語](https://w.atwiki.jp/gionshantveed/pages/919.html)
+年代: 2016-2021
+言語名: ダン=ラ=ハン語作者: えかとん[site](https://w.atwiki.jp/gionshantveed/pages/919.html) 作者Twitter: [@GSVNNS_E](https://twitter.com/GSVNNS_E) 世界創作: 大宇宙
+
+### [橋若子](https://web.archive.org/web/20190622052036/https://sites.google.com/site/hasiwako/home)
+年代: 2019
+　人工言語ハルマットが話される大陸の南にあるキヤディサ諸島で話される
+言語名: 橋若子[site](https://web.archive.org/web/20190622052036/https://sites.google.com/site/hasiwako/home) [辞書](https://web.archive.org/web/20190622052835/https://sites.google.com/site/hasiwako/zhong-yao-dan-yu-ji) [文法](https://web.archive.org/web/20190622052835/https://sites.google.com/site/hasiwako/home/wen-fa) 世界創作: 人工世界エシュカルト
+
 ### ロースリア語
-言語名: ロースリア語作者: mei 鮎川早月 鮎川愛衣 Maycia Arenberg アージャ メーリエ M?lier作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) 
+年代: 2014
+言語名: ロースリア語 ローサリア語作者: mei 鮎川早月 鮎川愛衣 Maycia Arenberg アージャ メーリエ M?lier作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) 
 
 ### リュスタール語
 年代: 2014-2015
@@ -1429,7 +1483,9 @@
 言語名: リュスタール語作者: mei 鮎川早月 鮎川愛衣 Maycia Arenberg アージャ メーリエ M?lier作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) 
 
 ### [フィーリア語](https://maykloaayukawa.wixsite.com/nagili/language-list)
-言語名: フィーリア語作者: mei 鮎川早月 鮎川愛衣 Maycia Arenberg アージャ メーリエ M?lier[site](https://maykloaayukawa.wixsite.com/nagili/language-list) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) 
+年代: 2012-2020
+　かつてはセレン氏管轄
+言語名: フィーリア語作者: mei 鮎川早月 鮎川愛衣 Maycia Arenberg アージャ メーリエ M?lier[site](https://maykloaayukawa.wixsite.com/nagili/language-list) 作者Twitter: [@MayciaArenberg](https://twitter.com/MayciaArenberg) 世界創作: アルシディア
 
 ### [ソリエナ語](https://www.tumblr.com/mayayukawa/92340640400/%E5%8C%97%E3%82%BD%E3%83%AA%E3%82%A8%E3%83%8A%E3%81%AE%E5%85%B8%E7%A4%BC%E6%A8%A9%E4%B8%BB%E5%BC%B5%E6%A0%B9%E6%8B%A0?source=share)
 年代: 2014
@@ -1721,4 +1777,45 @@
 年代: 2020
 　痕跡はスライムさんのリスト(https://sites.google.com/site/moyacilang/conlanglist)のみ
 言語名: ユア語
+
+### [Varhil](https://hedalu244.github.io/varhil/)
+年代: 2019-2023
+言語名: Varhil レミウェイ(旧名)作者: へだる hedalu[site](https://hedalu244.github.io/varhil/) 作者Twitter: [@hedalu244](https://twitter.com/hedalu244) [辞書](https://hedalu244.github.io/varhil/dictionary/) [文法](https://hedalu244.github.io/varhil/grammar/first-order-logic/) 
+
+### ミュ語
+年代: 2017-2023
+言語名: ミュ語作者: koaes mokos hele helte nymwa作者Twitter: [@nymwa](https://twitter.com/nymwa) 
+
+### [ミリ語](https://mili.ninja-web.net/15/15.html)
+年代: 2006-2012
+言語名: ミリ語作者: koaes mokos hele helte nymwa[site](https://mili.ninja-web.net/15/15.html) 作者Twitter: [@nymwa](https://twitter.com/nymwa) [辞書](https://mili.ninja-web.net/15/38.html) [文法](https://mili.ninja-web.net/15/18.html) 世界創作: あり分類: アプリオリ言語
+
+### [セルナーダ語](https://sites.google.com/view/yurfa/)
+年代: 2018-2019
+言語名: セルナーダ語作者: 梅津裕一[site](https://sites.google.com/view/yurfa/) 作者Twitter: [@u1_umetsu](https://twitter.com/u1_umetsu) [辞書](https://sites.google.com/view/yurfa/%E8%BE%9E%E6%9B%B8?authuser=0) [文法](https://sites.google.com/view/yurfa/%E5%9F%BA%E6%9C%AC%E6%96%87%E6%B3%95?authuser=0) 
+
+### [アルファ祖語](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/)
+言語名: アルファ祖語作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [ベータ祖語](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/)
+言語名: ベータ祖語作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [ガンマ祖語](https://pianists.github.io/PsMemoBlog/conworld/languages/gamma_olang/)
+言語名: ガンマ祖語作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/gamma_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/gamma_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [ベータ・エー祖語(仮)](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/a_olang/)
+言語名: ベータ・エー祖語(仮)作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/a_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/beta_olang/a_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [アルファ・エー祖語(仮)](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/a_olang/)
+言語名: アルファ・エー祖語(仮)作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/a_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/a_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [アルファ・ビー祖語(仮)](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/b_olang/)
+言語名: アルファ・ビー祖語(仮)作者: ぴあにすつ pianists[site](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/b_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/b_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [アルファ・シー祖語(仮)](https://majukyi.github.io/Alubis/a_c_Correspondence.html)
+言語名: アルファ・シー祖語(仮)作者: ぴあにすつ pianists[site](https://majukyi.github.io/Alubis/a_c_Correspondence.html) [site2](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/c_olang/) 作者Twitter: [@pianists_s](https://twitter.com/pianists_s) [辞書](https://pianists.github.io/PsMemoBlog/conworld/languages/alpha_olang/c_olang/dict.html) 世界創作: 仮想世界アルビス
+
+### [スヮドゥン語族](https://web.archive.org/web/20220507050048/https://swadunlanguages.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8)
+年代: 2021-2022
+言語名: スヮドゥン語族作者: りめすとり[site](https://web.archive.org/web/20220507050048/https://swadunlanguages.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8) [site2](https://migdal.jp/tsarhfis/-1c7n) 作者Twitter: [@rhemestry](https://twitter.com/rhemestry) 
 
