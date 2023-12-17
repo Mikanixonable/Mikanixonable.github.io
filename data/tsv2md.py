@@ -89,7 +89,69 @@ def dic2md2(dic):
     
     return md
 
+def dic2md3(dic):
+    md = '|言語名|活動年代|作者|'
+    md += '\n|---|---|---|'
+    for lang in dic:
+        aa = ''
+        if 'サイト' in lang:
+            aa += "[{a}]({b})".format(a=lang["言語名"][0],b=lang['サイト'][0])
+        else:
+            aa += "{a}".format(a=lang["言語名"][0])
+
+        a = lang['年代'][0]
+
+
+        b = ''
+        if '作者' in lang:
+            if '作者Twitter' in lang:
+                b += '[{a}]({b})'.format(a=lang['作者'][0],b=['作者Twitter'][0])
+            else:
+                b += lang['作者'][0]
+        # if '説明' in lang:
+        #     b += lang['説明'][0]
+        
+        c = ''
+        if 'サイト' in lang:
+            if len(lang['サイト'])>2:
+                for i in range(len(lang['サイト']) - 1):
+                    c+= '([サイト{i}]({a}))'.format(i=str(i+2),a = lang['サイト'][i+1])
+        if '文法' in lang:
+            c += '([文法]({a}))'.format(a = lang['文法'][0])
+            
+        if '文法' in lang:
+            if len(lang['文法'])>2:
+                for i in range(len(lang['文法']) - 1):
+                    c+= '([文法{i}]({a}))'.format(i=str(i+2),a = lang['文法'][i+1])
+        
+        if '辞書' in lang:
+            c += '([辞書]({a}))'.format(a = lang['辞書'][0])
+
+        if '辞書' in lang:
+            if len(lang['辞書'])>2:
+                for i in range(len(lang['辞書']) - 1):
+                    c+= '([辞書{i}]({a}))'.format(i=str(i+2),a = lang['辞書'][i+1])
+
+
+        md +="\n|{a}     {d}|{b}|{c}|".format(a=aa,b=a,c=b,d=c)
+
+
+        # if legend in lang:
+        #     if legend
+        #     if lang[legend][0][0:4] == "http":
+        #         md +="[{a}]({b})".format(a=legend,b=lang[legend][0])
+        #     else:
+        #         md +=lang[legend][0]
+        # else:
+        #     md+=' '
+        
+        md+="|"
+    
+    return md
+
+
 md = """
+
 # 日本語圏人工言語リスト(2023年12月)
 　日本語圏の人工言語のリストが最近作られていないと思ったので、底となるリストを参考に、新しい言語も合わせてつくったものです。リストのすべての言語の情報は私がアクセスして確認しなおしています。
 
@@ -112,7 +174,7 @@ md = """
 [紹介ツイート](https://x.com/mayciaarenberg/status/963447200087879680?s=46&t=rWvY73qZa5Ie23yU0UA6WA)
 [人工言語クラスタフォロー](https://twitter.com/jin_kou_gengo)というこのリストに入っていたアカウントをフォローするアカウントがあったため、少し漏れがあるがリストを復元することができる。@2me_ma_sagiさんありがとう
 
- [辞書リスト](http://twoc.ever.jp/twoc/conlang.cgi?mode=list) - The world of conlangs
+- [辞書リスト](http://twoc.ever.jp/twoc/conlang.cgi?mode=list) - The world of conlangs
  2020年ごろ
 
 - [人工言語リスト](https://sites.google.com/site/moyacilang/conlanglist) - slaimsan
@@ -155,11 +217,10 @@ pprint(dic)
 md +="""
 ## 人工言語リスト
 """
-md += dic2md2(dic)
+md += dic2md3(dic)
 
 md += """
 
-このリストの私が書いた部分は著作権を放棄します
 2023年12月 Mikanixonable
 """
 
