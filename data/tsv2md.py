@@ -33,12 +33,12 @@ def tsv2dic(file_path):
 def dic2md(dic):
     md = ''
     for lang in dic:
-        if 'site' in lang:
-            md += "### "+"[{a}]({b})".format(a=lang["言語名"][0],b=lang['site'][0])
+        if 'サイト' in lang:
+            md += "### "+"[{a}]({b})".format(a=lang["言語名"][0],b=lang['サイト'][0])
         else:
             md += "### "+"{a}".format(a=lang["言語名"][0])
-        if "era" in lang:
-             md += "\n年代: "+lang["era"][0]
+        if "年代" in lang:
+             md += "\n年代: "+lang["年代"][0]
         if "説明" in lang:
             for text in lang["説明"]:
                 md += "\n　"+text
@@ -47,7 +47,7 @@ def dic2md(dic):
         
         md+="\n"
         for key,value in list(lang.items()):
-            if key not in ["説明","era"]:
+            if key not in ["説明","年代"]:
                 # md+="\n"
                 if key == "作者Twitter":
                     md+="作者Twitter: [@{a}]({b}) ".format(k=key,a=value[0].split("com/")[1],b=value[0])
@@ -82,6 +82,9 @@ def dic2md2(dic):
                     md +="[{a}]({b})".format(a=legend,b=lang[legend][0])
                 else:
                     md +=lang[legend][0]
+            else:
+                md+=' '
+        
         md+="|"
     
     return md
@@ -142,7 +145,12 @@ md = """
 """
 
 dic = tsv2dic('conlang.tsv')
+for lang in dic:
+    if '年代' not in lang:
+        print(lang['言語名'])
+dic = sorted(dic, key=lambda x: int(x['年代'][0][0:4]))
 pprint(dic)
+
 
 md +="""
 ## 人工言語リスト
@@ -150,6 +158,7 @@ md +="""
 md += dic2md2(dic)
 
 md += """
+
 このリストの私が書いた部分は著作権を放棄します
 2023年12月 Mikanixonable
 """
