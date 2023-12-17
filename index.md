@@ -161,7 +161,7 @@ powerd by Spotify Recently Played README Generator
 
 ## GitHubの芝生
 ![](https://ghchart.rshah.org/mikanixonable)
-powerd by GitHun Chart API
+powerd by GitHub Chart API
 [GitHub](https://github.com/Mikanixonable)
 
 ## バナー
