@@ -431,7 +431,7 @@
 |タフタット語     ([辞書](https://meloviliju.github.io/taftarl/lang/dict.html))|2020|[悠里](作者Twitter)||
 |[RQ:v=nu:語](https://github.com/SkurlavenijaMavija/rkharvanur)     |2020-2023|[まい](作者Twitter)||
 |ルエン・レイア語     |2020|[クノーツアクア](作者Twitter)||
-|バゼ語     |2020-2022|[がーねっと](作者Twitter)||
+|[バゼ語](https://note.com/garnet3106/n/n64167e853b61)     |2020-2022|[がーねっと](作者Twitter)||
 |["AIU-R?UMASI"(エーアイユーローマ字)](https://sites.google.com/site/yankuyo/%E4%BA%BA%E5%B7%A5%E8%A8%80%E8%AA%9E%E7%BE%A4/aiu-r%C4%81umasi?authuser=0)     |2020|[ヤンクーヨ](作者Twitter)||
 |[kalepitomu](https://sites.google.com/site/yankuyo/%E4%BA%BA%E5%B7%A5%E8%A8%80%E8%AA%9E%E7%BE%A4/kalepitomu?authuser=0)     |2020|[ヤンクーヨ](作者Twitter)||
 |[NVTT](https://sites.google.com/site/yankuyo/%E4%BA%BA%E5%B7%A5%E8%A8%80%E8%AA%9E%E7%BE%A4/nvtt?authuser=0)     |2020|[ヤンクーヨ](作者Twitter)||
@@ -459,7 +459,7 @@
 |[くるみ語](https://migdal.jp/azumanyan/%E6%9C%80%E8%BF%91%E6%80%9D%E3%81%B5%E8%A8%80%E8%AA%9E%E3%81%AE%E3%81%93%E3%81%A8-172c)     |2020-2021|[あづまにゃん](作者Twitter)||
 |ラニャフ・ファザ語     |2020|||
 |[カラニア語](https://calaniakingdom.jimdofree.com/home/calanian/)     ([文法](https://calaniakingdom.jimdofree.com/home/calanian/grammar/))([辞書](https://calaniakingdom.jimdofree.com/home/calanian/word/))|2020|[Кумрал Каланд Ⅳ](作者Twitter)||
-|[セム・アルカ(?e?-????)](https://twitter.com/SEM_ALCA_tan)     |2020|[ベルティア2019](作者Twitter)||
+|[セム・アルカ(?e?-????)](https://twitter.com/SEM_ALCA_tan)     |2020|[ベルティア](作者Twitter)||
 |紅枝しとみ氏の人工言語     |2020|[紅枝しとみ](作者Twitter)||
 |[オ゛ェｼﾞｭルニョェーッ語](https://scrapbox.io/lanva-bixic/)     ([文法](https://migdal.miraheze.org/wiki/%E3%82%AA%E3%82%9B%E3%82%A7%EF%BD%BC%EF%BE%9E%EF%BD%AD%E3%83%AB%E3%83%8B%E3%83%A7%E3%82%A7%E3%83%BC%E3%83%83%E8%AA%9E%E6%96%87%E5%85%B8))|2021|[loyuka(koloka)](作者Twitter)||
 |[ゼノス語](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/)     ([辞書](https://web.archive.org/web/20220809071810/http://xylops.cswiki.jp/index.php?%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3))|2021|[ヘイル](作者Twitter)||
@@ -487,8 +487,8 @@
 |中西氷柱 氏の暗号言語     |2022|[中西 氷柱 (Tsurara Nakanishi)](作者Twitter)||
 |[人工言語くふ](https://kupu-language.blog.jp/)     ([文法](https://kupu-language.blog.jp/archives/12816038.html))([辞書](https://kupu-language.blog.jp/archives/12816048.html))|2022|[人工言語くふ](作者Twitter)||
 |[教育ローマ字](https://spokenjapanese.wordpress.com/)     |2022|[教育ローマ字とか](作者Twitter)||
-|[???????(人工言語)](https://twitter.com/Mishula_tan)     |2022|[ベルティア2019](作者Twitter)||
-|[????? ?????(人工言語)](https://twitter.com/STLM__)     |2022|[ベルティア2019](作者Twitter)||
+|[???????(人工言語)](https://twitter.com/Mishula_tan)     |2022|[ベルティア](作者Twitter)||
+|[????? ?????(人工言語)](https://twitter.com/STLM__)     |2022|[ベルティア](作者Twitter)||
 |ウリアヂェオ語     ([辞書](https://zpdic.ziphil.com/dictionary/1367))|2023|||
 |ラゼフ語     ([辞書](https://zpdic.ziphil.com/dictionary/raqef))|2023|[Atridott](作者Twitter)||
 |[ワウーン語](https://migdal.jp/sasho1223/%E3%83%AF%E3%82%A6%E3%83%BC%E3%83%B3%E8%AA%9E%E9%80%B2%E6%8D%97%E5%A0%B1%E5%91%8A-2-5e28)     ([辞書](https://zpdic.ziphil.com/dictionary/waoon))|2023|Sasho-Shirokami||
@@ -538,5 +538,9 @@
 |ネジバ語     ([文法](https://note.com/sigajugo/m/maadee12a0715))|2023|[志賀十五](作者Twitter)||
 |ウーパナンタ語     |2023|[中野智宏](作者Twitter)||
 |[アカキリパ](https://migdal.jp/nsopikha/%E3%82%A2%E3%82%AB%E3%82%AD%E3%83%AA%E3%83%91%E9%9B%91%E8%A7%A3%E8%AA%AC-30p8)     |2023|ンソピハ||
+|[はじめて人工言語を作ってみたレポ](https://note.com/si_helium/n/n4022e2cdc4c2)     ([辞書](https://docs.google.com/spreadsheets/d/1bhjSxuQl4Bzps20jRGR3PmpIoy7XW_73wYDy59n4u3I/edit#gid=90290024))|2023|ヘリウム||
+|[キプソル語](https://www.youtube.com/watch?v=r4AKMeUhRf4)     |2023|[Ziphil](作者Twitter)||
+|[ニャムス語](https://note.com/komatuna1108/n/n9466300b61fc)     ([辞書](https://note.com/komatuna1108/n/n703040897deb))|2023|緑野小松菜||
+|[ピペロル語](https://note.com/betweendimension/n/n4ea49b3bb888)     |2023|結数 / Between Dimension||
 
 2023年12月 Mikanixonable
