@@ -128,6 +128,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[しょこたん語](https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%87%E3%81%93%E3%81%9F%E3%82%93%E8%AA%9E)     |2007|中川翔子||
 |[イジェール語_緯語_Etube Id'erin](https://zaslon.info/idyer/)     ([文法](https://zaslon.info/idyerin/%e6%96%87%e5%ad%97%e3%81%a8%e7%99%ba%e9%9f%b3/))([辞書](https://zaslon.info/dict/dict.php))|2008-2023|[Zaslon_ざすろん](作者Twitter)||
 |[Eldein](https://w.atwiki.jp/hrain/pages/66.html)     ([辞書](https://skydrive.live.com/?cid=b7fc9ffff390b3c6#!/?cid=B7FC9FFFF390B3C6&id=B7FC9FFFF390B3C6%21875))|2008年2月下旬-2010|nias avalentis||
+|[ロズワルド](https://w.atwiki.jp/hansale/)     |2008|はんされ||
 |[シュライ語](https://web.archive.org/web/20130115155503/https://www9.atwiki.jp/fai_iaf/)     ([文法](https://web.archive.org/web/20130120163833/http://www9.atwiki.jp/fai_iaf/pages/14.html))([辞書](https://web.archive.org/web/20130120164032/http://www9.atwiki.jp/fai_iaf/pages/15.html))|2008年5月31日-2013|[波砂間 壮人_末廣優](作者Twitter)||
 |[nosara語](https://blog.goo.ne.jp/littorio/e/4808a26b4ee27c0e157124b082075563)     |2008|littorio||
 |[ファイ語](https://w.atwiki.jp/kakis/sp/archive/20081204/240f2260dcb3b6d59841d6386023c455)     |2008|末広優||
@@ -250,6 +251,8 @@ https://mikanixonable.github.io/data/conlang.csv
 |[ファルディアス語](https://w.atwiki.jp/cerie-ariinie/)     |2012年6月中旬|[mei_鮎川早月_鮎川愛衣_Maycia Arenberg_アージャ_メーリエ_M?lier](作者Twitter)||
 |[オーレー語](http://conl.web.fc2.com/)     ([文法](http://conl.web.fc2.com/bunpo.html))([辞書](http://conl.web.fc2.com/kword.html))|2013|人工言語オーレー語学会||
 |[ワコファル語_ヴァコファル語_wakofal syal](https://migdal.jp/nobuyuki1097/comment/1k2)     |2013-2022|[渡久地 信之](作者Twitter)||
+|[クリスティア語_Lingvo Klista_la klista](https://w.atwiki.jp/k-project/pages/122.html)     |2013|||
+|[ヴィチェルカ語](https://w.atwiki.jp/vicelka/)     ([文法](https://w.atwiki.jp/vicelka/pages/16.html))|2013|ラウエットリヒターン(lauet lihtawn)||
 |[シャーリヴーンツ語_x?na pal?di_シャーナ_花語](https://sites.google.com/site/xaanapalaadi/_https://w.atwiki.jp/xaalivungcz)     ([文法](https://w.atwiki.jp/xaalivungcz/pages/21.html_https://sites.google.com/site/xaanapalaadi/%E5%9F%BA%E6%9C%AC%E9%83%A8%E5%88%86?authuser=0_https://web.archive.org/web/20201027192924/https://sites.google.com/site/xaanapalaadi/yin-yun))([辞書](https://sites.google.com/site/xaanapalaadi/%E5%8D%98%E8%AA%9E%E9%9B%86?authuser=0_https://web.archive.org/web/20201027192926/https://sites.google.com/site/xaanapalaadi/dan-yu-ji))|2013-2017|[シャーナ](作者Twitter)||
 |[ゼノフェル語](https://w.atwiki.jp/xenofer/)     |2013-2016|[xenofer](作者Twitter)||
 |[Kewpanta_Kewpanto](https://blog.goo.ne.jp/littorio/e/7af21f7e3bbf77205635ff6916a0cfed_https://blog.goo.ne.jp/littorio/e/29254240a1d33f5809f90adb608ee988)     |2013|littorio||
@@ -287,6 +290,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[フラジャル語](https://seesaawiki.jp/furajaliko_creation/d/%a5%d5%a5%e9%a5%b8%a5%e3%a5%eb%b8%ec_https://furjarsakurai.wiki.fc2.com/)     ([文法](https://seesaawiki.jp/furajaliko_creation/d/%b2%bb%b1%a4%a4%cb%a4%c4%a4%a4%a4%c6))([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user_id=20011204))|2014|furajari?=soruiq?u=ji?agufu（フラジャリン＝ソルイッシュ=ジビャグフ）_FSJY||
 |トラトラ語     |2014|||
 |[アラズ語_toki ala](https://cogas.github.io/pages/runbau/araz_go/)     |2015年8月2日-2023|[おかゆ](作者Twitter)||
+|[Lyxa_リュシャ](https://w.atwiki.jp/lyxa/)     ([文法](https://w.atwiki.jp/lyxa/pages/35.html))|2015|||
 |[デーレ語_aulakk derle_derle_出語_しゅつご](https://tanukipedia.miraheze.org/wiki/%E3%83%87%E3%83%BC%E3%83%AC%E8%AA%9E)     ([辞書](https://github.com/asteain-ninia/derle-DIctionary))|2015-2023|[dali-einerZy:=asteain-ninia_murano7](作者Twitter)||
 |イェルサーク語     |2015|[うぉれおるむ](作者Twitter)||
 |[ユーテル語_Yutele](https://tanukipedia.miraheze.org/wiki/%E3%83%A6%E3%83%BC%E3%83%86%E3%83%AB%E8%AA%9E)     |2015-2016|Haluki119||
@@ -317,7 +321,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |ワガン語     |2015|奥||
 |[シヴァン語](https://w.atwiki.jp/sobloxivanamna)     |2016|[そぶろ](作者Twitter)||
 |[空見語_sorami vari](https://conlinguistics.fandom.com/ja/wiki/%E7%A9%BA%E8%A6%8B%E8%AA%9E)     |2016-2017|[アクマ_アクア_akvis](作者Twitter)||
-|[j?sjek_叡潟_イェーシェク](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0)     |2016?年?9?月?13?日?17時34分|[faras palt tilasos_大宗組安右衛門](作者Twitter)||
+|[j?sjek_叡潟_イェーシェク](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E5%8F%A1%E6%BD%9Fj%C3%AAsjek?authuser=0)     |2016年9月13日17時34分|[faras palt tilasos_大宗組安右衛門](作者Twitter)||
 |[ムシイン語_aejaije](https://www.tumblr.com/slaimsan/170174510485/%E3%81%8B%E3%81%A4%E3%81%A6-%E3%83%A0%E3%82%B7%E3%82%A4%E3%83%B3%E8%AA%9E-%E3%81%A8%E3%81%84%E3%81%86%E3%82%BF%E3%82%B0%E3%81%A7%E6%AF%8D%E9%9F%B3%E3%81%AE%E3%81%BF%E3%82%92%E4%BD%BF%E3%81%86%E8%A8%80%E8%AA%9E%E3%81%A8%E3%81%84%E3%81%86%E3%82%82%E3%81%AE%E3%82%92%E6%A4%9C%E8%A8%8E%E3%81%97%E3%81%9F%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E3%81%93%E3%82%8C%E3%81%AF%E3%81%9D%E3%81%AE%E5%BE%8C)     |2016-2021|[スライムさん_slaimsan.ポンタ_モヤ氏](作者Twitter)||
 |[ムボイン語](https://twitter.com/slaimsan/status/738934276444430336)     ([辞書](https://twitter.com/slaimsan/status/1180634090191474689))|2016-2023|[スライムさん_slaimsan.ポンタ](作者Twitter)||
 |[人煌言語](https://sites.google.com/view/ruwoo/c-ren-huang-yan-yu?authuser=0_https://twitter.com/i/events/1004154830619725825)     |2016|[mis?ke=furezza=Kagena](作者Twitter)||
@@ -337,6 +341,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[アヲアヲアー語](https://twitter.com/cicada3301_kig/status/897798456898576384)     |2017|すきえんてぃあ_minerva scientia||
 |[エミュンス語_Lafoi aie Em:uns](https://w.atwiki.jp/gionshantveed/pages/216.html)     ([文法](https://w.atwiki.jp/gionshantveed/pages/216.html#id_b295f97f))|2017-2023|[ルニアス・ジヴェジルス](作者Twitter)||
 |[Lpobsatoga_LOPqSHE_Vigellocol_Vigell'c_色語](https://w.atwiki.jp/lpobsatoga/)     ([文法](https://w.atwiki.jp/lpobsatoga/pages/23.html))([辞書](http://twoc.ever.jp/twoc/conlang.cgi?search=&type=2&agree=1&mode=search&user_id=riou95_https://w.atwiki.jp/lpobsatoga/pages/19.html))|2017|||
+|[ヴェアリ語](https://w.atwiki.jp/vearlang/)     |2017|||
 |[キリエニア語](https://killiena.wordpress.com/_https://w.atwiki.jp/killiena/pages/24.html)     ([文法](https://killiena.wordpress.com/%e6%96%87%e6%b3%95-2/))|2017-2021|[んらん?ぉ_?o?ufa](作者Twitter)||
 |[ソヨル語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BD%E3%83%A8%E3%83%AB%E8%AA%9E)     |2017|||
 |オスーユ語     |2017|[うぉれおるむ](作者Twitter)||
@@ -516,6 +521,9 @@ https://mikanixonable.github.io/data/conlang.csv
 |apata語     |2023|[渡久地 信之](作者Twitter)||
 |[サーシュワ語](https://migdal.jp/kyomu_aniki/%E3%82%AD%E3%82%B7%E3%83%A7%E3%81%84%E6%96%87%E5%AD%97%E3%81%AE%E8%A8%80%E8%AA%9E%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F-n33)     |2023|||
 |グロールヘイム語     ([文法](https://migdal.jp/rhombus_vailehresta/%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%98%E3%82%A4%E3%83%A0%E8%AA%9E%E6%96%87%E6%B3%95%E3%81%9D%E3%81%AE-1-%E6%9A%AB%E5%AE%9A%E7%89%88-3lhh))([辞書](https://zpdic.ziphil.com/dictionary/grolheim))|2023|Rhombus||
+|[リッカ語](https://w.atwiki.jp/langartificielricca/)     |2023|アエミリア||
+|[ゴゴゴ語](https://w.atwiki.jp/gogogogogo/)     |2023|||
+|[人工言語カリネ](https://w.atwiki.jp/unknown_1206/pages/68.html)     ([辞書](https://w.atwiki.jp/unknown_1206/pages/85.html))|2023|[Unknown](作者Twitter)||
 |セロ語_???oqи?     |2023|||
 |Paibbai語     |2023|[フクロウナギ_apupuna](作者Twitter)||
 |レアミリス語     ([文法](https://migdal.jp/hotate_kun0804/%E3%83%AC%E3%82%A2%E3%83%9F%E3%83%AA%E3%82%B9%E8%AA%9E-1-%E6%A6%82%E8%A6%81%E3%81%A8%E4%BB%A3%E5%90%8D%E8%A9%9E-1948))|2023|ペクテノ||
