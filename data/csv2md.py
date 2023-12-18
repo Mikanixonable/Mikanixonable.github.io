@@ -42,6 +42,11 @@ def dic2md3(dic):
         else:
             aa += "{a}".format(a=lang["言語名"][0])
 
+ 
+        if len(lang['言語名'])>2:
+            for i in range(len(lang['言語名']) - 1):
+                aa += ', '+lang['言語名'][i+1]
+
         a = lang['年代'][0]
 
 
