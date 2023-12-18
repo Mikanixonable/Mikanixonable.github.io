@@ -20,7 +20,7 @@ def tsv2dic(file_path):
         dic = []
         for row in reader:
             for key,value in list(row.items()):
-                row[key] = row[key].split("_")
+                row[key] = row[key].split(",")
                 #空なら入れない
                 if value =='':
                     del row[key]
@@ -30,7 +30,64 @@ def tsv2dic(file_path):
                 dic.append(row)
         return dic
 
+def dic2md(dic):
+    md = ''
+    for lang in dic:
+        if 'サイト' in lang:
+            md += "### "+"[{a}]({b})".format(a=lang["言語名"][0],b=lang['サイト'][0])
+        else:
+            md += "### "+"{a}".format(a=lang["言語名"][0])
+        if "年代" in lang:
+             md += "\n年代: "+lang["年代"][0]
+        if "説明" in lang:
+            for text in lang["説明"]:
+                md += "\n　"+text
+        
 
+        
+        md+="\n"
+        for key,value in list(lang.items()):
+            if key not in ["説明","年代"]:
+                # md+="\n"
+                if key == "作者Twitter":
+                    md+="作者Twitter: [@{a}]({b}) ".format(k=key,a=value[0].split("com/")[1],b=value[0])
+                elif value[0][0:4] == "http":
+                     for i,elm in enumerate(value): 
+                        index = str(i+1)
+                        if i == 0:
+                            index = ""
+                        md+="[{k}]({v}) ".format(k=str(key)+str(index),v=elm)
+                else:
+                    md+="{k}: {v}".format(k=key,v=" ".join(value))
+        md += "\n\n"
+    
+    return md
+
+def dic2md2(dic):
+    legends = ["年代","作者","サイト","文法","辞書","架空世界","分類"]
+    md = '|言語名|年代|作者|サイト|文法|辞書|架空世界|分類|'
+    md += '\n|---|---|---|---|---|---|---|---|'
+    for lang in dic:
+        if 'site' in lang:
+            md += "\n|[{a}]({b})".format(a=lang["言語名"][0],b=lang['site'][0])
+        else:
+            md += "\n|{a}".format(a=lang["言語名"][0])
+        
+
+
+        for legend in legends:
+            md +="|"
+            if legend in lang:
+                if lang[legend][0][0:4] == "http":
+                    md +="[{a}]({b})".format(a=legend,b=lang[legend][0])
+                else:
+                    md +=lang[legend][0]
+            else:
+                md+=' '
+        
+        md+="|"
+    
+    return md
 
 def dic2md3(dic):
     md = '|言語名|活動年代|作者|'
@@ -51,11 +108,8 @@ def dic2md3(dic):
                 b += '[{a}]({b})'.format(a=lang['作者'][0],b=['作者Twitter'][0])
             else:
                 b += lang['作者'][0]
-        if '作者' in lang:
-            if len(lang['作者'])>2:
-                for i in range(len(lang['作者']) - 1):
-                    b+= ', '+lang['作者'][i+1]
-        
+        # if '説明' in lang:
+        #     b += lang['説明'][0]
         
         c = ''
         if 'サイト' in lang:
