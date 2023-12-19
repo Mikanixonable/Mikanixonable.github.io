@@ -13,7 +13,7 @@ def detect_encoding(file_path):
         detector.close()
     return detector.result['encoding']
 
-def csv2dic(file_path):
+def tsv2dic(file_path):
     encoding = detect_encoding(file_path)
     with open(file_path, 'r', newline='', encoding=encoding) as file:
         reader = csv.DictReader(file, delimiter=',')
@@ -32,59 +32,72 @@ def csv2dic(file_path):
 
 
 
-def dic2md(dic):
+def dic2md3(dic):
     md = '|言語名|活動年代|作者|'
     md += '\n|---|---|---|'
     for lang in dic:
-        name = ''
+        aa = ''
         if 'サイト' in lang:
-            name += "[{a}]({b})".format(a=lang["言語名"][0],b=lang['サイト'][0])
+            aa += "[{a}]({b})".format(a=lang["言語名"][0],b=lang['サイト'][0])
         else:
-            name += "{a}".format(a=lang["言語名"][0])
+            aa += "{a}".format(a=lang["言語名"][0])
 
  
         if len(lang['言語名'])>2:
             for i in range(len(lang['言語名']) - 1):
-                name += ', '+lang['言語名'][i+1]
+                aa += ', '+lang['言語名'][i+1]
 
-        year = lang['年代'][0]
+        a = lang['年代'][0]
 
 
-        artist = ''
+        b = ''
         if '作者' in lang:
             if '作者Twitter' in lang:
-                artist += '[{a}]({b})'.format(a=lang['作者'][0],b=['作者Twitter'][0])
+                b += '[{a}]({b})'.format(a=lang['作者'][0],b=['作者Twitter'][0])
             else:
-                artist += lang['作者'][0]
+                b += lang['作者'][0]
         if '作者' in lang:
             if len(lang['作者'])>2:
                 for i in range(len(lang['作者']) - 1):
-                    artist+= ', '+lang['作者'][i+1]
+                    b+= ', '+lang['作者'][i+1]
         
         
-        links = '   '
+        c = ''
         if 'サイト' in lang:
             if len(lang['サイト'])>2:
                 for i in range(len(lang['サイト']) - 1):
-                    links+= '([サイト{i}]({a}))'.format(i=str(i+2),a = lang['サイト'][i+1])
+                    c+= '([サイト{i}]({a}))'.format(i=str(i+2),a = lang['サイト'][i+1])
         if '文法' in lang:
-            links += '([文法]({a}))'.format(a = lang['文法'][0])
+            c += '([文法]({a}))'.format(a = lang['文法'][0])
             
         if '文法' in lang:
             if len(lang['文法'])>2:
                 for i in range(len(lang['文法']) - 1):
-                    links+= '([文法{i}]({a}))'.format(i=str(i+2),a = lang['文法'][i+1])
+                    c+= '([文法{i}]({a}))'.format(i=str(i+2),a = lang['文法'][i+1])
         
         if '辞書' in lang:
-            links += '([辞書]({a}))'.format(a = lang['辞書'][0])
+            c += '([辞書]({a}))'.format(a = lang['辞書'][0])
 
         if '辞書' in lang:
             if len(lang['辞書'])>2:
                 for i in range(len(lang['辞書']) - 1):
-                    links+= '([辞書{i}]({a}))'.format(i=str(i+2),a = lang['辞書'][i+1])
+                    c+= '([辞書{i}]({a}))'.format(i=str(i+2),a = lang['辞書'][i+1])
 
-        md +="\n|{a}{d}|{b}|{c}|".format(a=name,b=year,c=artist,d=links)
+
+        md +="\n|{a}     {d}|{b}|{c}|".format(a=aa,b=a,c=b,d=c)
+
+
+        # if legend in lang:
+        #     if legend
+        #     if lang[legend][0][0:4] == "http":
+        #         md +="[{a}]({b})".format(a=legend,b=lang[legend][0])
+        #     else:
+        #         md +=lang[legend][0]
+        # else:
+        #     md+=' '
+        
         md+="|"
+    
     return md
 
 
@@ -150,7 +163,7 @@ https://mikanixonable.github.io/data/conlang.csv
 - [世界模擬実験塔設定集](https://w.atwiki.jp/koreori/) - atwiki（アットウィキ） 
 """
 
-dic = csv2dic('conlang.csv')
+dic = tsv2dic('conlang.csv')
 for lang in dic:
     if '年代' not in lang:
         print(lang['言語名'])
@@ -161,7 +174,7 @@ pprint(dic)
 md +="""
 ## 人工言語リスト
 """
-md += dic2md(dic)
+md += dic2md3(dic)
 
 md += """
 
