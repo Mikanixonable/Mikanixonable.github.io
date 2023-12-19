@@ -202,6 +202,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[イェチェ語](https://w.atwiki.jp/sendanpon/pages/64.html)   |2010|せんだんぽん||
 |[柳霞](https://sites.google.com/view/ryuuka/home)   ([文法](https://sites.google.com/view/ryuuka/4-wen-fa?authuser=0))([辞書](https://sites.google.com/view/ryuuka/6-liu-he-ci-dian?authuser=0))|2010年ごろ-2023|[陽和](作者Twitter)||
 |[ユーゴック語](https://sites.google.com/site/yuugokku/)   ([文法](https://sites.google.com/site/yuugokku/ci-shu?authuser=0))([辞書](https://sites.google.com/site/yuugokku/ci-shu?authuser=0))([辞書2](https://drive.google.com/file/d/1GztsvPL-CwngSXehXIcs8hkbgkeKTccr/view))([辞書3](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書4](id=yuugokku))|2010-2023|[KPHT](作者Twitter)||
+|[シンジャロンジャ語](http://gaigosai.gaigosai.com/?eid=546)   |2010-2023|風間伸次郎(1965-)||
 |[アヒャ語](https://w.atwiki.jp/koreori/pages/63.html)   |2011|koreori vanoneeme||
 |[タカラ＝エヌミミ語](https://w.atwiki.jp/koreori/pages/24.html)   |2011|||
 |[ディミジェヴトゥード](https://w.atwiki.jp/koreori/pages/159.html)   ([文法](https://w.atwiki.jp/koreori/pages/159.html#id))([辞書](https://w.atwiki.jp/koreori/pages/159.html#id))|2011年8月16日-2014|ルニ・ヴァノネーメ(luni vanoneeme)||
@@ -220,6 +221,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[ッパ語](https://w.atwiki.jp/koreori/pages/26.html)   |2011|||
 |[リパライン語](https://w.atwiki.jp/cgwj/pages/42.html)   ([文法](https://sites.google.com/site/3tvalineparine/%E9%85%8D%E5%B8%83#h.tlkdm0865hzv))([辞書](https://zpdic.ziphil.com/dictionary/lineparine))|2011-2023|[Fafs S Sashimi](作者Twitter)||
 |[ハイラル語](https://zelda-nou.com/allcharacter/)   |2011-2023|||
+|[カンジャマンジャ語](https://kotobaken.jp/digest/08/d-08-08/)   |2011-2023|風間伸次郎(1965-)||
 |[オルチシェフ語](https://w.atwiki.jp/orchishoef/)   ([文法](https://w.atwiki.jp/orchishoef/pages/17.html))|2012年6月-2014|沖渡尋威||
 |[カルコレーシュ語](https://sites.google.com/view/calcoradish/calcoradishlanguage), Calcoradetár, アーディアン(旧名1), アンデラディアン(旧名2)   ([辞書](https://zpdic.ziphil.com/dictionary/calcoradish))|2012-2023|[らんべ](作者Twitter), Lambe, Y.U||
 |[ケデルド](https://w.atwiki.jp/kedeld/)   ([文法](https://w.atwiki.jp/kedeld/pages/15.html))([辞書](https://w.atwiki.jp/kedeld/pages/29.html))|2012-2013|沢柳水面||
@@ -233,7 +235,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[palam](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam?authuser=0)   ([文法](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam/%E6%96%87%E6%B3%95%E6%9B%B8?authuser=0))([辞書](https://sites.google.com/site/faraspalt/%E3%81%9D%E3%81%AE%E4%BB%96/%E6%B3%A2%E8%97%8Dpalam/%E6%97%A5%E6%B3%A2%E8%BE%9E%E5%85%B8?authuser=0))([辞書2](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書3](id=faras))|2012年6月27日23:02:46-2015|[faras palt tilasos](作者Twitter)||
 |[パラディス語](https://w.atwiki.jp/paladisren/pages/1.html)   ([文法](https://w.atwiki.jp/paladisren/pages/17.html))([辞書](https://w.atwiki.jp/paladisren/pages/45.html))|2012|渡辺しま||
 |[Palams](https://w.atwiki.jp/palams)   ([文法](https://w.atwiki.jp/palams/pages/35.html))([辞書](https://w.atwiki.jp/palams/pages/75.html))|2012年7月-2013|Faras=Tilasos||
-|[Hiktan語](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E)   ([辞書](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E#%E6%96%87%E6%B3%95))|2012年5月-2019|[篠永康平](作者Twitter)||
+|[Hiktan語](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E)   ([辞書](https://tanukipedia.miraheze.org/wiki/%E3%83%92%E3%83%83%E3%82%BF%E3%83%B3%E8%AA%9E#%E6%96%87%E6%B3%95))|2012年5月-2019|[創造地図の人](作者Twitter)||
 |[トルキィ](http://ww22.tiki.ne.jp/~phalsail/gengo/trky/index.htm)   ([辞書](http://ww22.tiki.ne.jp/~phalsail/gengo/trky/tr))|2012|大元帥||
 |[リディア語](https://w.atwiki.jp/lidia/pages/1.html)   |2012|seren arbazard(1981-), セレン・アルバザード, 貞苅詩門||
 |[アバハム語](https://w.atwiki.jp/sendanpon/pages/66.html)   |2012|せんだんぽん||
@@ -274,8 +276,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[モヤシ語](https://sites.google.com/site/moyacilang/home)   ([文法](https://sites.google.com/site/moyacilang/%E3%83%A2%E3%83%A4%E3%82%B7%E8%AA%9E/intro?authuser=0))|2014|スライムさん||
 |ビウ語   |2014-2020|[ミューク (myuuk)](作者Twitter)||
 |[マクシュギア語](https://web.archive.org/web/20160624115928/http://macsyagyua.iinaa.net/index.html)   ([辞書](https://web.archive.org/web/20130615181839/https://macsyagyua.iinaa.net/))|2014-2016|||
-|[更紗語（さらさご）](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E)   ([文法](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E#%E6%96%87))([辞書](https://zpdic.ziphil.com/dictionary/sarasa))|2014-2023|[時雨薫](作者Twitter)||
-|[千織語](https://tanukipedia.miraheze.org/wiki/%E5%8D%83%E7%B9%94%E8%AA%9E)   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書2](id=YuriOruta))([辞書3](https://tanukipedia.miraheze.org/wiki/%E5%8D%83%E7%B9%94%E8%AA%9E#%E4%BB%A3%E8%A1%A8%E7%9A%84%E3%81%AA%E5%8D%98%E8%AA%9E))|2014-2023|[篠永康平](作者Twitter)||
+|[千織語](https://tanukipedia.miraheze.org/wiki/%E5%8D%83%E7%B9%94%E8%AA%9E)   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書2](id=YuriOruta))([辞書3](https://tanukipedia.miraheze.org/wiki/%E5%8D%83%E7%B9%94%E8%AA%9E#%E4%BB%A3%E8%A1%A8%E7%9A%84%E3%81%AA%E5%8D%98%E8%AA%9E))|2014-2023|[創造地図の人](作者Twitter)||
 |[アルバレン](https://conlinguistics.org/arka/study)   ([サイト2](yulf))([サイト3](79.html))([サイト4](https://web.archive.org/web/20190622052008/https://sites.google.com/site/faraspalt/levian/arbaren))([サイト5](https://arxidia.another.jp/atwiki8-arbazard/?pageid=916))|2014-2020|[seren arbazard(1981-)](作者Twitter), セレン・アルバザード, 貞苅詩門||
 |[マクシャギュア語](https://saelawhiz.blog.fc2.com/blog-category-4.html)   ([文法](https://saelawhiz.blog.fc2.com/blog-entry-229.html))([辞書](https://limeputa.wiki.fc2.com/wiki/%E6%8E%A5%E5%B0%BE%E8%BE%9E))|2014|りよこ||
 |ロースリア語   |2014|[mei](作者Twitter), 鮎川早月, 鮎川愛衣, Maycia Arenberg, アージャ, メーリエ, Mélier||
@@ -354,6 +355,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[みかぶるさん第2回人工言語コンペ参加言語](https://twitter.com/Mikanixonable/status/942734979112493056)   |2017|[みかぶる](作者Twitter)||
 |[んらん?ぉさん第2回人工言語コンペ参加言語](https://n-kunnnn.hatenablog.com/entry/2017/12/17/220243)   |2017|[んらん?ぉ](作者Twitter)||
 |[幽楽称](https://www.pixiv.net/artworks/66231161)   |2017|[新世紀ラムひつじ](作者Twitter)||
+|[説為音響](https://www.pixiv.net/artworks/66208496)   |2017-2020|Hitsuji||
 |[時雨語](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E)   ([文法](https://conlinguistics.fandom.com/ja/wiki/%E6%99%82%E9%9B%A8%E8%AA%9E#%E6%96%87%E5%9E%8B))|2017|[時雨薫](作者Twitter)||
 |[ようじょ語](https://togetter.com/li/1152542)   ([辞書](https://niftg.github.io/youjogo/d.html))|2017|[すきえんてぃあ](作者Twitter), minerva scientia, yuhr||
 |[古典リパライン語](https://tanukipedia.miraheze.org/wiki/%E5%8F%A4%E5%85%B8%E3%83%AA%E3%83%91%E3%83%A9%E3%82%A4%E3%83%B3%E8%AA%9E)   |2017|Fafs S Sashimi||
@@ -374,6 +376,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |[アコトマ語](https://www.pixiv.net/artworks/67452700)   ([サイト2](https://www.pixiv.net/artworks/67742715))([サイト3](https://www.pixiv.net/artworks/67452667))|2018|[ての / TENO](作者Twitter)||
 |カムツ言葉   |2018|[巡宙艦ボンタ](作者Twitter)||
 |クァン語   |2018|[虚無](作者Twitter), Craft wiki, KyomuAnik, Wegnosia||
+|[ヒュード語](https://sites.google.com/site/jusikwaq/)   |2018-2019|[かる](作者Twitter)||
 |[アププナ語](https://sites.google.com/view/apupuna/%E6%97%A7%E3%82%A2%E3%83%97%E3%83%97%E3%83%8A%E8%AA%9E?authuser=0)   |2018|[フクロウナギ](作者Twitter)||
 |[タコ語](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E?authuser=0)   ([文法](https://drive.google.com/file/d/1HpNwc8wRXyouLJYQrjru))([辞書](https://sites.google.com/view/apupuna/%E3%82%BF%E3%82%B3%E8%AA%9E/%E3%83%88%E3%82%AD%E3%83%9D%E3%83%8A-%E3%82%BF%E3%82%B3%E8%AA%9E%E8%BE%9E%E6%9B%B8?authuser=0))|2018-2019|[フクロウナギ](作者Twitter)||
 |[テーズウィゼラー語](https://sites.google.com/view/ruwoo/b-tezuu-izera-yu?authuser=0)   ([辞書](https://zpdic.ziphil.com/dictionary/57))|2018-2023|[mis?ke=furezza=Kagena](作者Twitter)||
@@ -404,11 +407,13 @@ https://mikanixonable.github.io/data/conlang.csv
 |ヅェアトロット語   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))|2018|||
 |クシモードス語, kuximoodos, クアキス語(旧名)   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?search=&type=0&agree=1&mode=search&user))|2018|[べーこん](作者Twitter)||
 |[セルナーダ語](https://sites.google.com/view/yurfa/)   ([文法](https://sites.google.com/view/yurfa/%E5%9F%BA%E6%9C%AC%E6%96%87%E6%B3%95?authuser=0))([辞書](https://sites.google.com/view/yurfa/%E8%BE%9E%E6%9B%B8?authuser=0))|2018-2019|[梅津裕一](作者Twitter)||
+|[教育ローマ字](https://spokenjapanese.wordpress.com/)   |2018-2023|[教育ローマ字とか](作者Twitter)||
 |[ヴァロケリム語](https://firraksnarre.fandom.com/ja/wiki/%E3%83%B4%E3%82%A1%E3%83%AD%E3%82%B1%E3%83%AA%E3%83%A0%E8%AA%9E)   ([文法](https://firraksnarre.fandom.com/ja/wiki/%E3%83%B4%E3%82%A1%E3%83%AD%E3%82%B1%E3%83%AA%E3%83%A0%E8%AA%9E#%E6%96%87%E6%B3%95))|2018-2020|[中野智宏](作者Twitter)||
 |[オトバアラン語](https://firraksnarre.com/languages-jp/)   |2018-2023|[中野智宏](作者Twitter)||
 |ターシット語   |2018-2019|[たくしむ](作者Twitter)||
 |[ウェルフィー語](https://wikiwiki.jp/welfea-lang/)   ([文法](https://wikiwiki.jp/welfea-lang/%E5%9F%BA%E7%A4%8E%E6%96%87%E6%B3%95%E3%83%BB%E5%8A%A9%E8%A9%9E%E3%83%BB%E5%8A%A9%E5%8B%95%E8%A9%9E))([辞書](https://wikiwiki.jp/welfea-lang/%E6%97%A5%E6%A4%8D%E8%BE%9E%E5%85%B8))|2018|[椿三由(つばき　みつよし)](作者Twitter)||
 |イズイ語, Izui, 巌井   ([辞書](https://writening.net/page?4GvM2x))|2019|[ざわンとすD.C](作者Twitter)||
+|[フーリカ語](https://tanukipedia.miraheze.org/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%AB%E8%AA%9E), Folikína, Fúlikan Kína   |2019-2023|彩羽さいは||
 |ヤタシ語   |2019|ざわンとすD.C||
 |[ティポミポ語](https://web.archive.org/web/20190622051823/https://sites.google.com/site/moyacilang/cipomipo)   |2019|||
 |[人國語](https://twitter.com/koropinkoropin/status/1725118513671753799)   |2019-2023|[高坂優希](作者Twitter)||
@@ -434,10 +439,11 @@ https://mikanixonable.github.io/data/conlang.csv
 |レアン   |2019|[ゆめねこ](作者Twitter)||
 |ポルツ語   |2019|[Caw](作者Twitter)||
 |Haar氏の言語   |2019|[Haar](作者Twitter)||
-|るる語   |2020-2023|[多々井ゆかり](作者Twitter)||
+|るる語   ([辞書](https://zpdic.ziphil.com/dictionary/lulusam))|2020-2023|[多々井ゆかり](作者Twitter)||
 |シャルカ語   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))|2020|||
 |ノユラ語, yléNoyla, YleNoyla   |2020-2021|[あすたり](作者Twitter)||
-|説為音響   |2020|||
+|[更紗語（さらさご）](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E)   ([文法](https://tanukipedia.miraheze.org/wiki/%E6%9B%B4%E7%B4%97%E8%AA%9E#%E6%96%87))([辞書](https://zpdic.ziphil.com/dictionary/sarasa))|2020-2023|[時雨薫](作者Twitter)||
+|[ヘツクース語](https://tanukipedia.miraheze.org/wiki/%E3%83%98%E3%83%84%E3%82%AF%E3%83%BC%E3%82%B9%E8%AA%9E)   ([辞書](https://hetukuusika.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8))|2020-2023|[陽花さん](作者Twitter)||
 |レミリア共通語, 第三期ルエン語, レイア語   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))|2020-2023|[クノーツアクア](作者Twitter)||
 |[ルウォー語](https://sites.google.com/view/ruwoo)   ([辞書](https://zpdic.ziphil.com/dictionary/41))|2020|[mis?ke=furezza=Kagena](作者Twitter)||
 |ena   ([辞書](https://github.com/asteain-ninia/ena-dictionary))|2020|[dali-einerZy:=asteain-ninia](作者Twitter)||
@@ -475,12 +481,12 @@ https://mikanixonable.github.io/data/conlang.csv
 |[piska](https://twitter.com/kanmi)   ([辞書](https://zpdic.ziphil.com/dictionary/piska))|2020-2023|[かん/piska](作者Twitter)||
 |[セム・アルカ](https://twitter.com/SEM)   ([サイト2](ALCA))([サイト3](tan))|2020|[ベルティア](作者Twitter)||
 |紅枝しとみ氏の人工言語   |2020|[紅枝しとみ](作者Twitter)||
+|[たたい仮名](https://www.pixiv.net/artworks/85729379)   |2020-2023|[多々井ゆかり](作者Twitter)||
 |[オ゛ェｼﾞｭルニョェーッ語](https://scrapbox.io/lanva-bixic/), オエル語, ?ezn?'bix   ([文法](https://migdal.miraheze.org/wiki/%E3%82%AA%E3%82%9B%E3%82%A7%EF%BD%BC%EF%BE%9E%EF%BD%AD%E3%83%AB%E3%83%8B%E3%83%A7%E3%82%A7%E3%83%BC%E3%83%83%E8%AA%9E%E6%96%87%E5%85%B8))|2021|[loyuka(koloka)](作者Twitter), 佐藤陽花, Xirdim, スヴェイン||
 |[ゼノス語](https://web.archive.org/web/20221102150111/http://xylops.cswiki.jp/)   ([辞書](https://web.archive.org/web/20220809071810/http://xylops.cswiki.jp/index.php?%E6%96%87%E5%AD%97%E3%81%A8%E7%99%BA%E9%9F%B3))|2021|[ヘイル](作者Twitter)||
 |[LANDI](https://ameblo.jp/shimizu-tknr/entry-12787465480.html), ７セグ語, 人工言語ランディ   |2021-2023|[清水隆紀(1971-)](作者Twitter)||
 |[ボウニム語](https://tanukipedia.miraheze.org/wiki/%E3%83%9C%E3%82%A6%E3%83%8B%E3%83%A0%E8%AA%9E)   ([辞書](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書2](id=Rine))([辞書3](http://twoc.ever.jp/twoc/conlang.cgi?mode=search&user))([辞書4](id=bohnimi))|2021-2023|||
 |[マクェン語](https://maqenbemon.localinfo.jp/)   ([辞書](https://zpdic.ziphil.com/dictionary/mqe))|2021|[acacia](作者Twitter)||
-|[ヘツクース語](https://tanukipedia.miraheze.org/wiki/%E3%83%98%E3%83%84%E3%82%AF%E3%83%BC%E3%82%B9%E8%AA%9E)   ([辞書](https://hetukuusika.miraheze.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8))|2021-2023|[担当者は篠永康平氏とは別である(https://x.com/koridentetsu/status/1347807296500375552?s=20)](作者Twitter)||
 |[めつラング](https://metlang.jimdofree.com/)   |2021-2023|||
 |[ヴェオ語](https://linktr.ee/Xotarios), 翊天語, Vheon   |2021-2022|[Xotarios 翊天星少年(しょたりおす) ［aka きーらん］](作者Twitter)||
 |[スィレフ語](https://w.atwiki.jp/cgwj/pages/29.html)   |2021|悠里||
@@ -490,6 +496,7 @@ https://mikanixonable.github.io/data/conlang.csv
 |麝香日本語   |2021/11/14|[佐藤陽花](作者Twitter)||
 |ドン語   |2021/11/29|[佐藤陽花](作者Twitter)||
 |[雰語](https://phunworld.miraheze.org/wiki/%E9%9B%B0%E8%AA%9E)   ([文法](https://phunworld.miraheze.org/wiki/%E9%9B%B0%E8%AA%9E%E3%81%AE%E6%96%87%E6%B3%95))([辞書](https://dict.kaeru2193.net/))|2021-2023|[かえる](作者Twitter)||
+|カリース語   ([辞書](https://zpdic.ziphil.com/dictionary/300))|2021-2023|ゆう||
 |[Lukša語](https://sites.google.com/view/filukisja/%E3%83%9B%E3%83%BC%E3%83%A0/labina?authuser=0)   ([文法](https://drive.google.com/file/d/1rnOvTU2T3QXBP7GjtHq))([文法2](x))([文法3](-EXkh3Nq78/view))([文法4](https://docs.google.com/document/d/1GyxTcgEnGTNts8cn1nHHX))([文法5](odKkyGE6EZZJaz9JXbX5g/edit))([辞書](https://zpdic.ziphil.com/dictionary/479))|2021年8月-2022|[ふぃるきしゃ(FILUKISJA)](作者Twitter)||
 |[るるる語](https://sites.google.com/view/filukisja/%E3%83%9B%E3%83%BC%E3%83%A0/%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%80%8B%E4%BA%BA%E8%A8%80%E8%AA%9E?authuser=0)   ([文法](https://drive.google.com/file/d/1fnw-glU1BlK2sH7iNi6VfI9CC5Xk6-))([辞書](https://zpdic.ziphil.com/dictionary/319))|2021|[ふぃるきしゃ(FILUKISJA)](作者Twitter)||
 |[Ebẹsa language](https://sites.google.com/view/apupuna/eb%E1%BA%B9sa-language?authuser=0)   ([辞書](https://migdal.jp/apupuna1/ebesa-language-%E3%81%AE%E8%AA%9E%E4%B8%80%E8%A6%A7-2i7p))|2022-2023|[フクロウナギ](作者Twitter)||
@@ -497,7 +504,6 @@ https://mikanixonable.github.io/data/conlang.csv
 |[グェーゼル語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%B0%E3%82%A7%E3%83%BC%E3%82%BC%E3%83%AB%E8%AA%9E), ʏϝcɀɛρ ʏŏʏvɛ̆ρ, グァゼー・ゴーグネール, 具和是留語, 芸是留語   ([文法](https://conlinguistics.fandom.com/ja/wiki/%E3%82%B0%E3%82%A7%E3%83%BC%E3%82%BC%E3%83%AB%E8%AA%9E#%E6%96%87%E6%B3%95))|2022|空気。||
 |ソウキ語, ソウキ・ヘイコウ語, ハラソウキ語   |2022-2023|[Ag Ycafsh R Zhefmnga(Ycaf? ? ?efm?a)](作者Twitter), 甲斐華冬, ソウキ・ハラー||
 |[デナスティア語](https://migdal.jp/sazankaiueo/%E7%AA%81%E7%84%B6%E5%A7%8B%E3%81%BE%E3%82%8B%E8%AC%8E%E4%BC%81%E7%94%BB%E3%83%87%E3%83%8A%E3%82%B9%E3%83%86%E3%82%A3%E3%82%A2%E8%AA%9E%E7%AC%AC-1-%E8%AA%B2-%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%A6-38ob)   |2022-2023|[さざんか](作者Twitter)||
-|[フーリカ語](https://tanukipedia.miraheze.org/wiki/%E3%83%95%E3%83%BC%E3%83%AA%E3%82%AB%E8%AA%9E), Folikína, Fúlikan Kína   |2022-2023|彩羽さいは||
 |イトゥラ語   |2022-2023|[霧島美佳](作者Twitter)||
 |Fogeno語   |2022-2023|[花急社長](作者Twitter)||
 |トーホビナーシュ   |2022-2023|[boekveld (ぼえなんとか)](作者Twitter)||
@@ -506,11 +512,12 @@ https://mikanixonable.github.io/data/conlang.csv
 |堂織語   |2022/8/23|[佐藤陽花](作者Twitter)||
 |エルミンス語   |2022/12/9|[佐藤陽花](作者Twitter)||
 |アルクブロ語   |2022/12/23|[佐藤陽花](作者Twitter)||
+|[ウィット語](https://www.youtube.com/watch?v=z85IU-CP-u8&feature=youtu.be)   ([辞書](https://zpdic.ziphil.com/dictionary/435))|2022-2023|[はちあ](作者Twitter)||
+|[キリーナ語](https://www.t-act.tsukuba.ac.jp/project/view/?seq=606)   ([辞書](https://zpdic.ziphil.com/dictionary/tact))|2022-2023|[人工言語作成プロジェクト?筑波大生の共通語を一から作ろう！?](作者Twitter)||
 |メイシカク語   |2022|[Xirdim](作者Twitter)||
 |[歌唱用言語（名称なし）](https://sites.google.com/view/filukisja/%E3%83%9B%E3%83%BC%E3%83%A0/%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E5%80%8B%E4%BA%BA%E8%A8%80%E8%AA%9E?authuser=0)   |2022|[ふぃるきしゃ(FILUKISJA)](作者Twitter)||
 |中西氷柱 氏の暗号言語   |2022|[中西 氷柱 (Tsurara Nakanishi)](作者Twitter)||
 |[人工言語くふ](https://kupu-language.blog.jp/)   ([文法](https://kupu-language.blog.jp/archives/12816038.html))([辞書](https://kupu-language.blog.jp/archives/12816048.html))|2022|[人工言語くふ](作者Twitter)||
-|[教育ローマ字](https://spokenjapanese.wordpress.com/)   |2022|[教育ローマ字とか](作者Twitter)||
 |[ꓳꓴꓚꓲꓛꓵꓳ](https://twitter.com/Mishula)   |2022|[ベルティア](作者Twitter)||
 |[ⳘⲠⵎ 𐰿꘡](https://twitter.com/STLM)   ([サイト2]())([サイト3]())|2022|[ベルティア](作者Twitter)||
 |ウリアヂェオ語   ([辞書](https://zpdic.ziphil.com/dictionary/1367))|2023|||
@@ -524,17 +531,28 @@ https://mikanixonable.github.io/data/conlang.csv
 |[指定された条件で人工言語作った](https://migdal.jp/yuzuru)   |2023|yuzuru||
 |apata語   |2023|[渡久地 信之](作者Twitter)||
 |グロールヘイム語   ([文法](https://migdal.jp/rhombus))([辞書](https://zpdic.ziphil.com/dictionary/grolheim))|2023|Rhombus||
+|[3x3グリッド表示マークシート式絵文字](https://twitter.com/pigeon)   |2023|[かわらば](作者Twitter)||
+|[か語](https://migdal.jp/)   |2023|[ふざっと](作者Twitter)||
+|[アモン語](https://twitter.com/Kunst)   |2023|[アモン](作者Twitter)||
+|[ゾアテ語](https://twitter.com/Kunst)   |2023|[アモン](作者Twitter)||
+|[コゼット語](https://twitter.com/Kunst)   |2023|[アモン](作者Twitter)||
 |[サーシュワ語](https://migdal.jp/kyomu)   |2023|||
 |[ehtaplen](https://mikanixonable.github.io/177)   ([文法](https://mikanixonable.github.io/9))([辞書](https://zpdic.ziphil.com/dictionary/91))|2023|[みかぶる](作者Twitter)||
 |[リッカ語](https://w.atwiki.jp/langartificielricca/)   |2023|アエミリア||
 |[ゴゴゴ語](https://w.atwiki.jp/gogogogogo/)   |2023|||
 |[人工言語カリネ](https://w.atwiki.jp/unknown)   ([辞書](https://w.atwiki.jp/unknown))|2023|[Unknown](作者Twitter)||
 |[セロ語](https://conlinguistics.fandom.com/ja/wiki/%E3%82%BB%E3%83%AD%E8%AA%9E)   |2023|[虚無](作者Twitter), Craft wiki, KyomuAnik, Wegnosia||
-|Paibbai語   |2023|[フクロウナギ](作者Twitter)||
+|[鉄鰻語](https://twitter.com/rafenemine/status/1694375011874992163)   |2023|[多々井ゆかり](作者Twitter)||
+|[コトキス語](https://twitter.com/rafenemine/status/1500341923017478146)   |2023|[多々井ゆかり](作者Twitter)||
+|Paibbai語   ([辞書](https://zpdic.ziphil.com/dictionary/Paibbai))|2023|[フクロウナギ](作者Twitter)||
 |レアミリス語   ([文法](https://migdal.jp/hotate))|2023|ペクテノ||
 |レシェビース語   ([文法](https://migdal.jp/hotate))|2023|ペクテノ||
 |暎語   |2023|[スライムさん](作者Twitter)||
 |[中山諸語](https://migdal.jp/pyapi378/%E4%B8%AD%E5%B1%B1%E8%AB%B8%E8%AA%9E%E3%81%AE%E4%B8%80%E8%A8%80%E8%AA%9E%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E5%89%B5%E4%BD%9C-nce)   |2023|時耕ひとみ||
+|イン語   ([辞書](https://zpdic.ziphil.com/dictionary/1388))|2023|Bashowtime0729||
+|パパラ語   ([辞書](https://zpdic.ziphil.com/dictionary/1393))|2023|Logalryos||
+|ヴェッセンズランド語   ([辞書](https://zpdic.ziphil.com/dictionary/633))|2023|[テセラクト](作者Twitter), Tessyrrhaqt, 斗琴庭暁響||
+|リトポナ語   ([辞書](https://zpdic.ziphil.com/dictionary/1349))([辞書2](https://twitter.com/Musician))([辞書3](bashow/status/1623307183927746560))|2023|[松尾Bashow time!](作者Twitter)||
 |[マジューユ](https://w.atwiki.jp/constlangmajuuyu/)   ([文法](https://w.atwiki.jp/constlangmajuuyu/#id))|2023|[N.こづけ](作者Twitter)||
 |[wentiay-bangao](https://skytomo221.com/22/ja/)   |2023|[skytomo](作者Twitter)||
 |[シャハヤ](https://sites.google.com/site/chry7511/)   |2023|||
@@ -547,8 +565,8 @@ https://mikanixonable.github.io/data/conlang.csv
 |ラーヴァヌー語   |2023|悠里||
 |[リスターメ語](https://web.archive.org/web/20201111031205/https://zohen0.github.io/xaledunomyn-dito/)   ([文法](https://web.archive.org/web/20201111031210/https://zohen0.github.io/xaledunomyn-dito/grammar/))([辞書](https://github.com/koriyama28/xaledunomyn-dito/blob/master/dictionary/xaledunomyn-dito.json))|2023|悠里||
 |[しろすけ2号氏の言語](https://twitter.com/shirosuke)   |2023|しろすけ2号||
+|テラノヴァ語   ([辞書](https://zpdic.ziphil.com/dictionary/Terranovian))|2023|keith, , lala||
 |ハヴェノ語   ([文法](https://d.kuku.lu/p6sncem5y))|2023|[L'Academia Havena Lingva](作者Twitter)||
-|[キリーナ語](https://www.t-act.tsukuba.ac.jp/project/view/?seq=606)   ([辞書](https://zpdic.ziphil.com/dictionary/tact))|2023|[人工言語作成プロジェクト?筑波大生の共通語を一から作ろう！?](作者Twitter)||
 |[架空言語Anemone](https://izumi303.github.io/)   ([文法](https://izumi303.github.io/Anemone/Anemone))([辞書](https://zpdic.ziphil.com/dictionary/985))|2023|[izumi kanzaki](作者Twitter)||
 |[フェルーリエ語](https://subspaceworld.miraheze.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%BC%E3%83%AA%E3%82%A8%E8%AA%9E)   |2023|[さざんか(Cada Endefluhna)](作者Twitter)||
 |[イオティエ語](https://scrapbox.io/Myulio-IoTie/)   ([文法](https://scrapbox.io/Myulio-IoTie/%E6%96%87%E6%B3%95%EF%BC%9A%E8%AA%9E%E9%A0%86%E3%81%A8%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%A1%E3%83%B3%E3%83%88))|2023|[See2et (しーぜっと)](作者Twitter), 佐藤陽花, クノーツ・アクア, Ziphil, かえる||
@@ -586,6 +604,14 @@ https://mikanixonable.github.io/data/conlang.csv
 |[レスコヴィ語](https://subspaceworld.miraheze.org/wiki/%E3%83%AC%E3%82%B9%E3%82%B3%E3%83%B4%E3%82%A3%E8%AA%9E)   ([文法](https://subspaceworld.miraheze.org/wiki/%E3%83%AC%E3%82%B9%E3%82%B3%E3%83%B4%E3%82%A3%E8%AA%9E#%E6%96%87%E6%B3%95))|2023|Chamatsuri||
 |[ヨウハン語](https://subspaceworld.miraheze.org/wiki/%E3%83%A8%E3%82%A6%E3%83%8F%E3%83%B3%E8%AA%9E)   ([文法](https://subspaceworld.miraheze.org/wiki/%E3%83%A8%E3%82%A6%E3%83%8F%E3%83%B3%E8%AA%9E#%E6%96%87%E6%B3%95))|2023|Carbon13||
 |[ガフィーク語](https://subspaceworld.miraheze.org/wiki/%E3%82%AC%E3%83%95%E3%82%A3%E3%83%BC%E3%82%AF%E8%AA%9E), Qaffik'n jazak, ガフィーク通商語   ([文法](https://subspaceworld.miraheze.org/wiki/%E3%82%AC%E3%83%95%E3%82%A3%E3%83%BC%E3%82%AF%E8%AA%9E#%E6%96%87%E6%B3%95))|2023|Latina tan||
-|[パラシャ語](https://migdal.jp/shanhah/%E3%83%91%E3%83%A9%E3%82%B7%E3%83%A3%E8%AA%9E%E8%AC%9B%E5%BA%A7-part-1-1cfj)   |2023|シャニシャフ||
+|[パラシャ語](https://migdal.jp/shanhah/%E3%83%91%E3%83%A9%E3%82%B7%E3%83%A3%E8%AA%9E%E8%AC%9B%E5%BA%A7-part-1-1cfj)   ([辞書](https://zpdic.ziphil.com/dictionary/1372))|2023|シャニシャフ||
+|[イーステン語](https://ncode.syosetu.com/n8649hs/)   ([文法](https://ncode.syosetu.com/n8649hs/12/))|2023|[稲土瑞穂](作者Twitter)||
+|[PTSV-A](https://ncode.syosetu.com/n8649hs/)   ([文法](https://ncode.syosetu.com/n8649hs/7/))|2023|[稲土瑞穂](作者Twitter)||
+|[カット語](https://docs.google.com/document/d/1kX-Pl-IU1-nqJlZxUG6YjWQTPeXK0JjORcP81QNtpiM/edit)   |2023|[多々井ゆかり](作者Twitter)||
+|[音楽トキポナ](https://twitter.com/rafenemine/status/1433644273878986755)   |2023|[多々井ゆかり](作者Twitter)||
+|[テソタイエ](https://sites.google.com/view/tesotaie/)   |2023|[多々井ゆかり](作者Twitter)||
+|クラトニ語   ([辞書](https://zpdic.ziphil.com/dictionary/kuratoni))|2023|ツナホシ||
+|Vanisarlna語   ([辞書](https://zpdic.ziphil.com/dictionary/vanisarlna))|2023|amegari, , fuhto||
+|[ランツフェㇽ語](https://twitter.com/EAFachin/status/1721066678023532732)   |2023|[東亞聯邦](作者Twitter)||
 
 2023年12月 Mikanixonable
