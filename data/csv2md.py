@@ -53,7 +53,7 @@ def dic2md(dic):
         artist = ''
         if '作者' in lang:
             if '作者Twitter' in lang:
-                artist += '[{a}]({b})'.format(a=lang['作者'][0],b=['作者Twitter'][0])
+                artist += '[{a}]({b})'.format(a=lang['作者'][0],b=lang['作者Twitter'][0])
             else:
                 artist += lang['作者'][0]
         if '作者' in lang:
