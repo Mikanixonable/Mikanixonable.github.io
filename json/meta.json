@@ -1112,9 +1112,9 @@
   {
     "name": "128",
     "ctime": "1700995719",
-    "mtime": "1702199998",
+    "mtime": "1703495181",
     "cdate": "2023-11-26",
-    "mdate": "2023-12-10",
+    "mdate": "2023-12-25",
     "title": "人工言語",
     "content": "content",
     "genre": "main"
@@ -1552,10 +1552,10 @@
   {
     "name": "174",
     "ctime": "1701246410",
-    "mtime": "1701246926",
+    "mtime": "1702744663",
     "cdate": "2023-11-29",
-    "mdate": "2023-11-29",
-    "title": "ehtaplenチートシート",
+    "mdate": "2023-12-17",
+    "title": "人工言語ehtaplenの紹介",
     "content": "content",
     "genre": "main"
   },
@@ -1570,22 +1570,12 @@
     "genre": "main"
   },
   {
-    "name": "176 copy 2",
+    "name": "176",
     "ctime": "1701457416",
-    "mtime": "1701246894",
+    "mtime": "1702824488",
     "cdate": "2023-12-02",
-    "mdate": "2023-11-29",
-    "title": "rtyj",
-    "content": "content",
-    "genre": "main"
-  },
-  {
-    "name": "176 copy 3",
-    "ctime": "1701457417",
-    "mtime": "1701246894",
-    "cdate": "2023-12-02",
-    "mdate": "2023-11-29",
-    "title": "rtyj",
+    "mdate": "2023-12-17",
+    "title": "日本語圏人工言語リスト(2023年12月)",
     "content": "content",
     "genre": "main"
   },
@@ -1596,6 +1586,16 @@
     "cdate": "2023-12-02",
     "mdate": "2023-12-10",
     "title": "ehtaplenポータルサイト",
+    "content": "content",
+    "genre": "main"
+  },
+  {
+    "name": "178",
+    "ctime": "1701457417",
+    "mtime": "1703498710",
+    "cdate": "2023-12-02",
+    "mdate": "2023-12-25",
+    "title": "ehtaplen文法",
     "content": "content",
     "genre": "main"
   },
@@ -1662,9 +1662,9 @@
   {
     "name": "index",
     "ctime": "1696325296",
-    "mtime": "1701968792",
+    "mtime": "1702790631",
     "cdate": "2023-10-03",
-    "mdate": "2023-12-08",
+    "mdate": "2023-12-17",
     "title": "月面植物園",
     "content": "content",
     "genre": "main"
