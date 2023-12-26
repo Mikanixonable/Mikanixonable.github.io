@@ -25,17 +25,29 @@
     <p>article-table2wikitable</p>
     <p>人工言語学wiki移行支援ツール。</p>
     <p>上にarticle-table形式のマークアップを入れるとwikitable形式のマークアップに変換して下に出力する</p>
-
-    <textarea rows='1' oninput="fit(this),convert(this,'output1')"></textarea>
+    <button onclick="copyText()">変換結果をコピー</button>
+    <textarea rows='1' oninput="convert(this,'output1')"></textarea>
     <textarea id="output1" rows='1'></textarea>
 </body>
 <script>
+    function copyText() {
+        let copyTarget = document.getElementById("output1");
+        // コピー対象のテキストを選択する
+        copyTarget.select();
+        // 選択しているテキストをクリップボードにコピーする
+        document.execCommand("Copy");
+    }
     function convert(input, output) {
-        let str = input.value.replaceAll("article-table", "wikitable")
+        let str = input.value.replaceAll("\"article-table\"", "\"wikitable\"\n")
             .replaceAll("\n!", "!!")
+            .replaceAll("\n|}", "PLHD2")
             .replaceAll("\n|-\n", "PLHD1")
+
             .replaceAll("\n|", "||")
             .replaceAll("PLHD1", "\n|-\n")
+            .replaceAll("PLHD2", "\n|}")
+            .replaceAll("\n!!", "\n!")
+            // .replaceAll("|\n", "| ")
 
         let outtxt = document.getElementById(output)
         outtxt.innerHTML = str
