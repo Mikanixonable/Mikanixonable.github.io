@@ -38,7 +38,9 @@
         document.execCommand("Copy");
     }
     function convert(input, output) {
-        let str = input.value.replaceAll("\"article-table\"", "\"wikitable\"")
+        let str = input.value
+            .replaceAll("\"article-table\"", "\"wikitable\"")
+            .replaceAll("\"fandom-table\"", "\"wikitable\"")
             .replaceAll("\n!", "!!")
             .replaceAll("\"!!", "\"\n!")
             .replaceAll("\n|}", "PLHD2")
@@ -47,8 +49,8 @@
             .replaceAll("\n|", "||")
             .replaceAll("PLHD1", "\n|-\n")
             .replaceAll("PLHD2", "\n|}")
-            .replaceAll("\"||+", "\"\n|+")
-            // .replaceAll("|\n", "| ")
+            .replaceAll("\"||+", "\"\n|+\n")
+        // .replaceAll("|\n", "| ")
 
         let outtxt = document.getElementById(output)
         outtxt.innerHTML = str
