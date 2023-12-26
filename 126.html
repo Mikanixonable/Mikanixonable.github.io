@@ -38,15 +38,16 @@
         document.execCommand("Copy");
     }
     function convert(input, output) {
-        let str = input.value.replaceAll("\"article-table\"", "\"wikitable\"\n")
+        let str = input.value.replaceAll("\"article-table\"", "\"wikitable\"")
             .replaceAll("\n!", "!!")
+            .replaceAll("\"!!", "\"\n!")
             .replaceAll("\n|}", "PLHD2")
             .replaceAll("\n|-\n", "PLHD1")
 
             .replaceAll("\n|", "||")
             .replaceAll("PLHD1", "\n|-\n")
             .replaceAll("PLHD2", "\n|}")
-            .replaceAll("\n!!", "\n!")
+            .replaceAll("\"||+", "\"\n|+")
             // .replaceAll("|\n", "| ")
 
         let outtxt = document.getElementById(output)
