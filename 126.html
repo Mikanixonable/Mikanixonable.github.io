@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>article-table2wikitable</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    textarea {
+        resize: none;
+        line-height: 1.5;
+        width: 100%;
+        padding: 10;
+    }
+</style>
+
+<body>
+    <p>article-table2wikitable</p>
+    <p>人工言語学wiki移行支援ツール。</p>
+    <p>上にarticle-table形式のマークアップを入れるとwikitable形式のマークアップに変換して下に出力する</p>
+
+    <textarea rows='1' oninput="fit(this),convert(this,'output1')"></textarea>
+    <textarea id="output1" rows='1'></textarea>
+</body>
+<script>
+    function convert(input, output) {
+        let str = input.value.replaceAll("article-table", "wikitable")
+            .replaceAll("\n!", "!!")
+            .replaceAll("\n|-\n", "PLHD1")
+            .replaceAll("\n|", "||")
+            .replaceAll("PLHD1", "\n|-\n")
+
+        let outtxt = document.getElementById(output)
+        outtxt.innerHTML = str
+        fit(outtxt)
+    }
+
+    function fit(elem) {
+        let lineHeight = getComputedStyle(elem).lineHeight.replace(/[^-\d\.]/g, '');
+        // textarea要素に入力された値の行数
+        const lines = (elem.value + '\n').match(/\n/g).length;
+        // 高さを再計算
+        elem.style.height = lineHeight * lines + 'px';
+    };
+</script>
+
+</html>
