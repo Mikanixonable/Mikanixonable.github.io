@@ -215,31 +215,7 @@
 
 <script>
 
-
-async function fetchAndConvert() {
-      try {
-        const response = await fetch('./data/tweets.csv');
-        
-        if (!response.ok) {
-          throw new Error('Failed to fetch text file');
-        }
-
-        const textData = await response.text();
-
-        // 改行で区切って配列に変換
-        let dataArray = textData.split('\n')
-        concole.log(dataArray)
-
-        let quote = document.getElementById("quote")
-        quote.innerText = dataArray[Math.floor(Math.random() * dataArray.length)]
-      } catch (error) {
-        console.error('Error:', error.message);
-      }
-    }
-    fetchAndConvert()
-
-
-
+  let quote = document.getElementById("quote")
   array = ["テクノなまこ、科学の力",
         "ふとんすいたい",
         "$f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$　テイラー展開",
@@ -283,8 +259,7 @@ async function fetchAndConvert() {
 
 
       ]
- 
-
+  quote.innerText = array[Math.floor(Math.random() * array.length)]
 </script>
 
 <script src="https://unpkg.com/mermaid@10.5.1/dist/mermaid.min.js"></script>
