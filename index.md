@@ -6,9 +6,7 @@ image: ./logo.png
 categories: main
 ---
 
-<blockquote>
-  <p id="quote">テクノなまこ、科学の力</p>
-</blockquote>
+
 
 ### ミクボタン（音が鳴ります）
 
