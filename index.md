@@ -171,10 +171,12 @@ powerd by GitHub Chart API
 このサイトはリンク自由です
 
 ## 相互リンク
+[notolitary](https://notolyte.github.io/)
 [![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
 [mythfinder](https://haxibami.net/)
 [ふぁぼんのホームページ](https://fabon.info)
 [SnO2WMaN.net](https://sno2wman.net/)
+
 [相互リンク](135)
 [まだ相互ではないリンク](142)
 ↓相関図
