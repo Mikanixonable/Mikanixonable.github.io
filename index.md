@@ -186,25 +186,37 @@ powerd by GitHub Chart API
 graph TD;
 A{Mikanixonable.github.io}
 click A Mikanixonable.github.io
+  A <--> I
+  A <--> H
+  A <--> F
+  A <--> S
+  A <--> No
+
+  subgraph direct;
+  direction TB
+    A
+    I
+    H
+    F
+    S
+    No
+  end
 
 No((notolyte.github.io))
 click No "https://notolyte.github.io/"
-  A <--> No
+  
 
 I((ideoaves.github.io))
 click I "https://ideoaves.github.io"
 
-    A <--> I
-    A <--> H
-    A <--> F
-    A <--> S
+
 
 F((fabon.info))
 click F "https://fabon.info"
 
   F <--> sueakiyama.github.io
 
-  F <---> S
+  F <--> S
   F <--> taisa.site
   click taisa.site "https://taisa.site"
 
@@ -222,7 +234,7 @@ H((haxibami.net))
 click H "https://haxibami.net"
 
     H <--> F
-    H <------> S
+    H <--> S
     H <--> N
 
     H <--> fuku.day
@@ -261,7 +273,7 @@ click S "https://sno2wman.net"
       rz7.dev <--> blog.gattxxa.org
       rz7.dev <--> laynor.me
 
-    S <---> D
+    S <--> D
 
         blog.gattxxa.org <--> D
         click blog.gattxxa.org "https://blog.gattxxa.org"
@@ -279,10 +291,10 @@ click S "https://sno2wman.net"
     S --> ryota-ka.me
     click ryota-ka.me "https://ryota-ka.me"
 
-    S <-------> gfngfn.github.io
+    S <--> gfngfn.github.io
     click gfngfn.github.io "https://gfngfn.github.io/ja/"
 
-    S <-----> xeiaso.net
+    S <--> xeiaso.net
     click xeiaso.net "https://xeiaso.net"
     S <--> rinsuki.net
     click rinsuki.net "https://rinsuki.net"
@@ -352,7 +364,7 @@ click Y "https://yude.jp"
 
       arkw.net/en <-------> hsp.tv
       click hsp.tv "https://hsp.tv/"
-      
+
         hsp.tv <--> onionsoft.net
         click onionsoft.net "https://www.onionsoft.net/"
 
