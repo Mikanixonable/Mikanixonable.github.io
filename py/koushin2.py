@@ -45,9 +45,6 @@ def main(file,files):
     }
     dic.append(page)
 
-
-    
-
 dic = []
 files = glob.glob("*.html")
 for file in files:
