@@ -174,7 +174,7 @@ powerd by GitHub Chart API
 [licjar.xyz](https://licjar.xyz)
 [notolitary](https://notolyte.github.io/)
 [![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
-[mythfinder](https://haxibami.net/)
+[点々公社](https://h6i.org/)
 [ふぁぼんのホームページ](https://fabon.info)
 [SnO2WMaN.net](https://sno2wman.net/)
 <a href="https://kaeru2193.net"><img src="https://kaeru2193.net/banner.png" width="200" height="40" alt="之機堂" /></a>
