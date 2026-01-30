@@ -171,7 +171,7 @@ powerd by GitHub Chart API
 このサイトはリンク自由です
 
 ## 相互リンク
-[licjar.xyz](https://licjar.xyz)
+<a href="https://licjar.xyz"><img src="https://licjar.xyz/images/banner.svg" width=200 height=40 /></a>
 [notolitary](https://notolyte.github.io/)
 [![](https://ideoaves.github.io/banner.png)](https://ideoaves.github.io/)
 [点々公社](https://h6i.org/)
