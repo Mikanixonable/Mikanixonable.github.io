@@ -21,7 +21,7 @@ categories: main
 <button onclick="btn('./musics/21.mp3', this)">JR-SH3-3(旧東京駅)</button>
 <button onclick="btn('./musics/82.mp3', this)">water crown(旧目黒駅)</button>
 <button onclick="btn('./musics/83.mp3', this)">JRE-IKST-010-01(山手線)</button>
-<button onclick="btn('./musics/84.mp3', this)">JRE-IKST-007-02(京浜東北線)</button>
+<button onclick="btn('./musics/84_1.mp3', this)">JRE-IKST-007-02(京浜東北線)</button>
 <button onclick="btn('./musics/85.mp3', this)">レイボタン(イタリア)</button>
 </div>
 
