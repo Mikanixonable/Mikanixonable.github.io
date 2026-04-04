@@ -6,8 +6,31 @@
   <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#00B393">
   <link rel="stylesheet" href="./md/style.css">
+  <style>
+    /* コピーボタン用の追加スタイル */
+    .highlight {
+      position: relative; /* ボタンの絶対配置の基準位置 */
+    }
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 4px 8px;
+      background-color: rgba(50, 62, 82, 0.8);
+      color: white;
+      border: 1px solid #1a2638;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 10;
+      transition: background-color 0.2s;
+    }
+    .copy-btn:hover {
+      background-color: rgba(50, 62, 82, 1);
+    }
+  </style>
   <script
-    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
+    type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -15,88 +38,110 @@
 </head>
 
 <body onload="initializeMermaid()">
-  <!-- <div class="menu">
-    {:toc}
-  </div> -->
   <div class="wrapper">
     {{ content }}
   </div>
 
+  <script src="https://unpkg.com/mermaid@10.5.1/dist/mermaid.min.js"></script>
+  <script>
+    function initializeMermaid() {
+      mermaid.initialize({
+        "theme": "base",
+        "fontFamily": "TimesNewRoman Times Serif",
+        "themeVariables": {
+          "lineColor": "aliceblue",
+          "primaryColor": "#323e52",
+          "secondaryColor": "#397",
+          "tertiaryColor": "#1a2638",
+          "primaryTextColor": "white",
+          "secondaryTextColor": "white",
+          "tertiaryTextColor": "white",
+          "primaryBorderColor": "aliceblue",
+          "secondaryBorderColor": "aliceblue",
+          "tertiaryBorderColor": "slategray"
+        }
+      });
+      window.mermaid.init(
+        undefined,
+        document.querySelectorAll('.language-mermaid'),
+      );
+    }
+
+    // CORSエラーを回避するため、動的ルール用のstyleタグを新規生成
+    const dynamicStyle = document.createElement('style');
+    document.head.appendChild(dynamicStyle);
+    const sheet = dynamicStyle.sheet;
+
+    let elms = document.querySelectorAll("code");
+    for (let i = 0; i < elms.length; i++) {
+      let elm = elms[i];
+      let preElm = elm.parentElement;
+      let highlightDiv = preElm.parentElement;
+      let wrapperDiv = highlightDiv.parentElement;
+
+      // 言語名の安全な抽出（エラーによるスクリプト停止を回避）
+      let langName = "text"; 
+      if (wrapperDiv && typeof wrapperDiv.className === 'string') {
+        let match = wrapperDiv.className.match(/language-(\S+)/);
+        if (match) {
+          langName = match[1];
+        }
+      }
+
+      if (langName !== "mermaid") {
+        elm.classList.add("code");
+        preElm.classList.add("codepre");
+        preElm.classList.add("codepre" + i);
+        
+        sheet.insertRule(
+          `.codepre${i}:before { content: "${langName}";}`,
+          sheet.cssRules.length
+        );
+
+        // --- コピーボタン生成と機能追加 ---
+        let copyBtn = document.createElement("button");
+        copyBtn.className = "copy-btn";
+        copyBtn.innerText = "Copy";
+
+        copyBtn.addEventListener("click", () => {
+          navigator.clipboard.writeText(elm.innerText).then(() => {
+            copyBtn.innerText = "Copied!";
+            setTimeout(() => {
+              copyBtn.innerText = "Copy";
+            }, 2000); // 2秒後に元のテキストに戻す
+          }).catch(err => {
+            console.error('コピー失敗:', err);
+            copyBtn.innerText = "Error";
+          });
+        });
+
+        // <div class="highlight"> の中にボタンを配置
+        highlightDiv.appendChild(copyBtn);
+      }
+    }
+  </script>
+  <script>
+    const audioElements = {};
+    function btn(filePath, button) {
+      if (!audioElements[filePath]) {
+        // 新しい音声ファイルを再生
+        audioElements[filePath] = new Audio(filePath);
+        audioElements[filePath].play();
+        button.classList.add('playing'); // ボタンのスタイルを変更
+        // 音声再生終了時のイベントハンドラを設定
+        audioElements[filePath].addEventListener('ended', function () {
+          button.classList.remove('playing'); // ボタンのスタイルを元に戻す
+          delete audioElements[filePath]; // オブジェクトから削除
+        });
+      } else {
+        // 既存の音声ファイルを停止
+        audioElements[filePath].pause();
+        audioElements[filePath].currentTime = 0; // 音声を最初から再生できるようにリセット
+        delete audioElements[filePath]; // オブジェクトから削除
+        button.classList.remove('playing'); // ボタンのスタイルを元に戻す
+      }
+    }
+  </script>
 </body>
 
 </html>
-<script src="https://unpkg.com/mermaid@10.5.1/dist/mermaid.min.js"></script>
-<script>
-  function initializeMermaid() {
-    mermaid.initialize({
-      "theme": "base",
-      "fontFamily": "TimesNewRoman Times Serif",
-      "themeVariables": {
-        "lineColor": "aliceblue",
-        "primaryColor": "#323e52",
-        "secondaryColor": "#397",
-        "tertiaryColor": "#1a2638",
-        "primaryTextColor": "white",
-        "secondaryTextColor": "white",
-        "tertiaryTextColor": "white",
-        "primaryBorderColor": "aliceblue",
-        "secondaryBorderColor": "aliceblue",
-        "tertiaryBorderColor": "slategray"
-      }
-    });
-    window.mermaid.init(
-      undefined,
-      document.querySelectorAll('.language-mermaid'),
-    );
-  }
-
-  let sheets = document.styleSheets
-  let sheet = sheets[sheets.length - 1];
-  let elms = document.querySelectorAll("code");
-  for (let i = 0; i < elms.length; i++) {
-    let elm = elms[i]
-
-    // <div class="language-shell highlighter-rouge">
-    // <div class="highlight">
-    // <pre class="highlight">
-    // <code>
-    // から「python」を抽出
-    let langName = elm
-      .parentElement
-      .parentElement
-      .parentElement
-      .className
-      .match(/language-(\S+)\s/)[1]
-
-    if (langName != "mermaid") {
-      elm.classList.add("code")
-      elm.parentElement.classList.add("codepre")
-      elm.parentElement.classList.add("codepre" + i)
-      sheet.insertRule(
-        `.codepre${i}:before { content: "${langName}";}`,
-        sheet.cssRules.length);
-    }
-  }
-</script>
-<script>
-  const audioElements = {};
-  function btn(filePath, button) {
-    if (!audioElements[filePath]) {
-      // 新しい音声ファイルを再生
-      audioElements[filePath] = new Audio(filePath);
-      audioElements[filePath].play();
-      button.classList.add('playing'); // ボタンのスタイルを変更
-      // 音声再生終了時のイベントハンドラを設定
-      audioElements[filePath].addEventListener('ended', function () {
-        button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-        delete audioElements[filePath]; // オブジェクトから削除
-      });
-    } else {
-      // 既存の音声ファイルを停止
-      audioElements[filePath].pause();
-      audioElements[filePath].currentTime = 0; // 音声を最初から再生できるようにリセット
-      delete audioElements[filePath]; // オブジェクトから削除
-      button.classList.remove('playing'); // ボタンのスタイルを元に戻す
-    }
-  }
-</script>
