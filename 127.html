@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ネットワークグラフ</title>
+    <style>
+        :root {
+            --bg: #f4f6f9;
+            --node-fill: #3d6ef0;
+            --node-stroke: #11308f;
+            --link: #9aa4b2;
+            --label: #111827;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+            background: radial-gradient(circle at top left, #ffffff, var(--bg));
+        }
+
+        #chart {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="chart"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script>
+        const nodes = [
+            { id: "A", group: 1 },
+            { id: "B", group: 1 },
+            { id: "C", group: 2 },
+            { id: "D", group: 2 },
+            { id: "E", group: 3 },
+            { id: "F", group: 3 },
+            { id: "G", group: 4 }
+        ];
+
+        const links = [
+            { source: "A", target: "B" },
+            { source: "A", target: "C" },
+            { source: "A", target: "D" },
+            { source: "B", target: "E" },
+            { source: "C", target: "E" },
+            { source: "C", target: "F" },
+            { source: "D", target: "F" },
+            { source: "E", target: "G" },
+            { source: "F", target: "G" }
+        ];
+
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        const color = d3.scaleOrdinal()
+            .domain([1, 2, 3, 4])
+            .range(["#3d6ef0", "#ef4444", "#10b981", "#f59e0b"]);
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("viewBox", [0, 0, width, height]);
+
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(110))
+            .force("charge", d3.forceManyBody().strength(-260))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(28));
+
+        const link = svg.append("g")
+            .attr("stroke", "var(--link)")
+            .attr("stroke-opacity", 0.8)
+            .selectAll("line")
+            .data(links)
+            .join("line")
+            .attr("stroke-width", 2);
+
+        const node = svg.append("g")
+            .selectAll("circle")
+            .data(nodes)
+            .join("circle")
+            .attr("r", 14)
+            .attr("fill", d => color(d.group))
+            .attr("stroke", "var(--node-stroke)")
+            .attr("stroke-width", 1.5)
+            .call(d3.drag()
+                .on("start", dragStarted)
+                .on("drag", dragged)
+                .on("end", dragEnded));
+
+        const label = svg.append("g")
+            .selectAll("text")
+            .data(nodes)
+            .join("text")
+            .text(d => d.id)
+            .attr("font-size", 13)
+            .attr("font-weight", 700)
+            .attr("fill", "var(--label)")
+            .attr("dx", 18)
+            .attr("dy", 5);
+
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+
+            label
+                .attr("x", d => d.x)
+                .attr("y", d => d.y);
+        });
+
+        function dragStarted(event, d) {
+            if (!event.active) {
+                simulation.alphaTarget(0.3).restart();
+            }
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+
+        function dragEnded(event, d) {
+            if (!event.active) {
+                simulation.alphaTarget(0);
+            }
+            d.fx = null;
+            d.fy = null;
+        }
+    </script>
+</body>
+
+</html>
