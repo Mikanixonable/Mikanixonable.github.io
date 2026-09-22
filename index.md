@@ -69,6 +69,7 @@ randomg.innerHTML += `<p>No: ${rand}</p>`
 ### function
 [ページ一覧](1)　すべてのページとその新しさ加減が見れる
 [ロビー](144)　とりあえずいろいろのリンクはここにまとめてある
+[Software Gallery](software.html)　Webツール、インターフェース実験、ゲーム
 
 ### 創作
 [絵](129)　pixivの方が見やすい
