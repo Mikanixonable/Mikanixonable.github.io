@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Gallery | 月面植物園</title>
+  <link rel="stylesheet" href="js/style.css">
+  <style>
+    body { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 4rem; background: var(--c1, #1a2638); color: #eee; font-family: Georgia, "Times New Roman", "Yu Mincho", serif; }
+    a { color: inherit; }
+    header { margin-bottom: 3rem; border-bottom: 1px solid #77808e; padding-bottom: 1.5rem; }
+    header p { max-width: 46rem; color: #c7ccd3; }
+    .back { display: inline-block; margin-bottom: 1.5rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+    .work { border: 1px solid #77808e; padding: 1.4rem; min-height: 220px; display: flex; flex-direction: column; background: rgba(255,255,255,.025); }
+    .work h2 { margin: 0 0 .35rem; font-size: 1.45rem; font-weight: normal; }
+    .kind { margin: 0 0 1.5rem; font: .72rem/1.4 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #aeb8c5; }
+    .description { flex: 1; line-height: 1.7; }
+    .actions { display: flex; gap: 1rem; margin-top: 1.4rem; font: .78rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .actions a { border-bottom: 1px solid currentColor; text-decoration: none; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #77808e; color: #aeb8c5; font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <a class="back" href="./">← 月面植物園</a>
+  <header>
+    <h1>Software Gallery</h1>
+    <p>ブラウザ上で動作するツール、インターフェースの実験、ゲームなど。各作品はそのまま起動するか、GitHub上のソースコードを見ることができます。</p>
+  </header>
+
+  <main class="gallery">
+    <article class="work">
+      <h2>UnicodePodKeyboard</h2>
+      <p class="kind">Web Tool · Input Method</p>
+      <p class="description">Unicode文字を扱うためのWebキーボード。</p>
+      <div class="actions">
+        <a href="https://mikanixonable.github.io/UnicodepodKeyboard/">Open</a>
+        <a href="https://github.com/Mikanixonable/UnicodepodKeyboard">Source</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h2>QRKeyboard</h2>
+      <p class="kind">Web Tool · Experiment</p>
+      <p class="description">QRコードとキーボード入力を組み合わせたWebツール。</p>
+      <div class="actions">
+        <a href="https://mikanixonable.github.io/QRKeyboard/">Open</a>
+        <a href="https://github.com/Mikanixonable/QRKeyboard">Source</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <h2>Dive into Tepui</h2>
+      <p class="kind">WebGPU · TypeScript · Game</p>
+      <p class="description">シスルナ空間から地球低軌道を舞台にした軌道力学シューティングゲーム。</p>
+      <div class="actions">
+        <a href="https://mikanixonable.github.io/dive-into-tepui/">Launch</a>
+        <a href="https://github.com/Mikanixonable/dive-into-tepui">Source</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>MIKANIXONABLE / SOFTWARE &amp; INTERACTIVE WORKS</footer>
+</body>
+</html>
