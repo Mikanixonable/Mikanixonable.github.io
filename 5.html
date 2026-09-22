@@ -28,8 +28,6 @@
     border: 0px;
   }
 
-
-
   #cont {
     display: flex;
     flex-direction: row;
@@ -65,127 +63,119 @@
   </div>
   <div id="imgDiv"></div>
 
-  <input type="button" class="button" style="width:15em;height:3em;" value="ランダム" onclick="	button()" />
-</body>
+  <input type="button" class="button" style="width:15em;height:3em;" value="ランダム" onclick="button()" />
 
-<!-- <script src="js/main.js"></script> -->
 <script>
-  // let imgTitle = document.getElementById("imgTitle")
   let imgDiv = document.getElementById("imgDiv")
   let imgMeta = document.getElementById("imgMeta")
   let numInput = document.getElementById("numInput")
+  let illustrations = []
+  let height = window.innerHeight
 
   numInput.addEventListener("input", () => {
-    q = numInput.value
-    if (q == "") {
-      
-    } else {
-      window.history.replaceState(null, null, '?n=' + q);
-      main()
+    const q = numInput.value
+    if (q !== "") {
+      window.history.replaceState(null, null, '?n=' + q)
+      renderIllustration(q)
     }
   })
 
   function button() {
-    k = Math.floor(Math.random() * (1 + range[1] - range[0]) + range[0]);
-    window.history.replaceState(null, null, '?n=' + k);
-    main()
+    if (illustrations.length === 0) return
+    const p = illustrations[Math.floor(Math.random() * illustrations.length)]
+    window.history.replaceState(null, null, '?n=' + p.num)
+    renderIllustration(p.num)
   }
 
-  let url
-  let n
-  let p
-  let meta
-  let q
-  let k
-  const range = [-213, 570]
-  let height = window.innerHeight
-
-  function csv2dic(csvFile) {
-
-}
-const parseCSV=(csv)=>{
-    let tmp=[];
-    csv = csv.replace(/("[^"]*")+/g,(match)=>{
-        tmp.push(match.slice(1,-1).replace(/""/g,'"'));return '[TMP]';
-    });
-    return csv.split("\n").map((row)=>{
-        return row.split(',').map((val)=>val==='[TMP]'?tmp.shift():val)
-    });
-};
+  const parseCSV = (csv) => {
+    let tmp = []
+    csv = csv.replace(/("[^"]*")+/g, (match) => {
+      tmp.push(match.slice(1, -1).replace(/""/g, '"'))
+      return '[TMP]'
+    })
+    return csv.split("\n").map((row) => {
+      return row.split(',').map((val) => val === '[TMP]' ? tmp.shift() : val)
+    })
+  }
 
   function main() {
     return fetch("json/illust.csv")
-    .then(response => response.arrayBuffer())
-    .then(binary => {
-      let text = new TextDecoder('shift-jis').decode(binary)
-      const lines = parseCSV(text);
-      const headers = lines[0];
-      const dictionaryArray = [];
-      console.log(lines)
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        return response.arrayBuffer()
+      })
+      .then(binary => {
+        const text = new TextDecoder('shift-jis').decode(binary)
+        const lines = parseCSV(text)
+        const headers = lines[0]
+        illustrations = []
 
-      for (let i = 1; i < lines.length; i++) {
-        const values = lines[i];
-        if (values.length === headers.length) {
-          const dictionary = {};
-          for (let j = 0; j < headers.length; j++) {
-            dictionary[headers[j]] = values[j];
+        for (let i = 1; i < lines.length; i++) {
+          const values = lines[i]
+          if (values.length === headers.length) {
+            const dictionary = {}
+            for (let j = 0; j < headers.length; j++) {
+              dictionary[headers[j]] = values[j]
+            }
+            if (dictionary.num !== "") illustrations.push(dictionary)
           }
-          dictionaryArray.push(dictionary);
         }
-      }
-      console.log(dictionaryArray)
-      main2(dictionaryArray)
-    })
-    .catch(error => {
-      console.error('CSVの読み込みエラー:', error);
-    })}
 
-  main()
+        if (illustrations.length === 0) {
+          imgMeta.textContent = "作品データがありません"
+          return
+        }
 
-  function main2(json) {
-   
+        const url = new URL(window.location.href)
+        const requested = url.searchParams.get("n")
+        const requestedIllustration = illustrations.find(p => p.num == requested)
+        const selected = requestedIllustration || illustrations[Math.floor(Math.random() * illustrations.length)]
 
-    url = new URL(window.location.href);
-    n = url.searchParams.get("n");
-    if (!n) {
-      function dice(range) {
-        return Math.floor(Math.random() * (-range[0] + range[1] + 1) + range[0])
-      }
-      n = dice(range)
-      url.searchParams.append('n', n);
-      location.href = url
+        if (!requestedIllustration) {
+          url.searchParams.set('n', selected.num)
+          window.history.replaceState(null, null, url)
+        }
+        renderIllustration(selected.num)
+      })
+      .catch(error => {
+        console.error('CSVの読み込みエラー:', error)
+        imgMeta.textContent = "作品データを読み込めませんでした"
+      })
+  }
 
+  function renderIllustration(n) {
+    const p = illustrations.find(p => p.num == n)
+    if (!p) {
+      imgDiv.innerHTML = ""
+      imgMeta.textContent = `作品番号 ${n} は見つかりません`
+      return
     }
 
-    // imgTitle.innerText = n
-  
-    numInput.value = n
-    document.title = n + ".png"
-    let imgPath = "illusts/" + n + ".png";
-    imgDiv.innerHTML = "<img src=" + imgPath + ` height = ${height * 0.7}>`
+    numInput.value = p.num
+    document.title = p.num + ".png"
+    const imgPath = "illusts/" + p.num + ".png"
+    imgDiv.innerHTML = `<img src="${imgPath}" height="${height * 0.7}" alt="${p.title || p.num}">`
 
-    p = json.find((p) => p.num == n)
-
-    //meta data
-    // let meta = p.date
-    // imgMeta.innerHTML = meta
-    let meta = "link: " + "<a href=" + imgPath + ">" + imgPath + "</a>"
+    let meta = "link: " + `<a href="${imgPath}">${imgPath}</a>`
       + "<br>" + "w×h: " + p.width + "×" + p.height
       + "<br>"
-      
-    if (p.title) { meta += "title: " + p.title + "<br>"}
-    if (p.date) { meta += "date: " + p.date + "<br>"}
-    if (p.twitter) { meta += "twitter: " + `<a href="${p.twitter}">twitter<a/>` + "<br>"}
-    if (p.tags.length > 0) {
-      meta +="tags: "
-      for (let k=0; k < p.tags.split(",").length; k++) {
-        meta += "#"+p.tags.split(",")[k]+" "
+
+    if (p.title) { meta += "title: " + p.title + "<br>" }
+    if (p.date) { meta += "date: " + p.date + "<br>" }
+    if (p.twitter) { meta += "twitter: " + `<a href="${p.twitter}">twitter</a>` + "<br>" }
+    if (p.tags && p.tags.length > 0) {
+      meta += "tags: "
+      for (let k = 0; k < p.tags.split(",").length; k++) {
+        meta += "#" + p.tags.split(",")[k] + " "
       }
       meta += "<br>"
     }
-    if (p.description) { meta += "description: " + p.description + "<br>"}
+    if (p.description) { meta += "description: " + p.description + "<br>" }
     imgMeta.innerHTML = meta
   }
+
+  main()
 </script>
+</body>
 
 </html>
